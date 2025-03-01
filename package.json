@@ -1,7 +1,7 @@
 {
-  "name": "chrome-extension-typescript-starter",
+  "name": "zen-hordes",
   "version": "1.0.0",
-  "description": "chrome-extension-typescript-starter",
+  "description": "An extension that enhances the user experience of the MyHordes website.",
   "main": "index.js",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chibat/chrome-extension-typescript-starter.git"
+    "url": "https://github.com/zenoo/zen-hordes.git"
   },
   "dependencies": {
     "react": "^18.2.0",

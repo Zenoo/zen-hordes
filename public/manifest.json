@@ -2,7 +2,7 @@
   "manifest_version": 3,
 
   "name": "Zen MyHordes",
-  "description": "Zen MyHordes is a Chrome extension that enhances the user experience of the MyHordes website.",
+  "description": "An extension that enhances the user experience of the MyHordes website.",
   "version": "0.0.0",
 
   "options_ui": {
