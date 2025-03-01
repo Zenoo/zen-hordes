@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
 
-  "name": "Chrome Extension TypeScript Starter",
-  "description": "Chrome Extension, TypeScript, Visual Studio Code",
-  "version": "1.0",
+  "name": "Zen MyHordes",
+  "description": "Zen MyHordes is a Chrome extension that enhances the user experience of the MyHordes website.",
+  "version": "0.0.0",
 
   "options_ui": {
     "page": "options.html"
@@ -16,8 +16,14 @@
 
   "content_scripts": [
       {
-          "matches": ["<all_urls>"],
-          "js": ["js/vendor.js", "js/content_script.js"]
+          "matches": [
+            "https://myhordes.eu/*",
+            "https://myhordes.fr/*",
+            "https://myhordes.de/*",
+            "https://myhord.es/*"
+          ],
+          "js": ["js/vendor.js", "js/content_script.js"],
+          "css": ["css/style.min.css"]
       }
   ],
 
@@ -26,10 +32,14 @@
   },
 
   "permissions": [
-    "storage"
+    "storage",
+    "webRequest"
   ],
 
   "host_permissions": [
-    "<all_urls>"
+    "https://myhordes.eu/*",
+    "https://myhordes.fr/*",
+    "https://myhordes.de/*",
+    "https://myhord.es/*"
   ]
 }

@@ -1,0 +1,58 @@
+// UI enhancements
+body.zen-enhanced {
+
+  // Remove ugly text outline at night
+  &[data-theme-daytime="night"] {
+
+    // Need to use at least 3 IDs to make it
+    // more specific than the default style
+    // (smh)
+    #wrapper #content #gma .town-name+li {
+      text-shadow: none !important;
+      color: #ddab76 !important;
+    }
+  }
+
+  // Missing padding for camping zone
+  .zone-camp {
+    padding-bottom: 5px;
+  }
+
+  // Citizen list avatar size
+  .citizens-list .avatar {
+    background-size: contain;
+  }
+}
+
+// Bank blocker
+#bank-inventory {
+  position: relative;
+
+  .bank-blocker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, .2) 50%,
+        rgba(255, 255, 255, .2) 75%,
+        transparent 75%,
+        transparent);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+  }
+}
+
+.time-remaining {
+  font-weight: bold;
+  text-align: center;
+  color: #f0d79e;
+  margin: 0;
+  margin-top: 4px;
+}

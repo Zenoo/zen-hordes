@@ -1,0 +1,14 @@
+{
+  "packages": {
+    ".": {
+      "extra-files": [
+        "src/utils/Version.ts",
+        {
+          "type": "json",
+          "path": "public/manifest.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    }
+  }
+}
