@@ -1,14 +1,8 @@
 {
   "manifest_version": 3,
-
-  "name": "Zen MyHordes",
+  "name": "Zen Hordes",
   "description": "An extension that enhances the user experience of the MyHordes website.",
   "version": "0.0.0",
-
-  "options_ui": {
-    "page": "options.html"
-  },
-
   "action": {
     "default_icon": {
       "16": "icon-16.png",
@@ -19,29 +13,37 @@
     },
     "default_popup": "popup.html"
   },
-
+  "icons": {
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "64": "icon-64.png",
+    "96": "icon-96.png",
+    "128": "icon-128.png"
+  },
   "content_scripts": [
-      {
-          "matches": [
-            "https://myhordes.eu/*",
-            "https://myhordes.fr/*",
-            "https://myhordes.de/*",
-            "https://myhord.es/*"
-          ],
-          "js": ["js/vendor.js", "js/content_script.js"],
-          "css": ["css/style.min.css"]
-      }
+    {
+      "matches": [
+        "https://myhordes.eu/*",
+        "https://myhordes.fr/*",
+        "https://myhordes.de/*",
+        "https://myhord.es/*"
+      ],
+      "js": [
+        "js/vendor.js",
+        "js/content_script.js"
+      ],
+      "css": [
+        "css/style.min.css"
+      ]
+    }
   ],
-
   "background": {
     "service_worker": "js/background.js"
   },
-
   "permissions": [
     "storage",
     "webRequest"
   ],
-
   "host_permissions": [
     "https://myhordes.eu/*",
     "https://myhordes.fr/*",

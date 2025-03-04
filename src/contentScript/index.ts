@@ -3,7 +3,6 @@ import { initStore, setStore, store } from "./store";
 
 initStore();
 
-// TODO: Change the popup and options pages
 // TODO: Auto publish on Chrome on version release
 // TODO: Add Firefox support
 // TODO: Auto publish on Firefox on version release
@@ -18,13 +17,12 @@ chrome.runtime.onMessage.addListener((message: Message, sender, sendResponse) =>
       break;
     }
     case Action.ToggleFeature: {
-      const feature = message.value as string;
-
-      switch (feature) {
+      const value = message.value as { feature: string; enabled: boolean };
+      switch (value.feature) {
         case "enhance-css": {
-          setStore("enhance-css", !store["enhance-css"]);
+          setStore("enhance-css", value.enabled);
 
-          if (store["enhance-css"]) {
+          if (value.enabled) {
             document.body.classList.add("zen-enhanced");
           } else {
             document.body.classList.remove("zen-enhanced");
@@ -32,9 +30,9 @@ chrome.runtime.onMessage.addListener((message: Message, sender, sendResponse) =>
           break;
         }
         case "bank-blocker": {
-          setStore("bank-blocker", !store["bank-blocker"]);
+          setStore("bank-blocker", value.enabled);
 
-          if (!store["bank-blocker"]) {
+          if (!value.enabled) {
             cleanupBankBlocker();
           } else {
             const bank = document.getElementById("bank-inventory");
@@ -45,7 +43,7 @@ chrome.runtime.onMessage.addListener((message: Message, sender, sendResponse) =>
           break;
         }
         default: {
-          console.error("Unknown feature:", feature);
+          console.error("Unknown feature:", value.feature);
         }
       }
       break;

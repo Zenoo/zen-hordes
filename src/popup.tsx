@@ -42,14 +42,14 @@ const Popup = () => {
 
   // Fetch lang
   useEffect(() => {
-    chrome.storage.sync.get("lang", (data) => {
-      const lang = data.lang as Lang;
-      setLang(lang);
+    chrome.storage.sync.get((data) => {
+      setEnhanceCss(data["enhance-css"] ?? true);
+      setBankBlocker(data["bank-blocker"] ?? true);
+      setLang(data.lang as Lang || Lang.En);
     });
   }, []);
 
   const t = (key: string, replacements?: Record<string, string>) => {
-    console.log("t", lang);
     let translation = T[lang][key] || key;
 
     if (replacements) {
@@ -64,15 +64,23 @@ const Popup = () => {
     return translation;
   };
 
-  const toggleFeature = (feature: string) => {
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      const tab = tabs[0];
-      if (tab.id) {
+  const setFeature = (feature: string, value: boolean) => {
+    chrome.tabs.query({
+      url: [
+        "https://myhordes.eu/*",
+        "https://myhordes.fr/*",
+        "https://myhordes.de/*",
+        "https://myhord.es/*",
+      ]
+    }, function (tabs) {
+      tabs.forEach((tab) => {
+        if (!tab.id) return;
+
         chrome.tabs.sendMessage<Message>(tab.id, {
           action: Action.ToggleFeature,
-          value: feature,
+          value: { feature, enabled: value },
         });
-      }
+      });
     });
   };
 
@@ -80,14 +88,14 @@ const Popup = () => {
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setEnhanceCss(event.target.checked);
-    toggleFeature("enhanceCss");
+    setFeature("enhance-css", event.target.checked);
   };
 
   const handleBankBlockerChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setBankBlocker(event.target.checked);
-    toggleFeature("bankBlocker");
+    setFeature("bank-blocker", event.target.checked);
   };
 
   return (
