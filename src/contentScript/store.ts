@@ -1,9 +1,4 @@
-export enum Lang {
-  En = "en",
-  Fr = "fr",
-  Es = "es",
-  De = "de",
-}
+
 
 export const store = {
   "enhance-css": true,
@@ -25,6 +20,9 @@ export const setStore = <K extends keyof typeof store>(
 };
 
 export const initStore = () => {
+  // Update lang
+  setStore("lang", store.lang);
+
   chrome.storage.sync.get((data) => {
     Object.assign(store, data);
 

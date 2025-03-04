@@ -1,5 +1,5 @@
-import { Lang, setStore, store, Store } from "./store";
-import { t, Translations } from "./translate";
+import { setStore, store } from "./store";
+import { t } from "./translate";
 
 // TODO: Handle chaos
 const MAX_ITEMS_TAKEN = 5;
@@ -20,7 +20,21 @@ const T: Translations = {
   },
 };
 
+export const cleanupBankBlocker = () => {
+  document.querySelector(".bank-blocker")?.remove();
+  document.querySelector("#bank-blocked-notification")?.remove();
+  setStore("bank-items-taken", 0);
+};
+
 export const handleItemTaken = () => {
+  const endTime = store["last-bank-item-taken"] + BLOCK_DURATION;
+  const timeRemaining = endTime - Date.now();
+
+  // Reset the counter if the time has expired
+  if (timeRemaining <= 0) {
+    cleanupBankBlocker();
+  }
+
   setStore("bank-items-taken", store["bank-items-taken"] + 1);
   setStore("last-bank-item-taken", Date.now());
 };
@@ -40,8 +54,7 @@ const updateTimer = (timerElement: Element | null, endTime: number) => {
 
     // Clear everything if the timer has expired
     if (timeRemaining <= 0) {
-      timerElement.closest(".bank-blocker")?.remove();
-      document.querySelector("#bank-blocked-notification")?.remove();
+      cleanupBankBlocker();
       clearInterval(interval);
     } else {
       const formattedTime = formatTime(timeRemaining);
@@ -54,32 +67,26 @@ export const blockBank = (node: HTMLElement) => {
   if (!store["bank-blocker"]) return;
 
   if (node.id === "bank-inventory") {
+    const endTime = store["last-bank-item-taken"] + BLOCK_DURATION;
+    const timeRemaining = endTime - Date.now();
+
+    // Reset the counter if the time has expired
+    if (timeRemaining <= 0) {
+      cleanupBankBlocker();
+      return;
+    };
+
     // Bank displayed, check if we need to display the blocker
     if (store["bank-items-taken"] >= MAX_ITEMS_TAKEN) {
-      const endTime = store["last-bank-item-taken"] + BLOCK_DURATION;
-      const timeRemaining = endTime - Date.now();
-
-      if (timeRemaining <= 0) {
-        setStore("bank-items-taken", 0);
-        return;
-      };
-
       // Visual blocker
       const existingBlocker = document.querySelector(".bank-blocker");
-      if (existingBlocker) {
-        existingBlocker.remove();
-      }
+      if (existingBlocker) return;
 
       const blocker = document.createElement("div");
       blocker.classList.add("bank-blocker");
       node.append(blocker);
 
       // Notification
-      const existingNotification = document.querySelector("#bank-blocked-notification");
-      if (existingNotification) {
-        existingNotification.remove();
-      }
-
       const formattedTime = formatTime(timeRemaining);
       const notification = document.createElement("div");
       notification.id = "bank-blocked-notification";

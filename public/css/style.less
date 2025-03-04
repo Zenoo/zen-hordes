@@ -12,6 +12,20 @@ body.zen-enhanced {
       color: #ddab76 !important;
     }
   }
+  // Remove ugly text outline on pandemonium at day
+  &[data-theme-daytime="day"][data-theme-primary-modifier="panda"] {
+
+    // Need to use at least 3 IDs to make it
+    // more specific than the default style
+    // (smh)
+    #wrapper #content #gma .town-name+li {
+      text-shadow: none !important;
+
+      .hardcore {
+        color: #e6c4c4;
+      }
+    }
+  }
 
   // Missing padding for camping zone
   .zone-camp {
@@ -20,7 +34,7 @@ body.zen-enhanced {
 
   // Citizen list avatar size
   .citizens-list .avatar {
-    background-size: contain;
+    background-size: auto !important;
   }
 }
 

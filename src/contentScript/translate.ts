@@ -1,6 +1,4 @@
-import { Lang, store } from "./store";
-
-export type Translations = Record<Lang, Partial<Record<string, string>>>
+import { store } from "./store";
 
 export const t = (T: Translations, key: string, replacements?: Record<string, string>) => {
   let translation = T[store.lang][key] || key;

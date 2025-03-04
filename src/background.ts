@@ -16,7 +16,7 @@ const sendMessageToContentScript = (action: Action) => {
   });
 };
 
-const queue: Partial<Record<string, Action>> = {};
+const queue: Partial<Record<string, Message>> = {};
 
 // Listen to specific requests
 chrome.webRequest.onBeforeRequest.addListener(
@@ -29,11 +29,11 @@ chrome.webRequest.onBeforeRequest.addListener(
 
       // Take item
       if (requestBody.direction === "up") {
-        queue[details.requestId] = Action.TakeItem;
+        queue[details.requestId] = { action: Action.TakeItem };
       }
     } else if (details.url.endsWith("/rest/v1/town/facilities/well")) {
       // Take ration from the well
-      queue[details.requestId] = Action.TakeItem;
+      queue[details.requestId] = { action: Action.TakeItem };
     }
   },
   { urls: ["*://*/api/*", "*://*/rest/*"] },
@@ -58,7 +58,7 @@ chrome.webRequest.onCompleted.addListener(
     console.log("onCompleted", details.url, details);
 
     // Take item from the bank
-    if (queue[details.requestId] === Action.TakeItem) {
+    if (queue[details.requestId]?.action === Action.TakeItem) {
       queue[details.requestId] = undefined;
 
       sendMessageToContentScript(Action.TakeItem);
