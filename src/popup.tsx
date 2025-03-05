@@ -45,7 +45,7 @@ const Popup = () => {
     chrome.storage.sync.get((data) => {
       setEnhanceCss(data["enhance-css"] ?? true);
       setBankBlocker(data["bank-blocker"] ?? true);
-      setLang(data.lang as Lang || Lang.En);
+      setLang(data["hordes-lang"] as Lang || Lang.En);
     });
   }, []);
 

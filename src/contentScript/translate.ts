@@ -1,7 +1,7 @@
 import { store } from "./store";
 
 export const t = (T: Translations, key: string, replacements?: Record<string, string>) => {
-  let translation = T[store.lang][key] || key;
+  let translation = T[store["hordes-lang"]][key] || key;
 
   if (replacements) {
     for (const [placeholder, value] of Object.entries(replacements)) {

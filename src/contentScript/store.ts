@@ -1,11 +1,9 @@
-
-
 export const store = {
   "enhance-css": true,
   "bank-blocker": true,
   "bank-items-taken": 0,
   "last-bank-item-taken": Date.now(),
-  lang: document.documentElement.lang as Lang,
+  "hordes-lang": document.documentElement.lang as Lang,
 };
 
 export type Store = typeof store;
@@ -21,7 +19,7 @@ export const setStore = <K extends keyof typeof store>(
 
 export const initStore = () => {
   // Update lang
-  setStore("lang", store.lang);
+  setStore("hordes-lang", store["hordes-lang"]);
 
   chrome.storage.sync.get((data) => {
     Object.assign(store, data);
