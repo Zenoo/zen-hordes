@@ -1,3 +1,18 @@
+.section-title() {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+
+  .help-button {
+    margin-left: 4px;
+  }
+
+  &+ul {
+    margin-top: 0;
+    border-top: 0;
+  }
+}
+
 // UI enhancements
 body.zen-enhanced {
 
@@ -12,6 +27,7 @@ body.zen-enhanced {
       color: #ddab76 !important;
     }
   }
+
   // Remove ugly text outline on pandemonium at day
   &[data-theme-daytime="day"][data-theme-primary-modifier="panda"] {
 
@@ -35,6 +51,168 @@ body.zen-enhanced {
   // Citizen list avatar size
   .citizens-list .avatar {
     background-size: auto !important;
+  }
+
+  // Citizen list omniscience
+  .citizens-list>.stretch {
+    .citizen-offline, .citizen-online, .citizen-dead {
+      text-decoration: none;
+
+      &+.cell img{
+        padding-left: 4px;
+      }
+    }
+
+    .citizen-box-name, .citizen-box-name-me {
+      img {
+        padding-left: 4px;
+      }
+
+      & > img:first-child {
+        padding-left: 0;
+        padding-right: 4px;
+
+        &+span img {
+          padding-right: 4px;
+        }
+      }
+
+      &+.citizen-box {
+        .inventory{
+          display: flex;
+          justify-content: center;
+
+          img {
+            vertical-align: unset;
+          }
+        }
+      }
+    }
+
+    .citizen-dead+.cell+.cell+.cell+.cell {
+      padding: 2px 4px;
+    }
+  }
+
+  // Tabs alignment
+  .tabs .tab .tab-link {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+
+    img {
+      padding-right: 4px;
+    }
+  }
+
+  // Reusable counters alignments
+  .dashboard {
+    .counter {
+      display: inline-flex;
+      align-items: center;
+
+      &+.help-button {
+        vertical-align: super;
+      }
+    }
+
+    img {
+      padding-left: 4px;
+    }
+  }
+
+  // Citizen home actions
+  .citizen-home {
+    h5 {
+      .section-title();
+    }
+  }
+
+  #upgrade_home_level {
+    margin-top: 5px;
+  }
+
+  // Heroic actions popup
+  .heroic_actions {
+    padding: 2px;
+
+    .heroic_action {
+      padding-left: 20px;
+
+      .label {
+        padding-left: 0;
+      }
+    }
+
+    li:not(.heroic_action) {
+      padding-left: 0;
+
+      .button {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  // Town main dashboard
+  .town-main-content {
+    .overview-checklist {
+      padding-top: 4px;
+      padding-bottom: 6px;
+
+      li {
+        background-position: left;
+      }
+    }
+
+    .overview-list {
+      padding-top: 4px;
+      padding-bottom: 6px;
+    }
+
+    .dashboard+.row {
+      h5 {
+        .section-title();
+
+        &+div>ul {
+          margin-top: 0;
+        }
+      }
+
+      &+.row {
+        display: flex;
+        flex-direction: column;
+
+        h5 {
+          order: 1;
+          .section-title();
+        }
+
+        .defense-detail {
+          order: 2;
+          padding: 0;
+
+          ul {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+
+        .note-critical {
+          order: 3;
+        }
+      }
+    }
+  }
+
+  // Action points
+  .game-menu-area .game-bar .ulcont {
+    display: flex;
+    gap: 4px;
+
+    li::before {
+      margin-right: 0;
+    }
   }
 }
 
