@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.0.0...zen-hordes-v1.0.1) (2025-03-06)
+
+
+### Bug Fixes
+
+* Rename lang storage key ([3e9eeb7](https://github.com/Zenoo/zen-hordes/commit/3e9eeb7107fc60e56a3aa5783bded47f93b38b80))
+* UI enhancements ([a92160f](https://github.com/Zenoo/zen-hordes/commit/a92160f7791862211e58d11ac2f93a8c098a7e05))
+* Wrong lang format when tab is unloaded ([9ed1a36](https://github.com/Zenoo/zen-hordes/commit/9ed1a36bd1aaee953c07089573f77e27c4c205e0))
+
 ## 1.0.0 (2025-03-04)
 
 
