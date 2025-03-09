@@ -1,3 +1,11 @@
+const DEBUG = false;
+
+const log = (...args: any[]) => {
+  if (DEBUG) {
+    console.log(...args);
+  }
+};
+
 // Utils
 const decodeRequestBody = (
   details: chrome.webRequest.WebRequestBodyDetails
@@ -21,7 +29,7 @@ const queue: Partial<Record<string, Message>> = {};
 // Listen to specific requests
 chrome.webRequest.onBeforeRequest.addListener(
   (details) => {
-    console.log("onBeforeRequest", details.url, details);
+    log("onBeforeRequest", details.url, details);
 
     if (details.url.endsWith("/api/town/bank/item")) {
       // Take item from the bank / Put item in the bank
@@ -42,7 +50,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 
 chrome.webRequest.onErrorOccurred.addListener(
   (details) => {
-    console.log("onErrorOccurred", details.url, details);
+    log("onErrorOccurred", details.url, details);
 
     // Remove errored request from the queue
     if (queue[details.requestId]) {
@@ -55,7 +63,7 @@ chrome.webRequest.onErrorOccurred.addListener(
 // Take action after the request is completed
 chrome.webRequest.onCompleted.addListener(
   (details) => {
-    console.log("onCompleted", details.url, details);
+    log("onCompleted", details.url, details);
 
     // Take item from the bank
     if (queue[details.requestId]?.action === Action.TakeItem) {

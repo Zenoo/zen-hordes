@@ -1,6 +1,13 @@
 import { blockBank, cleanupBankBlocker, handleItemTaken } from "./bankBlocker";
+import { offHover } from "./hooks/offHover";
+import { onClick } from "./hooks/onClick";
+import { onHover } from "./hooks/onHover";
+import { onMount } from "./hooks/onMount";
+import { displayMapPreview, insertMapPreview, openBBHCityPage, removeMapPreview } from "./mapPreview";
+import { listenToBackgroundMessages } from "./messageListener";
 import { initStore, setStore, store } from "./store";
 
+// Initialize the store
 initStore();
 
 // TODO: Auto publish on Chrome on version release
@@ -10,67 +17,32 @@ initStore();
 // TODO: Add custom tags to players
 
 // Listen for messages from the background script
-chrome.runtime.onMessage.addListener((message: Message, sender, sendResponse) => {
-  switch (message.action) {
-    case Action.TakeItem: {
-      handleItemTaken();
-      break;
-    }
-    case Action.ToggleFeature: {
-      const value = message.value as { feature: string; enabled: boolean };
-      switch (value.feature) {
-        case "enhance-css": {
-          setStore("enhance-css", value.enabled);
+listenToBackgroundMessages();
 
-          if (value.enabled) {
-            document.body.classList.add("zen-enhanced");
-          } else {
-            document.body.classList.remove("zen-enhanced");
-          }
-          break;
-        }
-        case "bank-blocker": {
-          setStore("bank-blocker", value.enabled);
-
-          if (!value.enabled) {
-            cleanupBankBlocker();
-          } else {
-            const bank = document.getElementById("bank-inventory");
-            if (bank) {
-              blockBank(bank);
-            }
-          }
-          break;
-        }
-        default: {
-          console.error("Unknown feature:", value.feature);
-        }
-      }
-      break;
-    }
-    default: {
-      console.error("Unknown action:", message.action);
-    }
-  }
-});
-
-// Actions that need to wait for specific elements to be added to the DOM
+// Actions that can be performed immediately
 // should be handled here
-const searchNodes = (node: Node) => {
-  if (node instanceof HTMLElement) {
-    blockBank(node);
+insertMapPreview();
 
-    node.childNodes.forEach(searchNodes);
-  }
-};
-
-// Listen for DOM changes
-const observer = new MutationObserver((mutations) => {
-  for (const mutation of mutations) {
-    for (const node of mutation.addedNodes) {
-      searchNodes(node);
-    }
-  }
+// Actions that need to wait for specific elements
+// to be added to the DOM should be handled here
+onMount((node) => {
+  blockBank(node);
 });
 
-observer.observe(document.body, { childList: true, subtree: true });
+// Actions that need to be performed on hover
+// should be handled here
+onHover((event) => {
+  displayMapPreview(event);
+});
+
+// Actions that need to be performed off hover
+// should be handled here
+offHover((_event) => {
+  removeMapPreview();
+});
+
+// Actions that need to be performed on a click
+// should be handled here
+onClick((node) => {
+  openBBHCityPage(node);
+});

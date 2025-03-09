@@ -1,6 +1,7 @@
 export const store = {
   "enhance-css": true,
   "bank-blocker": true,
+  "map-preview": true,
   "bank-items-taken": 0,
   "last-bank-item-taken": Date.now(),
   "hordes-lang": document.documentElement.lang as Lang,
@@ -32,6 +33,11 @@ export const initStore = () => {
     // UI enhancements handled by injected CSS
     if (store["enhance-css"]) {
       document.body.classList.add("zen-enhanced");
+    }
+
+    // Map preview styles
+    if (store["map-preview"]) {
+      document.body.classList.add("zen-map-preview-enabled");
     }
   });
 };

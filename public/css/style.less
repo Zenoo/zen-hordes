@@ -248,3 +248,41 @@ body.zen-enhanced {
   margin: 0;
   margin-top: 4px;
 }
+
+// Map preview styles
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+body.zen-map-preview-enabled {
+  .town-row {
+    & > .cell:first-child img {
+      animation: pulse 1s infinite;
+      cursor: pointer;
+    }
+  }
+
+  #zen-map-preview-tooltip {
+    position: fixed;
+    display: none;
+    background: #5c2b20;
+    border: 1px solid #efdba8;
+    color: #f86;
+    font-variant: small-caps;
+    font-weight: 700;
+    padding: 2px;
+    z-index: 1000;
+
+    &.visible {
+      display: block;
+    }
+  }
+}

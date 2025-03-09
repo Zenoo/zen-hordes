@@ -20,24 +20,29 @@ const T: Translations = {
   en: {
     "enhance-css": "UI Enhancements",
     "bank-blocker": "Bank Blocker",
+    "map-preview": "Available cities map preview",
   },
   fr: {
     "enhance-css": "Améliorations de l'interface",
     "bank-blocker": "Bloqueur de banque",
+    "map-preview": "Aperçu de la carte des villes disponibles",
   },
   de: {
     "enhance-css": "UI-Verbesserungen",
     "bank-blocker": "Bank Blocker",
+    "map-preview": "Vorschau der verfügbaren Städte auf der Karte",
   },
   es: {
     "enhance-css": "Mejoras de la interfaz de usuario",
     "bank-blocker": "Bloqueador de banco",
+    "map-preview": "Vista previa del mapa de ciudades disponibles",
   },
 };
 
 const Popup = () => {
   const [enhanceCss, setEnhanceCss] = useState(true);
   const [bankBlocker, setBankBlocker] = useState(true);
+  const [mapPreview, setMapPreview] = useState(true);
   const [lang, setLang] = useState<Lang>(Lang.En);
 
   // Fetch lang
@@ -45,6 +50,7 @@ const Popup = () => {
     chrome.storage.sync.get((data) => {
       setEnhanceCss(data["enhance-css"] ?? true);
       setBankBlocker(data["bank-blocker"] ?? true);
+      setMapPreview(data["map-preview"] ?? true);
       setLang(data["hordes-lang"] as Lang || Lang.En);
     });
   }, []);
@@ -98,6 +104,13 @@ const Popup = () => {
     setFeature("bank-blocker", event.target.checked);
   };
 
+  const handleMapPreviewChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setMapPreview(event.target.checked);
+    setFeature("map-preview", event.target.checked);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -137,6 +150,20 @@ const Popup = () => {
           label={
             <Typography variant="body2" sx={{ ml: 0.5 }}>
               {t("bank-blocker")}
+            </Typography>
+          }
+        />
+        <FormControlLabel
+          control={
+            <Switch
+              checked={mapPreview}
+              onChange={handleMapPreviewChange}
+              size="small"
+            />
+          }
+          label={
+            <Typography variant="body2" sx={{ ml: 0.5 }}>
+              {t("map-preview")}
             </Typography>
           }
         />
