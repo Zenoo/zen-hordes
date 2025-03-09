@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.0.1...zen-hordes-v1.1.0) (2025-03-09)
+
+
+### Features
+
+* Available cities map preview ([6994513](https://github.com/Zenoo/zen-hordes/commit/6994513616e48e74ab8ea4b7c65005b135919914))
+
+
+### Bug Fixes
+
+* Hide map preview when disabled ([c86f92b](https://github.com/Zenoo/zen-hordes/commit/c86f92bae0aaf2472cb01d79df8e5a7bf5f77d27))
+
 ## [1.0.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.0.0...zen-hordes-v1.0.1) (2025-03-06)
 
 
