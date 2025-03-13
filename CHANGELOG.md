@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.2.0...zen-hordes-v1.2.1) (2025-03-13)
+
+
+### Bug Fixes
+
+* Toggle external links ([1fb7981](https://github.com/Zenoo/zen-hordes/commit/1fb79819fcadfb2da0cf2698f363407d58d60495))
+
 ## [1.2.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.1.0...zen-hordes-v1.2.0) (2025-03-13)
 
 
