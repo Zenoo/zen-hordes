@@ -1,7 +1,6 @@
 import { setStore, store } from "./store";
 import { t } from "./translate";
 
-// TODO: Handle chaos
 const MAX_ITEMS_TAKEN = 5;
 const BLOCK_DURATION = 15 * 60 * 1000; // 15 minutes
 

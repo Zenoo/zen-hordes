@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
-    "build": "webpack --config webpack/webpack.prod.js",
+    "build": "rimraf dist && webpack --config webpack/webpack.prod.js && bestzip dist.zip dist/",
     "clean": "rimraf dist",
     "style": "prettier --write \"src/**/*.{ts,tsx}\"",
     "preinstall": "npx only-allow pnpm"
@@ -33,6 +33,7 @@
     "@types/react": "^18.0.29",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "bestzip": "^2.2.1",
     "copy-webpack-plugin": "^9.0.1",
     "eslint": "^9.22.0",
     "eslint-plugin-react": "^7.37.4",

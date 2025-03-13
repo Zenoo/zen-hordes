@@ -12,6 +12,7 @@ import { initStore } from "./store";
 initStore();
 
 // TODO: Reset first water ration on death page display
+// TODO: Change the max items in chaos
 // TODO: Auto publish on Chrome on version release
 // TODO: Add Firefox support
 // TODO: Auto publish on Firefox on version release
