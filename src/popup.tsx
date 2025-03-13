@@ -3,16 +3,21 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import {
+  Checkbox,
   CssBaseline,
+  Divider,
+  FormControl,
   FormControlLabel,
   FormGroup,
+  FormLabel,
   GlobalStyles,
   Switch,
   ThemeProvider,
-  Typography,
+  Typography
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
+import { ExternalSite, ExternalSiteName } from "./contentScript/externalSites";
 import { Version } from "./utils/Version";
 import { theme } from "./utils/theme";
 
@@ -21,21 +26,25 @@ const T: Translations = {
     "enhance-css": "UI Enhancements",
     "bank-blocker": "Bank Blocker",
     "map-preview": "Available cities map preview",
+    "external-city-links": "External city history links",
   },
   fr: {
     "enhance-css": "Améliorations de l'interface",
     "bank-blocker": "Bloqueur de banque",
     "map-preview": "Aperçu de la carte des villes disponibles",
+    "external-city-links": "Liens externes des historiques des villes",
   },
   de: {
     "enhance-css": "UI-Verbesserungen",
     "bank-blocker": "Bank Blocker",
     "map-preview": "Vorschau der verfügbaren Städte auf der Karte",
+    "external-city-links": "Externe Stadtverlauf-Links",
   },
   es: {
     "enhance-css": "Mejoras de la interfaz de usuario",
     "bank-blocker": "Bloqueador de banco",
     "map-preview": "Vista previa del mapa de ciudades disponibles",
+    "external-city-links": "Enlaces externos de historiales de ciudades",
   },
 };
 
@@ -43,6 +52,9 @@ const Popup = () => {
   const [enhanceCss, setEnhanceCss] = useState(true);
   const [bankBlocker, setBankBlocker] = useState(true);
   const [mapPreview, setMapPreview] = useState(true);
+  const [externalSiteLinks, setExternalSiteLinks] = useState([
+    ExternalSiteName.BBH,
+  ]);
   const [lang, setLang] = useState<Lang>(Lang.En);
 
   // Fetch lang
@@ -51,6 +63,11 @@ const Popup = () => {
       setEnhanceCss(data["enhance-css"] ? !!data["enhance-css"] : true);
       setBankBlocker(data["bank-blocker"] ? !!data["bank-blocker"] : true);
       setMapPreview(data["map-preview"] ? !!data["map-preview"] : true);
+      setExternalSiteLinks(
+        (data["external-city-links"] as ExternalSiteName[] | undefined) ?? [
+          ExternalSiteName.BBH,
+        ]
+      );
       setLang((data["hordes-lang"] as Lang | undefined) ?? Lang.En);
     });
   }, []);
@@ -70,7 +87,7 @@ const Popup = () => {
     return translation;
   };
 
-  const setFeature = (feature: string, value: boolean) => {
+  const setFeature = (feature: string, value: unknown) => {
     chrome.tabs.query(
       {
         url: [
@@ -114,6 +131,17 @@ const Popup = () => {
     setFeature("map-preview", event.target.checked);
   };
 
+  const handleExternalSiteLinksChange = (name: ExternalSiteName) => (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const updatedExternalSiteLinks = event.target.checked
+      ? [...externalSiteLinks, name]
+      : externalSiteLinks.filter((link) => link !== name);
+
+    setExternalSiteLinks(updatedExternalSiteLinks);
+    setFeature("external-city-links", updatedExternalSiteLinks);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -127,7 +155,7 @@ const Popup = () => {
       <Typography variant="h6" sx={{ textAlign: "center", mt: 1 }}>
         Zen Hordes
       </Typography>
-      <FormGroup sx={{ ml: 2 }}>
+      <FormGroup>
         <FormControlLabel
           control={
             <Switch
@@ -141,6 +169,7 @@ const Popup = () => {
               {t("enhance-css")}
             </Typography>
           }
+          sx={{ mx: 1 }}
         />
         <FormControlLabel
           control={
@@ -155,6 +184,7 @@ const Popup = () => {
               {t("bank-blocker")}
             </Typography>
           }
+          sx={{ mx: 1 }}
         />
         <FormControlLabel
           control={
@@ -169,7 +199,34 @@ const Popup = () => {
               {t("map-preview")}
             </Typography>
           }
+          sx={{ mx: 1 }}
         />
+        <Divider sx={{ my: 1 }} />
+        <FormControl component="fieldset" size="small" sx={{ mx: 1 }}>
+          <FormLabel component="legend" sx={{ typography: "body2" }}>
+            {t("external-city-links")}
+          </FormLabel>
+          <FormGroup aria-label="position" row>
+            {Object.values(ExternalSiteName).map((name) => !!ExternalSite[name].url && (
+              <FormControlLabel
+                key={name}
+                value={name}
+                control={
+                  <Checkbox
+                    checked={externalSiteLinks.includes(name)}
+                    onChange={handleExternalSiteLinksChange(name)}
+                    size="small"
+                  />
+                }
+                label={name}
+                labelPlacement="end"
+                sx={{
+                  '& .MuiFormControlLabel-label': { typography: "body2" },
+                }}
+              />
+            ))}
+          </FormGroup>
+        </FormControl>
       </FormGroup>
       <Typography
         variant="caption"

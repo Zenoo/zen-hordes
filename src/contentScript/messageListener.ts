@@ -6,7 +6,7 @@ export const listenToBackgroundMessages = () => {
     (message: Message, _sender, _sendResponse) => {
       switch (message.action) {
         case Action.TakeItem: {
-          handleItemTaken();
+          handleItemTaken(message.value);
           break;
         }
         case Action.ToggleFeature: {

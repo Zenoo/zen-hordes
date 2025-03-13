@@ -1,3 +1,5 @@
+import { ExternalSiteName } from "./externalSites";
+
 /**
  * Store values should never be changed directly,
  * use {@link setStore} instead
@@ -6,6 +8,7 @@ export const store = {
   "enhance-css": true,
   "bank-blocker": true,
   "map-preview": true,
+  "external-city-links": [ExternalSiteName.BBH, ExternalSiteName.FM, ExternalSiteName.GH],
   "bank-items-taken": 0,
   "last-bank-item-taken": Date.now(),
   "last-water-ration-taken": new Date(0).getTime(),

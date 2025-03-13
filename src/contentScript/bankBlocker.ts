@@ -26,7 +26,18 @@ export const cleanupBankBlocker = () => {
   setStore("bank-items-taken", 0);
 };
 
-export const handleItemTaken = () => {
+export const handleItemTaken = (data: unknown) => {
+  if (data === "water") {
+    // First water ration per day doesn't count towards the bank limit
+    const startOfDay = new Date();
+    startOfDay.setHours(0, 0, 0, 0);
+
+    if (store["last-water-ration-taken"] < startOfDay.getTime()) {
+      setStore("last-water-ration-taken", Date.now());
+      return;
+    }
+  }
+
   const endTime = store["last-bank-item-taken"] + BLOCK_DURATION;
   const timeRemaining = endTime - Date.now();
 

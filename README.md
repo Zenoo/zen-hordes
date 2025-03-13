@@ -28,6 +28,11 @@ Zen Hordes provides a map preview feature that allows you to see the map of avai
 
 ![Map Preview](.github/media/map-preview.jpeg)
 
+### External City Links
+Zen Hordes includes a feature that provides quick access to external sites related to the game. These external city links allow you to easily navigate to additional resources and tools that can enhance your gameplay experience. You can customize which external sites are available through the extension's settings.
+
+![External City Links](.github/media/external-city-links.jpeg)
+
 ### Translations
 Zen Hordes supports multiple languages, including English, French, German, and Spanish. The extension automatically detects your preferred language and provides translations for various elements on the MyHordes game website. This ensures that you can navigate and use the site comfortably in your preferred language.
 

@@ -1,5 +1,3 @@
-import { setStore, store } from "./contentScript/store";
-
 const CONFIG = {
   debug: false,
 };
@@ -22,9 +20,9 @@ const decodeRequestBody = (
   }
 };
 
-const sendMessageToContentScript = (action: Action) => {
+const sendMessageToContentScript = (message: Message) => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.sendMessage(tabs[0].id ?? 0, { action });
+    chrome.tabs.sendMessage(tabs[0].id ?? 0, message);
   });
 };
 
@@ -71,22 +69,13 @@ chrome.webRequest.onCompleted.addListener(
   (details) => {
     log("onCompleted", details.url, details);
 
+    const message = queue[details.requestId];
+
     // Take item from the bank
-    if (queue[details.requestId]?.action === Action.TakeItem) {
-      if (queue[details.requestId]?.value === "water") {
-        // First water ration per day doesn't count towards the bank limit
-        const startOfDay = new Date();
-        startOfDay.setHours(0, 0, 0, 0);
-
-        if (store["last-water-ration-taken"] < startOfDay.getTime()) {
-          setStore("last-water-ration-taken", Date.now());
-          queue[details.requestId] = undefined;
-          return;
-        }
-      }
-
+    if (message?.action === Action.TakeItem) {
       queue[details.requestId] = undefined;
-      sendMessageToContentScript(Action.TakeItem);
+
+      sendMessageToContentScript(message);
     }
   },
   { urls: ["*://*/api/*", "*://*/rest/*"] }

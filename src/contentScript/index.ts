@@ -1,4 +1,5 @@
 import { blockBank } from "./bankBlocker";
+import { displayExternalCityLinks } from "./externalCityLink";
 import { offHover } from "./hooks/offHover";
 import { onClick } from "./hooks/onClick";
 import { onHover } from "./hooks/onHover";
@@ -11,7 +12,6 @@ import { initStore } from "./store";
 initStore();
 
 // TODO: Reset first water ration on death page display
-// TODO: Add link to BBH City page on history page
 // TODO: Auto publish on Chrome on version release
 // TODO: Add Firefox support
 // TODO: Auto publish on Firefox on version release
@@ -29,6 +29,7 @@ insertMapPreview();
 // to be added to the DOM should be handled here
 onMount((node) => {
   blockBank(node);
+  displayExternalCityLinks(node);
 });
 
 // Actions that need to be performed on hover
