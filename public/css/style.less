@@ -54,43 +54,57 @@ body.zen-enhanced {
   }
 
   // Citizen list omniscience
-  .citizens-list>.stretch {
-    .citizen-offline, .citizen-online, .citizen-dead {
-      text-decoration: none;
-
-      &+.cell img{
-        padding-left: 4px;
+  .citizens-list {
+    &>.header {
+      .cell:last-child {
+        display: flex;
+        align-items: center;
+        gap: 4px;
       }
     }
 
-    .citizen-box-name, .citizen-box-name-me {
-      img {
-        padding-left: 4px;
-      }
+    &>.stretch {
 
-      & > img:first-child {
-        padding-left: 0;
-        padding-right: 4px;
+      .citizen-offline,
+      .citizen-online,
+      .citizen-dead {
+        text-decoration: none;
 
-        &+span img {
-          padding-right: 4px;
+        &+.cell img {
+          padding-left: 4px;
         }
       }
 
-      &+.citizen-box {
-        .inventory{
-          display: flex;
-          justify-content: center;
+      .citizen-box-name,
+      .citizen-box-name-me {
+        img {
+          padding-left: 4px;
+        }
 
-          img {
-            vertical-align: unset;
+        &>img:first-child {
+          padding-left: 0;
+          padding-right: 4px;
+
+          &+span img {
+            padding-right: 4px;
+          }
+        }
+
+        &+.citizen-box {
+          .inventory {
+            display: flex;
+            justify-content: center;
+
+            img {
+              vertical-align: unset;
+            }
           }
         }
       }
-    }
 
-    .citizen-dead+.cell+.cell+.cell+.cell {
-      padding: 2px 4px;
+      .citizen-dead+.cell+.cell+.cell+.cell {
+        padding: 2px 4px;
+      }
     }
   }
 
@@ -214,6 +228,43 @@ body.zen-enhanced {
       margin-right: 0;
     }
   }
+
+  // Soul page
+  .soul {
+    .score {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .personal_desc {
+      background-position-y: 6px;
+    }
+  }
+
+  // Attack page
+  .daily-attack {
+    .infos h2 {
+      font-family: Arial, sans-serif;
+      font-variant: small-caps;
+      text-transform: unset;
+    }
+  }
+
+  // Log scrollbar
+  .log-content {
+    scrollbar-color: #f0d79e transparent;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      background: #f0d79e;
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+    }
+  }
 }
 
 // Bank blocker
@@ -254,9 +305,11 @@ body.zen-enhanced {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
+
   100% {
     transform: scale(1);
   }
@@ -280,7 +333,7 @@ body.zen-enhanced {
 
 body.zen-map-preview-enabled {
   .town-row {
-    & > .cell:first-child img {
+    &>.cell:first-child img {
       animation: pulse 1s infinite;
       cursor: pointer;
     }

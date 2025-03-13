@@ -11,7 +11,7 @@ declare global {
     De = "de",
   }
 
-  type Translations = Record<Lang, Partial<Record<string, string>>>
+  type Translations = Partial<Record<Lang, Partial<Record<string, string>>>>
 
   type Message = {
     action: Action;

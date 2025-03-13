@@ -1,15 +1,17 @@
-import { blockBank, cleanupBankBlocker, handleItemTaken } from "./bankBlocker";
+import { blockBank } from "./bankBlocker";
 import { offHover } from "./hooks/offHover";
 import { onClick } from "./hooks/onClick";
 import { onHover } from "./hooks/onHover";
 import { onMount } from "./hooks/onMount";
 import { displayMapPreview, insertMapPreview, openBBHCityPage, removeMapPreview } from "./mapPreview";
 import { listenToBackgroundMessages } from "./messageListener";
-import { initStore, setStore, store } from "./store";
+import { initStore } from "./store";
 
 // Initialize the store
 initStore();
 
+// TODO: first daily ration doesn't count towards the bank limit
+// TODO: Add link to BBH City page on history page
 // TODO: Auto publish on Chrome on version release
 // TODO: Add Firefox support
 // TODO: Auto publish on Firefox on version release

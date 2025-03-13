@@ -3,7 +3,7 @@ import { setStore } from "./store";
 
 export const listenToBackgroundMessages = () => {
   chrome.runtime.onMessage.addListener(
-    (message: Message, sender, sendResponse) => {
+    (message: Message, _sender, _sendResponse) => {
       switch (message.action) {
         case Action.TakeItem: {
           handleItemTaken();

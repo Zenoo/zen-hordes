@@ -9,7 +9,7 @@ import {
   GlobalStyles,
   Switch,
   ThemeProvider,
-  Typography
+  Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
@@ -48,15 +48,15 @@ const Popup = () => {
   // Fetch lang
   useEffect(() => {
     chrome.storage.sync.get((data) => {
-      setEnhanceCss(data["enhance-css"] ?? true);
-      setBankBlocker(data["bank-blocker"] ?? true);
-      setMapPreview(data["map-preview"] ?? true);
-      setLang(data["hordes-lang"] as Lang || Lang.En);
+      setEnhanceCss(data["enhance-css"] ? !!data["enhance-css"] : true);
+      setBankBlocker(data["bank-blocker"] ? !!data["bank-blocker"] : true);
+      setMapPreview(data["map-preview"] ? !!data["map-preview"] : true);
+      setLang((data["hordes-lang"] as Lang | undefined) ?? Lang.En);
     });
   }, []);
 
   const t = (key: string, replacements?: Record<string, string>) => {
-    let translation = T[lang][key] || key;
+    let translation = T[lang]?.[key] ?? key;
 
     if (replacements) {
       for (const [placeholder, value] of Object.entries(replacements)) {
@@ -71,23 +71,26 @@ const Popup = () => {
   };
 
   const setFeature = (feature: string, value: boolean) => {
-    chrome.tabs.query({
-      url: [
-        "https://myhordes.eu/*",
-        "https://myhordes.fr/*",
-        "https://myhordes.de/*",
-        "https://myhord.es/*",
-      ]
-    }, function (tabs) {
-      tabs.forEach((tab) => {
-        if (!tab.id) return;
+    chrome.tabs.query(
+      {
+        url: [
+          "https://myhordes.eu/*",
+          "https://myhordes.fr/*",
+          "https://myhordes.de/*",
+          "https://myhord.es/*",
+        ],
+      },
+      function (tabs) {
+        tabs.forEach((tab) => {
+          if (!tab.id) return;
 
-        chrome.tabs.sendMessage<Message>(tab.id, {
-          action: Action.ToggleFeature,
-          value: { feature, enabled: value },
+          chrome.tabs.sendMessage<Message>(tab.id, {
+            action: Action.ToggleFeature,
+            value: { feature, enabled: value },
+          });
         });
-      });
-    });
+      }
+    );
   };
 
   const handleEnhanceCssChange = (
@@ -168,17 +171,23 @@ const Popup = () => {
           }
         />
       </FormGroup>
-      <Typography variant="caption" sx={{ display: 'block', opacity: 0.8, textAlign: "center" }}>
+      <Typography
+        variant="caption"
+        sx={{ display: "block", opacity: 0.8, textAlign: "center" }}
+      >
         v{Version}
       </Typography>
     </ThemeProvider>
   );
 };
 
-const root = createRoot(document.getElementById("root")!);
+const rootElement = document.getElementById("root");
+if (rootElement) {
+  const root = createRoot(rootElement);
 
-root.render(
-  <React.StrictMode>
-    <Popup />
-  </React.StrictMode>
-);
+  root.render(
+    <React.StrictMode>
+      <Popup />
+    </React.StrictMode>
+  );
+}

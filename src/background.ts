@@ -1,7 +1,9 @@
-const DEBUG = false;
+const CONFIG = {
+  debug: false
+};
 
-const log = (...args: any[]) => {
-  if (DEBUG) {
+const log = (...args: unknown[]) => {
+  if (CONFIG.debug) {
     console.log(...args);
   }
 };
@@ -9,7 +11,7 @@ const log = (...args: any[]) => {
 // Utils
 const decodeRequestBody = (
   details: chrome.webRequest.WebRequestBodyDetails
-) => {
+): unknown => {
   if (details.requestBody?.raw?.[0]?.bytes) {
     const raw = details.requestBody.raw[0].bytes;
     const decodedString = new TextDecoder().decode(raw);
@@ -35,10 +37,13 @@ chrome.webRequest.onBeforeRequest.addListener(
       // Take item from the bank / Put item in the bank
       const requestBody = decodeRequestBody(details);
 
-      // Take item
-      if (requestBody.direction === "up") {
-        queue[details.requestId] = { action: Action.TakeItem };
+      if (requestBody instanceof Object && "direction" in requestBody) {
+        // Take item
+        if (requestBody.direction === "up") {
+          queue[details.requestId] = { action: Action.TakeItem };
+        }
       }
+
     } else if (details.url.endsWith("/rest/v1/town/facilities/well")) {
       // Take ration from the well
       queue[details.requestId] = { action: Action.TakeItem };

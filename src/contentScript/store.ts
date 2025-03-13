@@ -15,15 +15,15 @@ export const setStore = <K extends keyof typeof store>(
 ) => {
   store[key] = value;
 
-  chrome.storage.sync.set({ [key]: value });
+  chrome.storage.sync.set({ [key]: value }).catch(console.error);
 };
 
 export const initStore = () => {
   // Clear old storage
-  chrome.storage.sync.remove("lang");
+  chrome.storage.sync.remove("lang").catch(console.error);
 
   // Update lang (don't update if tab is unloaded)
-  if (store["hordes-lang"]?.length === 2) {
+  if (store["hordes-lang"].length === 2) {
     setStore("hordes-lang", store["hordes-lang"]);
   }
 

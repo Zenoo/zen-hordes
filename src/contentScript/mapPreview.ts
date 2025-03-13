@@ -42,8 +42,8 @@ export const displayMapPreview = (event: MouseEvent) => {
     tooltip.classList.add("visible");
 
     // Stick to node position
-    tooltip.style.left = `${event.clientX + 20}px`;
-    tooltip.style.top = `${event.clientY}px`;
+    tooltip.style.left = `${(event.clientX + 20).toFixed(2)}px`;
+    tooltip.style.top = `${event.clientY.toFixed(2)}px`;
 
     // Add map link
     if (!tooltip.getAttribute("src")) {
