@@ -1,4 +1,6 @@
 import { blockBank, cleanupBankBlocker, handleItemTaken } from "./bankBlocker";
+import { displayExternalCityLinks } from "./externalCityLink";
+import { ExternalSiteName } from "./externalSites";
 import { setStore } from "./store";
 
 export const listenToBackgroundMessages = () => {
@@ -10,10 +12,10 @@ export const listenToBackgroundMessages = () => {
           break;
         }
         case Action.ToggleFeature: {
-          const value = message.value as { feature: string; enabled: boolean };
+          const value = message.value as { feature: string; enabled: unknown };
           switch (value.feature) {
             case "enhance-css": {
-              setStore("enhance-css", value.enabled);
+              setStore("enhance-css", !!value.enabled);
 
               if (value.enabled) {
                 document.body.classList.add("zen-enhanced");
@@ -23,7 +25,7 @@ export const listenToBackgroundMessages = () => {
               break;
             }
             case "bank-blocker": {
-              setStore("bank-blocker", value.enabled);
+              setStore("bank-blocker", !!value.enabled);
 
               if (!value.enabled) {
                 cleanupBankBlocker();
@@ -36,12 +38,31 @@ export const listenToBackgroundMessages = () => {
               break;
             }
             case "map-preview": {
-              setStore("map-preview", value.enabled);
+              setStore("map-preview", !!value.enabled);
 
               if (value.enabled) {
                 document.body.classList.add("zen-map-preview-enabled");
               } else {
                 document.body.classList.remove("zen-map-preview-enabled");
+              }
+              break;
+            }
+            case "external-city-links": {
+              const list = value.enabled as ExternalSiteName[];
+              setStore("external-city-links", list);
+
+              // Remove existing external links
+              const existing = document.querySelectorAll(".zen-external-link");
+              existing.forEach((node) => {
+                node.remove();
+              });
+
+              // Display external links
+              const anchor = document.querySelector<HTMLElement>(
+                ".soul .view-town > .row .cell button:not(.zen-external-link)"
+              );
+              if (anchor) {
+                displayExternalCityLinks(anchor);
               }
               break;
             }

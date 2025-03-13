@@ -32,6 +32,7 @@ export const displayExternalCityLinks = (node: HTMLElement) => {
 
       const button = document.createElement("button");
       button.classList.add("zen-external-link", "center");
+      button.setAttribute("data-id", site);
 
       const translation = t(T, "link", { site });
       const logo = document.querySelector(
