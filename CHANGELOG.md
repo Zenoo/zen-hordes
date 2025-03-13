@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.1.0...zen-hordes-v1.2.0) (2025-03-13)
+
+
+### Features
+
+* Auto publish to Chrome Web Store ([8a84b47](https://github.com/Zenoo/zen-hordes/commit/8a84b475ef6c2fb8eb3bb7d21297037652dc37d1))
+* External city links ([33397cf](https://github.com/Zenoo/zen-hordes/commit/33397cf2073333cf4237fe8600da10fb4195c1f3))
+* TS Eslint ([ce91322](https://github.com/Zenoo/zen-hordes/commit/ce913224b6bc964f6dcfdb6ef9eb041270d70cec))
+
+
+### Bug Fixes
+
+* First water ration per day does not count towards item limit. + Disallow setting store outsite of setStore ([a7634a3](https://github.com/Zenoo/zen-hordes/commit/a7634a3cc981709dad232a099bdb24e41ec89088))
+
 ## [1.1.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.0.1...zen-hordes-v1.1.0) (2025-03-09)
 
 
