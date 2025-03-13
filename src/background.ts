@@ -1,5 +1,7 @@
+import { setStore, store } from "./contentScript/store";
+
 const CONFIG = {
-  debug: false
+  debug: false,
 };
 
 const log = (...args: unknown[]) => {
@@ -43,10 +45,9 @@ chrome.webRequest.onBeforeRequest.addListener(
           queue[details.requestId] = { action: Action.TakeItem };
         }
       }
-
     } else if (details.url.endsWith("/rest/v1/town/facilities/well")) {
       // Take ration from the well
-      queue[details.requestId] = { action: Action.TakeItem };
+      queue[details.requestId] = { action: Action.TakeItem, value: "water" };
     }
   },
   { urls: ["*://*/api/*", "*://*/rest/*"] },
@@ -72,8 +73,19 @@ chrome.webRequest.onCompleted.addListener(
 
     // Take item from the bank
     if (queue[details.requestId]?.action === Action.TakeItem) {
-      queue[details.requestId] = undefined;
+      if (queue[details.requestId]?.value === "water") {
+        // First water ration per day doesn't count towards the bank limit
+        const startOfDay = new Date();
+        startOfDay.setHours(0, 0, 0, 0);
 
+        if (store["last-water-ration-taken"] < startOfDay.getTime()) {
+          setStore("last-water-ration-taken", Date.now());
+          queue[details.requestId] = undefined;
+          return;
+        }
+      }
+
+      queue[details.requestId] = undefined;
       sendMessageToContentScript(Action.TakeItem);
     }
   },

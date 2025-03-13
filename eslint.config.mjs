@@ -37,6 +37,13 @@ export default tseslint.config(
           allowNumber: true,
         },
       ],
+      'no-restricted-syntax': [
+        'error',
+        {
+          selector: "AssignmentExpression[left.object.name='store']",
+          message: "Do not update the store directly. Use setStore instead."
+        }
+      ]
     }
   },
   {

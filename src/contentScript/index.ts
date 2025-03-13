@@ -10,7 +10,7 @@ import { initStore } from "./store";
 // Initialize the store
 initStore();
 
-// TODO: first daily ration doesn't count towards the bank limit
+// TODO: Reset first water ration on death page display
 // TODO: Add link to BBH City page on history page
 // TODO: Auto publish on Chrome on version release
 // TODO: Add Firefox support
