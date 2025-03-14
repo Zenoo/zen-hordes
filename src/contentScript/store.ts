@@ -10,8 +10,6 @@ export const store = {
   "map-preview": true,
   "external-city-links": [
     ExternalSiteName.BBH,
-    ExternalSiteName.FM,
-    ExternalSiteName.GH,
   ],
   "bank-items-taken": 0,
   "last-bank-item-taken": Date.now(),
