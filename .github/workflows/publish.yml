@@ -27,7 +27,7 @@ jobs:
     - name: Build
       run: |
         pnpm install
-        pnpm build
+        pnpm build:chrome
     - name: Upload & release
       uses: mnao305/chrome-extension-upload@v5.0.0
       with:
