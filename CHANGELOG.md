@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.3.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.2.2...zen-hordes-v1.3.0) (2025-03-14)
+
+
+### Features
+
+* Auto publish to Firefox ([d9df946](https://github.com/Zenoo/zen-hordes/commit/d9df94645be12d847c36a02b8ddc041bcb00499e))
+
+
+### Bug Fixes
+
+* Chrome build command ([0397204](https://github.com/Zenoo/zen-hordes/commit/039720467ca482e86fd920bb541b2e2eb552375f))
+* Default external city links ([c9d5317](https://github.com/Zenoo/zen-hordes/commit/c9d53171e0131ec0b0761ff00da7e966c93f8721))
+* Firefox compliance ([a9070d4](https://github.com/Zenoo/zen-hordes/commit/a9070d4011611c97db132ace1f1ad5c84ce6512c))
+* Firefox extension link ([6a8aaa9](https://github.com/Zenoo/zen-hordes/commit/6a8aaa9eeee402ecba6fca9fcb8b2bd37193b308))
+
 ## [1.2.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.2.1...zen-hordes-v1.2.2) (2025-03-14)
 
 
