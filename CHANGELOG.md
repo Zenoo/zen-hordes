@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.2.1...zen-hordes-v1.2.2) (2025-03-14)
+
+
+### Bug Fixes
+
+* Firefox compat ([835521c](https://github.com/Zenoo/zen-hordes/commit/835521c086a70ee5281d67abb6148d75da127aa0))
+
 ## [1.2.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.2.0...zen-hordes-v1.2.1) (2025-03-13)
 
 
