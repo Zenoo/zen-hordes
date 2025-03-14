@@ -36,6 +36,7 @@ jobs:
         client-id: ${{ secrets.CLIENT_ID }}
         client-secret: ${{ secrets.CLIENT_SECRET }}
         refresh-token: ${{ secrets.REFRESH_TOKEN }}
+      continue-on-error: true
     - name: Build Firefox extension
       run: |
         pnpm build:firefox

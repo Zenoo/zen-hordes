@@ -10,10 +10,10 @@ fi
 rimraf dist
 
 # Adapt the manifest file for the target browser
-if [ "$1" == "chrome" ]; then
+if [ "$1" = "chrome" ]; then
   # Move manifest-firefox.json out of the way
   mv public/manifest-firefox.json manifest-firefox.json
-elif [ "$1" == "firefox" ]; then
+elif [ "$1" = "firefox" ]; then
   # Move manifest.json out of the way and replace it with manifest-firefox.json
   mv public/manifest.json manifest.json
   mv public/manifest-firefox.json public/manifest.json
@@ -32,10 +32,10 @@ bestzip ../dist.zip *
 cd ..
 
 # Restore the manifest files
-if [ "$1" == "chrome" ]; then
+if [ "$1" = "chrome" ]; then
   # Move manifest-firefox.json back
   mv manifest-firefox.json public/manifest-firefox.json
-elif [ "$1" == "firefox" ]; then
+elif [ "$1" = "firefox" ]; then
   # Move manifests back
   mv public/manifest.json public/manifest-firefox.json
   mv manifest.json public/manifest.json
