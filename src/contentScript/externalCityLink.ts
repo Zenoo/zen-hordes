@@ -17,6 +17,21 @@ const T: Translations = {
   },
 };
 
+const buildButton = (button: HTMLButtonElement, logo: Element | null, text: string) => {
+  while (button.firstChild) {
+    button.removeChild(button.firstChild);
+  }
+
+  const image = document.createElement("img");
+  image.src = logo?.getAttribute("src") ?? "";
+  image.alt = text;
+  button.appendChild(image);
+
+  const p = document.createElement("p");
+  p.textContent = text;
+  button.appendChild(p);
+};
+
 export const displayExternalCityLinks = (node: HTMLElement) => {
   if (!store["external-city-links"].length) return;
 
@@ -39,10 +54,7 @@ export const displayExternalCityLinks = (node: HTMLElement) => {
         `.app-external[data-id="${siteData.id}"] img`
       );
 
-      button.innerHTML = /*html*/ `
-        <img src="${logo?.getAttribute("src")}" alt="${translation}" />
-        <p>${translation}</p>
-      `;
+      buildButton(button, logo, translation);
 
       button.addEventListener("click", async () => {
         if (!siteData.url) return;
@@ -53,8 +65,14 @@ export const displayExternalCityLinks = (node: HTMLElement) => {
           ?.textContent?.trim();
         if (!townName) return;
 
-        // Replace button with loading div
-        button.innerHTML = /*html*/ `<div class="loading"></div>`;
+        // Replace button content with loading div
+        while (button.firstChild) {
+          button.removeChild(button.firstChild);
+        }
+
+        const loadingDiv = document.createElement("div");
+        loadingDiv.classList.add("loading");
+        button.appendChild(loadingDiv);
 
         try {
           // Fetch town ID
@@ -78,19 +96,13 @@ export const displayExternalCityLinks = (node: HTMLElement) => {
             throw new Error("Failed to parse town ID");
 
           // Replace button text
-          button.innerHTML = /*html*/ `
-            <img src="${logo?.getAttribute("src")}" alt="${translation}" />
-            <p>${translation}</p>
-          `;
+          buildButton(button, logo, translation);
 
           const townID = city.cid;
           window.open(siteData.url.replace("{{townId}}", townID.toString()));
         } catch (error) {
           // Display error
-          button.innerHTML = /*html*/ `
-            <img src="${logo?.getAttribute("src")}" alt="${translation}" />
-            <p>${error instanceof Error ? error.message : "Error"}</p>
-          `;
+          buildButton(button, logo, error instanceof Error ? error.message : "Error");
         }
       });
 

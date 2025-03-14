@@ -102,10 +102,14 @@ export const blockBank = (node: HTMLElement) => {
       notification.id = "bank-blocked-notification";
       notification.classList.add("note", "note-critical");
 
-      notification.innerHTML = /* html */ `
-        ${t(T, "limit-reached")}
-        <p class="time-remaining">${formattedTime}</p>
-      `;
+      const title = document.createElement("span");
+      title.textContent = t(T, "limit-reached");
+      notification.append(title);
+
+      const timer = document.createElement("p");
+      timer.classList.add("time-remaining");
+      timer.textContent = formattedTime;
+      notification.append(timer);
 
       node.parentElement?.insertBefore(notification, node);
 

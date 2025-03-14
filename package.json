@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
-    "build": "rimraf dist && webpack --config webpack/webpack.prod.js && cd dist/ && bestzip ../dist.zip *",
+    "build:chrome": "sh ./scripts/build.sh chrome",
+    "build:firefox": "sh ./scripts/build.sh firefox",
     "clean": "rimraf dist",
     "style": "prettier --write \"src/**/*.{ts,tsx}\"",
     "preinstall": "npx only-allow pnpm"

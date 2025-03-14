@@ -4,6 +4,39 @@
 
 Zen Hordes is a browser extension designed to enhance your experience on the MyHordes game website. This extension provides a variety of features to improve the user interface, manage your interactions with the game's city bank, and offer translations for different languages.
 
+## Installation
+
+Zen Hordes is available as a browser extension for Google Chrome and Mozilla Firefox. You can install the extension from the respective browser stores using the following links:
+
+- [Google Chrome](https://chromewebstore.google.com/detail/zen-hordes/mfmegmfbgapnopkjfocndlkbdapaogam)
+- ~~Mozilla Firefox~~ (coming soon)
+
+## Building the Extension
+
+To run the extension locally, you can follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Zenoo/zen-hordes.git
+```
+
+2. Install the dependencies:
+
+```bash
+pnpm install
+```
+
+3. Build the extension:
+
+```bash
+pnpm build:chrome
+# or
+pnpm build:firefox
+```
+
+The file `dist.zip` will be generated at the root of the project. You can then submit this file to the browser store for review or load it as an unpacked extension in your browser.
+
 ## Key Features
 
 ### User Interface Enhancements
