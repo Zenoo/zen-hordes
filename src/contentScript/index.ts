@@ -9,7 +9,7 @@ import { listenToBackgroundMessages } from "./messageListener";
 import { initStore } from "./store";
 
 // Initialize the store
-initStore();
+await initStore();
 
 // TODO: Reset first water ration on death page display
 // TODO: Change the max items in chaos

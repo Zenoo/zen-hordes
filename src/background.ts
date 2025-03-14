@@ -20,10 +20,9 @@ const decodeRequestBody = (
   }
 };
 
-const sendMessageToContentScript = (message: Message) => {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.sendMessage(tabs[0].id ?? 0, message);
-  });
+const sendMessageToContentScript = async (message: Message) => {
+  const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
+  chrome.tabs.sendMessage(tabs[0].id ?? 0, message);
 };
 
 const queue: Partial<Record<string, Message>> = {};
@@ -75,7 +74,7 @@ chrome.webRequest.onCompleted.addListener(
     if (message?.action === Action.TakeItem) {
       queue[details.requestId] = undefined;
 
-      sendMessageToContentScript(message);
+      sendMessageToContentScript(message).catch(console.error);
     }
   },
   { urls: ["*://*/api/*", "*://*/rest/*"] }

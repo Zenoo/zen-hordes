@@ -13,7 +13,7 @@ import {
   GlobalStyles,
   Switch,
   ThemeProvider,
-  Typography
+  Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
@@ -59,7 +59,8 @@ const Popup = () => {
 
   // Fetch lang
   useEffect(() => {
-    chrome.storage.sync.get((data) => {
+    const syncStorage = async () => {
+      const data = await chrome.storage.sync.get();
       setEnhanceCss(data["enhance-css"] ? !!data["enhance-css"] : true);
       setBankBlocker(data["bank-blocker"] ? !!data["bank-blocker"] : true);
       setMapPreview(data["map-preview"] ? !!data["map-preview"] : true);
@@ -69,7 +70,9 @@ const Popup = () => {
         ]
       );
       setLang((data["hordes-lang"] as Lang | undefined) ?? Lang.En);
-    });
+    };
+
+    syncStorage().catch(console.error);
   }, []);
 
   const t = (key: string, replacements?: Record<string, string>) => {
@@ -87,8 +90,8 @@ const Popup = () => {
     return translation;
   };
 
-  const setFeature = (feature: string, value: unknown) => {
-    chrome.tabs.query(
+  const setFeature = async (feature: string, value: unknown) => {
+    const tabs = await chrome.tabs.query(
       {
         url: [
           "https://myhordes.eu/*",
@@ -96,51 +99,50 @@ const Popup = () => {
           "https://myhordes.de/*",
           "https://myhord.es/*",
         ],
-      },
-      function (tabs) {
-        tabs.forEach((tab) => {
-          if (!tab.id) return;
-
-          chrome.tabs.sendMessage<Message>(tab.id, {
-            action: Action.ToggleFeature,
-            value: { feature, enabled: value },
-          });
-        });
       }
     );
+
+    tabs.forEach((tab) => {
+      if (!tab.id) return;
+
+      chrome.tabs.sendMessage<Message>(tab.id, {
+        action: Action.ToggleFeature,
+        value: { feature, enabled: value },
+      });
+    });
   };
 
-  const handleEnhanceCssChange = (
+  const handleEnhanceCssChange = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setEnhanceCss(event.target.checked);
-    setFeature("enhance-css", event.target.checked);
+    await setFeature("enhance-css", event.target.checked);
   };
 
-  const handleBankBlockerChange = (
+  const handleBankBlockerChange = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setBankBlocker(event.target.checked);
-    setFeature("bank-blocker", event.target.checked);
+    await setFeature("bank-blocker", event.target.checked);
   };
 
-  const handleMapPreviewChange = (
+  const handleMapPreviewChange = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setMapPreview(event.target.checked);
-    setFeature("map-preview", event.target.checked);
+    await setFeature("map-preview", event.target.checked);
   };
 
-  const handleExternalSiteLinksChange = (name: ExternalSiteName) => (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const updatedExternalSiteLinks = event.target.checked
-      ? [...externalSiteLinks, name]
-      : externalSiteLinks.filter((link) => link !== name);
+  const handleExternalSiteLinksChange =
+    (name: ExternalSiteName) =>
+    async (event: React.ChangeEvent<HTMLInputElement>) => {
+      const updatedExternalSiteLinks = event.target.checked
+        ? [...externalSiteLinks, name]
+        : externalSiteLinks.filter((link) => link !== name);
 
-    setExternalSiteLinks(updatedExternalSiteLinks);
-    setFeature("external-city-links", updatedExternalSiteLinks);
-  };
+      setExternalSiteLinks(updatedExternalSiteLinks);
+      await setFeature("external-city-links", updatedExternalSiteLinks);
+    };
 
   return (
     <ThemeProvider theme={theme}>
@@ -207,24 +209,27 @@ const Popup = () => {
             {t("external-city-links")}
           </FormLabel>
           <FormGroup aria-label="position" row>
-            {Object.values(ExternalSiteName).map((name) => !!ExternalSite[name].url && (
-              <FormControlLabel
-                key={name}
-                value={name}
-                control={
-                  <Checkbox
-                    checked={externalSiteLinks.includes(name)}
-                    onChange={handleExternalSiteLinksChange(name)}
-                    size="small"
+            {Object.values(ExternalSiteName).map(
+              (name) =>
+                !!ExternalSite[name].url && (
+                  <FormControlLabel
+                    key={name}
+                    value={name}
+                    control={
+                      <Checkbox
+                        checked={externalSiteLinks.includes(name)}
+                        onChange={handleExternalSiteLinksChange(name)}
+                        size="small"
+                      />
+                    }
+                    label={name}
+                    labelPlacement="end"
+                    sx={{
+                      "& .MuiFormControlLabel-label": { typography: "body2" },
+                    }}
                   />
-                }
-                label={name}
-                labelPlacement="end"
-                sx={{
-                  '& .MuiFormControlLabel-label': { typography: "body2" },
-                }}
-              />
-            ))}
+                )
+            )}
           </FormGroup>
         </FormControl>
       </FormGroup>

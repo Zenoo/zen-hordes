@@ -8,7 +8,11 @@ export const store = {
   "enhance-css": true,
   "bank-blocker": true,
   "map-preview": true,
-  "external-city-links": [ExternalSiteName.BBH, ExternalSiteName.FM, ExternalSiteName.GH],
+  "external-city-links": [
+    ExternalSiteName.BBH,
+    ExternalSiteName.FM,
+    ExternalSiteName.GH,
+  ],
   "bank-items-taken": 0,
   "last-bank-item-taken": Date.now(),
   "last-water-ration-taken": new Date(0).getTime(),
@@ -27,29 +31,30 @@ export const setStore = <K extends keyof Store>(
   // eslint-disable-next-line no-restricted-syntax
   store[key] = value;
 
+  // We don't await to prevent unnecessary delays
   chrome.storage.sync.set({ [key]: value }).catch(console.error);
 };
 
-export const initStore = () => {
+export const initStore = async () => {
   // Clear old storage
-  chrome.storage.sync.remove("lang").catch(console.error);
+  await chrome.storage.sync.remove("lang");
 
   // Update lang (don't update if tab is unloaded)
   if (store["hordes-lang"].length === 2) {
     setStore("hordes-lang", store["hordes-lang"]);
   }
 
-  chrome.storage.sync.get((data) => {
-    Object.assign(store, data);
+  const data = await chrome.storage.sync.get();
 
-    // UI enhancements handled by injected CSS
-    if (store["enhance-css"]) {
-      document.body.classList.add("zen-enhanced");
-    }
+  Object.assign(store, data);
 
-    // Map preview styles
-    if (store["map-preview"]) {
-      document.body.classList.add("zen-map-preview-enabled");
-    }
-  });
+  // UI enhancements handled by injected CSS
+  if (store["enhance-css"]) {
+    document.body.classList.add("zen-enhanced");
+  }
+
+  // Map preview styles
+  if (store["map-preview"]) {
+    document.body.classList.add("zen-map-preview-enabled");
+  }
 };

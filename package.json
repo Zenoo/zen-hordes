@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
-    "build": "rimraf dist && webpack --config webpack/webpack.prod.js && bestzip dist.zip dist/",
+    "build": "rimraf dist && webpack --config webpack/webpack.prod.js && cd dist/ && bestzip ../dist.zip *",
     "clean": "rimraf dist",
     "style": "prettier --write \"src/**/*.{ts,tsx}\"",
     "preinstall": "npx only-allow pnpm"
