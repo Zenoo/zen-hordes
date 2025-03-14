@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.3.0...zen-hordes-v1.3.1) (2025-03-14)
+
+
+### Bug Fixes
+
+* Publish Firefox even if Chrome failed ([663a84d](https://github.com/Zenoo/zen-hordes/commit/663a84d2fcf17b24760154bbeffa46521b0dd8eb))
+
 ## [1.3.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.2.2...zen-hordes-v1.3.0) (2025-03-14)
 
 
