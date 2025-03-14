@@ -9,7 +9,7 @@ Zen Hordes is a browser extension designed to enhance your experience on the MyH
 Zen Hordes is available as a browser extension for Google Chrome and Mozilla Firefox. You can install the extension from the respective browser stores using the following links:
 
 - [Google Chrome](https://chromewebstore.google.com/detail/zen-hordes/mfmegmfbgapnopkjfocndlkbdapaogam)
-- ~~Mozilla Firefox~~ (coming soon)
+- [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/zen-hordes/)
 
 ## Building the Extension
 
