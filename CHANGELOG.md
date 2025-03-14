@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.3.1...zen-hordes-v1.3.2) (2025-03-14)
+
+
+### Bug Fixes
+
+* Update FF manifest version on release ([1b0849f](https://github.com/Zenoo/zen-hordes/commit/1b0849ff6b91bff24a4eeb0713f6b4d92c07eea7))
+
 ## [1.3.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.3.0...zen-hordes-v1.3.1) (2025-03-14)
 
 
