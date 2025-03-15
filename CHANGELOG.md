@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.3.2...zen-hordes-v1.4.0) (2025-03-15)
+
+
+### Features
+
+* Display external site update button ([57b7b3b](https://github.com/Zenoo/zen-hordes/commit/57b7b3befcc3c140ffdbd713ac085a626d799508))
+* Update external sites ([be16322](https://github.com/Zenoo/zen-hordes/commit/be163228c6db790b872f127783885e35bfd95d74))
+
 ## [1.3.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.3.1...zen-hordes-v1.3.2) (2025-03-14)
 
 
