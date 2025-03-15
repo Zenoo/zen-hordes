@@ -1,7 +1,7 @@
 import { blockBank, cleanupBankBlocker, handleItemTaken } from "./bankBlocker";
 import { displayExternalCityLinks } from "./externalCityLink";
 import { ExternalSiteName } from "./externalSites";
-import { setStore } from "./store";
+import { setStore, Store, store } from "./store";
 
 export const listenToBackgroundMessages = () => {
   chrome.runtime.onMessage.addListener(
@@ -73,8 +73,18 @@ export const listenToBackgroundMessages = () => {
           break;
         }
         case Action.Logout: {
-          // Reset user external ID
-          setStore("user-external-id", "");
+          // Reset user key
+          setStore("user-key", "");
+          break;
+        }
+        case Action.SetOption: {
+          const value = message.value as { name: string; value: unknown };
+
+          if (value.name in store) {
+            setStore(value.name as keyof Store, value.value as Store[keyof Store]);
+          } else {
+            console.error("Unknown option:", value.name);
+          }
           break;
         }
         default: {

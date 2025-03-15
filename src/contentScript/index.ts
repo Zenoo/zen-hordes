@@ -12,6 +12,8 @@ import { initStore } from "./store";
 // Initialize the store
 await initStore();
 
+// TODO: add &chaosx=X&chaosy=Y to FM if chaos mode
+// TODO: add &deadzombies=Z to FM with the amount of zombies killed
 // TODO: Reset first water ration on death page display
 // TODO: Change the max items in chaos
 // TODO: Button to update external sites outside

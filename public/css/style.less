@@ -354,15 +354,35 @@ body.zen-map-preview-enabled {
 
 // External sites update
 .zen-update-button {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
   .site {
-    .status {
-      display: none;
+    position: relative;
+
+    img {
+      margin-right: 0;
     }
 
-    &.success,&.loading,&.error {
-      .status {
-        display: inline-block;
-      }
+    .status {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
     }
+  }
+}
+
+.zen-update-error {
+  p {
+    margin: 0;
+  }
+
+  a {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    color: #f0d79e;
   }
 }

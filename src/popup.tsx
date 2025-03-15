@@ -12,6 +12,7 @@ import {
   FormLabel,
   GlobalStyles,
   Switch,
+  TextField,
   ThemeProvider,
   Typography,
 } from "@mui/material";
@@ -27,25 +28,67 @@ const T: Translations = {
     "bank-blocker": "Bank Blocker",
     "map-preview": "Available cities map preview",
     "external-city-links": "External city history links",
+    "user-key": "User key",
   },
   fr: {
     "enhance-css": "Améliorations de l'interface",
     "bank-blocker": "Bloqueur de banque",
     "map-preview": "Aperçu de la carte des villes disponibles",
     "external-city-links": "Liens externes des historiques des villes",
+    "user-key": "Clé utilisateur",
   },
   de: {
     "enhance-css": "UI-Verbesserungen",
     "bank-blocker": "Bank Blocker",
     "map-preview": "Vorschau der verfügbaren Städte auf der Karte",
     "external-city-links": "Externe Stadtverlauf-Links",
+    "user-key": "Benutzerschlüssel",
   },
   es: {
     "enhance-css": "Mejoras de la interfaz de usuario",
     "bank-blocker": "Bloqueador de banco",
     "map-preview": "Vista previa del mapa de ciudades disponibles",
     "external-city-links": "Enlaces externos de historiales de ciudades",
+    "user-key": "Clave de usuario",
   },
+};
+
+const sendMessage = async (message: Message) => {
+  try {
+    const tabs = await chrome.tabs.query({
+      url: [
+        "https://myhordes.eu/*",
+        "https://myhordes.fr/*",
+        "https://myhordes.de/*",
+        "https://myhord.es/*",
+      ],
+    });
+
+    tabs.forEach((tab) => {
+      if (!tab.id) return;
+
+      chrome.tabs.sendMessage<Message>(tab.id, message);
+    });
+  } catch (error) {
+    console.error(error);
+
+    // Interact with the store directly
+    switch (message.action) {
+      case Action.ToggleFeature: {
+        const value = message.value as { feature: string; enabled: unknown };
+        await chrome.storage.sync.set({ [value.feature]: value.enabled });
+        break;
+      }
+      case Action.SetOption: {
+        const value = message.value as { name: string; value: unknown };
+        await chrome.storage.sync.set({ [value.name]: value.value });
+        break;
+      }
+      default: {
+        console.error("Unknown action:", message.action);
+      }
+    }
+  }
 };
 
 const Popup = () => {
@@ -55,6 +98,7 @@ const Popup = () => {
   const [externalSiteLinks, setExternalSiteLinks] = useState([
     ExternalSiteName.BBH,
   ]);
+  const [userKey, setUserKey] = useState("");
   const [lang, setLang] = useState<Lang>(Lang.En);
 
   // Fetch lang
@@ -69,6 +113,7 @@ const Popup = () => {
           ExternalSiteName.BBH,
         ]
       );
+      setUserKey(data["user-key"] ? String(data["user-key"]) : "");
       setLang((data["hordes-lang"] as Lang | undefined) ?? Lang.En);
     };
 
@@ -91,25 +136,7 @@ const Popup = () => {
   };
 
   const setFeature = async (feature: string, value: unknown) => {
-    const tabs = await chrome.tabs.query(
-      {
-        url: [
-          "https://myhordes.eu/*",
-          "https://myhordes.fr/*",
-          "https://myhordes.de/*",
-          "https://myhord.es/*",
-        ],
-      }
-    );
-
-    tabs.forEach((tab) => {
-      if (!tab.id) return;
-
-      chrome.tabs.sendMessage<Message>(tab.id, {
-        action: Action.ToggleFeature,
-        value: { feature, enabled: value },
-      });
-    });
+    await sendMessage({ action: Action.ToggleFeature, value: { feature, enabled: value } });
   };
 
   const handleEnhanceCssChange = async (
@@ -143,6 +170,13 @@ const Popup = () => {
       setExternalSiteLinks(updatedExternalSiteLinks);
       await setFeature("external-city-links", updatedExternalSiteLinks);
     };
+
+  const handleUserKeyChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setUserKey(event.target.value);
+    await sendMessage({ action: Action.SetOption, value: { name: "user-key", value: event.target.value } });
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -232,6 +266,14 @@ const Popup = () => {
             )}
           </FormGroup>
         </FormControl>
+        <Divider sx={{ my: 1 }} />
+        <TextField
+          label={t("user-key")}
+          value={userKey}
+          onChange={handleUserKeyChange}
+          size="small"
+          sx={{ m: 1 }}
+        />
       </FormGroup>
       <Typography
         variant="caption"

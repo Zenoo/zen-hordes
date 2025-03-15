@@ -21,7 +21,7 @@ export const store = {
   "last-bank-item-taken": Date.now(),
   "last-water-ration-taken": new Date(0).getTime(),
   "hordes-lang": document.documentElement.lang as Lang,
-  "user-external-id": "",
+  "user-key": "",
 };
 
 export type Store = typeof store;
