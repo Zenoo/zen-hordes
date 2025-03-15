@@ -211,7 +211,7 @@ const Popup = () => {
           <FormGroup aria-label="position" row>
             {Object.values(ExternalSiteName).map(
               (name) =>
-                !!ExternalSite[name].url && (
+                !!ExternalSite[name].townUrl && (
                   <FormControlLabel
                     key={name}
                     value={name}

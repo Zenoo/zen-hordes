@@ -1,5 +1,6 @@
 import { blockBank } from "./bankBlocker";
 import { displayExternalCityLinks } from "./externalCityLink";
+import { displayUpdateButton } from "./externalSiteUpdater";
 import { offHover } from "./hooks/offHover";
 import { onClick } from "./hooks/onClick";
 import { onHover } from "./hooks/onHover";
@@ -13,8 +14,7 @@ await initStore();
 
 // TODO: Reset first water ration on death page display
 // TODO: Change the max items in chaos
-// TODO: Add Firefox support
-// TODO: Auto publish on Firefox on version release
+// TODO: Button to update external sites outside
 // TODO: Add a list of items to bring back, with priorities (1-5)
 // TODO: Add custom tags to players
 
@@ -30,6 +30,7 @@ insertMapPreview();
 onMount((node) => {
   blockBank(node);
   displayExternalCityLinks(node);
+  displayUpdateButton(node);
 });
 
 // Actions that need to be performed on hover

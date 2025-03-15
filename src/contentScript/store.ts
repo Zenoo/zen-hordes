@@ -11,10 +11,17 @@ export const store = {
   "external-city-links": [
     ExternalSiteName.BBH,
   ],
+  "external-sites-to-update": [
+    ExternalSiteName.BBH,
+    ExternalSiteName.FM,
+    ExternalSiteName.GH,
+    ExternalSiteName.MHO,
+  ],
   "bank-items-taken": 0,
   "last-bank-item-taken": Date.now(),
   "last-water-ration-taken": new Date(0).getTime(),
   "hordes-lang": document.documentElement.lang as Lang,
+  "user-external-id": "",
 };
 
 export type Store = typeof store;

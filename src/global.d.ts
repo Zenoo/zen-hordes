@@ -2,6 +2,7 @@ declare global {
   const enum Action {
     TakeItem,
     ToggleFeature,
+    Logout
   }
 
   const enum Lang {

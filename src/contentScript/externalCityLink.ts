@@ -43,7 +43,7 @@ export const displayExternalCityLinks = (node: HTMLElement) => {
 
     for (const site of store["external-city-links"]) {
       const siteData = ExternalSite[site];
-      if (!siteData.url) continue;
+      if (!siteData.townUrl) continue;
 
       const button = document.createElement("button");
       button.classList.add("zen-external-link", "center");
@@ -57,7 +57,7 @@ export const displayExternalCityLinks = (node: HTMLElement) => {
       buildButton(button, logo, translation);
 
       button.addEventListener("click", async () => {
-        if (!siteData.url) return;
+        if (!siteData.townUrl) return;
 
         // Get town name
         const townName = document
@@ -99,7 +99,7 @@ export const displayExternalCityLinks = (node: HTMLElement) => {
           buildButton(button, logo, translation);
 
           const townID = city.cid;
-          window.open(siteData.url.replace("{{townId}}", townID.toString()));
+          window.open(siteData.townUrl.replace("{{townId}}", townID.toString()));
         } catch (error) {
           // Display error
           buildButton(button, logo, error instanceof Error ? error.message : "Error");

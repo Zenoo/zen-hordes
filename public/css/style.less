@@ -351,3 +351,18 @@ body.zen-map-preview-enabled {
     margin: 0;
   }
 }
+
+// External sites update
+.zen-update-button {
+  .site {
+    .status {
+      display: none;
+    }
+
+    &.success,&.loading,&.error {
+      .status {
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -72,6 +72,11 @@ export const listenToBackgroundMessages = () => {
           }
           break;
         }
+        case Action.Logout: {
+          // Reset user external ID
+          setStore("user-external-id", "");
+          break;
+        }
         default: {
           console.error("Unknown action:", message.action);
         }

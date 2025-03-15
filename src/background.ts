@@ -1,5 +1,5 @@
 const CONFIG = {
-  debug: false,
+  debug: true,
 };
 
 const log = (...args: unknown[]) => {
@@ -8,7 +8,14 @@ const log = (...args: unknown[]) => {
   }
 };
 
-// Utils
+// URLs to watch
+const urls = [
+  "*://*/api/*",
+  "*://*/rest/*",
+  "*://*/logout",
+];
+
+// Decode WebRequest request body
 const decodeRequestBody = (
   details: chrome.webRequest.WebRequestBodyDetails
 ): unknown => {
@@ -20,11 +27,13 @@ const decodeRequestBody = (
   }
 };
 
+// Send message to the content script
 const sendMessageToContentScript = async (message: Message) => {
   const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
   chrome.tabs.sendMessage(tabs[0].id ?? 0, message);
 };
 
+// Watched requests queue (empties after the request is completed)
 const queue: Partial<Record<string, Message>> = {};
 
 // Listen to specific requests
@@ -45,9 +54,11 @@ chrome.webRequest.onBeforeRequest.addListener(
     } else if (details.url.endsWith("/rest/v1/town/facilities/well")) {
       // Take ration from the well
       queue[details.requestId] = { action: Action.TakeItem, value: "water" };
+    } else if (details.url.endsWith("/logout")) {
+      sendMessageToContentScript({ action: Action.Logout }).catch(console.error);
     }
   },
-  { urls: ["*://*/api/*", "*://*/rest/*"] },
+  { urls },
   ["requestBody"]
 );
 
@@ -60,7 +71,7 @@ chrome.webRequest.onErrorOccurred.addListener(
       queue[details.requestId] = undefined;
     }
   },
-  { urls: ["*://*/api/*", "*://*/rest/*"] }
+  { urls }
 );
 
 // Take action after the request is completed
@@ -77,5 +88,5 @@ chrome.webRequest.onCompleted.addListener(
       sendMessageToContentScript(message).catch(console.error);
     }
   },
-  { urls: ["*://*/api/*", "*://*/rest/*"] }
+  { urls }
 );
