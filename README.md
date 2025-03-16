@@ -66,6 +66,12 @@ Zen Hordes includes a feature that provides quick access to external sites relat
 
 ![External City Links](.github/media/external-city-links.jpeg)
 
+### External Site Updater
+
+The extension includes a button to update external sites with the current city data. This feature is useful for external sites that rely on the MyHordes API to display city information. By clicking the button, you can ensure that the external sites have the most recent data available.
+
+![External Site Updater](.github/media/update-button.jpeg)
+
 ### Translations
 Zen Hordes supports multiple languages, including English, French, German, and Spanish. The extension automatically detects your preferred language and provides translations for various elements on the MyHordes game website. This ensures that you can navigate and use the site comfortably in your preferred language.
 
