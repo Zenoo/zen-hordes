@@ -3,7 +3,7 @@ declare global {
     TakeItem,
     ToggleFeature,
     Logout,
-    SetOption
+    SetStorage
   }
 
   const enum Lang {

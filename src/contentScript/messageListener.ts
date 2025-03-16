@@ -1,6 +1,7 @@
 import { blockBank, cleanupBankBlocker, handleItemTaken } from "./bankBlocker";
 import { displayExternalCityLinks } from "./externalCityLink";
 import { ExternalSiteName } from "./externalSites";
+import { displayUpdateButton } from "./externalSiteUpdater";
 import { setStore, Store, store } from "./store";
 
 export const listenToBackgroundMessages = () => {
@@ -66,6 +67,22 @@ export const listenToBackgroundMessages = () => {
               }
               break;
             }
+            case "external-sites-to-update": {
+              const list = value.enabled as ExternalSiteName[];
+              setStore("external-sites-to-update", list);
+
+              // Refresh update button
+              const button = document.querySelector(".zen-update-button");
+              if (button) {
+                button.remove();
+              }
+
+              const target = document.querySelector<HTMLElement>(".inventory.desert");
+              if (target) {
+                displayUpdateButton(target);
+              }
+              break;
+            }
             default: {
               console.error("Unknown feature:", value.feature);
             }
@@ -77,10 +94,10 @@ export const listenToBackgroundMessages = () => {
           setStore("user-key", "");
           break;
         }
-        case Action.SetOption: {
+        case Action.SetStorage: {
           const value = message.value as { name: string; value: unknown };
 
-          if (value.name in store) {
+          if (value.name in store && store[value.name as keyof Store] !== value.value) {
             setStore(value.name as keyof Store, value.value as Store[keyof Store]);
           } else {
             console.error("Unknown option:", value.name);

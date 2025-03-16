@@ -26,6 +26,16 @@ const T = {
   },
 };
 
+const replaceString = (
+  str: string,
+  replacements: Record<string, string | undefined>
+) => {
+  return str.replace(/{{(.*?)}}/g, (_match, key) => {
+    const text = String(key);
+    return replacements[text] ?? text;
+  });
+};
+
 const displayError = (error: string) => {
   const text = document.createElement("p");
   text.textContent = error;
@@ -110,12 +120,10 @@ export const displayUpdateButton = (node: HTMLElement) => {
         return;
       }
 
-      // Empty error message
-      const error = document.querySelector(".zen-update-error");
-      if (error) {
-        while (error.firstChild) {
-          error.removeChild(error.firstChild);
-        }
+      // Remove error message
+      const existing = document.querySelector(".zen-update-error");
+      if (existing) {
+        existing.remove();
       }
 
       store["external-sites-to-update"].forEach((site) => {
@@ -149,51 +157,111 @@ export const displayUpdateButton = (node: HTMLElement) => {
             break;
           }
           case ExternalSiteName.FM: {
+            const deadZombies =
+              document.querySelectorAll(".actor.splatter").length;
+            const chaos = !!document.querySelector(
+              'body[data-theme-secondary-modifier="chaos"]'
+            );
+            const position = {
+              x: 0,
+              y: 0,
+            };
+
+            if (chaos) {
+              const displayedPosition = document.querySelector(
+                ".map .current-location"
+              );
+
+              if (displayedPosition) {
+                const [x, y] = displayedPosition.textContent
+                  ?.split(":")
+                  .pop()
+                  ?.split("/")
+                  .map((coord) => Number(coord.trim())) ?? [0, 0];
+                position.x = x;
+                position.y = y;
+              }
+            }
+
             updateParams = {
               method: "POST",
               headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
               },
-              body: `key=${store["user-key"]}`,
+              body: `key=${store["user-key"]}&deadzombies=${deadZombies}${
+                chaos ? `&chaosx=${position.x}&chaosy=${position.y}` : ""
+              }`,
             };
-
-            // TODO: add &chaosx=X&chaosy=Y if chaos mode
-            // TODO: add &deadzombies=Z with the amount of zombies killed
             break;
           }
           case ExternalSiteName.GH: {
             updateParams = {
-              method: "POST",
+              method: "GET",
               headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
+                "X-Source": "Zen-Hordes",
               },
-              body: `key=${store["user-key"]}`,
+            };
+            break;
+          }
+          case ExternalSiteName.MHO: {
+            updateParams = {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                map: {
+                  toolsToUpdate: {
+                    isBigBrothHordes: "none",
+                    isFataMorgana: "none",
+                    isGestHordes: "none",
+                    isMyHordesOptimizer: "api",
+                  },
+                },
+                townDetails: {
+                  townId: store["town-id"],
+                },
+              }),
             };
             break;
           }
           default: {
-            console.error(`Unknown site: ${site}`);
+            console.error("Unknown site", site);
             return;
           }
         }
 
+        // Get user ID (only used for MHO for now)
+        const mercureAuthJson = JSON.parse(
+          document.documentElement.getAttribute("data-mercure-auth") ?? "{}"
+        ) as Record<string, unknown>;
+        const userId = mercureAuthJson.u ? Number(mercureAuthJson.u) : 0;
+
         // Update external site
-        fetch(updateUrl.replace("{{userKey}}", store["user-key"]), updateParams)
+        fetch(
+          replaceString(updateUrl, {
+            userKey: store["user-key"],
+            userId: String(userId),
+          }),
+          updateParams
+        )
           .then(async (response) => {
-            console.log(response);
             const contentType = response.headers.get("content-type");
             let responseBody;
             if (contentType?.includes("application/json")) {
-              responseBody = await response.json() as unknown;
+              responseBody = (await response.json()) as unknown;
             } else {
               responseBody = await response.text();
             }
-            console.log("Response body:", responseBody);
 
             if (site === ExternalSiteName.BBH) {
               // Special case for BBH, read XML response
               const parser = new DOMParser();
-              const xml = parser.parseFromString(responseBody as string, "text/xml");
+              const xml = parser.parseFromString(
+                responseBody as string,
+                "text/xml"
+              );
               const error = xml.querySelector("error");
               if (!error) {
                 wrapper
@@ -208,6 +276,29 @@ export const displayUpdateButton = (node: HTMLElement) => {
                   .querySelector(".status")
                   ?.setAttribute("src", `${ASSETS}/icons/error.png`);
                 displayError(`${site}: ${error.getAttribute("code")}`);
+                return;
+              }
+            } else if (site === ExternalSiteName.GH) {
+              // Special case for GH, read JSON response
+              const data = responseBody as Record<string, unknown>;
+              if (data.retour !== 1) {
+                wrapper
+                  .querySelector(".status")
+                  ?.setAttribute("src", `${ASSETS}/icons/error.png`);
+                displayError(`${site}: ${data.lib as string}`);
+                return;
+              }
+            } else if (site === ExternalSiteName.MHO) {
+              // Special case for MHO, read JSON response
+              const data = responseBody as Partial<
+                Record<string, Partial<Record<string, string>>>
+              >;
+
+              if (data.mapResponseDto?.mhoApiStatus !== "Ok") {
+                wrapper
+                  .querySelector(".status")
+                  ?.setAttribute("src", `${ASSETS}/icons/error.png`);
+                displayError(`${site}: ${data.mapResponseDto?.mhoApiStatus}`);
                 return;
               }
             }

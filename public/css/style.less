@@ -124,6 +124,7 @@ body.zen-enhanced {
     .counter {
       display: inline-flex;
       align-items: center;
+      gap: 4px;
 
       &+.help-button {
         vertical-align: super;
@@ -223,6 +224,7 @@ body.zen-enhanced {
   .game-menu-area .game-bar .ulcont {
     display: flex;
     gap: 4px;
+    box-shadow: 0px 0px 2px 2px #372213 inset;
 
     li::before {
       margin-right: 0;
@@ -263,6 +265,24 @@ body.zen-enhanced {
 
     &::-webkit-scrollbar-thumb {
       background: transparent;
+    }
+  }
+
+  // Shaman popup
+  .popup-shaman {
+    .pm::after {
+      margin-left: 4px;
+    }
+
+    .bluelist {
+      padding-bottom: 4px;
+    }
+  }
+
+  // Shaman actions
+  button[data-rain="role"] {
+    .pm::after {
+      margin-left: 0;
     }
   }
 }
@@ -358,6 +378,8 @@ body.zen-map-preview-enabled {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  width: auto !important;
+  margin: 0 auto;
 
   .site {
     position: relative;

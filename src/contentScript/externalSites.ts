@@ -25,9 +25,10 @@ export const ExternalSite: Readonly<Record<ExternalSiteName, ExternalSiteData>> 
   [ExternalSiteName.GH]: {
     id: 4,
     townUrl: "https://gest-hordes2.eragaming.fr/carte/{{townId}}",
-    updateUrl: "https://gest-hordes2.eragaming.fr/majScript"
+    updateUrl: "https://gest-hordes2.eragaming.fr/majScript?key={{userKey}}",
   },
   [ExternalSiteName.MHO]: {
     id: 22,
+    updateUrl: "https://api.myhordesoptimizer.fr/externaltools/update?userKey={{userKey}}&userId={{userId}}",
   },
 };

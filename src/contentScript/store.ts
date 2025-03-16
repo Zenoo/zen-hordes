@@ -22,6 +22,7 @@ export const store = {
   "last-water-ration-taken": new Date(0).getTime(),
   "hordes-lang": document.documentElement.lang as Lang,
   "user-key": "",
+  "town-id": 0,
 };
 
 export type Store = typeof store;

@@ -28,6 +28,7 @@ const T: Translations = {
     "bank-blocker": "Bank Blocker",
     "map-preview": "Available cities map preview",
     "external-city-links": "External city history links",
+    "update-sites": "External sites to update",
     "user-key": "User key",
   },
   fr: {
@@ -35,6 +36,7 @@ const T: Translations = {
     "bank-blocker": "Bloqueur de banque",
     "map-preview": "Aperçu de la carte des villes disponibles",
     "external-city-links": "Liens externes des historiques des villes",
+    "update-sites": "Sites externes à mettre à jour",
     "user-key": "Clé utilisateur",
   },
   de: {
@@ -42,6 +44,7 @@ const T: Translations = {
     "bank-blocker": "Bank Blocker",
     "map-preview": "Vorschau der verfügbaren Städte auf der Karte",
     "external-city-links": "Externe Stadtverlauf-Links",
+    "update-sites": "Externe Sites aktualisieren",
     "user-key": "Benutzerschlüssel",
   },
   es: {
@@ -49,6 +52,7 @@ const T: Translations = {
     "bank-blocker": "Bloqueador de banco",
     "map-preview": "Vista previa del mapa de ciudades disponibles",
     "external-city-links": "Enlaces externos de historiales de ciudades",
+    "update-sites": "Sitios externos para actualizar",
     "user-key": "Clave de usuario",
   },
 };
@@ -79,7 +83,7 @@ const sendMessage = async (message: Message) => {
         await chrome.storage.sync.set({ [value.feature]: value.enabled });
         break;
       }
-      case Action.SetOption: {
+      case Action.SetStorage: {
         const value = message.value as { name: string; value: unknown };
         await chrome.storage.sync.set({ [value.name]: value.value });
         break;
@@ -98,6 +102,12 @@ const Popup = () => {
   const [externalSiteLinks, setExternalSiteLinks] = useState([
     ExternalSiteName.BBH,
   ]);
+  const [externalSitesToUpdate, setExternalSitesToUpdate] = useState([
+    ExternalSiteName.BBH,
+    ExternalSiteName.FM,
+    ExternalSiteName.GH,
+    ExternalSiteName.MHO,
+  ]);
   const [userKey, setUserKey] = useState("");
   const [lang, setLang] = useState<Lang>(Lang.En);
 
@@ -111,6 +121,14 @@ const Popup = () => {
       setExternalSiteLinks(
         (data["external-city-links"] as ExternalSiteName[] | undefined) ?? [
           ExternalSiteName.BBH,
+        ]
+      );
+      setExternalSitesToUpdate(
+        (data["external-sites-to-update"] as ExternalSiteName[] | undefined) ?? [
+          ExternalSiteName.BBH,
+          ExternalSiteName.FM,
+          ExternalSiteName.GH,
+          ExternalSiteName.MHO,
         ]
       );
       setUserKey(data["user-key"] ? String(data["user-key"]) : "");
@@ -171,11 +189,22 @@ const Popup = () => {
       await setFeature("external-city-links", updatedExternalSiteLinks);
     };
 
+  const handleExternalSitesToUpdateChange =
+    (name: ExternalSiteName) =>
+    async (event: React.ChangeEvent<HTMLInputElement>) => {
+      const updatedExternalSitesToUpdate = event.target.checked
+        ? [...externalSitesToUpdate, name]
+        : externalSitesToUpdate.filter((site) => site !== name);
+
+      setExternalSitesToUpdate(updatedExternalSitesToUpdate);
+      await setFeature("external-sites-to-update", updatedExternalSitesToUpdate);
+    };
+
   const handleUserKeyChange = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setUserKey(event.target.value);
-    await sendMessage({ action: Action.SetOption, value: { name: "user-key", value: event.target.value } });
+    await sendMessage({ action: Action.SetStorage, value: { name: "user-key", value: event.target.value } });
   };
 
   return (
@@ -253,6 +282,34 @@ const Popup = () => {
                       <Checkbox
                         checked={externalSiteLinks.includes(name)}
                         onChange={handleExternalSiteLinksChange(name)}
+                        size="small"
+                      />
+                    }
+                    label={name}
+                    labelPlacement="end"
+                    sx={{
+                      "& .MuiFormControlLabel-label": { typography: "body2" },
+                    }}
+                  />
+                )
+            )}
+          </FormGroup>
+        </FormControl>
+        <FormControl component="fieldset" size="small" sx={{ mx: 1 }}>
+          <FormLabel component="legend" sx={{ typography: "body2" }}>
+            {t("update-sites")}
+          </FormLabel>
+          <FormGroup aria-label="position" row>
+            {Object.values(ExternalSiteName).map(
+              (name) =>
+                !!ExternalSite[name].updateUrl && (
+                  <FormControlLabel
+                    key={name}
+                    value={name}
+                    control={
+                      <Checkbox
+                        checked={externalSitesToUpdate.includes(name)}
+                        onChange={handleExternalSitesToUpdateChange(name)}
                         size="small"
                       />
                     }

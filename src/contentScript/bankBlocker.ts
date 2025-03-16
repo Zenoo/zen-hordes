@@ -2,20 +2,21 @@ import { setStore, store } from "./store";
 import { t } from "./translate";
 
 const MAX_ITEMS_TAKEN = 5;
+const MAX_ITEMS_TAKEN_CHAOS = 10;
 const BLOCK_DURATION = 15 * 60 * 1000; // 15 minutes
 
 const T: Translations = {
   en: {
-    "limit-reached": `You reached the maximum number of items you can take from the bank (${MAX_ITEMS_TAKEN}) in a 15-minute period. Please wait a bit before taking more items.`,
+    "limit-reached": `You reached the maximum number of items you can take from the bank ({{max}}) in a 15-minute period. Please wait a bit before taking more items.`,
   },
   fr: {
-    "limit-reached": `Vous avez atteint le nombre maximum d'objets que vous pouvez prendre dans la banque (${MAX_ITEMS_TAKEN}) en 15 minutes. Veuillez attendre un peu avant de prendre plus d'objets.`,
+    "limit-reached": `Vous avez atteint le nombre maximum d'objets que vous pouvez prendre dans la banque ({{max}}) en 15 minutes. Veuillez attendre un peu avant de prendre plus d'objets.`,
   },
   de: {
-    "limit-reached": `Sie haben die maximale Anzahl von Gegenständen erreicht, die Sie in einem Zeitraum von 15 Minuten aus der Bank entnehmen können (${MAX_ITEMS_TAKEN}). Bitte warten Sie einen Moment, bevor Sie weitere Gegenstände entnehmen.`,
+    "limit-reached": `Sie haben die maximale Anzahl von Gegenständen erreicht, die Sie in einem Zeitraum von 15 Minuten aus der Bank entnehmen können ({{max}}). Bitte warten Sie einen Moment, bevor Sie weitere Gegenstände entnehmen.`,
   },
   es: {
-    "limit-reached": `Ha alcanzado la cantidad máxima de objetos que puede tomar del banco (${MAX_ITEMS_TAKEN}) en un período de 15 minutos. Espere un poco antes de tomar más objetos.`,
+    "limit-reached": `Ha alcanzado la cantidad máxima de objetos que puede tomar del banco ({{max}}) en un período de 15 minutos. Espere un poco antes de tomar más objetos.`,
   },
 };
 
@@ -86,8 +87,11 @@ export const blockBank = (node: HTMLElement) => {
       return;
     };
 
+    const isChaos = !!document.querySelector("body[data-theme-secondary-modifier='chaos']");
+    const maxItems = isChaos ? MAX_ITEMS_TAKEN_CHAOS : MAX_ITEMS_TAKEN;
+
     // Bank displayed, check if we need to display the blocker
-    if (store["bank-items-taken"] >= MAX_ITEMS_TAKEN) {
+    if (store["bank-items-taken"] >= maxItems) {
       // Visual blocker
       const existingBlocker = document.querySelector(".bank-blocker");
       if (existingBlocker) return;
