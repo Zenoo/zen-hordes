@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.4.0...zen-hordes-v1.4.1) (2025-03-16)
+
+
+### Bug Fixes
+
+* Typo ([343974b](https://github.com/Zenoo/zen-hordes/commit/343974b65c0e46b56ca1f56ec80a333e0c1a03d7))
+
 ## [1.4.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.3.2...zen-hordes-v1.4.0) (2025-03-16)
 
 
