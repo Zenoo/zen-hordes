@@ -12,6 +12,8 @@ import { initStore } from "./store";
 // Initialize the store
 await initStore();
 
+// TODO: Add hover tooltip on update button
+// TODO: Add detailed tooltips on items
 // TODO: Reset first water ration on death page display
 // TODO: Add a list of items to bring back, with priorities (1-5)
 // TODO: Add custom tags to players

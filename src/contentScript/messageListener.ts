@@ -77,7 +77,8 @@ export const listenToBackgroundMessages = () => {
                 button.remove();
               }
 
-              const target = document.querySelector<HTMLElement>(".inventory.desert");
+              const target =
+                document.querySelector<HTMLElement>(".inventory.desert");
               if (target) {
                 displayUpdateButton(target);
               }
@@ -97,8 +98,13 @@ export const listenToBackgroundMessages = () => {
         case Action.SetStorage: {
           const value = message.value as { name: string; value: unknown };
 
-          if (value.name in store && store[value.name as keyof Store] !== value.value) {
-            setStore(value.name as keyof Store, value.value as Store[keyof Store]);
+          if (value.name in store) {
+            if (store[value.name as keyof Store] !== value.value) {
+              setStore(
+                value.name as keyof Store,
+                value.value as Store[keyof Store]
+              );
+            }
           } else {
             console.error("Unknown option:", value.name);
           }
