@@ -107,7 +107,7 @@ export const blockBank = (node: HTMLElement) => {
       notification.classList.add("note", "note-critical");
 
       const title = document.createElement("span");
-      title.textContent = t(T, "limit-reached");
+      title.textContent = t(T, "limit-reached", { max: maxItems });
       notification.append(title);
 
       const timer = document.createElement("p");
