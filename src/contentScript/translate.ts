@@ -1,12 +1,20 @@
 import { store } from "./store";
 
-export const t = (T: Translations, key: string, replacements?: Record<string, string>) => {
+export const replaceString = (
+  str: string,
+  replacements: Partial<Record<string, string>>
+) => {
+  return str.replace(/{{(.*?)}}/g, (_match, key) => {
+    const text = String(key);
+    return replacements[text] ?? text;
+  });
+};
+
+export const t = (T: Translations, key: string, replacements?: Partial<Record<string, string>>) => {
   let translation = T[store["hordes-lang"]]?.[key] ?? key;
 
   if (replacements) {
-    for (const [placeholder, value] of Object.entries(replacements)) {
-      translation = translation.replace(new RegExp(`{{${placeholder}}}`, 'g'), value);
-    }
+    translation = replaceString(translation, replacements);
   }
 
   return translation;
