@@ -55,6 +55,9 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "zen-hordes@franckdemoute.fr"
+    },
+    "gecko_android": {
+      "id": "zen-hordes@franckdemoute.fr"
     }
   }
 }
