@@ -416,3 +416,36 @@ body.zen-map-preview-enabled {
     display: block;
   }
 }
+
+// Better tooltips
+.zen-better-tooltip {
+
+  .ingredients,
+  .output {
+    div {
+      position: relative;
+      display: inline-block;
+
+      img {
+        display: inline-block;
+        margin: 0 1px;
+      }
+
+      &[data-odds]{
+        margin-bottom: 8px;
+
+        &::after {
+          content: attr(data-odds);
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          color: white;
+          font-size: 7px;
+          text-align: center;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

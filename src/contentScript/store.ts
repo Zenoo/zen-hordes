@@ -17,6 +17,7 @@ export const store = {
     ExternalSiteName.GH,
     ExternalSiteName.MHO,
   ],
+  "better-tooltips": true,
   "bank-items-taken": 0,
   "last-bank-item-taken": Date.now(),
   "last-water-ration-taken": new Date(0).getTime(),

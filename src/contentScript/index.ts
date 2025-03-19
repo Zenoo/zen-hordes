@@ -1,4 +1,5 @@
 import { blockBank } from "./bankBlocker";
+import { insertBetterTooltips } from "./betterTooltips";
 import { displayExternalCityLinks } from "./externalCityLink";
 import { displayUpdateButton } from "./externalSiteUpdater";
 import { offHover } from "./hooks/offHover";
@@ -13,8 +14,6 @@ import { initStore } from "./store";
 await initStore();
 
 // TODO: Add detailed tooltips on items
-// -> Gather empty zone drops
-// -> Display buildings + empty zone that drop the item (with chances)
 // -> Display items to craft item
 // -> Display items that can be crafted with item
 // TODO: Add items found in current building
@@ -35,6 +34,7 @@ onMount((node) => {
   blockBank(node);
   displayExternalCityLinks(node);
   displayUpdateButton(node);
+  insertBetterTooltips(node);
 });
 
 // Actions that need to be performed on hover
