@@ -322,6 +322,7 @@ type RecipeData = Record<string, {
   type: RecipeType;
   in: string | string[];
   out: string | string[] | [string, number][];
+  provoking?: string;
 }>
 
 type RecipeItem = {
@@ -389,6 +390,26 @@ const generateRecipes = (items: Record<number, Item>) => {
 
       outputs.push({ item: item.id, odds });
     });
+
+    // Handle provoking field
+    if (recipeData.provoking) {
+      const provokingItem = handleItemExceptions(recipeData.provoking);
+      const itemIcon = provokingItem.split('#')[0].slice(0, -1);
+      const itemIndex = +provokingItem.split('#')[1];
+      const item = Object.values(items).filter(i => i.icon === `item_${itemIcon}`)[itemIndex];
+
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+      if (!item) {
+        throw new Error(`Item with itemId ${provokingItem} not found`);
+      }
+
+      // If it's already part of the recipe, it should be ignored
+      if (!ingredients.some(i => i.item === item.id)) {
+        // Otherwise, it should be added to the ingredients and output (as first)
+        ingredients.unshift({ item: item.id });
+        outputs.unshift({ item: item.id });
+      }
+    }
 
     recipes.push({
       type: recipeData.type,

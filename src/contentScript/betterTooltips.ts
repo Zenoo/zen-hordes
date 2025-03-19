@@ -46,6 +46,8 @@ export const insertBetterTooltips = (node: HTMLElement) => {
     const itemRecipes = findRecipes(item);
     if (!itemRecipes.length) return;
 
+    console.log(itemRecipes);
+
     const recipesTable = document.createElement("table");
     const recipesBody = document.createElement("tbody");
     recipesTable.append(recipesBody);

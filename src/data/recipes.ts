@@ -394,11 +394,13 @@ export const recipes: Recipe[] = [
   {
     type: RecipeType.ManualAnywhere,
     in: [
+      { item: ItemId.CAFETI_RE },
       { item: ItemId.BATTERY },
       { item: ItemId.PHARMACEUTICAL_PRODUCTS },
       { item: ItemId.ROTTING_LOG }
     ],
     out: [
+      { item: ItemId.CAFETI_RE },
       { item: ItemId.BLOODY_HOT_COFFEE }
     ]
   },
