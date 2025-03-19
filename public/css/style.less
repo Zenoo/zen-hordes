@@ -419,31 +419,53 @@ body.zen-map-preview-enabled {
 
 // Better tooltips
 .zen-better-tooltip {
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 4px;
 
-  .ingredients,
-  .output {
-    div {
-      position: relative;
-      display: inline-block;
+    td {
+      border: 1px solid #7e4d2a;
+      padding: 4px;
+    }
 
-      img {
-        display: inline-block;
-        margin: 0 1px;
+    td {
+      background: #5c2b20;
+
+      &.action {
+        width: 16px;
       }
 
-      &[data-odds]{
-        margin-bottom: 8px;
+      &.ingredients,
+      &.output {
+        div {
+          position: relative;
+          display: inline-block;
 
-        &::after {
-          content: attr(data-odds);
-          position: absolute;
-          top: 100%;
-          left: 50%;
-          transform: translateX(-50%);
-          color: white;
-          font-size: 7px;
-          text-align: center;
-          z-index: 1;
+          img {
+            display: inline-block;
+            margin: 0 1px;
+
+            &.highlight {
+              filter: drop-shadow(0 0 2px #f86);
+            }
+          }
+
+          &[data-odds] {
+            margin-bottom: 8px;
+
+            &::after {
+              content: attr(data-odds);
+              position: absolute;
+              top: 100%;
+              left: 50%;
+              transform: translateX(-50%);
+              color: #98a675;
+              font-size: 7px;
+              text-align: center;
+              z-index: 1;
+            }
+          }
         }
       }
     }
