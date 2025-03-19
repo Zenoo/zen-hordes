@@ -10,7 +10,8 @@
     "source": "sh ./scripts/source.sh",
     "clean": "rimraf dist",
     "style": "prettier --write \"src/**/*.{ts,tsx}\"",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "data:generate": "tsx ./scripts/generateData.ts"
   },
   "author": "",
   "license": "MIT",
@@ -32,6 +33,7 @@
   "devDependencies": {
     "@eslint/js": "^9.22.0",
     "@types/chrome": "0.0.158",
+    "@types/node": "^22.13.10",
     "@types/react": "^18.0.29",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^8.26.1",
@@ -44,10 +46,16 @@
     "prettier": "^2.2.1",
     "rimraf": "^6.0.1",
     "ts-loader": "^8.0.0",
+    "tsx": "^4.19.3",
     "typescript": "^5.0.4",
     "typescript-eslint": "^8.26.1",
     "webpack": "^5.94.0",
     "webpack-cli": "^4.0.0",
     "webpack-merge": "^5.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }

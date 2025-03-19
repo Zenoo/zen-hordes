@@ -13,6 +13,11 @@ import { initStore } from "./store";
 await initStore();
 
 // TODO: Add detailed tooltips on items
+// -> Gather empty zone drops
+// -> Display buildings + empty zone that drop the item (with chances)
+// -> Display items to craft item
+// -> Display items that can be crafted with item
+// TODO: Add items found in current building
 // TODO: Reset first water ration on death page display
 // TODO: Add a list of items to bring back, with priorities (1-5)
 // TODO: Add custom tags to players

@@ -1,0 +1,522 @@
+{
+    "-1": {
+        "id": -1,
+        "name": "B\u00e2timent non d\u00e9terr\u00e9",
+        "desc": "Toute la zone est envahie par une <strong>v\u00e9g\u00e9tation pourrissante<\/strong>, du <strong>sable<\/strong> et des <strong>d\u00e9bris<\/strong> de toutes sortes. Vous \u00eates s\u00fbr(e) que quelque chose se cache ici, mais il faudrait d\u00e9blayer tout le secteur pour commencer les fouilles \u00e0 proprement parler...",
+        "km_min": 1,
+        "km_max": 28,
+        "explorable": 0
+    },
+    "1": {
+        "id": 1,
+        "name": "Maison d\u2019un citoyen",
+        "desc": "Ici vivait un Citoyen qui avait d\u00e9cid\u00e9 de s'installer hors de la ville, pensant survivre plus longtemps, loin des querelles et des trahisons. <strong>La moiti\u00e9 de son corps est toujours dans le salon<\/strong>.",
+        "km_min": 1,
+        "km_max": 4,
+        "explorable": 0
+    },
+    "2": {
+        "id": 2,
+        "name": "\u00c9picerie Fargo",
+        "desc": "Une enseigne de la cha\u00eene de magasins Brian Fargo. On y trouve g\u00e9n\u00e9ralement tout ce qu'il faut pour nettoyer et entretenir sa maison. Les plus d\u00e9munis y trouveront de quoi manger...",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "3": {
+        "id": 3,
+        "name": "Caverne anciennement habit\u00e9e",
+        "desc": "Il y a des r\u00e9flexes qui ne pardonnent pas. Prenez par exemple le coup de la caverne : vous \u00eates poursuivi(e) et vous vous engouffrez b\u00eatement dans une caverne pour vous mettre \u00e0 l'abri. Le probl\u00e8me qui se pose alors : maintenant que vous \u00eates dans une impasse, combien de temps allez-vous pouvoir hurler en attendant que vos poursuivants vous rattrapent ? Le type au fond, \u00e0 qui il manque la moiti\u00e9 du visage, n'a pas d\u00fb crier bien longtemps.",
+        "km_min": 16,
+        "km_max": 19,
+        "explorable": 0
+    },
+    "4": {
+        "id": 4,
+        "name": "Vieille pompe hydraulique",
+        "desc": "Une antique pompe rong\u00e9e par la rouille, capable de puiser de l'eau dans le d\u00e9sert... Le seul probl\u00e8me c'est que m\u00eame si vous arrivez \u00e0 la faire fonctionner, cette eau sera g\u00e9n\u00e9ralement <strong>non-potable<\/strong> et devra \u00eatre <strong>purifi\u00e9e en ville<\/strong> avec les produits ad\u00e9quats.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "5": {
+        "id": 5,
+        "name": "Ancien V\u00e9lib\u2019",
+        "desc": "Une ancienne gare \u00e0 v\u00e9lo jonch\u00e9e de pi\u00e8ces de ferrailles, d'outils et de d\u00e9bris en tous genres.",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "6": {
+        "id": 6,
+        "name": "Gare de triage d\u00e9sert\u00e9e",
+        "desc": "Cette plaque tournante centrale du r\u00e9seau ferroviaire du pays dispatchait et aiguillait les marchandises venues de tous les horizons, sans interruption, 24h\/24. Aujourd'hui, le 'vaste r\u00e9seau' en question mesure environ 150 m\u00e8tres de long, si on compte les vestiges de rails, un peu plus loin.",
+        "km_min": 10,
+        "km_max": 13,
+        "explorable": 0
+    },
+    "7": {
+        "id": 7,
+        "name": "Vieil h\u00f4pital de campagne",
+        "desc": "Les restes qui jonchent les all\u00e9es de cet h\u00f4pital improvis\u00e9 devaient \u00eatre des patients. Difficile de savoir combien ils avaient pu \u00eatre \u00e0 mourir ici, le soir de l'attaque\u2026 Peut-\u00eatre qu'en comptant le nombre de bras et en divisant par deux ?",
+        "km_min": 16,
+        "km_max": 19,
+        "explorable": 0
+    },
+    "8": {
+        "id": 8,
+        "name": "Ancien a\u00e9rodrome",
+        "desc": "Tout ce qui d\u00e9colle de cet a\u00e9rodrome pourrissant, ce sont les mouches. Peut-\u00eatre qu'en fouinant dans les entrep\u00f4ts, vous parviendrez \u00e0 mettre la main sur un truc utile. Genre, un A360 en \u00e9tat de marche.",
+        "km_min": 12,
+        "km_max": 15,
+        "explorable": 0
+    },
+    "9": {
+        "id": 9,
+        "name": "Ancien commissariat",
+        "desc": "L'imposant b\u00e2timent s'\u00e9tend sur plusieurs centaines de m\u00e8tres. Il est divis\u00e9 en nombreuses salles mais beaucoup se sont effondr\u00e9es il y a bien longtemps. Si on en croit les nombreux impacts de balles et les barricades improvis\u00e9es, <strong>ce commissariat a \u00e9t\u00e9 le th\u00e9\u00e2tre d'affrontements particuli\u00e8rement violents<\/strong>.",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "10": {
+        "id": 10,
+        "name": "Abri anti-atomique",
+        "desc": "Le num\u00e9ro est \u00e0 moiti\u00e9 effac\u00e9, mais il s'agissait vraisemblablement de l'<strong>abri 14<\/strong>. Si on en juge par les corps d\u00e9cr\u00e9pis \u00e0 l'int\u00e9rieur, le syst\u00e8me de fermeture du sas <strong>n'a pas d\u00fb fonctionner comme pr\u00e9vu<\/strong>. \u00c7a arrive.",
+        "km_min": 10,
+        "km_max": 13,
+        "explorable": 0
+    },
+    "11": {
+        "id": 11,
+        "name": "Atomic\u2019 Caf\u00e9",
+        "desc": "Le rendez-vous branch\u00e9 du d\u00e9sert : venez go\u00fbter notre Nuka-Cola, sp\u00e9cialit\u00e9 de la maison, aux vrais extraits d'hormones animales.",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "12": {
+        "id": 12,
+        "name": "Relais autoroutier",
+        "desc": "\u00c0 une certaine \u00e9poque, c'\u00e9tait s\u00fbrement le coin le plus branch\u00e9 de toute l'autoroute A217, avec ses bi\u00e8res frelat\u00e9es, son odeur d'urine et ses rats morts sur le comptoir. Personne avant vous ne semble s'y \u00eatre arr\u00eat\u00e9 depuis des lustres.",
+        "km_min": 8,
+        "km_max": 11,
+        "explorable": 0
+    },
+    "13": {
+        "id": 13,
+        "name": "Carcasses de voitures",
+        "desc": "Un mod\u00e8le plut\u00f4t commun de <strong>break familial<\/strong> encastr\u00e9 dans un mod\u00e8le tout aussi commun de <strong>fourgonnette<\/strong>... Ce petit accident semble avoir provoqu\u00e9 un <strong>carambolage<\/strong> de grande envergure si on en juge par l'amas de carcasses calcin\u00e9es tout autour.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "14": {
+        "id": 14,
+        "name": "Le bar des illusions perdues",
+        "desc": "Ce bar \u00e9trange se trouve cach\u00e9 derri\u00e8re une petite colline et vous auriez tout aussi bien pu passer \u00e0 c\u00f4t\u00e9 sans le remarquer. L'int\u00e9rieur est d\u00e9cor\u00e9 d'innombrables portraits et photos en noir et blanc. On y retrouve souvent un type habill\u00e9 dans une sorte de pyjama ray\u00e9 sur les bords, debout aux c\u00f4t\u00e9s de diverses personnes.",
+        "km_min": 21,
+        "km_max": 28,
+        "explorable": 0
+    },
+    "15": {
+        "id": 15,
+        "name": "Bricotout",
+        "desc": "Le relais des <strong>bricoleurs<\/strong>. V\u00e9ritable petit paradis rempli de tr\u00e9sors inestimables pour un monde comme le n\u00f4tre... Leur slogan est tout \u00e0 fait d'actualit\u00e9 : \u00ab Pillez-nous avant que d'autres ne s'en chargent pour vous ! \u00bb",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "16": {
+        "id": 16,
+        "name": "Abri de chantier",
+        "desc": "Un tr\u00e8s grand container m\u00e9tallique pos\u00e9 au milieu de nulle part. Il devait se trouver \u00e0 c\u00f4t\u00e9 d'un chantier, \u00e0 une \u00e9poque, mais il n'en reste rien aujourd'hui. \u00c0 part cette 'cabane'.",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "17": {
+        "id": 17,
+        "name": "Kebab \u00ab Chez Coluche \u00bb",
+        "desc": "Si vous avez un petit creux, ne vous arr\u00eatez surtout pas ici ! Ou c'est le cuistot lui m\u00eame qui viendra vous d\u00e9vorer, apr\u00e8s vous avoir d\u00e9coup\u00e9 \u00e0 la scie circulaire.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "18": {
+        "id": 18,
+        "name": "Villa de Duke",
+        "desc": "La maison d'un certain \u00ab Duke \u00bb si on en croit la plaque d'entr\u00e9e calcin\u00e9e, ancien \u00ab H\u00e9ros Pour Toujours \u00bb ... Plus qu'une villa, l'endroit semble \u00eatre une vaste <strong>forteresse am\u00e9nag\u00e9e<\/strong>.",
+        "km_min": 12,
+        "km_max": 15,
+        "explorable": 0
+    },
+    "19": {
+        "id": 19,
+        "name": "Petit bois obscur",
+        "desc": "Les restes <strong>calcin\u00e9s<\/strong> d'une for\u00eat. C'\u00e9tait probablement un endroit agr\u00e9able avant... Aujourd'hui, on prie juste pour ne jamais s'y perdre la nuit.",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "20": {
+        "id": 20,
+        "name": "Mine effondr\u00e9e",
+        "desc": "Une ancienne mine qui n'a pas r\u00e9sist\u00e9 aux outrages du temps. Dieu sait quel genre de lubie pouvait pousser les gens de l'\u00e9poque \u00e0 creuser si profond pour trouver quelque chose d'utile. Surtout quand il suffit d'\u00e0 peine gratter le sol pour d\u00e9goter un d\u00e9licieux cafard \u00e0 manger. \u00ab Tiens, j'ai faim \u00bb, pensez-vous.",
+        "km_min": 12,
+        "km_max": 15,
+        "explorable": 0
+    },
+    "21": {
+        "id": 21,
+        "name": "Carri\u00e8re effondr\u00e9e",
+        "desc": "Une <strong>zone d'extraction de min\u00e9raux<\/strong> qui porte les stigmates d'un <strong>terrible accident<\/strong> : tout un flanc semble s'\u00eatre <strong>effondr\u00e9<\/strong> sur les hommes, les machines et les b\u00e2timents.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "22": {
+        "id": 22,
+        "name": "Un \u00e9trange appareil circulaire",
+        "desc": "\u00c7a ressemble \u00e0 un large disque m\u00e9tallique surmont\u00e9 de ce qui devait \u00eatre un poste de pilotage. Cela pourrait tout aussi bien \u00eatre un genre de moissonneuse batteuse un peu high-tech.",
+        "km_min": 21,
+        "km_max": 28,
+        "explorable": 0
+    },
+    "23": {
+        "id": 23,
+        "name": "Meubles Kiela",
+        "desc": "La cha\u00eene de magasins Kiela \u00e9tait autrefois sp\u00e9cialis\u00e9e dans la fabrication et la vente de meubles bons march\u00e9s. On dit que la pi\u00e8tre qualit\u00e9 de leurs produits serait l'une des raisons qui a pouss\u00e9 le monde \u00e0 sa perte...",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "24": {
+        "id": 24,
+        "name": "Caveau familial",
+        "desc": "Un <strong>caveau familial<\/strong> d\u00e9cr\u00e9pi. C'est \u00e0 peine si on distingue encore l'entr\u00e9e, presque enti\u00e8rement dissimul\u00e9e sous la <strong>v\u00e9g\u00e9tation pourrissante<\/strong>. Les <strong>cadavres<\/strong>, quant \u00e0 eux, se sont lev\u00e9s et sont sortis depuis bien longtemps...",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "25": {
+        "id": 25,
+        "name": "Fast-food",
+        "desc": "Une odeur atroce de cadavre faisand\u00e9 \u00e9mane de ce b\u00e2timent : les r\u00e9serves de viande se sont transform\u00e9es en r\u00e9pugnants <strong>monticules de moisissure blanche<\/strong> qui ont commenc\u00e9 \u00e0 \"s'\u00e9couler\" par les portes...",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "26": {
+        "id": 26,
+        "name": "Carlingue d\u2019avion",
+        "desc": "Un <strong>long courrier<\/strong> s'est \u00e9cras\u00e9 au milieu de nulle part... Difficile de savoir ce qu'il transportait, le sable du d\u00e9sert l'a presque totalement rong\u00e9. La pr\u00e9sence de quelques si\u00e8ges sugg\u00e8re toutefois qu'il avait \u00e0 son bord des passagers, entre autres. Aucune trace des corps...",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "27": {
+        "id": 27,
+        "name": "Cabane de jardin",
+        "desc": "Au milieu d'un petit square totalement d\u00e9cr\u00e9pi, vous trouvez un vaste abri de jardin. La porte c\u00e8de facilement, r\u00e9v\u00e9lant une vaste pi\u00e8ce remplie d'\u00e9tag\u00e8res et d'outillages en tous genres.",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "28": {
+        "id": 28,
+        "name": "Supermarch\u00e9 pill\u00e9",
+        "desc": "Ce gigantesque amas de brique et de m\u00e9tal \u00e9tait probablement autrefois un grand centre commercial grouillant d'activit\u00e9 et illumin\u00e9 de mille feux. Aujourd'hui il n'y grouille que de la vermine et autres immondices rampants\u2026 Nul doute toutefois qu'il rec\u00e8le aussi bon nombre de richesses.",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "29": {
+        "id": 29,
+        "name": "Caverne",
+        "desc": "Une sorte de <strong>tumulus<\/strong> qui devait autrefois servir de s\u00e9pulture ou d'abri... Allez savoir. L'int\u00e9rieur est plong\u00e9 dans <strong>le noir le plus total<\/strong>, l'air y est <strong>glacial<\/strong> et une odeur insupportable de <strong>charogne<\/strong> en \u00e9mane...",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "30": {
+        "id": 30,
+        "name": "Cimeti\u00e8re indien",
+        "desc": "Un ancien cimeti\u00e8re presque enti\u00e8rement recouvert de sable et de v\u00e9g\u00e9tation pourrissante. C'est finalement un endroit plut\u00f4t rassurant en comparaison du reste du monde...",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "31": {
+        "id": 31,
+        "name": "Stand de f\u00eate foraine",
+        "desc": "Un endroit comme celui-ci est une aubaine de nos jours\u2026 Nul doute que vous trouverez ici de quoi vous \u00e9quiper d\u00e9cemment en jouets en plastique et autres gadgets utiles.",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "32": {
+        "id": 32,
+        "name": "Petite maison",
+        "desc": "Une vieille bicoque laiss\u00e9e \u00e0 l'abandon depuis des ann\u00e9es. Presque enti\u00e8rement ensevelie sous le sable. Parfois, vous pouvez entendre des <strong>grattements inqui\u00e9tants<\/strong> venant de ce qui doit \u00eatre la cave...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "33": {
+        "id": 33,
+        "name": "Centrale hydraulique",
+        "desc": "Cette centrale capte les eaux des nappes phr\u00e9atiques environnantes et les transvase dans de gigantesques r\u00e9servoirs en b\u00e9ton. Le <strong>syst\u00e8me de filtrage semble en panne<\/strong>, mais on doit pouvoir r\u00e9cup\u00e9rer l'eau contamin\u00e9e stock\u00e9e ici.",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "34": {
+        "id": 34,
+        "name": "Laboratoire cosm\u00e9tique",
+        "desc": "Ce b\u00e2timent lugubre a servi autrefois pour divers tests de produits sur des animaux. \u00c7a sent le camphre, l'ether et la charogne. Et ce n'est que l'entr\u00e9e...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "35": {
+        "id": 35,
+        "name": "Ambulance",
+        "desc": "Une ambulance arr\u00eat\u00e9e au milieu de la route. Elle ne comporte plus de roue, ni de moteur... Aucune trace de lutte, ni d'accident. Pourtant vous ne trouvez aucun corps non plus...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "36": {
+        "id": 36,
+        "name": "Hangars de stockage",
+        "desc": "Le d\u00e9p\u00f4t d'un grand magasin qui a certainement d\u00e9pos\u00e9 son bilan il y a bien longtemps. Enfin, c'est ce que laisse supposer la pr\u00e9sence d'une trentaine de corps pendus dans le hangar num\u00e9ro 2. Vous supposez qu'il s'agit du conseil d'administration ; reste \u00e0 savoir s'il s'agit d'un suicide collectif (le fait qu'ils aient les mains attach\u00e9es vous laisse perplexe).",
+        "km_min": 15,
+        "km_max": 18,
+        "explorable": 0
+    },
+    "37": {
+        "id": 37,
+        "name": "Parking d\u00e9saffect\u00e9",
+        "desc": "Un parking souterrain presque enti\u00e8rement enseveli. Id\u00e9al pour <strong>mourir dans le noir<\/strong>, sans que personne ne vous entende...",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "38": {
+        "id": 38,
+        "name": "Char d\u2019assaut en panne",
+        "desc": "Ce char militaire est un peu une m\u00e9taphore de la <strong>bo\u00eete de conserve<\/strong>, avec le soldat dans le r\u00f4le de la sardine et la centaine de zombies dans le r\u00f4le du citoyen affam\u00e9. C'est le citoyen qui a gagn\u00e9.",
+        "km_min": 21,
+        "km_max": 28,
+        "explorable": 0
+    },
+    "39": {
+        "id": 39,
+        "name": "Motel \u00ab Dusk \u00bb",
+        "desc": "Vous vous demandez quel genre de personne pouvait bien venir passer sa nuit dans un trou aussi paum\u00e9 que ce motel miteux. Sans doute le genre : repr\u00e9sentant pour une obscure soci\u00e9t\u00e9 de livraison fuyant un pass\u00e9 qui le rattrapera t\u00f4t ou tard. \u00ab Faudra que je pense \u00e0 v\u00e9rifier la chambre 215, au cas o\u00f9 \u00bb, pensez-vous, sans trop savoir pourquoi.",
+        "km_min": 12,
+        "km_max": 15,
+        "explorable": 0
+    },
+    "40": {
+        "id": 40,
+        "name": "Avant-poste militaire",
+        "desc": "Ha \u00e7a, ils \u00e9taient s\u00fbrement pr\u00e9par\u00e9s \u00e0 tout, les soldats install\u00e9s ici : armes, provisions et p\u00e9rim\u00e8tre de s\u00e9curit\u00e9 de 150m. Sauf peut-\u00eatre au fait que leur lieutenant comptait les d\u00e9vorer pendant la nuit. Non franchement, un bon mur et une bonne dictature des familles, rien de tel pour survivre ici.",
+        "km_min": 16,
+        "km_max": 19,
+        "explorable": 0
+    },
+    "41": {
+        "id": 41,
+        "name": "Bureau de poste",
+        "desc": "Un b\u00e2timent qui semble avoir r\u00e9sist\u00e9 aux affres du temps, vestige d'un antique service postal. Peu de chances que vous y trouviez quoi que ce soit de grand int\u00e9r\u00eat, sauf si vous aimez la lecture...",
+        "km_min": 8,
+        "km_max": 11,
+        "explorable": 0
+    },
+    "42": {
+        "id": 42,
+        "name": "Cache de contrebandiers",
+        "desc": "Un trou dans le sol vaguement <strong>dissimul\u00e9<\/strong> par quelques planches et du sable. Il d\u00e9bouche sur une large caverne humide remplie de <strong>d\u00e9bris en tous genres<\/strong>, r\u00e9sultats de <strong>pillages dans une ville voisine<\/strong>, probablement. Qui sait si <strong>votre ville<\/strong> ne s'est pas construite sur ces pillages ? Peut-\u00eatre que les <strong>premiers citoyens<\/strong> ont particip\u00e9 \u00e0 ces attaques...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "43": {
+        "id": 43,
+        "name": "Tranch\u00e9e am\u00e9nag\u00e9e",
+        "desc": "Les nombreux <strong>crat\u00e8res<\/strong> et autres <strong>taches de sang s\u00e9ch\u00e9<\/strong> laissent \u00e0 penser qu'une <strong>bataille de grande envergure<\/strong> s'est d\u00e9roul\u00e9e ici. La plupart des tranch\u00e9es se sont effondr\u00e9es, mais il reste <strong>quelques trous \u00e0 fouiller<\/strong>.",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "44": {
+        "id": 44,
+        "name": "Biblioth\u00e8que de quartier",
+        "desc": "Un ensemble de plusieurs petites maisons qui constituaient autrefois une biblioth\u00e8que de quartier. Aujourd'hui, les livres sont, pour la plupart, d\u00e9chir\u00e9s ou br\u00fbl\u00e9s, le sol est jonch\u00e9 de pages arrach\u00e9es et les \u00e9tag\u00e8res sont renvers\u00e9es.",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "45": {
+        "id": 45,
+        "name": "Mini-market",
+        "desc": "Ce petit magasin proposait toutes sortes de produits de consommation courants : nourriture, boissons, produits d'entretien\u2026 Ouvert 24h\/24 et 7j\/7 si on en croit ce qui est imprim\u00e9 sur la vitrine. Le trou b\u00e9ant dans la fa\u00e7ade lui donne raison.",
+        "km_min": 8,
+        "km_max": 11,
+        "explorable": 0
+    },
+    "46": {
+        "id": 46,
+        "name": "Camion \u00ab Mairie-mobile \u00bb",
+        "desc": "\u00ab Vos d\u00e9marches citoyennes juste en bas de chez vous \u00bb. Pas de doute, les zombies ont compl\u00e8tement adh\u00e9r\u00e9 au concept si on croit les traces de griffe un peu partout \u00e0 l'int\u00e9rieur du camion et les restes humains soigneusement \u00e9parpill\u00e9s dans les rayonnages.",
+        "km_min": 16,
+        "km_max": 19,
+        "explorable": 0
+    },
+    "47": {
+        "id": 47,
+        "name": "Camion en panne",
+        "desc": "Un camion de transport du groupe sovi\u00e9tique <strong>Transtwin\u00e4<\/strong>. La cabine du conducteur est totalement <strong>encastr\u00e9e dans un arbre<\/strong>, mais les <strong>entailles<\/strong> profondes dans le si\u00e8ge et le <strong>sang<\/strong> qui tapisse toutes les parois laissent supposer que l'accident n'est pas la cause de la mort...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "48": {
+        "id": 48,
+        "name": "\u00c9cole maternelle br\u00fbl\u00e9e",
+        "desc": "Les dessins enfantins peints sur les parois calcin\u00e9es contrastent effroyablement avec les restes vaguement humains dispers\u00e9s \u00e7\u00e0 et l\u00e0. Par moment, on croirait m\u00eame entendre des <strong>rires lugubres<\/strong> sous les d\u00e9combres.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "49": {
+        "id": 49,
+        "name": "Immeuble d\u00e9labr\u00e9",
+        "desc": "Un bel immeuble de bureau o\u00f9 il devait faire bon venir travailler au petit matin, entour\u00e9 de ses coll\u00e8gues anonymes pour accomplir on ne sait trop quel but global et avec pour seule pr\u00e9occupation : sa propre survie. Vous vous dites que les choses n'ont peut-\u00eatre finalement pas tant chang\u00e9 que \u00e7a...",
+        "km_min": 10,
+        "km_max": 13,
+        "explorable": 0
+    },
+    "50": {
+        "id": 50,
+        "name": "Villa d\u00e9labr\u00e9e",
+        "desc": "Quelqu'un a v\u00e9cu ici, il y a tr\u00e8s longtemps. Peut-\u00eatre m\u00eame que cette personne \u00e9tait entour\u00e9e d'une famille qui l'aimait et qu'ils y ont coul\u00e9 des jours heureux tous ensemble ? Aujourd'hui il n'en reste rien ; un peu de poussi\u00e8re et la d\u00e9solation la plus totale. Et parfois m\u00eame un cadavre qui marche vers vous en grin\u00e7ant des dents.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "51": {
+        "id": 51,
+        "name": "Chantier \u00e0 l\u2019abandon",
+        "desc": "Il est impossible de d\u00e9terminer ce qu'ils voulaient b\u00e2tir ici. Une \u00e9cole, un parking, un grand magasin... Seules les structures m\u00e9talliques rouill\u00e9es t\u00e9moignent encore du <strong>myst\u00e9rieux projet<\/strong> qui se tramait ici.",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "52": {
+        "id": 52,
+        "name": "Puits abandonn\u00e9",
+        "desc": "En voil\u00e0, une sacr\u00e9 aubaine ! <strong>Un puits encore en \u00e9tat de marche<\/strong>, compl\u00e8tement perdu au milieu de nulle part. Et personne avec son Registre \u00e0 la main pour vous dire \u00ab fais pas ci, fais pas \u00e7a, prends pas trop d'eau, gnagnagna... \u00bb. Allez, une petite rasade, \u00e7a sera notre petit secret.",
+        "km_min": 17,
+        "km_max": 20,
+        "explorable": 0
+    },
+    "53": {
+        "id": 53,
+        "name": "Silos \u00e0 l\u2019abandon",
+        "desc": "Cet endroit devait servir de stockage pour le grain, mais avec le temps, les cuves ont fini par se remplir d'eau de pluie (c'\u00e9tait il y a bien longtemps...). Il doit il y avoir de quoi s'approvisionner par ici..",
+        "km_min": 8,
+        "km_max": 11,
+        "explorable": 0
+    },
+    "54": {
+        "id": 54,
+        "name": "Route barr\u00e9e",
+        "desc": "Ce qui s'est d\u00e9roul\u00e9 ici est assez <strong>incompr\u00e9hensible<\/strong> : un \u00e9norme <strong>rocher<\/strong> semble s'\u00eatre \u00e9cras\u00e9 en plein milieu d'une route, comme <strong>tomb\u00e9 de nulle part<\/strong>...",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "55": {
+        "id": 55,
+        "name": "Parc \u00e0 l\u2019abandon",
+        "desc": "Un lieu de recueillement et de s\u00e9r\u00e9nit\u00e9... Pour peu que vous soyez arm\u00e9(e) et pr\u00eat(e) \u00e0 lutter pour votre survie. La v\u00e9g\u00e9tation locale est <strong>sinistre<\/strong> et <strong>sent la mort<\/strong> \u00e0 plein nez, des <strong>cr\u00e9atures<\/strong> ind\u00e9finissables se d\u00e9placent dans les ombres... Vous avez constamment la sensation qu'une salet\u00e9 va vous <strong>bondir<\/strong> dessus depuis un fourr\u00e9.",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "56": {
+        "id": 56,
+        "name": "Armurerie Guns\u2019n\u2019Zombies",
+        "desc": "Un filon d'armes pour qui aime bien tuer ou menacer. Les crevasses, impacts de balles et d\u00e9combres en disent long sur les <strong>\u00e9v\u00e8nements<\/strong> qui sont survenus ici...",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "57": {
+        "id": 57,
+        "name": "Entrep\u00f4t d\u00e9saffect\u00e9",
+        "desc": "L'entrep\u00f4t de stockage d'un ancien supermarch\u00e9 dont la <strong>porte a r\u00e9sist\u00e9 aux tentatives de pillages<\/strong>. Il doit s\u00fbrement contenir <strong>diverses babioles<\/strong> int\u00e9ressantes...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "58": {
+        "id": 58,
+        "name": "Tente d\u2019un citoyen",
+        "desc": "Une bonne planque, c'est certain. Le type qui a mont\u00e9 ce camp savait comment mettre ses fesses \u00e0 l'abri des zombies : camouflage naturel, bonne visibilit\u00e9 alentours, plusieurs issues et m\u00eame un trou pour se cacher sous terre au besoin. Le nom \u00ab Shenji \u00bb est brod\u00e9 dans la toile de la tente.",
+        "km_min": 12,
+        "km_max": 15,
+        "explorable": 0
+    },
+    "59": {
+        "id": 59,
+        "name": "Pharmacie d\u00e9truite",
+        "desc": "Une petite pharmacie de quartier... perdue au milieu du d\u00e9sert. Les <strong>odeurs innommables<\/strong> font penser \u00e0 tout sauf \u00e0 des m\u00e9dicaments.",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "60": {
+        "id": 60,
+        "name": "Bar miteux",
+        "desc": "\u00c7a ne ressemble plus vraiment \u00e0 un bar, mais la pr\u00e9sence d'une enseigne \u00e0 demi enfouie dans le sable et d'un comptoir ne laisse pas trop planer le doute. La plupart des bouteilles sont <strong>cass\u00e9es<\/strong>, mais on doit pouvoir y trouver des choses utiles...",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "61": {
+        "id": 61,
+        "name": "Bunker abandonn\u00e9",
+        "desc": "Ce b\u00e2timent d\u00e9labr\u00e9 semble avoir \u00e9t\u00e9 un bunker. Vous d\u00e9couvrez une entr\u00e9e dans le b\u00e2timent, une odeur de moisi vous frappe. Vous faites la grimace, mais vous pourriez presque certainement trouver quelque chose d'utile ici...",
+        "km_min": 5,
+        "km_max": 28,
+        "explorable": 1
+    },
+    "62": {
+        "id": 62,
+        "name": "H\u00f4tel abandonn\u00e9",
+        "desc": "Ce b\u00e2timent d\u00e9labr\u00e9 semble avoir \u00e9t\u00e9 un h\u00f4tel. Vous d\u00e9couvrez une entr\u00e9e dans le b\u00e2timent, une odeur de moisi vous frappe. Vous faites la grimace, mais vous pourriez presque certainement trouver quelque chose d'utile ici...",
+        "km_min": 5,
+        "km_max": 28,
+        "explorable": 1
+    },
+    "63": {
+        "id": 63,
+        "name": "H\u00f4pital abandonn\u00e9",
+        "desc": "Ce b\u00e2timent d\u00e9labr\u00e9 semble avoir \u00e9t\u00e9 un h\u00f4pital. Vous d\u00e9couvrez une entr\u00e9e dans le b\u00e2timent, une odeur de moisi vous frappe. Vous faites la grimace, mais vous pourriez presque certainement trouver quelque chose d'utile ici...",
+        "km_min": 5,
+        "km_max": 28,
+        "explorable": 1
+    },
+    "64": {
+        "id": 64,
+        "name": "Le Corbeau Sportif",
+        "desc": "La tombe des anciens sportifs...",
+        "km_min": 10,
+        "km_max": 12,
+        "explorable": 0
+    }
+}

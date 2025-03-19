@@ -1,0 +1,522 @@
+{
+    "-1": {
+        "id": -1,
+        "name": "Buried building",
+        "desc": "The zone is completely covered with <strong>rotting vegetation<\/strong>, <strong>sand<\/strong> and all manner of <strong>debris<\/strong>. You are certain that there is something hidden here, but the whole sector needs to be cleared before it can be searched properly...",
+        "km_min": 1,
+        "km_max": 28,
+        "explorable": 0
+    },
+    "1": {
+        "id": 1,
+        "name": "Citizen's Home",
+        "desc": "This was home to a citizen who decided to settle down outside the town, thinking they would survive for longer unaffected by the quarrels and betrayals inherent in town life. Half of their corpse is still in the living room.",
+        "km_min": 1,
+        "km_max": 4,
+        "explorable": 0
+    },
+    "2": {
+        "id": 2,
+        "name": "Scottish Smith's Superstore",
+        "desc": "One of the many Smith's Superstores that proliferated around the year 2010 then disappeared... specialising in making things as cheap as possible, you should be able to find whatever you need here. Whether you're potless or just being tighter than two coats of paint, shop at Smiths!",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "3": {
+        "id": 3,
+        "name": "Once-inhabited Cave",
+        "desc": "Some actions cannot be forgiven. Take, for example, the case of the cavern: your group are being followed and you stupidly rush into a cave to hide. For how long can you cry while you wait for your pursuers to catch up ? The guy lagging behind, who is half-blind, didn't have to cry for long...",
+        "km_min": 16,
+        "km_max": 19,
+        "explorable": 0
+    },
+    "4": {
+        "id": 4,
+        "name": "Old Hydraulic Pump",
+        "desc": "An old pump which is rusting away, but is nonetheless capable of drawing water in the desert... The only problem is that even if you manage to get it working, the water will generally be undrinkable and will need to be purified in town with the appropriate equipment...",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "5": {
+        "id": 5,
+        "name": "Old Bicycle Hire Shop",
+        "desc": "An old bicycle hire warehouse, littered with pieces of metal, tools and all kinds of debris.",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "6": {
+        "id": 6,
+        "name": "Deserted Freight Yard",
+        "desc": "The turntable in the middle of this rail depot constantly dispatched and received merchandise from all over the world, 24 hours a day. Today, all that remains is a 150 metre long section, maybe a bit more if you include the remaining rails.",
+        "km_min": 10,
+        "km_max": 13,
+        "explorable": 0
+    },
+    "7": {
+        "id": 7,
+        "name": "Old Field Hospital",
+        "desc": "The remains which litter the corridors of this improvised hospital must be what is left of the patients. It's difficult to say how many must have died here on the night of the attack... Maybe if you count the number of arms on the ground and divide by two ?",
+        "km_min": 16,
+        "km_max": 19,
+        "explorable": 0
+    },
+    "8": {
+        "id": 8,
+        "name": "Old Aerodrome",
+        "desc": "The only things taking off or landing at this crumbling aerodrome are the flies. Maybe if you forage around in the warehouses you will find something useful. Like, say, an A380 in working order.",
+        "km_min": 12,
+        "km_max": 15,
+        "explorable": 0
+    },
+    "9": {
+        "id": 9,
+        "name": "Old Police Station",
+        "desc": "This imposing building stretches over several hundred metres. It is split into numerous rooms but many of them collapsed a long time ago. If you look at the number of bullet holes and improvised barricades, it seems that this police station was the scene of some particularly violent confrontations.",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "10": {
+        "id": 10,
+        "name": "Nuclear Bunker",
+        "desc": "The number has been partially worn away, but this was in all likelihood shelter number 14. Judging by the crumbling bodies inside, the airlock system couldn't have worked as expected. Shit happens.",
+        "km_min": 10,
+        "km_max": 13,
+        "explorable": 0
+    },
+    "11": {
+        "id": 11,
+        "name": "Mac's Atomic Cafe",
+        "desc": "The Atomic Cafe is (or was) the place to be: A faded poster invites you to come to the summer party on 2 May 2010: Hawaiian Theme, Prize for Best Dressed (Half Naked Girls + Guys) DJ Dave from 1pm, Free BBQ, Improved Look Beer Garden, Party Games, Live Football, Cocktails, \u00a32 Bottled Beer, \u00a32 Alcopop, \u00a31 Tequila... Get Involved!",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "12": {
+        "id": 12,
+        "name": "Motorway Services",
+        "desc": "At one time, this would certainly have been one of the most trendy joints on the M25, with watered-down drinks, the aroma of stale piss and dead rats on the bar. You must be the first person to set foot in here in years.",
+        "km_min": 8,
+        "km_max": 11,
+        "explorable": 0
+    },
+    "13": {
+        "id": 13,
+        "name": "Wrecked Cars",
+        "desc": "Looks like an altercation between a small van and a station wagon... This minor accident seems to have caused a substantial pile-up judging by the number of burnt corpses lying around.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "14": {
+        "id": 14,
+        "name": "The 'Shattered Illusions' Bar",
+        "desc": "This bar is hidden behind a small hill in such a location that you could easily have walked straight past it without realising. The interior is decorated with countless black and white portraits and photos. There is often a guy in the pictures wearing some striped pyjama-type outfit standing next to various other people.",
+        "km_min": 21,
+        "km_max": 28,
+        "explorable": 0
+    },
+    "15": {
+        "id": 15,
+        "name": "Home Depot",
+        "desc": "A veritable Mecca for the DIY enthusiast. A paradise full of invaluable treasures for a world like ours... Their advertising slogan is even more appropriate nowadays: Pillage our store before someone else beats you to it!",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "16": {
+        "id": 16,
+        "name": "Construction Site Shelter",
+        "desc": "A huge metal box-like creation stuck in the middle of nowhere. It would usually be found beside a building site, and once upon a time it probably was, but there is no sign of it today. Well, except this 'cabin'...",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "17": {
+        "id": 17,
+        "name": "Fraser D's Kebab-ish",
+        "desc": "If you're a bit peckish, esurient or just plain hungry, whatever you do, don't stop here! Here it's the chef that wants to eat... you... after he cuts off your head with a circular saw.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "18": {
+        "id": 18,
+        "name": "Duke's Villa",
+        "desc": "The home of a certain Duke R. Cooke, and if one is to believe the plaque on the door... a home for Heroes... this place is much bigger than a villa, it's a fully equipped fortress!",
+        "km_min": 12,
+        "km_max": 15,
+        "explorable": 0
+    },
+    "19": {
+        "id": 19,
+        "name": "Dark Woods",
+        "desc": "The burnt remains of a small forest. It was probably a nice area beforehand... Now you're just hoping you won't have to spend the night here.",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "20": {
+        "id": 20,
+        "name": "Collapsed Mineshaft",
+        "desc": "An old mine which has not resisted the ravages of time well. God knows what caprice could have led people to look so deep underground to find something useful. Especially when you only just have to scratch the surface to find some delicious cockroaches to crunch on! You start to feel hungry just thinking about it...",
+        "km_min": 12,
+        "km_max": 15,
+        "explorable": 0
+    },
+    "21": {
+        "id": 21,
+        "name": "Collapsed Quarry",
+        "desc": "This mineral extraction zone bears all the hallmarks of a terrible accident: the hillside seems to have collapsed onto the workers, machines and buildings below.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "22": {
+        "id": 22,
+        "name": "Strange Circular Device",
+        "desc": "It looks like a large metal disk with what appears to be some kind of cockpit mounted on top. It could also be some type of high-tech combine harvester.",
+        "km_min": 21,
+        "km_max": 28,
+        "explorable": 0
+    },
+    "23": {
+        "id": 23,
+        "name": "PI-KEYA Furniture",
+        "desc": "PI-KEYA: These enormous stores used to be in every city (always rather annoyingly situated on the outskirts). They specialised in the manufacture and sale of cheap furniture, usually with one bolt \/ screw \/ fastener missing. It is said that the poor quality of their products was one of the reasons for society going to ruin...",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "24": {
+        "id": 24,
+        "name": "Family Tomb",
+        "desc": "A dilapidated family crypt. You can only just make out the entrance, as it's almost completely obscured by decaying vegetation. Apparently the bodies got up and left some time ago...",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "25": {
+        "id": 25,
+        "name": "Fast Food Restaurant",
+        "desc": "There is a horrendous stench of decaying bodies coming from this building: The stocks of meat have transformed into disgusting mounds of mouldy white flesh which are leaking a thick pungent liquid which now covers the floor and has even started to run out the door...",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "26": {
+        "id": 26,
+        "name": "Plane Crash Site",
+        "desc": "This long-haul aircraft has crashed in the middle of nowhere... It's difficult to know what it was carrying, the desert sand has almost entirely eroded the fuselage. The presence of some seats suggests there were at least some passengers on board. There is no trace of the bodies though...",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "27": {
+        "id": 27,
+        "name": "Garden Shed",
+        "desc": "In the middle of a completely derelict square, you find a sizeable garden shed. The door gives way easily, revealing a vast space full of shelf units and all kinds of tools.",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "28": {
+        "id": 28,
+        "name": "Looted Supermarket",
+        "desc": "This hulking mass of metal and brisk was probably a large shopping centre, swarming with activity and illuminated by a thousand lights. Today nothing swarms except the vermin and other crawling filth... There's no doubt though that it contains lots of goodies...",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "29": {
+        "id": 29,
+        "name": "Cave",
+        "desc": "Some kind of stone cavern which must previously have served as a burial place or shelter... Go and take a look. Inside, it is absolutely pitch black, the air is icy and there is a strong smell of rotting flesh...",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "30": {
+        "id": 30,
+        "name": "Indian Burial Ground",
+        "desc": "An ancient Indian burial ground which is almost entirely covered in sand and decaying vegetation. In comparison with the rest of the world, you feel strangely at ease here...",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "31": {
+        "id": 31,
+        "name": "Fairground Stall",
+        "desc": "Places like this are a godsend these days... You are guaranteed all the plastic toys you could want here... and maybe some other useful gadgets.",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "32": {
+        "id": 32,
+        "name": "Small House",
+        "desc": "An old shack which has been uninhabited for years. Almost completely buried in sand, but you can still hear some unsettling groaning noises coming from what must be the cellar...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "33": {
+        "id": 33,
+        "name": "Water Processing Plant",
+        "desc": "This plant collects groundwater from the surrounding area and transfers it into enormous concrete reservoirs. The filtration system seems to be broken, but you should be able to recover the contaminated water that is stored here...",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "34": {
+        "id": 34,
+        "name": "Cosmetics Lab",
+        "desc": "This depressing building once served as an animal testing facility (rabbits doing mid-terms etc...). It smells of camphor, ether and rotting carcasses. And you've not even gone inside yet...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "35": {
+        "id": 35,
+        "name": "Ambulance",
+        "desc": "This ambulance has been abandoned in the middle of the road. The wheels are gone, as is the engine... There are no signs of a struggle, and no signs of an accident. There are no bodies either come to that...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "36": {
+        "id": 36,
+        "name": "Warehouse",
+        "desc": "This was the storage unit for a department store which went to the wall some time ago. So this would lead you to think that the thirty corpses hanging in stockroom 2 were the board of directors. Now you just need to work out if it was a mass suicide (the fact that they all have their hands tied together confuses you though...).",
+        "km_min": 15,
+        "km_max": 18,
+        "explorable": 0
+    },
+    "37": {
+        "id": 37,
+        "name": "Disused Car Park",
+        "desc": "An almost completely buried underground parking lot. An ideal venue to 'go quietly into the night' as long as nobody hears you...",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "38": {
+        "id": 38,
+        "name": "Broken-down Tank",
+        "desc": "This military vehicle is like the metaphorical food can. The soldier is inside, playing the role of a sardine, and a hundred zombies outside are playing the hungry citizen. The citizen wins...",
+        "km_min": 21,
+        "km_max": 28,
+        "explorable": 0
+    },
+    "39": {
+        "id": 39,
+        "name": "Motel 666 Dusk",
+        "desc": "You ask yourself what kind of person would enjoy spending a night in a shabby hole like this motel. No doubt some sleazy sales rep whose dodgy past will catch up with him sooner or later. I really must check out room 215, you think to yourself, without really knowing why'.",
+        "km_min": 12,
+        "km_max": 15,
+        "explorable": 0
+    },
+    "40": {
+        "id": 40,
+        "name": "Army Outpost",
+        "desc": "The soldiers stationed here were prepared for anything: weapons, supplies, and a 150m security perimeter. Anything except their lieutenant eating them during the night. Joking aside, with a solid wall and a healthy dictatorship, (from a survival point of view) there's nothing like it!",
+        "km_min": 16,
+        "km_max": 19,
+        "explorable": 0
+    },
+    "41": {
+        "id": 41,
+        "name": "Post Office",
+        "desc": "This building seems to have resisted the ravages of time, a vestige of the postal service of years ago. It's unlikely that you'll find anything of great interest here, unless you like reading...",
+        "km_min": 8,
+        "km_max": 11,
+        "explorable": 0
+    },
+    "42": {
+        "id": 42,
+        "name": "Once-inhabited Cave",
+        "desc": "A hole in the ground that has been somewhat concealed by some planks and some sand. It opens out into a large humid cavern filled with all kinds of debris, no doubt the result of pillaging by a neighbouring town. Who could say that your town wasn't built using ill-gotten gains from such pillaging ? Perhaps the first citizens were responsible for these attacks...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "43": {
+        "id": 43,
+        "name": "Equipped Trench",
+        "desc": "Numerous craters and splashes of dried blood lead you to think that a large - scale battle took place here. Most of the trenches are buried, but there are still some that are worth exploring...",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "44": {
+        "id": 44,
+        "name": "Town Library",
+        "desc": "What was once the local library is now a collection of several small houses. Today, the books are mostly torn or burnt, the ground is littered with torn pages and the shelves have been knocked over.",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "45": {
+        "id": 45,
+        "name": "Mini-market",
+        "desc": "This small convenience store sold pretty much all the day-to-day necessities: Food, drinks, cleaning products... Open 24\/7 365 days a year if you believe the printing on the window. The gaping hole in said window makes this statement 100% correct!",
+        "km_min": 8,
+        "km_max": 11,
+        "explorable": 0
+    },
+    "46": {
+        "id": 46,
+        "name": "The 'Mayor-Mobile'",
+        "desc": "Your representative on your doorstep. The zombies thoroughly approved of this concept if you notice the claw marks on the upholstery in the cab and the human remains sprayed everywhere.",
+        "km_min": 16,
+        "km_max": 19,
+        "explorable": 0
+    },
+    "47": {
+        "id": 47,
+        "name": "Wrecked Transporter",
+        "desc": "A soviet transporter from the 'Trastwin' corporation. The driver's cab is wrapped round a tree, but the slashes in the seat and the blood-soaked interior would suggest that the crash was not the cause of death...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "48": {
+        "id": 48,
+        "name": "Burnt School",
+        "desc": "The childish drawings painted on the charred walls provide a stark contrast to the vaguely human remains strewn here and there. At times, you believe you can hear sinister laughter coming from beneath the rubble.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "49": {
+        "id": 49,
+        "name": "Dilapidated Building",
+        "desc": "A nice office building where people used to get on with their work, starting early in the morning, surrounded by anonymous colleagues, trying to finish who knows what project but with one clear goal: their own survival. You think to yourself that maybe things haven't really changed all that much...",
+        "km_min": 10,
+        "km_max": 13,
+        "explorable": 0
+    },
+    "50": {
+        "id": 50,
+        "name": "Derelict Villa",
+        "desc": "Someone lived here a LONG time ago. Perhaps someone who was surrounded by a family who loved them and with whom they spent many happy hours together ? Today, all that remains is a little dust and utter desolation... and the occasional corpse who trudges towards you, gnashing its teeth.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "51": {
+        "id": 51,
+        "name": "Abandoned Construction Site",
+        "desc": "It's impossible to guess what they were wanting to build here. It could have been a school, a car park, a department store... The rusting metal supports are the only remaining evidence of whatever mysterious project was underway here.",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "52": {
+        "id": 52,
+        "name": "Abandoned Well",
+        "desc": "Wow - this is a bloody godsend! A well which still works! Completely lost in the middle of nowhere there is nobody here with their rulebook to tell you 'Don't do this, don't do that, don't take too much water, blah blah blah...' Go on, take a drink, it'll be our little secret...",
+        "km_min": 17,
+        "km_max": 20,
+        "explorable": 0
+    },
+    "53": {
+        "id": 53,
+        "name": "Disused Silos",
+        "desc": "Originally constructed for storing grain, but as time passed and the grain ran out, the tanks filled with rainwater (and a dead rat). You'll need the right kit to make use of it though...",
+        "km_min": 8,
+        "km_max": 11,
+        "explorable": 0
+    },
+    "54": {
+        "id": 54,
+        "name": "Blocked Road",
+        "desc": "Something truly bizarre seems to have happened here: a huge rock seems to have crash landed in the middle of the road, like some kind of tombstone...",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "55": {
+        "id": 55,
+        "name": "Abandoned Park",
+        "desc": "A place of peace and serenity... If you are armed and ready to fight for your life. The surrounding vegetation is sinister and smells strongly of death, unidentified creatures lurk in the shadows... You have the overwhelming feeling that some creature is going to burst out from a hedge and attack you.",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "56": {
+        "id": 56,
+        "name": "Guns 'n' Zombies Armoury",
+        "desc": "If you like to menace, maim or murder, you've hit the mother lode here... The shrapnel stuck in the walls, bullet holes and wreckage all around give you a good idea of what genre of 'events' took place here...",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "57": {
+        "id": 57,
+        "name": "Disused Warehouse",
+        "desc": "The door to this supermarket stockroom has thus far resisted would-be pillagers... surely there must be something tasty inside worth having...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "58": {
+        "id": 58,
+        "name": "Citizen's Tent",
+        "desc": "A good hideout, that's for sure. Whoever put this up certainly knew how to keep his ass well away from zombie clutches: natural camouflage, good all-round visibility, multiple exits and even a hole to hide underground if need be. The name 'C. Norris' has been written on the canvas in unicorn's tears.",
+        "km_min": 12,
+        "km_max": 15,
+        "explorable": 0
+    },
+    "59": {
+        "id": 59,
+        "name": "Destroyed Pharmacy",
+        "desc": "A small local pharmacy... serving the erm... middle of the desert apparently. The unmentionable smells make you think of everything except medicines.",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "60": {
+        "id": 60,
+        "name": "Shady Bar",
+        "desc": "It doesn't really look like a bar anymore, but the half-buried sign in the sand and the presence of some broken glass don't leave much doubt. Most of the bottles are broken, but you can almost certainly find something useful here...",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "61": {
+        "id": 61,
+        "name": "Abandoned Bunker",
+        "desc": "Bunkers are old refuges built by the military to contain the pandemic. If the soldiers at the time were still human, they would surely have advised their officers against trying to \"educate\" the first carriers of the virus.",
+        "km_min": 5,
+        "km_max": 28,
+        "explorable": 1
+    },
+    "62": {
+        "id": 62,
+        "name": "Abandoned Hotel",
+        "desc": "Formerly luxury hotels, which no doubt welcomed some highly privileged guests over the years. However, it didn't take long for these buildings to come under attack from the two hordes, firstly the horde of immigrants from contaminated countries and secondly their putrefied pursuers.",
+        "km_min": 5,
+        "km_max": 28,
+        "explorable": 1
+    },
+    "63": {
+        "id": 63,
+        "name": "Abandoned Hospital",
+        "desc": "This dilapidated building seems to have once been a hospital. When you discover an entrance into the building, musty stench hits you. You grimace, but here you could almost certainly find something useful...",
+        "km_min": 5,
+        "km_max": 28,
+        "explorable": 1
+    },
+    "64": {
+        "id": 64,
+        "name": "Crows'fit Gym",
+        "desc": "The grave of former athletes...",
+        "km_min": 10,
+        "km_max": 12,
+        "explorable": 0
+    }
+}

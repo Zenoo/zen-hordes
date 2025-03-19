@@ -1,0 +1,2620 @@
+{
+    "1": {
+        "id": 1,
+        "name": "Raci\u00f3n de agua",
+        "desc": "El agua te hace recuperar Puntos de Acci\u00f3n (1 vez al d\u00eda) y calmar\u00e1 tu sed (sin limitaciones diarias).",
+        "cat": "Food",
+        "img": "item_water"
+    },
+    "2": {
+        "id": 2,
+        "name": "Pila",
+        "desc": "Sirve para muchas cosas, pero se descarga muy r\u00e1pido...",
+        "cat": "Rsc",
+        "img": "item_pile"
+    },
+    "3": {
+        "id": 3,
+        "name": "Lata de conservas",
+        "desc": "\u00a1La etiqueta tiene una imagen de frijoles muy apetitosos! Pero primero hay que encontrar con qu\u00e9 abrirla...",
+        "cat": "Food",
+        "img": "item_can"
+    },
+    "4": {
+        "id": 4,
+        "name": "Lata de conservas abierta",
+        "desc": "Vamos, abre la boca y traga tap\u00e1ndote la nariz. Despu\u00e9s te sentir\u00e1s mejor.",
+        "cat": "Food",
+        "img": "item_can_open"
+    },
+    "5": {
+        "id": 5,
+        "name": "Lanzapilas 1-PDTG (cargado)",
+        "desc": "Totalmente hecho a mano, el Lanzapilas 1-PDTG convierte las pilas en proyectiles perforadores.",
+        "cat": "Weapon",
+        "img": "item_pilegun"
+    },
+    "6": {
+        "id": 6,
+        "name": "T\u00e1ser de autodefensa",
+        "desc": "Un arma capaz de paralizar el cuerpo de la v\u00edctima con una terrible descarga el\u00e9ctrica. No es muy eficaz sabiendo que los zombies no le temen al dolor. Pero siempre puedes intentar hacer colapsar un \u00f3rgano vital con \u00e9l.",
+        "cat": "Weapon",
+        "img": "item_taser"
+    },
+    "7": {
+        "id": 7,
+        "name": "Rifle de agua (vac\u00edo)",
+        "desc": "Un arma temible, pero le falta estar cargada con agua pura.",
+        "cat": "Weapon",
+        "img": "item_watergun_opt_empty"
+    },
+    "8": {
+        "id": 8,
+        "name": "Batidora el\u00e9ctrica (cargada)",
+        "desc": "Tan sencillo como eso. La buena noticia es que s\u00f3lo necesitas una bater\u00eda y tienes cierta posibilidad de agotarla.",
+        "cat": "Weapon",
+        "img": "item_mixergun"
+    },
+    "9": {
+        "id": 9,
+        "name": "Sierra el\u00e9ctrica (cargada)",
+        "desc": "Con eso puedes darte el gusto de masacrar a tus atacantes. Recuerda que puedes salir victorioso pero no siempre ileso... Esta m\u00e1quina infernal ha sido modificada y funciona (incre\u00edblemente) \u00a1con una sola pila!",
+        "cat": "Weapon",
+        "img": "item_chainsaw"
+    },
+    "10": {
+        "id": 10,
+        "name": "Cortac\u00e9sped",
+        "desc": "\u00bfTe gusta que quede parejo, limpio y que huela a jard\u00edn primaveral? Olv\u00eddalo, cuando lo utilices ser\u00e1 todo lo contrario.",
+        "cat": "Weapon",
+        "img": "item_lawn"
+    },
+    "11": {
+        "id": 11,
+        "name": "Llave inglesa",
+        "desc": "Con ella puedes armar un objeto o destruir lo que quieras. No necesariamente tiene que ser un objeto...",
+        "cat": "Weapon",
+        "img": "item_wrench"
+    },
+    "12": {
+        "id": 12,
+        "name": "Destornillador",
+        "desc": "Sirve para reparar cosas, \u00a1ah! y tambi\u00e9n puedes abrir latas con \u00e9l. Como \u00faltimo recurso, cl\u00e1vaselo en la cabeza de alguien, bien podr\u00eda salvarte la vida...",
+        "cat": "Weapon",
+        "img": "item_screw"
+    },
+    "13": {
+        "id": 13,
+        "name": "Gran estaca",
+        "desc": "Es suficientemente puntiagudo para atravesar lo que quieras, pero es fr\u00e1gil... Reza para que resista cuando la necesites.",
+        "cat": "Weapon",
+        "img": "item_staff"
+    },
+    "14": {
+        "id": 14,
+        "name": "Cuchillo dentado",
+        "desc": "Solo las mejores marcas: Skinner, Buck y Bowie... Lo importante es que cortan, y bien.",
+        "cat": "Weapon",
+        "img": "item_knife"
+    },
+    "15": {
+        "id": 15,
+        "name": "Machete",
+        "desc": "Sirve para abrirse camino, solo que aqu\u00ed los obst\u00e1culos pueden ser muy vengativos y siniestramente chillones...",
+        "cat": "Weapon",
+        "img": "item_cutcut"
+    },
+    "16": {
+        "id": 16,
+        "name": "Navaja",
+        "desc": "Seg\u00fan la RAE: Cuchillo cuya hoja puede doblarse sobre el mango para que el filo quede... blablabla... Alguien con sentido com\u00fan sabr\u00e1 que es algo peligroso.",
+        "cat": "Weapon",
+        "img": "item_small_knife"
+    },
+    "17": {
+        "id": 17,
+        "name": "Navaja suiza",
+        "desc": "Siempre \u00fatil para peque\u00f1os trabajos manuales, pero no ante una turba de muertos vivientes.",
+        "cat": "Weapon",
+        "img": "item_swiss_knife"
+    },
+    "18": {
+        "id": 18,
+        "name": "Cutter",
+        "desc": "Con una fina l\u00e1mina afilada retr\u00e1ctil, solo est\u00e1 disponible en \"amarillo patito\". As\u00ed los muertos vivientes no se podr\u00e1n quejar del color cuando lo tengan clavado en el torso.",
+        "cat": "Weapon",
+        "img": "item_cutter"
+    },
+    "19": {
+        "id": 19,
+        "name": "Carrito",
+        "desc": "Solo sirve para poner cosas dentro. Lo malo es que no rueda muy bien en la arena.",
+        "cat": "Box",
+        "img": "item_cart"
+    },
+    "20": {
+        "id": 20,
+        "name": "Abrelatas",
+        "desc": "Su nombre lo dice todo. Desgraciadamente no servir\u00e1 de mucho ante las amenazas que encontrar\u00e1s en el desierto.",
+        "cat": "Weapon",
+        "img": "item_can_opener"
+    },
+    "21": {
+        "id": 21,
+        "name": "Mochila adicional",
+        "desc": "Muy pr\u00e1ctica para los paseos entre amigos, en ella puedes llevar m\u00e1s cosas \u00fatiles.",
+        "cat": "Box",
+        "img": "item_bag"
+    },
+    "22": {
+        "id": 22,
+        "name": "Caja de cerillas",
+        "desc": "No es necesario explicarlo...",
+        "cat": "Misc",
+        "img": "item_lights"
+    },
+    "23": {
+        "id": 23,
+        "name": "Inyecci\u00f3n calmante",
+        "desc": "Respira profundo, despu\u00e9s te sentir\u00e1s mejor.",
+        "cat": "Drug",
+        "img": "item_xanax"
+    },
+    "24": {
+        "id": 24,
+        "name": "Mecedora",
+        "desc": "ZZzzzz... Chillido... ZZzzzz... Chillido...",
+        "cat": "Furniture",
+        "img": "item_chair"
+    },
+    "25": {
+        "id": 25,
+        "name": "Libro empolvado",
+        "desc": "Un viejo libro cuyas p\u00e1ginas est\u00e1n rotas o pegadas entre ellas por la humedad. a veces es posible leer algo interesante entre ellas...",
+        "cat": "Misc",
+        "img": "item_rp_book"
+    },
+    "26": {
+        "id": 26,
+        "name": "Colch\u00f3n",
+        "desc": "No te importa saber con qu\u00e9 fue rellenado, lo que importa es que es suave.",
+        "cat": "Armor",
+        "img": "item_bed"
+    },
+    "27": {
+        "id": 27,
+        "name": "L\u00e1mpara de mesa apagada",
+        "desc": "Es muy bonita, pero no funcionar\u00e1 sin una pila...",
+        "cat": "Furniture",
+        "img": "item_lamp"
+    },
+    "28": {
+        "id": 28,
+        "name": "Alfombra persa",
+        "desc": "Servir\u00e1 para esconder la suciedad que cubre el suelo de tu casa.",
+        "cat": "Furniture",
+        "img": "item_carpet"
+    },
+    "29": {
+        "id": 29,
+        "name": "Equipo de sonido malogrado",
+        "desc": "De los baratos... pero necesita una pila para funcionar.",
+        "cat": "Furniture",
+        "img": "item_music_part"
+    },
+    "30": {
+        "id": 30,
+        "name": "Cadena + candado",
+        "desc": "Con eso uno se siente m\u00e1s seguro en casa.",
+        "cat": "Furniture",
+        "img": "item_lock"
+    },
+    "31": {
+        "id": 31,
+        "name": "Felpudo",
+        "desc": "Siempre es bueno limpiarse los zapatos antes de entrar, d\u00edselo a los zombies cuando vengan a visitarte.",
+        "cat": "Furniture",
+        "img": "item_door_carpet"
+    },
+    "32": {
+        "id": 32,
+        "name": "Dados",
+        "desc": "Juega con otros perdedores como t\u00fa.",
+        "cat": "Misc",
+        "img": "item_dice"
+    },
+    "33": {
+        "id": 33,
+        "name": "Motor",
+        "desc": "Est\u00e1 lleno de aceite y suena a piezas sueltas cuando lo sacudes. Pesa.",
+        "cat": "Misc",
+        "img": "item_engine"
+    },
+    "34": {
+        "id": 34,
+        "name": "Correa",
+        "desc": "Encu\u00e9ntrale un uso.",
+        "cat": "Rsc",
+        "img": "item_courroie"
+    },
+    "35": {
+        "id": 35,
+        "name": "Pu\u00f1ado de tornillos y tuercas",
+        "desc": "Algunas est\u00e1n oxidadas, otras est\u00e1n desgastadas, pero al menos cumplen con su misi\u00f3n.",
+        "cat": "Rsc",
+        "img": "item_meca_parts"
+    },
+    "36": {
+        "id": 36,
+        "name": "Gallina",
+        "desc": "Bueno, solo queda encontrar a un carnicero. Si te sirve, tambi\u00e9n puedes lanzarlo contra un zombie...",
+        "cat": "Misc",
+        "img": "item_pet_chick"
+    },
+    "37": {
+        "id": 37,
+        "name": "Cerdo apestoso",
+        "desc": "Bueno, solo queda encontrar a un carnicero. Si te sirve, tambi\u00e9n puedes lanzarlo contra un zombie...",
+        "cat": "Misc",
+        "img": "item_pet_pig"
+    },
+    "38": {
+        "id": 38,
+        "name": "Rata gigante",
+        "desc": "Bueno, solo queda encontrar a un carnicero. Si te sirve, tambi\u00e9n puedes lanzarla contra un zombie...",
+        "cat": "Misc",
+        "img": "item_pet_rat"
+    },
+    "39": {
+        "id": 39,
+        "name": "Perro guardi\u00e1n",
+        "desc": "Mejor amigo del hombre. Puedes elegir si protege tu casa, te salva de un zombi merodeador o termina como sabrosas hamburguesas...",
+        "cat": "Armor",
+        "img": "item_pet_dog"
+    },
+    "40": {
+        "id": 40,
+        "name": "Gato bonito",
+        "desc": "Acompa\u00f1a muy bien en la casa y sabe m\u00e1s o menos pelear contra un zombie. Y si tienes hambre...",
+        "cat": "Furniture",
+        "img": "item_pet_cat"
+    },
+    "41": {
+        "id": 41,
+        "name": "Serpiente de 2 metros",
+        "desc": "Es verde, muerde y hace zzzt-zzzt. Solo falta encontrar a un carnicero que nos la rebane para la merienda. Tambi\u00e9n puedes lanzarla sobre un zombie...",
+        "cat": "Misc",
+        "img": "item_pet_snake"
+    },
+    "42": {
+        "id": 42,
+        "name": "Peque\u00f1o vibrador (cargado)",
+        "desc": "Vibra, hace cosquillas y te hace olvidar tus problemas por unos instantes (necesita 1 pila).",
+        "cat": "Misc",
+        "img": "item_vibr"
+    },
+    "43": {
+        "id": 43,
+        "name": "Esteroides anab\u00f3licos",
+        "desc": "Ideal para hacerte ver la vida color de rosa: Ya no hay cansancio, pero te puede provocar algunas convulsiones con un poco de espuma en la boca... \u00a1Cuidado con la adicci\u00f3n!",
+        "cat": "Drug",
+        "img": "item_drug"
+    },
+    "44": {
+        "id": 44,
+        "name": "Bistec jugoso",
+        "desc": "Tiene muchas prote\u00ednas, pero parece ser m\u00e1s duro que una suela de zapato, m\u00e1s vale que tengas buena dentadura.",
+        "cat": "Food",
+        "img": "item_meat"
+    },
+    "45": {
+        "id": 45,
+        "name": "Carne irreconocible",
+        "desc": "Est\u00e1s casi seguro de que esa cosa amarillenta pegada a un hueso se puede comer. En todo caso no huele mal.",
+        "cat": "Food",
+        "img": "item_undef"
+    },
+    "46": {
+        "id": 46,
+        "name": "Tela de carpa",
+        "desc": "Una tela muy resistente e impermeable. Ideal para pasar la noche afuera (sin olvidar los bichos, zombies, enfermedades, tormentas y el fr\u00edo). Aumenta tus posibilidades de sobrevivir al acampar, debes llevarla contigo para recibir el bonus.",
+        "cat": "Misc",
+        "img": "item_sheet"
+    },
+    "47": {
+        "id": 47,
+        "name": "Mochila super-pr\u00e1ctica",
+        "desc": "\u00a1El accesorio de viaje ideal! Bolsillos laterales, impermeable, ergon\u00f3mica, masajea la espalda mientras caminas y lleva un bonito logo \"Man vs Wild\"",
+        "cat": "Box",
+        "img": "item_bagxl"
+    },
+    "48": {
+        "id": 48,
+        "name": "Cantimplora llena",
+        "desc": "Contiene varias raciones de agua no potable (sin purificar). Para eso es necesario que el pueblo tenga un edificio de filtrado de agua.",
+        "cat": "Misc",
+        "img": "item_jerrycan"
+    },
+    "49": {
+        "id": 49,
+        "name": "Tabla torcida",
+        "desc": "Un poco enmohecida pero s\u00f3lida... Nota: La madera se emplea en la construcci\u00f3n (ll\u00e9vala al Almac\u00e9n).",
+        "cat": "Rsc",
+        "img": "item_wood2"
+    },
+    "50": {
+        "id": 50,
+        "name": "Chatarra",
+        "desc": "Un mont\u00f3n de metales pesados, \u00a1pero \u00fatiles! Nota: El metal se emplea en la construcci\u00f3n (ll\u00e9valo al Almac\u00e9n).",
+        "cat": "Rsc",
+        "img": "item_metal"
+    },
+    "51": {
+        "id": 51,
+        "name": "Globo de agua",
+        "desc": "L\u00e1nzala sobre un zombie y reza para que explote... espera a que vuelva a explotar.",
+        "cat": "Weapon",
+        "img": "item_grenade"
+    },
+    "52": {
+        "id": 52,
+        "name": "L\u00e1mina de metal",
+        "desc": "Muy buena para protegerte de los zombies... Nota: Las defensas valen m\u00e1s puntos si son instaladas en el pueblo en vez de en tu casa.",
+        "cat": "Armor",
+        "img": "item_plate"
+    },
+    "53": {
+        "id": 53,
+        "name": "Bomba para cantimplora incompleta",
+        "desc": "Nadie le daba importancia a esta cosa en las tiendas de bricolaje, considerada in\u00fatil. Hoy, es un arma muy eficaz. \u00a1Se enrosca a una cantimplora con agua no purificada y pulveriza agua pura!",
+        "cat": "Misc",
+        "img": "item_jerrygun_part"
+    },
+    "54": {
+        "id": 54,
+        "name": "Vendaje rudimentario",
+        "desc": "Huele mal y tiene manchas de moho, pero no estamos aqu\u00ed para hacernos los dif\u00edciles. Te ayudar\u00e1 a cubrir tus heridas.",
+        "cat": "Drug",
+        "img": "item_bandage"
+    },
+    "55": {
+        "id": 55,
+        "name": "Tres Equis agria",
+        "desc": "Un buen trago que quema la garganta y te quita el cansancio, \u00a1recuperando adem\u00e1s puntos de Acci\u00f3n!... 85\u00b0 de alcohol puro, con algunos bichos flotando en el fondo. \u00a1Salud camarada!",
+        "cat": "Food",
+        "img": "item_vodka_de"
+    },
+    "56": {
+        "id": 56,
+        "name": "Bomba para cantimplora (vac\u00eda)",
+        "desc": "Nadie le daba importancia a esta cosa en las tiendas de bricolaje, considerada in\u00fatil. Hoy, es un arma muy eficaz. \u00a1Se enrosca a una cantimplora con agua no purificada y pulveriza agua pura!",
+        "cat": "Weapon",
+        "img": "item_jerrygun_off"
+    },
+    "57": {
+        "id": 57,
+        "name": "Retroproyector antiguo",
+        "desc": "Este proyector defectuoso ya no se puede utilizar para nada. Sin embargo, la lente todav\u00eda parece relativamente intacta... Desafortunadamente no tienes nada para desarmarla...",
+        "cat": "Weapon",
+        "img": "item_cinema"
+    },
+    "58": {
+        "id": 58,
+        "name": "Explosivos",
+        "desc": "\u00a1Bum!",
+        "cat": "Rsc",
+        "img": "item_explo"
+    },
+    "59": {
+        "id": 59,
+        "name": "Carne humana",
+        "desc": "Trata de tragarla r\u00e1pidamente sin pensar en lo que es... \u00a1Si te gusta, tienes un problema!",
+        "cat": "Food",
+        "img": "item_hmeat"
+    },
+    "60": {
+        "id": 60,
+        "name": "Bolsa de pl\u00e1stico",
+        "desc": "Una vieja bolsa de supermercado que puedes convertir en un arma fatal si la llenas de agua...",
+        "cat": "Weapon",
+        "img": "item_grenade_empty"
+    },
+    "61": {
+        "id": 61,
+        "name": "Bolsa de agua explosiva",
+        "desc": "Una bolsa de pl\u00e1stico llena de agua, amarrada a un explosivo. Ingenioso, \u00bfverdad? Esta es una verdadera arma de destrucci\u00f3n masiva contra las turbas de zombies.",
+        "cat": "Weapon",
+        "img": "item_bgrenade"
+    },
+    "62": {
+        "id": 62,
+        "name": "Bolsa de pl\u00e1stico con explosivo",
+        "desc": "Una bolsa amarrada a un explosivo. Simple y eficaz. Ahora solo queda llenarla de agua...",
+        "cat": "Weapon",
+        "img": "item_bgrenade_empty"
+    },
+    "63": {
+        "id": 63,
+        "name": "Sierra el\u00e9ctrica incompleta",
+        "desc": "Una herramienta muy divertida, pero le faltan algunas piezas para que funcione...",
+        "cat": "Misc",
+        "img": "item_chainsaw_part"
+    },
+    "64": {
+        "id": 64,
+        "name": "Batidora incompleta",
+        "desc": "Ser\u00eda una buena arma, si tuviese las piezas que le faltan...",
+        "cat": "Misc",
+        "img": "item_mixergun_part"
+    },
+    "65": {
+        "id": 65,
+        "name": "Adhesivo",
+        "desc": "Siempre \u00fatil para pegar cosas.",
+        "cat": "Rsc",
+        "img": "item_rustine"
+    },
+    "66": {
+        "id": 66,
+        "name": "Cortac\u00e9sped incompleto",
+        "desc": "Una herramienta indispensable, funciona sin energ\u00eda, pero requiere ser armada.",
+        "cat": "Misc",
+        "img": "item_lawn_part"
+    },
+    "67": {
+        "id": 67,
+        "name": "Tubo de cobre",
+        "desc": "\u00bfPara qu\u00e9 podr\u00eda servir...?",
+        "cat": "Rsc",
+        "img": "item_tube"
+    },
+    "68": {
+        "id": 68,
+        "name": "Carrito cojo",
+        "desc": "Una especie de carrito met\u00e1lico al que le falta un eje. Habr\u00eda que repararlo...",
+        "cat": "Misc",
+        "img": "item_cart_part"
+    },
+    "69": {
+        "id": 69,
+        "name": "Cintur\u00f3n de herramientas",
+        "desc": "Te brinda un compartimento adicional junto a tu mochila. Otra ventaja: te deja las manos libres para llevar otro contenedor (mochila).",
+        "cat": "Box",
+        "img": "item_pocket_belt"
+    },
+    "70": {
+        "id": 70,
+        "name": "Twinoid 500mg",
+        "desc": "Un concentrado de cafe\u00edna, te\u00edna, diversas sustancias multicolores y test\u00edculos de toro en polvo. Una dosis permite empezar el d\u00eda con energ\u00eda o huir r\u00e1pidamente de una turba de zombies.",
+        "cat": "Drug",
+        "img": "item_drug_hero"
+    },
+    "71": {
+        "id": 71,
+        "name": "Caja de metal",
+        "desc": "Una vieja caja met\u00e1lica bastante oxidada y golpeada. \u00bfQu\u00e9 podr\u00e1 contener?",
+        "cat": "Box",
+        "img": "item_chest"
+    },
+    "72": {
+        "id": 72,
+        "name": "Gran cofre de metal",
+        "desc": "Pesa mucho y seguramente contiene algo precioso... Encuentra algo mejor que tus dientes para abrirlo.",
+        "cat": "Box",
+        "img": "item_chest_xl"
+    },
+    "73": {
+        "id": 73,
+        "name": "Caja con cachivaches",
+        "desc": "Esta vieja caja de madera seguramente contiene cosas \u00fatiles...",
+        "cat": "Box",
+        "img": "item_chest_tools"
+    },
+    "74": {
+        "id": 74,
+        "name": "L\u00e1mpara encendida",
+        "desc": "Con ella tendr\u00e1s menos miedo en las noches y seguramente dormir\u00e1s mejor.",
+        "cat": "Furniture",
+        "img": "item_lamp_on"
+    },
+    "75": {
+        "id": 75,
+        "name": "Peque\u00f1o equipo de sonido encendido",
+        "desc": "Rel\u00e1jate un poco escuchando los \u00faltimos \"hits\" del momento: \"Zombie de mi coraz\u00f3n\" o \"El Baile del Zombie - Versi\u00f3n Remix\".",
+        "cat": "Furniture",
+        "img": "item_music"
+    },
+    "76": {
+        "id": 76,
+        "name": "Productos farmac\u00e9uticos",
+        "desc": "Un frasco con unas misteriosas bolitas dentro. No tienes idea de lo que son... \u00bfY si las mezclas con otras cosas?",
+        "cat": "Drug",
+        "img": "item_pharma"
+    },
+    "77": {
+        "id": 77,
+        "name": "Pedazos de l\u00e1minas de metal",
+        "desc": "Bien podr\u00edan servir para reforzar las defensas de tu casa si los unes correctamente",
+        "cat": "Misc",
+        "img": "item_plate_raw"
+    },
+    "78": {
+        "id": 78,
+        "name": "\u00ab Levantamuertos \u00bb",
+        "desc": "Un c\u00f3ctel inventado por un tal Etilio seg\u00fan la etiqueta. Mezcla de ron, pisco, tequila, cachaza y chile picante, finamente decorado con un dedo flotando para darle un detalle ex\u00f3tico...",
+        "cat": "Food",
+        "img": "item_rhum"
+    },
+    "79": {
+        "id": 79,
+        "name": "Caf\u00e9 caliente",
+        "desc": "Nos preguntamos c\u00f3mo este termo pudo mantenerse caliente tanto tiempo. Sea como fuere, es un caf\u00e9 fuerte, tan fuerte que parece haber sido preparado con mucha ira. \u00a1Est\u00f3magos fr\u00e1giles, abstenerse!",
+        "cat": "Food",
+        "img": "item_coffee"
+    },
+    "80": {
+        "id": 80,
+        "name": "Cafetera",
+        "desc": "Ideal para despertar al aventurero que hay en ti. Su sistema de filtrado te permite preparar un delicioso caf\u00e9 a base de ingredientes... Ins\u00f3litos. Nota: Debes estar en el pueblo para poder usarla.",
+        "cat": "Furniture",
+        "img": "item_coffee_machine"
+    },
+    "81": {
+        "id": 81,
+        "name": "Cafetera desarmada",
+        "desc": "Podr\u00eda ser de una gran utilidad, pero est\u00e1 desarmada.",
+        "cat": "Misc",
+        "img": "item_coffee_machine_part"
+    },
+    "82": {
+        "id": 82,
+        "name": "Componente electr\u00f3nico",
+        "desc": "Una vieja placa extra\u00edda de alguna radio o gadget electr\u00f3nico.",
+        "cat": "Rsc",
+        "img": "item_electro"
+    },
+    "83": {
+        "id": 83,
+        "name": "Objetos de un habitante",
+        "desc": "Es lo que recibe todo habitante cuando llega al pueblo. Es como una cajita de sorpresas.",
+        "cat": "Box",
+        "img": "item_chest_citizen"
+    },
+    "84": {
+        "id": 84,
+        "name": "Hydratone 100mg",
+        "desc": "Muy pr\u00e1ctica, esta pastillita puede quitarte la sed. Sin embargo no quita el cansancio ni regenera tus Puntos de Acci\u00f3n.",
+        "cat": "Drug",
+        "img": "item_drug_water"
+    },
+    "85": {
+        "id": 85,
+        "name": "Radio casetera apagada",
+        "desc": "Un viejo aparato con un cassette de tangos en el interior. La radio no capta nada, pero ser\u00eda mejor escuchar a Gardel que a un mont\u00f3n de gente haci\u00e9ndose devorar. Solo queda encontrar una pila.",
+        "cat": "Misc",
+        "img": "item_radio_off"
+    },
+    "86": {
+        "id": 86,
+        "name": "Radio casetera",
+        "desc": "Un viejo aparato con un cassette de tangos en el interior. Siempre es preferible escuchar a Gardel que a un mont\u00f3n de gente haci\u00e9ndose devorar.",
+        "cat": "Furniture",
+        "img": "item_radio_on"
+    },
+    "87": {
+        "id": 87,
+        "name": "Cianuro",
+        "desc": "Cuando nada va bien, una capsulita de cianuro, un buen vaso de agua y a esperar con una sonrisa de alivio. :)",
+        "cat": "Drug",
+        "img": "item_cyanure"
+    },
+    "88": {
+        "id": 88,
+        "name": "Vieja puerta",
+        "desc": "Pues eso, una vieja puerta de madera... Podr\u00eda ser \u00fatil.",
+        "cat": "Armor",
+        "img": "item_door"
+    },
+    "89": {
+        "id": 89,
+        "name": "Verdura sospechosa",
+        "desc": "Una especie de... verdura. Es dif\u00edcil saber lo que es, no se parece a nada, pero lo importante es que es comestible. \u00bfO no?",
+        "cat": "Food",
+        "img": "item_vegetable"
+    },
+    "90": {
+        "id": 90,
+        "name": "Kit de herramientas en mal estado",
+        "desc": "Habr\u00eda que darle unos martillazos en el taller para que pueda servir de nuevo.",
+        "cat": "Misc",
+        "img": "item_repair_kit_part"
+    },
+    "91": {
+        "id": 91,
+        "name": "Kit de herramientas",
+        "desc": "Esta caja de metal contiene todo lo necesario para reparar casi cualquier cosa... excepto a tus vecinos muertos.",
+        "cat": "Misc",
+        "img": "item_repair_kit"
+    },
+    "92": {
+        "id": 92,
+        "name": "Pistola de agua (vac\u00eda)",
+        "desc": "Tu primer arma letal cuando eras un ni\u00f1o... Solo falta llenarla con agua pura (la de una Raci\u00f3n de agua por ejemplo).",
+        "cat": "Weapon",
+        "img": "item_watergun_empty"
+    },
+    "93": {
+        "id": 93,
+        "name": "Rifle de agua (3 cargas)",
+        "desc": "\u00a1Un arma super poderosa en el Ultramundo! La etiqueta dice de 8 a\u00f1os a m\u00e1s.",
+        "cat": "Weapon",
+        "img": "item_watergun_opt_3"
+    },
+    "94": {
+        "id": 94,
+        "name": "Rifle de agua (2 cargas)",
+        "desc": "\u00a1Un arma super poderosa en el Ultramundo! La etiqueta dice de 8 a\u00f1os a m\u00e1s.",
+        "cat": "Weapon",
+        "img": "item_watergun_opt_2"
+    },
+    "95": {
+        "id": 95,
+        "name": "Rifle de agua (1 carga)",
+        "desc": "\u00a1Un arma super poderosa en el Ultramundo! La etiqueta dice de 8 a\u00f1os a m\u00e1s.",
+        "cat": "Weapon",
+        "img": "item_watergun_opt_1"
+    },
+    "96": {
+        "id": 96,
+        "name": "Batidora el\u00e9ctrica (apagada)",
+        "desc": "Tan sencillo como eso. La buena noticia es que s\u00f3lo necesitas una bater\u00eda y tienes cierta posibilidad de agotarla.",
+        "cat": "Weapon",
+        "img": "item_mixergun_empty"
+    },
+    "97": {
+        "id": 97,
+        "name": "Sierra el\u00e9ctrica (apagada)",
+        "desc": "Con eso puedes darte el gusto de masacrar a tus atacantes. Recuerda que puedes salir victorioso pero no siempre ileso... Esta m\u00e1quina infernal ha sido modificada y funciona (incre\u00edblemente) \u00a1con una sola pila!",
+        "cat": "Weapon",
+        "img": "item_chainsaw_empty"
+    },
+    "98": {
+        "id": 98,
+        "name": "Lanzapilas 1-PDTG (vac\u00edo)",
+        "desc": "Imaginado con mucho ingenio, sirve para convertir una simple pila en un temible proyectil.",
+        "cat": "Weapon",
+        "img": "item_pilegun_empty"
+    },
+    "99": {
+        "id": 99,
+        "name": "T\u00e1ser de autodefensa (apagado)",
+        "desc": "Un arma capaz de paralizar el cuerpo de la v\u00edctima con una terrible descarga el\u00e9ctrica. No es muy eficaz sabiendo que los zombies no le temen al dolor. Pero siempre puedes intentar hacer colapsar un \u00f3rgano vital con \u00e9l.",
+        "cat": "Weapon",
+        "img": "item_taser_empty"
+    },
+    "100": {
+        "id": 100,
+        "name": "ElectroGym (apagado)",
+        "desc": "La versi\u00f3n militar de un gagdet utilizado para ejercitarse con descargas el\u00e9ctricas. Quita el cansancio y regenera los Puntos de Acci\u00f3n, pero puede causar lesiones graves (o incluso una muerte dolorosa).",
+        "cat": "Misc",
+        "img": "item_sport_elec_empty"
+    },
+    "101": {
+        "id": 101,
+        "name": "ElectroGym (cargado)",
+        "desc": "La versi\u00f3n militar de un gagdet utilizado para ejercitarse con descargas el\u00e9ctricas. Quita el cansancio y regenera los Puntos de Acci\u00f3n, pero puede causar lesiones graves (o incluso una muerte dolorosa).",
+        "cat": "Misc",
+        "img": "item_sport_elec"
+    },
+    "102": {
+        "id": 102,
+        "name": "Devastador (vac\u00edo)",
+        "desc": "La versi\u00f3n militar del lanza-pilas 1-PDTG. Su pist\u00f3n ultrapoderoso puede disparar una pila con una velocidad fenomenal y perforar pr\u00e1cticamente cualquier material. Esta maquinilla puede hacer un agujero del tama\u00f1o de un pu\u00f1o en 2 zombies al mismo tiempo, si est\u00e1n alineados.",
+        "cat": "Weapon",
+        "img": "item_big_pgun_empty"
+    },
+    "103": {
+        "id": 103,
+        "name": "Devastador (cargado)",
+        "desc": "La versi\u00f3n militar del lanza-pilas 1-PDTG. Su pist\u00f3n ultrapoderoso puede disparar una pila con una velocidad fenomenal y perforar pr\u00e1cticamente cualquier material. Esta maquinilla puede hacer un agujero del tama\u00f1o de un pu\u00f1o en 2 zombies al mismo tiempo, si est\u00e1n alineados.",
+        "cat": "Weapon",
+        "img": "item_big_pgun"
+    },
+    "104": {
+        "id": 104,
+        "name": "Devastador incompleto",
+        "desc": "La versi\u00f3n militar del lanza-pilas 1-PDTG. Su pist\u00f3n ultrapoderoso puede disparar una pila con una velocidad fenomenal y perforar pr\u00e1cticamente cualquier material. Esta maquinilla puede hacer un agujero del tama\u00f1o de un pu\u00f1o en 2 zombies al mismo tiempo, si est\u00e1n alineados.",
+        "cat": "Misc",
+        "img": "item_big_pgun_part"
+    },
+    "105": {
+        "id": 105,
+        "name": "Transmisor \u00ab Radius \u00bb",
+        "desc": "Este instrumento te mostrar\u00e1 en el mapa todas las zonas que rodean el lugar donde te encuentras.",
+        "cat": "Misc",
+        "img": "item_tagger"
+    },
+    "106": {
+        "id": 106,
+        "name": "Bengala",
+        "desc": "Este peque\u00f1\u00edn te permitir\u00e1 recoger informaci\u00f3n sobre zonas lejanas. Tan pronto como toca el suelo, cae un peque\u00f1o transmisor, que env\u00eda informaci\u00f3n del entorno.",
+        "cat": "Misc",
+        "img": "item_flare"
+    },
+    "107": {
+        "id": 107,
+        "name": "Bomba para cantimplora (lista)",
+        "desc": "Nadie le daba importancia a esta cosa en las tiendas de bricolaje, considerada in\u00fatil. Hoy, es un arma muy eficaz. \u00a1Se enrosca a una cantimplora con agua no purificada y pulveriza agua pura!",
+        "cat": "Weapon",
+        "img": "item_jerrygun"
+    },
+    "108": {
+        "id": 108,
+        "name": "Silla Ekt\u00f6rp-Gluten",
+        "desc": "Una simple silla con nombre raro, de fabricaci\u00f3n sueca. Puedes usarla para defenderte, pero es m\u00e1s \u00fatil si la guardas en tu casa...",
+        "cat": "Furniture",
+        "img": "item_chair_basic"
+    },
+    "109": {
+        "id": 109,
+        "name": "Rev\u00f3lver (vac\u00edo)",
+        "desc": "El famoso modelo P-22, conocido por su fiabilidad y gran precisi\u00f3n. Pero no sirve de nada sin municiones...",
+        "cat": "Furniture",
+        "img": "item_gun"
+    },
+    "110": {
+        "id": 110,
+        "name": "Fusil de asalto (vac\u00edo)",
+        "desc": "Una versi\u00f3n modificada del AK-47, m\u00e1s compacta, probablemente dise\u00f1ada para un uso \"civil\"...",
+        "cat": "Furniture",
+        "img": "item_machine_gun"
+    },
+    "111": {
+        "id": 111,
+        "name": "Detonador compacto",
+        "desc": "Un dispositivo que puede hacer volar una peque\u00f1a carga de explosivos...",
+        "cat": "Rsc",
+        "img": "item_deto"
+    },
+    "112": {
+        "id": 112,
+        "name": "Saco de cemento",
+        "desc": "Al mezclarlo con agua, se endurece r\u00e1pidamente y se hace muy resistente.",
+        "cat": "Misc",
+        "img": "item_concrete"
+    },
+    "113": {
+        "id": 113,
+        "name": "Adoqu\u00edn de hormig\u00f3n",
+        "desc": "Hormig\u00f3n armado. Puede servir para reforzar las defensas de tu casa... o para ser lanzado sobre un zombie.",
+        "cat": "Armor",
+        "img": "item_concrete_wall"
+    },
+    "114": {
+        "id": 114,
+        "name": "Medicamento sin etiqueta",
+        "desc": "Una caja de medicinas con una etiqueta borrosa... Las pastillas que tiene dentro est\u00e1n enmohecidas, pero te parece que algunas no est\u00e1n tan mal. \u00bfRealmente piensas tragar eso?",
+        "cat": "Drug",
+        "img": "item_drug_random"
+    },
+    "115": {
+        "id": 115,
+        "name": "Paracetoide 7g",
+        "desc": "Un potente antibi\u00f3tico capaz de eliminar cualquier infecci\u00f3n. La caja dice: \u00abEste medicamento puede provocar efectos secundarios (acn\u00e9, manchas en la piel, una muerte violenta, entre otros)\u00bb.",
+        "cat": "Drug",
+        "img": "item_disinfect"
+    },
+    "116": {
+        "id": 116,
+        "name": "Herbicida Ness-Quick",
+        "desc": "La etiqueta que lleva pegada hace pensar que este producto es comestible si se mezcla con leche. A ti te da ciertas dudas...",
+        "cat": "Misc",
+        "img": "item_digger"
+    },
+    "117": {
+        "id": 117,
+        "name": "Caja de alimentos",
+        "desc": "Un horrible olor a comida descompuesta sale de esa caja... Pero est\u00e1s casi seguro de que a\u00fan queda algo comestible...",
+        "cat": "Food",
+        "img": "item_chest_food"
+    },
+    "118": {
+        "id": 118,
+        "name": "Doggy-bag",
+        "desc": "Una vieja bolsa de papel con restos de comida enmohecida y maloliente...",
+        "cat": "Food",
+        "img": "item_food_bag"
+    },
+    "119": {
+        "id": 119,
+        "name": "Bolsa de papas fritas rancias",
+        "desc": "Han perdido su textura crujiente y parecen m\u00e1s pedazos de cart\u00f3n h\u00famedo, pero no vas a hacerte el dif\u00edcil... Comida es comida.",
+        "cat": "Food",
+        "img": "item_food_bar1"
+    },
+    "120": {
+        "id": 120,
+        "name": "Bizcochos enmohecidos",
+        "desc": "La bolsita de pl\u00e1stico est\u00e1 inflada, \u00bfestar\u00e1 tan descompuesto que ya emana gases...?",
+        "cat": "Food",
+        "img": "item_food_bar2"
+    },
+    "121": {
+        "id": 121,
+        "name": "Chicles secos",
+        "desc": "Un pu\u00f1ado de chicles duros como piedras. En teor\u00eda deben poder masticarse a\u00fan, pero no tragarse. Piensa que en esta situaci\u00f3n no estamos para lujos...",
+        "cat": "Food",
+        "img": "item_food_bar3"
+    },
+    "122": {
+        "id": 122,
+        "name": "Galletas rancias",
+        "desc": "Tiene adem\u00e1s manchas verdes muy oscuras y est\u00e1n algo \u00e1cidas. Afortunadamente son de la marca que sol\u00edas comer de ni\u00f1o...",
+        "cat": "Food",
+        "img": "item_food_biscuit"
+    },
+    "123": {
+        "id": 123,
+        "name": "Alitas de pollo mordidas",
+        "desc": "Alguien les dio un mordisco y decidi\u00f3 tirarlas... Hmmm\u2026",
+        "cat": "Food",
+        "img": "item_food_chick"
+    },
+    "124": {
+        "id": 124,
+        "name": "Chocolate vencido",
+        "desc": "Lleva en la etiqueta el logotipo de Espa\u00f1a 82. Aunque su olor te pique la nariz, un chocolate aqu\u00ed es un manjar...",
+        "cat": "Food",
+        "img": "item_food_pims"
+    },
+    "125": {
+        "id": 125,
+        "name": "Tarta descompuesta",
+        "desc": "Este postre barato ni siquiera tuvo buen sabor estando fresco... Hoy su olor y su aspecto son a\u00fan m\u00e1s desagradables.",
+        "cat": "Food",
+        "img": "item_food_tarte"
+    },
+    "126": {
+        "id": 126,
+        "name": "Sandwich misterioso",
+        "desc": "Est\u00e1 muy viejo. No se sabe si lo que tiene dentro son los restos de una hamburguesa o los de una rata que muri\u00f3 all\u00ed dentro... \u00bfEso blanco, es mayonesa?",
+        "cat": "Food",
+        "img": "item_food_sandw"
+    },
+    "127": {
+        "id": 127,
+        "name": "Tallarines chinos",
+        "desc": "A pesar del tiempo, este platillo ha mantenido su aspecto, sabor y textura. \u00a1No cabe duda, la cocina china es la mejor!",
+        "cat": "Food",
+        "img": "item_food_noodles"
+    },
+    "128": {
+        "id": 128,
+        "name": "Salsa picante",
+        "desc": "\u00a1Nadie puede vivir sin esto!",
+        "cat": "Misc",
+        "img": "item_spices"
+    },
+    "129": {
+        "id": 129,
+        "name": "Tallarines chinos picantes",
+        "desc": "Mmmmm \u00a1La comida descompuesta es para los pobres!",
+        "cat": "Food",
+        "img": "item_food_noodles_hot"
+    },
+    "130": {
+        "id": 130,
+        "name": "Juego de cartas incompleto",
+        "desc": "A pesar de la ausencia de algunas cartas, te ayudar\u00e1 a distraerte en el pueblo... \u00a1Hazlo a lo grande o arruinate!",
+        "cat": "Misc",
+        "img": "item_cards"
+    },
+    "131": {
+        "id": 131,
+        "name": "Caja de juegos",
+        "desc": "Te servir\u00e1 para entretenerte en medio de tanta desgracia, \u00a1claro que s\u00ed!",
+        "cat": "Box",
+        "img": "item_game_box"
+    },
+    "132": {
+        "id": 132,
+        "name": "Rifle de agua incompleto",
+        "desc": "Un arma temible, pero le faltan algunas piezas para que funcione...",
+        "cat": "Misc",
+        "img": "item_watergun_opt_part"
+    },
+    "133": {
+        "id": 133,
+        "name": "Peque\u00f1o vibrador (apagado)",
+        "desc": "Vibra, hace cosquillas y te hace olvidar tus problemas por unos instantes (necesita 1 pila).",
+        "cat": "Misc",
+        "img": "item_vibr_empty"
+    },
+    "134": {
+        "id": 134,
+        "name": "Hueso con carne",
+        "desc": "Qu\u00e9 raro, la carne parece fresca a\u00fan. \u00bfSer\u00e1 de un animal muerto anoche?",
+        "cat": "Food",
+        "img": "item_bone_meat"
+    },
+    "135": {
+        "id": 135,
+        "name": "Hueso humano",
+        "desc": "Una tibia, sin duda. Est\u00e1 todo ro\u00eddo. El zombie o quien se lo haya comido debe haber tenido mucha hambre... Para algo servir\u00e1.",
+        "cat": "Weapon",
+        "img": "item_bone"
+    },
+    "136": {
+        "id": 136,
+        "name": "Viga reforzada",
+        "desc": "Varias piezas de madera unidas para ser muy resistentes.",
+        "cat": "Rsc",
+        "img": "item_wood_beam"
+    },
+    "137": {
+        "id": 137,
+        "name": "Estructuras met\u00e1licas",
+        "desc": "Un s\u00f3lido soporte para una construcci\u00f3n.",
+        "cat": "Rsc",
+        "img": "item_metal_beam"
+    },
+    "138": {
+        "id": 138,
+        "name": "Restos de metal",
+        "desc": "Pedazos de metal oxidado, mallas, tornillos... Nada \u00fatil en ese estado, habr\u00e1 que transformarlos en el taller.",
+        "cat": "Rsc",
+        "img": "item_metal_bad"
+    },
+    "139": {
+        "id": 139,
+        "name": "Tronco podrido",
+        "desc": "Un gran tronco cubierto por hongos. En su estado actual no es muy \u00fatil, a menos que sea cortado y trabajado en el pueblo...",
+        "cat": "Rsc",
+        "img": "item_wood_bad"
+    },
+    "140": {
+        "id": 140,
+        "name": "Sierra de metal",
+        "desc": "Tiene la mayor\u00eda de los dientes torcidos, pero servir\u00e1 para cortar muchas cosas (reduce en 1 PA el costo de las transformaciones en el taller, debes colocarla en tu mochila).",
+        "cat": "Misc",
+        "img": "item_saw_tool"
+    },
+    "141": {
+        "id": 141,
+        "name": "Le\u00f1a en buen estado",
+        "desc": "Un buen pedazo de madera que puede servir de taburete en tu casa. Despu\u00e9s de todo, es mejor que nada.",
+        "cat": "Furniture",
+        "img": "item_wood_log"
+    },
+    "142": {
+        "id": 142,
+        "name": "Aparato electr\u00f3nico descompuesto",
+        "desc": "No se sabe ni para qu\u00e9 sirve, pero desarm\u00e1ndolo quiz\u00e1s puedas extraer algo \u00fatil.",
+        "cat": "Rsc",
+        "img": "item_electro_box"
+    },
+    "143": {
+        "id": 143,
+        "name": "Mueble para armar",
+        "desc": "Una caja con muchas piezas, no sabes lo que es...",
+        "cat": "Misc",
+        "img": "item_deco_box"
+    },
+    "144": {
+        "id": 144,
+        "name": "Sierra de metal en mal estado",
+        "desc": "Una sierra siempre ayuda. Necesitas repararla.",
+        "cat": "Misc",
+        "img": "item_saw_tool_part"
+    },
+    "145": {
+        "id": 145,
+        "name": "Mecanismo",
+        "desc": "Esta cosa debi\u00f3 formar parte de algo m\u00e1s grande: una m\u00e1quina o un veh\u00edculo... As\u00ed no sirve de nada.",
+        "cat": "Rsc",
+        "img": "item_mecanism"
+    },
+    "146": {
+        "id": 146,
+        "name": "Caballete",
+        "desc": "Puede servir muy bien para sostener las defensas de tu casa o del pueblo.",
+        "cat": "Armor",
+        "img": "item_trestle"
+    },
+    "147": {
+        "id": 147,
+        "name": "Mesa J\u00e4rpen",
+        "desc": "Armada con el\u00e1sticos y pedazos de madera, ir\u00e1 muy bien en el \"sal\u00f3n\" de tu casa. Y colocada verticalmente podr\u00eda salvarte la vida una de estas noches.",
+        "cat": "Armor",
+        "img": "item_table"
+    },
+    "148": {
+        "id": 148,
+        "name": "Desinfectante efervescente",
+        "desc": "Purifica el agua. Antes se usaba para desinfectar los inodoros, ya sabes el sabor que tendr\u00e1 el agua... (Atenci\u00f3n: El rendimiento de este objeto es inferior al de un Purificador Industrial)",
+        "cat": "Drug",
+        "img": "item_water_cleaner"
+    },
+    "149": {
+        "id": 149,
+        "name": "Mel\u00f3n de intestino",
+        "desc": "Se sabe que crece en el intestino de los cad\u00e1veres, cerca del colon. Sin embargo, tu huerta presenta varios de estos frutos... \u00bfLos habr\u00e1s cultivado en alg\u00fan antiguo cementerio?",
+        "cat": "Food",
+        "img": "item_vegetable_tasty"
+    },
+    "150": {
+        "id": 150,
+        "name": "P\u00f3lvora brillante",
+        "desc": "Esta p\u00f3lvora de fuegos artificiales podr\u00eda brindarte un buen espect\u00e1culo, si es usada correctamente...",
+        "cat": "Misc",
+        "img": "item_powder"
+    },
+    "151": {
+        "id": 151,
+        "name": "Bomba de carnaval",
+        "desc": "Este simp\u00e1tico artefacto puede servirte para desviar la atenci\u00f3n de los zombies hacia otra cosa que no sea tus queridos huesos... Tendr\u00e1s unos instantes para aprovechar su distracci\u00f3n.",
+        "cat": "Misc",
+        "img": "item_flash"
+    },
+    "152": {
+        "id": 152,
+        "name": "Osito cari\u00f1osito",
+        "desc": "Un peluche que habr\u00e1 dado mucha felicidad a un ni\u00f1o... o tal vez no.",
+        "cat": "Furniture",
+        "img": "item_teddy"
+    },
+    "153": {
+        "id": 153,
+        "name": "Pedazo de caja",
+        "desc": "Una vieja parrilla de tablas que serv\u00eda para tapar una gran caja. Podr\u00eda serte \u00fatil como defensa si encontrases algo para reforzarla.",
+        "cat": "Misc",
+        "img": "item_wood_plate_part"
+    },
+    "154": {
+        "id": 154,
+        "name": "Plancha de madera",
+        "desc": "Est\u00e1 muy s\u00f3lida. Proteger\u00e1 alguna ventana o puerta de tu casa...",
+        "cat": "Armor",
+        "img": "item_wood_plate"
+    },
+    "155": {
+        "id": 155,
+        "name": "Fajo de billetes",
+        "desc": "Un mont\u00f3n de papelitos con n\u00fameros y dibujos impresos, que alguna vez sirvieron como salario. Hoy, todo lo que no se come o no te protege no vale nada...",
+        "cat": "Furniture",
+        "img": "item_money"
+    },
+    "156": {
+        "id": 156,
+        "name": "Herramientas sueltas",
+        "desc": "Herramientas diversas, a las que les falta siempre algo: un mango, un tornillo... Habr\u00eda que repararlas en el taller para que sean \u00fatiles.",
+        "cat": "Misc",
+        "img": "item_repair_kit_part_raw"
+    },
+    "157": {
+        "id": 157,
+        "name": "Radius Mark II descargado",
+        "desc": "El transmisor Radius Mark II es un aparato arcaico pero eficaz para detectar la presencia de zombies en los alrededores. Se dice que da c\u00e1ncer y que quema las neuronas si se usa por mucho tiempo, pero como tu vida no ser\u00e1 muy larga no hay problema. Y de todos modos le hacen falta pilas.",
+        "cat": "Misc",
+        "img": "item_radius_mk2_part"
+    },
+    "158": {
+        "id": 158,
+        "name": "Radius Mark II",
+        "desc": "El transmisor Radius Mark II es un aparato arcaico pero eficaz para detectar la presencia de zombies en los alrededores. Se dice que da c\u00e1ncer y que quema las neuronas si se usa por mucho tiempo, pero como tu vida no ser\u00e1 muy larga no hay problema.",
+        "cat": "Misc",
+        "img": "item_radius_mk2"
+    },
+    "159": {
+        "id": 159,
+        "name": "Repara-f\u00e1cil",
+        "desc": "Un peque\u00f1o kit de un solo uso que permite reparar cualquier cosa. Contiene herramientas b\u00e1sicas, piezas de repuesto y un manual en 7 idiomas.",
+        "cat": "Misc",
+        "img": "item_repair_one"
+    },
+    "160": {
+        "id": 160,
+        "name": "Motor incompleto",
+        "desc": "Est\u00e1 lleno de aceite y suena a piezas sueltas cuando lo sacudes. Pesa.",
+        "cat": "Misc",
+        "img": "item_engine_part"
+    },
+    "161": {
+        "id": 161,
+        "name": "Vieja lavadora",
+        "desc": "Uno de esos artefactos del hogar que representaba el sue\u00f1o de muchas familias. Hoy, solo te causa risa...",
+        "cat": "Furniture",
+        "img": "item_machine_1"
+    },
+    "162": {
+        "id": 162,
+        "name": "Horno cancer\u00edgeno",
+        "desc": "Quienes sal\u00edan en la tele diciendo que el horno microondas causar\u00eda la decadencia de nuestra sociedad, tal vez ten\u00edan raz\u00f3n. Incluso se dice que la existencia de muertos vivientes no ser\u00eda ajena a su uso.",
+        "cat": "Furniture",
+        "img": "item_machine_2"
+    },
+    "163": {
+        "id": 163,
+        "name": "Frigor\u00edfico",
+        "desc": "A\u00fan tiene la foto de una pareja de novios pegada con un im\u00e1n. Ya no funciona pero alg\u00fan uso le has de encontrar.",
+        "cat": "Furniture",
+        "img": "item_machine_3"
+    },
+    "164": {
+        "id": 164,
+        "name": "Una carta",
+        "desc": "Un sobre que se ha salpicado de sangre donde deber\u00eda de estar la direcci\u00f3n.",
+        "cat": "Misc",
+        "img": "item_rp_letter"
+    },
+    "165": {
+        "id": 165,
+        "name": "Hoja de papel embarrada",
+        "desc": "Cay\u00f3 en un charco de lodo y se sec\u00f3. No sabes realmente lo que es. \u00bfQuiz\u00e1s limpi\u00e1ndola un poco encuentres alguna informaci\u00f3n interesante?",
+        "cat": "Misc",
+        "img": "item_rp_scroll"
+    },
+    "166": {
+        "id": 166,
+        "name": "Manual de instrucciones",
+        "desc": "Una serie de hojas con instrucciones para reparar y armar cosas. Algunas p\u00e1ginas tienen notas...",
+        "cat": "Misc",
+        "img": "item_rp_manual"
+    },
+    "167": {
+        "id": 167,
+        "name": "Libreta ilegible",
+        "desc": "Debi\u00f3 pertenecer a otro habitante. Si la perdi\u00f3, ahora es tuya. \u00bfQu\u00e9 contendr\u00e1?",
+        "cat": "Misc",
+        "img": "item_rp_book2"
+    },
+    "168": {
+        "id": 168,
+        "name": "\u00c1lbum de fotos",
+        "desc": "Un viejo \u00e1lbum de fotos de escuela o algo as\u00ed, hay muchos rostros casi borrados por el tiempo. Pero al ojearlo, un papel cae de su interior...",
+        "cat": "Misc",
+        "img": "item_rp_book"
+    },
+    "169": {
+        "id": 169,
+        "name": "Pila de papeles",
+        "desc": "Muchos documentos de todo tipo, nada interesante. Espera, algunos llevan anotaciones curiosas...",
+        "cat": "Misc",
+        "img": "item_rp_sheets"
+    },
+    "170": {
+        "id": 170,
+        "name": "Cadena oxidada",
+        "desc": "Tal vez te sirva... para estrangular a alguien.",
+        "cat": "Weapon",
+        "img": "item_chain"
+    },
+    "171": {
+        "id": 171,
+        "name": "Plato casero extra\u00f1o",
+        "desc": "Ingredientes variados sazonados con arena del desierto. Hmmm...",
+        "cat": "Food",
+        "img": "item_dish"
+    },
+    "172": {
+        "id": 172,
+        "name": "Plato casero delicioso",
+        "desc": "No parece nada extraordinario, \u00a1pero tiene buen sabor y alimenta muy bien!",
+        "cat": "Food",
+        "img": "item_dish_tasty"
+    },
+    "173": {
+        "id": 173,
+        "name": "Ba\u00fal de metal",
+        "desc": "Pesado pero pr\u00e1ctico para llevar a casa.",
+        "cat": "Furniture",
+        "img": "item_home_box_xl"
+    },
+    "174": {
+        "id": 174,
+        "name": "Cajas de cart\u00f3n",
+        "desc": "Diversas cajas de artefactos el\u00e9ctricos y muebles. Podr\u00edan servir en tu casa como muebles.",
+        "cat": "Furniture",
+        "img": "item_home_box"
+    },
+    "175": {
+        "id": 175,
+        "name": "Barricadas",
+        "desc": "Una estructura de madera y hierro que seguramente sirvi\u00f3 a un antiguo habitante. A juzgar por las manchas de sangre y golpes, no debi\u00f3 ser suficiente...",
+        "cat": "Furniture",
+        "img": "item_home_def"
+    },
+    "176": {
+        "id": 176,
+        "name": "Un sobre",
+        "desc": "Un gran sobre sellado conteniendo... papeles, tal vez.",
+        "cat": "Box",
+        "img": "item_book_gen_letter"
+    },
+    "177": {
+        "id": 177,
+        "name": "Un paquete",
+        "desc": "Parece que no hay direcci\u00f3n ni detalles de reenv\u00edo en este paquete. Lo sacudes y escuchas algo traqueteando en el interior.",
+        "cat": "Box",
+        "img": "item_book_gen_box"
+    },
+    "178": {
+        "id": 178,
+        "name": "Pedazo de rejilla",
+        "desc": "Oxidada y torcida, puede servir para algo.",
+        "cat": "Furniture",
+        "img": "item_fence"
+    },
+    "179": {
+        "id": 179,
+        "name": "Pistola de agua (3 cargas)",
+        "desc": "Tu primer arma letal cuando eras ni\u00f1o... Solo es eficaz con agua pura (la de una Raci\u00f3n de agua por ejemplo).",
+        "cat": "Weapon",
+        "img": "item_watergun_3"
+    },
+    "180": {
+        "id": 180,
+        "name": "Pistola de agua (2 cargas)",
+        "desc": "Tu primer arma letal cuando eras ni\u00f1o... Solo es eficaz con agua pura (la de una Raci\u00f3n de agua por ejemplo).",
+        "cat": "Weapon",
+        "img": "item_watergun_2"
+    },
+    "181": {
+        "id": 181,
+        "name": "Pistola de agua (1 carga)",
+        "desc": "Tu primer arma letal cuando eras ni\u00f1o... Solo es eficaz con agua pura (la de una Raci\u00f3n de agua por ejemplo).",
+        "cat": "Weapon",
+        "img": "item_watergun_1"
+    },
+    "182": {
+        "id": 182,
+        "name": "Rifle de agua (5 cargas)",
+        "desc": "\u00a1Un arma super poderosa en el Ultramundo! La etiqueta dice de 8 a\u00f1os a m\u00e1s.",
+        "cat": "Weapon",
+        "img": "item_watergun_opt_5"
+    },
+    "183": {
+        "id": 183,
+        "name": "Rifle de agua (4 cargas)",
+        "desc": "\u00a1Un arma super poderosa en el Ultramundo! La etiqueta dice de 8 a\u00f1os a m\u00e1s.",
+        "cat": "Weapon",
+        "img": "item_watergun_opt_4"
+    },
+    "184": {
+        "id": 184,
+        "name": "Cajetilla de cigarrillos abierta",
+        "desc": "El tabaco ya huele muy mal, pero es tan raro encontrar algo as\u00ed en estos d\u00edas... Lleva escrito: \"Fumar mata\". S\u00ed, claro...",
+        "cat": "Misc",
+        "img": "item_cigs"
+    },
+    "185": {
+        "id": 185,
+        "name": "Calibrador PDTT Mark II",
+        "desc": "Fue concebido para ser instalado en el Lanza-pilas 1-PDTG. Permite ajustar el disparo del arma.",
+        "cat": "Misc",
+        "img": "item_pilegun_upkit"
+    },
+    "186": {
+        "id": 186,
+        "name": "Lanza-pilas Mark II (vac\u00edo)",
+        "desc": "Esta versi\u00f3n mejorada del temible lanza-pilas lleva un ca\u00f1\u00f3n equipado con el Calibrador PDTT Mark II. Ajustando la potencia del tiro, el ca\u00f1\u00f3n permite, a veces, recuperar la pila disparada.",
+        "cat": "Weapon",
+        "img": "item_pilegun_up_empty"
+    },
+    "187": {
+        "id": 187,
+        "name": "Lanza-pilas Mark II (cargado)",
+        "desc": "Esta versi\u00f3n mejorada del temible lanza-pilas lleva un ca\u00f1\u00f3n equipado con el Calibrador PDTT Mark II. Ajustando la potencia del tiro, el ca\u00f1\u00f3n permite, a veces, recuperar la pila disparada.",
+        "cat": "Weapon",
+        "img": "item_pilegun_up"
+    },
+    "188": {
+        "id": 188,
+        "name": "Pila molida",
+        "desc": "Antes era una pila. Ahora es un pedazo de metal aplastado...",
+        "cat": "Misc",
+        "img": "item_pile_broken"
+    },
+    "189": {
+        "id": 189,
+        "name": "Caja de materiales (3)",
+        "desc": "Esta gran cajota est\u00e1 muy bien empacada y debe contener materiales de construcci\u00f3n.",
+        "cat": "Box",
+        "img": "item_rsc_pack_3"
+    },
+    "190": {
+        "id": 190,
+        "name": "Caja de materiales (2)",
+        "desc": "Esta gran cajota est\u00e1 muy bien empacada y debe contener materiales de construcci\u00f3n.",
+        "cat": "Box",
+        "img": "item_rsc_pack_2"
+    },
+    "191": {
+        "id": 191,
+        "name": "Caja de materiales (1)",
+        "desc": "Esta gran cajota est\u00e1 muy bien empacada y debe contener materiales de construcci\u00f3n.",
+        "cat": "Box",
+        "img": "item_rsc_pack_1"
+    },
+    "192": {
+        "id": 192,
+        "name": "Puerta de coche",
+        "desc": "Esta buena puerta de coche estadounidense te servir\u00e1 como escudo para pasar entre las turbas de muertos vivientes deseosos de darte mordiscos.",
+        "cat": "Armor",
+        "img": "item_car_door"
+    },
+    "193": {
+        "id": 193,
+        "name": "Puerta de coche incompleta",
+        "desc": "Una buena puerta de coche estadounidense, te servir\u00eda como escudo, pero le faltan piezas para poder ser sostenida...",
+        "cat": "Misc",
+        "img": "item_car_door_part"
+    },
+    "194": {
+        "id": 194,
+        "name": "Frasco de veneno",
+        "desc": "Las pocas gotas que quedan dentro matar\u00edan a cualquier compa\u00f1ero. Tiene un gran poder de contaminaci\u00f3n, ya sea en alimentos, estimulantes o una Raci\u00f3n de agua...",
+        "cat": "Misc",
+        "img": "item_poison"
+    },
+    "195": {
+        "id": 195,
+        "name": "Producto corrosivo",
+        "desc": "Mezcl\u00e1ndolo con otros ingredientes este \u00e1cido puede volverse un potente veneno. Pero no deseas matar a alguien... \u00bfverdad?",
+        "cat": "Misc",
+        "img": "item_poison_part"
+    },
+    "196": {
+        "id": 196,
+        "name": "Reservas de habitante precavido",
+        "desc": "Cuando se adquiere una cierta experiencia en este mundo, uno comprende la importancia de guardar algunos objetos, porque un d\u00eda podr\u00edan salvarnos la vida.",
+        "cat": "Box",
+        "img": "item_chest_hero"
+    },
+    "197": {
+        "id": 197,
+        "name": "Paquete postal",
+        "desc": "Un paquete perdido por el correo (para variar). Hay algo dentro... \u00bfqu\u00e9 ser\u00e1?",
+        "cat": "Box",
+        "img": "item_postal_box"
+    },
+    "198": {
+        "id": 198,
+        "name": "Lonchera",
+        "desc": "A falta de una buena comida en una mesa. con cubiertos y amigos, tienes esta lonchera Armaged\u00f3n que hab\u00edas escondido hace un tiempo bajo tu cama...",
+        "cat": "Box",
+        "img": "item_food_armag"
+    },
+    "199": {
+        "id": 199,
+        "name": "Pu\u00f1ado de caramelos",
+        "desc": "Se te salen las l\u00e1grimas al ver todos esos caramelitos de colores...",
+        "cat": "Food",
+        "img": "item_food_candies"
+    },
+    "200": {
+        "id": 200,
+        "name": "Pedazo de contrachapado",
+        "desc": "Debe haber salido de un antiguo edificio. Con un poco de ingenio puede servir para hacer un escondite.",
+        "cat": "Misc",
+        "img": "item_out_def"
+    },
+    "201": {
+        "id": 201,
+        "name": "Antorcha",
+        "desc": "Debe poder quedar encendida unas horas... Servir\u00e1 para alejar a los zombies. Adem\u00e1s, si la colocas en el suelo en el desierto, reducir\u00e1 la penalizaci\u00f3n que impide realizar b\u00fasquedas de noche.",
+        "cat": "Armor",
+        "img": "item_torch"
+    },
+    "202": {
+        "id": 202,
+        "name": "Antorcha consumida",
+        "desc": "Un viejo pedazo de madera calcinada que no tendr\u00e1 mucha utilidad...",
+        "cat": "Weapon",
+        "img": "item_torch_off"
+    },
+    "203": {
+        "id": 203,
+        "name": "Malvaviscos secos",
+        "desc": "Est\u00e1n tan duros que son dif\u00edciles de comer...",
+        "cat": "Food",
+        "img": "item_chama"
+    },
+    "204": {
+        "id": 204,
+        "name": "Malvaviscos quemados",
+        "desc": "Estar\u00e1n secos y quemados, pero hagamos cuenta de que a\u00fan son comestibles.",
+        "cat": "Food",
+        "img": "item_chama_tasty"
+    },
+    "205": {
+        "id": 205,
+        "name": "Unidad central",
+        "desc": "Esta vieja caja met\u00e1lica contiene un mont\u00f3n de componentes el\u00e9ctricos. Debe ser de alg\u00fan antiguo servidor de Eternaltwin, ahora no sirve de mucho...",
+        "cat": "Furniture",
+        "img": "item_pc"
+    },
+    "206": {
+        "id": 206,
+        "name": "Caja fuerte",
+        "desc": "\u00bfQu\u00e9 tendr\u00e1 dentro? Ah, claro, necesitas conocer la clave secreta para averiguarlo.",
+        "cat": "Box",
+        "img": "item_safe"
+    },
+    "207": {
+        "id": 207,
+        "name": "Una enciclopedia",
+        "desc": "Un libro muy gordo y empolvado. Sus p\u00e1ginas tienen muchas anotaciones misteriosas, como si hubiese pasado por las manos de varias personas.",
+        "cat": "Misc",
+        "img": "item_rp_twin"
+    },
+    "208": {
+        "id": 208,
+        "name": "Bombona de agua (vac\u00eda)",
+        "desc": "Tuviste suerte al encontrarla, no es com\u00fan ver eso por aqu\u00ed... -- USO: si llevas una Raci\u00f3n de agua, ser\u00e1 colocada en la bombona. Si no, la acci\u00f3n ser\u00e1 beber el contenido de la bombona.",
+        "cat": "Misc",
+        "img": "item_water_can_empty"
+    },
+    "209": {
+        "id": 209,
+        "name": "Bombona de agua (1 Raci\u00f3n)",
+        "desc": "Tuviste suerte al encontrarla, no es com\u00fan ver eso por aqu\u00ed... -- USO: si llevas una Raci\u00f3n de agua, ser\u00e1 colocada en la bombona. Si no, la acci\u00f3n ser\u00e1 beber el contenido de la bombona.",
+        "cat": "Food",
+        "img": "item_water_can_1"
+    },
+    "210": {
+        "id": 210,
+        "name": "Bombona de agua (2 Raciones)",
+        "desc": "Tuviste suerte al encontrarla, no es com\u00fan ver eso por aqu\u00ed... -- USO: si llevas una Raci\u00f3n de agua, ser\u00e1 colocada en la bombona. Si no, la acci\u00f3n ser\u00e1 beber el contenido de la bombona.",
+        "cat": "Food",
+        "img": "item_water_can_2"
+    },
+    "211": {
+        "id": 211,
+        "name": "Bombona de agua (3 Raciones)",
+        "desc": "Tuviste suerte al encontrarla, no es com\u00fan ver eso por aqu\u00ed... -- USO: si llevas una Raci\u00f3n de agua, ser\u00e1 colocada en la bombona. Si no, la acci\u00f3n ser\u00e1 beber el contenido de la bombona.",
+        "cat": "Food",
+        "img": "item_water_can_3"
+    },
+    "212": {
+        "id": 212,
+        "name": "Betaprop\u00edn 5mg vencido",
+        "desc": "Tiene un efecto misterioso... En la caja dice: \"No recomendado para beta-testers menores de 18 a\u00f1os\". Extra\u00f1o.",
+        "cat": "Drug",
+        "img": "item_beta_drug_bad"
+    },
+    "213": {
+        "id": 213,
+        "name": "Betaprop\u00edn 5mg",
+        "desc": "En la caja dice: \"No recomendado para beta-testers menores de 18 a\u00f1os\". Extra\u00f1o.",
+        "cat": "Drug",
+        "img": "item_beta_drug"
+    },
+    "214": {
+        "id": 214,
+        "name": "Hongos carro\u00f1eros",
+        "desc": "Crecen generalmente en los cuerpos en descomposici\u00f3n: no es raro verlos en los zombies o en cad\u00e1veres de animales diversos... \u00bfEst\u00e1s seguro de que eso se come?",
+        "cat": "Misc",
+        "img": "item_fruit_sub_part"
+    },
+    "215": {
+        "id": 215,
+        "name": "Bola viscosa",
+        "desc": "Una colonia de hongos carro\u00f1eros que crecen generalmente en los cuerpos en descomposici\u00f3n...",
+        "cat": "Misc",
+        "img": "item_fruit_part"
+    },
+    "216": {
+        "id": 216,
+        "name": "Trozo de pellejo",
+        "desc": "Un viejo pedazo de piel u otra cosa que perteneci\u00f3 al cuerpo de un ser vivo. \u00bfPero qu\u00e9 puedes hacer con eso?",
+        "cat": "Misc",
+        "img": "item_flesh_part"
+    },
+    "217": {
+        "id": 217,
+        "name": "Bomba macabra",
+        "desc": "La ventaja de esta bola deforme de carne, es que huele a carro\u00f1a en 10 metros a la redonda. Muy \u00fatil para entretener a los zombies por unos instantes.",
+        "cat": "Misc",
+        "img": "item_flesh"
+    },
+    "218": {
+        "id": 218,
+        "name": "Sustancia espesa",
+        "desc": "Este frasco contiene un l\u00edquido de colores... sorprendentes. Tal vez mezcl\u00e1ndolo con otra cosa obtengas algo \u00fatil.",
+        "cat": "Drug",
+        "img": "item_pharma_part"
+    },
+    "219": {
+        "id": 219,
+        "name": "Pur\u00e9 de hongos carro\u00f1eros",
+        "desc": "Realmente esto apesta. Es una bola aplastada de hongos que crecieron en alg\u00fan cad\u00e1ver. Si no le tienes miedo a nada, \u00bfcrees que esto podr\u00e1 calmar tu hambre?",
+        "cat": "Food",
+        "img": "item_fruit"
+    },
+    "220": {
+        "id": 220,
+        "name": "Agua estancada",
+        "desc": "Una pieza de metal oxidado ha conservado una peque\u00f1a cantidad de agua. El problema es que no es potable.",
+        "cat": "Misc",
+        "img": "item_water_cup_part"
+    },
+    "221": {
+        "id": 221,
+        "name": "Agua estancada purificada",
+        "desc": "Una pieza de metal oxidado ha conservado una peque\u00f1a cantidad de agua. No es mucha, pero es mejor que nada.",
+        "cat": "Food",
+        "img": "item_water_cup"
+    },
+    "222": {
+        "id": 222,
+        "name": "Nota de un habitante desterrado",
+        "desc": "Esta nota pertenec\u00eda a un Desterrado. \u00bfQu\u00e9 pudo haber escrito?",
+        "cat": "Misc",
+        "img": "item_banned_note"
+    },
+    "223": {
+        "id": 223,
+        "name": "Tirita ensangrentada",
+        "desc": "Esta tirita ensangrentada fue previamente usada en la gangrena de un habitante infectado...",
+        "cat": "Drug",
+        "img": "item_infect_poison_part"
+    },
+    "224": {
+        "id": 224,
+        "name": "Osito cari\u00f1osito maldito",
+        "desc": "Un peluche que habr\u00e1 dado mucha \"felicidad\" a un ni\u00f1o... o pudo haberlo pose\u00eddo...",
+        "cat": "Furniture",
+        "img": "item_teddy"
+    },
+    "225": {
+        "id": 225,
+        "name": "Bistec de serr\u00edn",
+        "desc": "Una rebanada de carne cubierta con serr\u00edn y viruta de madera... Pero tal vez no sean virutas, sino gusanos, lo que parece m\u00e1s l\u00f3gico porque no dejan de moverse.",
+        "cat": "Food",
+        "img": "item_woodsteak"
+    },
+    "226": {
+        "id": 226,
+        "name": "Chaqueta roja usada",
+        "desc": "Es un poco grande para ti: parece haber pertenecido a alguien con una gran barriga y mal gusto, como se puede ver claramente en el blanco del cuello y los pu\u00f1os.",
+        "cat": "Misc",
+        "img": "item_christmas_suit_1"
+    },
+    "227": {
+        "id": 227,
+        "name": "Pantalones rojos usados",
+        "desc": "Estos viejos pantalones huelen a orina y se han reparado con regularidad. Probablemente se vean mejor en... (\u00a1ENCENDIDO!) \u00a1Te quedar\u00e1n perfectamente!",
+        "cat": "Misc",
+        "img": "item_christmas_suit_2"
+    },
+    "228": {
+        "id": 228,
+        "name": "Gorro rojo maloliente",
+        "desc": "Un sombrero que ha sido utilizado como nido por varias generaciones de palomas y otros animales malolientes. El revestimiento interior de excrementos secos le da una textura extra\u00f1a... Y te pica la cabeza cuando te lo pones.",
+        "cat": "Misc",
+        "img": "item_christmas_suit_3"
+    },
+    "229": {
+        "id": 229,
+        "name": "Traje de Pap\u00e1 Noel",
+        "desc": "Este atuendo te queda hasta el suelo (algunos dicen que incluso huele a ti). De repente sientes que deber\u00edas alegrar a tus vecinos deslizandote discretamente por sus chimeneas con los brazos llenos de regalos. Puedes usar esto como una t\u00e1ctica para robar, saquear y birlar tu camino hacia la felicidad a tus vecinos. Ah, la magia de la Navidad...",
+        "cat": "Misc",
+        "img": "item_christmas_suit_full"
+    },
+    "230": {
+        "id": 230,
+        "name": "Tel\u00e9fono m\u00f3vil",
+        "desc": "Es un modelo muy famoso... por haber explotado causando la muerte de miles de personas y borrando del mapa muchas ciudades en todo el mundo. Servir\u00e1 como granada.",
+        "cat": "Weapon",
+        "img": "item_iphone"
+    },
+    "231": {
+        "id": 231,
+        "name": "Pellejo humano",
+        "desc": "Esta horripilante bolsa de piel fue arrancada a alg\u00fan pobre hombre. Su mal olor te servir\u00e1 para camuflar tu aroma a carne fresca. Aumenta las probabilidades de sobrevivir al acampar. Debes llevarlo puesto para recibir el bonus.",
+        "cat": "Misc",
+        "img": "item_smelly_meat"
+    },
+    "232": {
+        "id": 232,
+        "name": "Linterna Gagdet (apagada)",
+        "desc": "Esta gran linterna de forma rara puede serte \u00fatil en tus b\u00fasquedas en el desierto. Si solo tuvieras una pila...",
+        "cat": "Furniture",
+        "img": "item_maglite_off"
+    },
+    "233": {
+        "id": 233,
+        "name": "Linterna Gagdet (1 carga)",
+        "desc": "Esta gran linterna de forma rara puede serte \u00fatil en tus b\u00fasquedas en el desierto.",
+        "cat": "Furniture",
+        "img": "item_maglite_1"
+    },
+    "234": {
+        "id": 234,
+        "name": "Linterna Gagdet (2 cargas)",
+        "desc": "Esta gran linterna de forma rara puede serte \u00fatil en tus b\u00fasquedas en el desierto.",
+        "cat": "Furniture",
+        "img": "item_maglite_2"
+    },
+    "235": {
+        "id": 235,
+        "name": "Cad\u00e1ver de un viajero",
+        "desc": "Los gusanos no han dejado mucho... \u00bfEst\u00e1s seguro de querer llevar eso en los hombros?",
+        "cat": "Food",
+        "img": "item_cadaver"
+    },
+    "236": {
+        "id": 236,
+        "name": "Cad\u00e1ver carcomido",
+        "desc": "Los huesos han sido ro\u00eddos por algo o... alguien. Este pueblo me sorprende cada vez m\u00e1s.",
+        "cat": "Misc",
+        "img": "item_cadaver_remains"
+    },
+    "237": {
+        "id": 237,
+        "name": "Bomba de humo \u00abAroma de pino\u00bb",
+        "desc": "Adem\u00e1s de perfumar el ambiente, te permite borrar las notas en el Registro de los 3 \u00faltimos minutos y ocultar tambi\u00e9n tu pr\u00f3ximo movimiento si es realizado en el minuto despu\u00e9s de su uso. Atenci\u00f3n: \u00fasalo DESPU\u00c9S de haber realizado las acciones que deseas ocultar, y en el Ultramundo...",
+        "cat": "Misc",
+        "img": "item_smoke_bomb"
+    },
+    "238": {
+        "id": 238,
+        "name": "Bola de arena",
+        "desc": "Una bola de arena inofensiva (con un poco de grava por si acaso) que est\u00e1s deseando lanzar a la cara de otro. No tienes idea de d\u00f3nde vino este extra\u00f1o deseo.",
+        "cat": "Misc",
+        "img": "item_sand_ball"
+    },
+    "239": {
+        "id": 239,
+        "name": "Plano de construcci\u00f3n (com\u00fan)",
+        "desc": "\u00a1Tienes entre tus manos lo que parece un plano de construcci\u00f3n! Es dif\u00edcil entender lo que es, habr\u00eda que estudiarlo para sacar conclusiones.",
+        "cat": "Misc",
+        "img": "item_bplan_c"
+    },
+    "240": {
+        "id": 240,
+        "name": "Plano de construcci\u00f3n (inusual)",
+        "desc": "\u00a1Tienes entre tus manos lo que parece un plano de construcci\u00f3n! Es dif\u00edcil entender lo que es, habr\u00eda que estudiarlo para sacar conclusiones.",
+        "cat": "Misc",
+        "img": "item_bplan_u"
+    },
+    "241": {
+        "id": 241,
+        "name": "Plano de construcci\u00f3n (raro)",
+        "desc": "\u00a1Tienes entre tus manos lo que parece un plano de construcci\u00f3n! Es dif\u00edcil entender lo que es, habr\u00eda que estudiarlo para sacar conclusiones.",
+        "cat": "Misc",
+        "img": "item_bplan_r"
+    },
+    "242": {
+        "id": 242,
+        "name": "Plano de construcci\u00f3n (\u00a1muy raro!)",
+        "desc": "\u00a1Tienes entre tus manos lo que parece un plano de construcci\u00f3n! Es dif\u00edcil entender lo que es, habr\u00eda que estudiarlo para sacar conclusiones.",
+        "cat": "Misc",
+        "img": "item_bplan_e"
+    },
+    "243": {
+        "id": 243,
+        "name": "Malet\u00edn de arquitecto",
+        "desc": "Contiene documentos y art\u00edculos de escritorio (l\u00e1pices, comp\u00e1s, reglas...). Nada \u00fatil para sobrevivir en el desierto... O eso parece.",
+        "cat": "Box",
+        "img": "item_bplan_box"
+    },
+    "244": {
+        "id": 244,
+        "name": "Cofre de arquitecto sellado",
+        "desc": "Contiene seguramente un documento importante y raro...",
+        "cat": "Box",
+        "img": "item_bplan_box_e"
+    },
+    "245": {
+        "id": 245,
+        "name": "Huevo",
+        "desc": "Eso s\u00ed que va a mejorar tu vida, pero una pregunta te viene a la mente: \u00bfD\u00f3nde est\u00e1 esa condenada gallina?...",
+        "cat": "Food",
+        "img": "item_egg"
+    },
+    "246": {
+        "id": 246,
+        "name": "Manzana",
+        "desc": "Si haces que te caiga en la cabeza, tal vez te vengan ideas como a Newton... En todo caso, debe tener algunas vitaminas.",
+        "cat": "Food",
+        "img": "item_apple"
+    },
+    "247": {
+        "id": 247,
+        "name": "Pomelo explosivo",
+        "desc": "Fresco, jugoso y hace \"tic tac\".",
+        "cat": "Weapon",
+        "img": "item_boomfruit"
+    },
+    "248": {
+        "id": 248,
+        "name": "Malet\u00edn usado",
+        "desc": "Parece que tiene documentos. Rezas por que tenga una revista para adultos o los planos de algo poderoso. Por favor, todo menos dinero...",
+        "cat": "Misc",
+        "img": "item_bplan_drop"
+    },
+    "249": {
+        "id": 249,
+        "name": "Llave magn\u00e9tica",
+        "desc": "Esta llave de alta tecnolog\u00eda te permite abrir puertas aseguradas hasta el nivel 6.2 AOC, solo los t\u00e9cnicos de \u00e9lite son dignos de tener una en su poder. Desafortunadamente, como la llave est\u00e1 en lamentables condiciones, solo te servir\u00e1 para abrir una puerta m\u00e1s.",
+        "cat": "Misc",
+        "img": "item_magneticKey"
+    },
+    "250": {
+        "id": 250,
+        "name": "Llave de percusi\u00f3n",
+        "desc": "Esta llave, muy apreciada por los ladrones de casas, abre cualquier puerta en segundos. Entonces, \u00bfpara qu\u00e9 sirven las llaves tradicionales? Desgraciadamente, su mal estado solo permite abrir una puerta.",
+        "cat": "Misc",
+        "img": "item_bumpKey"
+    },
+    "251": {
+        "id": 251,
+        "name": "Abrebotellas",
+        "desc": "Como no tienes cervezas que abrir, mejor te pones a abrir puertas en busca de objetos \u00fatiles. Debido a su mal estado, solo puedes abrir una puerta con \u00e9l.",
+        "cat": "Misc",
+        "img": "item_classicKey"
+    },
+    "252": {
+        "id": 252,
+        "name": "Molde para llave magn\u00e9tica",
+        "desc": "La llave de alta tecnolog\u00eda de este molde te permitir\u00e1 abrir puertas seguras clasificadas hasta el nivel 6.2 AOC.",
+        "cat": "Misc",
+        "img": "item_magnetic_print"
+    },
+    "253": {
+        "id": 253,
+        "name": "Molde para llave de percusi\u00f3n",
+        "desc": "Este molde te permitir\u00e1 obtener una llave de percusi\u00f3n, dicha llave es muy apreciada por los ladrones incipientes y permite abrir cualquier puerta en segundos.",
+        "cat": "Misc",
+        "img": "item_prints"
+    },
+    "254": {
+        "id": 254,
+        "name": "Molde para abrebotellas",
+        "desc": "Como no tienes cervezas que abrir, mejor te pones a abrir puertas en busca de objetos \u00fatiles. Debido a su mal estado, solo puedes abrir una puerta con \u00e9l.",
+        "cat": "Misc",
+        "img": "item_bottle_print"
+    },
+    "255": {
+        "id": 255,
+        "name": "Vacuna para mutante",
+        "desc": "Este suero extremadamente raro se ha desarrollado a partir del ADN de una muestra casi inmune que ha resistido una picadura infecciosa durante m\u00e1s de 3 d\u00edas. Permite que un mutante vuelva a su estado humano normal.",
+        "cat": "Drug",
+        "img": "item_vagoul"
+    },
+    "256": {
+        "id": 256,
+        "name": "Plano de construcci\u00f3n de hotel (inusual)",
+        "desc": "\u00a1Tienes entre tus manos lo que parece un plano de construcci\u00f3n! Es dif\u00edcil entender lo que es, habr\u00eda que estudiarlo para sacar conclusiones.",
+        "cat": "Misc",
+        "img": "item_hbplan_u"
+    },
+    "257": {
+        "id": 257,
+        "name": "Plano de construcci\u00f3n de hotel (raro)",
+        "desc": "\u00a1Tienes entre tus manos lo que parece un plano de construcci\u00f3n! Es dif\u00edcil entender lo que es, habr\u00eda que estudiarlo para sacar conclusiones.",
+        "cat": "Misc",
+        "img": "item_hbplan_r"
+    },
+    "258": {
+        "id": 258,
+        "name": "Plano de construcci\u00f3n de hotel (\u00a1muy raro!)",
+        "desc": "\u00a1Tienes entre tus manos lo que parece un plano de construcci\u00f3n! Es dif\u00edcil entender lo que es, habr\u00eda que estudiarlo para sacar conclusiones.",
+        "cat": "Misc",
+        "img": "item_hbplan_e"
+    },
+    "259": {
+        "id": 259,
+        "name": "Plano de construcci\u00f3n de b\u00fanker (inusual)",
+        "desc": "\u00a1Tienes entre tus manos lo que parece un plano de construcci\u00f3n! Es dif\u00edcil entender lo que es, habr\u00eda que estudiarlo para sacar conclusiones.",
+        "cat": "Misc",
+        "img": "item_bbplan_u"
+    },
+    "260": {
+        "id": 260,
+        "name": "Plano de construcci\u00f3n de b\u00fanker (raro)",
+        "desc": "\u00a1Tienes entre tus manos lo que parece un plano de construcci\u00f3n! Es dif\u00edcil entender lo que es, habr\u00eda que estudiarlo para sacar conclusiones.",
+        "cat": "Misc",
+        "img": "item_bbplan_r"
+    },
+    "261": {
+        "id": 261,
+        "name": "Plano de construcci\u00f3n de b\u00fanker (\u00a1muy raro!)",
+        "desc": "\u00a1Tienes entre tus manos lo que parece un plano de construcci\u00f3n! Es dif\u00edcil entender lo que es, habr\u00eda que estudiarlo para sacar conclusiones.",
+        "cat": "Misc",
+        "img": "item_bbplan_e"
+    },
+    "262": {
+        "id": 262,
+        "name": "Plano de construcci\u00f3n de hospital (inusual)",
+        "desc": "\u00a1Tienes entre tus manos lo que parece un plano de construcci\u00f3n! Es dif\u00edcil entender lo que es, habr\u00eda que estudiarlo para sacar conclusiones.",
+        "cat": "Misc",
+        "img": "item_mbplan_u"
+    },
+    "263": {
+        "id": 263,
+        "name": "Plano de construcci\u00f3n de hospital (raro)",
+        "desc": "\u00a1Tienes entre tus manos lo que parece un plano de construcci\u00f3n! Es dif\u00edcil entender lo que es, habr\u00eda que estudiarlo para sacar conclusiones.",
+        "cat": "Misc",
+        "img": "item_mbplan_r"
+    },
+    "264": {
+        "id": 264,
+        "name": "Plano de construcci\u00f3n de hospital (\u00a1muy raro!)",
+        "desc": "\u00a1Tienes entre tus manos lo que parece un plano de construcci\u00f3n! Es dif\u00edcil entender lo que es, habr\u00eda que estudiarlo para sacar conclusiones.",
+        "cat": "Misc",
+        "img": "item_mbplan_e"
+    },
+    "265": {
+        "id": 265,
+        "name": "Alma errante",
+        "desc": "Encuentras una forma vaporosa que parece lamentarse en su sitio. Quiz\u00e1s podr\u00edas recogerla y encontrarle alguna utilidad.",
+        "cat": "Misc",
+        "img": "item_soul_blue"
+    },
+    "266": {
+        "id": 266,
+        "name": "Alma torturada",
+        "desc": "Esto no se parece al alma perdida promedio ... Tal vez deber\u00edas tener un poco de cuidado con esta. De hecho, tal vez deber\u00edas hablar con el Cham\u00e1n de tu pueblo...",
+        "cat": "Misc",
+        "img": "item_soul_red"
+    },
+    "267": {
+        "id": 267,
+        "name": "Alma d\u00e9bil",
+        "desc": "Encuentras una forma vaporosa que parece lamentarse en su sitio. Quiz\u00e1s podr\u00edas recogerla y encontrarle alguna utilidad.",
+        "cat": "Misc",
+        "img": "item_soul_blue"
+    },
+    "268": {
+        "id": 268,
+        "name": "Jarra de cerveza",
+        "desc": "Sumergido en tu desesperaci\u00f3n, te topas con un jarro de cerveza. \u00a1Aleluya!, quisieras decir, pero est\u00e1 caliente, no tiene espuma y sabe a orina. Al fin y al cabo es lo mejor que te pudo suceder hoy. \u00bfSalud?",
+        "cat": "Food",
+        "img": "item_fest"
+    },
+    "269": {
+        "id": 269,
+        "name": "Pretzel arenoso",
+        "desc": "Un delicioso bollo, o al menos lo fue una vez. Fue pisado, lamido y escupido y hasta usado para rascarse la espalda (algunos vellos pegados hacen pensar eso). Las larvas que le rodean se agitan, tan malo no debe ser. Alguna utilidad le encontrar\u00e1s.",
+        "cat": "Food",
+        "img": "item_bretz"
+    },
+    "270": {
+        "id": 270,
+        "name": "Perro salchicha pulgoso",
+        "desc": "Pateando latas y basura, le das a algo blando y con el golpe chill\u00f3. \u00a1Oh, qu\u00e9 lindo, un perrito! Te mira con sus enormes y tiernos ojos. En este lugar olvidado por Dios, solo t\u00fa podr\u00edas darle cari\u00f1o. Sus dientes son afilados y te demuestra que sabe cuidar la casa haciendo un gru\u00f1ido. En el peor de los casos, el carnicero... no, no.",
+        "cat": "Armor",
+        "img": "item_tekel"
+    },
+    "271": {
+        "id": 271,
+        "name": "Lanzadardos",
+        "desc": "Esta arma debi\u00f3 ser construida por alg\u00fan mani\u00e1tico de las armas y el bricolage. Solo queda un dardo dentro del aparato.",
+        "cat": "Weapon",
+        "img": "item_rlaunc"
+    },
+    "272": {
+        "id": 272,
+        "name": "Aguashnikov",
+        "desc": "Una poderosa arma de agua, cuyo mecanismo roto solo alcanza para un disparo.",
+        "cat": "Weapon",
+        "img": "item_kalach"
+    },
+    "273": {
+        "id": 273,
+        "name": "Escritorio mal montado",
+        "desc": "Este escritorio destartalado fue claramente construido con prisa. Sin embargo, lanzado desde lo alto de las murallas podr\u00eda resultar m\u00e1s \u00fatil aplastando a algunos zombies.",
+        "cat": "Furniture",
+        "img": "item_bureau"
+    },
+    "274": {
+        "id": 274,
+        "name": "Cajero vac\u00edo",
+        "desc": "Es tan in\u00fatil como pesado, sin embargo podr\u00eda ayudarte a aplastar algunos zombies si lo lanzas desde una muralla.",
+        "cat": "Furniture",
+        "img": "item_distri"
+    },
+    "275": {
+        "id": 275,
+        "name": "Reno de Pap\u00e1 Noel",
+        "desc": "Hubo un tiempo en que este magn\u00edfico animal se asoci\u00f3 con maravillosas leyendas... Esos d\u00edas ya pasaron, pero sirven para otra cosa...",
+        "cat": "Misc",
+        "img": "item_renne"
+    },
+    "276": {
+        "id": 276,
+        "name": "Huevo de Pascua",
+        "desc": "Un huevo de Pascua en gran parte mohoso, su hedor p\u00fatrido es un poco como la p\u00f3lvora, \u00bfpodr\u00eda el moho haber cambiado sus propiedades f\u00edsicas? Podr\u00eda valer la pena probar con los zombies.",
+        "cat": "Misc",
+        "img": "item_paques"
+    },
+    "277": {
+        "id": 277,
+        "name": "Medalla de un soldado",
+        "desc": "Hurgando en los desperdicios, un destello tenue te llama la atenci\u00f3n. En una inspecci\u00f3n m\u00e1s detallada, descubres que es una insignia ANZAC. Inmediatamente sientes la fuerza de diez guerreros dentro de ti. Guarda esta insignia con tu vida y la vida de aquellos que han ca\u00eddo antes que t\u00fa. Este objeto legendario debe tener alg\u00fan tipo de efecto sobre la horda malvada...",
+        "cat": "Weapon",
+        "img": "item_badge"
+    },
+    "278": {
+        "id": 278,
+        "name": "Aguashnikov (vac\u00edo)",
+        "desc": "Una poderosa arma de agua contra zombies. Como sea, no mata a mucha gente estando vac\u00edo...",
+        "cat": "Weapon",
+        "img": "item_kalach"
+    },
+    "279": {
+        "id": 279,
+        "name": "Bobina de hilo met\u00e1lico",
+        "desc": "Ten cuidado con no enredarte con \u00e9l, ser\u00eda triste tener que cortarte los dedos para liberarte.",
+        "cat": "Rsc",
+        "img": "item_wire"
+    },
+    "280": {
+        "id": 280,
+        "name": "Bid\u00f3n de aceite vac\u00edo",
+        "desc": "Estos bidones provienen de antiguos restaurantes de comida chatarra, otra de las causas por las que se acab\u00f3 el mundo... Siempre junto a ellos hay un cad\u00e1ver. \u00bfCu\u00e1ndo entender\u00e1n algunos que el aceite no se bebe?",
+        "cat": "Rsc",
+        "img": "item_oilcan"
+    },
+    "281": {
+        "id": 281,
+        "name": "Lente convexa",
+        "desc": "Esta lente en buen estado cuenta con tu ingeniosidad para ser utilizada eficazmente.",
+        "cat": "Rsc",
+        "img": "item_lens"
+    },
+    "282": {
+        "id": 282,
+        "name": "Gatito furioso (digerido parcialmente)",
+        "desc": "Seguramente una mascota engullida que logr\u00f3 escapar antes de ser totalmente digerida. Parece encolerizada, mejor mantener distancia.",
+        "cat": "Furniture",
+        "img": "item_angryc"
+    },
+    "283": {
+        "id": 283,
+        "name": "Mina antipersonal",
+        "desc": "A\u00fan quedan minas en el desierto. En general, son m\u00e1s los humanos que los zombies quienes caminan sobre ellas. \u00bfQui\u00e9n es el ser inferior en este caso?",
+        "cat": "Weapon",
+        "img": "item_claymo"
+    },
+    "284": {
+        "id": 284,
+        "name": "Diodo l\u00e1ser",
+        "desc": "Un componente electr\u00f3nico de una \u00e9poca pasada. Ahora encu\u00e9ntrale un uso.",
+        "cat": "Rsc",
+        "img": "item_diode"
+    },
+    "285": {
+        "id": 285,
+        "name": "Guitarra artesanal",
+        "desc": "Todo indica que perteneci\u00f3 al tr\u00edo de \"Los Panchos\". Sus cuerdas est\u00e1n intactas, te servir\u00e1 para cantar tus desgracias en alegres melod\u00edas.",
+        "cat": "Furniture",
+        "img": "item_guitar"
+    },
+    "286": {
+        "id": 286,
+        "name": "LSD",
+        "desc": "Nadie sabe de d\u00f3nde viene este papel rosado, pero al pon\u00e9rtelo en la lengua, sientes burbujas en el cerebro.",
+        "cat": "Drug",
+        "img": "item_lsd"
+    },
+    "287": {
+        "id": 287,
+        "name": "Puntero l\u00e1ser potente (4 cargas)",
+        "desc": "Prohibido en las universidades desde que un profesor le quit\u00f3 la vista a media clase cuando hizo un gesto con las manos. \u00a1Ahora te servir\u00e1 para rebanar carne putrefacta!",
+        "cat": "Weapon",
+        "img": "item_lpoint4"
+    },
+    "288": {
+        "id": 288,
+        "name": "Puntero l\u00e1ser potente (3 cargas)",
+        "desc": "Prohibido en las universidades desde que un profesor le quit\u00f3 la vista a media clase cuando hizo un gesto con las manos. \u00a1Ahora te servir\u00e1 para rebanar carne putrefacta!",
+        "cat": "Weapon",
+        "img": "item_lpoint3"
+    },
+    "289": {
+        "id": 289,
+        "name": "Puntero l\u00e1ser potente (2 cargas)",
+        "desc": "Prohibido en las universidades desde que un profesor le quit\u00f3 la vista a media clase cuando hizo un gesto con las manos. \u00a1Ahora te servir\u00e1 para rebanar carne putrefacta!",
+        "cat": "Weapon",
+        "img": "item_lpoint2"
+    },
+    "290": {
+        "id": 290,
+        "name": "Puntero l\u00e1ser potente (1 carga)",
+        "desc": "Prohibido en las universidades desde que un profesor le quit\u00f3 la vista a media clase cuando hizo un gesto con las manos. \u00a1Ahora te servir\u00e1 para rebanar carne putrefacta!",
+        "cat": "Weapon",
+        "img": "item_lpoint1"
+    },
+    "291": {
+        "id": 291,
+        "name": "Puntero l\u00e1ser potente descargado",
+        "desc": "Prohibido en las universidades desde que un profesor le quit\u00f3 la vista a media clase cuando hizo un gesto con las manos. Pero las cabezas no ruedan solas, necesitas una pila...",
+        "cat": "Weapon",
+        "img": "item_lpoint"
+    },
+    "292": {
+        "id": 292,
+        "name": "Telescopio",
+        "desc": "En el pasado, este objeto serv\u00eda para contar estrellas en el cielo. Hoy, remplazamos las estrellas por zombies. Al tenerlo en El almac\u00e9n, se reduce a la mitad la cantidad de personas necesarias para hacer un pron\u00f3stico del ataque.",
+        "cat": "Rsc",
+        "img": "item_scope"
+    },
+    "293": {
+        "id": 293,
+        "name": "Felpudo explosivo",
+        "desc": "Una excelente manera de hacer que alguien se sienta realmente mal acogido, \u00a1Una bomba debajo del felpudo! \u00bfPor qu\u00e9 no pensamos en esto antes?",
+        "cat": "Furniture",
+        "img": "item_trapma"
+    },
+    "294": {
+        "id": 294,
+        "name": "Mu\u00f1equito de Chuck",
+        "desc": "El esp\u00edritu del gran Chuck habita en este mu\u00f1equito, nada le pasar\u00e1. Incluso despu\u00e9s de tu muerte, el peligro le ser\u00e1 esquivo.",
+        "cat": "Furniture",
+        "img": "item_chudol"
+    },
+    "295": {
+        "id": 295,
+        "name": "Mini-libro de meditaci\u00f3n",
+        "desc": "Este librito fue un best-seller. Te ayuda a asimilar tranquilamente tu triste vida. Previene el estado aterrorizado si est\u00e1 en tu mochila.",
+        "cat": "Drug",
+        "img": "item_lilboo"
+    },
+    "296": {
+        "id": 296,
+        "name": "Costal de hierba fresca",
+        "desc": "Hierba com\u00fan y corriente, debe tener otra utilidad, adem\u00e1s de ser enrollada y fumada.",
+        "cat": "Rsc",
+        "img": "item_ryebag"
+    },
+    "297": {
+        "id": 297,
+        "name": "Claviceps Purpurea",
+        "desc": "Sobre los cad\u00e1veres suelen crecer hongos que provocan delirios muy graciosos. Dicen que su efecto es irreversible. Madre m\u00eda, a qu\u00e9 extremo has llegado...",
+        "cat": "Food",
+        "img": "item_fungus"
+    },
+    "298": {
+        "id": 298,
+        "name": "Cidra claviceps artesanal",
+        "desc": "\"Saltapatr\u00e1s\", \"7 pecados\", \"Nos vemos en el suelo\"... Un licor ex\u00f3tico m\u00e1s, si quieres comprobar sus efectos, inv\u00edtale un trago a un vecino.",
+        "cat": "Food",
+        "img": "item_hmbrew"
+    },
+    "299": {
+        "id": 299,
+        "name": "Equipo de m\u00fasica maldito",
+        "desc": "Cuando es usado con un CD, esta unidad tiene el potencial de convertirse en un arma de destrucci\u00f3n masiva.",
+        "cat": "Furniture",
+        "img": "item_hifiev"
+    },
+    "300": {
+        "id": 300,
+        "name": "CD de Phil Collins",
+        "desc": "Nada mejor que un poco de m\u00fasica ochentera para callar los gritos. \u00a1Sube el volumen y abre la ventana!",
+        "cat": "Furniture",
+        "img": "item_cdphil"
+    },
+    "301": {
+        "id": 301,
+        "name": "Tapones de o\u00eddo",
+        "desc": "Si ya no soportas el parloteo de tus vecinos, los insultos hacia tu persona o los gritos de moribundos infelices, estos tapones te har\u00e1n sentir mejor.",
+        "cat": "Rsc",
+        "img": "item_bquies"
+    },
+    "302": {
+        "id": 302,
+        "name": "Palo roto",
+        "desc": "Un pedazo de palo. Demasiado corto para servir como arma, pero \u00fatil sin duda...",
+        "cat": "Rsc",
+        "img": "item_staff"
+    },
+    "303": {
+        "id": 303,
+        "name": "CD de Britney Spears",
+        "desc": "A pesar de su inofensiva aparencia, que te lleva a creer que esto es m\u00fasica para ni\u00f1as, esta es una seria medida defensiva. Tan pronto como las primeras ondas del disco emanen de un HIFI, ninguna persona normal podr\u00e1 acercarse a tu casa. Dicho esto, si nuestros zombies fueran normales, MyHordes estar\u00eda disponible en Facebook, as\u00ed que no pongas toda tu fe en ello...",
+        "cat": "Furniture",
+        "img": "item_cdbrit"
+    },
+    "304": {
+        "id": 304,
+        "name": "Hits de Elvis",
+        "desc": "\u00a1A mover las caderas con El Rey del Rock and Roll!",
+        "cat": "Furniture",
+        "img": "item_cdelvi"
+    },
+    "305": {
+        "id": 305,
+        "name": "Equipo de m\u00fasica maldito",
+        "desc": "\u00a1Girando los golpes del Rey, te despertar\u00e1s m\u00e1s motivado y con m\u00e1s energ\u00eda que nunca!",
+        "cat": "Furniture",
+        "img": "item_dfhifi"
+    },
+    "306": {
+        "id": 306,
+        "name": "Equipo Hi-Fi defensivo",
+        "desc": "El CD adecuado y unos buenos protectores auditivos forman esta poderosa arma que te permite descansar tranquilamente mientras otros se mantienen a una distancia segura.",
+        "cat": "Furniture",
+        "img": "item_dfhifi"
+    },
+    "307": {
+        "id": 307,
+        "name": "Caja de Schr\u00f6dinger",
+        "desc": "Es pesada y seguramente contiene algo valioso... Solo falta encontrar algo mejor que tus dientes para abrirla.",
+        "cat": "Box",
+        "img": "item_catbox"
+    },
+    "308": {
+        "id": 308,
+        "name": "Discurso motivador",
+        "desc": "No sabemos si es por el efecto del LSD o de Chuck Norris, \u00a1pero este discurso motiva mucho a los centinelas!",
+        "cat": "Misc",
+        "img": "item_chkspk"
+    },
+    "309": {
+        "id": 309,
+        "name": "Serpiente agonizante",
+        "desc": "La protuberancia en el vientre de esta boa hace pensar que sufre una severa indigesti\u00f3n. En ese estado no sirve de nada...",
+        "cat": "Misc",
+        "img": "item_pet_snake2"
+    },
+    "310": {
+        "id": 310,
+        "name": "Caja sorpresa (3 regalos)",
+        "desc": "Tu nombre est\u00e1 escrito en ella, \u00a1parece que tienes un admirador! \u00bfqu\u00e9 puede contener?",
+        "cat": "Box",
+        "img": "item_chest_christmas_3"
+    },
+    "311": {
+        "id": 311,
+        "name": "Caja sorpresa (2 regalos)",
+        "desc": "Tu nombre est\u00e1 escrito en ella, \u00a1parece que tienes un admirador! \u00bfqu\u00e9 puede contener?",
+        "cat": "Box",
+        "img": "item_chest_christmas_2"
+    },
+    "312": {
+        "id": 312,
+        "name": "Caja sorpresa (1 regalo)",
+        "desc": "Tu nombre est\u00e1 escrito en ella, \u00a1parece que tienes un admirador! \u00bfqu\u00e9 puede contener?",
+        "cat": "Box",
+        "img": "item_chest_christmas_1"
+    },
+    "313": {
+        "id": 313,
+        "name": "Mosto sospechoso",
+        "desc": "Esta botella bien sellada contiene mosto. Extra\u00f1o... \u00bfpor qu\u00e9 alguien sellar\u00eda mosto? Tiene adjunta una etiqueta: \"Si se engiere, llame a una ambulancia lo antes posible\".",
+        "cat": "Food",
+        "img": "item_omg_this_will_kill_you"
+    },
+    "314": {
+        "id": 314,
+        "name": "Una etiqueta",
+        "desc": "Una etiqueta de tequila... \u00a1Hey, tiene algo escrito detr\u00e1s!",
+        "cat": "Misc",
+        "img": "item_rp_scroll"
+    },
+    "315": {
+        "id": 315,
+        "name": "Uniforme de habitante",
+        "desc": "El mismo de siempre. El mismo que llevar\u00e1s puesto hasta el final de tus d\u00edas. Despu\u00e9s de todo es c\u00f3modo para la lucha constante... \u00bfQu\u00e9 quer\u00edas? \u00bfuna camisa floreada y un bonito sombrero de paja?",
+        "cat": "Misc",
+        "img": "item_basic_suit"
+    },
+    "316": {
+        "id": 316,
+        "name": "Uniforme de habitante sucio",
+        "desc": "Est\u00e1 desgarrado, maloliente y lleno de manchas de todo tipo... No olvides lavarlo cuando vuelvas al pueblo.",
+        "cat": "Misc",
+        "img": "item_basic_suit_dirt"
+    },
+    "317": {
+        "id": 317,
+        "name": "Camuflaje",
+        "desc": "Este traje te permite avanzar en el desierto sin temer ser visto por los zombies. Pero cuidado, puede no ser tan eficaz si atraviesas una zona controlada por numerosos muertos vivientes.",
+        "cat": "Misc",
+        "img": "item_vest_on"
+    },
+    "318": {
+        "id": 318,
+        "name": "Camuflaje (inactivo)",
+        "desc": "No llevas puesto tu traje de camuflaje, ser\u00e1s visto en el paraje... \u00a1Me sali\u00f3 una rima!",
+        "cat": "Misc",
+        "img": "item_vest_off"
+    },
+    "319": {
+        "id": 319,
+        "name": "Pala",
+        "desc": "La herramienta favorita de los excavadores. Sirve para reducir (autom\u00e1ticamente) el tiempo de b\u00fasqueda en el desierto. Y con ella, las oportunidades de encontrar algo son mucho m\u00e1s elevadas.",
+        "cat": "Misc",
+        "img": "item_pelle"
+    },
+    "320": {
+        "id": 320,
+        "name": "Bich\u00f3n malt\u00e9s de 3 patas",
+        "desc": "Te sigue por todas partes, huele a perro mojado, cojea y babea en abundancia. Y por supuesto, ladra demasiado. Una vez al d\u00eda puedes pedirle que lleve el contenido de tu mochila al pueblo, desde cualquier lugar del desierto.",
+        "cat": "Misc",
+        "img": "item_tamed_pet"
+    },
+    "321": {
+        "id": 321,
+        "name": "Cachorro malt\u00e9s bien alimentado",
+        "desc": "Ahora que ha vigorizado suficientemente a su perro con una golosina, puede cargar incluso objetos pesados y voluminosos. Eso s\u00ed, te das cuenta de que no para de babear... parece que va a saltarte encima en cualquier momento.",
+        "cat": "Misc",
+        "img": "item_tamed_pet_food"
+    },
+    "322": {
+        "id": 322,
+        "name": "Bich\u00f3n malt\u00e9s cansado",
+        "desc": "Tu bich\u00f3n parece cansado... Jadea constantemente y te mira con ojos agotados.",
+        "cat": "Misc",
+        "img": "item_tamed_pet_off"
+    },
+    "323": {
+        "id": 323,
+        "name": "Manual de supervivencia",
+        "desc": "Tu valiosa gu\u00eda titulada \"El Manual de los Castores\". Hasta parece una edici\u00f3n para ni\u00f1os. Contiene una serie de consejos e instrucciones para ayudar sobrevivir en la naturaleza. Te ayudar\u00e1 a encontrar comida y agua f\u00e1cilmente.",
+        "cat": "Misc",
+        "img": "item_surv_book"
+    },
+    "324": {
+        "id": 324,
+        "name": "Llave inglesa profesional",
+        "desc": "Este kit completo contiene una llave profesional que permite construir cosas m\u00e1s f\u00e1cilmente. Contiene tambi\u00e9n las herramientas necesarias para hacer una llave igual a la que cerr\u00f3 una puerta.",
+        "cat": "Misc",
+        "img": "item_keymol"
+    },
+    "325": {
+        "id": 325,
+        "name": "Escudo antidisturbios",
+        "desc": "Grande y a prueba de zombies. No se puede pedir m\u00e1s... Te protege de 2 zombies m\u00e1s en el desierto y aumenta las defensas si est\u00e1s en el pueblo.",
+        "cat": "Misc",
+        "img": "item_shield"
+    },
+    "326": {
+        "id": 326,
+        "name": "M\u00e1scara de vud\u00fa",
+        "desc": "Esta m\u00e1scara esconde el conocimiento y el poder miles de sacerdotes vud\u00fa. El cham\u00e1n la puede usar para revelar d\u00f3nde deambulan las almas de los habitantes muertos en el Ultramundo.",
+        "cat": "Misc",
+        "img": "item_shaman"
+    },
+    "327": {
+        "id": 327,
+        "name": "Polvo S\u00faper-Fuzz",
+        "desc": "Dependiendo de la era, este polvo fue usado esencialmente como detonador para varias piezas de artiller\u00eda, luego como una droga barata para los habitantes necesitados y, finalmente como el principal componente de los fuegos artificiales. En los tres casos, muchas personas no han sobrevivido.",
+        "cat": "Furniture",
+        "img": "item_firework_powder"
+    },
+    "328": {
+        "id": 328,
+        "name": "Tubo de lanzamiento de fuegos artificiales",
+        "desc": "Varios largos tubos de pl\u00e1stico poco interesantes.",
+        "cat": "Furniture",
+        "img": "item_firework_tube"
+    },
+    "329": {
+        "id": 329,
+        "name": "Caja de fuegos artificiales",
+        "desc": "\u00c9sta caja contiene muchos qu\u00edmicos altamente t\u00f3xicos con nombres destacables como: Sodio Fuzz, Carbo-Potasio Bling Bling o Litio Arco\u00edris Cianurizado.",
+        "cat": "Furniture",
+        "img": "item_firework_box"
+    },
+    "330": {
+        "id": 330,
+        "name": "Calabaza suave tallada",
+        "desc": "Un tipo de vegetal naranja grande y maloliente como nunca has visto antes. Un rostro adusto est\u00e1 tallado en su carne: \u00bfcu\u00e1l es la tradici\u00f3n b\u00e1rbara detr\u00e1s de este ritual?",
+        "cat": "Furniture",
+        "img": "item_pumpkin_off"
+    },
+    "331": {
+        "id": 331,
+        "name": "Calabaza encendida",
+        "desc": "He aqu\u00ed una idea loca: este gran y extra\u00f1o vegetal ha sido despojado de su carne, de su forma, y hay una vela encendida en \u00e9l...",
+        "cat": "Armor",
+        "img": "item_pumpkin_on"
+    },
+    "332": {
+        "id": 332,
+        "name": "Guirnalda de cuervo",
+        "desc": "Una guirnalda de una tradici\u00f3n aparentemente antigua. Se recomienda colgarla en casa como decoraci\u00f3n, podr\u00eda ser bueno para la moral del pueblo.",
+        "cat": "Furniture",
+        "img": "item_xmas_gift"
+    },
+    "333": {
+        "id": 333,
+        "name": "Palo roto",
+        "desc": "Un pedazo de palo. Demasiado corto para servir como arma, pero \u00fatil sin duda...",
+        "cat": "Rsc",
+        "img": "item_staff2"
+    },
+    "336": {
+        "id": 336,
+        "name": "Vodka Rosquetoff",
+        "desc": "Un buen trago que quema la garganta y te quita el cansancio, \u00a1recuperando adem\u00e1s Puntos de Acci\u00f3n!... 85\u00ba de alcohol puro, con algunos bichos flotando en el fondo. \u00a1Salud camarada!",
+        "cat": "Food",
+        "img": "item_vodka"
+    },
+    "337": {
+        "id": 337,
+        "name": "Poci\u00f3n cham\u00e1nica",
+        "desc": "Este frasco especial de agua, \"agua bendita\" si lo prefieres, deber\u00eda permitirte interactuar con las torturadas almas sin miedo... Con suerte...",
+        "cat": "Food",
+        "img": "item_potion"
+    },
+    "338": {
+        "id": 338,
+        "name": "C\u00e1mara fotogr\u00e1fica de post-guerra",
+        "desc": "Esta m\u00e1quina endemoniada debi\u00f3 haber quemado varias retinas con su flash mal ajustado. \u00a1Hey! \u00a1Te puede servir para escapar de situaciones peligrosas cegando a los zombies!",
+        "cat": "Misc",
+        "img": "item_photo_3"
+    },
+    "339": {
+        "id": 339,
+        "name": "C\u00e1mara fotogr\u00e1fica de post-guerra",
+        "desc": "Esta m\u00e1quina endemoniada debi\u00f3 haber quemado varias retinas con su flash mal ajustado. \u00a1Hey! \u00a1Te puede servir para escapar de situaciones peligrosas cegando a los zombies!",
+        "cat": "Misc",
+        "img": "item_photo_2"
+    },
+    "340": {
+        "id": 340,
+        "name": "C\u00e1mara fotogr\u00e1fica de post-guerra",
+        "desc": "Esta m\u00e1quina endemoniada debi\u00f3 haber quemado varias retinas con su flash mal ajustado. \u00a1Hey! \u00a1Te puede servir para escapar de situaciones peligrosas cegando a los zombies!",
+        "cat": "Misc",
+        "img": "item_photo_1"
+    },
+    "341": {
+        "id": 341,
+        "name": "C\u00e1mara fotogr\u00e1fica de post-guerra",
+        "desc": "Esta m\u00e1quina endemoniada debi\u00f3 haber quemado varias retinas con su flash mal ajustado. \u00a1Hey! \u00a1Te puede servir para escapar de situaciones peligrosas cegando a los zombies!",
+        "cat": "Misc",
+        "img": "item_photo_off"
+    },
+    "342": {
+        "id": 342,
+        "name": "Alma fuerte",
+        "desc": "\u00a1Aprovecha la muerte de tus amigos! El alma de este habitante se ha vuelto \u00fatil para las construcciones, \u00fasala para aumentar las defensas de tu pueblo.",
+        "cat": "Misc",
+        "img": "item_soul_yellow"
+    },
+    "343": {
+        "id": 343,
+        "name": "Cuervo navide\u00f1o",
+        "desc": "Una peque\u00f1a bestia de aspecto extra\u00f1o. Se asemeja a un cuervo... pero es verde y lleva un sombrero...",
+        "cat": "Food",
+        "img": "item_food_xmas"
+    },
+    "344": {
+        "id": 344,
+        "name": "Tronco de Navidad",
+        "desc": "\u00a1Oh, un viejo pastel navide\u00f1o arrugado! O algo menos sabroso... \u00a1Pero a\u00fan as\u00ed horneado el d\u00eda de Navidad! De cualquier modo, disfruta de este... pastel...",
+        "cat": "Food",
+        "img": "item_wood_xmas"
+    },
+    "345": {
+        "id": 345,
+        "name": "Traje de duendecillo",
+        "desc": "\u00a1En este traje, eres tan llamativo que los que te miran piensan que te han imaginado! No abusar\u00edas de ello, \u00bfverdad?",
+        "cat": "Misc",
+        "img": "item_leprechaun_suit"
+    },
+    "346": {
+        "id": 346,
+        "name": "Restos irreconocibles",
+        "desc": "Estos escombros alguna vez fueron parte de un objeto que ya no eres capaz de identificar. La deformaci\u00f3n de las piezas sugiere que el objeto golpe\u00f3 el suelo a gran velocidad...",
+        "cat": "Misc",
+        "img": "item_broken"
+    },
+    "347": {
+        "id": 347,
+        "name": "Pu\u00f1ado de balas",
+        "desc": "Estos peque\u00f1os cilindros son extremadamente mortales. Si tan s\u00f3lo supi\u00e9ramos usarlos...",
+        "cat": "Misc",
+        "img": "item_bullets"
+    },
+    "348": {
+        "id": 348,
+        "name": "Paquete de regalo",
+        "desc": "La direcci\u00f3n se ha vuelto ilegible, pero definitivamente hay algo dentro... \u00a1Feliz Navidad!",
+        "cat": "Box",
+        "img": "item_postal_box"
+    },
+    "349": {
+        "id": 349,
+        "name": "Gran paquete de regalo",
+        "desc": "La direcci\u00f3n se ha vuelto ilegible, pero definitivamente hay algo dentro... \u00a1Feliz Navidad!",
+        "cat": "Box",
+        "img": "item_postal_box_xl"
+    },
+    "350": {
+        "id": 350,
+        "name": "Dulce de Navidad",
+        "desc": "Parece una especie de peque\u00f1o caramelo de chocolate, que contiene licor alcoh\u00f3lico. O cualquier otro producto...",
+        "cat": "Food",
+        "img": "item_christmas_candy"
+    },
+    "351": {
+        "id": 351,
+        "name": "Despertador chill\u00f3n (apagado)",
+        "desc": "Nada mejor que perforarte los t\u00edmpanos para empezar la ma\u00f1ana.",
+        "cat": "Misc",
+        "img": "item_alarm_off"
+    },
+    "352": {
+        "id": 352,
+        "name": "Despertador chill\u00f3n (encendido)",
+        "desc": "Nada mejor que perforarte los t\u00edmpanos para empezar la ma\u00f1ana y recibir 1 Punto de Acci\u00f3n adicional despu\u00e9s del ataque.",
+        "cat": "Misc",
+        "img": "item_alarm_on"
+    },
+    "353": {
+        "id": 353,
+        "name": "Calabaza suave",
+        "desc": "Un tipo de verdura naranja grande y maloliente, como nunca has visto antes. Tienes un repentino impulso de tallarla, sin saber por qu\u00e9...",
+        "cat": "Misc",
+        "img": "item_pumpkin_raw"
+    },
+    "354": {
+        "id": 354,
+        "name": "Palo de hurling cl\u00e1sico",
+        "desc": "Solo un consejo. Si nada en este mundo es l\u00f3gico no le busques raz\u00f3n a usar un arma como esta.",
+        "cat": "Weapon",
+        "img": "item_hurling_stick"
+    },
+    "355": {
+        "id": 355,
+        "name": "Pinta pegajosa",
+        "desc": "No hay nada mejor como una pinta de cerveza oscura para inspirar poes\u00eda, risas y lucha de zombies... *Aprobado por Charlie Sheen",
+        "cat": "Food",
+        "img": "item_guiness"
+    },
+    "356": {
+        "id": 356,
+        "name": "Moco de cuello negro",
+        "desc": "Un veneno que es EXTREMADAMENTE virulento cuando se ingiere, si se debe creer en la etiqueta: la ingesti\u00f3n de la exudaci\u00f3n cervical causa la muerte, combusti\u00f3n espont\u00e1nea, explosi\u00f3n de los pulmones y fuga del cerebro por todos los orificios. Pero no necesariamente en ese orden.",
+        "cat": "Drug",
+        "img": "item_april_drug"
+    },
+    "357": {
+        "id": 357,
+        "name": "Toxina",
+        "desc": "Acercas la sustancia a tu nariz y la hueles un poco... Puajjj! Parece que podr\u00eda matar incluso a un caballo.",
+        "cat": "Misc",
+        "img": "item_infect_poison"
+    },
+    "358": {
+        "id": 358,
+        "name": "Gran calabaza",
+        "desc": "Este enorme vegetal anaranjado es lo \u00fanico colorido que crece en este t\u00e9trico recinto... \u00a1Desear\u00e1s darle un mordisco!",
+        "cat": "Food",
+        "img": "item_pumpkin_tasty"
+    },
+    "359": {
+        "id": 359,
+        "name": "Estuche de medicamentos",
+        "desc": "No lo llenes de tantos vendajes, disfrazarte de momia no servir\u00e1, en cambio, las pastillas siempre pueden ser \u00fatiles.",
+        "cat": "Drug",
+        "img": "item_medic"
+    },
+    "360": {
+        "id": 360,
+        "name": "Guirnalda colgante de cuervo",
+        "desc": "Una guirnalda de una tradici\u00f3n aparentemente antigua. Se recomienda colgarla en casa como decoraci\u00f3n, podr\u00eda ser bueno para la moral del pueblo.",
+        "cat": "Furniture",
+        "img": "item_xmas_gift"
+    },
+    "361": {
+        "id": 361,
+        "name": "Ning\u00fan perro malt\u00e9s",
+        "desc": "<em>Dejaste a tu cachorro en casa<\/em>... Espero que no se ofenda.",
+        "cat": "Misc",
+        "img": "item_tamed_pet_gone"
+    },
+    "362": {
+        "id": 362,
+        "name": "Despertador chill\u00f3n (1 carga)",
+        "desc": "Nada mejor que perforarte los t\u00edmpanos para empezar la ma\u00f1ana. Funciona perfectamente y te permitir\u00e1 empezar tu d\u00eda en el infierno con el pie derecho recibiendo 1 PA adicional tras el ataque.",
+        "cat": "Misc",
+        "img": "item_alarm_1"
+    },
+    "363": {
+        "id": 363,
+        "name": "Despertador chill\u00f3n (2 cargas)",
+        "desc": "Nada mejor que perforarte los t\u00edmpanos para empezar la ma\u00f1ana. Funciona perfectamente y te permitir\u00e1 empezar tu d\u00eda en el infierno con el pie derecho recibiendo 1 PA adicional tras el ataque.",
+        "cat": "Misc",
+        "img": "item_alarm_2"
+    },
+    "364": {
+        "id": 364,
+        "name": "Despertador chill\u00f3n (3 cargas)",
+        "desc": "Nada mejor que perforarte los t\u00edmpanos para empezar la ma\u00f1ana. Funciona perfectamente y te permitir\u00e1 empezar tu d\u00eda en el infierno con el pie derecho recibiendo 1 PA adicional tras el ataque.",
+        "cat": "Misc",
+        "img": "item_alarm_3"
+    },
+    "365": {
+        "id": 365,
+        "name": "Molde instant\u00e1neo para llave magn\u00e9tica",
+        "desc": "Esta impresi\u00f3n de llave de alta tecnolog\u00eda fue moldeada a partir de una mezcla de fideos deshidratados y una sustancia pegajosa. \u00a1Realmente puedes hacer CUALQUIER COSA con \u00e9l!",
+        "cat": "Food",
+        "img": "item_noodle_magnetic_print"
+    },
+    "366": {
+        "id": 366,
+        "name": "Molde instant\u00e1neo para llave de percusi\u00f3n",
+        "desc": "Comer o abrir, \u00a1tienes que elegir! Esta impresi\u00f3n de llave te permitir\u00e1 obtener una llave de impacto, si no la rompes antes de regresar al pueblo...",
+        "cat": "Food",
+        "img": "item_noodle_prints"
+    },
+    "367": {
+        "id": 367,
+        "name": "Molde instant\u00e1neo para abrebotellas",
+        "desc": "No estamos seguros de c\u00f3mo es posible esto, pero de todos modos parece s\u00f3lido. \u00a1El aglomerado de fideos tiene PERFECTAMENTE la forma de un abridor de botellas!",
+        "cat": "Food",
+        "img": "item_noodle_bottle_print"
+    },
+    "368": {
+        "id": 368,
+        "name": "Zapatillas deportivas gastadas",
+        "desc": "Ya no son nuevos y huelen un poco fuerte... Sin embargo, te facilitan viajar por el terreno accidentado del Ultramundo.",
+        "cat": "Misc",
+        "img": "item_shoe"
+    },
+    "369": {
+        "id": 369,
+        "name": "Bicicleta de monta\u00f1a sin manillar",
+        "desc": "Una bicicleta preciosa, pero le falta la parte m\u00e1s importante: el manillar.",
+        "cat": "Misc",
+        "img": "item_bike_part"
+    },
+    "370": {
+        "id": 370,
+        "name": "Bicicleta de monta\u00f1a",
+        "desc": "Una bicicleta de monta\u00f1a hecha a medida con la que podr\u00e1s ir a todas partes, donde quieras.",
+        "cat": "Misc",
+        "img": "item_bike"
+    },
+    "371": {
+        "id": 371,
+        "name": "Bandera",
+        "desc": "Una bandera rid\u00edculamente visible. \u00bfQuiz\u00e1s si lo sacudes algo suceder\u00e1...?",
+        "cat": "Misc",
+        "img": "item_flag"
+    },
+    "372": {
+        "id": 372,
+        "name": "Bal\u00f3n de f\u00fatbol",
+        "desc": "Para una peque\u00f1a patada entre los dos.",
+        "cat": "Misc",
+        "img": "item_soccer"
+    },
+    "373": {
+        "id": 373,
+        "name": "Bal\u00f3n de f\u00fatbol reventado",
+        "desc": "Una pelota con la que podr\u00edamos divertirnos mucho. Si no hubiera reventado ya...",
+        "cat": "Misc",
+        "img": "item_soccer_part"
+    },
+    "374": {
+        "id": 374,
+        "name": "Quantum Energy",
+        "desc": "\"\u00a1Atr\u00e9vete... disfruta de un Quantum!\" El eslogan de la botella es tentador, pero el color azul fosforescente te hace dudar...",
+        "cat": "Food",
+        "img": "item_quantum"
+    },
+    "375": {
+        "id": 375,
+        "name": "C\u00e1mara fotogr\u00e1fica de post-guerra",
+        "desc": "Esta m\u00e1quina endemoniada debi\u00f3 haber quemado varias retinas con su flash mal ajustado. \u00a1Hey! \u00a1Te puede servir para escapar de situaciones peligrosas cegando a los zombies!",
+        "cat": "Misc",
+        "img": "item_photo_4"
+    },
+    "376": {
+        "id": 376,
+        "name": "Estuche para chelo",
+        "desc": "Ni siquiera sabes de d\u00f3nde lo has sacado... El color ya comienza a deste\u00f1irse. \u00bfEs esta cosa realmente \u00fatil?",
+        "cat": "Box",
+        "img": "item_cello_box"
+    }
+}

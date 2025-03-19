@@ -109,7 +109,7 @@ const Popup = () => {
     ExternalSiteName.MHO,
   ]);
   const [userKey, setUserKey] = useState("");
-  const [lang, setLang] = useState<Lang>(Lang.En);
+  const [lang, setLang] = useState<Lang>(Lang.EN);
 
   // Fetch lang
   useEffect(() => {
@@ -132,7 +132,7 @@ const Popup = () => {
         ]
       );
       setUserKey(data["user-key"] ? String(data["user-key"]) : "");
-      setLang((data["hordes-lang"] as Lang | undefined) ?? Lang.En);
+      setLang((data["hordes-lang"] as Lang | undefined) ?? Lang.EN);
     };
 
     syncStorage().catch(console.error);

@@ -7,10 +7,10 @@ declare global {
   }
 
   const enum Lang {
-    En = "en",
-    Fr = "fr",
-    Es = "es",
-    De = "de",
+    EN = "en",
+    FR = "fr",
+    ES = "es",
+    DE = "de",
   }
 
   type Translations = Partial<Record<Lang, Partial<Record<string, string>>>>

@@ -1,0 +1,522 @@
+{
+    "-1": {
+        "id": -1,
+        "name": "Versch\u00fcttete Ruine",
+        "desc": "Die gesamte Zone ist von einer <strong>stinkenden Vegetation<\/strong>, <strong>Sand<\/strong> und <strong>Tr\u00fcmmern<\/strong> verschiedenster Art bedeckt. Du bist dir hunderprozentig sicher, dass hier etwas zu finden ist, allerdings muss du zuerst den gesamten Sektor aufr\u00e4umen, bevor du mit dem Graben anfangen kannst...",
+        "km_min": 1,
+        "km_max": 28,
+        "explorable": 0
+    },
+    "1": {
+        "id": 1,
+        "name": "Abgelegenes Haus",
+        "desc": "Hier wohnte ein B\u00fcrger, der sich au\u00dferhalb der Stadt niedergelassen hat, weil er den Streitigkeiten und dem Verrat, die das Stadtleben mit sich bringt, entfliehen wollte. Die H\u00e4lfte seiner Leiche liegt immer noch im Wohnzimmer.",
+        "km_min": 1,
+        "km_max": 4,
+        "explorable": 0
+    },
+    "2": {
+        "id": 2,
+        "name": "Albi Supermarkt",
+        "desc": "Einer der vielen Albi Supermarkt, die um das Jahr 2010 herum aus dem Boden schossen und sp\u00e4ter dann verschwanden... spezialisiert darauf, Dinge so billig wie m\u00f6glich zu verscherbeln. Hier findest du alles finden, was du brauchst - egal ob du einfach pleite bist oder eisern auf ein neues St\u00fcck Seife sparst, kaufe bei ALBI ein!",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "3": {
+        "id": 3,
+        "name": "Alte H\u00f6hle",
+        "desc": "Manche Fehler enden zwangsl\u00e4ufig t\u00f6dlich. Nehmt als Beispiel diese H\u00f6hle. Stellt euch vor, ihr werdet von einer Zombiemeute verfolgt und eilt \u00fcberst\u00fcrzt in eine H\u00f6hle, um Schutz zu suchen. Ihr werdet dann folgendes Problem haben: Wie kommt ihr heil wieder raus, wenn die Biester euch gefolgt sind? Der zerfledderte Typ an der Wand dort hinten scheint dies nicht bedacht zu haben...",
+        "km_min": 16,
+        "km_max": 19,
+        "explorable": 0
+    },
+    "4": {
+        "id": 4,
+        "name": "Alte Hydraulikpumpe",
+        "desc": "Eine alte Pumpe, die zwar vor sich hin rostet, aber dennoch in der Lage ist, in der W\u00fcste Wasser zu sch\u00f6pfen... Das einzige Problem ist, dass das Wasser, selbst wenn Sie es zum Funktionieren bringen, im Grunde genommen ungenie\u00dfbar ist und in der Stadt mit den entsprechenden Ger\u00e4ten gereinigt werden muss.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "5": {
+        "id": 5,
+        "name": "Alter Fahrradverleih",
+        "desc": "Ein altes Fahrradverleihlager, das mit Metallst\u00fccken, Werkzeugen und allen Arten von Schutt \u00fcbers\u00e4t ist.",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "6": {
+        "id": 6,
+        "name": "Alter Rangierbahnhof",
+        "desc": "Dieser Rangierbahnhof war einmal das zentrale Drehkreuz des Landes. Waren aus aller Herren L\u00e4nder wurden hier rund um die Uhr umgeladen und in alle Himmelsrichtungen versendet. Das 'weitverzweigte Netzt' ist heute noch ungef\u00e4hr 150 Meter lang, vorausgesetzt man z\u00e4hlt die Gleis\u00fcberbleibsel da hinten noch mit.",
+        "km_min": 10,
+        "km_max": 13,
+        "explorable": 0
+    },
+    "7": {
+        "id": 7,
+        "name": "Altes Feldkrankenhaus",
+        "desc": "Die menschlichen \u00dcberreste, die in der Auffahrt liegen geh\u00f6ren den ehemaligen Patienten dieses improvisierten Krankenhauses. Schwer zu sagen, wie viele Menschen hier beim abendlichen Angriff gestorben sind... Wenn du die Anzahl der Arme durch zwei teilst, vielleicht bekommst du dann eine grobe Sch\u00e4tzung?",
+        "km_min": 16,
+        "km_max": 19,
+        "explorable": 0
+    },
+    "8": {
+        "id": 8,
+        "name": "Altes Flugfeld",
+        "desc": "Das Einzige, was auf diesem br\u00f6ckelnden Flugplatz startet oder landet, sind die Fliegen. Vielleicht finden Sie etwas N\u00fctzliches, wenn Sie in den Lagerhallen herumst\u00f6bern. Zum Beispiel einen A380 in funktionst\u00fcchtigem Zustand.",
+        "km_min": 12,
+        "km_max": 15,
+        "explorable": 0
+    },
+    "9": {
+        "id": 9,
+        "name": "Altes Polizeipr\u00e4sidium",
+        "desc": "Dieses beeindruckende Geb\u00e4ude erstreckt sich auf mehrere Hundert Meter. Es enth\u00e4lt zahlreiche R\u00e4ume, die gr\u00f6\u00dftenteils eingest\u00fcrzt sind. Die gro\u00dfe Anzahl an Einschussl\u00f6chern in den W\u00e4nden und die improvisierten Barrikaden lassen vermuten, dass das Geb\u00e4ude vor einiger Zeit Schauplatz heftiger Gefechte gewesen ist.",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "10": {
+        "id": 10,
+        "name": "Atombunker",
+        "desc": "Die Farbe der am Bunkereingang gepinselten Zahl ist fast vollst\u00e4ndig abgebl\u00e4ttert, aber es handelt sich wahrscheinlich um den Bunker 14. Im Inneren liegen \u00fcberall verweste Leichen herum. Scheint so, als ob der Schlie\u00dfmechanismus versagt h\u00e4tte. Das kommt vor.",
+        "km_min": 10,
+        "km_max": 13,
+        "explorable": 0
+    },
+    "11": {
+        "id": 11,
+        "name": "Atomic Cafe",
+        "desc": "Das Atomic Cafe ist (oder war) der Ort, an dem man sein sollte: Ein verblichenes Plakat l\u00e4dt Sie zum Sommerfest am 2. Mai 2010 ein: Hawaiianisches Thema, Preis f\u00fcr den bestangezogenen (halbnackten M\u00e4dchen + Jungs) DJ Dave ab 13.00 Uhr, kostenloses BBQ, Biergarten mit verbessertem Look, Partyspiele, Live-Fu\u00dfball, Cocktails, \u00a32 Flaschenbier, \u00a32 Alcopop, \u00a31 Tequila... Beteiligen Sie sich!",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "12": {
+        "id": 12,
+        "name": "Autobahnrastst\u00e4tte",
+        "desc": "Fr\u00fcher w\u00e4re dies sicherlich einer der trendigsten Joints auf der M25 gewesen, mit verw\u00e4sserten Getr\u00e4nken, dem Aroma von abgestandener Pisse und toten Ratten auf der Bar. Sie m\u00fcssen seit Jahren der erste Mensch sein, der hier einen Fu\u00df hinein gesetzt hat.",
+        "km_min": 8,
+        "km_max": 11,
+        "explorable": 0
+    },
+    "13": {
+        "id": 13,
+        "name": "Autowracks",
+        "desc": "Ein Kombi, der sich in einen Kleintransporter verkeilt hat. Der gro\u00dfen Anzahl an verkohlten Leichen nach zu urteilen, hat hier ein Unfall eine richtig gro\u00dfe Karambolage verursacht.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "14": {
+        "id": 14,
+        "name": "Bar der verlorenen Hoffnungen",
+        "desc": "Diese Bar ist hinter einem kleinen H\u00fcgel an einer solchen Stelle versteckt, dass man leicht direkt daran vorbeigehen k\u00f6nnte, ohne es zu merken. Der Innenraum ist mit unz\u00e4hligen Schwarzwei\u00df-Portraits und Fotos geschm\u00fcckt. Auf den Bildern ist oft ein Typ in gestreifter Pyjama-Kleidung zu sehen, der neben verschiedenen anderen Personen steht.",
+        "km_min": 21,
+        "km_max": 28,
+        "explorable": 0
+    },
+    "15": {
+        "id": 15,
+        "name": "Baumarkt",
+        "desc": "Der Baumarkt ist das zweite Zuhause eines jeden Handwerkers. In dieser Welt avanciert er jedoch zu einem wahren Paradies! Gegenst\u00e4nde von unsch\u00e4tzbarem Wert warten nur darauf von dir entdeckt zu werden... Der Werbespruch auf dem Dach hat zudem nichts von seiner Aktualit\u00e4t eingeb\u00fc\u00dft: 'Pl\u00fcndern Sie uns bevor es andere tun!'",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "16": {
+        "id": 16,
+        "name": "Baustellencontainer",
+        "desc": "Dieser riesige gelbe Metallcontainer macht einen verlorenen Eindruck. Weit und breit keine Baustelle. Der Gemeinschaftsraum im Inneren ist mit leeren Bierflaschen \u00fcbers\u00e4t",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "17": {
+        "id": 17,
+        "name": "D\u00f6nerbude Utsel-Brutzel",
+        "desc": "Von wegen D\u00f6ner macht sch\u00f6ner. Scheint so als h\u00e4tte der Besitzer dieser Bude das mit den D\u00f6nern und den Spie\u00dfen missverstanden. Wer hier reingeht kommt garantiert nicht mehr raus.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "18": {
+        "id": 18,
+        "name": "Dukes Villa",
+        "desc": "Das Heim eines gewissen Duke R. Cooke, und wenn man der Gedenktafel an der T\u00fcr glauben darf... ein Heim f\u00fcr Helden... dieser Ort ist viel gr\u00f6\u00dfer als eine Villa, es ist eine voll ausgestattete Festung !",
+        "km_min": 12,
+        "km_max": 15,
+        "explorable": 0
+    },
+    "19": {
+        "id": 19,
+        "name": "Dunkler Hain",
+        "desc": "Die verbrannten \u00dcberreste eines kleinen Waldes. Es war wahrscheinlich vorher eine sch\u00f6ne Gegend... Jetzt hoffen Sie nur noch, dass Sie hier nicht \u00fcbernachten m\u00fcssen.",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "20": {
+        "id": 20,
+        "name": "Eingest\u00fcrzte Mine",
+        "desc": "Diese alte Mine hat es nicht vermocht den Wetterwidrigkeiten Stand zu halten. Nur Gott wei\u00df, was die Menschen damals angetrieben hat, so tief zu graben, um der Erde n\u00fctzliche Rohstoffe zu entrei\u00dfen. Dabei reicht es mit den F\u00fc\u00dfen leicht am Boden zu kratzen und schon kommt eine leckere Kakerlake vorbeigehuscht. Du denkst dir: 'Lecker, die esse ich doch mal gleich'",
+        "km_min": 12,
+        "km_max": 15,
+        "explorable": 0
+    },
+    "21": {
+        "id": 21,
+        "name": "Eingest\u00fcrzter Steinbruch",
+        "desc": "Diese Mineralienabbauzone tr\u00e4gt alle Merkmale eines schrecklichen Ungl\u00fccks : der Hang scheint auf die Arbeiter, Maschinen und Geb\u00e4ude darunter eingest\u00fcrzt zu sein.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "22": {
+        "id": 22,
+        "name": "Ein seltsames kreisf\u00f6rmiges Ger\u00e4t",
+        "desc": "Das Ganze sieht wie eine komische runde Metallscheibe aus, die mal zu einen Flugzeugcockpit geh\u00f6rte. Aber du bist dir nicht ganz sicher, denn es k\u00f6nnte sich auch um ein M\u00e4hdrescherteil handeln...",
+        "km_min": 21,
+        "km_max": 28,
+        "explorable": 0
+    },
+    "23": {
+        "id": 23,
+        "name": "E-KEA",
+        "desc": "E-KEA: Diese riesigen Gesch\u00e4fte gab es fr\u00fcher in jeder Stadt (immer ziemlich \u00e4rgerlich am Stadtrand gelegen). Sie spezialisierten sich auf die Herstellung und den Verkauf von Billigm\u00f6beln, denen meist ein Bolzen \/ Schraube \/ Verbindungselement fehlte. Es wird gesagt, dass die schlechte Qualit\u00e4t ihrer Produkte einer der Gr\u00fcnde f\u00fcr den Niedergang der Gesellschaft war...",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "24": {
+        "id": 24,
+        "name": "Familiengrab",
+        "desc": "Eine verfallene Familiengruft. Man kann den Eingang gerade noch erkennen, da er fast vollst\u00e4ndig von verrottender Vegetation verdeckt ist. Anscheinend sind die Leichen vor einiger Zeit aufgestanden und gegangen...",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "25": {
+        "id": 25,
+        "name": "Fast Food Restaurant",
+        "desc": "Aus diesem Geb\u00e4ude str\u00f6mt ein entsetzlicher Gestank von verwesenden Leichen : Die Fleischvorr\u00e4te haben sich in ekelerregende H\u00fcgel aus schimmeligem, wei\u00dfem Fleisch verwandelt, aus denen eine dicke, scharfe Fl\u00fcssigkeit austritt, die nun den Boden bedeckt und sogar begonnen hat, aus der T\u00fcr zu laufen...",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "26": {
+        "id": 26,
+        "name": "Flugzeugwrack",
+        "desc": "Dieser Langstreckenflieger ist mitten im nirgendwo abgest\u00fcrzt... Da der W\u00fcstensand das Wrack fast vollkommen eingegraben hat und sich der Zahn der Zeit in das Material gefressen hat, l\u00e4sst sich nicht mehr sagen, was das Flugzeug transportierte. Du l\u00e4sst deinen Blick schweifen, es sind jedoch weit und breit keine Leichen erkennbar...",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "27": {
+        "id": 27,
+        "name": "Gartenhaus",
+        "desc": "Mitten auf einem v\u00f6llig verfallenen Platz befindet sich ein gro\u00dfer Gartenschuppen. Die T\u00fcr gibt leicht nach und gibt den Blick frei auf einen riesigen Raum voller Regale und allerlei Werkzeug.",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "28": {
+        "id": 28,
+        "name": "Gepl\u00fcnderte Mall",
+        "desc": "Dieser riesige Haufen aus Schutt und Metall war fr\u00fcher mal ein hell erleuchtetes Einkaufszentrum, das vor Menschen nur so wimmelte. Das Einzige, was hier noch herumwimmelt, sind W\u00fcrmer und anderes Gekreuch und Gefleuch... Du bist jedoch zuversichtlich, hier allerhand n\u00fctzliche Gegenst\u00e4nde zu finden.",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "29": {
+        "id": 29,
+        "name": "H\u00f6hle",
+        "desc": "Eine Art Steinh\u00f6hle, die fr\u00fcher als Grabst\u00e4tte oder Unterschlupf gedient haben muss... Schauen Sie sich das an. Im Inneren ist es absolut stockfinster, die Luft ist eisig und es riecht stark nach verfaulendem Fleisch...",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "30": {
+        "id": 30,
+        "name": "Indianerfriedhof",
+        "desc": "Ein altes indianisches Gr\u00e4berfeld, das fast vollst\u00e4ndig mit Sand und verrottender Vegetation bedeckt ist. Im Vergleich zum Rest der Welt f\u00fchlt man sich hier seltsam wohl...",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "31": {
+        "id": 31,
+        "name": "Jahrmarktstand",
+        "desc": "Orte wie dieser sind heutzutage ein Geschenk des Himmels... Hier gibt es garantiert alles an Plastikspielzeug, was man sich w\u00fcnschen kann... und vielleicht noch ein paar andere n\u00fctzliche Gadgets.",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "32": {
+        "id": 32,
+        "name": "Kleines Haus",
+        "desc": "Eine alte H\u00fctte, die seit Jahren unbewohnt ist. Fast vollst\u00e4ndig im Sand begraben, aber man h\u00f6rt immer noch einige beunruhigende St\u00f6hnger\u00e4usche aus dem, was der Keller sein muss...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "33": {
+        "id": 33,
+        "name": "Kleinwasserkraftwerk",
+        "desc": "Das Kraftwerk sammelt das benachbarte Grundwasser in einem Stauraum. Die Energie der Bewegung des flie\u00dfenden Wassers wird auf eine Turbine \u00fcbertragen, wodurch dieses in Drehbewegung mit hohem Drehmoment versetzt wird. Das Filtersystem scheint kaputt zu sein, aber das schmutzige Wasser kann trotzdem eingesammelt werden.",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "34": {
+        "id": 34,
+        "name": "Kosmetiklabor",
+        "desc": "Dieses bedr\u00fcckende Geb\u00e4ude diente einst als Einrichtung f\u00fcr Tierversuche (Kaninchen in Zwischenpr\u00fcfungen etc...). Es riecht nach Kampfer, \u00c4ther und verrottenden Kadavern. Und Sie sind noch nicht einmal hineingegangen...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "35": {
+        "id": 35,
+        "name": "Krankenwagen",
+        "desc": "Dieser Krankenwagen ist mitten auf der Stra\u00dfe stehen geblieben. Er hat keine Reifen mehr und auch der Motor fehlt... Au\u00dferdem finden sich keinerlei Anzeichen f\u00fcr einen Kampf oder Unfall... H\u00f6chst seltsam...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "36": {
+        "id": 36,
+        "name": "Lagerhalle",
+        "desc": "Die letzte Inventur hat hier schon vor einiger Zeit stattgefunden... Die 30 Leichen, die in Halle 2 h\u00e4ngen, lassen darauf vermuten, dass mit den Bilanzen etwas nicht stimmte. Dem Umfang ihrer B\u00e4uche nach zu urteilen, handelt es sich wahrscheinlich um den Verwaltungsrat. War es ein kollektiver Selbstmord? Ihr gefesselten H\u00e4nde sprechen nicht daf\u00fcr.",
+        "km_min": 15,
+        "km_max": 18,
+        "explorable": 0
+    },
+    "37": {
+        "id": 37,
+        "name": "Leeres Parkhaus",
+        "desc": "Ein unterirdisches Parkhaus, das fast vollst\u00e4ndig vom Sand begraben wurde - der ideale Ort, um alleine zu sterben. Niemand wird dich h\u00f6ren...",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "38": {
+        "id": 38,
+        "name": "Liegengebliebener Kampfpanzer",
+        "desc": "Dieses milit\u00e4rische Vehikel ist wie die metaphorische Konservendose. Der Soldat ist drinnen und spielt die Rolle einer Sardine, und hundert Zombies drau\u00dfen spielen den hungrigen B\u00fcrger. Der B\u00fcrger gewinnt...",
+        "km_min": 21,
+        "km_max": 28,
+        "explorable": 0
+    },
+    "39": {
+        "id": 39,
+        "name": "Motel 'Dusk'",
+        "desc": "Beim Anblick des Geb\u00e4udes stellst du dir die Frage, wer in diesem sch\u00e4bigen Motel fr\u00fcher \u00fcbernachtet hat. Bilder und Szenen verschiedener Roadmovies schie\u00dfen dir durch den Kopf: Thelma&Louise, Natural Born Killers... Du denkst dir: 'Vielleicht sollte ich als Erstes Zimmer 215 kontrollieren. Man wei\u00df ja nie...'.",
+        "km_min": 12,
+        "km_max": 15,
+        "explorable": 0
+    },
+    "40": {
+        "id": 40,
+        "name": "Milit\u00e4rischer Wachposten",
+        "desc": "Die hier stationierten Soldaten waren auf alles vorbereitet: Waffen, Vorr\u00e4te und eine 150 m lange Sicherheitszone. Auf alles, au\u00dfer darauf, dass ihr Leutnant sie w\u00e4hrend der Nacht verspeiste. Spa\u00df beiseite, mit einer soliden Mauer und einer gesunden Diktatur gibt es (unter dem Gesichtspunkt des \u00dcberlebens) nichts Vergleichbares !",
+        "km_min": 16,
+        "km_max": 19,
+        "explorable": 0
+    },
+    "41": {
+        "id": 41,
+        "name": "Postfiliale",
+        "desc": "Dieses Geb\u00e4ude scheint von den turbulenten Ereignissen der Vergangenheit verschont worden zu sein. Es ist noch vollkommen intakt und erinnert an ein klassisches Postb\u00fcro mit doppelten Schalterfenstern und durchsiebtem Sprechfenster. Hier wirst du kaum etwas N\u00fctzliches finden au\u00dfer etwas zum Lesen...",
+        "km_min": 8,
+        "km_max": 11,
+        "explorable": 0
+    },
+    "42": {
+        "id": 42,
+        "name": "R\u00e4uberh\u00f6hle",
+        "desc": "Der Zugang zu dieser H\u00f6hle ist ein notd\u00fcrftig abgedecktes Loch in der Erde. Er f\u00fchrt in eine \u00fcbergro\u00dfe feuchte Grotte, die mit allerlei Tr\u00fcmmern und Ger\u00fcmpel gef\u00fcllt ist. H\u00f6chstwahrscheinlich handelt es sich um Beutegut, das bei der Pl\u00fcnderung einer benachbarten Stadt eingesackt wurde. Vielleicht wurde deine Stadt mit diesem Raubgut errichtet? Und wer wei\u00df: Wom\u00f6glich haben die ersten Einwohner deiner Stadt an diesen Raubz\u00fcgen teilgenommen...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "43": {
+        "id": 43,
+        "name": "Sch\u00fctzengraben",
+        "desc": "Dieser von Einschusskratern und schwarzen getrockneten Blutlachen \u00fcbers\u00e4te Sch\u00fctzengraben l\u00e4sst erahnen, was sich hier abgespielt hat. Der gr\u00f6\u00dfte Teil des Grabens ist in sich zusammengest\u00fcrzt, doch hier und dort erblickst du noch ein paar begehbare Stellen, die sich nach nutzbaren Gegenst\u00e4nden absuchen lassen.",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "44": {
+        "id": 44,
+        "name": "Stadtb\u00fccherei",
+        "desc": "Was einst die \u00f6rtliche Bibliothek war, ist heute eine Ansammlung von mehreren kleinen H\u00e4usern. Heute sind die B\u00fccher gr\u00f6\u00dftenteils zerrissen oder verbrannt, der Boden ist mit zerrissenen Seiten \u00fcbers\u00e4t und die Regale sind umgesto\u00dfen worden.",
+        "km_min": 6,
+        "km_max": 9,
+        "explorable": 0
+    },
+    "45": {
+        "id": 45,
+        "name": "Tante Emma Laden",
+        "desc": "In diesem Gesch\u00e4ft konnte man fr\u00fcher allerlei Produkte des t\u00e4glichen Bedarfs kaufen: Lebensmittel, Getr\u00e4nke, Reinigungsmittel... An der T\u00fcr steht: Rund um die Uhr ge\u00f6ffnet (auch am Wochenende). In der Tat, das klaffenden Loch in der Mauer best\u00e4tigt dies.",
+        "km_min": 8,
+        "km_max": 11,
+        "explorable": 0
+    },
+    "46": {
+        "id": 46,
+        "name": "Truck 'Rathaus auf R\u00e4dern'",
+        "desc": "Ihr Vertreter vor Ihrer Haust\u00fcr. Die Zombies stimmten diesem Konzept voll und ganz zu, wenn man die Krallenspuren auf den Polstern der Kabine und die \u00fcberall verspr\u00fchten menschlichen \u00dcberreste bemerkt.",
+        "km_min": 16,
+        "km_max": 19,
+        "explorable": 0
+    },
+    "47": {
+        "id": 47,
+        "name": "Umgekippter Laster",
+        "desc": "Es handelt sich um einen Transportlaster der sowjetischen Firma Transtwin\u00ef. Die Fahrerkabine hat sich komplett in einem Baum verkeilt. Der aufgeschlitzte Fahrersitz, sowie die gro\u00dffl\u00e4chigen Blutspuren an den W\u00e4nden, lassen darauf schlie\u00dfen, dass der Unfall nicht die Todesursache war...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "48": {
+        "id": 48,
+        "name": "Verbrannte Grundschule",
+        "desc": "Die fr\u00f6hlichen Kinderzeichnungen an den W\u00e4nden stehen im starken Kontrast zu den nicht identifizierbaren menschlichen \u00dcberresten am Boden. Du hast das Gef\u00fchl, ein dunkles Kichern aus dem Bauschutt zu h\u00f6ren.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "49": {
+        "id": 49,
+        "name": "Verfallenes B\u00fcrogeb\u00e4ude",
+        "desc": "In dieses sch\u00f6ne Geb\u00e4ude gingen die Menschen fr\u00fcher zur Arbeit. P\u00fcnktlichkeit und Dresscode waren Pflicht. Die t\u00e4gliche Routine bestand darin, mit einer Gruppe unbekannter Kollegen Zielvorgaben zu erreichen und um sein eigenes \u00dcberleben zu k\u00e4mpfen... Hhmmm, wenn du so dr\u00fcber nachdenkst: So viel hat sich gar nicht ge\u00e4ndert - bis auf den Dresscode vielleicht.",
+        "km_min": 10,
+        "km_max": 13,
+        "explorable": 0
+    },
+    "50": {
+        "id": 50,
+        "name": "Verfallene Villa",
+        "desc": "Jemand hat hier vor langer Zeit gelebt. Vielleicht jemand, der von einer Familie umgeben war, die ihn liebte und mit der er viele gl\u00fcckliche Stunden zusammen verbrachte ? Heute ist alles, was bleibt, ein wenig Staub und v\u00f6llige Verw\u00fcstung... und gelegentlich eine Leiche, die mit den Z\u00e4hnen knirschend auf einen zust\u00fcrmt.",
+        "km_min": 3,
+        "km_max": 6,
+        "explorable": 0
+    },
+    "51": {
+        "id": 51,
+        "name": "Verlassene Baustelle",
+        "desc": "Soll das eine Schule, ein Parkhaus oder vielleicht ein Kaufhaus sein? Du kannst es nicht erkennen... Das einzige, was von diesem geheimnisvollen Projekt noch \u00fcbrig ist, sind ein paar verrostete Metallstrukturen.",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "52": {
+        "id": 52,
+        "name": "Verlassener Brunnen",
+        "desc": "Wow - das ist ein verdammtes Geschenk des Himmels! Ein Brunnen, der immer noch funktioniert ! V\u00f6llig verloren in der Mitte von Nirgendwo gibt es hier niemanden mit seinem Regelwerk, der Ihnen sagt: 'Tun Sie dies nicht, tun Sie das nicht, nehmen Sie nicht zu viel Wasser, bla bla bla bla...'. Na los, nimm einen Drink, es wird unser kleines Geheimnis sein...",
+        "km_min": 17,
+        "km_max": 20,
+        "explorable": 0
+    },
+    "53": {
+        "id": 53,
+        "name": "Verlassene Silos",
+        "desc": "Urspr\u00fcnglich zur Lagerung von Getreide konstruiert, aber als die Zeit verging und das Getreide knapp wurde, f\u00fcllten sich die Tanks mit Regenwasser (und einer toten Ratte). Sie brauchen allerdings den richtigen Bausatz, um sie zu benutzen...",
+        "km_min": 8,
+        "km_max": 11,
+        "explorable": 0
+    },
+    "54": {
+        "id": 54,
+        "name": "Versperrte Stra\u00dfe",
+        "desc": "Was hier passiert ist erschlie\u00dft sich dir nicht so ganz... Ein riesiger Felsen ist mit voller Wucht auf die Stra\u00dfe geschleudert worden - doch woher kam er? Rings um dich ist nichts als W\u00fcste...",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "55": {
+        "id": 55,
+        "name": "Verwilderter Park",
+        "desc": "Ein Ort des Friedens und der Gelassenheit... Wenn Sie bewaffnet und bereit sind, um Ihr Leben zu k\u00e4mpfen. Die umgebende Vegetation ist unheimlich und riecht stark nach Tod, unidentifizierte Kreaturen lauern im Schatten... Sie haben das \u00fcberw\u00e4ltigende Gef\u00fchl, dass eine Kreatur aus einer Hecke ausbrechen und Sie angreifen wird.",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "56": {
+        "id": 56,
+        "name": "Waffengesch\u00e4ft Guns'n'Zombies",
+        "desc": "Wenn Sie drohen, verst\u00fcmmeln oder morden wollen, haben Sie hier die Hauptader getroffen... Die in den W\u00e4nden steckenden Schrapnelle, Einschussl\u00f6cher und Tr\u00fcmmer ringsum geben Ihnen eine gute Vorstellung davon, welche Art von 'Ereignissen' sich hier abgespielt haben...",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "57": {
+        "id": 57,
+        "name": "Warenlager",
+        "desc": "Das Schiebetor dieses Supermarktlagers hat allen Pl\u00fcnderungsversuchen erfolgreich getrotzt. Durch einen etwas versteckten Seiteneingang gelangst du ins Innere und machst dich sofort auf die Suche nach Dingen, die du noch gebrauchen kannst...",
+        "km_min": 2,
+        "km_max": 5,
+        "explorable": 0
+    },
+    "58": {
+        "id": 58,
+        "name": "Zelt eines B\u00fcrgers",
+        "desc": "Dieses Zelt macht einen wirklich soliden Eindruck und war bestimmt mal ein gutes Versteck. Derjenige, der es aufgestellt hat, wusste wie man sich vor Zombies sch\u00fctzt. Das Zelt verf\u00fcgt \u00fcber ein farblich abgestimmtes Tarnnetz, mehrere Ein- und Ausg\u00e4nge, sowie \u00fcber ein unterirdisches Notversteck f\u00fcr brenzlige Situation. Bei n\u00e4herem Hinsehen entdeckst du auf der Zeltplane einen eingestickten Namen: 'Shenji'",
+        "km_min": 12,
+        "km_max": 15,
+        "explorable": 0
+    },
+    "59": {
+        "id": 59,
+        "name": "Zerst\u00f6rte Apotheke",
+        "desc": "Mitten in der W\u00fcste entdeckst du eine kleine Stadtviertelapotheke \u2013 grotesk! Ein unbeschreibbarer Gestank liegt in der Luft und es riecht nach allem m\u00f6glichen, au\u00dfer nach Gesundheit.",
+        "km_min": 4,
+        "km_max": 7,
+        "explorable": 0
+    },
+    "60": {
+        "id": 60,
+        "name": "ZomBIER Bar",
+        "desc": "Es sieht eigentlich nicht mehr wie eine Bar aus, aber das halb im Sand vergrabene Schild und das Vorhandensein einiger zerbrochener Optiken lassen keinen gro\u00dfen Zweifel aufkommen. Die meisten Flaschen sind zerbrochen, aber Sie k\u00f6nnen hier mit ziemlicher Sicherheit etwas N\u00fctzliches finden...",
+        "km_min": 5,
+        "km_max": 8,
+        "explorable": 0
+    },
+    "61": {
+        "id": 61,
+        "name": "Verlassener Bunker",
+        "desc": "Diese heruntergekommene Geb\u00e4ude scheint einmal ein Bunker gewesen zu sein. Du entdeckst einen Einstieg ins Geb\u00e4ude, modriger Gestank schl\u00e4gt dir entgegen. Du verziehst das Gesicht, aber hier k\u00f6nntest du mit ziemlicher Sicherheit etwas N\u00fctzliches finden...",
+        "km_min": 5,
+        "km_max": 28,
+        "explorable": 1
+    },
+    "62": {
+        "id": 62,
+        "name": "Verlassenes Hotel",
+        "desc": "Diese heruntergekommene Geb\u00e4ude scheint einmal ein Hotel gewesen zu sein. Du entdeckst einen Einstieg ins Geb\u00e4ude, modriger Gestank schl\u00e4gt dir entgegen. Du verziehst das Gesicht, aber hier k\u00f6nntest du mit ziemlicher Sicherheit etwas N\u00fctzliches finden...",
+        "km_min": 5,
+        "km_max": 28,
+        "explorable": 1
+    },
+    "63": {
+        "id": 63,
+        "name": "Verlassenes Hospital",
+        "desc": "Diese heruntergekommene Geb\u00e4ude scheint einmal ein Hospital gewesen zu sein. Du entdeckst einen Einstieg ins Geb\u00e4ude, modriger Gestank schl\u00e4gt dir entgegen. Du verziehst das Gesicht, aber hier k\u00f6nntest du mit ziemlicher Sicherheit etwas N\u00fctzliches finden...",
+        "km_min": 5,
+        "km_max": 28,
+        "explorable": 1
+    },
+    "64": {
+        "id": 64,
+        "name": "Die Sportkr\u00e4he",
+        "desc": "Das Grab der ehemaligen Sportler...",
+        "km_min": 10,
+        "km_max": 12,
+        "explorable": 0
+    }
+}

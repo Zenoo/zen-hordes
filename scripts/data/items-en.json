@@ -1,0 +1,2620 @@
+{
+    "1": {
+        "id": 1,
+        "name": "Water Ration",
+        "desc": "Drinking your water ration will quench your thirst when you're in the World Beyond. This will refresh you, and more importantly, your action points once per day.",
+        "cat": "Food",
+        "img": "item_water"
+    },
+    "2": {
+        "id": 2,
+        "name": "Battery",
+        "desc": "The battery is a very useful item. However, sometimes they run down all too quickly...",
+        "cat": "Rsc",
+        "img": "item_pile"
+    },
+    "3": {
+        "id": 3,
+        "name": "Can",
+        "desc": "There is a picture on the can of a very appetising plate of beans ! Now you just need to find something to open it with...",
+        "cat": "Food",
+        "img": "item_can"
+    },
+    "4": {
+        "id": 4,
+        "name": "Open Can",
+        "desc": "You close your eyes, open your mouth wide and swallow the lot. You feel infinitely better now.",
+        "cat": "Food",
+        "img": "item_can_open"
+    },
+    "5": {
+        "id": 5,
+        "name": "Battery Launcher 1-ITF (loaded)",
+        "desc": "A little creative recycling of the resources at hand enables the Battery Launcher 1-ITF to use batteries as piercing projectiles.",
+        "cat": "Weapon",
+        "img": "item_pilegun"
+    },
+    "6": {
+        "id": 6,
+        "name": "Taser",
+        "desc": "A handheld gadget which delivers a frightful electric shock into the victim's body. Not so effective when you consider that zombies don't feel pain... However, you can always hope to take out a limb or a vital organ.",
+        "cat": "Weapon",
+        "img": "item_taser"
+    },
+    "7": {
+        "id": 7,
+        "name": "Aqua-Splash (empty)",
+        "desc": "A formidable weapon, when filled correctly with fresh water.",
+        "cat": "Weapon",
+        "img": "item_watergun_opt_empty"
+    },
+    "8": {
+        "id": 8,
+        "name": "Electric Whisk (loaded)",
+        "desc": "It's a (really powerful) whisk and it's electric, what else is there to say? Well, the good part is that it only needs one battery, and only has limited chance of running down.",
+        "cat": "Weapon",
+        "img": "item_mixergun"
+    },
+    "9": {
+        "id": 9,
+        "name": "Chainsaw (loaded)",
+        "desc": "With this bad boy, you know there's going to be a wholesale zombie chop-fest. Know, however, that even though you may be victorious, you won't be entirely unscathed... This diabolical machine has been modified to work (somewhat incredibly) with a simple battery !",
+        "cat": "Weapon",
+        "img": "item_chainsaw"
+    },
+    "10": {
+        "id": 10,
+        "name": "Lawnmower",
+        "desc": "You like it when it's nice and clean, when it smells of freshly cut grass ? In this instance, forget it - when you use it, it won't be like that at all.",
+        "cat": "Weapon",
+        "img": "item_lawn"
+    },
+    "11": {
+        "id": 11,
+        "name": "Adjustable Spanner",
+        "desc": "With an adjustable spanner, you can choose between building something and breaking something. Something might not necessarily be an object...",
+        "cat": "Weapon",
+        "img": "item_wrench"
+    },
+    "12": {
+        "id": 12,
+        "name": "Screwdriver",
+        "desc": "Bizarrely enough, the screwdriver was invented to screw and unscrew screws. However, it also allows you to open cans and put certain objects back together. As a last resort, plant in someone's skull: it might just save your life...",
+        "cat": "Weapon",
+        "img": "item_screw"
+    },
+    "13": {
+        "id": 13,
+        "name": "Staff",
+        "desc": "A big pointy stick. Pointy enough to skewer something, but it's fragile... Just pray it holds up!",
+        "cat": "Weapon",
+        "img": "item_staff"
+    },
+    "14": {
+        "id": 14,
+        "name": "Serrated Knife",
+        "desc": "Skinner, Buck, Bowie... Whatever, they all cut.",
+        "cat": "Weapon",
+        "img": "item_knife"
+    },
+    "15": {
+        "id": 15,
+        "name": "Machete",
+        "desc": "In the beginning these were used to cut a path. It's the same here, although the vegetation here is vindictive and ominously noisy...",
+        "cat": "Weapon",
+        "img": "item_cutcut"
+    },
+    "16": {
+        "id": 16,
+        "name": "Pathetic Penknife",
+        "desc": "Penknife [n.m.] : A small pocket knife with a blade that can be hidden for safety purposes. If you're the one carrying it, you should do likewise...",
+        "cat": "Weapon",
+        "img": "item_small_knife"
+    },
+    "17": {
+        "id": 17,
+        "name": "Swiss Army Knife",
+        "desc": "The Swiss Army Knife can pretty much be used to take care of any minor job, except perhaps decapitating a horde of zombies.",
+        "cat": "Weapon",
+        "img": "item_swiss_knife"
+    },
+    "18": {
+        "id": 18,
+        "name": "Box Cutter",
+        "desc": "This small knife with a retractable blade is available in a very fetching candy-floss pink colour, which goes surpisingly well with the colour of the entrails of your living-dead friends. If it gets that far...",
+        "cat": "Weapon",
+        "img": "item_cutter"
+    },
+    "19": {
+        "id": 19,
+        "name": "Shopping Trolley",
+        "desc": "A shopping trolley from Bullworths' market. Nobody really knows what it could be used for apart from putting things in an ill-advised downhill race (to hospital). Useful, but it doesn't work well in the sand.",
+        "cat": "Box",
+        "img": "item_cart"
+    },
+    "20": {
+        "id": 20,
+        "name": "Can Opener",
+        "desc": "Very appropriately named, it is ideal for opening cans. Unfortunately it is a bit too small to properly open up your hominoid chums in the desert.",
+        "cat": "Weapon",
+        "img": "item_can_opener"
+    },
+    "21": {
+        "id": 21,
+        "name": "Manbag",
+        "desc": "It's not a handbag, purse or murse! An incredibly practical invention which allows you to carry more essentials: chemical, biological, nuclear... you get the picture. It's very manly.",
+        "cat": "Box",
+        "img": "item_bag"
+    },
+    "22": {
+        "id": 22,
+        "name": "Box of Matches",
+        "desc": "As the saying goes: Fire is a good servant but a bad master. Easy Baby - You're almost a fire hazard!",
+        "cat": "Misc",
+        "img": "item_lights"
+    },
+    "23": {
+        "id": 23,
+        "name": "Valium Shot",
+        "desc": "Relax, no big deal... this won't be the last one you'll take.",
+        "cat": "Drug",
+        "img": "item_xanax"
+    },
+    "24": {
+        "id": 24,
+        "name": "Rocking Chair",
+        "desc": "ZZzzzz... Creak... ZZzzzz... Creeeeak...",
+        "cat": "Furniture",
+        "img": "item_chair"
+    },
+    "25": {
+        "id": 25,
+        "name": "Dusty Book",
+        "desc": "Most of the pages in this old tome are torn or stuck together from the humidity. It must be possible to read some of them though...",
+        "cat": "Misc",
+        "img": "item_rp_book"
+    },
+    "26": {
+        "id": 26,
+        "name": "Mattress",
+        "desc": "ZZzzzz... Shhhhhh... ZZzzzz... Shhhhhh...",
+        "cat": "Armor",
+        "img": "item_bed"
+    },
+    "27": {
+        "id": 27,
+        "name": "Bedside Lamp",
+        "desc": "It's a nice bedside lamp, but it won't work without a new battery...",
+        "cat": "Furniture",
+        "img": "item_lamp"
+    },
+    "28": {
+        "id": 28,
+        "name": "Persian Rug",
+        "desc": "This lets you cover up all the nastiness which now adorns your floor...",
+        "cat": "Furniture",
+        "img": "item_carpet"
+    },
+    "29": {
+        "id": 29,
+        "name": "Mini HI-Fi (Broken)",
+        "desc": "A busted low-budget stereo system. Nonetheless, it's a shame when all it needs is a battery...",
+        "cat": "Furniture",
+        "img": "item_music_part"
+    },
+    "30": {
+        "id": 30,
+        "name": "Padlock and Chain",
+        "desc": "A solid padlock and chain should secure the door... Now you just need to worry about the walls...",
+        "cat": "Furniture",
+        "img": "item_lock"
+    },
+    "31": {
+        "id": 31,
+        "name": "Doormat",
+        "desc": "It'll be nice to wipe your feet on something clean for a change.",
+        "cat": "Furniture",
+        "img": "item_door_carpet"
+    },
+    "32": {
+        "id": 32,
+        "name": "Dice",
+        "desc": "Play dice with other losers like you.",
+        "cat": "Misc",
+        "img": "item_dice"
+    },
+    "33": {
+        "id": 33,
+        "name": "Engine",
+        "desc": "It's a small engine of some sort, covered in splashes of burnt oil and other unidentified substances. However, it's pretty heavy.",
+        "cat": "Misc",
+        "img": "item_engine"
+    },
+    "34": {
+        "id": 34,
+        "name": "Belt",
+        "desc": "A belt... it's surely got to be good for something.",
+        "cat": "Rsc",
+        "img": "item_courroie"
+    },
+    "35": {
+        "id": 35,
+        "name": "Handful of nuts and bolts",
+        "desc": "Some are rusty, some are covered in a greenish scum, but at least they're all still good for their intended purpose. More or less.",
+        "cat": "Rsc",
+        "img": "item_meca_parts"
+    },
+    "36": {
+        "id": 36,
+        "name": "Chicken",
+        "desc": "OK, now we just need to find a butcher. Alternatively you could throw it at a zombie...",
+        "cat": "Misc",
+        "img": "item_pet_chick"
+    },
+    "37": {
+        "id": 37,
+        "name": "Stinking Pig",
+        "desc": "Great! Where is the nearest butcher ? Or, how about rolling it at a zombie...",
+        "cat": "Misc",
+        "img": "item_pet_pig"
+    },
+    "38": {
+        "id": 38,
+        "name": "Giant Rat",
+        "desc": "OK, now we just need to find a butcher. Alternatively, you could throw it at a zombie...",
+        "cat": "Misc",
+        "img": "item_pet_rat"
+    },
+    "39": {
+        "id": 39,
+        "name": "Guard Dog",
+        "desc": "Man's best friend. You can choose whether he guards your house, saves you from a marauding zombie or ends up as tasty burgers...",
+        "cat": "Armor",
+        "img": "item_pet_dog"
+    },
+    "40": {
+        "id": 40,
+        "name": "Fat Cat",
+        "desc": "He's really cute, makes your house more homely and can just about fight a zombie. And if you get really hungry...",
+        "cat": "Furniture",
+        "img": "item_pet_cat"
+    },
+    "41": {
+        "id": 41,
+        "name": "Huge Snake (Ophiophagus trouser)",
+        "desc": "It's green, it hisses and it bites. Drag it to the butcher for some snake steaks. Or you could pitch it at some zombies...",
+        "cat": "Misc",
+        "img": "item_pet_snake"
+    },
+    "42": {
+        "id": 42,
+        "name": "Pocket Vibrator (charged)",
+        "desc": "It vibrates, tickles and titillates you and even makes you forget all your worries for a short while. (Requires 1 battery).",
+        "cat": "Misc",
+        "img": "item_vibr"
+    },
+    "43": {
+        "id": 43,
+        "name": "Anabolic Steroids",
+        "desc": "This drug is great, if you want to see the world through rose-tinted Ray Bans and don't mind occasional convulsions and drooling... Don't get addicted though...",
+        "cat": "Drug",
+        "img": "item_drug"
+    },
+    "44": {
+        "id": 44,
+        "name": "Tasty-looking Steak",
+        "desc": "It's a bit rubbery, and smells a bit fishy... You ask yourself what kind of meat it could be, but decide that it's got to be full of vitamins (and nothing else, you hope).",
+        "cat": "Food",
+        "img": "item_meat"
+    },
+    "45": {
+        "id": 45,
+        "name": "Unspecified Meat",
+        "desc": "You are fairly sure that this wet, sticky thing can be eaten. Either way, it doesn't smell too bad and it's not moving.",
+        "cat": "Food",
+        "img": "item_undef"
+    },
+    "46": {
+        "id": 46,
+        "name": "Groundsheet",
+        "desc": "A large, thick camping groundsheet, but it's not exactly waterproof any more. Ideal if you want to spend the night under the stars (if you forget about the vermin, the zombies, diseases, storms and the cold). It significantly increases your chances of survival when camping. You must have the sheet on your person while camping to obtain this bonus.",
+        "cat": "Misc",
+        "img": "item_sheet"
+    },
+    "47": {
+        "id": 47,
+        "name": "Ultra-Rucksack",
+        "desc": "The ideal travel companion! Waterproof, reinforced shoulders, side pockets, gives you a massage while you walk, and has a nice chrome \"Desert Junkie\" logo.",
+        "cat": "Box",
+        "img": "item_bagxl"
+    },
+    "48": {
+        "id": 48,
+        "name": "Full Jerrycan",
+        "desc": "The Jerrycan holds multiple rations of unpurified water. To make the water drinkable, the town must have a building which can carry out water filtration.",
+        "cat": "Misc",
+        "img": "item_jerrycan"
+    },
+    "49": {
+        "id": 49,
+        "name": "Twisted Plank",
+        "desc": "It's a plank of wood which is soaking wet but still more or less solid... Note: The wood is used for the construction of buildings in the town (deposit it in the Bank).",
+        "cat": "Rsc",
+        "img": "item_wood2"
+    },
+    "50": {
+        "id": 50,
+        "name": "Wrought Iron",
+        "desc": "Wrought Iron... It's bloody heavy, but it's always useful ! Note: Wrought Iron is used for the construction of buildings in the town (deposit it in the Bank).",
+        "cat": "Rsc",
+        "img": "item_metal"
+    },
+    "51": {
+        "id": 51,
+        "name": "Water Bomb",
+        "desc": "Throw it at a zombie and hope it bursts. Then wait for it to burst again.",
+        "cat": "Weapon",
+        "img": "item_grenade"
+    },
+    "52": {
+        "id": 52,
+        "name": "Sheet Metal",
+        "desc": "There's nothing like a bit of rusty sheet metal to stop zombies from getting to you... Note: Defensive items give better bonuses if they are installed in town as opposed to in your home.",
+        "cat": "Armor",
+        "img": "item_plate"
+    },
+    "53": {
+        "id": 53,
+        "name": "Jerrycan Gun (unattached)",
+        "desc": "Once upon a time, this gadget was the laughing stock of the DIY department. The epitome of uselessness. These days, (with the nozzle fitted to a Jerrycan) it becomes a formidable weapon which converts unpurified water into a jet of pure water vapour !",
+        "cat": "Misc",
+        "img": "item_jerrygun_part"
+    },
+    "54": {
+        "id": 54,
+        "name": "Bandage",
+        "desc": "It smells awful, and it has traces of mould on it, but you're in no position to be fussy. This bandage can be used to dress a wound.",
+        "cat": "Drug",
+        "img": "item_bandage"
+    },
+    "55": {
+        "id": 55,
+        "name": "Stale Beer",
+        "desc": "After spending forever under the sun, this bottle is completely discolored. You have the intuition that it must have been green in the past. Ah, here's the label!... okay, just a pale lager. \"Keep away from light and all sources of heat\", well, let's try... (You take a huge sip and release a giant burp shortly after!) - \"Cheers, Pap Finn!\"",
+        "cat": "Food",
+        "img": "item_vodka_de"
+    },
+    "56": {
+        "id": 56,
+        "name": "Jerrycan Gun (empty)",
+        "desc": "Once upon a time, this gadget was the laughing stock of the DIY department. The epitome of uselessness. These days, (with the nozzle fitted to a Jerrycan) it becomes a formidable weapon which converts unpurified water into a jet of pure water vapour !",
+        "cat": "Weapon",
+        "img": "item_jerrygun_off"
+    },
+    "57": {
+        "id": 57,
+        "name": "Retro Overhead Projector",
+        "desc": "This faulty projector can no longer be used for anything. However, the lens still seems relatively intact... unfortunately you have nothing to take it apart with...",
+        "cat": "Weapon",
+        "img": "item_cinema"
+    },
+    "58": {
+        "id": 58,
+        "name": "Semtex",
+        "desc": "Boom !",
+        "cat": "Rsc",
+        "img": "item_explo"
+    },
+    "59": {
+        "id": 59,
+        "name": "Human Flesh",
+        "desc": "Erm... It's probably best to forget you ate this and move on...",
+        "cat": "Food",
+        "img": "item_hmeat"
+    },
+    "60": {
+        "id": 60,
+        "name": "Plastic Bag",
+        "desc": "An old plastic bag from the supermarket which can be transformed into a formidable weapon if you fill it with water...",
+        "cat": "Weapon",
+        "img": "item_grenade_empty"
+    },
+    "61": {
+        "id": 61,
+        "name": "Exploding Water Bomb",
+        "desc": "A plastic bag, some explosives, and some water. It's home-made, but it's an enormously powerful weapon of mass destruction to throw into a zombie horde... Guaranteed carnage.",
+        "cat": "Weapon",
+        "img": "item_bgrenade"
+    },
+    "62": {
+        "id": 62,
+        "name": "Plastic Bag and Semtex",
+        "desc": "A plastic bag fitted with an explosive charge. It takes some doing, but is simple and effective. You just have to fill it up....",
+        "cat": "Weapon",
+        "img": "item_bgrenade_empty"
+    },
+    "63": {
+        "id": 63,
+        "name": "Incomplete Chainsaw",
+        "desc": "Now this thing is great fun, but it seems to be missing a belt and some other bits and bobs to get it going...",
+        "cat": "Misc",
+        "img": "item_chainsaw_part"
+    },
+    "64": {
+        "id": 64,
+        "name": "Electric Whisk (incomplete)",
+        "desc": "This could be a good weapon. If only you had the missing parts to repair the gadget...",
+        "cat": "Misc",
+        "img": "item_mixergun_part"
+    },
+    "65": {
+        "id": 65,
+        "name": "Duct Tape",
+        "desc": "Always useful for when you want to stick things together.",
+        "cat": "Rsc",
+        "img": "item_rustine"
+    },
+    "66": {
+        "id": 66,
+        "name": "Dismantled Mower",
+        "desc": "A classic garden tool, it needs no power, but comes in kit form... If you want to use it, you just need to finish building it.",
+        "cat": "Misc",
+        "img": "item_lawn_part"
+    },
+    "67": {
+        "id": 67,
+        "name": "Copper Pipe",
+        "desc": "A rather dirty copper pipe which doesn't seem to have any obvious application...",
+        "cat": "Rsc",
+        "img": "item_tube"
+    },
+    "68": {
+        "id": 68,
+        "name": "Wonky Shopping Trolley",
+        "desc": "A big metal basket on wheels, which could be useful if you could link the wheels somehow... it appears to be missing an axel. Surely you can find something to do the job...",
+        "cat": "Misc",
+        "img": "item_cart_part"
+    },
+    "69": {
+        "id": 69,
+        "name": "Utility Belt",
+        "desc": "This belt allows you to carry one additional item. In addition, it is particulary well designed in that it doesn't stop you from carrying an additional bag later on. Or... you can just pretend that you're Batman (Batarang not included).",
+        "cat": "Box",
+        "img": "item_pocket_belt"
+    },
+    "70": {
+        "id": 70,
+        "name": "Twinoid 500mg",
+        "desc": "A combination of caffeine, theine, various chemicals and boiled bull's testicles (taurine?), this is a great pick-me-up for the end of the day, or for when you want to flee from a horde of zombies who want your liver.",
+        "cat": "Drug",
+        "img": "item_drug_hero"
+    },
+    "71": {
+        "id": 71,
+        "name": "Metal Chest",
+        "desc": "An old rusty metal chest that is covered in dents. Who knows what could be inside?",
+        "cat": "Box",
+        "img": "item_chest"
+    },
+    "72": {
+        "id": 72,
+        "name": "Large Metal Chest",
+        "desc": "It's properly heavy and definitely contains something of value... You just need to find something a bit more suitable than your teeth to open it.",
+        "cat": "Box",
+        "img": "item_chest_xl"
+    },
+    "73": {
+        "id": 73,
+        "name": "Toolbox",
+        "desc": "This old wooden toolbox must contain some useful bits and pieces...",
+        "cat": "Box",
+        "img": "item_chest_tools"
+    },
+    "74": {
+        "id": 74,
+        "name": "Bedside Lamp (on)",
+        "desc": "With a bedside lamp, you'll be less scared at night so you'll sleep better.",
+        "cat": "Furniture",
+        "img": "item_lamp_on"
+    },
+    "75": {
+        "id": 75,
+        "name": "Mini Hi-Fi (on)",
+        "desc": "Why not relax a little by listening to some classic hits: The Cranberries - Zombie, Rob Zombie - Living Dead Girl or Kernkraft 400 - Zombie Nation...",
+        "cat": "Furniture",
+        "img": "item_music"
+    },
+    "76": {
+        "id": 76,
+        "name": "Pharmaceutical Products",
+        "desc": "A small flask and some mysterious items wrapped in plastic. No idea what they could be for though... Maybe if you mix them with something else...",
+        "cat": "Drug",
+        "img": "item_pharma"
+    },
+    "77": {
+        "id": 77,
+        "name": "Sheet Metal (parts)",
+        "desc": "These pieces of sheet metal are perfect for protecting your home... if you assemble them correctly.",
+        "cat": "Misc",
+        "img": "item_plate_raw"
+    },
+    "78": {
+        "id": 78,
+        "name": "\u201cWake The Dead\u201d",
+        "desc": "A cocktail invented by someone called Chuck if you believe the label. A mixture of rum, red chilli peppers and whisky, with a pickled finger floating in the middle...",
+        "cat": "Food",
+        "img": "item_rhum"
+    },
+    "79": {
+        "id": 79,
+        "name": "Bloody Hot Coffee",
+        "desc": "Who knows how this thermos has managed to stay warm for so long... In any case, it's strong coffee, REALLY strong coffee. It's clearly homemade, and not exactly a premium blend... Not for the faint-hearted!",
+        "cat": "Food",
+        "img": "item_coffee"
+    },
+    "80": {
+        "id": 80,
+        "name": "Cafeti\u00e8re",
+        "desc": "The ultimate weapon to awaken the sleeping adventurer within you. Its unique filtration system allows you to make great coffee from the most surprising ingredients...",
+        "cat": "Furniture",
+        "img": "item_coffee_machine"
+    },
+    "81": {
+        "id": 81,
+        "name": "Incomplete Cafeti\u00e8re",
+        "desc": "This cafetiere could be of great use to you, but unfortunately it has been dismantled...",
+        "cat": "Misc",
+        "img": "item_coffee_machine_part"
+    },
+    "82": {
+        "id": 82,
+        "name": "Electronic component",
+        "desc": "An old circuit board probably from a radio or some other electronic gadget.",
+        "cat": "Rsc",
+        "img": "item_electro"
+    },
+    "83": {
+        "id": 83,
+        "name": "Citizen's Welcome Pack",
+        "desc": "This is a small box given to every citizen upon joining a community. A bit like a lucky bag, although you'll need more than luck to make it through the night...",
+        "cat": "Box",
+        "img": "item_chest_citizen"
+    },
+    "84": {
+        "id": 84,
+        "name": "Hydratone 100mg",
+        "desc": "Hydratone is pretty useful, it's a tablet which, a few minutes after ingestion, quenches your thirst. However, it does NOT relieve tiredness, and it does NOT restore action points.",
+        "cat": "Drug",
+        "img": "item_drug_water"
+    },
+    "85": {
+        "id": 85,
+        "name": "Radio Cassette Player (no battery)",
+        "desc": "An old transistor radio with a Belle and Sebastian cassette stuck in it. The radio itself is useless as it doesn't pick anything up these days... It's always better to be able to listen to some good music at home than to listen to your neighbours screams as they are devoured by zombies. You just need to find a battery for it...",
+        "cat": "Misc",
+        "img": "item_radio_off"
+    },
+    "86": {
+        "id": 86,
+        "name": "Radio Cassette Player",
+        "desc": "An old transistor radio with a Belle and Sebastian cassette stuck in it. The radio itself is useless as it doesn't pick anything up these days... It's always better to be able to listen to some good music at home than to listen to your neighbours screams as they are devoured by zombies. Better crank it up!",
+        "cat": "Furniture",
+        "img": "item_radio_on"
+    },
+    "87": {
+        "id": 87,
+        "name": "Cyanide",
+        "desc": "When everything has gone to hell, take a small cyanide capsule, a large glass of water, and just wait for all to go away with a peaceful smile.",
+        "cat": "Drug",
+        "img": "item_cyanure"
+    },
+    "88": {
+        "id": 88,
+        "name": "Old Door",
+        "desc": "It's a wooden door. A classic design, formerly white, but now covered in dirt. It's still useful though...",
+        "cat": "Armor",
+        "img": "item_door"
+    },
+    "89": {
+        "id": 89,
+        "name": "Suspicious-looking Vegetable",
+        "desc": "Well it's clearly a... uh... erm... vegetable? It's hard to say who would try to grow something like this but the main thing is that it seems edible. Or not.",
+        "cat": "Food",
+        "img": "item_vegetable"
+    },
+    "90": {
+        "id": 90,
+        "name": "Repair Kit (damaged)",
+        "desc": "This repair kit is damaged, it needs to be patched up in the workshop before it can be used again.",
+        "cat": "Misc",
+        "img": "item_repair_kit_part"
+    },
+    "91": {
+        "id": 91,
+        "name": "Repair Kit",
+        "desc": "This metal box contains basically all the essentials you might need to put pretty much anything back together. Except your dead neighbours...",
+        "cat": "Misc",
+        "img": "item_repair_kit"
+    },
+    "92": {
+        "id": 92,
+        "name": "Water Pistol (empty)",
+        "desc": "A water pistol is really effective against zombies! Unless it's empty, like this one...",
+        "cat": "Weapon",
+        "img": "item_watergun_empty"
+    },
+    "93": {
+        "id": 93,
+        "name": "Aqua-Splash (3 shots)",
+        "desc": "The Aqua-Splash is a massively overpowered water gun, ideal for long walks in the World Beyond ! Not suitable for children under 8 years of age.",
+        "cat": "Weapon",
+        "img": "item_watergun_opt_3"
+    },
+    "94": {
+        "id": 94,
+        "name": "Aqua-Splash (2 shots)",
+        "desc": "The Aqua-Splash is a massively overpowered water gun, ideal for long walks in the World Beyond ! Not suitable for children under 8 years of age.",
+        "cat": "Weapon",
+        "img": "item_watergun_opt_2"
+    },
+    "95": {
+        "id": 95,
+        "name": "Aqua-Splash (1 shot)",
+        "desc": "The Aqua-Splash is a massively overpowered water gun, ideal for long walks in the World Beyond ! Not suitable for children under 8 years of age.",
+        "cat": "Weapon",
+        "img": "item_watergun_opt_1"
+    },
+    "96": {
+        "id": 96,
+        "name": "Electric Whisk (no battery)",
+        "desc": "It's a (really powerful) whisk and it's electric, what else is there to say? Well, the good part is that it only needs one battery, and only has limited chance of running down.",
+        "cat": "Weapon",
+        "img": "item_mixergun_empty"
+    },
+    "97": {
+        "id": 97,
+        "name": "Chainsaw (empty)",
+        "desc": "With this bad boy, you know there's going to be a wholesale zombie chop-fest. Know, however, that even though you may be victorious, you won't be entirely unscathed... This diabolical machine has been modified to work (somewhat incredibly) with a simple battery !",
+        "cat": "Weapon",
+        "img": "item_chainsaw_empty"
+    },
+    "98": {
+        "id": 98,
+        "name": "Battery Launcher 1-ITF (empty)",
+        "desc": "A little creative recycling of the resources at hand enables the Battery Launcher 1-ITF to use batteries as piercing projectiles.",
+        "cat": "Weapon",
+        "img": "item_pilegun_empty"
+    },
+    "99": {
+        "id": 99,
+        "name": "Taser (incomplete)",
+        "desc": "A handheld gadget which delivers a frightful electric shock into the victim's body. Not so effective when you consider that zombies don't feel pain... However, you can always hope to take out a limb or a vital organ.",
+        "cat": "Weapon",
+        "img": "item_taser_empty"
+    },
+    "100": {
+        "id": 100,
+        "name": "EMS System (incomplete)",
+        "desc": "The military version of a gadget which builds muscle through bursts of electrical stimulation. It relieves tiredness and restores your action points, but causes massive trauma (even causing death in agonising pain).",
+        "cat": "Misc",
+        "img": "item_sport_elec_empty"
+    },
+    "101": {
+        "id": 101,
+        "name": "EMS System (charged)",
+        "desc": "The military version of a gadget which builds muscle through bursts of electrical stimulation. It relieves tiredness and restores your action points, but causes massive trauma (even causing death in agonising pain).",
+        "cat": "Misc",
+        "img": "item_sport_elec"
+    },
+    "102": {
+        "id": 102,
+        "name": "Devastator (empty)",
+        "desc": "The military version of the Battery Launcher 1-ITF. It's massively powerful piston can launch a battery at a phenomenal speed and allow it to pierce pretty much anything. In short, this thing will make a hole the size of a fist in 2 zombies, if they're lined up right...",
+        "cat": "Weapon",
+        "img": "item_big_pgun_empty"
+    },
+    "103": {
+        "id": 103,
+        "name": "Devastator (loaded)",
+        "desc": "The military version of the Battery Launcher 1-ITF. It's massively powerful piston can launch a battery at a phenomenal speed and allow it to pierce pretty much anything. In short, this thing will make a hole the size of a fist in 2 zombies, if they're lined up right...",
+        "cat": "Weapon",
+        "img": "item_big_pgun"
+    },
+    "104": {
+        "id": 104,
+        "name": "Devastator (incomplete)",
+        "desc": "The military version of the Battery Launcher 1-ITF. It's massively powerful piston can launch a battery at a phenomenal speed and allow it to pierce pretty much anything. In short, this thing will make a hole the size of a fist in 2 zombies, if they're lined up right...",
+        "cat": "Misc",
+        "img": "item_big_pgun_part"
+    },
+    "105": {
+        "id": 105,
+        "name": "Radius Radar Beacon",
+        "desc": "The beacon lets you uncover all squares on the map adjacent to your current location.",
+        "cat": "Misc",
+        "img": "item_tagger"
+    },
+    "106": {
+        "id": 106,
+        "name": "Spy Flare",
+        "desc": "The spy rocket allows you to gather information on distant zones. Once the rocket has landed, a transmitter is deployed which immediately relays the information.",
+        "cat": "Misc",
+        "img": "item_flare"
+    },
+    "107": {
+        "id": 107,
+        "name": "Jerrycan Gun (ready)",
+        "desc": "Once upon a time, this gadget was the laughing stock of the DIY department. The epitome of uselessness. These days, (with the nozzle fitted to a Jerrycan) it becomes a formidable weapon which converts unpurified water into a jet of pure water vapour !",
+        "cat": "Weapon",
+        "img": "item_jerrygun"
+    },
+    "108": {
+        "id": 108,
+        "name": "Ektorp-Gluten Chair",
+        "desc": "A fairly normal chair, with a particularly brutal sounding Swedish name. You could hit people with it, but it works far better for the task it was designed for. Send it home Happy... send it home.",
+        "cat": "Furniture",
+        "img": "item_chair_basic"
+    },
+    "109": {
+        "id": 109,
+        "name": "Revolver (unloaded)",
+        "desc": "A handgun: A model P-22, reknowned[sic] for its reliability and precision. It's totally worthless without bullets though...",
+        "cat": "Furniture",
+        "img": "item_gun"
+    },
+    "110": {
+        "id": 110,
+        "name": "Assault Rifle (unloaded)",
+        "desc": "A modified, more compact version of the AK-47, probably destined to \"civilian\" use... not the most accurate gun though... watch out for \"friendly fire\"!",
+        "cat": "Furniture",
+        "img": "item_machine_gun"
+    },
+    "111": {
+        "id": 111,
+        "name": "Compact detonator",
+        "desc": "A compact tool which can detonate a small explosive charge.",
+        "cat": "Rsc",
+        "img": "item_deto"
+    },
+    "112": {
+        "id": 112,
+        "name": "Bag of Cement",
+        "desc": "A big bag of reasonable quality cement... Once it is mixed with water, it dries quickly into super strong concrete!",
+        "cat": "Misc",
+        "img": "item_concrete"
+    },
+    "113": {
+        "id": 113,
+        "name": "Unshaped Concrete Blocks",
+        "desc": "These don't look anything like bricks, but they are made of reinforced concrete, and can be used to improve defences... Worst-case scenario, lob them at some zombies \u2013 it'll be like the Tiananmen Square demonstrations. With less tanks. And zombies.",
+        "cat": "Armor",
+        "img": "item_concrete_wall"
+    },
+    "114": {
+        "id": 114,
+        "name": "Unlabelled Drug",
+        "desc": "The label has been completely destroyed, and most of the tablets are mouldy. Nonetheless you manage to find some that are still edible... ish. Are you sure you're sick enough to justify swallowing them though?",
+        "cat": "Drug",
+        "img": "item_drug_random"
+    },
+    "115": {
+        "id": 115,
+        "name": "Paracetoid 7g",
+        "desc": "A powerful antibiotic capable of dealing with any infection. The label states, \"This medication may occasionally cause unwanted side-effects including acne, vomiting, convulsions and violent death\".",
+        "cat": "Drug",
+        "img": "item_disinfect"
+    },
+    "116": {
+        "id": 116,
+        "name": "Ness-Quick Weedkiller",
+        "desc": "The label on this bag of weedkiller implies that it is also edible when added to milk. What are you worried about ?",
+        "cat": "Misc",
+        "img": "item_digger"
+    },
+    "117": {
+        "id": 117,
+        "name": "Food Parcel",
+        "desc": "There's an abominable stench of mould and rotting flesh coming from this box... but you are almost certain that there is something edible inside. At least you hope so...",
+        "cat": "Food",
+        "img": "item_chest_food"
+    },
+    "118": {
+        "id": 118,
+        "name": "Doggy Bag",
+        "desc": "An old, greasy paper bag which must contain something to eat... It does smell horrific though...",
+        "cat": "Food",
+        "img": "item_food_bag"
+    },
+    "119": {
+        "id": 119,
+        "name": "Packet of Soft Crisps",
+        "desc": "The crisps are soft and taste like dry paper, but let's not be fussy... a meal is a meal.",
+        "cat": "Food",
+        "img": "item_food_bar1"
+    },
+    "120": {
+        "id": 120,
+        "name": "Mouldy Neapolitan",
+        "desc": "A chocolate and vanilla cake wrapped in plastic. If you shake the packet, it seems like something has liquified inside...",
+        "cat": "Food",
+        "img": "item_food_bar2"
+    },
+    "121": {
+        "id": 121,
+        "name": "Dried Chewing Gum",
+        "desc": "A fistful of dried chewing gum. Theoretically, this should be chewed, but not swallowed. However, in this hole, you're in no position to be picky!",
+        "cat": "Food",
+        "img": "item_food_bar3"
+    },
+    "122": {
+        "id": 122,
+        "name": "Rancid Jaffa Cakes",
+        "desc": "They're dry and even look stale. You'd give anything to get rid of the taste now...",
+        "cat": "Food",
+        "img": "item_food_biscuit"
+    },
+    "123": {
+        "id": 123,
+        "name": "Half-eaten Chicken Wings",
+        "desc": "Two chicken wings that someone started eating then threw away... Hmmm...",
+        "cat": "Food",
+        "img": "item_food_chick"
+    },
+    "124": {
+        "id": 124,
+        "name": "Out-of-Date Biscuits",
+        "desc": "A handful of biscuits filled with jam... of some description... maybe some kind of fruit. It tastes kinda meaty though.",
+        "cat": "Food",
+        "img": "item_food_pims"
+    },
+    "125": {
+        "id": 125,
+        "name": "Stale Tart",
+        "desc": "A really strong-smelling tart... To be avoided as a rule, but in this case you just think nice thoughts and tuck in.",
+        "cat": "Food",
+        "img": "item_food_tarte"
+    },
+    "126": {
+        "id": 126,
+        "name": "Mouldy Ham Sandwich",
+        "desc": "Part of a sandwich which tastes nothing like you had expected, or hoped...",
+        "cat": "Food",
+        "img": "item_food_sandw"
+    },
+    "127": {
+        "id": 127,
+        "name": "Chinese Noodles",
+        "desc": "Despite years spent in the desert, these chinese noodles still look and taste exactly the same.",
+        "cat": "Food",
+        "img": "item_food_noodles"
+    },
+    "128": {
+        "id": 128,
+        "name": "Strong Spices",
+        "desc": "A small sachet of mixed spices...",
+        "cat": "Misc",
+        "img": "item_spices"
+    },
+    "129": {
+        "id": 129,
+        "name": "Spicy Chinese Noodles",
+        "desc": "Heavily seasoned chinese noodles! This makes a pleasant change from eating things that are decomposing.",
+        "cat": "Food",
+        "img": "item_food_noodles_hot"
+    },
+    "130": {
+        "id": 130,
+        "name": "Incomplete Deck of Cards",
+        "desc": "What should be a 54 card deck is, well, not. The missing cards don't stop you playing with them though, because every moment of enjoyment is to be treasured in this hellhole... Go big or go broke !",
+        "cat": "Misc",
+        "img": "item_cards"
+    },
+    "131": {
+        "id": 131,
+        "name": "Box of Games",
+        "desc": "The box contains a game... probably !",
+        "cat": "Box",
+        "img": "item_game_box"
+    },
+    "132": {
+        "id": 132,
+        "name": "Aqua-Splash (incomplete)",
+        "desc": "A formidable weapon, but it needs a few more parts to get it working...",
+        "cat": "Misc",
+        "img": "item_watergun_opt_part"
+    },
+    "133": {
+        "id": 133,
+        "name": "Pocket Vibrator (incomplete)",
+        "desc": "It vibrates, tickles and titillates you and even makes you forget all your worries for a short while. (Requires 1 battery).",
+        "cat": "Misc",
+        "img": "item_vibr_empty"
+    },
+    "134": {
+        "id": 134,
+        "name": "Meaty Bone",
+        "desc": "A bone still with some flesh on it... strange. It still seems fresh too. Maybe it's from an animal that was killed during the night...",
+        "cat": "Food",
+        "img": "item_bone_meat"
+    },
+    "135": {
+        "id": 135,
+        "name": "Broken Human Bone",
+        "desc": "A dried bone (a tibia by the looks of it) which it seems that someone has been chewing recently... it should still be useful.",
+        "cat": "Weapon",
+        "img": "item_bone"
+    },
+    "136": {
+        "id": 136,
+        "name": "Patchwork Beam",
+        "desc": "A relatively solid beam made from an assortment of scrap wood.",
+        "cat": "Rsc",
+        "img": "item_wood_beam"
+    },
+    "137": {
+        "id": 137,
+        "name": "Metal Support",
+        "desc": "Rudimentary crucible steel scaffolding made from the carburization of wrought iron.",
+        "cat": "Rsc",
+        "img": "item_metal_beam"
+    },
+    "138": {
+        "id": 138,
+        "name": "Scrap Metal",
+        "desc": "Rusty scraps of metal, wire mesh and screws... Nothing immediately useful, but if you take it back to the town maybe it can be recycled.",
+        "cat": "Rsc",
+        "img": "item_metal_bad"
+    },
+    "139": {
+        "id": 139,
+        "name": "Rotting Log",
+        "desc": "A decent-sized log covered in sticky mushrooms. It's no good for anything until it is cut properly in town...",
+        "cat": "Rsc",
+        "img": "item_wood_bad"
+    },
+    "140": {
+        "id": 140,
+        "name": "Hacksaw",
+        "desc": "Most of the teeth on this saw are bent, but it still does a decent job of cutting things up (the saw reduces the number of action points needed for any task at the workshop by 1 point. The saw must be carried in your backpack.)",
+        "cat": "Misc",
+        "img": "item_saw_tool"
+    },
+    "141": {
+        "id": 141,
+        "name": "Quality Log",
+        "desc": "A decent log which could be used as a stool. Look - it's better than nothing...",
+        "cat": "Furniture",
+        "img": "item_wood_log"
+    },
+    "142": {
+        "id": 142,
+        "name": "Broken Electronic Device",
+        "desc": "An old, unidentifiable household appliance. Maybe if you dismantle it you can find something useful?",
+        "cat": "Rsc",
+        "img": "item_electro_box"
+    },
+    "143": {
+        "id": 143,
+        "name": "Flatpacked Furniture",
+        "desc": "A piece of furniture, as yet unassembled, which could well be anything...",
+        "cat": "Misc",
+        "img": "item_deco_box"
+    },
+    "144": {
+        "id": 144,
+        "name": "Damaged Hacksaw",
+        "desc": "This saw could be very useful if it was patched up...",
+        "cat": "Misc",
+        "img": "item_saw_tool_part"
+    },
+    "145": {
+        "id": 145,
+        "name": "Mechanism",
+        "desc": "This mechanism looks like it is a part of something much larger, like a machine or some kind of vehicle... It's pretty much useless on its own.",
+        "cat": "Rsc",
+        "img": "item_mecanism"
+    },
+    "146": {
+        "id": 146,
+        "name": "Trestle",
+        "desc": "A pretty solid trestle which can be used to improve your home defences or those of the town.",
+        "cat": "Armor",
+        "img": "item_trestle"
+    },
+    "147": {
+        "id": 147,
+        "name": "J\u00e4rpen Table",
+        "desc": "Held together entirely with elastic bands and wedges of wood, this table would look great in your \"living room\". Also, if you place it upright, it could even save your life...",
+        "cat": "Armor",
+        "img": "item_table"
+    },
+    "148": {
+        "id": 148,
+        "name": "Water Purifying Tablets",
+        "desc": "When added to water, these disinfectant capsules make water safe to drink. These were previously used for cleaning toilets. You start to imagine how the water is going to taste afterwards... (NOTE: The yield of this product is much lower than that of the Industrial Purifier).",
+        "cat": "Drug",
+        "img": "item_water_cleaner"
+    },
+    "149": {
+        "id": 149,
+        "name": "Intestine Melon",
+        "desc": "Normally, the intestine melon grows in the stomachs of corpses, near the large colon. However, it seems that your vegetable garden is doing surprisingly well... maybe you built it on the site of an ancient Indian graveyard?",
+        "cat": "Food",
+        "img": "item_vegetable_tasty"
+    },
+    "150": {
+        "id": 150,
+        "name": "Flash Powder",
+        "desc": "This firework powder makes a good distraction if it's used correctly...",
+        "cat": "Misc",
+        "img": "item_powder"
+    },
+    "151": {
+        "id": 151,
+        "name": "Flash Grenade",
+        "desc": "This homemade grenade will distract nearby zombies and make them concentrate on something other than your oh-so-tasty flesh... giving you precious seconds to do your thing... running away probably.",
+        "cat": "Misc",
+        "img": "item_flash"
+    },
+    "152": {
+        "id": 152,
+        "name": "Teddy Bear",
+        "desc": "A small plush teddy bear which would have been a child's pride and joy... once upon a time...",
+        "cat": "Furniture",
+        "img": "item_teddy"
+    },
+    "153": {
+        "id": 153,
+        "name": "Crate Lid",
+        "desc": "This was formerly used to seal a large crate. Nothing complicated, just some old planks nailed together. If you can patch it up, it could be very useful for the town's defences.",
+        "cat": "Misc",
+        "img": "item_wood_plate_part"
+    },
+    "154": {
+        "id": 154,
+        "name": "Solid Wooden Board",
+        "desc": "This large crate lid is just the thing to barricade yourself in your home or to help keep the undead outside the town...",
+        "cat": "Armor",
+        "img": "item_wood_plate"
+    },
+    "155": {
+        "id": 155,
+        "name": "Wad of Cash",
+        "desc": "A wad of dyed paper and some copper disks that formerly served as a currency of sorts. It may feel good to have America's deficit in your sky rocket but anything you can't eat or shoot up is pretty much worthless now...",
+        "cat": "Furniture",
+        "img": "item_money"
+    },
+    "156": {
+        "id": 156,
+        "name": "Tool Bag",
+        "desc": "A bag of assorted tools. Some are missing a handle, some need re-assembled... They really need some attention if you want to use them.",
+        "cat": "Misc",
+        "img": "item_repair_kit_part_raw"
+    },
+    "157": {
+        "id": 157,
+        "name": "Radius Mark II (incomplete)",
+        "desc": "The Radius Mark II beacon is a device which has been cobbled together from the limited equipment available that detects any creatures within a given area. Some say it causes cancer and kills brain cells, but you won't live long enough for that to be a concern.",
+        "cat": "Misc",
+        "img": "item_radius_mk2_part"
+    },
+    "158": {
+        "id": 158,
+        "name": "Radius Mark II",
+        "desc": "The Radius Mark II Radar Beacon is a device which has been cobbled together from the limited equipment available which detects any creatures withing a given area. Some say it causes cancer and kills brain cells, but you won't live long enough for that to be a concern.",
+        "cat": "Misc",
+        "img": "item_radius_mk2"
+    },
+    "159": {
+        "id": 159,
+        "name": "Kwik-fix",
+        "desc": "Kwik-Fix is a small repair kit which can be used to repair anything and everything. It contains some basic tools, spare plastic parts and \"DIY for beginners\" printed in 7 languages.",
+        "cat": "Misc",
+        "img": "item_repair_one"
+    },
+    "160": {
+        "id": 160,
+        "name": "Engine (incomplete)",
+        "desc": "It's a small engine of some sort, covered in splashes of burnt oil and other unidentified substances. However, it's pretty heavy.",
+        "cat": "Misc",
+        "img": "item_engine_part"
+    },
+    "161": {
+        "id": 161,
+        "name": "Old Washing Machine",
+        "desc": "An old machine for washing dirty linen and clothing. An artefact from days gone by when civilisations considered cleanliness to be next to godliness (of paramount importance). Nowadays that just seems ridiculous...",
+        "cat": "Furniture",
+        "img": "item_machine_1"
+    },
+    "162": {
+        "id": 162,
+        "name": "Carcinogenic Oven",
+        "desc": "Legends state that microwave technology was one of the reasons for the decline of civilisation. Some also say that the existence of zombies isn't unrelated.",
+        "cat": "Furniture",
+        "img": "item_machine_2"
+    },
+    "163": {
+        "id": 163,
+        "name": "Beer Fridge",
+        "desc": "A magical box which keeps the Britneys cool. I suppose it could also be used for other things though. It doesn't work any more, but maybe if you take it apart you might find something of use...",
+        "cat": "Furniture",
+        "img": "item_machine_3"
+    },
+    "164": {
+        "id": 164,
+        "name": "A letter with no address",
+        "desc": "An envelope which has been splashed with blood where the address should be, so it is no longer legible... It has never been opened.",
+        "cat": "Misc",
+        "img": "item_rp_letter"
+    },
+    "165": {
+        "id": 165,
+        "name": "Scroll",
+        "desc": "It's soaking wet and covered in mud. No idea what it is, or was... Maybe there's something interesting to read if you can clean it up...",
+        "cat": "Misc",
+        "img": "item_rp_scroll"
+    },
+    "166": {
+        "id": 166,
+        "name": "Instruction Manual",
+        "desc": "A collection of technical texts detailing how to build or repair God-knows-what. Some pages have notes and memos on them...",
+        "cat": "Misc",
+        "img": "item_rp_manual"
+    },
+    "167": {
+        "id": 167,
+        "name": "Illegible Notebook",
+        "desc": "A small notebook, which must have belonged to another citizen. He lost it, so it's now yours. Who knows what secrets might be revealed within?",
+        "cat": "Misc",
+        "img": "item_rp_book2"
+    },
+    "168": {
+        "id": 168,
+        "name": "Photo Album",
+        "desc": "An old High School yearbook, or something like that: The photos are mind-numbingly boring. However, in flicking through the pages, you see another sheet that has been hidden inside...",
+        "cat": "Misc",
+        "img": "item_rp_book"
+    },
+    "169": {
+        "id": 169,
+        "name": "Stack of Papers",
+        "desc": "A stack of red-tape, bureaucracy and uninteresting bumph. However, you notice the notes on certain pages...",
+        "cat": "Misc",
+        "img": "item_rp_sheets"
+    },
+    "170": {
+        "id": 170,
+        "name": "Rusty Chain",
+        "desc": "This old iron chain is completely twisted, so is not of much use... I suppose you could strangle someone with it though.",
+        "cat": "Weapon",
+        "img": "item_chain"
+    },
+    "171": {
+        "id": 171,
+        "name": "Dodgy Homemade Dish",
+        "desc": "Random ingredients thrown together, a hint of cooking, seasoned with desert sand. Dodgy dish. Done...",
+        "cat": "Food",
+        "img": "item_dish"
+    },
+    "172": {
+        "id": 172,
+        "name": "Tasty Homemade Dish",
+        "desc": "At first glance, it looks no better than the usual rations. In reality though, it tastes great and makes you feel infinitely better!",
+        "cat": "Food",
+        "img": "item_dish_tasty"
+    },
+    "173": {
+        "id": 173,
+        "name": "Iron Chest",
+        "desc": "Heavy but practical, this iron chest is perfect for storing all your belongings at home.",
+        "cat": "Furniture",
+        "img": "item_home_box_xl"
+    },
+    "174": {
+        "id": 174,
+        "name": "Boxes",
+        "desc": "Some cardboard boxes previously from domestic appliances. Even if they're partially rotten and clearly smell of mould, they can still be used in your home... as furniture.",
+        "cat": "Furniture",
+        "img": "item_home_box"
+    },
+    "175": {
+        "id": 175,
+        "name": "Makeshift Barricade",
+        "desc": "This wood and sheet metal construction must have previously been used as a barricade by another citizen. Judging by the cracks, the blood and the repairs, it wasn't sufficient...",
+        "cat": "Furniture",
+        "img": "item_home_def"
+    },
+    "176": {
+        "id": 176,
+        "name": "Envelope",
+        "desc": "A large sealed envelope containing... papers. Or so you'd expect.",
+        "cat": "Box",
+        "img": "item_book_gen_letter"
+    },
+    "177": {
+        "id": 177,
+        "name": "Parcel",
+        "desc": "There appears to be no address or any forwarding details on this parcel. You shake it, and hear something rattling inside...",
+        "cat": "Box",
+        "img": "item_book_gen_box"
+    },
+    "178": {
+        "id": 178,
+        "name": "Wire Mesh",
+        "desc": "A small rusty piece of mesh. It's seen better days...",
+        "cat": "Furniture",
+        "img": "item_fence"
+    },
+    "179": {
+        "id": 179,
+        "name": "Water Pistol (3 shots)",
+        "desc": "The water pistol... When all is said and done, the desert is really just a huge sandpit... Please note: This toy only works with fresh water (eg. from a flask).",
+        "cat": "Weapon",
+        "img": "item_watergun_3"
+    },
+    "180": {
+        "id": 180,
+        "name": "Water Pistol (2 shots)",
+        "desc": "The water pistol... When all is said and done, the desert is really just a huge sandpit... Please note: This toy only works with fresh water (eg. from a flask).",
+        "cat": "Weapon",
+        "img": "item_watergun_2"
+    },
+    "181": {
+        "id": 181,
+        "name": "Water Pistol (1 shot)",
+        "desc": "The water pistol... When all is said and done, the desert is really just a huge sandpit... Please note: This toy only works with fresh water (eg. from a flask).",
+        "cat": "Weapon",
+        "img": "item_watergun_1"
+    },
+    "182": {
+        "id": 182,
+        "name": "Aqua-Splash (5 shots)",
+        "desc": "The Aqua-Splash is a massively overpowered water gun, ideal for long walks in the World Beyond ! Not suitable for children under 8 years of age.",
+        "cat": "Weapon",
+        "img": "item_watergun_opt_5"
+    },
+    "183": {
+        "id": 183,
+        "name": "Aqua-Splash (4 shots)",
+        "desc": "The Aqua-Splash is a massively overpowered water gun, ideal for long walks in the World Beyond ! Not suitable for children under 8 years of age.",
+        "cat": "Weapon",
+        "img": "item_watergun_opt_4"
+    },
+    "184": {
+        "id": 184,
+        "name": "Opened packet of Cigarettes",
+        "desc": "An old packet of cigarettes that smells of rotting flesh and mould. They're a rare find these days though... Alongside several skulls and crossbones, the warning : \"Smoking Kills\" is printed in red...",
+        "cat": "Misc",
+        "img": "item_cigs"
+    },
+    "185": {
+        "id": 185,
+        "name": "PUTA Mark II Calibrator",
+        "desc": "This antique calibrator is designed to be mounted on the Battery Launcher 1-ITF. It allows the pressure in the firing chamber to be accurately adjusted and regulated.",
+        "cat": "Misc",
+        "img": "item_pilegun_upkit"
+    },
+    "186": {
+        "id": 186,
+        "name": "Battery Launcher Mk. II (empty)",
+        "desc": "This upgraded version of the Battery Launcher 1-ITF features a PDTT Mark II Calibrator. By precisely regulating the firepower, this feature sometimes allows batteries which have already been fired to be recovered.",
+        "cat": "Weapon",
+        "img": "item_pilegun_up_empty"
+    },
+    "187": {
+        "id": 187,
+        "name": "Battery Launcher Mk. II (loaded)",
+        "desc": "This upgraded version of the Battery Launcher 1-ITF features a PDTT Mark II Calibrator. By precisely regulating the firepower, this feature sometimes allows batteries which have already been fired to be recovered.",
+        "cat": "Weapon",
+        "img": "item_pilegun_up"
+    },
+    "188": {
+        "id": 188,
+        "name": "Crushed Battery",
+        "desc": "This used to be a battery. Now it's just a lump of squashed metal...",
+        "cat": "Misc",
+        "img": "item_pile_broken"
+    },
+    "189": {
+        "id": 189,
+        "name": "Construction Kit (3)",
+        "desc": "This large box is covered in printed labels and wrapped in cellophane. It most likely contains construction materials.",
+        "cat": "Box",
+        "img": "item_rsc_pack_3"
+    },
+    "190": {
+        "id": 190,
+        "name": "Construction Kit (2)",
+        "desc": "This large box is covered in printed labels and wrapped in cellophane. It most likely contains construction materials.",
+        "cat": "Box",
+        "img": "item_rsc_pack_2"
+    },
+    "191": {
+        "id": 191,
+        "name": "Construction Kit (1)",
+        "desc": "This large box is covered in printed labels and wrapped in cellophane. It most likely contains construction materials.",
+        "cat": "Box",
+        "img": "item_rsc_pack_1"
+    },
+    "192": {
+        "id": 192,
+        "name": "Car Door",
+        "desc": "This hefty door will make an excellent improvised shield for when you need to get through crowds of zombies intent on munching your tasty brain (on one small cracker, as an aperitif presumably...).",
+        "cat": "Armor",
+        "img": "item_car_door"
+    },
+    "193": {
+        "id": 193,
+        "name": "Car Door (incomplete)",
+        "desc": "A car door, but it's missing some parts which would allow it to be carried properly...",
+        "cat": "Misc",
+        "img": "item_car_door_part"
+    },
+    "194": {
+        "id": 194,
+        "name": "Vial of Poison",
+        "desc": "This tiny quantity of poison is sufficient to kill any of your fellow citizens. Add it to some food, a flask or a drug and it will become contaminated, turning it into a deadly weapon...",
+        "cat": "Misc",
+        "img": "item_poison"
+    },
+    "195": {
+        "id": 195,
+        "name": "Corrosive Liquid",
+        "desc": "With the right ingredients, this acid could be transformed into a dangerous poison. but you'd really have to want to kill someone... You don't want that, do you?",
+        "cat": "Misc",
+        "img": "item_poison_part"
+    },
+    "196": {
+        "id": 196,
+        "name": "Shrewd Citizen's Stash",
+        "desc": "When you garner a certain amount of experience of the world in which we live, you quickly learn to put some useful bits and pieces aside, because who knows, one day they just might save your life...",
+        "cat": "Box",
+        "img": "item_chest_hero"
+    },
+    "197": {
+        "id": 197,
+        "name": "Gift Parcel",
+        "desc": "The address has become illegible, but there's definitely something inside... Merry Christmas!!!",
+        "cat": "Box",
+        "img": "item_postal_box"
+    },
+    "198": {
+        "id": 198,
+        "name": "Lunch Box",
+        "desc": "In the absence of a proper meal, sat round a nicely-set table with friends, you'll have to make do with this emergency lunch box which you hid under the bed some time ago...",
+        "cat": "Box",
+        "img": "item_food_armag"
+    },
+    "199": {
+        "id": 199,
+        "name": "Handful of Sweets",
+        "desc": "Just thinking about these delicious sweets brings a tear to your eye...",
+        "cat": "Food",
+        "img": "item_food_candies"
+    },
+    "200": {
+        "id": 200,
+        "name": "Sheet of Plywood",
+        "desc": "This old sheet of plywood came from some old building. With a little effort, it could be used to make a good hideout.",
+        "cat": "Misc",
+        "img": "item_out_def"
+    },
+    "201": {
+        "id": 201,
+        "name": "Torch",
+        "desc": "This can stay alight for hours, so it can be used to keep zombies away. In addition, if you place it on the ground in the desert, it will reduce the penalty to night searches in this sector.",
+        "cat": "Armor",
+        "img": "item_torch"
+    },
+    "202": {
+        "id": 202,
+        "name": "Burnt out Torch",
+        "desc": "A stick, basically, which is surely no good for anything now...",
+        "cat": "Weapon",
+        "img": "item_torch_off"
+    },
+    "203": {
+        "id": 203,
+        "name": "Dried Marshmallows",
+        "desc": "A handful of hardened marshmallows that smell of dead rat. As they are now, they're completely inedible...",
+        "cat": "Food",
+        "img": "item_chama"
+    },
+    "204": {
+        "id": 204,
+        "name": "Burnt Marshmallows",
+        "desc": "A handful of hardened marshmallows that smell of dead rat. Now they are completely burnt, I guess you could say they are edible. You could maybe say they taste good if you really think about it...",
+        "cat": "Food",
+        "img": "item_chama_tasty"
+    },
+    "205": {
+        "id": 205,
+        "name": "PC Base Unit",
+        "desc": "This old metal box used to be full of electronic components. It doesn't seem to have any obvious use now...",
+        "cat": "Furniture",
+        "img": "item_pc"
+    },
+    "206": {
+        "id": 206,
+        "name": "Safe",
+        "desc": "Who could even hazard a guess as to what the safe may contain? Not you in any case, not unless you know the secret combination...",
+        "cat": "Box",
+        "img": "item_safe"
+    },
+    "207": {
+        "id": 207,
+        "name": "Encyclopedia",
+        "desc": "This mighty tome is a volume from a series of encyclopedias known as Twinpedia. The pages are covered in strange markings and annotations as if the book has passed through the hands of many others before reaching you...",
+        "cat": "Misc",
+        "img": "item_rp_twin"
+    },
+    "208": {
+        "id": 208,
+        "name": "Water Cooler Bottle (Empty)",
+        "desc": "You'd usually expect to find one of these in some office somewhere, but by no small miracle it has fallen into your grubby paws. This could be most useful...",
+        "cat": "Misc",
+        "img": "item_water_can_empty"
+    },
+    "209": {
+        "id": 209,
+        "name": "Water Cooler Bottle (1 Ration)",
+        "desc": "You'd usually expect to find one of these in some office somewhere, but by no small miracle it has fallen into your grubby paws. This could be most useful...",
+        "cat": "Food",
+        "img": "item_water_can_1"
+    },
+    "210": {
+        "id": 210,
+        "name": "Water Cooler Bottle (2 Rations)",
+        "desc": "You'd usually expect to find one of these in some office somewhere, but by no small miracle it has fallen into your grubby paws. This could be most useful...",
+        "cat": "Food",
+        "img": "item_water_can_2"
+    },
+    "211": {
+        "id": 211,
+        "name": "Water Cooler Bottle (3 Rations)",
+        "desc": "You'd usually expect to find one of these in some office somewhere, but by no small miracle it has fallen into your grubby paws. This could be most useful...",
+        "cat": "Food",
+        "img": "item_water_can_3"
+    },
+    "212": {
+        "id": 212,
+        "name": "Betapropine 5mg (expired)",
+        "desc": "The effects of this little pill are mysterious to say the least... On the box, it states: \"not to be taken by testers under 18 years of age\". Strange...",
+        "cat": "Drug",
+        "img": "item_beta_drug_bad"
+    },
+    "213": {
+        "id": 213,
+        "name": "Betapropine 5mg",
+        "desc": "On the box, it states: \"not to be taken by testers under 18 years of age\". Strange...",
+        "cat": "Drug",
+        "img": "item_beta_drug"
+    },
+    "214": {
+        "id": 214,
+        "name": "Fleshrooms",
+        "desc": "These are berry-like plants which grow on decomposing corpses: it's not unusual to see them on zombies or on dead animals... Are you sure they're ok to eat?",
+        "cat": "Misc",
+        "img": "item_fruit_sub_part"
+    },
+    "215": {
+        "id": 215,
+        "name": "Sticky Pastry Ball",
+        "desc": "A cake made from \"Fleshrooms\", a berry which basically grows on corpses...",
+        "cat": "Misc",
+        "img": "item_fruit_part"
+    },
+    "216": {
+        "id": 216,
+        "name": "Pound of Flesh",
+        "desc": "An old lump of flesh and skin of origin unknown. What do you propose doing with it?",
+        "cat": "Misc",
+        "img": "item_flesh_part"
+    },
+    "217": {
+        "id": 217,
+        "name": "Grisly Bomb",
+        "desc": "The best thing about this deformed lump of flesh is that the stench of decay hits you from ten metres away. Ideal for distracting zombies while you get the hell outta there!",
+        "cat": "Misc",
+        "img": "item_flesh"
+    },
+    "218": {
+        "id": 218,
+        "name": "Thick Solution",
+        "desc": "This flask contains an oily liquid with incredible colours. Maybe if it is combined with something else, you can make something useful?",
+        "cat": "Drug",
+        "img": "item_pharma_part"
+    },
+    "219": {
+        "id": 219,
+        "name": "Fleshroom Puree",
+        "desc": "Oh my god this smells vile! It's made from \"fleshroom berries\" which grow on corpses. If you're not worried about dying from a virulent infection, it just might stop you being hungry... maybe permanently.",
+        "cat": "Food",
+        "img": "item_fruit"
+    },
+    "220": {
+        "id": 220,
+        "name": "Stagnant Water Can",
+        "desc": "A metal coil allows small amounts of water to be condensed and collected from water vapour in the air. The problem is that the water is not drinkable as it is...",
+        "cat": "Misc",
+        "img": "item_water_cup_part"
+    },
+    "221": {
+        "id": 221,
+        "name": "Purified Stagnant Water",
+        "desc": "A metal coil allows small amounts of water to be condensed and collected from water vapor in the air. It's a very small amount actually, but it's better than nothing.",
+        "cat": "Food",
+        "img": "item_water_cup"
+    },
+    "222": {
+        "id": 222,
+        "name": "Banned Citizen's Note",
+        "desc": "This note was written by a banned citizen... Who knows what he could have written ?",
+        "cat": "Misc",
+        "img": "item_banned_note"
+    },
+    "223": {
+        "id": 223,
+        "name": "Bloody Dressing",
+        "desc": "This blood-soaked bandage belonged to an infected citizen...",
+        "cat": "Drug",
+        "img": "item_infect_poison_part"
+    },
+    "224": {
+        "id": 224,
+        "name": "Cursed Cuddly Toy",
+        "desc": "A small plush teddy bear which would have been a child's pride and joy... or not...",
+        "cat": "Furniture",
+        "img": "item_teddy"
+    },
+    "225": {
+        "id": 225,
+        "name": "Sawdust Steak",
+        "desc": "A slice of meat, covered in sawdust and wood chippings... Only they're not chips, but rather woodworm, which is logical enough seeing as the thing won't stop moving.",
+        "cat": "Food",
+        "img": "item_woodsteak"
+    },
+    "226": {
+        "id": 226,
+        "name": "Second-hand Red Coat",
+        "desc": "It's a bit big for you: it seems to have been previously owned by someone with a big belly and bad taste, as can clearly be seen from the white for on the collar and cuffs...",
+        "cat": "Misc",
+        "img": "item_christmas_suit_1"
+    },
+    "227": {
+        "id": 227,
+        "name": "Ripped Red Trousers",
+        "desc": "These old strides reek of urine, and have been repaired regularly. They probably look better on... (ON FIRE!) They'll suit you perfectly!",
+        "cat": "Misc",
+        "img": "item_christmas_suit_2"
+    },
+    "228": {
+        "id": 228,
+        "name": "Foul-smelling Red Hat",
+        "desc": "A hat which have been used as a nest by several generations of pigeons and other malodorous wildlife. The interior lining of dried droppings gives it a strange texture... and makes your head itch when you put it on.",
+        "cat": "Misc",
+        "img": "item_christmas_suit_3"
+    },
+    "229": {
+        "id": 229,
+        "name": "Foul-smelling Vintage Suit",
+        "desc": "This outfit suits you down to the ground (some say that it even smells like you). You suddenly feel like you should be bringing joy to your neighbours by sliding discretely down their chimney with your arms full of gifts. You can use this tactic to burgle, pillage and loot your way to happiness at your neighbours' expense. Ah, the magic of Cristmas...",
+        "cat": "Misc",
+        "img": "item_christmas_suit_full"
+    },
+    "230": {
+        "id": 230,
+        "name": "Mobile Phone",
+        "desc": "This antique gadget was a very well known model. Right up until the point where they all exploded, killing millions of people and wiping great cities off the map. This should surely make a quality grenade!",
+        "cat": "Weapon",
+        "img": "item_iphone"
+    },
+    "231": {
+        "id": 231,
+        "name": "Festering Flesh",
+        "desc": "This disgusting lump of flesh must have been torn off another citizen and left with the worms for a while. The odious stench could probably even cover your own atrocious body odour! This item will significantly increase your chances of surviving a little camping trip (you must be carrying the item to benefit from the bonus).",
+        "cat": "Misc",
+        "img": "item_smelly_meat"
+    },
+    "232": {
+        "id": 232,
+        "name": "Novelty Torch (off)",
+        "desc": "This big, dubiously designed pocket torch would be really useful for your searches in the desert were it not for the fact that day and night are but concepts in MyHordes. You might be able to find another use for it though.",
+        "cat": "Furniture",
+        "img": "item_maglite_off"
+    },
+    "233": {
+        "id": 233,
+        "name": "Novelty Torch (1 charge)",
+        "desc": "This big, dubiously designed pocket torch would be really useful for your searches in the desert were it not for the fact that day and night are but concepts in MyHordes. You might be able to find another use for it though.",
+        "cat": "Furniture",
+        "img": "item_maglite_1"
+    },
+    "234": {
+        "id": 234,
+        "name": "Novelty Torch (2 charges)",
+        "desc": "This big, dubiously designed pocket torch would be really useful for your searches in the desert were it not for the fact that day and night are but concepts in MyHordes. You might be able to find another use for it though.",
+        "cat": "Furniture",
+        "img": "item_maglite_2"
+    },
+    "235": {
+        "id": 235,
+        "name": "Traveller's Corpse",
+        "desc": "This corpse isn't from yesterday: the worms have already eaten a decent amount of whoever it was... Are you sure you want to wander around with this monstrosity on your shoulders?",
+        "cat": "Food",
+        "img": "item_cadaver"
+    },
+    "236": {
+        "id": 236,
+        "name": "Gnawed Corpse",
+        "desc": "Bones which appear to have been chewed by a beast or... someone. Something unpleasant is going on in town.",
+        "cat": "Misc",
+        "img": "item_cadaver_remains"
+    },
+    "237": {
+        "id": 237,
+        "name": "\u00ab Pine Fresh \u00bb Smoke Bomb",
+        "desc": "A very popular model among smoke-bomb fans, this one smells of pine trees. Please note: this object deletes all entries in the register from the last 3 minutes. It also conceals your next movements for one minute after use. WARNING: use this object AFTER having carried out the actions you wish to conceal...",
+        "cat": "Misc",
+        "img": "item_smoke_bomb"
+    },
+    "238": {
+        "id": 238,
+        "name": "Sand Ball",
+        "desc": "A harmless ball of sand (with some gravel for good measure) which you are just itching to launch into another citizen's face. You have no idea where this bizarre craving came from.",
+        "cat": "Misc",
+        "img": "item_sand_ball"
+    },
+    "239": {
+        "id": 239,
+        "name": "Construction Blueprint (common)",
+        "desc": "You are holding what appears to be a construction blueprint! It's difficult to say exactly what type of project it is for though, it needs to be studied before it will become any use whatsoever.",
+        "cat": "Misc",
+        "img": "item_bplan_c"
+    },
+    "240": {
+        "id": 240,
+        "name": "Construction Blueprint (uncommon)",
+        "desc": "You are holding what appears to be a construction blueprint! It's difficult to say exactly what type of project it is for though, it needs to be studied before it will become any use whatsoever.",
+        "cat": "Misc",
+        "img": "item_bplan_u"
+    },
+    "241": {
+        "id": 241,
+        "name": "Construction Blueprint (rare)",
+        "desc": "You are holding what appears to be a construction blueprint! It's difficult to say exactly what type of project it is for though, it needs to be studied before it will become any use whatsoever.",
+        "cat": "Misc",
+        "img": "item_bplan_r"
+    },
+    "242": {
+        "id": 242,
+        "name": "Construction Blueprint (very rare!)",
+        "desc": "You are holding what appears to be a construction blueprint! It's difficult to say exactly what type of project it is for though, it needs to be studied before it will become any use whatsoever.",
+        "cat": "Misc",
+        "img": "item_bplan_e"
+    },
+    "243": {
+        "id": 243,
+        "name": "Architect's Chest",
+        "desc": "An Architect's Chest. Not that kind of chest.",
+        "cat": "Box",
+        "img": "item_bplan_box"
+    },
+    "244": {
+        "id": 244,
+        "name": "Sealed Architect's Chest",
+        "desc": "This sealed chest almost certainly contains a rare and valuable document...",
+        "cat": "Box",
+        "img": "item_bplan_box_e"
+    },
+    "245": {
+        "id": 245,
+        "name": "Egg",
+        "desc": "Now finding an egg should be comforting, but one thought won't leave your mind, where is the bloody chicken...",
+        "cat": "Food",
+        "img": "item_egg"
+    },
+    "246": {
+        "id": 246,
+        "name": "Apple",
+        "desc": "When one of these landed on Sir Newton's head, surely the first thing to cross his mind wasn't the first Universal Law of Gravity... having said that, there should be a few vitamins in there for the munching.",
+        "cat": "Food",
+        "img": "item_apple"
+    },
+    "247": {
+        "id": 247,
+        "name": "Exploding Grapefruit",
+        "desc": "It is large, juicy and makes a \"tic tac\" noise.",
+        "cat": "Weapon",
+        "img": "item_boomfruit"
+    },
+    "248": {
+        "id": 248,
+        "name": "Worn Leather Bag",
+        "desc": "This small leather bag would appear to contain documents of some sort. You pray harder than you've ever prayed before that it contains some adult literature... or the blueprints for a new, all-powerful building, and not a faded facsimile of the shipping forecast...",
+        "cat": "Misc",
+        "img": "item_bplan_drop"
+    },
+    "249": {
+        "id": 249,
+        "name": "Magnetic Key",
+        "desc": "This hi-tech key allows you to open doors secured up until level 6.2 AOC, only elite technicians are deigned to have one in their possession. Unfortunately, as yours is in pitiful condition, this key will only open one more door.",
+        "cat": "Misc",
+        "img": "item_magneticKey"
+    },
+    "250": {
+        "id": 250,
+        "name": "Bump Key",
+        "desc": "This key, a favourite amongst up-and-coming burglars, allows you to open any door in a matter of seconds. So easily in fact you might ask yourself what is the point in having normal keys. Unfortunately, as yours is in pitiful condition, this key will only open one more door.",
+        "cat": "Misc",
+        "img": "item_bumpKey"
+    },
+    "251": {
+        "id": 251,
+        "name": "Bottle Opener",
+        "desc": "This blank allows you to obtain a bump key, a favourite amongst up-and-coming burglars, which will allow you to open any door in a matter of seconds...",
+        "cat": "Misc",
+        "img": "item_classicKey"
+    },
+    "252": {
+        "id": 252,
+        "name": "Magnetic Key Blank",
+        "desc": "This hi-tech blank will allow you to open secured doored rated up to level 6.2 AOC.",
+        "cat": "Misc",
+        "img": "item_magnetic_print"
+    },
+    "253": {
+        "id": 253,
+        "name": "Bump Key Blank",
+        "desc": "This blank allows you to obtain a bump key, a favourite amongst up-and-coming burglars, which allows you to open any door in a matter of seconds...",
+        "cat": "Misc",
+        "img": "item_prints"
+    },
+    "254": {
+        "id": 254,
+        "name": "Bottle Opener Blank",
+        "desc": "Some of the rooms here are a tight squeeze to say the least, so this would appear to be the perfect tool with which to gain access and get down to some serious rummaging. Thanks to this blank, you'll be able to obtain one!",
+        "cat": "Misc",
+        "img": "item_bottle_print"
+    },
+    "255": {
+        "id": 255,
+        "name": "Ghoul Vaccine",
+        "desc": "This extremely rare serum has been developed from the DNA of an almost immune specimen that has withstood an infectious bite for more than 3 days. It allows a ghoul to return to its normal human state.",
+        "cat": "Drug",
+        "img": "item_vagoul"
+    },
+    "256": {
+        "id": 256,
+        "name": "Hotel Blueprint (uncommon)",
+        "desc": "You are holding what appears to be a construction blueprint! It's difficult to say exactly what type of project it is for though, it needs to be studied before it will become any use whatsoever.",
+        "cat": "Misc",
+        "img": "item_hbplan_u"
+    },
+    "257": {
+        "id": 257,
+        "name": "Hotel Blueprint (rare)",
+        "desc": "You are holding what appears to be a construction blueprint! It's difficult to say exactly what type of project it is for though, it needs to be studied before it will become any use whatsoever.",
+        "cat": "Misc",
+        "img": "item_hbplan_r"
+    },
+    "258": {
+        "id": 258,
+        "name": "Hotel Blueprint (very rare!)",
+        "desc": "You are holding what appears to be a construction blueprint! It's difficult to say exactly what type of project it is for though, it needs to be studied before it will become any use whatsoever.",
+        "cat": "Misc",
+        "img": "item_hbplan_e"
+    },
+    "259": {
+        "id": 259,
+        "name": "Bunker Blueprint (uncommon)",
+        "desc": "You are holding what appears to be a construction blueprint! It's difficult to say exactly what type of project it is for though, it needs to be studied before it will become any use whatsoever.",
+        "cat": "Misc",
+        "img": "item_bbplan_u"
+    },
+    "260": {
+        "id": 260,
+        "name": "Bunker Blueprint (rare)",
+        "desc": "You are holding what appears to be a construction blueprint! It's difficult to say exactly what type of project it is for though, it needs to be studied before it will become any use whatsoever.",
+        "cat": "Misc",
+        "img": "item_bbplan_r"
+    },
+    "261": {
+        "id": 261,
+        "name": "Bunker Blueprint (very rare!)",
+        "desc": "You are holding what appears to be a construction blueprint! It's difficult to say exactly what type of project it is for though, it needs to be studied before it will become any use whatsoever.",
+        "cat": "Misc",
+        "img": "item_bbplan_e"
+    },
+    "262": {
+        "id": 262,
+        "name": "Hospital Blueprint (uncommon)",
+        "desc": "You are holding what appears to be a construction blueprint! It's difficult to say exactly what type of project it is for though, it needs to be studied before it will become any use whatsoever.",
+        "cat": "Misc",
+        "img": "item_mbplan_u"
+    },
+    "263": {
+        "id": 263,
+        "name": "Hospital Blueprint (rare)",
+        "desc": "You are holding what appears to be a construction blueprint! It's difficult to say exactly what type of project it is for though, it needs to be studied before it will become any use whatsoever.",
+        "cat": "Misc",
+        "img": "item_mbplan_r"
+    },
+    "264": {
+        "id": 264,
+        "name": "Hospital Blueprint (very rare!)",
+        "desc": "You are holding what appears to be a construction blueprint! It's difficult to say exactly what type of project it is for though, it needs to be studied before it will become any use whatsoever.",
+        "cat": "Misc",
+        "img": "item_mbplan_e"
+    },
+    "265": {
+        "id": 265,
+        "name": "Lost Soul",
+        "desc": "You encounter a vaporous form that seems to be lamenting there. Perhaps you could collect it and find some use for it.",
+        "cat": "Misc",
+        "img": "item_soul_blue"
+    },
+    "266": {
+        "id": 266,
+        "name": "Tortured Soul",
+        "desc": "This doesn't look like your average lost soul... Maybe you should be a little careful with this one. In fact maybe you should talk to your resident voodooman...",
+        "cat": "Misc",
+        "img": "item_soul_red"
+    },
+    "267": {
+        "id": 267,
+        "name": "Weak Soul",
+        "desc": "You encounter a vaporous form that seems to be lamenting there. Perhaps you could collect it and find some use for it.",
+        "cat": "Misc",
+        "img": "item_soul_blue"
+    },
+    "268": {
+        "id": 268,
+        "name": "Mug of lukewarm liquid",
+        "desc": "You look at this oversized mug of beer with melancholy... Warm and tasteless, but surely the best thing you will have drunk since the Apocalypse. Something to remember the good old Oktoberfest days...",
+        "cat": "Food",
+        "img": "item_fest"
+    },
+    "269": {
+        "id": 269,
+        "name": "Sandy Pretzel",
+        "desc": "A tasty and edible snack... even after hanging around the ground for months. It tastes as if it was soaked in petrol (unfortunately too little to be used for the tank to the southwest of the city...) Beyond making you full, it can also amuse: it strongly reminds you of the hat of Princess Beatrice's wedding.",
+        "cat": "Food",
+        "img": "item_bretz"
+    },
+    "270": {
+        "id": 270,
+        "name": "Mangy Dachshund",
+        "desc": "The only form of life who can really give you love in this cursed hell. As far as you are familiar with dogs, this one is loyal, with sharp jaws and can grunt wonderfully. In the worst case, the butcher will be happy to \"take care\" of this \"sausage dog\"...",
+        "cat": "Armor",
+        "img": "item_tekel"
+    },
+    "271": {
+        "id": 271,
+        "name": "Stake Launcher",
+        "desc": "A stake launcher can be used to reinforce barricades or to defend against any manner of creature. Unfortunately there is only one stake left in the launcher.",
+        "cat": "Weapon",
+        "img": "item_rlaunc"
+    },
+    "272": {
+        "id": 272,
+        "name": "Kalashni-Splash",
+        "desc": "A powerful water weapon, whose broken mechanism is only enough for one shot.",
+        "cat": "Weapon",
+        "img": "item_kalach"
+    },
+    "273": {
+        "id": 273,
+        "name": "Hastily-built Desk",
+        "desc": "This rickety desk was clearly built in a rush. Dropped from the top of the ramparts, however, it could prove most useful by crushing some zombies.",
+        "cat": "Furniture",
+        "img": "item_bureau"
+    },
+    "274": {
+        "id": 274,
+        "name": "Empty Vending Machine",
+        "desc": "This vending machine has been of no use since the pillaging started, it can become very useful very quickly should you decide to toss it off the top of the ramparts.",
+        "cat": "Furniture",
+        "img": "item_distri"
+    },
+    "275": {
+        "id": 275,
+        "name": "Santa's Reindeer",
+        "desc": "There was a time when this magnificent animal was associated with marvellous legends... Those days are gone, but they are good for something else...",
+        "cat": "Misc",
+        "img": "item_renne"
+    },
+    "276": {
+        "id": 276,
+        "name": "Easter Egg",
+        "desc": "A largely mouldy easter egg, its putrid stench is a little like gunpowder, could the mould have changed its physical properties? Might be worth testing on the zombies.",
+        "cat": "Misc",
+        "img": "item_paques"
+    },
+    "277": {
+        "id": 277,
+        "name": "Collector Pins",
+        "desc": "Rummaging through the wastes a dull glint catches your eye. On closer inspection you find it to be an ANZAC Badge. You immediately feel the strength of ten warriors within you. Guard this badge with your life, and the lives of those who have fallen before you. This legendary item must have some kind of effect on the evil horde...",
+        "cat": "Weapon",
+        "img": "item_badge"
+    },
+    "278": {
+        "id": 278,
+        "name": "Kalashni-Splash (empty)",
+        "desc": "A powerful water gun against zombies. However, it does not kill many people when it is empty...",
+        "cat": "Weapon",
+        "img": "item_kalach"
+    },
+    "279": {
+        "id": 279,
+        "name": "Wire Reel",
+        "desc": "Make sure you don't get tangled up in this, we'd hate to have to cut off your fingers to set you free.",
+        "cat": "Rsc",
+        "img": "item_wire"
+    },
+    "280": {
+        "id": 280,
+        "name": "Empty Oil Can",
+        "desc": "From time to time we find empty oil cans in the desert, often accompanied by a corpse. When will citizens learn that motor oil is undrinkable...",
+        "cat": "Rsc",
+        "img": "item_oilcan"
+    },
+    "281": {
+        "id": 281,
+        "name": "Convex Lens",
+        "desc": "This almoust flawless lens is just waiting for your ingenuity to find a use for it.",
+        "cat": "Rsc",
+        "img": "item_lens"
+    },
+    "282": {
+        "id": 282,
+        "name": "Furious Kitten (partially digested)",
+        "desc": "A kitten which surely belonged a now-dead citizen. It seems pretty aggravated, maybe you shouldn't annoy it any more.",
+        "cat": "Furniture",
+        "img": "item_angryc"
+    },
+    "283": {
+        "id": 283,
+        "name": "Claymore Mine",
+        "desc": "We still find mines in the desert, but in general it's more common for careless citizens to step them than zombies.",
+        "cat": "Weapon",
+        "img": "item_claymo"
+    },
+    "284": {
+        "id": 284,
+        "name": "Laser Diode",
+        "desc": "An electronic component from a revolutionary time. It looks like it's in good order, even if you can't see though it personally.",
+        "cat": "Rsc",
+        "img": "item_diode"
+    },
+    "285": {
+        "id": 285,
+        "name": "Makeshift Guitar",
+        "desc": "Once great for seducing the ladies while sitting in front of the campfire, they remain really popular despite the asexualization of the townsfolk. Far from a custom Les Paul '58 it may be, but it still brings joy and hope to the town. Who doesn't enjoy a sing-a-long?",
+        "cat": "Furniture",
+        "img": "item_guitar"
+    },
+    "286": {
+        "id": 286,
+        "name": "LSD",
+        "desc": "We don't know where this little pink square of paper came from, but when you put it in your mouth it sends bubbles to your brain!",
+        "cat": "Drug",
+        "img": "item_lsd"
+    },
+    "287": {
+        "id": 287,
+        "name": "Burning Laser Pointer (4 charges)",
+        "desc": "Banned throughout the world since someone advanced in years tried to cross the streams of two of these objects, it'll be good for slicing through putrefied flesh though!",
+        "cat": "Weapon",
+        "img": "item_lpoint4"
+    },
+    "288": {
+        "id": 288,
+        "name": "Burning Laser Pointer (3 charges)",
+        "desc": "Banned throughout the world since someone advanced in years tried to cross the streams of two of these objects, it'll be good for slicing through putrefied flesh though!",
+        "cat": "Weapon",
+        "img": "item_lpoint3"
+    },
+    "289": {
+        "id": 289,
+        "name": "Burning Laser Pointer (2 charges)",
+        "desc": "Banned throughout the world since someone advanced in years tried to cross the streams of two of these objects, it'll be good for slicing through putrefied flesh though!",
+        "cat": "Weapon",
+        "img": "item_lpoint2"
+    },
+    "290": {
+        "id": 290,
+        "name": "Burning Laser Pointer (1 charge)",
+        "desc": "Banned throughout the world since someone advanced in years tried to cross the streams of two of these objects, it'll be good for slicing through putrefied flesh though!",
+        "cat": "Weapon",
+        "img": "item_lpoint1"
+    },
+    "291": {
+        "id": 291,
+        "name": "Burning Laser Pointer (Empty)",
+        "desc": "Banned throughout the world since someone advanced in years tried to cross the streams of two of these objects, it'll be good for slicing through putrefied flesh though!",
+        "cat": "Weapon",
+        "img": "item_lpoint"
+    },
+    "292": {
+        "id": 292,
+        "name": "Telescope",
+        "desc": "In days gone by, this tool was used to observe and count stars in the sky. Nowdays, the stars have been replaced by zombies. When used, the telescope halves the number of citizens required to estimate the attack.",
+        "cat": "Rsc",
+        "img": "item_scope"
+    },
+    "293": {
+        "id": 293,
+        "name": "Impersonal Exploding Doormat",
+        "desc": "A great way to make someone feel really unwelcome, a bomb under the doormat! Why didn't we think of this before!",
+        "cat": "Furniture",
+        "img": "item_trapma"
+    },
+    "294": {
+        "id": 294,
+        "name": "Chuck Figurine",
+        "desc": "The spirit of Chuck resides in this figurine. Nothing can happen to it, and it will still be here long after your death, still unafraid of the zombie horde.",
+        "cat": "Furniture",
+        "img": "item_chudol"
+    },
+    "295": {
+        "id": 295,
+        "name": "Little Book of Calm",
+        "desc": "This book, which has been published in many languages, teaches you how to deal with overwhealming situations. There is a life after death! It prevents the user from becoming terrorised.",
+        "cat": "Drug",
+        "img": "item_lilboo"
+    },
+    "296": {
+        "id": 296,
+        "name": "Bag of Damp Grass",
+        "desc": "Although it appears to be nothing but hay in the making, there must be another use for this herb apart from very disappointed cigarettes.",
+        "cat": "Rsc",
+        "img": "item_ryebag"
+    },
+    "297": {
+        "id": 297,
+        "name": "Ergot Fungus",
+        "desc": "Sometimes we find mushrooms growing on corpses which make us say funny things, and they say that the effects on the brain are irreversible, and the state you're already in may just confirm it...",
+        "cat": "Food",
+        "img": "item_fungus"
+    },
+    "298": {
+        "id": 298,
+        "name": "Ergot Homebrew",
+        "desc": "The dream of warriors, the blend of kings, the cocktail of the gods! If you doubt its strength, let one of your neighbors taste it.",
+        "cat": "Food",
+        "img": "item_hmbrew"
+    },
+    "299": {
+        "id": 299,
+        "name": "Cursed HiFi",
+        "desc": "When used with a CD, this unit has the potential to become a weapon of mass destruction!",
+        "cat": "Furniture",
+        "img": "item_hifiev"
+    },
+    "300": {
+        "id": 300,
+        "name": "Phil Collins CD",
+        "desc": "Nothing beats a little 80s retro music to liven up your tented evenings! If you're an evil b******d, open the window, turn it up LOUD and play it all night long!",
+        "cat": "Furniture",
+        "img": "item_cdphil"
+    },
+    "301": {
+        "id": 301,
+        "name": "Earplugs",
+        "desc": "Had enough of the chitchat outside your door, townspeople insulting one another after too much Ergot Homebrew, citizens screaming in fear for their lives? These earplugs are your best friend!",
+        "cat": "Rsc",
+        "img": "item_bquies"
+    },
+    "302": {
+        "id": 302,
+        "name": "Broken Staff",
+        "desc": "Half a staff. Too short to be a really effective weapon, but not entirely useless...",
+        "cat": "Rsc",
+        "img": "item_staff"
+    },
+    "303": {
+        "id": 303,
+        "name": "Britney Spears CD",
+        "desc": "Despite an innocuous appearance, leading you to believe this is music for little girls, this is a serious defensive measure. As soon as the first waves from disk emanate from a HIFI, no normal person will be able to approach your home. That said, if our zombies were normal, MyHordes would be available on Facebook, so don't put all your faith in it...",
+        "cat": "Furniture",
+        "img": "item_cdbrit"
+    },
+    "304": {
+        "id": 304,
+        "name": "Best of The King CD",
+        "desc": "Ready to shake these hips to a little rock n' roll? This compilation from the true king of rock will kick-start the party!",
+        "cat": "Furniture",
+        "img": "item_cdelvi"
+    },
+    "305": {
+        "id": 305,
+        "name": "Rock n Roll HiFi",
+        "desc": "Spinning the hits of the King, you'll wake up more motivated and energized than ever before!",
+        "cat": "Furniture",
+        "img": "item_dfhifi"
+    },
+    "306": {
+        "id": 306,
+        "name": "Anti-personnel HiFi",
+        "desc": "The right CD and some good ear protection make this a powerful weapon which allows you to rest peacefully while others are kept at a safe distance!",
+        "cat": "Furniture",
+        "img": "item_dfhifi"
+    },
+    "307": {
+        "id": 307,
+        "name": "Schr\u00f6dinger's Box",
+        "desc": "It's pretty damn heavy and almost certainly contains something useful... you just need to find something better than your teeth for opening it.",
+        "cat": "Box",
+        "img": "item_catbox"
+    },
+    "308": {
+        "id": 308,
+        "name": "Psychadelic Spiritual Counsel",
+        "desc": "We don't know if it's the LSD or it's just that Chuck Norris is so hard, he drinks napalm to cure his heartburn, but this speech certainly has a positive effect on the watchman!",
+        "cat": "Misc",
+        "img": "item_chkspk"
+    },
+    "309": {
+        "id": 309,
+        "name": "Fat Serpent",
+        "desc": "This giant snake seems to have indigestion, it has a huge bulge in its abdomen. It's of no use to you like this...",
+        "cat": "Misc",
+        "img": "item_pet_snake2"
+    },
+    "310": {
+        "id": 310,
+        "name": "Christmas Present (3)",
+        "desc": "It seems that a neighbour has left a small box with your name on it in front of your house... What could be inside ?",
+        "cat": "Box",
+        "img": "item_chest_christmas_3"
+    },
+    "311": {
+        "id": 311,
+        "name": "Christmas Present (2)",
+        "desc": "It seems that a neighbour has left a small box with your name on it in front of your house... What could be inside ?",
+        "cat": "Box",
+        "img": "item_chest_christmas_2"
+    },
+    "312": {
+        "id": 312,
+        "name": "Christmas Present (1)",
+        "desc": "It seems that a neighbour has left a small box with your name on it in front of your house... What could be inside ?",
+        "cat": "Box",
+        "img": "item_chest_christmas_1"
+    },
+    "313": {
+        "id": 313,
+        "name": "Suspicious looking plum juice",
+        "desc": "This carefully sealed vial contains plum juice. Seems suspicious if you ask me. Especially when you conside that the label reads : 'in case of ingestion, contact the nearest poisons unit'. You're not going to drink it anyway, are you? Really?",
+        "cat": "Food",
+        "img": "item_omg_this_will_kill_you"
+    },
+    "314": {
+        "id": 314,
+        "name": "Label",
+        "desc": "A label from a bottle of something... Hang on, there's something written on the back !",
+        "cat": "Misc",
+        "img": "item_rp_scroll"
+    },
+    "315": {
+        "id": 315,
+        "name": "Town Uniform",
+        "desc": "A Resident is effectively a normal, everyday citizen, with no remarkable abilities to speak of...",
+        "cat": "Misc",
+        "img": "item_basic_suit"
+    },
+    "316": {
+        "id": 316,
+        "name": "Dirty Uniform",
+        "desc": "Your uniform : torn, dirty and covered in splashes of God-knows-what... You should really think about washing it when you get back to the town.",
+        "cat": "Misc",
+        "img": "item_basic_suit_dirt"
+    },
+    "317": {
+        "id": 317,
+        "name": "Camouflage Vest",
+        "desc": "This allows you to move freely through zombie-infested areas in the desert. Always be careful though, as there is a chance you could be spotted if you're trying to cross an area that's crawling with the undead....",
+        "cat": "Misc",
+        "img": "item_vest_on"
+    },
+    "318": {
+        "id": 318,
+        "name": "Camouflage Vest (not equipped!)",
+        "desc": "You're not wearing your camouflage vest, so you will no longer receive your stealth bonus !",
+        "cat": "Misc",
+        "img": "item_vest_off"
+    },
+    "319": {
+        "id": 319,
+        "name": "Small Spade",
+        "desc": "The standard tool of the Scavenger. The small shovel automatically reduces searching time in the desert... The chances of finding an object are also significantly increased.",
+        "cat": "Misc",
+        "img": "item_pelle"
+    },
+    "320": {
+        "id": 320,
+        "name": "Three-legged Labradoodle",
+        "desc": "He follows you everywhere, smelling of wet dog and drooling constantly. And he yaps. Often. Once a day though, you can ask him to take the contents of your rucksack back to the town from anywhere in the desert.",
+        "cat": "Misc",
+        "img": "item_tamed_pet"
+    },
+    "321": {
+        "id": 321,
+        "name": "Well fed Labradoodle",
+        "desc": "Now that you\u2019ve given your Labradoodle a tasty treat to boost his strength, he can carry even the heaviest and bulkiest objects. You can\u2019t help but notice the incessant drooling, and he seems poised to jump at you at any moment...",
+        "cat": "Misc",
+        "img": "item_tamed_pet_food"
+    },
+    "322": {
+        "id": 322,
+        "name": "Tired Labradoodle",
+        "desc": "Your labradoodle seems tired... panting constantly and looking at you with that exhausted stare.",
+        "cat": "Misc",
+        "img": "item_tamed_pet_off"
+    },
+    "323": {
+        "id": 323,
+        "name": "Survival Book",
+        "desc": "Your precious book entitled \"Junior Woodchuck's Scouting Manual\". Even though it may look like a children's book, it contains a wealth of useful information for anyone looking to survive in the great outdoors. It even shows you how to find food easily.",
+        "cat": "Misc",
+        "img": "item_surv_book"
+    },
+    "324": {
+        "id": 324,
+        "name": "Handyman's Toolbelt",
+        "desc": "This comprehensive tool kit, which includes a top-of-the-line adjustable wrench, allows the technician to build more easily. Thanks to the array of tools in the kit, the tech can also take an impression of a lock in a secured door.",
+        "cat": "Misc",
+        "img": "item_keymol"
+    },
+    "325": {
+        "id": 325,
+        "name": "Riot Shield",
+        "desc": "It's big and it's zombie-proof. In this world who could ask for more... It allows you to face 2 additional zombies in the desert..",
+        "cat": "Misc",
+        "img": "item_shield"
+    },
+    "326": {
+        "id": 326,
+        "name": "Voodoo Mask",
+        "desc": "This antique mask, which has been used by ancient voodoo sorcerors for thousands of years, allows the Shaman to know exactly where the souls of freshly-deceased citizens are located in the World Beyond.",
+        "cat": "Misc",
+        "img": "item_shaman"
+    },
+    "327": {
+        "id": 327,
+        "name": "Super-Fuzz Powder",
+        "desc": "Depending on the era, this powder was used sequentially as a detonator for various artillery pieces, then as a cheap drug for needy citizens and finally as the main component of fireworks. In all three cases, many people have not survived.",
+        "cat": "Furniture",
+        "img": "item_firework_powder"
+    },
+    "328": {
+        "id": 328,
+        "name": "Firework Launch Tube",
+        "desc": "Several long plastic hoses without much interest.",
+        "cat": "Furniture",
+        "img": "item_firework_tube"
+    },
+    "329": {
+        "id": 329,
+        "name": "Box of Fireworks",
+        "desc": "This box contains a lot of highly toxic chemicals with startling names such as: sodium fuzz, carbopotassium bling bling or rainbow lithium cyanized.",
+        "cat": "Furniture",
+        "img": "item_firework_box"
+    },
+    "330": {
+        "id": 330,
+        "name": "Carved Soft Pumpkin",
+        "desc": "A kind of big, smelly orange vegetable like you've never seen before. A grimacing face is carved into his flesh: what is the barbaric tradition behind this ritual?",
+        "cat": "Furniture",
+        "img": "item_pumpkin_off"
+    },
+    "331": {
+        "id": 331,
+        "name": "Lit Pumpkin",
+        "desc": "Here's a crazy idea: this large, weird vegetable has been stripped of its flesh, shaped and there is a lit candle in it ...",
+        "cat": "Armor",
+        "img": "item_pumpkin_on"
+    },
+    "332": {
+        "id": 332,
+        "name": "Crow garland",
+        "desc": "A garland of an apparently ancient tradition. It is recommended to hang it up at home as a decoration, it could be good for the town's morale.",
+        "cat": "Furniture",
+        "img": "item_xmas_gift"
+    },
+    "333": {
+        "id": 333,
+        "name": "Broken Staff",
+        "desc": "Half a staff. Too short to be a really effective weapon, but not entirely useless...",
+        "cat": "Rsc",
+        "img": "item_staff2"
+    },
+    "336": {
+        "id": 336,
+        "name": "Vodka Marinostov",
+        "desc": "A pretty violent way to overcome tiredness (and regain your action points)... 85% proof, with random, vaguely organic things floating in it. Cheers !",
+        "cat": "Food",
+        "img": "item_vodka"
+    },
+    "337": {
+        "id": 337,
+        "name": "Mystic Potion",
+        "desc": "This special batch of water, \"holy water\" if you will, should allow you to interact with tortured souls without fear... Hopefully...",
+        "cat": "Food",
+        "img": "item_potion"
+    },
+    "338": {
+        "id": 338,
+        "name": "Pre-war camera",
+        "desc": "This authentic curio from the last century, or so it would appear, would have scorched many a retina in its day. Its poorly-calibrated flash could surely get you out of any desperate situations by blinding the zombies!",
+        "cat": "Misc",
+        "img": "item_photo_3"
+    },
+    "339": {
+        "id": 339,
+        "name": "Pre-war camera",
+        "desc": "This authentic curio from the last century, or so it would appear, would have scorched many a retina in its day. Its poorly-calibrated flash could surely get you out of any desperate situations by blinding the zombies!",
+        "cat": "Misc",
+        "img": "item_photo_2"
+    },
+    "340": {
+        "id": 340,
+        "name": "Pre-war camera",
+        "desc": "This authentic curio from the last century, or so it would appear, would have scorched many a retina in its day. Its poorly-calibrated flash could surely get you out of any desperate situations by blinding the zombies!",
+        "cat": "Misc",
+        "img": "item_photo_1"
+    },
+    "341": {
+        "id": 341,
+        "name": "Pre-war camera",
+        "desc": "This authentic curio from the last century, or so it would appear, would have scorched many a retina in its day. Its poorly-calibrated flash could surely get you out of any desperate situations by blinding the zombies!",
+        "cat": "Misc",
+        "img": "item_photo_off"
+    },
+    "342": {
+        "id": 342,
+        "name": "Powerful Soul",
+        "desc": "Make the most of your friends' deaths! Citizens' souls can now be used in constructions, make sure to use these wisely to defend your town as fiercely as possible.",
+        "cat": "Misc",
+        "img": "item_soul_yellow"
+    },
+    "343": {
+        "id": 343,
+        "name": "Crow elf",
+        "desc": "This is some strange looking little beast... Seems to resemble a crow... But it's green, and is wearing a funny hat...",
+        "cat": "Food",
+        "img": "item_food_xmas"
+    },
+    "344": {
+        "id": 344,
+        "name": "Chocolate log",
+        "desc": "Either a shriveled up old Christmas cake, or something a little less palatable, done on Christmas day none the less! Anyway enjoy this cake... Thing...",
+        "cat": "Food",
+        "img": "item_wood_xmas"
+    },
+    "345": {
+        "id": 345,
+        "name": "Green Imp Suit",
+        "desc": "With this outfit on, you are so conspicuous no-one will even notice you, or think they imagined it! You wouldn't abuse it, would you?",
+        "cat": "Misc",
+        "img": "item_leprechaun_suit"
+    },
+    "346": {
+        "id": 346,
+        "name": "Unrecognisable Remains",
+        "desc": "This debris is that of an unidentifiable object that appears to have been thrown at high speed against the ground.",
+        "cat": "Misc",
+        "img": "item_broken"
+    },
+    "347": {
+        "id": 347,
+        "name": "Handful of Bullets",
+        "desc": "These small cylinders are extremely deadly. If only we knew how to use them...",
+        "cat": "Misc",
+        "img": "item_bullets"
+    },
+    "348": {
+        "id": 348,
+        "name": "Gift Parcel",
+        "desc": "The address has become illegible, but there's definitely something inside... Merry Christmass !!!",
+        "cat": "Box",
+        "img": "item_postal_box"
+    },
+    "349": {
+        "id": 349,
+        "name": "Large Gift Parcel",
+        "desc": "The address has become illegible, but there's definitely something inside... Merry Christmass !!!",
+        "cat": "Box",
+        "img": "item_postal_box_xl"
+    },
+    "350": {
+        "id": 350,
+        "name": "Christmas candy",
+        "desc": "It looks like a kind of little chocolate candy, which contains alcoholic liquor. Or any other product...",
+        "cat": "Food",
+        "img": "item_christmas_candy"
+    },
+    "351": {
+        "id": 351,
+        "name": "Screaming Alarm Clock (incomplete)",
+        "desc": "There's nothing quite like a good alarm to stimulate the old ear drums of a morning.",
+        "cat": "Misc",
+        "img": "item_alarm_off"
+    },
+    "352": {
+        "id": 352,
+        "name": "Screaming Alarm Clock (ready)",
+        "desc": "There's nothing quite like it to stimulate the old eardrums of a morning (It's ready to use). It lets you start the day on the right foot with a bonus of 1 extra AP given after the attack. It must be kept in you rucksack to work.",
+        "cat": "Misc",
+        "img": "item_alarm_on"
+    },
+    "353": {
+        "id": 353,
+        "name": "Soft Pumpkin",
+        "desc": "A kind of big, smelly, orange vegetable like you've never seen before. A sudden urge to carve it grabs you without you knowing why...",
+        "cat": "Misc",
+        "img": "item_pumpkin_raw"
+    },
+    "354": {
+        "id": 354,
+        "name": "Primitive Hurling Stick",
+        "desc": "A word of advice. If you're picking the wrong fight... at least pick the right weapon.",
+        "cat": "Weapon",
+        "img": "item_hurling_stick"
+    },
+    "355": {
+        "id": 355,
+        "name": "Sticky Pint",
+        "desc": "Nothing beats a pint of the black stuff to inspire poetry, laughter and erm, fight the zombies... *Approved by Charlie Sheen",
+        "cat": "Food",
+        "img": "item_guiness"
+    },
+    "356": {
+        "id": 356,
+        "name": "Black Neck Ooze",
+        "desc": "A poison which is EXTREMELY virulent when ingested, if the label is to be believed: ingestion of the cervical ooze causes death, spontaneous combustion, explosion of the lungs, and leakage of the brain from all orifices. But not necessarily in that order.",
+        "cat": "Drug",
+        "img": "item_april_drug"
+    },
+    "357": {
+        "id": 357,
+        "name": "Toxin",
+        "desc": "You bring the vial close to your nose and take a whiff. Whew! The smell alone is enough to kill a horse.",
+        "cat": "Misc",
+        "img": "item_infect_poison"
+    },
+    "358": {
+        "id": 358,
+        "name": "Impressive Pumpkin",
+        "desc": "This huge orange vegetable is the only colorful thing growing in this spooky, creepy place... it makes you want to bite into it!",
+        "cat": "Food",
+        "img": "item_pumpkin_tasty"
+    },
+    "359": {
+        "id": 359,
+        "name": "First Aid Kit",
+        "desc": "Where possible, don't waste bandages. Once they're cut, that's them done. However, the pills are always useful.",
+        "cat": "Drug",
+        "img": "item_medic"
+    },
+    "360": {
+        "id": 360,
+        "name": "Hanging Crow garland",
+        "desc": "A garland of an apparently ancient tradition. It is recommended to hang it up at home as a decoration, it could be good for the town's morale.",
+        "cat": "Furniture",
+        "img": "item_xmas_gift"
+    },
+    "361": {
+        "id": 361,
+        "name": "No labradoodle",
+        "desc": "You left your doggie <em>at home<\/em>... I hope it's not offended.",
+        "cat": "Misc",
+        "img": "item_tamed_pet_gone"
+    },
+    "362": {
+        "id": 362,
+        "name": "Screaming Alarm Clock (1 charge)",
+        "desc": "There's nothing quite like a good alarm to stimulate the old eardrums of a morning. Works perfectly and lets you start your day in hell on the right foot with a bonus of 1 extra AP given after the attack.",
+        "cat": "Misc",
+        "img": "item_alarm_1"
+    },
+    "363": {
+        "id": 363,
+        "name": "Screaming Alarm Clock (2 charges)",
+        "desc": "There's nothing quite like a good alarm to stimulate the old eardrums of a morning. Works perfectly and lets you start your day in hell on the right foot with a bonus of 1 extra AP given after the attack.",
+        "cat": "Misc",
+        "img": "item_alarm_2"
+    },
+    "364": {
+        "id": 364,
+        "name": "Screaming Alarm Clock (3 charges)",
+        "desc": "There's nothing quite like a good alarm to stimulate the old eardrums of a morning. Works perfectly and lets you start your day in hell on the right foot with a bonus of 1 extra AP given after the attack.",
+        "cat": "Misc",
+        "img": "item_alarm_3"
+    },
+    "365": {
+        "id": 365,
+        "name": "Magnetic Key Instant Blank",
+        "desc": "This high-tech key print was molded from a mixture of dehydrated noodles and a slime. You can really do ANYTHING with it!",
+        "cat": "Food",
+        "img": "item_noodle_magnetic_print"
+    },
+    "366": {
+        "id": 366,
+        "name": "Bump Key Instant Blank",
+        "desc": "Eat or open, you have to choose! This key print will allow you to obtain a bump key, if you don't break it before returning to town...",
+        "cat": "Food",
+        "img": "item_noodle_prints"
+    },
+    "367": {
+        "id": 367,
+        "name": "Bottle Opener Instant Blank",
+        "desc": "We don't really know how this is possible, but it looks solid regardless. The noodle agglomerate PERFECTLY forms the shape of a bottle opener!",
+        "cat": "Food",
+        "img": "item_noodle_bottle_print"
+    },
+    "368": {
+        "id": 368,
+        "name": "Worn-out sports shoes",
+        "desc": "They are no longer in brand new condition and smell a bit strong... Nevertheless, they can help you move more easily through the rough terrain of the World-Beyond.",
+        "cat": "Misc",
+        "img": "item_shoe"
+    },
+    "369": {
+        "id": 369,
+        "name": "Bicycle without handlebars",
+        "desc": "A nice bike, but the most important part is missing: handlebars.",
+        "cat": "Misc",
+        "img": "item_bike_part"
+    },
+    "370": {
+        "id": 370,
+        "name": "Mountain bike",
+        "desc": "A tailor-made mountain bike with which you can go everywhere, wherever you want.",
+        "cat": "Misc",
+        "img": "item_bike"
+    },
+    "371": {
+        "id": 371,
+        "name": "Flag",
+        "desc": "A ridiculously visible flag. Maybe if you wave it, something will happen...?",
+        "cat": "Misc",
+        "img": "item_flag"
+    },
+    "372": {
+        "id": 372,
+        "name": "Soccer ball",
+        "desc": "For a little kick in between.",
+        "cat": "Misc",
+        "img": "item_soccer"
+    },
+    "373": {
+        "id": 373,
+        "name": "Burst Soccer ball",
+        "desc": "A ball to have fun with, if only it wasn't burst...",
+        "cat": "Misc",
+        "img": "item_soccer_part"
+    },
+    "374": {
+        "id": 374,
+        "name": "Quantum Energy",
+        "desc": "\"Take the leap... enjoy a Quantum!\" The slogan on the bottle is tempting, but the glowing neon blue liquid, not so much...",
+        "cat": "Food",
+        "img": "item_quantum"
+    },
+    "375": {
+        "id": 375,
+        "name": "Pre-war camera",
+        "desc": "This authentic curio from the last century, or so it would appear, would have scorched many a retina in its day. Its poorly-calibrated flash could surely get you out of any desperate situations by blinding the zombies! A little number on the side indicates that there is one photo remaining.",
+        "cat": "Misc",
+        "img": "item_photo_4"
+    },
+    "376": {
+        "id": 376,
+        "name": "Cello case",
+        "desc": "You don't even know where you got this from... The paint is starting to peel. Was it really useful?",
+        "cat": "Box",
+        "img": "item_cello_box"
+    }
+}
