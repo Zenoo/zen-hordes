@@ -18,6 +18,7 @@ export const store = {
     ExternalSiteName.MHO,
   ],
   "better-tooltips": true,
+  "shaman-souls-button": true,
   "bank-items-taken": 0,
   "last-bank-item-taken": Date.now(),
   "last-water-ration-taken": new Date(0).getTime(),

@@ -2,6 +2,7 @@ import { blockBank, cleanupBankBlocker, handleItemTaken } from "./bankBlocker";
 import { displayExternalCityLinks } from "./externalCityLink";
 import { ExternalSiteName } from "./externalSites";
 import { displayUpdateButton } from "./externalSiteUpdater";
+import { displayShamanSoulsButton } from "./shamanSoulsButton";
 import { setStore, Store, store } from "./store";
 
 export const listenToBackgroundMessages = () => {
@@ -81,6 +82,23 @@ export const listenToBackgroundMessages = () => {
                 document.querySelector<HTMLElement>(".inventory.desert");
               if (target) {
                 displayUpdateButton(target);
+              }
+              break;
+            }
+            case "shaman-souls-button": {
+              setStore("shaman-souls-button", !!value.enabled);
+
+              if (value.enabled) {
+                const target =
+                  document.querySelector<HTMLElement>(".map+.controls .tilemap_controls .float-left");
+                if (target) {
+                  displayShamanSoulsButton(target);
+                }
+              } else {
+                const button = document.querySelector(".zen-shaman-souls-button");
+                if (button) {
+                  button.remove();
+                }
               }
               break;
             }

@@ -27,6 +27,7 @@ const T: Translations = {
     "enhance-css": "UI Enhancements",
     "bank-blocker": "Bank Blocker",
     "map-preview": "Available cities map preview",
+    "shaman-souls-button": "Souls positions copy button",
     "external-city-links": "External city history links",
     "update-sites": "External sites to update",
     "user-key": "User key",
@@ -35,6 +36,7 @@ const T: Translations = {
     "enhance-css": "Améliorations de l'interface",
     "bank-blocker": "Bloqueur de banque",
     "map-preview": "Aperçu de la carte des villes disponibles",
+    "shaman-souls-button": "Bouton de copie des positions des âmes",
     "external-city-links": "Liens externes des historiques des villes",
     "update-sites": "Sites externes à mettre à jour",
     "user-key": "Clé utilisateur",
@@ -43,6 +45,7 @@ const T: Translations = {
     "enhance-css": "UI-Verbesserungen",
     "bank-blocker": "Bank Blocker",
     "map-preview": "Vorschau der verfügbaren Städte auf der Karte",
+    "shaman-souls-button": "Schaltfläche zum Kopieren von Seelenpositionen",
     "external-city-links": "Externe Stadtverlauf-Links",
     "update-sites": "Externe Sites aktualisieren",
     "user-key": "Benutzerschlüssel",
@@ -51,6 +54,7 @@ const T: Translations = {
     "enhance-css": "Mejoras de la interfaz de usuario",
     "bank-blocker": "Bloqueador de banco",
     "map-preview": "Vista previa del mapa de ciudades disponibles",
+    "shaman-souls-button": "Botón de copia de posiciones de almas",
     "external-city-links": "Enlaces externos de historiales de ciudades",
     "update-sites": "Sitios externos para actualizar",
     "user-key": "Clave de usuario",
@@ -99,6 +103,7 @@ const Popup = () => {
   const [enhanceCss, setEnhanceCss] = useState(true);
   const [bankBlocker, setBankBlocker] = useState(true);
   const [mapPreview, setMapPreview] = useState(true);
+  const [shamanSoulsButton, setShamanSoulsButton] = useState(true);
   const [externalSiteLinks, setExternalSiteLinks] = useState([
     ExternalSiteName.BBH,
   ]);
@@ -118,6 +123,9 @@ const Popup = () => {
       setEnhanceCss(data["enhance-css"] ? !!data["enhance-css"] : true);
       setBankBlocker(data["bank-blocker"] ? !!data["bank-blocker"] : true);
       setMapPreview(data["map-preview"] ? !!data["map-preview"] : true);
+      setShamanSoulsButton(
+        data["shaman-souls-button"] ? !!data["shaman-souls-button"] : true
+      );
       setExternalSiteLinks(
         (data["external-city-links"] as ExternalSiteName[] | undefined) ?? [
           ExternalSiteName.BBH,
@@ -177,6 +185,13 @@ const Popup = () => {
     setMapPreview(event.target.checked);
     await setFeature("map-preview", event.target.checked);
   };
+
+  const handleShamanSoulsButtonChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setShamanSoulsButton(event.target.checked);
+    await setFeature("shaman-souls-button", event.target.checked);
+  }
 
   const handleExternalSiteLinksChange =
     (name: ExternalSiteName) =>
@@ -262,6 +277,21 @@ const Popup = () => {
           label={
             <Typography variant="body2" sx={{ ml: 0.5 }}>
               {t("map-preview")}
+            </Typography>
+          }
+          sx={{ mx: 1 }}
+        />
+        <FormControlLabel
+          control={
+            <Switch
+              checked={shamanSoulsButton}
+              onChange={handleShamanSoulsButtonChange}
+              size="small"
+            />
+          }
+          label={
+            <Typography variant="body2" sx={{ ml: 0.5 }}>
+              {t("shaman-souls-button")}
             </Typography>
           }
           sx={{ mx: 1 }}

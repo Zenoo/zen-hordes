@@ -8,11 +8,13 @@ import { onHover } from "./hooks/onHover";
 import { onMount } from "./hooks/onMount";
 import { displayMapPreview, insertMapPreview, openBBHCityPage, removeMapPreview } from "./mapPreview";
 import { listenToBackgroundMessages } from "./messageListener";
+import { displayShamanSoulsButton } from "./shamanSoulsButton";
 import { initStore } from "./store";
 
 // Initialize the store
 await initStore();
-
+// TODO: Display infection chances on items
+// TODO: Display decoration points on items
 // TODO: Add better tooltips toggle to settings
 // TODO: Reset first water ration on death page display
 // TODO: Add a list of items to bring back, with priorities (1-5)
@@ -32,6 +34,7 @@ onMount((node) => {
   displayExternalCityLinks(node);
   displayUpdateButton(node);
   insertBetterTooltips(node);
+  displayShamanSoulsButton(node);
 });
 
 // Actions that need to be performed on hover
