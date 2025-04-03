@@ -1,402 +1,396 @@
-export enum ItemCategory {
-  Food = "Food",
-  Rsc = "Rsc",
-  Weapon = "Weapon",
-  Box = "Box",
-  Misc = "Misc",
-  Drug = "Drug",
-  Furniture = "Furniture",
-  Armor = "Armor"
-}
-
 export enum ItemId {
-  WATER_RATION = 1,
-  BATTERY = 2,
-  CAN = 3,
-  OPEN_CAN = 4,
-  BATTERY_LAUNCHER_1_ITF_LOADED = 5,
-  TASER = 6,
-  AQUA_SPLASH_EMPTY = 7,
-  ELECTRIC_WHISK_LOADED = 8,
-  CHAINSAW_LOADED = 9,
-  LAWNMOWER = 10,
-  ADJUSTABLE_SPANNER = 11,
-  SCREWDRIVER = 12,
-  STAFF = 13,
-  SERRATED_KNIFE = 14,
-  MACHETE = 15,
-  PATHETIC_PENKNIFE = 16,
-  SWISS_ARMY_KNIFE = 17,
-  BOX_CUTTER = 18,
-  SHOPPING_TROLLEY = 19,
-  CAN_OPENER = 20,
-  MANBAG = 21,
-  BOX_OF_MATCHES = 22,
-  VALIUM_SHOT = 23,
-  ROCKING_CHAIR = 24,
-  DUSTY_BOOK = 25,
-  MATTRESS = 26,
-  BEDSIDE_LAMP = 27,
-  PERSIAN_RUG = 28,
-  MINI_HI_FI_BROKEN = 29,
-  PADLOCK_AND_CHAIN = 30,
-  DOORMAT = 31,
-  DICE = 32,
-  ENGINE = 33,
-  BELT = 34,
-  HANDFUL_OF_NUTS_AND_BOLTS = 35,
-  CHICKEN = 36,
-  STINKING_PIG = 37,
-  GIANT_RAT = 38,
-  GUARD_DOG = 39,
-  FAT_CAT = 40,
-  HUGE_SNAKE_OPHIOPHAGUS_TROUSER = 41,
-  POCKET_VIBRATOR_CHARGED = 42,
-  ANABOLIC_STEROIDS = 43,
-  TASTY_LOOKING_STEAK = 44,
-  UNSPECIFIED_MEAT = 45,
-  GROUNDSHEET = 46,
-  ULTRA_RUCKSACK = 47,
-  FULL_JERRYCAN = 48,
-  TWISTED_PLANK = 49,
-  WROUGHT_IRON = 50,
-  WATER_BOMB = 51,
-  SHEET_METAL = 52,
-  JERRYCAN_GUN_UNATTACHED = 53,
-  BANDAGE = 54,
-  STALE_BEER = 55,
-  JERRYCAN_GUN_EMPTY = 56,
-  RETRO_OVERHEAD_PROJECTOR = 57,
-  SEMTEX = 58,
-  HUMAN_FLESH = 59,
-  PLASTIC_BAG = 60,
-  EXPLODING_WATER_BOMB = 61,
-  PLASTIC_BAG_AND_SEMTEX = 62,
-  INCOMPLETE_CHAINSAW = 63,
-  ELECTRIC_WHISK_INCOMPLETE = 64,
-  DUCT_TAPE = 65,
-  DISMANTLED_MOWER = 66,
-  COPPER_PIPE = 67,
-  WONKY_SHOPPING_TROLLEY = 68,
-  UTILITY_BELT = 69,
-  TWINOID_500MG = 70,
-  METAL_CHEST = 71,
-  LARGE_METAL_CHEST = 72,
-  TOOLBOX = 73,
-  BEDSIDE_LAMP_ON = 74,
-  MINI_HI_FI_ON = 75,
-  PHARMACEUTICAL_PRODUCTS = 76,
-  SHEET_METAL_PARTS = 77,
-  _WAKE_THE_DEAD_ = 78,
-  BLOODY_HOT_COFFEE = 79,
-  CAFETI_RE = 80,
-  INCOMPLETE_CAFETI_RE = 81,
-  ELECTRONIC_COMPONENT = 82,
-  CITIZEN_S_WELCOME_PACK = 83,
-  HYDRATONE_100MG = 84,
-  RADIO_CASSETTE_PLAYER_NO_BATTERY = 85,
-  RADIO_CASSETTE_PLAYER = 86,
-  CYANIDE = 87,
-  OLD_DOOR = 88,
-  SUSPICIOUS_LOOKING_VEGETABLE = 89,
-  REPAIR_KIT_DAMAGED = 90,
-  REPAIR_KIT = 91,
-  WATER_PISTOL_EMPTY = 92,
-  AQUA_SPLASH_3_SHOTS = 93,
-  AQUA_SPLASH_2_SHOTS = 94,
-  AQUA_SPLASH_1_SHOT = 95,
-  ELECTRIC_WHISK_NO_BATTERY = 96,
-  CHAINSAW_EMPTY = 97,
-  BATTERY_LAUNCHER_1_ITF_EMPTY = 98,
-  TASER_INCOMPLETE = 99,
-  EMS_SYSTEM_INCOMPLETE = 100,
-  EMS_SYSTEM_CHARGED = 101,
-  DEVASTATOR_EMPTY = 102,
-  DEVASTATOR_LOADED = 103,
-  DEVASTATOR_INCOMPLETE = 104,
-  RADIUS_RADAR_BEACON = 105,
-  SPY_FLARE = 106,
-  JERRYCAN_GUN_READY = 107,
-  EKTORP_GLUTEN_CHAIR = 108,
-  REVOLVER_UNLOADED = 109,
-  ASSAULT_RIFLE_UNLOADED = 110,
-  COMPACT_DETONATOR = 111,
-  BAG_OF_CEMENT = 112,
-  UNSHAPED_CONCRETE_BLOCKS = 113,
-  UNLABELLED_DRUG = 114,
-  PARACETOID_7G = 115,
-  NESS_QUICK_WEEDKILLER = 116,
-  FOOD_PARCEL = 117,
-  DOGGY_BAG = 118,
-  PACKET_OF_SOFT_CRISPS = 119,
-  MOULDY_NEAPOLITAN = 120,
-  DRIED_CHEWING_GUM = 121,
-  RANCID_JAFFA_CAKES = 122,
-  HALF_EATEN_CHICKEN_WINGS = 123,
-  OUT_OF_DATE_BISCUITS = 124,
-  STALE_TART = 125,
-  MOULDY_HAM_SANDWICH = 126,
-  CHINESE_NOODLES = 127,
-  STRONG_SPICES = 128,
-  SPICY_CHINESE_NOODLES = 129,
-  INCOMPLETE_DECK_OF_CARDS = 130,
-  BOX_OF_GAMES = 131,
-  AQUA_SPLASH_INCOMPLETE = 132,
-  POCKET_VIBRATOR_INCOMPLETE = 133,
-  MEATY_BONE = 134,
-  BROKEN_HUMAN_BONE = 135,
-  PATCHWORK_BEAM = 136,
-  METAL_SUPPORT = 137,
-  SCRAP_METAL = 138,
-  ROTTING_LOG = 139,
-  HACKSAW = 140,
-  QUALITY_LOG = 141,
-  BROKEN_ELECTRONIC_DEVICE = 142,
-  FLATPACKED_FURNITURE = 143,
-  DAMAGED_HACKSAW = 144,
-  MECHANISM = 145,
-  TRESTLE = 146,
-  J_RPEN_TABLE = 147,
-  WATER_PURIFYING_TABLETS = 148,
-  INTESTINE_MELON = 149,
-  FLASH_POWDER = 150,
-  FLASH_GRENADE = 151,
-  TEDDY_BEAR = 152,
-  CRATE_LID = 153,
-  SOLID_WOODEN_BOARD = 154,
-  WAD_OF_CASH = 155,
-  TOOL_BAG = 156,
-  RADIUS_MARK_II_INCOMPLETE = 157,
-  RADIUS_MARK_II = 158,
-  KWIK_FIX = 159,
-  ENGINE_INCOMPLETE = 160,
-  OLD_WASHING_MACHINE = 161,
-  CARCINOGENIC_OVEN = 162,
-  BEER_FRIDGE = 163,
-  A_LETTER_WITH_NO_ADDRESS = 164,
-  SCROLL = 165,
-  INSTRUCTION_MANUAL = 166,
-  ILLEGIBLE_NOTEBOOK = 167,
-  PHOTO_ALBUM = 168,
-  STACK_OF_PAPERS = 169,
-  RUSTY_CHAIN = 170,
-  DODGY_HOMEMADE_DISH = 171,
-  TASTY_HOMEMADE_DISH = 172,
-  IRON_CHEST = 173,
-  BOXES = 174,
-  MAKESHIFT_BARRICADE = 175,
-  ENVELOPE = 176,
-  PARCEL = 177,
-  WIRE_MESH = 178,
-  WATER_PISTOL_3_SHOTS = 179,
-  WATER_PISTOL_2_SHOTS = 180,
-  WATER_PISTOL_1_SHOT = 181,
-  AQUA_SPLASH_5_SHOTS = 182,
-  AQUA_SPLASH_4_SHOTS = 183,
-  OPENED_PACKET_OF_CIGARETTES = 184,
-  PUTA_MARK_II_CALIBRATOR = 185,
-  BATTERY_LAUNCHER_MK__II_EMPTY = 186,
-  BATTERY_LAUNCHER_MK__II_LOADED = 187,
-  CRUSHED_BATTERY = 188,
-  CONSTRUCTION_KIT_3 = 189,
-  CONSTRUCTION_KIT_2 = 190,
-  CONSTRUCTION_KIT_1 = 191,
-  CAR_DOOR = 192,
-  CAR_DOOR_INCOMPLETE = 193,
-  VIAL_OF_POISON = 194,
-  CORROSIVE_LIQUID = 195,
-  SHREWD_CITIZEN_S_STASH = 196,
-  GIFT_PARCEL = 197,
-  LUNCH_BOX = 198,
-  HANDFUL_OF_SWEETS = 199,
-  SHEET_OF_PLYWOOD = 200,
-  TORCH = 201,
-  BURNT_OUT_TORCH = 202,
-  DRIED_MARSHMALLOWS = 203,
-  BURNT_MARSHMALLOWS = 204,
-  PC_BASE_UNIT = 205,
-  SAFE = 206,
-  ENCYCLOPEDIA = 207,
-  WATER_COOLER_BOTTLE_EMPTY = 208,
-  WATER_COOLER_BOTTLE_1_RATION = 209,
-  WATER_COOLER_BOTTLE_2_RATIONS = 210,
-  WATER_COOLER_BOTTLE_3_RATIONS = 211,
-  BETAPROPINE_5MG_EXPIRED = 212,
-  BETAPROPINE_5MG = 213,
-  FLESHROOMS = 214,
-  STICKY_PASTRY_BALL = 215,
-  POUND_OF_FLESH = 216,
-  GRISLY_BOMB = 217,
-  THICK_SOLUTION = 218,
-  FLESHROOM_PUREE = 219,
-  STAGNANT_WATER_CAN = 220,
-  PURIFIED_STAGNANT_WATER = 221,
-  BANNED_CITIZEN_S_NOTE = 222,
-  BLOODY_DRESSING = 223,
-  CURSED_CUDDLY_TOY = 224,
-  SAWDUST_STEAK = 225,
-  SECOND_HAND_RED_COAT = 226,
-  RIPPED_RED_TROUSERS = 227,
-  FOUL_SMELLING_RED_HAT = 228,
-  FOUL_SMELLING_VINTAGE_SUIT = 229,
-  MOBILE_PHONE = 230,
-  FESTERING_FLESH = 231,
-  NOVELTY_TORCH_OFF = 232,
-  NOVELTY_TORCH_1_CHARGE = 233,
-  NOVELTY_TORCH_2_CHARGES = 234,
-  TRAVELLER_S_CORPSE = 235,
-  GNAWED_CORPSE = 236,
-  __PINE_FRESH___SMOKE_BOMB = 237,
-  SAND_BALL = 238,
-  CONSTRUCTION_BLUEPRINT_COMMON = 239,
-  CONSTRUCTION_BLUEPRINT_UNCOMMON = 240,
-  CONSTRUCTION_BLUEPRINT_RARE = 241,
-  CONSTRUCTION_BLUEPRINT_VERY_RARE_ = 242,
-  ARCHITECT_S_CHEST = 243,
-  SEALED_ARCHITECT_S_CHEST = 244,
-  EGG = 245,
-  APPLE = 246,
-  EXPLODING_GRAPEFRUIT = 247,
-  WORN_LEATHER_BAG = 248,
-  MAGNETIC_KEY = 249,
-  BUMP_KEY = 250,
-  BOTTLE_OPENER = 251,
-  MAGNETIC_KEY_BLANK = 252,
-  BUMP_KEY_BLANK = 253,
-  BOTTLE_OPENER_BLANK = 254,
-  GHOUL_VACCINE = 255,
-  HOTEL_BLUEPRINT_UNCOMMON = 256,
-  HOTEL_BLUEPRINT_RARE = 257,
-  HOTEL_BLUEPRINT_VERY_RARE_ = 258,
-  BUNKER_BLUEPRINT_UNCOMMON = 259,
-  BUNKER_BLUEPRINT_RARE = 260,
-  BUNKER_BLUEPRINT_VERY_RARE_ = 261,
-  HOSPITAL_BLUEPRINT_UNCOMMON = 262,
-  HOSPITAL_BLUEPRINT_RARE = 263,
-  HOSPITAL_BLUEPRINT_VERY_RARE_ = 264,
-  LOST_SOUL = 265,
-  TORTURED_SOUL = 266,
-  WEAK_SOUL = 267,
-  MUG_OF_LUKEWARM_LIQUID = 268,
-  SANDY_PRETZEL = 269,
-  MANGY_DACHSHUND = 270,
-  STAKE_LAUNCHER = 271,
-  KALASHNI_SPLASH = 272,
-  HASTILY_BUILT_DESK = 273,
-  EMPTY_VENDING_MACHINE = 274,
-  SANTA_S_REINDEER = 275,
-  EASTER_EGG = 276,
-  COLLECTOR_PINS = 277,
-  KALASHNI_SPLASH_EMPTY = 278,
-  WIRE_REEL = 279,
-  EMPTY_OIL_CAN = 280,
-  CONVEX_LENS = 281,
-  FURIOUS_KITTEN_PARTIALLY_DIGESTED = 282,
-  CLAYMORE_MINE = 283,
-  LASER_DIODE = 284,
-  MAKESHIFT_GUITAR = 285,
-  LSD = 286,
-  BURNING_LASER_POINTER_4_CHARGES = 287,
-  BURNING_LASER_POINTER_3_CHARGES = 288,
-  BURNING_LASER_POINTER_2_CHARGES = 289,
-  BURNING_LASER_POINTER_1_CHARGE = 290,
-  BURNING_LASER_POINTER_EMPTY = 291,
-  TELESCOPE = 292,
-  IMPERSONAL_EXPLODING_DOORMAT = 293,
-  CHUCK_FIGURINE = 294,
-  LITTLE_BOOK_OF_CALM = 295,
-  BAG_OF_DAMP_GRASS = 296,
-  ERGOT_FUNGUS = 297,
-  ERGOT_HOMEBREW = 298,
-  CURSED_HIFI = 299,
-  PHIL_COLLINS_CD = 300,
-  EARPLUGS = 301,
-  BROKEN_STAFF = 302,
-  BRITNEY_SPEARS_CD = 303,
-  BEST_OF_THE_KING_CD = 304,
-  ROCK_N_ROLL_HIFI = 305,
-  ANTI_PERSONNEL_HIFI = 306,
-  SCHR_DINGER_S_BOX = 307,
-  PSYCHADELIC_SPIRITUAL_COUNSEL = 308,
-  FAT_SERPENT = 309,
-  CHRISTMAS_PRESENT_3 = 310,
-  CHRISTMAS_PRESENT_2 = 311,
-  CHRISTMAS_PRESENT_1 = 312,
-  SUSPICIOUS_LOOKING_PLUM_JUICE = 313,
-  LABEL = 314,
-  TOWN_UNIFORM = 315,
-  DIRTY_UNIFORM = 316,
-  CAMOUFLAGE_VEST = 317,
-  CAMOUFLAGE_VEST_NOT_EQUIPPED_ = 318,
-  SMALL_SPADE = 319,
-  THREE_LEGGED_LABRADOODLE = 320,
-  WELL_FED_LABRADOODLE = 321,
-  TIRED_LABRADOODLE = 322,
-  SURVIVAL_BOOK = 323,
-  HANDYMAN_S_TOOLBELT = 324,
-  RIOT_SHIELD = 325,
-  VOODOO_MASK = 326,
-  SUPER_FUZZ_POWDER = 327,
-  FIREWORK_LAUNCH_TUBE = 328,
-  BOX_OF_FIREWORKS = 329,
-  CARVED_SOFT_PUMPKIN = 330,
-  LIT_PUMPKIN = 331,
-  CROW_GARLAND = 332,
-  BROKEN_STAFF_2 = 333,
-  VODKA_MARINOSTOV = 336,
-  MYSTIC_POTION = 337,
-  PRE_WAR_CAMERA_3 = 338,
-  PRE_WAR_CAMERA_2 = 339,
-  PRE_WAR_CAMERA_1 = 340,
-  PRE_WAR_CAMERA_OFF = 341,
-  POWERFUL_SOUL = 342,
-  CROW_ELF = 343,
-  CHOCOLATE_LOG = 344,
-  GREEN_IMP_SUIT = 345,
-  UNRECOGNISABLE_REMAINS = 346,
-  HANDFUL_OF_BULLETS = 347,
-  CHRISTMAS_GIFT_PARCEL = 348,
-  LARGE_GIFT_PARCEL = 349,
-  CHRISTMAS_CANDY = 350,
-  SCREAMING_ALARM_CLOCK_INCOMPLETE = 351,
-  SCREAMING_ALARM_CLOCK_READY = 352,
-  SOFT_PUMPKIN = 353,
-  PRIMITIVE_HURLING_STICK = 354,
-  STICKY_PINT = 355,
-  BLACK_NECK_OOZE = 356,
-  TOXIN = 357,
-  IMPRESSIVE_PUMPKIN = 358,
-  FIRST_AID_KIT = 359,
-  HANGING_CROW_GARLAND = 360,
-  NO_LABRADOODLE = 361,
-  SCREAMING_ALARM_CLOCK_1_CHARGE = 362,
-  SCREAMING_ALARM_CLOCK_2_CHARGES = 363,
-  SCREAMING_ALARM_CLOCK_3_CHARGES = 364,
-  MAGNETIC_KEY_INSTANT_BLANK = 365,
-  BUMP_KEY_INSTANT_BLANK = 366,
-  BOTTLE_OPENER_INSTANT_BLANK = 367,
-  WORN_OUT_SPORTS_SHOES = 368,
-  BICYCLE_WITHOUT_HANDLEBARS = 369,
-  MOUNTAIN_BIKE = 370,
-  FLAG = 371,
-  SOCCER_BALL = 372,
-  BURST_SOCCER_BALL = 373,
-  QUANTUM_ENERGY = 374,
-  PRE_WAR_CAMERA_4 = 375,
-  CELLO_CASE = 376
+  WATER = "water_#00",
+  PILE = "pile_#00",
+  CAN = "can_#00",
+  CAN_OPEN = "can_open_#00",
+  PILEGUN = "pilegun_#00",
+  TASER = "taser_#00",
+  WATERGUN_OPT_EMPTY = "watergun_opt_empty_#00",
+  MIXERGUN = "mixergun_#00",
+  CHAINSAW = "chainsaw_#00",
+  LAWN = "lawn_#00",
+  WRENCH = "wrench_#00",
+  SCREW = "screw_#00",
+  STAFF = "staff_#00",
+  KNIFE = "knife_#00",
+  CUTCUT = "cutcut_#00",
+  SMALL_KNIFE = "small_knife_#00",
+  SWISS_KNIFE = "swiss_knife_#00",
+  CUTTER = "cutter_#00",
+  CART = "cart_#00",
+  CAN_OPENER = "can_opener_#00",
+  BAG = "bag_#00",
+  LIGHTS = "lights_#00",
+  XANAX = "xanax_#00",
+  CHAIR = "chair_#00",
+  RP_BOOK = "rp_book_#00",
+  BED = "bed_#00",
+  LAMP = "lamp_#00",
+  CARPET = "carpet_#00",
+  MUSIC_PART = "music_part_#00",
+  LOCK = "lock_#00",
+  DOOR_CARPET = "door_carpet_#00",
+  DICE = "dice_#00",
+  ENGINE = "engine_#00",
+  COURROIE = "courroie_#00",
+  MECA_PARTS = "meca_parts_#00",
+  PET_CHICK = "pet_chick_#00",
+  PET_PIG = "pet_pig_#00",
+  PET_RAT = "pet_rat_#00",
+  PET_DOG = "pet_dog_#00",
+  PET_CAT = "pet_cat_#00",
+  PET_SNAKE = "pet_snake_#00",
+  VIBR = "vibr_#00",
+  DRUG = "drug_#00",
+  MEAT = "meat_#00",
+  UNDEF = "undef_#00",
+  SHEET = "sheet_#00",
+  BAGXL = "bagxl_#00",
+  JERRYCAN = "jerrycan_#00",
+  WOOD2 = "wood2_#00",
+  METAL = "metal_#00",
+  GRENADE = "grenade_#00",
+  PLATE = "plate_#00",
+  JERRYGUN_PART = "jerrygun_part_#00",
+  BANDAGE = "bandage_#00",
+  VODKA_DE = "vodka_de_#00",
+  JERRYGUN_OFF = "jerrygun_off_#00",
+  CINEMA = "cinema_#00",
+  EXPLO = "explo_#00",
+  HMEAT = "hmeat_#00",
+  GRENADE_EMPTY = "grenade_empty_#00",
+  BGRENADE = "bgrenade_#00",
+  BGRENADE_EMPTY = "bgrenade_empty_#00",
+  CHAINSAW_PART = "chainsaw_part_#00",
+  MIXERGUN_PART = "mixergun_part_#00",
+  RUSTINE = "rustine_#00",
+  LAWN_PART = "lawn_part_#00",
+  TUBE = "tube_#00",
+  CART_PART = "cart_part_#00",
+  POCKET_BELT = "pocket_belt_#00",
+  DRUG_HERO = "drug_hero_#00",
+  CHEST = "chest_#00",
+  CHEST_XL = "chest_xl_#00",
+  CHEST_TOOLS = "chest_tools_#00",
+  LAMP_ON = "lamp_on_#00",
+  MUSIC = "music_#00",
+  PHARMA = "pharma_#00",
+  PLATE_RAW = "plate_raw_#00",
+  RHUM = "rhum_#00",
+  COFFEE = "coffee_#00",
+  COFFEE_MACHINE = "coffee_machine_#00",
+  COFFEE_MACHINE_PART = "coffee_machine_part_#00",
+  ELECTRO = "electro_#00",
+  CHEST_CITIZEN = "chest_citizen_#00",
+  DRUG_WATER = "drug_water_#00",
+  RADIO_OFF = "radio_off_#00",
+  RADIO_ON = "radio_on_#00",
+  CYANURE = "cyanure_#00",
+  DOOR = "door_#00",
+  VEGETABLE = "vegetable_#00",
+  REPAIR_KIT_PART = "repair_kit_part_#00",
+  REPAIR_KIT = "repair_kit_#00",
+  WATERGUN_EMPTY = "watergun_empty_#00",
+  WATERGUN_OPT_3 = "watergun_opt_3_#00",
+  WATERGUN_OPT_2 = "watergun_opt_2_#00",
+  WATERGUN_OPT_1 = "watergun_opt_1_#00",
+  MIXERGUN_EMPTY = "mixergun_empty_#00",
+  CHAINSAW_EMPTY = "chainsaw_empty_#00",
+  PILEGUN_EMPTY = "pilegun_empty_#00",
+  TASER_EMPTY = "taser_empty_#00",
+  SPORT_ELEC_EMPTY = "sport_elec_empty_#00",
+  SPORT_ELEC = "sport_elec_#00",
+  BIG_PGUN_EMPTY = "big_pgun_empty_#00",
+  BIG_PGUN = "big_pgun_#00",
+  BIG_PGUN_PART = "big_pgun_part_#00",
+  TAGGER = "tagger_#00",
+  FLARE = "flare_#00",
+  JERRYGUN = "jerrygun_#00",
+  CHAIR_BASIC = "chair_basic_#00",
+  GUN = "gun_#00",
+  MACHINE_GUN = "machine_gun_#00",
+  DETO = "deto_#00",
+  CONCRETE = "concrete_#00",
+  CONCRETE_WALL = "concrete_wall_#00",
+  DRUG_RANDOM = "drug_random_#00",
+  DISINFECT = "disinfect_#00",
+  DIGGER = "digger_#00",
+  CHEST_FOOD = "chest_food_#00",
+  FOOD_BAG = "food_bag_#00",
+  FOOD_BAR1 = "food_bar1_#00",
+  FOOD_BAR2 = "food_bar2_#00",
+  FOOD_BAR3 = "food_bar3_#00",
+  FOOD_BISCUIT = "food_biscuit_#00",
+  FOOD_CHICK = "food_chick_#00",
+  FOOD_PIMS = "food_pims_#00",
+  FOOD_TARTE = "food_tarte_#00",
+  FOOD_SANDW = "food_sandw_#00",
+  FOOD_NOODLES = "food_noodles_#00",
+  SPICES = "spices_#00",
+  FOOD_NOODLES_HOT = "food_noodles_hot_#00",
+  CARDS = "cards_#00",
+  GAME_BOX = "game_box_#00",
+  WATERGUN_OPT_PART = "watergun_opt_part_#00",
+  VIBR_EMPTY = "vibr_empty_#00",
+  BONE_MEAT = "bone_meat_#00",
+  BONE = "bone_#00",
+  WOOD_BEAM = "wood_beam_#00",
+  METAL_BEAM = "metal_beam_#00",
+  METAL_BAD = "metal_bad_#00",
+  WOOD_BAD = "wood_bad_#00",
+  SAW_TOOL = "saw_tool_#00",
+  WOOD_LOG = "wood_log_#00",
+  ELECTRO_BOX = "electro_box_#00",
+  DECO_BOX = "deco_box_#00",
+  SAW_TOOL_PART = "saw_tool_part_#00",
+  MECANISM = "mecanism_#00",
+  TRESTLE = "trestle_#00",
+  TABLE = "table_#00",
+  WATER_CLEANER = "water_cleaner_#00",
+  VEGETABLE_TASTY = "vegetable_tasty_#00",
+  POWDER = "powder_#00",
+  FLASH = "flash_#00",
+  TEDDY = "teddy_#00",
+  WOOD_PLATE_PART = "wood_plate_part_#00",
+  WOOD_PLATE = "wood_plate_#00",
+  MONEY = "money_#00",
+  REPAIR_KIT_PART_RAW = "repair_kit_part_raw_#00",
+  RADIUS_MK2_PART = "radius_mk2_part_#00",
+  RADIUS_MK2 = "radius_mk2_#00",
+  REPAIR_ONE = "repair_one_#00",
+  ENGINE_PART = "engine_part_#00",
+  MACHINE_1 = "machine_1_#00",
+  MACHINE_2 = "machine_2_#00",
+  MACHINE_3 = "machine_3_#00",
+  RP_LETTER = "rp_letter_#00",
+  RP_SCROLL = "rp_scroll_#00",
+  RP_MANUAL = "rp_manual_#00",
+  RP_BOOK2 = "rp_book2_#00",
+  RP_BOOK_01 = "rp_book_#01",
+  RP_SHEETS = "rp_sheets_#00",
+  CHAIN = "chain_#00",
+  DISH = "dish_#00",
+  DISH_TASTY = "dish_tasty_#00",
+  HOME_BOX_XL = "home_box_xl_#00",
+  HOME_BOX = "home_box_#00",
+  HOME_DEF = "home_def_#00",
+  BOOK_GEN_LETTER = "book_gen_letter_#00",
+  BOOK_GEN_BOX = "book_gen_box_#00",
+  FENCE = "fence_#00",
+  WATERGUN_3 = "watergun_3_#00",
+  WATERGUN_2 = "watergun_2_#00",
+  WATERGUN_1 = "watergun_1_#00",
+  WATERGUN_OPT_5 = "watergun_opt_5_#00",
+  WATERGUN_OPT_4 = "watergun_opt_4_#00",
+  CIGS = "cigs_#00",
+  PILEGUN_UPKIT = "pilegun_upkit_#00",
+  PILEGUN_UP_EMPTY = "pilegun_up_empty_#00",
+  PILEGUN_UP = "pilegun_up_#00",
+  PILE_BROKEN = "pile_broken_#00",
+  RSC_PACK_3 = "rsc_pack_3_#00",
+  RSC_PACK_2 = "rsc_pack_2_#00",
+  RSC_PACK_1 = "rsc_pack_1_#00",
+  CAR_DOOR = "car_door_#00",
+  CAR_DOOR_PART = "car_door_part_#00",
+  POISON = "poison_#00",
+  POISON_PART = "poison_part_#00",
+  CHEST_HERO = "chest_hero_#00",
+  POSTAL_BOX = "postal_box_#00",
+  FOOD_ARMAG = "food_armag_#00",
+  FOOD_CANDIES = "food_candies_#00",
+  OUT_DEF = "out_def_#00",
+  TORCH = "torch_#00",
+  TORCH_OFF = "torch_off_#00",
+  CHAMA = "chama_#00",
+  CHAMA_TASTY = "chama_tasty_#00",
+  PC = "pc_#00",
+  SAFE = "safe_#00",
+  RP_TWIN = "rp_twin_#00",
+  WATER_CAN_EMPTY = "water_can_empty_#00",
+  WATER_CAN_1 = "water_can_1_#00",
+  WATER_CAN_2 = "water_can_2_#00",
+  WATER_CAN_3 = "water_can_3_#00",
+  BETA_DRUG_BAD = "beta_drug_bad_#00",
+  BETA_DRUG = "beta_drug_#00",
+  FRUIT_SUB_PART = "fruit_sub_part_#00",
+  FRUIT_PART = "fruit_part_#00",
+  FLESH_PART = "flesh_part_#00",
+  FLESH = "flesh_#00",
+  PHARMA_PART = "pharma_part_#00",
+  FRUIT = "fruit_#00",
+  WATER_CUP_PART = "water_cup_part_#00",
+  WATER_CUP = "water_cup_#00",
+  BANNED_NOTE = "banned_note_#00",
+  INFECT_POISON_PART = "infect_poison_part_#00",
+  TEDDY_01 = "teddy_#01",
+  WOODSTEAK = "woodsteak_#00",
+  CHRISTMAS_SUIT_1 = "christmas_suit_1_#00",
+  CHRISTMAS_SUIT_2 = "christmas_suit_2_#00",
+  CHRISTMAS_SUIT_3 = "christmas_suit_3_#00",
+  CHRISTMAS_SUIT_FULL = "christmas_suit_full_#00",
+  IPHONE = "iphone_#00",
+  SMELLY_MEAT = "smelly_meat_#00",
+  MAGLITE_OFF = "maglite_off_#00",
+  MAGLITE_1 = "maglite_1_#00",
+  MAGLITE_2 = "maglite_2_#00",
+  CADAVER = "cadaver_#00",
+  CADAVER_REMAINS = "cadaver_remains_#00",
+  SMOKE_BOMB = "smoke_bomb_#00",
+  SAND_BALL = "sand_ball_#00",
+  BPLAN_C = "bplan_c_#00",
+  BPLAN_U = "bplan_u_#00",
+  BPLAN_R = "bplan_r_#00",
+  BPLAN_E = "bplan_e_#00",
+  BPLAN_BOX = "bplan_box_#00",
+  BPLAN_BOX_E = "bplan_box_e_#00",
+  EGG = "egg_#00",
+  APPLE = "apple_#00",
+  BOOMFRUIT = "boomfruit_#00",
+  BPLAN_DROP = "bplan_drop_#00",
+  MAGNETICKEY = "magneticKey_#00",
+  BUMPKEY = "bumpKey_#00",
+  CLASSICKEY = "classicKey_#00",
+  PRINTS = "prints_#00",
+  PRINTS_01 = "prints_#01",
+  PRINTS_02 = "prints_#02",
+  VAGOUL = "vagoul_#00",
+  HBPLAN_U = "hbplan_u_#00",
+  HBPLAN_R = "hbplan_r_#00",
+  HBPLAN_E = "hbplan_e_#00",
+  BBPLAN_U = "bbplan_u_#00",
+  BBPLAN_R = "bbplan_r_#00",
+  BBPLAN_E = "bbplan_e_#00",
+  MBPLAN_U = "mbplan_u_#00",
+  MBPLAN_R = "mbplan_r_#00",
+  MBPLAN_E = "mbplan_e_#00",
+  SOUL_BLUE = "soul_blue_#00",
+  SOUL_RED = "soul_red_#00",
+  SOUL_BLUE_01 = "soul_blue_#01",
+  FEST = "fest_#00",
+  BRETZ = "bretz_#00",
+  TEKEL = "tekel_#00",
+  RLAUNC = "rlaunc_#00",
+  KALACH = "kalach_#00",
+  BUREAU = "bureau_#00",
+  DISTRI = "distri_#00",
+  RENNE = "renne_#00",
+  PAQUES = "paques_#00",
+  BADGE = "badge_#00",
+  KALACH_01 = "kalach_#01",
+  WIRE = "wire_#00",
+  OILCAN = "oilcan_#00",
+  LENS = "lens_#00",
+  ANGRYC = "angryc_#00",
+  CLAYMO = "claymo_#00",
+  DIODE = "diode_#00",
+  GUITAR = "guitar_#00",
+  LSD = "lsd_#00",
+  LPOINT4 = "lpoint4_#00",
+  LPOINT3 = "lpoint3_#00",
+  LPOINT2 = "lpoint2_#00",
+  LPOINT1 = "lpoint1_#00",
+  LPOINT = "lpoint_#00",
+  SCOPE = "scope_#00",
+  TRAPMA = "trapma_#00",
+  CHUDOL = "chudol_#00",
+  LILBOO = "lilboo_#00",
+  RYEBAG = "ryebag_#00",
+  FUNGUS = "fungus_#00",
+  HMBREW = "hmbrew_#00",
+  HIFIEV = "hifiev_#00",
+  CDPHIL = "cdphil_#00",
+  BQUIES = "bquies_#00",
+  STAFF_01 = "staff_#01",
+  CDBRIT = "cdbrit_#00",
+  CDELVI = "cdelvi_#00",
+  DFHIFI = "dfhifi_#00",
+  DFHIFI_01 = "dfhifi_#01",
+  CATBOX = "catbox_#00",
+  CHKSPK = "chkspk_#00",
+  PET_SNAKE2 = "pet_snake2_#00",
+  CHEST_CHRISTMAS_3 = "chest_christmas_3_#00",
+  CHEST_CHRISTMAS_2 = "chest_christmas_2_#00",
+  CHEST_CHRISTMAS_1 = "chest_christmas_1_#00",
+  OMG_THIS_WILL_KILL_YOU = "omg_this_will_kill_you_#00",
+  RP_SCROLL_01 = "rp_scroll_#01",
+  BASIC_SUIT = "basic_suit_#00",
+  BASIC_SUIT_DIRT = "basic_suit_dirt_#00",
+  VEST_ON = "vest_on_#00",
+  VEST_OFF = "vest_off_#00",
+  PELLE = "pelle_#00",
+  TAMED_PET = "tamed_pet_#00",
+  TAMED_PET_DRUG = "tamed_pet_drug_#00",
+  TAMED_PET_OFF = "tamed_pet_off_#00",
+  SURV_BOOK = "surv_book_#00",
+  KEYMOL = "keymol_#00",
+  SHIELD = "shield_#00",
+  SHAMAN = "shaman_#00",
+  FIREWORK_POWDER = "firework_powder_#00",
+  FIREWORK_TUBE = "firework_tube_#00",
+  FIREWORK_BOX = "firework_box_#00",
+  PUMPKIN_OFF = "pumpkin_off_#00",
+  PUMPKIN_ON = "pumpkin_on_#00",
+  XMAS_GIFT = "xmas_gift_#00",
+  STAFF2 = "staff2_#00",
+  VODKA = "vodka_#00",
+  POTION = "potion_#00",
+  PHOTO_3 = "photo_3_#00",
+  PHOTO_2 = "photo_2_#00",
+  PHOTO_1 = "photo_1_#00",
+  PHOTO_OFF = "photo_off_#00",
+  SOUL_YELLOW = "soul_yellow_#00",
+  FOOD_XMAS = "food_xmas_#00",
+  WOOD_XMAS = "wood_xmas_#00",
+  LEPRECHAUN_SUIT = "leprechaun_suit_#00",
+  BROKEN = "broken_#00",
+  BULLETS = "bullets_#00",
+  POSTAL_BOX_01 = "postal_box_#01",
+  POSTAL_BOX_XL = "postal_box_xl_#00",
+  CHRISTMAS_CANDY = "christmas_candy_#00",
+  ALARM_OFF = "alarm_off_#00",
+  ALARM_ON = "alarm_on_#00",
+  PUMPKIN_RAW = "pumpkin_raw_#00",
+  HURLING_STICK = "hurling_stick_#00",
+  GUINESS = "guiness_#00",
+  APRIL_DRUG = "april_drug_#00",
+  INFECT_POISON = "infect_poison_#00",
+  PUMPKIN_TASTY = "pumpkin_tasty_#00",
+  MEDIC = "medic_#00",
+  XMAS_GIFT_01 = "xmas_gift_#01",
+  TAMED_PET_GONE = "tamed_pet_gone_#00",
+  ALARM_1 = "alarm_1_#00",
+  ALARM_2 = "alarm_2_#00",
+  ALARM_3 = "alarm_3_#00",
+  NOODLE_PRINTS = "noodle_prints_#00",
+  NOODLE_PRINTS_01 = "noodle_prints_#01",
+  NOODLE_PRINTS_02 = "noodle_prints_#02",
+  SHOE = "shoe_#00",
+  BIKE_PART = "bike_part_#00",
+  BIKE = "bike_#00",
+  FLAG = "flag_#00",
+  SOCCER = "soccer_#00",
+  SOCCER_PART = "soccer_part_#00",
+  QUANTUM = "quantum_#00",
+  PHOTO_4 = "photo_4_#00",
+  CELLO_BOX = "cello_box_#00"
 }
 
 export type Item = {
   id: ItemId;
   name: Record<Lang, string>;
   description: Record<Lang, string>;
-  category: ItemCategory;
+  categories: ItemCategory[];
   icon: string;
+  decoration: number;
+  heavy: boolean;
+  watchPoints: number;
+  event?: GameEvent;
+  actions: ItemAction[];
 };
 
 export const items: Record<ItemId, Item> = {
-  [ItemId.WATER_RATION]: {
-    id: ItemId.WATER_RATION,
+  [ItemId.WATER]: {
+    id: ItemId.WATER,
     name: {
       [Lang.EN]: "Water Ration",
       [Lang.FR]: "Ration d'eau",
@@ -409,11 +403,34 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Das Wasser gibt dir einmal pro Tag deine Aktionpunkte zurück oder löscht alternativ deinen Durst (unbegrenzt).",
       [Lang.ES]: "El agua te hace recuperar Puntos de Acción (1 vez al día) y calmará tu sed (sin limitaciones diarias)."
     },
-    category: ItemCategory.Food,
-    icon: "item_water"
+    categories: [ItemCategory.Food, ItemCategory.APSource, ItemCategory.Water, ItemCategory.Poisonable],
+    icon: "item_water",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Drink,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "thirst1"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_meta_wound"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BATTERY]: {
-    id: ItemId.BATTERY,
+  [ItemId.PILE]: {
+    id: ItemId.PILE,
     name: {
       [Lang.EN]: "Battery",
       [Lang.FR]: "Pile",
@@ -426,8 +443,14 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Batterie ist für vieles nützlich. Allerdings ist sie auch ziemlich schnell leer ...",
       [Lang.ES]: "Sirve para muchas cosas, pero se descarga muy rápido..."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_pile"
+    categories: [ItemCategory.Resources],
+    icon: "item_pile",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
   [ItemId.CAN]: {
     id: ItemId.CAN,
@@ -443,11 +466,40 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Auf dem vergilbtem Etikettenbild erkennst du ein leckeres Bohnengericht! Allerdings brauchst du ein Werkzeug, um die Dose öffnen zu können...",
       [Lang.ES]: "¡La etiqueta tiene una imagen de frijoles muy apetitosos! Pero primero hay que encontrar con qué abrirla..."
     },
-    category: ItemCategory.Food,
-    icon: "item_can"
+    categories: [ItemCategory.Food],
+    icon: "item_can",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "can_open_#00"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [ItemActionCondition.Technician],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "can_open_#00"
+          },
+          {
+            type: ItemActionEffectType.CP,
+            value: -1
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.OPEN_CAN]: {
-    id: ItemId.OPEN_CAN,
+  [ItemId.CAN_OPEN]: {
+    id: ItemId.CAN_OPEN,
     name: {
       [Lang.EN]: "Open Can",
       [Lang.FR]: "Boîte de conserve ouverte",
@@ -460,11 +512,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Jetzt mach mal kein Gezeter, schließ dein Augen, mach deinen Mund ganz weit auf und runter damit! Du wirst sehen, dass es dir danach besser geht.",
       [Lang.ES]: "Vamos, abre la boca y traga tapándote la nariz. Después te sentirás mejor."
     },
-    category: ItemCategory.Food,
-    icon: "item_can_open"
+    categories: [ItemCategory.Food, ItemCategory.GuardWeapon, ItemCategory.APSource, ItemCategory.Poisonable],
+    icon: "item_can_open",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 2,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BATTERY_LAUNCHER_1_ITF_LOADED]: {
-    id: ItemId.BATTERY_LAUNCHER_1_ITF_LOADED,
+  [ItemId.PILEGUN]: {
+    id: ItemId.PILEGUN,
     name: {
       [Lang.EN]: "Battery Launcher 1-ITF (loaded)",
       [Lang.FR]: "Lance-Pile 1-PDTG (chargé)",
@@ -477,8 +544,28 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Der Batteriewerfer 1-PDTG (geladen) wurde äußerst einfallsreich zusammengeschraubt. Dank einer virtuosen Recyclingprozedur ist er in der Lage, harmlose Batterien in mächtige Geschosse zu verwandeln.",
       [Lang.ES]: "Totalmente hecho a mano, el Lanzapilas 1-PDTG convierte las pilas en proyectiles perforadores."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_pilegun"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_pilegun",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 8,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pile_broken_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pilegun_empty_#00"
+          }
+        ]
+      }
+    ]
   },
   [ItemId.TASER]: {
     id: ItemId.TASER,
@@ -494,11 +581,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Der Taser ist eine kleine technische Spielerei, mit der man grässliche Elektrostöße in dem Körper seines Opfers jagen kann. Allerdings ist er nicht sehr effektiv, wenn man bedennkt dass den Zombies Schmerzen nichts ausmachen. Vielleicht gelingt es dir ja mit einem Stromstoß ein wichtiges Körperglied oder Organ zum Platzen zu bringen?",
       [Lang.ES]: "Un arma capaz de paralizar el cuerpo de la víctima con una terrible descarga eléctrica. No es muy eficaz sabiendo que los zombies no le temen al dolor. Pero siempre puedes intentar hacer colapsar un órgano vital con él."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_taser"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_taser",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 5,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "taser_empty_#00",
+            odds: 41
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.AQUA_SPLASH_EMPTY]: {
-    id: ItemId.AQUA_SPLASH_EMPTY,
+  [ItemId.WATERGUN_OPT_EMPTY]: {
+    id: ItemId.WATERGUN_OPT_EMPTY,
     name: {
       [Lang.EN]: "Aqua-Splash (empty)",
       [Lang.FR]: "Aqua-Splash (vide)",
@@ -511,11 +614,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine furchterregende Waffe, die nur noch etwas reines Wasser benötigt.",
       [Lang.ES]: "Un arma temible, pero le falta estar cargada con agua pura."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_watergun_opt_empty"
+    categories: [ItemCategory.Armoury],
+    icon: "item_watergun_opt_empty",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "watergun_opt_5_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.ELECTRIC_WHISK_LOADED]: {
-    id: ItemId.ELECTRIC_WHISK_LOADED,
+  [ItemId.MIXERGUN]: {
+    id: ItemId.MIXERGUN,
     name: {
       [Lang.EN]: "Electric Whisk (loaded)",
       [Lang.FR]: "Batteur électrique (chargé)",
@@ -528,11 +646,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Rührt elektrisch und sehr schnell - was gibt's sonst noch zu sagen? Er hat den Vorteil, dass er nur eine Batterie braucht, die sich nicht mal mit Sicherheit entlädt.",
       [Lang.ES]: "Tan sencillo como eso. La buena noticia es que sólo necesitas una batería y tienes cierta posibilidad de agotarla."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_mixergun"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_mixergun",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 18,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "mixergun_empty_#00",
+            odds: 29
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CHAINSAW_LOADED]: {
-    id: ItemId.CHAINSAW_LOADED,
+  [ItemId.CHAINSAW]: {
+    id: ItemId.CHAINSAW,
     name: {
       [Lang.EN]: "Chainsaw (loaded)",
       [Lang.FR]: "Tronçonneuse",
@@ -545,11 +679,31 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Damit richtest du ein wahres Massaker an. Ob du das aber zu 100% unversehrt überstehst ist eine andere Frage... Diese umgebaute Höllenmaschine funktioniert - man glaubt es kaum - mit einer gewöhnlichen Batterie!",
       [Lang.ES]: "Con eso puedes darte el gusto de masacrar a tus atacantes. Recuerda que puedes salir victorioso pero no siempre ileso... Esta máquina infernal ha sido modificada y funciona (increíblemente) ¡con una sola pila!"
     },
-    category: ItemCategory.Weapon,
-    icon: "item_chainsaw"
+    categories: [ItemCategory.Armoury, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    icon: "item_chainsaw",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 30,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "chainsaw_empty_#00",
+            odds: 23
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "3"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.LAWNMOWER]: {
-    id: ItemId.LAWNMOWER,
+  [ItemId.LAWN]: {
+    id: ItemId.LAWN,
     name: {
       [Lang.EN]: "Lawnmower",
       [Lang.FR]: "Tondeuse à gazon",
@@ -562,11 +716,31 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Du magst es wenn es sauber ist und frisch nach Gras duftet? Vergiss das mal lieber ganz schnell. Wenn du ihn verwendest, wird es ganz anders riechen...",
       [Lang.ES]: "¿Te gusta que quede parejo, limpio y que huela a jardín primaveral? Olvídalo, cuando lo utilices será todo lo contrario."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_lawn"
+    categories: [ItemCategory.Armoury, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Breakable],
+    icon: "item_lawn",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 20,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "2"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.ADJUSTABLE_SPANNER]: {
-    id: ItemId.ADJUSTABLE_SPANNER,
+  [ItemId.WRENCH]: {
+    id: ItemId.WRENCH,
     name: {
       [Lang.EN]: "Adjustable Spanner",
       [Lang.FR]: "Clé à Molette",
@@ -579,11 +753,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Mit einem verstellbaren Schraubenschlüssel kannst du wahlweise an einem Gegenstand herumbasteln oder etwas zerstören (muss nicht unbedingt ein Gegenstand sein...)",
       [Lang.ES]: "Con ella puedes armar un objeto o destruir lo que quieras. No necesariamente tiene que ser un objeto..."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_wrench"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon, ItemCategory.Breakable],
+    icon: "item_wrench",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 5,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 20
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SCREWDRIVER]: {
-    id: ItemId.SCREWDRIVER,
+  [ItemId.SCREW]: {
+    id: ItemId.SCREW,
     name: {
       [Lang.EN]: "Screwdriver",
       [Lang.FR]: "Tournevis",
@@ -596,8 +786,24 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Um Schrauben festzudrehen oder zu lösen. Du kannst mit ihm etwas reparieren und zur Not auch eine Konservendose aufmachen. Wenn du ihn mit voller Wucht in einen Kopf rammst, kann er dir in Extremsituationen auch mal das Leben retten...",
       [Lang.ES]: "Sirve para reparar cosas, ¡ah! y también puedes abrir latas con él. Como último recurso, clávaselo en la cabeza de alguien, bien podría salvarte la vida..."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_screw"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon, ItemCategory.Breakable],
+    icon: "item_screw",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 5,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 40
+          }
+        ]
+      }
+    ]
   },
   [ItemId.STAFF]: {
     id: ItemId.STAFF,
@@ -613,11 +819,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein ziemlich großer trockener Stock, mit dem man etwas aufspießen kann. Allerdings sieht er etwas zerbrechlich aus... bete, dass er den Stoß übersteht und nicht bricht.",
       [Lang.ES]: "Es suficientemente puntiagudo para atravesar lo que quieras, pero es frágil... Reza para que resista cuando la necesites."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_staff"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_staff",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 5,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "staff2_#00",
+            odds: 33
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SERRATED_KNIFE]: {
-    id: ItemId.SERRATED_KNIFE,
+  [ItemId.KNIFE]: {
+    id: ItemId.KNIFE,
     name: {
       [Lang.EN]: "Serrated Knife",
       [Lang.FR]: "Couteau à dents",
@@ -630,11 +852,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Skinner, Buck, Bowie ... , völlig egal, Hauptsache es schneidet.",
       [Lang.ES]: "Solo las mejores marcas: Skinner, Buck y Bowie... Lo importante es que cortan, y bien."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_knife"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon, ItemCategory.Breakable],
+    icon: "item_knife",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 10,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 33
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.MACHETE]: {
-    id: ItemId.MACHETE,
+  [ItemId.CUTCUT]: {
+    id: ItemId.CUTCUT,
     name: {
       [Lang.EN]: "Machete",
       [Lang.FR]: "Coupe-Coupe",
@@ -647,11 +885,31 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Wird für die Entfernung von Unkraut und Pflanzengeflecht benutzt. Das ist auch hier der Fall. Allerdings ist die \"Vegetation\" hier ziemlich rachsüchtig und laut...",
       [Lang.ES]: "Sirve para abrirse camino, solo que aquí los obstáculos pueden ser muy vengativos y siniestramente chillones..."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_cutcut"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon, ItemCategory.Breakable],
+    icon: "item_cutcut",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 15,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "2"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PATHETIC_PENKNIFE]: {
-    id: ItemId.PATHETIC_PENKNIFE,
+  [ItemId.SMALL_KNIFE]: {
+    id: ItemId.SMALL_KNIFE,
     name: {
       [Lang.EN]: "Pathetic Penknife",
       [Lang.FR]: "Canif dérisoire",
@@ -664,11 +922,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Taschenmesser [Substantiv, n]: Ein Taschenmesser ist ein Messer, dessen Klinge zum gefahrlosen Transport in den Griff eingeklappt werden kann. Wenn du schlau bist, lässt du es bei diesem Messer besser nicht drauf ankommen...",
       [Lang.ES]: "Según la RAE: Cuchillo cuya hoja puede doblarse sobre el mango para que el filo quede... blablabla... Alguien con sentido común sabrá que es algo peligroso."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_small_knife"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon, ItemCategory.Breakable],
+    icon: "item_small_knife",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 5,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 45
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SWISS_ARMY_KNIFE]: {
-    id: ItemId.SWISS_ARMY_KNIFE,
+  [ItemId.SWISS_KNIFE]: {
+    id: ItemId.SWISS_KNIFE,
     name: {
       [Lang.EN]: "Swiss Army Knife",
       [Lang.FR]: "Couteau suisse",
@@ -681,11 +955,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Das Schweizer Taschenmesser ist für viele kleinere Arbeiten nützlich. Für eine Horde lebender Untoter reicht es allerdings nicht ganz aus.",
       [Lang.ES]: "Siempre útil para pequeños trabajos manuales, pero no ante una turba de muertos vivientes."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_swiss_knife"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon, ItemCategory.Breakable],
+    icon: "item_swiss_knife",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 5,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 50
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BOX_CUTTER]: {
-    id: ItemId.BOX_CUTTER,
+  [ItemId.CUTTER]: {
+    id: ItemId.CUTTER,
     name: {
       [Lang.EN]: "Box Cutter",
       [Lang.FR]: "Cutter",
@@ -698,11 +988,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieses kleine kükengelbe Messer mit ausfahrbarer Klinge passt hervorragend zu der Eingeweidenfarbe deiner untoten Freunde. Vorausgesetzt du kommst so weit.",
       [Lang.ES]: "Con una fina lámina afilada retráctil, solo está disponible en \"amarillo patito\". Así los muertos vivientes no se podrán quejar del color cuando lo tengan clavado en el torso."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_cutter"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon, ItemCategory.Breakable],
+    icon: "item_cutter",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 7,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 70
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SHOPPING_TROLLEY]: {
-    id: ItemId.SHOPPING_TROLLEY,
+  [ItemId.CART]: {
+    id: ItemId.CART,
     name: {
       [Lang.EN]: "Shopping Trolley",
       [Lang.FR]: "Caddie",
@@ -715,8 +1021,14 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Man nennt ihn auch \"Caddy\". Niemand weiß so recht, wozu er gut ist, außer um ein paar Gegenstände herumzufahren. Im Sand rollt er leider nicht ganz so gut.",
       [Lang.ES]: "Solo sirve para poner cosas dentro. Lo malo es que no rueda muy bien en la arena."
     },
-    category: ItemCategory.Box,
-    icon: "item_cart"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    icon: "item_cart",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 15,
+    actions: [
+      
+    ]
   },
   [ItemId.CAN_OPENER]: {
     id: ItemId.CAN_OPENER,
@@ -732,11 +1044,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Wie der Name schon sagt: Bestens dafür geeignet, um eine Konservendose aufzumachen. Leider ist er etwas zu klein, um auch deine zweibeinigen Kameraden in der Wüste korrekt zu \"öffnen\".",
       [Lang.ES]: "Su nombre lo dice todo. Desgraciadamente no servirá de mucho ante las amenazas que encontrarás en el desierto."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_can_opener"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon, ItemCategory.Breakable],
+    icon: "item_can_opener",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 5,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.MANBAG]: {
-    id: ItemId.MANBAG,
+  [ItemId.BAG]: {
+    id: ItemId.BAG,
     name: {
       [Lang.EN]: "Manbag",
       [Lang.FR]: "Sac supplémentaire",
@@ -749,11 +1076,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese Tasche eignet sich bestens für ausgedehnte Wanderungen unter Freunden, denn sie erlaubt dir, noch mehr Souvenirstücke jeglicher Art (biologische, nukleare, usw..) mitzunehmen.",
       [Lang.ES]: "Muy práctica para los paseos entre amigos, en ella puedes llevar más cosas útiles."
     },
-    category: ItemCategory.Box,
-    icon: "item_bag"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.BagExtension],
+    icon: "item_bag",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.BOX_OF_MATCHES]: {
-    id: ItemId.BOX_OF_MATCHES,
+  [ItemId.LIGHTS]: {
+    id: ItemId.LIGHTS,
     name: {
       [Lang.EN]: "Box of Matches",
       [Lang.FR]: "Boîte d'allumettes",
@@ -766,11 +1099,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Gib es ruhig zu: Die Zombies sind für dich schon immer Feuer und Flamme gewesen.",
       [Lang.ES]: "No es necesario explicarlo..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_lights"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_lights",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.VALIUM_SHOT]: {
-    id: ItemId.VALIUM_SHOT,
+  [ItemId.XANAX]: {
+    id: ItemId.XANAX,
     name: {
       [Lang.EN]: "Valium Shot",
       [Lang.FR]: "Piqure de calmant",
@@ -783,11 +1122,34 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Entspann dich... das wird nicht die letzte sein, die du brauchst.",
       [Lang.ES]: "Respira profundo, después te sentirás mejor."
     },
-    category: ItemCategory.Drug,
-    icon: "item_xanax"
+    categories: [ItemCategory.Pharmacy, ItemCategory.Drug],
+    icon: "item_xanax",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_drug_#00"
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "terror"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.ROCKING_CHAIR]: {
-    id: ItemId.ROCKING_CHAIR,
+  [ItemId.CHAIR]: {
+    id: ItemId.CHAIR,
     name: {
       [Lang.EN]: "Rocking Chair",
       [Lang.FR]: "Rocking Chair",
@@ -800,11 +1162,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "ZZzzzz... Knarr knarr... ZZzzzz... Knarr knarr...",
       [Lang.ES]: "ZZzzzz... Chillido... ZZzzzz... Chillido..."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_chair"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    icon: "item_chair",
+    decoration: 5,
+    heavy: true,
+    watchPoints: 15,
+    actions: [
+      
+    ]
   },
-  [ItemId.DUSTY_BOOK]: {
-    id: ItemId.DUSTY_BOOK,
+  [ItemId.RP_BOOK]: {
+    id: ItemId.RP_BOOK,
     name: {
       [Lang.EN]: "Dusty Book",
       [Lang.FR]: "Livre poussiéreux",
@@ -817,11 +1185,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein altes Buch, dessen Seiten größtenteils zerrissen oder verklebt sind. Ein paar sind jedoch lesbar...",
       [Lang.ES]: "Un viejo libro cuyas páginas están rotas o pegadas entre ellas por la humedad. a veces es posible leer algo interesante entre ellas..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_rp_book"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.RP],
+    icon: "item_rp_book",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_rp_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.MATTRESS]: {
-    id: ItemId.MATTRESS,
+  [ItemId.BED]: {
+    id: ItemId.BED,
     name: {
       [Lang.EN]: "Mattress",
       [Lang.FR]: "Matelas",
@@ -834,11 +1217,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "ZZzzzz ... Quietsch ... ZZzzzz ... Quietsch",
       [Lang.ES]: "No te importa saber con qué fue rellenado, lo que importa es que es suave."
     },
-    category: ItemCategory.Armor,
-    icon: "item_bed"
+    categories: [ItemCategory.Defences, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.CampingBoost],
+    icon: "item_bed",
+    decoration: 3,
+    heavy: true,
+    watchPoints: 20,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: -1
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BEDSIDE_LAMP]: {
-    id: ItemId.BEDSIDE_LAMP,
+  [ItemId.LAMP]: {
+    id: ItemId.LAMP,
     name: {
       [Lang.EN]: "Bedside Lamp",
       [Lang.FR]: "Lampe de chevet éteinte",
@@ -851,11 +1249,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Das ist eine hübsche Nachttischlampe. Allerdings brauchst du eine Batterie, um sie benutzen zu können...",
       [Lang.ES]: "Es muy bonita, pero no funcionará sin una pila..."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_lamp"
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    icon: "item_lamp",
+    decoration: 1,
+    heavy: false,
+    watchPoints: 5,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lamp_on_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PERSIAN_RUG]: {
-    id: ItemId.PERSIAN_RUG,
+  [ItemId.CARPET]: {
+    id: ItemId.CARPET,
     name: {
       [Lang.EN]: "Persian Rug",
       [Lang.FR]: "Tapis persan",
@@ -868,11 +1281,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Leg ihn dir ins Wohnzimmer dann fallen dir all die grässlichen Dinge, die überall am Boden herum liegen nicht mehr so auf...",
       [Lang.ES]: "Servirá para esconder la suciedad que cubre el suelo de tu casa."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_carpet"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    icon: "item_carpet",
+    decoration: 10,
+    heavy: true,
+    watchPoints: 8,
+    actions: [
+      
+    ]
   },
-  [ItemId.MINI_HI_FI_BROKEN]: {
-    id: ItemId.MINI_HI_FI_BROKEN,
+  [ItemId.MUSIC_PART]: {
+    id: ItemId.MUSIC_PART,
     name: {
       [Lang.EN]: "Mini HI-Fi (Broken)",
       [Lang.FR]: "Petite chaîne Hi-Fi en panne",
@@ -885,11 +1304,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine kleine Hi-Fi Anlage vom Discounter nebenan. Schade, dass keine Batterien mehr drin sind, aber vielleicht kannst du ja welche auftreiben...",
       [Lang.ES]: "De los baratos... pero necesita una pila para funcionar."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_music_part"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
+    icon: "item_music_part",
+    decoration: 1,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.PADLOCK_AND_CHAIN]: {
-    id: ItemId.PADLOCK_AND_CHAIN,
+  [ItemId.LOCK]: {
+    id: ItemId.LOCK,
     name: {
       [Lang.EN]: "Padlock and Chain",
       [Lang.FR]: "Chaîne de Porte + cadenas",
@@ -902,11 +1327,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine schwere Kette mit passendem Vorhängeschloss. Sie gibt dir ein beruhigendes Gefühl, wenn du mal nicht daheim bist. Für das Stadttor ist sie leider viel zu klein.",
       [Lang.ES]: "Con eso uno se siente más seguro en casa."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_lock"
+    categories: [ItemCategory.Furniture],
+    icon: "item_lock",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.DOORMAT]: {
-    id: ItemId.DOORMAT,
+  [ItemId.DOOR_CARPET]: {
+    id: ItemId.DOOR_CARPET,
     name: {
       [Lang.EN]: "Doormat",
       [Lang.FR]: "Paillasson",
@@ -919,8 +1350,14 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Du trittst mal ausnahmsweise nicht auf Leichen rum. Ein gutes Gefühl.",
       [Lang.ES]: "Siempre es bueno limpiarse los zapatos antes de entrar, díselo a los zombies cuando vengan a visitarte."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_door_carpet"
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
+    icon: "item_door_carpet",
+    decoration: 5,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
   [ItemId.DICE]: {
     id: ItemId.DICE,
@@ -936,8 +1373,14 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Spiele ne Runde mit den anderen Losern.",
       [Lang.ES]: "Juega con otros perdedores como tú."
     },
-    category: ItemCategory.Misc,
-    icon: "item_dice"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon],
+    icon: "item_dice",
+    decoration: 0,
+    heavy: false,
+    watchPoints: -10,
+    actions: [
+      
+    ]
   },
   [ItemId.ENGINE]: {
     id: ItemId.ENGINE,
@@ -953,11 +1396,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Es handelt sich um einen kleinen Motor, der mit Ölspuren und undefinierbaren Brennresten verschmutzt ist und der schwer wie Blei ist.",
       [Lang.ES]: "Está lleno de aceite y suena a piezas sueltas cuando lo sacudes. Pesa."
     },
-    category: ItemCategory.Misc,
-    icon: "item_engine"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    icon: "item_engine",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 30,
+    actions: [
+      
+    ]
   },
-  [ItemId.BELT]: {
-    id: ItemId.BELT,
+  [ItemId.COURROIE]: {
+    id: ItemId.COURROIE,
     name: {
       [Lang.EN]: "Belt",
       [Lang.FR]: "Courroie",
@@ -970,11 +1419,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein Riemen... Der ist bestimmt für irgendetwas nützlich.",
       [Lang.ES]: "Encuéntrale un uso."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_courroie"
+    categories: [ItemCategory.Resources],
+    icon: "item_courroie",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.HANDFUL_OF_NUTS_AND_BOLTS]: {
-    id: ItemId.HANDFUL_OF_NUTS_AND_BOLTS,
+  [ItemId.MECA_PARTS]: {
+    id: ItemId.MECA_PARTS,
     name: {
       [Lang.EN]: "Handful of nuts and bolts",
       [Lang.FR]: "Poignée de vis et écrous",
@@ -987,11 +1442,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein paar Teile sind verrostet, andere von einem moosartigen Flaum überzogen... aber sie funktionieren noch halbwegs.",
       [Lang.ES]: "Algunas están oxidadas, otras están desgastadas, pero al menos cumplen con su misión."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_meca_parts"
+    categories: [ItemCategory.Resources],
+    icon: "item_meca_parts",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.CHICKEN]: {
-    id: ItemId.CHICKEN,
+  [ItemId.PET_CHICK]: {
+    id: ItemId.PET_CHICK,
     name: {
       [Lang.EN]: "Chicken",
       [Lang.FR]: "Poule",
@@ -1004,11 +1465,40 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sehr schön! Jetzt musst du nur noch einen Metzger finden. Nebenbei bemerkt: Du kannst es auch auf einen Zombie werfen...",
       [Lang.ES]: "Bueno, solo queda encontrar a un carnicero. Si te sirve, también puedes lanzarlo contra un zombie..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_pet_chick"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon, ItemCategory.Animal],
+    icon: "item_pet_chick",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 8,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_animal_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "undef_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "undef_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "1"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.STINKING_PIG]: {
-    id: ItemId.STINKING_PIG,
+  [ItemId.PET_PIG]: {
+    id: ItemId.PET_PIG,
     name: {
       [Lang.EN]: "Stinking Pig",
       [Lang.FR]: "Cochon malodorant",
@@ -1021,11 +1511,50 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sehr schön! Jetzt musst du nur noch einen Metzger finden. Nebenbei bemerkt: Du kannst es auch auf einen Zombie werfen ...",
       [Lang.ES]: "Bueno, solo queda encontrar a un carnicero. Si te sirve, también puedes lanzarlo contra un zombie..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_pet_pig"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Animal],
+    icon: "item_pet_pig",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 25,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_animal_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "undef_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "undef_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "undef_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "undef_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "1"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.GIANT_RAT]: {
-    id: ItemId.GIANT_RAT,
+  [ItemId.PET_RAT]: {
+    id: ItemId.PET_RAT,
     name: {
       [Lang.EN]: "Giant Rat",
       [Lang.FR]: "Rat géant",
@@ -1038,11 +1567,40 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sehr schön! Jetzt musst du nur noch einen Metzger finden. Nebenbei bemerkt: Du kannst sie auch auf einen Zombie werfen...",
       [Lang.ES]: "Bueno, solo queda encontrar a un carnicero. Si te sirve, también puedes lanzarla contra un zombie..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_pet_rat"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon, ItemCategory.Animal],
+    icon: "item_pet_rat",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 12,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_animal_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "undef_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "undef_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "1"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.GUARD_DOG]: {
-    id: ItemId.GUARD_DOG,
+  [ItemId.PET_DOG]: {
+    id: ItemId.PET_DOG,
     name: {
       [Lang.EN]: "Guard Dog",
       [Lang.FR]: "Chien hargneux (alias Pepette)",
@@ -1055,11 +1613,40 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Der beste Freund des Menschen. Du kannst ihn wahlweise dein Haus bewachen lassen, ihn auf Zombies hetzen oder dir ein paar leckere Steaks braten...",
       [Lang.ES]: "Mejor amigo del hombre. Puedes elegir si protege tu casa, te salva de un zombi merodeador o termina como sabrosas hamburguesas..."
     },
-    category: ItemCategory.Armor,
-    icon: "item_pet_dog"
+    categories: [ItemCategory.Defences, ItemCategory.GuardWeapon, ItemCategory.Animal],
+    icon: "item_pet_dog",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 25,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_animal_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meat_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meat_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "1"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.FAT_CAT]: {
-    id: ItemId.FAT_CAT,
+  [ItemId.PET_CAT]: {
+    id: ItemId.PET_CAT,
     name: {
       [Lang.EN]: "Fat Cat",
       [Lang.FR]: "Gros chat mignon",
@@ -1072,11 +1659,40 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ist der knuddelig! Ein wahres Prachtstück für daheim, das dich im Notfall auch gegen Zombies verteidigt. Und wenn du mal Hunger hast ...",
       [Lang.ES]: "Acompaña muy bien en la casa y sabe más o menos pelear contra un zombie. Y si tienes hambre..."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_pet_cat"
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Animal],
+    icon: "item_pet_cat",
+    decoration: 5,
+    heavy: false,
+    watchPoints: 12,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_animal_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meat_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meat_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "1"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.HUGE_SNAKE_OPHIOPHAGUS_TROUSER]: {
-    id: ItemId.HUGE_SNAKE_OPHIOPHAGUS_TROUSER,
+  [ItemId.PET_SNAKE]: {
+    id: ItemId.PET_SNAKE,
     name: {
       [Lang.EN]: "Huge Snake (Ophiophagus trouser)",
       [Lang.FR]: "Serpent de 2 mètres",
@@ -1089,11 +1705,50 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sie ist grün, beißt und zischt. Du brauchst nur einen Metzger, dann kannst du dir ein paar Reptiliensteaks machen. Auf einen Zombie kannst du sie auch werfen...",
       [Lang.ES]: "Es verde, muerde y hace zzzt-zzzt. Solo falta encontrar a un carnicero que nos la rebane para la merienda. También puedes lanzarla sobre un zombie..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_pet_snake"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Animal],
+    icon: "item_pet_snake",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 25,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_animal_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meat_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meat_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meat_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meat_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "1"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.POCKET_VIBRATOR_CHARGED]: {
-    id: ItemId.POCKET_VIBRATOR_CHARGED,
+  [ItemId.VIBR]: {
+    id: ItemId.VIBR,
     name: {
       [Lang.EN]: "Pocket Vibrator (charged)",
       [Lang.FR]: "Petit manche vibrant (chargé)",
@@ -1106,11 +1761,34 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Er vibriert und kitzelt dich am ganzen Körper und lässt dich für einen Augenblick all deine Sorgen vergessen (benötigt 1 Batterie).",
       [Lang.ES]: "Vibra, hace cosquillas y te hace olvidar tus problemas por unos instantes (necesita 1 pila)."
     },
-    category: ItemCategory.Misc,
-    icon: "item_vibr"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon],
+    icon: "item_vibr",
+    decoration: 0,
+    heavy: false,
+    watchPoints: -10,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "terror"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_maso_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "vibr_empty_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.ANABOLIC_STEROIDS]: {
-    id: ItemId.ANABOLIC_STEROIDS,
+  [ItemId.DRUG]: {
+    id: ItemId.DRUG,
     name: {
       [Lang.EN]: "Anabolic Steroids",
       [Lang.FR]: "Stéroïdes Anabolisants",
@@ -1123,11 +1801,34 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Mit dieser Droge siehst Du alles rosa: Du spürst keine Müdigkeit mehr und strotzt nur so vor Kraft! Das bisschen Herzrasen und der verstärkt auftretende Speichelfluss - geschenkt! Vorschicht: Bei übermäßiger Einnahme droht eine Abhängigkeit! Diese wundersamen Pillen füllen eure Aktivitätspunkte von 0 auf 6 wieder auf! Ein Teufelszeug! Leider kann man von den Pillen abhängig werden...",
       [Lang.ES]: "Ideal para hacerte ver la vida color de rosa: Ya no hay cansancio, pero te puede provocar algunas convulsiones con un poco de espuma en la boca... ¡Cuidado con la adicción!"
     },
-    category: ItemCategory.Drug,
-    icon: "item_drug"
+    categories: [ItemCategory.Pharmacy, ItemCategory.APSource, ItemCategory.Drug, ItemCategory.Poisonable],
+    icon: "item_drug",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_drug_#00"
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.TASTY_LOOKING_STEAK]: {
-    id: ItemId.TASTY_LOOKING_STEAK,
+  [ItemId.MEAT]: {
+    id: ItemId.MEAT,
     name: {
       [Lang.EN]: "Tasty-looking Steak",
       [Lang.FR]: "Steak appétissant",
@@ -1140,11 +1841,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Es ist labbrig wie weiches Gummi und es riecht nach Fisch ... Was das wohl für ein Fleisch ist? Jedenfalls hat es bestimmt viele Vitamine und Proteine (und sonst hoffentlich nichts).",
       [Lang.ES]: "Tiene muchas proteínas, pero parece ser más duro que una suela de zapato, más vale que tengas buena dentadura."
     },
-    category: ItemCategory.Food,
-    icon: "item_meat"
+    categories: [ItemCategory.Food, ItemCategory.GuardWeapon, ItemCategory.APSource],
+    icon: "item_meat",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 4,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 7
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.UNSPECIFIED_MEAT]: {
-    id: ItemId.UNSPECIFIED_MEAT,
+  [ItemId.UNDEF]: {
+    id: ItemId.UNDEF,
     name: {
       [Lang.EN]: "Unspecified Meat",
       [Lang.FR]: "Viande indéfinissable",
@@ -1157,11 +1873,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Du bist dir so gut wie sicher, dass man dieses weiche und glibbrige Etwas essen kann. Zumindest riecht es nicht sooo schlecht und es bewegt sich auch nicht.",
       [Lang.ES]: "Estás casi seguro de que esa cosa amarillenta pegada a un hueso se puede comer. En todo caso no huele mal."
     },
-    category: ItemCategory.Food,
-    icon: "item_undef"
+    categories: [ItemCategory.Food, ItemCategory.GuardWeapon, ItemCategory.APSource],
+    icon: "item_undef",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 2,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.GROUNDSHEET]: {
-    id: ItemId.GROUNDSHEET,
+  [ItemId.SHEET]: {
+    id: ItemId.SHEET,
     name: {
       [Lang.EN]: "Groundsheet",
       [Lang.FR]: "Toile de tente",
@@ -1174,11 +1905,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine große, solide Zeltplane, die auch noch wasserdicht ist. Sie eignet sich bestens dazu die Löcher in deinem Hausdach zu schließen. ANMERKUNG: Dieser Gegenstand ist für die Verbesserung deines Hauses zwingend vorgeschrieben.",
       [Lang.ES]: "Una tela muy resistente e impermeable. Ideal para pasar la noche afuera (sin olvidar los bichos, zombies, enfermedades, tormentas y el frío). Aumenta tus posibilidades de sobrevivir al acampar, debes llevarla contigo para recibir el bonus."
     },
-    category: ItemCategory.Misc,
-    icon: "item_sheet"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon, ItemCategory.CampingBoost],
+    icon: "item_sheet",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 10,
+    actions: [
+      
+    ]
   },
-  [ItemId.ULTRA_RUCKSACK]: {
-    id: ItemId.ULTRA_RUCKSACK,
+  [ItemId.BAGXL]: {
+    id: ItemId.BAGXL,
     name: {
       [Lang.EN]: "Ultra-Rucksack",
       [Lang.FR]: "Sac super-pratique",
@@ -1191,11 +1928,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dein idealer Begleiter für unterwegs! Massage im Schulter- und Lendenbereich, zweistufig regulierbar und mit großen Seitentaschen. Ein hübsches Logo aus Chrom mit der Auffschrift \"Desert Addict\" verziert ihn zusätzlich.",
       [Lang.ES]: "¡El accesorio de viaje ideal! Bolsillos laterales, impermeable, ergonómica, masajea la espalda mientras caminas y lleva un bonito logo \"Man vs Wild\""
     },
-    category: ItemCategory.Box,
-    icon: "item_bagxl"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.BagExtension],
+    icon: "item_bagxl",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.FULL_JERRYCAN]: {
-    id: ItemId.FULL_JERRYCAN,
+  [ItemId.JERRYCAN]: {
+    id: ItemId.JERRYCAN,
     name: {
       [Lang.EN]: "Full Jerrycan",
       [Lang.FR]: "Jerrycan",
@@ -1208,11 +1951,51 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Der \"Jerrycan\" kann mehrere Rationen nicht-trinkbares Wasser aufnehmen. Sobald die Stadt über eine passende Filteranlage verfügt, kann dieses Wasser trinkbar gemacht werden.",
       [Lang.ES]: "Contiene varias raciones de agua no potable (sin purificar). Para eso es necesario que el pueblo tenga un edificio de filtrado de agua."
     },
-    category: ItemCategory.Misc,
-    icon: "item_jerrycan"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_jerrycan",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.AddWaterToWell,
+            value: "1-3"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.TWISTED_PLANK]: {
-    id: ItemId.TWISTED_PLANK,
+  [ItemId.WOOD2]: {
+    id: ItemId.WOOD2,
     name: {
       [Lang.EN]: "Twisted Plank",
       [Lang.FR]: "Planche tordue",
@@ -1225,11 +2008,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein total verschimmeltes Holzbrett, das noch einigermaßen stabil ist...",
       [Lang.ES]: "Un poco enmohecida pero sólida... Nota: La madera se emplea en la construcción (llévala al Almacén)."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_wood2"
+    categories: [ItemCategory.Resources],
+    icon: "item_wood2",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.WROUGHT_IRON]: {
-    id: ItemId.WROUGHT_IRON,
+  [ItemId.METAL]: {
+    id: ItemId.METAL,
     name: {
       [Lang.EN]: "Wrought Iron",
       [Lang.FR]: "Ferraille",
@@ -1242,11 +2031,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Stinknormales Metall, das zwar schwer ist, aber immer verwendet werden kann!",
       [Lang.ES]: "Un montón de metales pesados, ¡pero útiles! Nota: El metal se emplea en la construcción (llévalo al Almacén)."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_metal"
+    categories: [ItemCategory.Resources],
+    icon: "item_metal",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.WATER_BOMB]: {
-    id: ItemId.WATER_BOMB,
+  [ItemId.GRENADE]: {
+    id: ItemId.GRENADE,
     name: {
       [Lang.EN]: "Water Bomb",
       [Lang.FR]: "Bombe à eau",
@@ -1259,11 +2054,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Gebrauchsanweisung: Auf einen Zombie werfen und beten, dass sie platzt. Anschließend warten bis es \"Splatsch!!\" macht.",
       [Lang.ES]: "Lánzala sobre un zombie y reza para que explote... espera a que vuelva a explotar."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_grenade"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_grenade",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 8,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.Kill,
+            value: "2-4"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SHEET_METAL]: {
-    id: ItemId.SHEET_METAL,
+  [ItemId.PLATE]: {
+    id: ItemId.PLATE,
     name: {
       [Lang.EN]: "Sheet Metal",
       [Lang.FR]: "Plaque de tôle",
@@ -1276,11 +2086,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Fast nichts ist besser als eine rostige Blechplatte, um die Zombies am Eindringen zu hindern... Anmerkung: Verteidigungsgegenstände zählen mehr Punkte, wenn sie in der Bank aufbewahrt werden anstatt daheim.",
       [Lang.ES]: "Muy buena para protegerte de los zombies... Nota: Las defensas valen más puntos si son instaladas en el pueblo en vez de en tu casa."
     },
-    category: ItemCategory.Armor,
-    icon: "item_plate"
+    categories: [ItemCategory.Defences, ItemCategory.Heavy, ItemCategory.CampingBoost],
+    icon: "item_plate",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: -1
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.JERRYCAN_GUN_UNATTACHED]: {
-    id: ItemId.JERRYCAN_GUN_UNATTACHED,
+  [ItemId.JERRYGUN_PART]: {
+    id: ItemId.JERRYGUN_PART,
     name: {
       [Lang.EN]: "Jerrycan Gun (unattached)",
       [Lang.FR]: "Pompe à Jerrycan (démontée)",
@@ -1293,8 +2118,14 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Früher konntest du einem solchen Gegenstand gerade mal ein fades Lächeln abgewinnen. er war so sinnlos wie ein Kropf. Inzwischen hat sich diese Pumpe in eine gefürchtete Waffe verwandelt, um nicht gereinigtes Wasser auf Zombies zu versprühen (das Ansatzstück passt auf einen Kanister).",
       [Lang.ES]: "Nadie le daba importancia a esta cosa en las tiendas de bricolaje, considerada inútil. Hoy, es un arma muy eficaz. ¡Se enrosca a una cantimplora con agua no purificada y pulveriza agua pura!"
     },
-    category: ItemCategory.Misc,
-    icon: "item_jerrygun_part"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_jerrygun_part",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
   [ItemId.BANDAGE]: {
     id: ItemId.BANDAGE,
@@ -1310,11 +2141,30 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sie riecht schlecht und weist ein paar Schimmelspuren auf, aber jetzt mal ganz ehrlich: In dieser Lage kannst du nicht rumnörgeln. Mit der Bandage kannst du eine Wunde verbinden.",
       [Lang.ES]: "Huele mal y tiene manchas de moho, pero no estamos aquí para hacernos los difíciles. Te ayudará a cubrir tus heridas."
     },
-    category: ItemCategory.Drug,
-    icon: "item_bandage"
+    categories: [ItemCategory.Pharmacy],
+    icon: "item_bandage",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "tg_meta_wound"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "healed"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.STALE_BEER]: {
-    id: ItemId.STALE_BEER,
+  [ItemId.VODKA_DE]: {
+    id: ItemId.VODKA_DE,
     name: {
       [Lang.EN]: "Stale Beer",
       [Lang.FR]: "1774 éventée",
@@ -1327,11 +2177,34 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Das Glas dieser gut erhaltenen Bierflasche ist ziemlich verfärbt. Du vermutest, dass es früher mal grün war. Ah, da, das Etikett! Roter Rand...\"Welcome to the Feck's experience\"... okay, ein Pils. Na dann lass uns doch mal das \"Experiment\" wagen... .(Mit einem kräftigen Schluck kippst du dir den Saft hinter die Binde und lässt kurz darauf einen Riesenrülpser los!) - \"Prost Kameraden!\"",
       [Lang.ES]: "Un buen trago que quema la garganta y te quita el cansancio, ¡recuperando además puntos de Acción!... 85° de alcohol puro, con algunos bichos flotando en el fondo. ¡Salud camarada!"
     },
-    category: ItemCategory.Food,
-    icon: "item_vodka_de"
+    categories: [ItemCategory.Food, ItemCategory.APSource, ItemCategory.Alcohol],
+    icon: "item_vodka_de",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drunk"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_alcool_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.JERRYCAN_GUN_EMPTY]: {
-    id: ItemId.JERRYCAN_GUN_EMPTY,
+  [ItemId.JERRYGUN_OFF]: {
+    id: ItemId.JERRYGUN_OFF,
     name: {
       [Lang.EN]: "Jerrycan Gun (empty)",
       [Lang.FR]: "Pompe à Jerrycan (vide)",
@@ -1344,11 +2217,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Früher konntest du einem solchen Gegenstand gerade mal ein fades Lächeln abgewinnen. er war so sinnlos wie ein Kropf. Inzwischen hat sich diese Pumpe in eine gefürchtete Waffe verwandelt, um nicht gereinigtes Wasser auf Zombies zu versprühen (das Ansatzstück passt auf einen Kanister).",
       [Lang.ES]: "Nadie le daba importancia a esta cosa en las tiendas de bricolaje, considerada inútil. Hoy, es un arma muy eficaz. ¡Se enrosca a una cantimplora con agua no purificada y pulveriza agua pura!"
     },
-    category: ItemCategory.Weapon,
-    icon: "item_jerrygun_off"
+    categories: [ItemCategory.Armoury],
+    icon: "item_jerrygun_off",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "jerrygun_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.RETRO_OVERHEAD_PROJECTOR]: {
-    id: ItemId.RETRO_OVERHEAD_PROJECTOR,
+  [ItemId.CINEMA]: {
+    id: ItemId.CINEMA,
     name: {
       [Lang.EN]: "Retro Overhead Projector",
       [Lang.FR]: "Rétroprojecteur rétro",
@@ -1361,11 +2249,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser defekte Videoprojektor ist zu nichts mehr zu gebrauchen. Die Linse sieht allerdings noch halbwegs intakt aus....nur hast du nichts, um sie zu entfernen...",
       [Lang.ES]: "Este proyector defectuoso ya no se puede utilizar para nada. Sin embargo, la lente todavía parece relativamente intacta... Desafortunadamente no tienes nada para desarmarla..."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_cinema"
+    categories: [ItemCategory.Armoury, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    icon: "item_cinema",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 10,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lens_#00",
+            odds: 100
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SEMTEX]: {
-    id: ItemId.SEMTEX,
+  [ItemId.EXPLO]: {
+    id: ItemId.EXPLO,
     name: {
       [Lang.EN]: "Semtex",
       [Lang.FR]: "Explosifs bruts",
@@ -1378,11 +2282,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Booom!",
       [Lang.ES]: "¡Bum!"
     },
-    category: ItemCategory.Rsc,
-    icon: "item_explo"
+    categories: [ItemCategory.Resources],
+    icon: "item_explo",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.HUMAN_FLESH]: {
-    id: ItemId.HUMAN_FLESH,
+  [ItemId.HMEAT]: {
+    id: ItemId.HMEAT,
     name: {
       [Lang.EN]: "Human Flesh",
       [Lang.FR]: "Viande humaine",
@@ -1395,11 +2305,38 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Denk am besten gar nicht daran, was du soeben geschluckt hast und mach einfach weiter...",
       [Lang.ES]: "Trata de tragarla rápidamente sin pensar en lo que es... ¡Si te gusta, tienes un problema!"
     },
-    category: ItemCategory.Food,
-    icon: "item_hmeat"
+    categories: [ItemCategory.Food, ItemCategory.GuardWeapon, ItemCategory.APSource],
+    icon: "item_hmeat",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 15,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_cannib_#00"
+          },
+          {
+            type: ItemActionEffectType.Ghoulify,
+            odds: 5
+          },
+          {
+            type: ItemActionEffectType.ReduceGhoulHunger,
+            value: -15
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PLASTIC_BAG]: {
-    id: ItemId.PLASTIC_BAG,
+  [ItemId.GRENADE_EMPTY]: {
+    id: ItemId.GRENADE_EMPTY,
     name: {
       [Lang.EN]: "Plastic Bag",
       [Lang.FR]: "Sac plastique",
@@ -1412,11 +2349,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine alte Plastiktüte aus dem Supermarkt. Wenn du sie mit Wasser füllst, verwandelt sie sich in eine gefürchtete Waffe...",
       [Lang.ES]: "Una vieja bolsa de supermercado que puedes convertir en un arma fatal si la llenas de agua..."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_grenade_empty"
+    categories: [ItemCategory.Armoury],
+    icon: "item_grenade_empty",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "grenade_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.EXPLODING_WATER_BOMB]: {
-    id: ItemId.EXPLODING_WATER_BOMB,
+  [ItemId.BGRENADE]: {
+    id: ItemId.BGRENADE,
     name: {
       [Lang.EN]: "Exploding Water Bomb",
       [Lang.FR]: "Bombe à eau explosive",
@@ -1429,11 +2381,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Aus einer Plastiktüte, Wasser und etwas Sprengstoff bastelst du dir eine Massenvernichtungswaffe, die du nur noch in eine Zombiehorde werfen brauchst. Gibt ein nettes Massaker.",
       [Lang.ES]: "Una bolsa de plástico llena de agua, amarrada a un explosivo. Ingenioso, ¿verdad? Esta es una verdadera arma de destrucción masiva contra las turbas de zombies."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_bgrenade"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_bgrenade",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 20,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.Kill,
+            value: "6-10"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PLASTIC_BAG_AND_SEMTEX]: {
-    id: ItemId.PLASTIC_BAG_AND_SEMTEX,
+  [ItemId.BGRENADE_EMPTY]: {
+    id: ItemId.BGRENADE_EMPTY,
     name: {
       [Lang.EN]: "Plastic Bag and Semtex",
       [Lang.FR]: "Sac plastique + explosif",
@@ -1446,11 +2413,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Ladung Sprengstoff, die an eine Plastiktüte befestigt wurde - simpel und effektiv. Jetzt brauchst du nur noch Wasser...",
       [Lang.ES]: "Una bolsa amarrada a un explosivo. Simple y eficaz. Ahora solo queda llenarla de agua..."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_bgrenade_empty"
+    categories: [ItemCategory.Armoury],
+    icon: "item_bgrenade_empty",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "bgrenade_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.INCOMPLETE_CHAINSAW]: {
-    id: ItemId.INCOMPLETE_CHAINSAW,
+  [ItemId.CHAINSAW_PART]: {
+    id: ItemId.CHAINSAW_PART,
     name: {
       [Lang.EN]: "Incomplete Chainsaw",
       [Lang.FR]: "Tronçonneuse incomplète",
@@ -1463,11 +2445,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Das ist ein richtig lustiges Spielzeug. Allerdings brauchst du noch einen Riemen und noch ein paar andere Kleinigkeiten, um sie zum Laufen zu bringen...",
       [Lang.ES]: "Una herramienta muy divertida, pero le faltan algunas piezas para que funcione..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_chainsaw_part"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    icon: "item_chainsaw_part",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.ELECTRIC_WHISK_INCOMPLETE]: {
-    id: ItemId.ELECTRIC_WHISK_INCOMPLETE,
+  [ItemId.MIXERGUN_PART]: {
+    id: ItemId.MIXERGUN_PART,
     name: {
       [Lang.EN]: "Electric Whisk (incomplete)",
       [Lang.FR]: "Batteur électrique incomplet",
@@ -1480,11 +2468,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Das könnte eine gute Waffe ergeben, wenn du auch die fehlenden Teile auftreibst....",
       [Lang.ES]: "Sería una buena arma, si tuviese las piezas que le faltan..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_mixergun_part"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_mixergun_part",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.DUCT_TAPE]: {
-    id: ItemId.DUCT_TAPE,
+  [ItemId.RUSTINE]: {
+    id: ItemId.RUSTINE,
     name: {
       [Lang.EN]: "Duct Tape",
       [Lang.FR]: "Rustine",
@@ -1497,11 +2491,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Immer nützlich, wenn man etwas kleben möchte.",
       [Lang.ES]: "Siempre útil para pegar cosas."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_rustine"
+    categories: [ItemCategory.Resources],
+    icon: "item_rustine",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.DISMANTLED_MOWER]: {
-    id: ItemId.DISMANTLED_MOWER,
+  [ItemId.LAWN_PART]: {
+    id: ItemId.LAWN_PART,
     name: {
       [Lang.EN]: "Dismantled Mower",
       [Lang.FR]: "Tondeuse démontée",
@@ -1514,11 +2514,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "DAS klassische Gerät für die Gartenarbeit. Es funktioniert ohne Strom und ist in seine Einzelteile zerlegt...Du musst ihn zusammenbauen.",
       [Lang.ES]: "Una herramienta indispensable, funciona sin energía, pero requiere ser armada."
     },
-    category: ItemCategory.Misc,
-    icon: "item_lawn_part"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    icon: "item_lawn_part",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.COPPER_PIPE]: {
-    id: ItemId.COPPER_PIPE,
+  [ItemId.TUBE]: {
+    id: ItemId.TUBE,
     name: {
       [Lang.EN]: "Copper Pipe",
       [Lang.FR]: "Tube de cuivre",
@@ -1531,11 +2537,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein schmutziges Rohr aus Kupfer, für das dir noch keine Verwendung einfällt...",
       [Lang.ES]: "¿Para qué podría servir...?"
     },
-    category: ItemCategory.Rsc,
-    icon: "item_tube"
+    categories: [ItemCategory.Resources],
+    icon: "item_tube",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.WONKY_SHOPPING_TROLLEY]: {
-    id: ItemId.WONKY_SHOPPING_TROLLEY,
+  [ItemId.CART_PART]: {
+    id: ItemId.CART_PART,
     name: {
       [Lang.EN]: "Wonky Shopping Trolley",
       [Lang.FR]: "Caddie bancal",
@@ -1548,11 +2560,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Art Einkaufswagen aus Metall. Leider fehlt ihm eine Radachse. Du müsstest sie durch irgendetwas ersetzen...",
       [Lang.ES]: "Una especie de carrito metálico al que le falta un eje. Habría que repararlo..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_cart_part"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy, ItemCategory.BagExtension],
+    icon: "item_cart_part",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.UTILITY_BELT]: {
-    id: ItemId.UTILITY_BELT,
+  [ItemId.POCKET_BELT]: {
+    id: ItemId.POCKET_BELT,
     name: {
       [Lang.EN]: "Utility Belt",
       [Lang.FR]: "Ceinture à poches",
@@ -1565,11 +2583,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Mit diesem Gürtel kannst du einen weiteren Platz in deinem Rucksack freimachen. Außerdem ist der Gürtel äußerst ergonomisch entworfen worden, denn er gestattet dir, später noch eine weitere Tasche tragen zu können.",
       [Lang.ES]: "Te brinda un compartimento adicional junto a tu mochila. Otra ventaja: te deja las manos libres para llevar otro contenedor (mochila)."
     },
-    category: ItemCategory.Box,
-    icon: "item_pocket_belt"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.BagExtension],
+    icon: "item_pocket_belt",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.TWINOID_500MG]: {
-    id: ItemId.TWINOID_500MG,
+  [ItemId.DRUG_HERO]: {
+    id: ItemId.DRUG_HERO,
     name: {
       [Lang.EN]: "Twinoid 500mg",
       [Lang.FR]: "Twinoïde 500mg",
@@ -1582,11 +2606,34 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Mischung aus konzentriertem Koffein, verschiedenen chemischen Drogen und zermahlenen Stierhoden. Die ideale Droge für den kleinen Energieschub am Abend, wenn du vor einer Zombiemeute flüchten musst, die es auf deine Leber abgesehen hat.",
       [Lang.ES]: "Un concentrado de cafeína, teína, diversas sustancias multicolores y testículos de toro en polvo. Una dosis permite empezar el día con energía o huir rápidamente de una turba de zombies."
     },
-    category: ItemCategory.Drug,
-    icon: "item_drug_hero"
+    categories: [ItemCategory.Pharmacy, ItemCategory.APSource, ItemCategory.Drug],
+    icon: "item_drug_hero",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_drug_#00"
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: 8
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.METAL_CHEST]: {
-    id: ItemId.METAL_CHEST,
+  [ItemId.CHEST]: {
+    id: ItemId.CHEST,
     name: {
       [Lang.EN]: "Metal Chest",
       [Lang.FR]: "Boîte en métal",
@@ -1599,11 +2646,102 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine komplett zerbeulte, alte rostige Kiste. Was könnte da wohl drin sein?",
       [Lang.ES]: "Una vieja caja metálica bastante oxidada y golpeada. ¿Qué podrá contener?"
     },
-    category: ItemCategory.Box,
-    icon: "item_chest"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    icon: "item_chest",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 8,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "bandage_#00",
+            odds: 37
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "vodka_#00",
+            odds: 26
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "drug_hero_#00",
+            odds: 11
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "drug_#00",
+            odds: 11
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "explo_#00",
+            odds: 5
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rhum_#00",
+            odds: 5
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lights_#00",
+            odds: 5
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Open,
+        conditions: [ItemActionCondition.Technician],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "bandage_#00",
+            odds: 37
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "vodka_#00",
+            odds: 26
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "drug_hero_#00",
+            odds: 11
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "drug_#00",
+            odds: 11
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "explo_#00",
+            odds: 5
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rhum_#00",
+            odds: 5
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lights_#00",
+            odds: 5
+          },
+          {
+            type: ItemActionEffectType.CP,
+            value: -1
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.LARGE_METAL_CHEST]: {
-    id: ItemId.LARGE_METAL_CHEST,
+  [ItemId.CHEST_XL]: {
+    id: ItemId.CHEST_XL,
     name: {
       [Lang.EN]: "Large Metal Chest",
       [Lang.FR]: "Gros coffre en métal",
@@ -1616,11 +2754,112 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Der Koffer ist wirklich schwer und enthält bestimmt etwas Wertvolles....Jetzt musst du nur noch das passende Werkzeug finden, denn mit deinen Zähnen bekommst du das nicht auf.",
       [Lang.ES]: "Pesa mucho y seguramente contiene algo precioso... Encuentra algo mejor que tus dientes para abrirlo."
     },
-    category: ItemCategory.Box,
-    icon: "item_chest_xl"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    icon: "item_chest_xl",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 10,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "mixergun_part_#00",
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "watergun_opt_part_#00",
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pocket_belt_#00",
+            odds: 8
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "chainsaw_part_#00",
+            odds: 8
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lawn_part_#00",
+            odds: 8
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pilegun_upkit_#00",
+            odds: 10
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "cutcut_#00",
+            odds: 10
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "big_pgun_part_#00",
+            odds: 15
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Open,
+        conditions: [ItemActionCondition.Technician],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "mixergun_part_#00",
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "watergun_opt_part_#00",
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pocket_belt_#00",
+            odds: 8
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "chainsaw_part_#00",
+            odds: 8
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lawn_part_#00",
+            odds: 8
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pilegun_upkit_#00",
+            odds: 10
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "cutcut_#00",
+            odds: 10
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "big_pgun_part_#00",
+            odds: 15
+          },
+          {
+            type: ItemActionEffectType.CP,
+            value: -1
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.TOOLBOX]: {
-    id: ItemId.TOOLBOX,
+  [ItemId.CHEST_TOOLS]: {
+    id: ItemId.CHEST_TOOLS,
     name: {
       [Lang.EN]: "Toolbox",
       [Lang.FR]: "Caisse de matériel",
@@ -1633,11 +2872,92 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese alte Holzkiste enthält sicher ein paar brauchbare Kleinigkeiten...",
       [Lang.ES]: "Esta vieja caja de madera seguramente contiene cosas útiles..."
     },
-    category: ItemCategory.Box,
-    icon: "item_chest_tools"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    icon: "item_chest_tools",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 5,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pharma_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "explo_#00",
+            odds: 19
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meca_parts_#00",
+            odds: 17
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rustine_#00",
+            odds: 13
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "tube_#00",
+            odds: 13
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pile_#00",
+            odds: 12
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Open,
+        conditions: [ItemActionCondition.Technician],
+        effects: [
+          {
+            type: ItemActionEffectType.CP,
+            value: -1
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pharma_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "explo_#00",
+            odds: 19
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meca_parts_#00",
+            odds: 17
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rustine_#00",
+            odds: 13
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "tube_#00",
+            odds: 13
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pile_#00",
+            odds: 12
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BEDSIDE_LAMP_ON]: {
-    id: ItemId.BEDSIDE_LAMP_ON,
+  [ItemId.LAMP_ON]: {
+    id: ItemId.LAMP_ON,
     name: {
       [Lang.EN]: "Bedside Lamp (on)",
       [Lang.FR]: "Lampe de chevet (Allumée)",
@@ -1650,11 +2970,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Mit einer Nachttischlampe hast du nachts weniger Angst und kannst so besser schlafen.",
       [Lang.ES]: "Con ella tendrás menos miedo en las noches y seguramente dormirás mejor."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_lamp_on"
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    icon: "item_lamp_on",
+    decoration: 3,
+    heavy: false,
+    watchPoints: 5,
+    actions: [
+      
+    ]
   },
-  [ItemId.MINI_HI_FI_ON]: {
-    id: ItemId.MINI_HI_FI_ON,
+  [ItemId.MUSIC]: {
+    id: ItemId.MUSIC,
     name: {
       [Lang.EN]: "Mini Hi-Fi (on)",
       [Lang.FR]: "Petite chaîne HiFi (Allumée)",
@@ -1667,11 +2993,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Gönn dir etwas Entspannung und höre dir ein bisschen Musik an. Hmmm... Ne Maxi-CD mit \"Zombie Eaters\" von Faith No More befindet sich noch im CD-Fach.",
       [Lang.ES]: "Relájate un poco escuchando los últimos \"hits\" del momento: \"Zombie de mi corazón\" o \"El Baile del Zombie - Versión Remix\"."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_music"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    icon: "item_music",
+    decoration: 10,
+    heavy: true,
+    watchPoints: -30,
+    actions: [
+      
+    ]
   },
-  [ItemId.PHARMACEUTICAL_PRODUCTS]: {
-    id: ItemId.PHARMACEUTICAL_PRODUCTS,
+  [ItemId.PHARMA]: {
+    id: ItemId.PHARMA,
     name: {
       [Lang.EN]: "Pharmaceutical Products",
       [Lang.FR]: "Produits Pharmaceutiques",
@@ -1684,11 +3016,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein paar geheimnisvolle Substanzen und ein kleines Fläschchen. Alles ist in Plastik eingepackt. Kein Plan, wozu du das gebrauchen kannst... Vielleicht kann man einige der Substanzen mit anderen Produkten mischen?",
       [Lang.ES]: "Un frasco con unas misteriosas bolitas dentro. No tienes idea de lo que son... ¿Y si las mezclas con otras cosas?"
     },
-    category: ItemCategory.Drug,
-    icon: "item_pharma"
+    categories: [ItemCategory.Pharmacy],
+    icon: "item_pharma",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.SHEET_METAL_PARTS]: {
-    id: ItemId.SHEET_METAL_PARTS,
+  [ItemId.PLATE_RAW]: {
+    id: ItemId.PLATE_RAW,
     name: {
       [Lang.EN]: "Sheet Metal (parts)",
       [Lang.FR]: "Fragments de tôle",
@@ -1701,11 +3039,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein paar Blechplatten, die nur darauf warten, von dir daheim verbaut zu werden... Du musst sie nur noch korrekt zusammensetzen.",
       [Lang.ES]: "Bien podrían servir para reforzar las defensas de tu casa si los unes correctamente"
     },
-    category: ItemCategory.Misc,
-    icon: "item_plate_raw"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    icon: "item_plate_raw",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId._WAKE_THE_DEAD_]: {
-    id: ItemId._WAKE_THE_DEAD_,
+  [ItemId.RHUM]: {
+    id: ItemId.RHUM,
     name: {
       [Lang.EN]: "“Wake The Dead”",
       [Lang.FR]: "« Debout-les-morts »",
@@ -1718,11 +3062,34 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein Cocktail, der Tote weckt und der von Chuck erfunden wurde (wenn man dem Etikett glaubt...). Man nehme einen guten Schuss Rum, etwas roten Chili, Whisky und einen marinierten Finger, der in einer Flüssigkeit schwimmt...",
       [Lang.ES]: "Un cóctel inventado por un tal Etilio según la etiqueta. Mezcla de ron, pisco, tequila, cachaza y chile picante, finamente decorado con un dedo flotando para darle un detalle exótico..."
     },
-    category: ItemCategory.Food,
-    icon: "item_rhum"
+    categories: [ItemCategory.Food, ItemCategory.APSource, ItemCategory.Alcohol],
+    icon: "item_rhum",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drunk"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_alcool_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BLOODY_HOT_COFFEE]: {
-    id: ItemId.BLOODY_HOT_COFFEE,
+  [ItemId.COFFEE]: {
+    id: ItemId.COFFEE,
     name: {
       [Lang.EN]: "Bloody Hot Coffee",
       [Lang.FR]: "Café brûlant",
@@ -1735,11 +3102,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Wie konnte diese Thermoskanne solange heiss bleiben?Das spielt jetzt keine Rolle,es ist jedenfalls starker Kaffee,SEHR starker Kaffe,der auf irgendeine Weise von jemandem gebrüht wurde.Nichts für kleine Mädchen!",
       [Lang.ES]: "Nos preguntamos cómo este termo pudo mantenerse caliente tanto tiempo. Sea como fuere, es un café fuerte, tan fuerte que parece haber sido preparado con mucha ira. ¡Estómagos frágiles, abstenerse!"
     },
-    category: ItemCategory.Food,
-    icon: "item_coffee"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_coffee",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 4
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CAFETI_RE]: {
-    id: ItemId.CAFETI_RE,
+  [ItemId.COFFEE_MACHINE]: {
+    id: ItemId.COFFEE_MACHINE,
     name: {
       [Lang.EN]: "Cafetière",
       [Lang.FR]: "Cafetière",
@@ -1752,11 +3134,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Das ultimative Gerät für den Abenteuerer, der in dir schlummert. Sein einzigartiges Filtersystem stellt den besten Kaffee her, den man mit den hier erhältlichen Zutaten brühen kann. Frag besser nicht nach....",
       [Lang.ES]: "Ideal para despertar al aventurero que hay en ti. Su sistema de filtrado te permite preparar un delicioso café a base de ingredientes... Insólitos. Nota: Debes estar en el pueblo para poder usarla."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_coffee_machine"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
+    icon: "item_coffee_machine",
+    decoration: 5,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.INCOMPLETE_CAFETI_RE]: {
-    id: ItemId.INCOMPLETE_CAFETI_RE,
+  [ItemId.COFFEE_MACHINE_PART]: {
+    id: ItemId.COFFEE_MACHINE_PART,
     name: {
       [Lang.EN]: "Incomplete Cafetière",
       [Lang.FR]: "Cafetière incomplète",
@@ -1769,11 +3157,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese Kaffeemaschine könnte sehr nützlich sein, nur ist sie komplett zerlegt.",
       [Lang.ES]: "Podría ser de una gran utilidad, pero está desarmada."
     },
-    category: ItemCategory.Misc,
-    icon: "item_coffee_machine_part"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    icon: "item_coffee_machine_part",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.ELECTRONIC_COMPONENT]: {
-    id: ItemId.ELECTRONIC_COMPONENT,
+  [ItemId.ELECTRO]: {
+    id: ItemId.ELECTRO,
     name: {
       [Lang.EN]: "Electronic component",
       [Lang.FR]: "Composant électronique",
@@ -1786,11 +3180,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine alte elektronische Platine, die wahrscheinlich aus einem Radioempfänger oder aus einem sonstigen Gerät stammt.",
       [Lang.ES]: "Una vieja placa extraída de alguna radio o gadget electrónico."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_electro"
+    categories: [ItemCategory.Resources],
+    icon: "item_electro",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.CITIZEN_S_WELCOME_PACK]: {
-    id: ItemId.CITIZEN_S_WELCOME_PACK,
+  [ItemId.CHEST_CITIZEN]: {
+    id: ItemId.CHEST_CITIZEN,
     name: {
       [Lang.EN]: "Citizen's Welcome Pack",
       [Lang.FR]: "Affaires d'un citoyen",
@@ -1803,11 +3203,42 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese kleine Box enthält alles, was man so als neuer Bürger braucht! Sie ist wie eine Wundertüte oder eine Pralinenschachtel: Man weiß nie was man bekommt. Aber eigentlich ist sie'n Witz...",
       [Lang.ES]: "Es lo que recibe todo habitante cuando llega al pueblo. Es como una cajita de sorpresas."
     },
-    category: ItemCategory.Box,
-    icon: "item_chest_citizen"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    icon: "item_chest_citizen",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pile_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "radio_off_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pharma_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lights_#00",
+            odds: 25
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.HYDRATONE_100MG]: {
-    id: ItemId.HYDRATONE_100MG,
+  [ItemId.DRUG_WATER]: {
+    id: ItemId.DRUG_WATER,
     name: {
       [Lang.EN]: "Hydratone 100mg",
       [Lang.FR]: "Hydratone 100mg",
@@ -1820,11 +3251,48 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine äußerst praktische Tablette, die du überall einstecken kannst. Kurz nach ihrer Einnahme verschwindet dein Durst. Trotzdem kann sie WEDER deine Erschöpfung lindern, NOCH gibt sie dir Aktionspunkte zurück.",
       [Lang.ES]: "Muy práctica, esta pastillita puede quitarte la sed. Sin embargo no quita el cansancio ni regenera tus Puntos de Acción."
     },
-    category: ItemCategory.Drug,
-    icon: "item_drug_water"
+    categories: [ItemCategory.Pharmacy, ItemCategory.Water, ItemCategory.Drug],
+    icon: "item_drug_water",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_drug_#00"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_drug_#00"
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "thirst1"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.RADIO_CASSETTE_PLAYER_NO_BATTERY]: {
-    id: ItemId.RADIO_CASSETTE_PLAYER_NO_BATTERY,
+  [ItemId.RADIO_OFF]: {
+    id: ItemId.RADIO_OFF,
     name: {
       [Lang.EN]: "Radio Cassette Player (no battery)",
       [Lang.FR]: "Radio K7 (éteint)",
@@ -1837,11 +3305,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein altes Transistorradio mit Kassettenfach. Es ist ein Blues-Klasette drin. Mit dem Radio wirst du nicht viel anfangen können, da du hier sowieso nichts empfängst, aber du kannst ein bisschen Musik hören. Das übertönt das Geschrei deiner Nachbarn... Jetzt brauchst du nur noch eine Batterie.",
       [Lang.ES]: "Un viejo aparato con un cassette de tangos en el interior. La radio no capta nada, pero sería mejor escuchar a Gardel que a un montón de gente haciéndose devorar. Solo queda encontrar una pila."
     },
-    category: ItemCategory.Misc,
-    icon: "item_radio_off"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_radio_off",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "radio_on_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.RADIO_CASSETTE_PLAYER]: {
-    id: ItemId.RADIO_CASSETTE_PLAYER,
+  [ItemId.RADIO_ON]: {
+    id: ItemId.RADIO_ON,
     name: {
       [Lang.EN]: "Radio Cassette Player",
       [Lang.FR]: "Radio K7",
@@ -1854,11 +3337,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein altes Transistorradio mit Kassettenfach. Es ist ein Blues-Klasette drin. Mit dem Radio wirst du nicht viel anfangen können, da du hier sowieso nichts empfängst, aber du kannst ein bisschen Musik hören. Das übertönt das Geschrei deiner Nachbarn...",
       [Lang.ES]: "Un viejo aparato con un cassette de tangos en el interior. Siempre es preferible escuchar a Gardel que a un montón de gente haciéndose devorar."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_radio_on"
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    icon: "item_radio_on",
+    decoration: 2,
+    heavy: false,
+    watchPoints: -15,
+    actions: [
+      
+    ]
   },
-  [ItemId.CYANIDE]: {
-    id: ItemId.CYANIDE,
+  [ItemId.CYANURE]: {
+    id: ItemId.CYANURE,
     name: {
       [Lang.EN]: "Cyanide",
       [Lang.FR]: "Cyanure",
@@ -1871,11 +3360,25 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Wenn wirklich gar nichts mehr geht, schluckst du diese Kapsel mit einem großen Glas Wasser. Danach einfach warten und sich mit einem zufriedenen Grinsen von dieser Welt verabschieden.",
       [Lang.ES]: "Cuando nada va bien, una capsulita de cianuro, un buen vaso de agua y a esperar con una sonrisa de alivio. :)"
     },
-    category: ItemCategory.Drug,
-    icon: "item_cyanure"
+    categories: [ItemCategory.Pharmacy],
+    icon: "item_cyanure",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.Death
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.OLD_DOOR]: {
-    id: ItemId.OLD_DOOR,
+  [ItemId.DOOR]: {
+    id: ItemId.DOOR,
     name: {
       [Lang.EN]: "Old Door",
       [Lang.FR]: "Vieille porte",
@@ -1888,11 +3391,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine alte Holztür. Das klassische Modell in weiß. Sie ist zwar total verdreckt, aber wer weiß, wozu du sie noch gebrauchen kannst...",
       [Lang.ES]: "Pues eso, una vieja puerta de madera... Podría ser útil."
     },
-    category: ItemCategory.Armor,
-    icon: "item_door"
+    categories: [ItemCategory.Defences, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.CampingBoost],
+    icon: "item_door",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 15,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: -1
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SUSPICIOUS_LOOKING_VEGETABLE]: {
-    id: ItemId.SUSPICIOUS_LOOKING_VEGETABLE,
+  [ItemId.VEGETABLE]: {
+    id: ItemId.VEGETABLE,
     name: {
       [Lang.EN]: "Suspicious-looking Vegetable",
       [Lang.FR]: "Légume suspect",
@@ -1905,11 +3423,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sieht wie Gemüse aus, allerdings wunderst du dich, wie es so krumm wachsen konnte. Wichtig ist, dass du es essen kannst – oder besser nicht?",
       [Lang.ES]: "Una especie de... verdura. Es difícil saber lo que es, no se parece a nada, pero lo importante es que es comestible. ¿O no?"
     },
-    category: ItemCategory.Food,
-    icon: "item_vegetable"
+    categories: [ItemCategory.Food, ItemCategory.APSource, ItemCategory.Poisonable],
+    icon: "item_vegetable",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.REPAIR_KIT_DAMAGED]: {
-    id: ItemId.REPAIR_KIT_DAMAGED,
+  [ItemId.REPAIR_KIT_PART]: {
+    id: ItemId.REPAIR_KIT_PART,
     name: {
       [Lang.EN]: "Repair Kit (damaged)",
       [Lang.FR]: "Kit de bricolage (abimé)",
@@ -1922,8 +3455,14 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieses Reparaturset ist kaputt. Du müsstest es in der Werkstatt reparieren, bevor du es wieder benutzen kannst.",
       [Lang.ES]: "Habría que darle unos martillazos en el taller para que pueda servir de nuevo."
     },
-    category: ItemCategory.Misc,
-    icon: "item_repair_kit_part"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_repair_kit_part",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
   [ItemId.REPAIR_KIT]: {
     id: ItemId.REPAIR_KIT,
@@ -1939,11 +3478,34 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese Eisenkiste enthält alle wichtigen Werkzeuge und Materialien um so ziemlich alles zur reparieren... außer vielleicht deinen toten Nachbarn.",
       [Lang.ES]: "Esta caja de metal contiene todo lo necesario para reparar casi cualquier cosa... excepto a tus vecinos muertos."
     },
-    category: ItemCategory.Misc,
-    icon: "item_repair_kit"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_repair_kit",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: -1
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_repair_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "repair_kit_part_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.WATER_PISTOL_EMPTY]: {
-    id: ItemId.WATER_PISTOL_EMPTY,
+  [ItemId.WATERGUN_EMPTY]: {
+    id: ItemId.WATERGUN_EMPTY,
     name: {
       [Lang.EN]: "Water Pistol (empty)",
       [Lang.FR]: "Pistolet à eau (vide)",
@@ -1956,11 +3518,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Wasserpistole ist gegen Zombies äußerst wirksam! Es sei denn sie ist leer.",
       [Lang.ES]: "Tu primer arma letal cuando eras un niño... Solo falta llenarla con agua pura (la de una Ración de agua por ejemplo)."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_watergun_empty"
+    categories: [ItemCategory.Armoury],
+    icon: "item_watergun_empty",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "watergun_3_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.AQUA_SPLASH_3_SHOTS]: {
-    id: ItemId.AQUA_SPLASH_3_SHOTS,
+  [ItemId.WATERGUN_OPT_3]: {
+    id: ItemId.WATERGUN_OPT_3,
     name: {
       [Lang.EN]: "Aqua-Splash (3 shots)",
       [Lang.FR]: "Aqua-Splash (3 charges)",
@@ -1973,11 +3550,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Aqua-Splash-Kanone ist die Lieblingswaffe aller Wüstenwanderer! Nicht geeignet für Kinder unter 8 Jahren.",
       [Lang.ES]: "¡Un arma super poderosa en el Ultramundo! La etiqueta dice de 8 años a más."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_watergun_opt_3"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_watergun_opt_3",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 6,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "watergun_opt_2_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.AQUA_SPLASH_2_SHOTS]: {
-    id: ItemId.AQUA_SPLASH_2_SHOTS,
+  [ItemId.WATERGUN_OPT_2]: {
+    id: ItemId.WATERGUN_OPT_2,
     name: {
       [Lang.EN]: "Aqua-Splash (2 shots)",
       [Lang.FR]: "Aqua-Splash (2 charges)",
@@ -1990,11 +3582,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Aqua-Splash-Kanone ist die Lieblingswaffe aller Wüstenwanderer! Nicht geeignet für Kinder unter 8 Jahren.",
       [Lang.ES]: "¡Un arma super poderosa en el Ultramundo! La etiqueta dice de 8 años a más."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_watergun_opt_2"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_watergun_opt_2",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 4,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "watergun_opt_1_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.AQUA_SPLASH_1_SHOT]: {
-    id: ItemId.AQUA_SPLASH_1_SHOT,
+  [ItemId.WATERGUN_OPT_1]: {
+    id: ItemId.WATERGUN_OPT_1,
     name: {
       [Lang.EN]: "Aqua-Splash (1 shot)",
       [Lang.FR]: "Aqua-Splash (1 charge)",
@@ -2007,11 +3614,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Aqua-Splash-Kanone ist die Lieblingswaffe aller Wüstenwanderer! Nicht geeignet für Kinder unter 8 Jahren.",
       [Lang.ES]: "¡Un arma super poderosa en el Ultramundo! La etiqueta dice de 8 años a más."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_watergun_opt_1"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_watergun_opt_1",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 2,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "watergun_opt_empty_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.ELECTRIC_WHISK_NO_BATTERY]: {
-    id: ItemId.ELECTRIC_WHISK_NO_BATTERY,
+  [ItemId.MIXERGUN_EMPTY]: {
+    id: ItemId.MIXERGUN_EMPTY,
     name: {
       [Lang.EN]: "Electric Whisk (no battery)",
       [Lang.FR]: "Batteur électrique (éteint)",
@@ -2024,8 +3646,23 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Rührt elektrisch und sehr schnell - was gibt's sonst noch zu sagen? Er hat den Vorteil, dass er nur eine Batterie braucht, die sich nicht mal mit Sicherheit entlädt.",
       [Lang.ES]: "Tan sencillo como eso. La buena noticia es que sólo necesitas una batería y tienes cierta posibilidad de agotarla."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_mixergun_empty"
+    categories: [ItemCategory.Armoury],
+    icon: "item_mixergun_empty",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "mixergun_#00"
+          }
+        ]
+      }
+    ]
   },
   [ItemId.CHAINSAW_EMPTY]: {
     id: ItemId.CHAINSAW_EMPTY,
@@ -2041,11 +3678,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Damit richtest du ein wahres Massaker an. Ob du das aber zu 100% unversehrt überstehst ist eine andere Frage... Diese umgebaute Höllenmaschine funktioniert - man glaubt es kaum - mit einer gewöhnlichen Batterie!",
       [Lang.ES]: "Con eso puedes darte el gusto de masacrar a tus atacantes. Recuerda que puedes salir victorioso pero no siempre ileso... Esta máquina infernal ha sido modificada y funciona (increíblemente) ¡con una sola pila!"
     },
-    category: ItemCategory.Weapon,
-    icon: "item_chainsaw_empty"
+    categories: [ItemCategory.Armoury, ItemCategory.Heavy],
+    icon: "item_chainsaw_empty",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "chainsaw_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BATTERY_LAUNCHER_1_ITF_EMPTY]: {
-    id: ItemId.BATTERY_LAUNCHER_1_ITF_EMPTY,
+  [ItemId.PILEGUN_EMPTY]: {
+    id: ItemId.PILEGUN_EMPTY,
     name: {
       [Lang.EN]: "Battery Launcher 1-ITF (empty)",
       [Lang.FR]: "Lance-Pile 1-PDTG (vide)",
@@ -2058,11 +3710,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Der Batteriewerfer 1-PDTG wurde äußerst einfallsreich zusammengeschraubt. Dank einer virtuosen Recyclingprozedur ist er in der Lage, harmlose Batterien in mächtige Geschosse zu verwandeln.",
       [Lang.ES]: "Imaginado con mucho ingenio, sirve para convertir una simple pila en un temible proyectil."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_pilegun_empty"
+    categories: [ItemCategory.Armoury],
+    icon: "item_pilegun_empty",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pilegun_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.TASER_INCOMPLETE]: {
-    id: ItemId.TASER_INCOMPLETE,
+  [ItemId.TASER_EMPTY]: {
+    id: ItemId.TASER_EMPTY,
     name: {
       [Lang.EN]: "Taser (incomplete)",
       [Lang.FR]: "Taser d'auto-défense (éteint)",
@@ -2075,11 +3742,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Der Taser ist eine kleine technische Spielerei, mit der man grässliche Elektrostöße in dem Körper seines Opfers jagen kann. Allerdings ist er nicht sehr effektiv, wenn man bedennkt dass den Zombies Schmerzen nichts ausmachen. Vielleicht gelingt es dir ja mit einem Stromstoß ein wichtiges Körperglied oder Organ zum Platzen zu bringen?",
       [Lang.ES]: "Un arma capaz de paralizar el cuerpo de la víctima con una terrible descarga eléctrica. No es muy eficaz sabiendo que los zombies no le temen al dolor. Pero siempre puedes intentar hacer colapsar un órgano vital con él."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_taser_empty"
+    categories: [ItemCategory.Armoury],
+    icon: "item_taser_empty",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "taser_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.EMS_SYSTEM_INCOMPLETE]: {
-    id: ItemId.EMS_SYSTEM_INCOMPLETE,
+  [ItemId.SPORT_ELEC_EMPTY]: {
+    id: ItemId.SPORT_ELEC_EMPTY,
     name: {
       [Lang.EN]: "EMS System (incomplete)",
       [Lang.FR]: "Sport-élec (éteint)",
@@ -2092,11 +3774,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die militärische Ausführung eines 'body shapers', der dazu dient, seinen Körper mittels schwacher Stromstöße zu stählen. Er regeneriert deine Erschöpfung und gibt dir deine Aktionspunkte wieder. Allerdings verursacht er auch schwere Verletzungen und du kannst unter Umständen sogar qualvoll sterben...",
       [Lang.ES]: "La versión militar de un gagdet utilizado para ejercitarse con descargas eléctricas. Quita el cansancio y regenera los Puntos de Acción, pero puede causar lesiones graves (o incluso una muerte dolorosa)."
     },
-    category: ItemCategory.Misc,
-    icon: "item_sport_elec_empty"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_sport_elec_empty",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "sport_elec_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.EMS_SYSTEM_CHARGED]: {
-    id: ItemId.EMS_SYSTEM_CHARGED,
+  [ItemId.SPORT_ELEC]: {
+    id: ItemId.SPORT_ELEC,
     name: {
       [Lang.EN]: "EMS System (charged)",
       [Lang.FR]: "Sport-élec (chargé)",
@@ -2109,11 +3806,38 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die militärische Ausführung eines 'body shapers', der dazu dient, seinen Körper mittels schwacher Stromstöße zu stählen. Er regeneriert deine Erschöpfung und gibt dir deine Aktionspunkte wieder. Allerdings verursacht er auch schwere Verletzungen und du kannst unter Umständen sogar qualvoll sterben...",
       [Lang.ES]: "La versión militar de un gagdet utilizado para ejercitarse con descargas eléctricas. Quita el cansancio y regenera los Puntos de Acción, pero puede causar lesiones graves (o incluso una muerte dolorosa)."
     },
-    category: ItemCategory.Misc,
-    icon: "item_sport_elec"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon, ItemCategory.APSource],
+    icon: "item_sport_elec",
+    decoration: 0,
+    heavy: false,
+    watchPoints: -10,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_meta_wound"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_maso_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "sport_elec_empty_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.DEVASTATOR_EMPTY]: {
-    id: ItemId.DEVASTATOR_EMPTY,
+  [ItemId.BIG_PGUN_EMPTY]: {
+    id: ItemId.BIG_PGUN_EMPTY,
     name: {
       [Lang.EN]: "Devastator (empty)",
       [Lang.FR]: "Devastator (vide)",
@@ -2126,11 +3850,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die militärische Ausführung des Batteriewerfers 1-PDTG. Sein übermächtiger Kolben ist in der Lage, eine Batterie derart schnell zu beschleunigen, dass sie fast jedes Material durchstößt. Das Gerät reißt faustgroße Löcher in bis zu zwei Zombies, vorausgesetzt sie stehen hintereinander.",
       [Lang.ES]: "La versión militar del lanza-pilas 1-PDTG. Su pistón ultrapoderoso puede disparar una pila con una velocidad fenomenal y perforar prácticamente cualquier material. Esta maquinilla puede hacer un agujero del tamaño de un puño en 2 zombies al mismo tiempo, si están alineados."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_big_pgun_empty"
+    categories: [ItemCategory.Armoury],
+    icon: "item_big_pgun_empty",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "big_pgun_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.DEVASTATOR_LOADED]: {
-    id: ItemId.DEVASTATOR_LOADED,
+  [ItemId.BIG_PGUN]: {
+    id: ItemId.BIG_PGUN,
     name: {
       [Lang.EN]: "Devastator (loaded)",
       [Lang.FR]: "Devastator (chargé)",
@@ -2143,11 +3882,41 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die militärische Ausführung des Batteriewerfers 1-PDGT. Sein übermächtiger Kolben ist in der Lage ein Batterie derart schnell zu beschleunigen, dass sie fast jedes Material durchstößt. Das Gerät reißt faustgroße Löcher in bis zu zwei Zombies, vorausgesetzt sie stehen hintereinander.",
       [Lang.ES]: "La versión militar del lanza-pilas 1-PDTG. Su pistón ultrapoderoso puede disparar una pila con una velocidad fenomenal y perforar prácticamente cualquier material. Esta maquinilla puede hacer un agujero del tamaño de un puño en 2 zombies al mismo tiempo, si están alineados."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_big_pgun"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_big_pgun",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 11,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pile_broken_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "big_pgun_empty_#00",
+            odds: 33
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pile_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "2"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.DEVASTATOR_INCOMPLETE]: {
-    id: ItemId.DEVASTATOR_INCOMPLETE,
+  [ItemId.BIG_PGUN_PART]: {
+    id: ItemId.BIG_PGUN_PART,
     name: {
       [Lang.EN]: "Devastator (incomplete)",
       [Lang.FR]: "Devastator incomplet",
@@ -2160,11 +3929,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die militärische Ausführung des Batteriewerfers 1-PDTG. Sein übermächtiger Kolben ist in der Lage, eine Batterie derart schnell zu beschleunigen, dass sie fast jedes Material durchstößt. Das Gerät reißt faustgroße Löcher in bis zu zwei Zombies, vorausgesetzt sie stehen hintereinander.",
       [Lang.ES]: "La versión militar del lanza-pilas 1-PDTG. Su pistón ultrapoderoso puede disparar una pila con una velocidad fenomenal y perforar prácticamente cualquier material. Esta maquinilla puede hacer un agujero del tamaño de un puño en 2 zombies al mismo tiempo, si están alineados."
     },
-    category: ItemCategory.Misc,
-    icon: "item_big_pgun_part"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_big_pgun_part",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.RADIUS_RADAR_BEACON]: {
-    id: ItemId.RADIUS_RADAR_BEACON,
+  [ItemId.TAGGER]: {
+    id: ItemId.TAGGER,
     name: {
       [Lang.EN]: "Radius Radar Beacon",
       [Lang.FR]: "Balise « Radius »",
@@ -2177,11 +3952,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Der Zonenmarker 'Radius' zeigt dir auf der Karte alle Zonen an, die an deine aktuelle Position angrenzen.",
       [Lang.ES]: "Este instrumento te mostrará en el mapa todas las zonas que rodean el lugar donde te encuentras."
     },
-    category: ItemCategory.Misc,
-    icon: "item_tagger"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_tagger",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.SPY_FLARE]: {
-    id: ItemId.SPY_FLARE,
+  [ItemId.FLARE]: {
+    id: ItemId.FLARE,
     name: {
       [Lang.EN]: "Spy Flare",
       [Lang.FR]: "Fusée éclairante",
@@ -2194,11 +3975,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Leuchtrakete ermöglicht dir Informationen über weit entfernte Zonen zu bekommen. Sobald die Rakete am Boden aufschlägt, wird ein kleiner Sender freigesetzt, der Informationen über die Umgebung sendet.",
       [Lang.ES]: "Este pequeñín te permitirá recoger información sobre zonas lejanas. Tan pronto como toca el suelo, cae un pequeño transmisor, que envía información del entorno."
     },
-    category: ItemCategory.Misc,
-    icon: "item_flare"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon],
+    icon: "item_flare",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 15,
+    actions: [
+      
+    ]
   },
-  [ItemId.JERRYCAN_GUN_READY]: {
-    id: ItemId.JERRYCAN_GUN_READY,
+  [ItemId.JERRYGUN]: {
+    id: ItemId.JERRYGUN,
     name: {
       [Lang.EN]: "Jerrycan Gun (ready)",
       [Lang.FR]: "Pompe à jerrycan (prête)",
@@ -2211,11 +3998,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Früher konntest du einem solchen Gegenstand gerade mal ein fades Lächeln abgewinnen. er war so sinnlos wie ein Kropf. Inzwischen hat sich diese Pumpe in eine gefürchtete Waffe verwandelt, um nicht gereinigtes Wasser auf Zombies zu versprühen (das Ansatzstück passt auf einen Kanister).",
       [Lang.ES]: "Nadie le daba importancia a esta cosa en las tiendas de bricolaje, considerada inútil. Hoy, es un arma muy eficaz. ¡Se enrosca a una cantimplora con agua no purificada y pulveriza agua pura!"
     },
-    category: ItemCategory.Weapon,
-    icon: "item_jerrygun"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_jerrygun",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 20,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "jerrygun_off_#00",
+            odds: 15
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.EKTORP_GLUTEN_CHAIR]: {
-    id: ItemId.EKTORP_GLUTEN_CHAIR,
+  [ItemId.CHAIR_BASIC]: {
+    id: ItemId.CHAIR_BASIC,
     name: {
       [Lang.EN]: "Ektorp-Gluten Chair",
       [Lang.FR]: "Chaise Ektörp-Gluten",
@@ -2228,11 +4031,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein schlichter Stuhl mit lustigem Namen aus schwedischer Herstellung. Man kann damit Leute vermöbeln, aber besser du stellst ihn dir ins Wohnzimmer...",
       [Lang.ES]: "Una simple silla con nombre raro, de fabricación sueca. Puedes usarla para defenderte, pero es más útil si la guardas en tu casa..."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_chair_basic"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Breakable],
+    icon: "item_chair_basic",
+    decoration: 2,
+    heavy: true,
+    watchPoints: 10,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 50
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.REVOLVER_UNLOADED]: {
-    id: ItemId.REVOLVER_UNLOADED,
+  [ItemId.GUN]: {
+    id: ItemId.GUN,
     name: {
       [Lang.EN]: "Revolver (unloaded)",
       [Lang.FR]: "Revolver (vide)",
@@ -2245,11 +4064,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Faustfeuerwaffe vom Modelltyp P-22. Sie ist für ihre Treffgenauigkeit und Zuverlässigkeit berühmt. Ohne Munition kannst du damit aber überhaupt nichts anfangen...",
       [Lang.ES]: "El famoso modelo P-22, conocido por su fiabilidad y gran precisión. Pero no sirve de nada sin municiones..."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_gun"
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    icon: "item_gun",
+    decoration: 5,
+    heavy: false,
+    watchPoints: -20,
+    actions: [
+      
+    ]
   },
-  [ItemId.ASSAULT_RIFLE_UNLOADED]: {
-    id: ItemId.ASSAULT_RIFLE_UNLOADED,
+  [ItemId.MACHINE_GUN]: {
+    id: ItemId.MACHINE_GUN,
     name: {
       [Lang.EN]: "Assault Rifle (unloaded)",
       [Lang.FR]: "Fusil d'assaut (vide)",
@@ -2262,11 +4087,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine umgebaute Version des AK-47. Dieses Gewehr ist kompakter und wahrscheinlich für den \"zivilen\" Einsatz entworfen worden... Manche sagen man könne damit sehr gut 'Problembären' kalt machen.",
       [Lang.ES]: "Una versión modificada del AK-47, más compacta, probablemente diseñada para un uso \"civil\"..."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_machine_gun"
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    icon: "item_machine_gun",
+    decoration: 15,
+    heavy: false,
+    watchPoints: -25,
+    actions: [
+      
+    ]
   },
-  [ItemId.COMPACT_DETONATOR]: {
-    id: ItemId.COMPACT_DETONATOR,
+  [ItemId.DETO]: {
+    id: ItemId.DETO,
     name: {
       [Lang.EN]: "Compact detonator",
       [Lang.FR]: "Détonateur compact",
@@ -2279,11 +4110,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein kleiner, kompakter Zünder, mit dem man eine kleine Sprengladung explodieren lassen kann.",
       [Lang.ES]: "Un dispositivo que puede hacer volar una pequeña carga de explosivos..."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_deto"
+    categories: [ItemCategory.Resources],
+    icon: "item_deto",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.BAG_OF_CEMENT]: {
-    id: ItemId.BAG_OF_CEMENT,
+  [ItemId.CONCRETE]: {
+    id: ItemId.CONCRETE,
     name: {
       [Lang.EN]: "Bag of Cement",
       [Lang.FR]: "Sac de ciment",
@@ -2296,11 +4133,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein großer Zementsack von mittelmäßiger Qualität... Wenn du den Zement in Wasser auflöst trocknet er ziemlich schnell und du erhälst einen besonders festen Beton, den du für allerhand Konstruktionen verwenden kannst!",
       [Lang.ES]: "Al mezclarlo con agua, se endurece rápidamente y se hace muy resistente."
     },
-    category: ItemCategory.Misc,
-    icon: "item_concrete"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    icon: "item_concrete",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.UNSHAPED_CONCRETE_BLOCKS]: {
-    id: ItemId.UNSHAPED_CONCRETE_BLOCKS,
+  [ItemId.CONCRETE_WALL]: {
+    id: ItemId.CONCRETE_WALL,
     name: {
       [Lang.EN]: "Unshaped Concrete Blocks",
       [Lang.FR]: "Pavés de béton informes",
@@ -2313,11 +4156,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sie ähneln in keinster Weise Bauziegeln, aber es handelt sich um Stahlbeton, welchen du sicherlich für die Verbesserung der Verteidigung deines Hauses verwenden kannst... Schlimmstenfalls kannst du sie auch auf ein paar Zombies werfen, so wie bei einer Demo.",
       [Lang.ES]: "Hormigón armado. Puede servir para reforzar las defensas de tu casa... o para ser lanzado sobre un zombie."
     },
-    category: ItemCategory.Armor,
-    icon: "item_concrete_wall"
+    categories: [ItemCategory.Defences, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Breakable],
+    icon: "item_concrete_wall",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 17,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 50
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.UNLABELLED_DRUG]: {
-    id: ItemId.UNLABELLED_DRUG,
+  [ItemId.DRUG_RANDOM]: {
+    id: ItemId.DRUG_RANDOM,
     name: {
       [Lang.EN]: "Unlabelled Drug",
       [Lang.FR]: "Médicament sans étiquette",
@@ -2330,11 +4189,51 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Medikamentenschachtel, dessen Etikett abgerissen wurde... Die darin eingepackten Pillen sind größtenteils verschimmelt. Allerdings findest du welche, die noch einigermaßen \"genießbar\" sind. Um das zu schlucken, muss es dir schon wirklich schlecht gehen...",
       [Lang.ES]: "Una caja de medicinas con una etiqueta borrosa... Las pastillas que tiene dentro están enmohecidas, pero te parece que algunas no están tan mal. ¿Realmente piensas tragar eso?"
     },
-    category: ItemCategory.Drug,
-    icon: "item_drug_random"
+    categories: [ItemCategory.Pharmacy, ItemCategory.APSource, ItemCategory.Drug],
+    icon: "item_drug_random",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_cobaye_#00"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged",
+            odds: 27
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_drug_#00",
+            odds: 27
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: 6,
+            odds: 13
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "terror",
+            odds: 7
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: 7,
+            odds: 7
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PARACETOID_7G]: {
-    id: ItemId.PARACETOID_7G,
+  [ItemId.DISINFECT]: {
+    id: ItemId.DISINFECT,
     name: {
       [Lang.EN]: "Paracetoid 7g",
       [Lang.FR]: "Paracétoïde 7g",
@@ -2347,11 +4246,38 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein starkes Antibiotikum, das jede Infektion platt macht. Auf dem Beipackzettel steht: \"Dieses Medikament kann manchmal unerwünschte und unberechenbare Nebenwirkugen hervorrufen (Akne, Erbrechen, Krämpfe und Herzstillstand)\".",
       [Lang.ES]: "Un potente antibiótico capaz de eliminar cualquier infección. La caja dice: «Este medicamento puede provocar efectos secundarios (acné, manchas en la piel, una muerte violenta, entre otros)»."
     },
-    category: ItemCategory.Drug,
-    icon: "item_disinfect"
+    categories: [ItemCategory.Pharmacy, ItemCategory.Drug],
+    icon: "item_disinfect",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_drug_#00"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "immune"
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "infection"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.NESS_QUICK_WEEDKILLER]: {
-    id: ItemId.NESS_QUICK_WEEDKILLER,
+  [ItemId.DIGGER]: {
+    id: ItemId.DIGGER,
     name: {
       [Lang.EN]: "Ness-Quick Weedkiller",
       [Lang.FR]: "Désherbant Ness-Quick",
@@ -2364,11 +4290,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Das auf den Sack geklebte Etikett besagt, dass das Produkt genießbar sei wenn man es in Milch auflöst. Ein leichter Zweifel befällt dich...",
       [Lang.ES]: "La etiqueta que lleva pegada hace pensar que este producto es comestible si se mezcla con leche. A ti te da ciertas dudas..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_digger"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_digger",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.RemoveRuinDebris,
+            value: "2-3"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.FOOD_PARCEL]: {
-    id: ItemId.FOOD_PARCEL,
+  [ItemId.CHEST_FOOD]: {
+    id: ItemId.CHEST_FOOD,
     name: {
       [Lang.EN]: "Food Parcel",
       [Lang.FR]: "Caisse de nourriture",
@@ -2381,11 +4322,82 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein unerträglicher Verwesungsgestank kitzelt deine Nase als du die Kiste anfasst. Du bist dir fast sicher, dass sie etwas Essbares enthält. Du hoffst es zumindest.",
       [Lang.ES]: "Un horrible olor a comida descompuesta sale de esa caja... Pero estás casi seguro de que aún queda algo comestible..."
     },
-    category: ItemCategory.Food,
-    icon: "item_chest_food"
+    categories: [ItemCategory.Food, ItemCategory.Heavy],
+    icon: "item_chest_food",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "hmeat_#00",
+            odds: 33
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "can_#00",
+            odds: 28
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "food_bag_#00",
+            odds: 10
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "vegetable_#00",
+            odds: 10
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meat_#00",
+            odds: 18
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Open,
+        conditions: [ItemActionCondition.Technician],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "hmeat_#00",
+            odds: 33
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "can_#00",
+            odds: 28
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "food_bag_#00",
+            odds: 10
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "vegetable_#00",
+            odds: 10
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meat_#00",
+            odds: 18
+          },
+          {
+            type: ItemActionEffectType.CP,
+            value: -1
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.DOGGY_BAG]: {
-    id: ItemId.DOGGY_BAG,
+  [ItemId.FOOD_BAG]: {
+    id: ItemId.FOOD_BAG,
     name: {
       [Lang.EN]: "Doggy Bag",
       [Lang.FR]: "Doggy-bag",
@@ -2398,11 +4410,62 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine fettverschmierte alte Papiertüte, in der wohl irgendetwas zum Essen drin ist... Sie riecht aber schlecht.",
       [Lang.ES]: "Una vieja bolsa de papel con restos de comida enmohecida y maloliente..."
     },
-    category: ItemCategory.Food,
-    icon: "item_food_bag"
+    categories: [ItemCategory.Food],
+    icon: "item_food_bag",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "food_bar2_#00",
+            odds: 15
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "food_chick_#00",
+            odds: 13
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "food_biscuit_#00",
+            odds: 13
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "food_pims_#00",
+            odds: 13
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "food_bar3_#00",
+            odds: 12
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "food_tarte_#00",
+            odds: 12
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "food_bar1_#00",
+            odds: 11
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "food_sandw_#00",
+            odds: 11
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PACKET_OF_SOFT_CRISPS]: {
-    id: ItemId.PACKET_OF_SOFT_CRISPS,
+  [ItemId.FOOD_BAR1]: {
+    id: ItemId.FOOD_BAR1,
     name: {
       [Lang.EN]: "Packet of Soft Crisps",
       [Lang.FR]: "Paquet de chips molles",
@@ -2415,11 +4478,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Kartoffelchips sind total weich und schmecken nach trockenem Papier. Du hast aber keine Wahl: Essen ist Essen.",
       [Lang.ES]: "Han perdido su textura crujiente y parecen más pedazos de cartón húmedo, pero no vas a hacerte el difícil... Comida es comida."
     },
-    category: ItemCategory.Food,
-    icon: "item_food_bar1"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_food_bar1",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.MOULDY_NEAPOLITAN]: {
-    id: ItemId.MOULDY_NEAPOLITAN,
+  [ItemId.FOOD_BAR2]: {
+    id: ItemId.FOOD_BAR2,
     name: {
       [Lang.EN]: "Mouldy Neapolitan",
       [Lang.FR]: "Napolitains moisis",
@@ -2432,11 +4510,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein leckeres in Alupapier eingepacktes Gebäck. Als Geschmack wird \"Vanille-Schoko\" angegeben. Wenn du es schüttelst hört es sich an, als ob da auch eine Flüssigkeit drin wäre...",
       [Lang.ES]: "La bolsita de plástico está inflada, ¿estará tan descompuesto que ya emana gases...?"
     },
-    category: ItemCategory.Food,
-    icon: "item_food_bar2"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_food_bar2",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.DRIED_CHEWING_GUM]: {
-    id: ItemId.DRIED_CHEWING_GUM,
+  [ItemId.FOOD_BAR3]: {
+    id: ItemId.FOOD_BAR3,
     name: {
       [Lang.EN]: "Dried Chewing Gum",
       [Lang.FR]: "Chewing-gums séchés",
@@ -2449,11 +4542,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine handvoll staubtrockener Kaugummis. Normalerweise werden sie gekaut und nicht geschluckt, aber du solltest besser nicht rumnörgeln ... viel anderes gibt es nicht.",
       [Lang.ES]: "Un puñado de chicles duros como piedras. En teoría deben poder masticarse aún, pero no tragarse. Piensa que en esta situación no estamos para lujos..."
     },
-    category: ItemCategory.Food,
-    icon: "item_food_bar3"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_food_bar3",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.RANCID_JAFFA_CAKES]: {
-    id: ItemId.RANCID_JAFFA_CAKES,
+  [ItemId.FOOD_BISCUIT]: {
+    id: ItemId.FOOD_BISCUIT,
     name: {
       [Lang.EN]: "Rancid Jaffa Cakes",
       [Lang.FR]: "Petits beurres rances",
@@ -2466,11 +4574,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sie sehen trocken aus. Was würdest du nicht alles geben, um diese Kekse nicht schmecken zu müssen...",
       [Lang.ES]: "Tiene además manchas verdes muy oscuras y están algo ácidas. Afortunadamente son de la marca que solías comer de niño..."
     },
-    category: ItemCategory.Food,
-    icon: "item_food_biscuit"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_food_biscuit",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.HALF_EATEN_CHICKEN_WINGS]: {
-    id: ItemId.HALF_EATEN_CHICKEN_WINGS,
+  [ItemId.FOOD_CHICK]: {
+    id: ItemId.FOOD_CHICK,
     name: {
       [Lang.EN]: "Half-eaten Chicken Wings",
       [Lang.FR]: "Ailerons de poulet entamés",
@@ -2483,11 +4606,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Zwei Hähnchenflügel, die schon jemand vor dir angebissen hat, bevor er sie weggeworfen hat... Hmmm...",
       [Lang.ES]: "Alguien les dio un mordisco y decidió tirarlas... Hmmm…"
     },
-    category: ItemCategory.Food,
-    icon: "item_food_chick"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_food_chick",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.OUT_OF_DATE_BISCUITS]: {
-    id: ItemId.OUT_OF_DATE_BISCUITS,
+  [ItemId.FOOD_PIMS]: {
+    id: ItemId.FOOD_PIMS,
     name: {
       [Lang.EN]: "Out-of-Date Biscuits",
       [Lang.FR]: "Pim's périmé",
@@ -2500,11 +4638,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Handvoll Kekse, die mit ... schwer zu sagen, was es ist... gefüllt sind.",
       [Lang.ES]: "Lleva en la etiqueta el logotipo de España 82. Aunque su olor te pique la nariz, un chocolate aquí es un manjar..."
     },
-    category: ItemCategory.Food,
-    icon: "item_food_pims"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_food_pims",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.STALE_TART]: {
-    id: ItemId.STALE_TART,
+  [ItemId.FOOD_TARTE]: {
+    id: ItemId.FOOD_TARTE,
     name: {
       [Lang.EN]: "Stale Tart",
       [Lang.FR]: "Biscuit fade",
@@ -2517,11 +4670,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein streng riechendes Törtchen... Denk einfach an etwas Leckeres.",
       [Lang.ES]: "Este postre barato ni siquiera tuvo buen sabor estando fresco... Hoy su olor y su aspecto son aún más desagradables."
     },
-    category: ItemCategory.Food,
-    icon: "item_food_tarte"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_food_tarte",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.MOULDY_HAM_SANDWICH]: {
-    id: ItemId.MOULDY_HAM_SANDWICH,
+  [ItemId.FOOD_SANDW]: {
+    id: ItemId.FOOD_SANDW,
     name: {
       [Lang.EN]: "Mouldy Ham Sandwich",
       [Lang.FR]: "Jambon-beurre moisi",
@@ -2534,11 +4702,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Der Rest eines Schinkenbrötchens. Die grünlich-weiß verschimmelten Schinkenecken lassen sich kurzerhand unter dem Brot verstecken und dann nichts wie runter damit...",
       [Lang.ES]: "Está muy viejo. No se sabe si lo que tiene dentro son los restos de una hamburguesa o los de una rata que murió allí dentro... ¿Eso blanco, es mayonesa?"
     },
-    category: ItemCategory.Food,
-    icon: "item_food_sandw"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_food_sandw",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CHINESE_NOODLES]: {
-    id: ItemId.CHINESE_NOODLES,
+  [ItemId.FOOD_NOODLES]: {
+    id: ItemId.FOOD_NOODLES,
     name: {
       [Lang.EN]: "Chinese Noodles",
       [Lang.FR]: "Nouilles chinoises",
@@ -2551,11 +4734,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Trotz all der Jahre, die sie wahrscheinlich schon in dieser Wüste liegen, haben diese Nudeln ihr Aussehen und ihren Geschmack behalten. Erstaunlich.",
       [Lang.ES]: "A pesar del tiempo, este platillo ha mantenido su aspecto, sabor y textura. ¡No cabe duda, la cocina china es la mejor!"
     },
-    category: ItemCategory.Food,
-    icon: "item_food_noodles"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_food_noodles",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.STRONG_SPICES]: {
-    id: ItemId.STRONG_SPICES,
+  [ItemId.SPICES]: {
+    id: ItemId.SPICES,
     name: {
       [Lang.EN]: "Strong Spices",
       [Lang.FR]: "Epices fortes",
@@ -2568,11 +4766,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein Säckchen mit starken Gewürzen ...",
       [Lang.ES]: "¡Nadie puede vivir sin esto!"
     },
-    category: ItemCategory.Misc,
-    icon: "item_spices"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_spices",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.SPICY_CHINESE_NOODLES]: {
-    id: ItemId.SPICY_CHINESE_NOODLES,
+  [ItemId.FOOD_NOODLES_HOT]: {
+    id: ItemId.FOOD_NOODLES_HOT,
     name: {
       [Lang.EN]: "Spicy Chinese Noodles",
       [Lang.FR]: "Nouilles chinoises épicées",
@@ -2585,11 +4789,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Richtig gut gewürzte chinesische Nudeln! Das ist mal'ne Abwechslung von dem sonstigen verschimmelten Fraß.",
       [Lang.ES]: "Mmmmm ¡La comida descompuesta es para los pobres!"
     },
-    category: ItemCategory.Food,
-    icon: "item_food_noodles_hot"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_food_noodles_hot",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 7
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.INCOMPLETE_DECK_OF_CARDS]: {
-    id: ItemId.INCOMPLETE_DECK_OF_CARDS,
+  [ItemId.CARDS]: {
+    id: ItemId.CARDS,
     name: {
       [Lang.EN]: "Incomplete Deck of Cards",
       [Lang.FR]: "Jeu de cartes incomplet",
@@ -2602,11 +4821,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein Kartenset mit 54 abgegriffenen Karten, die ein paar Eselsohren haben... Du solltest gleich mal eine Runde zocken, denn oft wirst du hier nicht zum Spielen kommen. Groß rauskommen oder Pleite gehen!",
       [Lang.ES]: "A pesar de la ausencia de algunas cartas, te ayudará a distraerte en el pueblo... ¡Hazlo a lo grande o arruinate!"
     },
-    category: ItemCategory.Misc,
-    icon: "item_cards"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon],
+    icon: "item_cards",
+    decoration: 0,
+    heavy: false,
+    watchPoints: -10,
+    actions: [
+      
+    ]
   },
-  [ItemId.BOX_OF_GAMES]: {
-    id: ItemId.BOX_OF_GAMES,
+  [ItemId.GAME_BOX]: {
+    id: ItemId.GAME_BOX,
     name: {
       [Lang.EN]: "Box of Games",
       [Lang.FR]: "Boîte de jeu",
@@ -2619,11 +4844,32 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein altes Spiel welches du noch nicht kennst. Wow!",
       [Lang.ES]: "Te servirá para entretenerte en medio de tanta desgracia, ¡claro que sí!"
     },
-    category: ItemCategory.Box,
-    icon: "item_game_box"
+    categories: [ItemCategory.Containers_and_boxes],
+    icon: "item_game_box",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "dice_#00",
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "cards_#00",
+            odds: 50
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.AQUA_SPLASH_INCOMPLETE]: {
-    id: ItemId.AQUA_SPLASH_INCOMPLETE,
+  [ItemId.WATERGUN_OPT_PART]: {
+    id: ItemId.WATERGUN_OPT_PART,
     name: {
       [Lang.EN]: "Aqua-Splash (incomplete)",
       [Lang.FR]: "Aqua-Splash (démonté)",
@@ -2636,11 +4882,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine furchterregende Waffe, der nur ein paar Teile fehlen...",
       [Lang.ES]: "Un arma temible, pero le faltan algunas piezas para que funcione..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_watergun_opt_part"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_watergun_opt_part",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.POCKET_VIBRATOR_INCOMPLETE]: {
-    id: ItemId.POCKET_VIBRATOR_INCOMPLETE,
+  [ItemId.VIBR_EMPTY]: {
+    id: ItemId.VIBR_EMPTY,
     name: {
       [Lang.EN]: "Pocket Vibrator (incomplete)",
       [Lang.FR]: "Petit manche vibrant (déchargé)",
@@ -2653,11 +4905,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Er vibriert und kitzelt dich am ganzen Körper und lässt dich für einen Augenblick all deine Sorgen vergessen (benötigt 1 Batterie).",
       [Lang.ES]: "Vibra, hace cosquillas y te hace olvidar tus problemas por unos instantes (necesita 1 pila)."
     },
-    category: ItemCategory.Misc,
-    icon: "item_vibr_empty"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_vibr_empty",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "vibr_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.MEATY_BONE]: {
-    id: ItemId.MEATY_BONE,
+  [ItemId.BONE_MEAT]: {
+    id: ItemId.BONE_MEAT,
     name: {
       [Lang.EN]: "Meaty Bone",
       [Lang.FR]: "Os charnu",
@@ -2670,11 +4937,46 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein Knochen, an dem noch Fleisch ist... Komisch, er riecht sogar noch frisch. Vielleicht stammt er von einem Tier, das letzte Nacht getötet wurde?",
       [Lang.ES]: "Qué raro, la carne parece fresca aún. ¿Será de un animal muerto anoche?"
     },
-    category: ItemCategory.Food,
-    icon: "item_bone_meat"
+    categories: [ItemCategory.Food, ItemCategory.GuardWeapon, ItemCategory.APSource],
+    icon: "item_bone_meat",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 10,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_cannib_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "bone_#00"
+          },
+          {
+            type: ItemActionEffectType.Infect,
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.Ghoulify,
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.ReduceGhoulHunger,
+            value: -10
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BROKEN_HUMAN_BONE]: {
-    id: ItemId.BROKEN_HUMAN_BONE,
+  [ItemId.BONE]: {
+    id: ItemId.BONE,
     name: {
       [Lang.EN]: "Broken Human Bone",
       [Lang.FR]: "Os humain fêlé",
@@ -2687,11 +4989,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein trockener Knochen (wahrscheinlich ein Schienbein ), den jemand vor Kurzem abgenagt hat... Den kannst du bestimmt für etwas gebrauchen.",
       [Lang.ES]: "Una tibia, sin duda. Está todo roído. El zombie o quien se lo haya comido debe haber tenido mucha hambre... Para algo servirá."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_bone"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon, ItemCategory.Breakable],
+    icon: "item_bone",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 5,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 80
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PATCHWORK_BEAM]: {
-    id: ItemId.PATCHWORK_BEAM,
+  [ItemId.WOOD_BEAM]: {
+    id: ItemId.WOOD_BEAM,
     name: {
       [Lang.EN]: "Patchwork Beam",
       [Lang.FR]: "Poutre rafistolée",
@@ -2704,11 +5022,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Notdürftig zusammengebundene Holzstücke, die einen relativ stabilen Stützbalken abgeben.",
       [Lang.ES]: "Varias piezas de madera unidas para ser muy resistentes."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_wood_beam"
+    categories: [ItemCategory.Resources, ItemCategory.Heavy],
+    icon: "item_wood_beam",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.METAL_SUPPORT]: {
-    id: ItemId.METAL_SUPPORT,
+  [ItemId.METAL_BEAM]: {
+    id: ItemId.METAL_BEAM,
     name: {
       [Lang.EN]: "Metal Support",
       [Lang.FR]: "Structures métalliques",
@@ -2721,11 +5045,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine schnell zusammengebaute Metallstruktur, die ein gutes stützendes Bauteil abgibt.",
       [Lang.ES]: "Un sólido soporte para una construcción."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_metal_beam"
+    categories: [ItemCategory.Resources, ItemCategory.Heavy],
+    icon: "item_metal_beam",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.SCRAP_METAL]: {
-    id: ItemId.SCRAP_METAL,
+  [ItemId.METAL_BAD]: {
+    id: ItemId.METAL_BAD,
     name: {
       [Lang.EN]: "Scrap Metal",
       [Lang.FR]: "Débris métalliques",
@@ -2738,11 +5068,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein paar verrostete Metallstangen, ein Gitter, ein paar Schrauben... Nichts, was du sofort benutzen könntest. Du musst es erst in der Stadt ein wenig bearbeiten.",
       [Lang.ES]: "Pedazos de metal oxidado, mallas, tornillos... Nada útil en ese estado, habrá que transformarlos en el taller."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_metal_bad"
+    categories: [ItemCategory.Resources],
+    icon: "item_metal_bad",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.ROTTING_LOG]: {
-    id: ItemId.ROTTING_LOG,
+  [ItemId.WOOD_BAD]: {
+    id: ItemId.WOOD_BAD,
     name: {
       [Lang.EN]: "Rotting Log",
       [Lang.FR]: "Souche de bois pourrie",
@@ -2755,11 +5091,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein großer Baumstumpf, der von schleimigen Pilzen bedeckt ist. Damit kannst du nichts anfangen, es sei denn, du schneidest ihn dir in der Stadt zurecht.",
       [Lang.ES]: "Un gran tronco cubierto por hongos. En su estado actual no es muy útil, a menos que sea cortado y trabajado en el pueblo..."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_wood_bad"
+    categories: [ItemCategory.Resources],
+    icon: "item_wood_bad",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.HACKSAW]: {
-    id: ItemId.HACKSAW,
+  [ItemId.SAW_TOOL]: {
+    id: ItemId.SAW_TOOL,
     name: {
       [Lang.EN]: "Hacksaw",
       [Lang.FR]: "Scie à métaux",
@@ -2772,11 +5114,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Säge, dessen Zacken größtenteils verbogen sind. Du kannst mit ihr aber noch verschiedene Sachen zerteilen (Die Säge verringert die Verarbeitungskosten in der Werkstatt um 1 AP. Dafür musst du sie in deinem Rucksack haben.",
       [Lang.ES]: "Tiene la mayoría de los dientes torcidos, pero servirá para cortar muchas cosas (reduce en 1 PA el costo de las transformaciones en el taller, debes colocarla en tu mochila)."
     },
-    category: ItemCategory.Misc,
-    icon: "item_saw_tool"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_saw_tool",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.QUALITY_LOG]: {
-    id: ItemId.QUALITY_LOG,
+  [ItemId.WOOD_LOG]: {
+    id: ItemId.WOOD_LOG,
     name: {
       [Lang.EN]: "Quality Log",
       [Lang.FR]: "Buche en bon état",
@@ -2789,11 +5137,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein schöner Holzscheit, den du als Hocker für deine Einrichtung verwenden kannst. Was willst du mehr? Ist doch besser als nichts.",
       [Lang.ES]: "Un buen pedazo de madera que puede servir de taburete en tu casa. Después de todo, es mejor que nada."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_wood_log"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
+    icon: "item_wood_log",
+    decoration: 2,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.BROKEN_ELECTRONIC_DEVICE]: {
-    id: ItemId.BROKEN_ELECTRONIC_DEVICE,
+  [ItemId.ELECTRO_BOX]: {
+    id: ItemId.ELECTRO_BOX,
     name: {
       [Lang.EN]: "Broken Electronic Device",
       [Lang.FR]: "Appareil électronique en panne",
@@ -2806,11 +5160,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein uraltes Haushaltsgerät, von dem du aber nicht weißt, für welchen Zweck es bestimmt war. Vielleicht erhälst du ein paar nützliche Sachen wenn du es auseinanderbaust?",
       [Lang.ES]: "No se sabe ni para qué sirve, pero desarmándolo quizás puedas extraer algo útil."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_electro_box"
+    categories: [ItemCategory.Resources],
+    icon: "item_electro_box",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.FLATPACKED_FURNITURE]: {
-    id: ItemId.FLATPACKED_FURNITURE,
+  [ItemId.DECO_BOX]: {
+    id: ItemId.DECO_BOX,
     name: {
       [Lang.EN]: "Flatpacked Furniture",
       [Lang.FR]: "Meuble en kit",
@@ -2823,11 +5183,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein Möbelstück, das in seine Einzelteile zerlegt ist. Schwer zu sagen, was es ist...",
       [Lang.ES]: "Una caja con muchas piezas, no sabes lo que es..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_deco_box"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    icon: "item_deco_box",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 15,
+    actions: [
+      
+    ]
   },
-  [ItemId.DAMAGED_HACKSAW]: {
-    id: ItemId.DAMAGED_HACKSAW,
+  [ItemId.SAW_TOOL_PART]: {
+    id: ItemId.SAW_TOOL_PART,
     name: {
       [Lang.EN]: "Damaged Hacksaw",
       [Lang.FR]: "Scie à métaux abimée",
@@ -2840,11 +5206,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese Säge könnte nützlich sein, wenn du es schaffst, sie zu reparieren.",
       [Lang.ES]: "Una sierra siempre ayuda. Necesitas repararla."
     },
-    category: ItemCategory.Misc,
-    icon: "item_saw_tool_part"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_saw_tool_part",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.MECHANISM]: {
-    id: ItemId.MECHANISM,
+  [ItemId.MECANISM]: {
+    id: ItemId.MECANISM,
     name: {
       [Lang.EN]: "Mechanism",
       [Lang.FR]: "Mécanisme",
@@ -2857,8 +5229,14 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieses Getriebe war wohl mal Teil einer größeren Maschine oder eines Fahrzeugs... In dieser Form kannst du aber nichts mehr damit anfangen.",
       [Lang.ES]: "Esta cosa debió formar parte de algo más grande: una máquina o un vehículo... Así no sirve de nada."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_mecanism"
+    categories: [ItemCategory.Resources],
+    icon: "item_mecanism",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
   [ItemId.TRESTLE]: {
     id: ItemId.TRESTLE,
@@ -2874,11 +5252,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein relativ solider Holzbock, den du zweifelsohne für deine persönliche Verteidigung oder für die Stadtverteidigung gebrauchen kannst.",
       [Lang.ES]: "Puede servir muy bien para sostener las defensas de tu casa o del pueblo."
     },
-    category: ItemCategory.Armor,
-    icon: "item_trestle"
+    categories: [ItemCategory.Defences, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.CampingBoost],
+    icon: "item_trestle",
+    decoration: 1,
+    heavy: true,
+    watchPoints: 15,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: -1
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.J_RPEN_TABLE]: {
-    id: ItemId.J_RPEN_TABLE,
+  [ItemId.TABLE]: {
+    id: ItemId.TABLE,
     name: {
       [Lang.EN]: "Järpen Table",
       [Lang.FR]: "Table Järpen",
@@ -2891,11 +5284,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Der Tisch lässt sich ganz leicht mit Gummizügen und Holzstiften zusammenbauen. In deinem Wohnzimmer wird er ein richtiger Hingucker sein. Und wenn du ihn senkrecht stellst, kann er dir eines Nachts vielleicht sogar das Leben retten.",
       [Lang.ES]: "Armada con elásticos y pedazos de madera, irá muy bien en el \"salón\" de tu casa. Y colocada verticalmente podría salvarte la vida una de estas noches."
     },
-    category: ItemCategory.Armor,
-    icon: "item_table"
+    categories: [ItemCategory.Defences, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.CampingBoost],
+    icon: "item_table",
+    decoration: 3,
+    heavy: true,
+    watchPoints: 15,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: -1
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.WATER_PURIFYING_TABLETS]: {
-    id: ItemId.WATER_PURIFYING_TABLETS,
+  [ItemId.WATER_CLEANER]: {
+    id: ItemId.WATER_CLEANER,
     name: {
       [Lang.EN]: "Water Purifying Tablets",
       [Lang.FR]: "Micropur effervescent",
@@ -2908,11 +5316,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine desinfizierende Brausetablette, mit der man Wasser reinigen kann. Eigentlich handelt es sich um ein Reinigungstab für Toiletten. Den Geschmack kannst du dir ja ausmalen... (ACHTUNG: Die Ausbeute dieses Produkts ist im Vergleich zum industriellen Reiniger wesentlich geringer.)",
       [Lang.ES]: "Purifica el agua. Antes se usaba para desinfectar los inodoros, ya sabes el sabor que tendrá el agua... (Atención: El rendimiento de este objeto es inferior al de un Purificador Industrial)"
     },
-    category: ItemCategory.Drug,
-    icon: "item_water_cleaner"
+    categories: [ItemCategory.Pharmacy],
+    icon: "item_water_cleaner",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.INTESTINE_MELON]: {
-    id: ItemId.INTESTINE_MELON,
+  [ItemId.VEGETABLE_TASTY]: {
+    id: ItemId.VEGETABLE_TASTY,
     name: {
       [Lang.EN]: "Intestine Melon",
       [Lang.FR]: "Melon d'intestin",
@@ -2925,11 +5339,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Normalerweise \"wächst\" die Darmmelone im Grimmdarm von Kadavern, doch es sieht so aus, als ob dein Gemüsebeet dir ein paar hübsche Exemplare beschert hätte. Kann es vielleicht sein, dass dein Gemüsebeet auf einem alten Indianerfriedhof liegt?",
       [Lang.ES]: "Se sabe que crece en el intestino de los cadáveres, cerca del colon. Sin embargo, tu huerta presenta varios de estos frutos... ¿Los habrás cultivado en algún antiguo cementerio?"
     },
-    category: ItemCategory.Food,
-    icon: "item_vegetable_tasty"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_vegetable_tasty",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 7
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.FLASH_POWDER]: {
-    id: ItemId.FLASH_POWDER,
+  [ItemId.POWDER]: {
+    id: ItemId.POWDER,
     name: {
       [Lang.EN]: "Flash Powder",
       [Lang.FR]: "Poudre-comète brute",
@@ -2942,11 +5371,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieses Feuerwerkraketenpulver könnte als Ablenkung dienen, wenn du es korrekt verwendest ...",
       [Lang.ES]: "Esta pólvora de fuegos artificiales podría brindarte un buen espectáculo, si es usada correctamente..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_powder"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_powder",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.FLASH_GRENADE]: {
-    id: ItemId.FLASH_GRENADE,
+  [ItemId.FLASH]: {
+    id: ItemId.FLASH,
     name: {
       [Lang.EN]: "Flash Grenade",
       [Lang.FR]: "Bombe Pulvérine",
@@ -2959,11 +5394,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese improvisierte Granate ermöglicht dir, die Zombies in einer Zone abzulenken. Nutze die sich bietende Gelegenheit um dich zu verdrücken.",
       [Lang.ES]: "Este simpático artefacto puede servirte para desviar la atención de los zombies hacia otra cosa que no sea tus queridos huesos... Tendrás unos instantes para aprovechar su distracción."
     },
-    category: ItemCategory.Misc,
-    icon: "item_flash"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon],
+    icon: "item_flash",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 5,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetEscapeTime,
+            value: 300
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.TEDDY_BEAR]: {
-    id: ItemId.TEDDY_BEAR,
+  [ItemId.TEDDY]: {
+    id: ItemId.TEDDY,
     name: {
       [Lang.EN]: "Teddy Bear",
       [Lang.FR]: "Teddy n'Ours",
@@ -2976,11 +5426,31 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein kleines Stoffkuscheltier, das einem Kind vor langer Zeit viel Freude bereitet hat...",
       [Lang.ES]: "Un peluche que habrá dado mucha felicidad a un niño... o tal vez no."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_teddy"
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    icon: "item_teddy",
+    decoration: 8,
+    heavy: false,
+    watchPoints: -15,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_teddy"
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "terror",
+            odds: 30
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CRATE_LID]: {
-    id: ItemId.CRATE_LID,
+  [ItemId.WOOD_PLATE_PART]: {
+    id: ItemId.WOOD_PLATE_PART,
     name: {
       [Lang.EN]: "Crate Lid",
       [Lang.FR]: "Morceau de caisse",
@@ -2993,11 +5463,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine lose Ansammlung von Brettern, die früher wahrscheinlich einen Holzdeckel formten. Du könntest ihn gut für die Verteidigung gebrauchen, allerdings brauchst du etwas, um die Bretter zu fixieren.",
       [Lang.ES]: "Una vieja parrilla de tablas que servía para tapar una gran caja. Podría serte útil como defensa si encontrases algo para reforzarla."
     },
-    category: ItemCategory.Misc,
-    icon: "item_wood_plate_part"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    icon: "item_wood_plate_part",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.SOLID_WOODEN_BOARD]: {
-    id: ItemId.SOLID_WOODEN_BOARD,
+  [ItemId.WOOD_PLATE]: {
+    id: ItemId.WOOD_PLATE,
     name: {
       [Lang.EN]: "Solid Wooden Board",
       [Lang.FR]: "Plaque de bois solide",
@@ -3010,11 +5486,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser große Kistendeckel könnte dir gute Dienste leisten, um ein Fenster oder eine Tür bei dir daheim zu verriegeln...",
       [Lang.ES]: "Está muy sólida. Protegerá alguna ventana o puerta de tu casa..."
     },
-    category: ItemCategory.Armor,
-    icon: "item_wood_plate"
+    categories: [ItemCategory.Defences, ItemCategory.Heavy, ItemCategory.CampingBoost],
+    icon: "item_wood_plate",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: -1
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.WAD_OF_CASH]: {
-    id: ItemId.WAD_OF_CASH,
+  [ItemId.MONEY]: {
+    id: ItemId.MONEY,
     name: {
       [Lang.EN]: "Wad of Cash",
       [Lang.FR]: "Liasse de billets",
@@ -3027,11 +5518,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein bedrucktes Bündel Papierscheine und ein paar Kupferstücke. Beides diente früher mal als Währung, doch hier ist es wertlos. Alles, was du nicht essen oder dir ins Blut spritzen kannst ist uninteressant...",
       [Lang.ES]: "Un montón de papelitos con números y dibujos impresos, que alguna vez sirvieron como salario. Hoy, todo lo que no se come o no te protege no vale nada..."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_money"
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
+    icon: "item_money",
+    decoration: 7,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.TOOL_BAG]: {
-    id: ItemId.TOOL_BAG,
+  [ItemId.REPAIR_KIT_PART_RAW]: {
+    id: ItemId.REPAIR_KIT_PART_RAW,
     name: {
       [Lang.EN]: "Tool Bag",
       [Lang.FR]: "Outils en vrac",
@@ -3044,11 +5541,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Tasche mit verschiedenen Werkzeugen, denen hier und da ein Griff oder eine Schraube fehlt. Du müsstest es reparieren, wenn du es ernsthaft gebrauchen willst.",
       [Lang.ES]: "Herramientas diversas, a las que les falta siempre algo: un mango, un tornillo... Habría que repararlas en el taller para que sean útiles."
     },
-    category: ItemCategory.Misc,
-    icon: "item_repair_kit_part_raw"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_repair_kit_part_raw",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.RADIUS_MARK_II_INCOMPLETE]: {
-    id: ItemId.RADIUS_MARK_II_INCOMPLETE,
+  [ItemId.RADIUS_MK2_PART]: {
+    id: ItemId.RADIUS_MK2_PART,
     name: {
       [Lang.EN]: "Radius Mark II (incomplete)",
       [Lang.FR]: "Radius Mark II (déchargé)",
@@ -3061,11 +5564,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Der Radar-Marker 'Radius Mark II' ist ein fantasievoll zusammengeschraubtes Gerät, das dir ermöglicht, Lebewesen in deiner Umgebung ausfindig zu machen. Es wird behauptet, dass er Krebs verursache und Gehirnzellen irreparabel schädige, doch das kann dir egal sein, da du eh nicht lang genug leben wirst... und überhaupt: Um ihn zu benutzen brauchst du erstmal eine Batterie.",
       [Lang.ES]: "El transmisor Radius Mark II es un aparato arcaico pero eficaz para detectar la presencia de zombies en los alrededores. Se dice que da cáncer y que quema las neuronas si se usa por mucho tiempo, pero como tu vida no será muy larga no hay problema. Y de todos modos le hacen falta pilas."
     },
-    category: ItemCategory.Misc,
-    icon: "item_radius_mk2_part"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_radius_mk2_part",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "radius_mk2_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.RADIUS_MARK_II]: {
-    id: ItemId.RADIUS_MARK_II,
+  [ItemId.RADIUS_MK2]: {
+    id: ItemId.RADIUS_MK2,
     name: {
       [Lang.EN]: "Radius Mark II",
       [Lang.FR]: "Radius Mark II",
@@ -3078,11 +5596,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Der Radar-Marker 'Radius Mark II' ist ein fantasievoll zusammengeschraubtes Gerät, das dir ermöglicht, Lebewesen in deiner Umgebung ausfindig zu machen. Es wird behauptet, dass er Krebs verursache und Gehirnzellen irreparabel schädige, doch das kann dir egal sein, da du eh nicht lang genug leben wirst...",
       [Lang.ES]: "El transmisor Radius Mark II es un aparato arcaico pero eficaz para detectar la presencia de zombies en los alrededores. Se dice que da cáncer y que quema las neuronas si se usa por mucho tiempo, pero como tu vida no será muy larga no hay problema."
     },
-    category: ItemCategory.Misc,
-    icon: "item_radius_mk2"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_radius_mk2",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "radius_mk2_part_#00",
+            odds: 33
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.KWIK_FIX]: {
-    id: ItemId.KWIK_FIX,
+  [ItemId.REPAIR_ONE]: {
+    id: ItemId.REPAIR_ONE,
     name: {
       [Lang.EN]: "Kwik-fix",
       [Lang.FR]: "Brico'Facile",
@@ -3095,11 +5629,30 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "'Reparatur Fix' ist ein kleines Reparaturkit für den einmaligen Gebrauch, mit dem du fast alles richten kannst. Es enthält das übliche Grundwerkzeug, ein paar Plastikersatzteile und eine Do-it-yourself-Anleitung in sieben Sprachen.",
       [Lang.ES]: "Un pequeño kit de un solo uso que permite reparar cualquier cosa. Contiene herramientas básicas, piezas de repuesto y un manual en 7 idiomas."
     },
-    category: ItemCategory.Misc,
-    icon: "item_repair_one"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_repair_one",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: -1
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_repair_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.ENGINE_INCOMPLETE]: {
-    id: ItemId.ENGINE_INCOMPLETE,
+  [ItemId.ENGINE_PART]: {
+    id: ItemId.ENGINE_PART,
     name: {
       [Lang.EN]: "Engine (incomplete)",
       [Lang.FR]: "Moteur incomplet",
@@ -3112,11 +5665,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Es handelt sich um einen kleinen Motor, der mit Ölspuren und undefinierbaren Brennresten verschmutzt ist und der schwer wie Blei ist.",
       [Lang.ES]: "Está lleno de aceite y suena a piezas sueltas cuando lo sacudes. Pesa."
     },
-    category: ItemCategory.Misc,
-    icon: "item_engine_part"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    icon: "item_engine_part",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.OLD_WASHING_MACHINE]: {
-    id: ItemId.OLD_WASHING_MACHINE,
+  [ItemId.MACHINE_1]: {
+    id: ItemId.MACHINE_1,
     name: {
       [Lang.EN]: "Old Washing Machine",
       [Lang.FR]: "Vieille machine à laver",
@@ -3129,11 +5688,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese uralte Waschmaschine ist das Relikt einer Ära, in der die Menschen noch Wert auf Sauberkeit legten. Heute kannst du nur noch darüber lachen...",
       [Lang.ES]: "Uno de esos artefactos del hogar que representaba el sueño de muchas familias. Hoy, solo te causa risa..."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_machine_1"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Breakable],
+    icon: "item_machine_1",
+    decoration: 2,
+    heavy: true,
+    watchPoints: 15,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 40
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CARCINOGENIC_OVEN]: {
-    id: ItemId.CARCINOGENIC_OVEN,
+  [ItemId.MACHINE_2]: {
+    id: ItemId.MACHINE_2,
     name: {
       [Lang.EN]: "Carcinogenic Oven",
       [Lang.FR]: "Four cancérigène",
@@ -3146,11 +5721,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Legenden erzählen, dass die Mikrowellentechnologie einer der Gründe für den Untergang der menschlichen Zivilisation waren. Manche behaupten sogar, dass Mikrowellenöfen für das Auftauchen der Untoten verantwortlich seien...",
       [Lang.ES]: "Quienes salían en la tele diciendo que el horno microondas causaría la decadencia de nuestra sociedad, tal vez tenían razón. Incluso se dice que la existencia de muertos vivientes no sería ajena a su uso."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_machine_2"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Breakable],
+    icon: "item_machine_2",
+    decoration: 2,
+    heavy: true,
+    watchPoints: 15,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 43
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BEER_FRIDGE]: {
-    id: ItemId.BEER_FRIDGE,
+  [ItemId.MACHINE_3]: {
+    id: ItemId.MACHINE_3,
     name: {
       [Lang.EN]: "Beer Fridge",
       [Lang.FR]: "Réfrigérateur d'étudiant",
@@ -3163,11 +5754,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Leider enthält dieser kleine Kühlschrank keinen Alkohol mehr. Zudem funktioniert er nicht mehr. Allerdings könnte er ein gutes Wurfgeschoss abgeben.",
       [Lang.ES]: "Aún tiene la foto de una pareja de novios pegada con un imán. Ya no funciona pero algún uso le has de encontrar."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_machine_3"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Breakable],
+    icon: "item_machine_3",
+    decoration: 2,
+    heavy: true,
+    watchPoints: 15,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 40
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.A_LETTER_WITH_NO_ADDRESS]: {
-    id: ItemId.A_LETTER_WITH_NO_ADDRESS,
+  [ItemId.RP_LETTER]: {
+    id: ItemId.RP_LETTER,
     name: {
       [Lang.EN]: "A letter with no address",
       [Lang.FR]: "Une lettre sans adresse",
@@ -3180,11 +5787,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein blutbefleckter Briefumschlag, auf dem die Empfängeradresse nicht mehr lesbar ist... Der Umschlag ist noch zu.",
       [Lang.ES]: "Un sobre que se ha salpicado de sangre donde debería de estar la dirección."
     },
-    category: ItemCategory.Misc,
-    icon: "item_rp_letter"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.RP],
+    icon: "item_rp_letter",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_rp_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SCROLL]: {
-    id: ItemId.SCROLL,
+  [ItemId.RP_SCROLL]: {
+    id: ItemId.RP_SCROLL,
     name: {
       [Lang.EN]: "Scroll",
       [Lang.FR]: "Feuille raccornie",
@@ -3197,11 +5819,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein aufgewelltes, sprödes Blatt Papier. Du hast nicht den blassesten Schimmer, was es sein könnte. Versuche es vorsichtig zu reinigen, vielleicht kannst du ja was eintziffern.",
       [Lang.ES]: "Cayó en un charco de lodo y se secó. No sabes realmente lo que es. ¿Quizás limpiándola un poco encuentres alguna información interesante?"
     },
-    category: ItemCategory.Misc,
-    icon: "item_rp_scroll"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.RP],
+    icon: "item_rp_scroll",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_rp_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.INSTRUCTION_MANUAL]: {
-    id: ItemId.INSTRUCTION_MANUAL,
+  [ItemId.RP_MANUAL]: {
+    id: ItemId.RP_MANUAL,
     name: {
       [Lang.EN]: "Instruction Manual",
       [Lang.FR]: "Manuel d'instructions",
@@ -3214,11 +5851,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Gebrauchsanweisung mit komplizierten Diagrammen, die detailliert beschreiben, wie man eine obskure Maschine zusammensetzt. Es scheint schlecht aus einer asiatischen Sprache übersetzt zu sein, aber auf der Rückseite ist eine interessantere Handschrift von jemandem zu finden.",
       [Lang.ES]: "Una serie de hojas con instrucciones para reparar y armar cosas. Algunas páginas tienen notas..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_rp_manual"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.RP],
+    icon: "item_rp_manual",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_rp_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.ILLEGIBLE_NOTEBOOK]: {
-    id: ItemId.ILLEGIBLE_NOTEBOOK,
+  [ItemId.RP_BOOK2]: {
+    id: ItemId.RP_BOOK2,
     name: {
       [Lang.EN]: "Illegible Notebook",
       [Lang.FR]: "Carnet illisible",
@@ -3231,11 +5883,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Wer weiß, was in diesem Notizbuch stehen könnte? Die dunkelsten Geheimnisse von jemandem? Eine Schatzkarte? Wenn du es nur lesen könntest...",
       [Lang.ES]: "Debió pertenecer a otro habitante. Si la perdió, ahora es tuya. ¿Qué contendrá?"
     },
-    category: ItemCategory.Misc,
-    icon: "item_rp_book2"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.RP],
+    icon: "item_rp_book2",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_rp_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PHOTO_ALBUM]: {
-    id: ItemId.PHOTO_ALBUM,
+  [ItemId.RP_BOOK_01]: {
+    id: ItemId.RP_BOOK_01,
     name: {
       [Lang.EN]: "Photo Album",
       [Lang.FR]: "Album photo",
@@ -3248,11 +5915,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sieht wie ein alter Schuljahresbericht aus. Die Fotos sind stinklangweilig. Beim Durchblättern fällt dir ein dazwischengeschobenes Blatt in die Hände...",
       [Lang.ES]: "Un viejo álbum de fotos de escuela o algo así, hay muchos rostros casi borrados por el tiempo. Pero al ojearlo, un papel cae de su interior..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_rp_book"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.RP],
+    icon: "item_rp_book",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_rp_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.STACK_OF_PAPERS]: {
-    id: ItemId.STACK_OF_PAPERS,
+  [ItemId.RP_SHEETS]: {
+    id: ItemId.RP_SHEETS,
     name: {
       [Lang.EN]: "Stack of Papers",
       [Lang.FR]: "Pile de feuilles",
@@ -3265,11 +5947,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein Haufen Papierkram, das aus einer Verwaltung stammt.Nichts Interessantes, wobei manche Blätter Handnotizen erkennen lassen...",
       [Lang.ES]: "Muchos documentos de todo tipo, nada interesante. Espera, algunos llevan anotaciones curiosas..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_rp_sheets"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.RP],
+    icon: "item_rp_sheets",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_rp_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.RUSTY_CHAIN]: {
-    id: ItemId.RUSTY_CHAIN,
+  [ItemId.CHAIN]: {
+    id: ItemId.CHAIN,
     name: {
       [Lang.EN]: "Rusty Chain",
       [Lang.FR]: "Grosse chaîne rouillée",
@@ -3282,11 +5979,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese alte Eisenkette ist total krumm und ist nicht mehr von großem Nutzen... Aber vielleicht kannst du jemanden damit erwürgen?",
       [Lang.ES]: "Tal vez te sirva... para estrangular a alguien."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_chain"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon, ItemCategory.Breakable],
+    icon: "item_chain",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 7,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 25
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.DODGY_HOMEMADE_DISH]: {
-    id: ItemId.DODGY_HOMEMADE_DISH,
+  [ItemId.DISH]: {
+    id: ItemId.DISH,
     name: {
       [Lang.EN]: "Dodgy Homemade Dish",
       [Lang.FR]: "Plat fait-maison douteux",
@@ -3299,11 +6012,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine nicht ganz durchgegarte wilde Mischung verschiedenster Zutaten, fein abgeschmeckt mit Wüstensand. Hhhmmm...",
       [Lang.ES]: "Ingredientes variados sazonados con arena del desierto. Hmmm..."
     },
-    category: ItemCategory.Food,
-    icon: "item_dish"
+    categories: [ItemCategory.Food, ItemCategory.GuardWeapon, ItemCategory.APSource],
+    icon: "item_dish",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 4,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.TASTY_HOMEMADE_DISH]: {
-    id: ItemId.TASTY_HOMEMADE_DISH,
+  [ItemId.DISH_TASTY]: {
+    id: ItemId.DISH_TASTY,
     name: {
       [Lang.EN]: "Tasty Homemade Dish",
       [Lang.FR]: "Bon plat fait-maison",
@@ -3316,11 +6044,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Auf den ersten Blick sieht es kaum besser aus als das, was du sonst zu dir nimmst. In Wirklichkeit schmeckt es jedoch sehr sehr gut und ist sättigend!",
       [Lang.ES]: "No parece nada extraordinario, ¡pero tiene buen sabor y alimenta muy bien!"
     },
-    category: ItemCategory.Food,
-    icon: "item_dish_tasty"
+    categories: [ItemCategory.Food, ItemCategory.GuardWeapon, ItemCategory.APSource],
+    icon: "item_dish_tasty",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 6,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 7
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.IRON_CHEST]: {
-    id: ItemId.IRON_CHEST,
+  [ItemId.HOME_BOX_XL]: {
+    id: ItemId.HOME_BOX_XL,
     name: {
       [Lang.EN]: "Iron Chest",
       [Lang.FR]: "Cantine en fer",
@@ -3333,11 +6076,30 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Schrankkoffer ist zwar schwer, aber äußerst praktisch, um daheim mal aufzuräumen.",
       [Lang.ES]: "Pesado pero práctico para llevar a casa."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_home_box_xl"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.ChestExtension],
+    icon: "item_home_box_xl",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 8,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_hbuild_#00"
+          },
+          {
+            type: ItemActionEffectType.HomeStorage,
+            value: 2
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BOXES]: {
-    id: ItemId.BOXES,
+  [ItemId.HOME_BOX]: {
+    id: ItemId.HOME_BOX,
     name: {
       [Lang.EN]: "Boxes",
       [Lang.FR]: "Cartons",
@@ -3350,11 +6112,30 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein paar Haushaltsgerätekartons, die stark nach Schimmel riechen. Du kannst sie aber immer noch verwenden - als Möbel zum Beispiel.",
       [Lang.ES]: "Diversas cajas de artefactos eléctricos y muebles. Podrían servir en tu casa como muebles."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_home_box"
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.ChestExtension],
+    icon: "item_home_box",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 4,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_hbuild_#00"
+          },
+          {
+            type: ItemActionEffectType.HomeStorage,
+            value: 1
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.MAKESHIFT_BARRICADE]: {
-    id: ItemId.MAKESHIFT_BARRICADE,
+  [ItemId.HOME_DEF]: {
+    id: ItemId.HOME_DEF,
     name: {
       [Lang.EN]: "Makeshift Barricade",
       [Lang.FR]: "Barricades à clouer",
@@ -3367,11 +6148,30 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser lustige Blech- und Holzverbund hat wohl einem anderen Einwohner als Schutz gedient. Den Beulen und Blutflecken nach zu urteilen, hat sie wohl nicht ganz gereicht...",
       [Lang.ES]: "Una estructura de madera y hierro que seguramente sirvió a un antiguo habitante. A juzgar por las manchas de sangre y golpes, no debió ser suficiente..."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_home_def"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy],
+    icon: "item_home_def",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_hbuild_#00"
+          },
+          {
+            type: ItemActionEffectType.HomeDefense,
+            value: 1
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.ENVELOPE]: {
-    id: ItemId.ENVELOPE,
+  [ItemId.BOOK_GEN_LETTER]: {
+    id: ItemId.BOOK_GEN_LETTER,
     name: {
       [Lang.EN]: "Envelope",
       [Lang.FR]: "Une enveloppe",
@@ -3384,11 +6184,52 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein großer, versiegelter Briefumschlag ... Dem Tasten nach zu urteilen enthält er Papier oder doch etwas anderes?",
       [Lang.ES]: "Un gran sobre sellado conteniendo... papeles, tal vez."
     },
-    category: ItemCategory.Box,
-    icon: "item_book_gen_letter"
+    categories: [ItemCategory.Containers_and_boxes],
+    icon: "item_book_gen_letter",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rp_book2_#00",
+            odds: 17
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rp_manual_#00",
+            odds: 17
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rp_scroll_#00",
+            odds: 17
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rp_scroll_#01",
+            odds: 17
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rp_sheets_#00",
+            odds: 17
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rp_letter_#00",
+            odds: 17
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PARCEL]: {
-    id: ItemId.PARCEL,
+  [ItemId.BOOK_GEN_BOX]: {
+    id: ItemId.BOOK_GEN_BOX,
     name: {
       [Lang.EN]: "Parcel",
       [Lang.FR]: "Un colis",
@@ -3401,11 +6242,42 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Adresse ist nicht mehr lesbar. Beim Schütteln hörst du ein raschelndes Geräusch...",
       [Lang.ES]: "Parece que no hay dirección ni detalles de reenvío en este paquete. Lo sacudes y escuchas algo traqueteando en el interior."
     },
-    category: ItemCategory.Box,
-    icon: "item_book_gen_box"
+    categories: [ItemCategory.Containers_and_boxes],
+    icon: "item_book_gen_box",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "money_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rp_book_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rp_book_#01",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rp_sheets_#00",
+            odds: 25
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.WIRE_MESH]: {
-    id: ItemId.WIRE_MESH,
+  [ItemId.FENCE]: {
+    id: ItemId.FENCE,
     name: {
       [Lang.EN]: "Wire Mesh",
       [Lang.FR]: "Morceau de grillage",
@@ -3418,11 +6290,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein kleines, verrostetes Stück Maschendrahtzaun.",
       [Lang.ES]: "Oxidada y torcida, puede servir para algo."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_fence"
+    categories: [ItemCategory.Furniture],
+    icon: "item_fence",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.WATER_PISTOL_3_SHOTS]: {
-    id: ItemId.WATER_PISTOL_3_SHOTS,
+  [ItemId.WATERGUN_3]: {
+    id: ItemId.WATERGUN_3,
     name: {
       [Lang.EN]: "Water Pistol (3 shots)",
       [Lang.FR]: "Pistolet à eau (3 charges)",
@@ -3435,11 +6313,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Wasserpistole erinnert dich irgendwie an Räuber und Gendarmen... Nur mit sauberem Wasser benutzen(zum Beispiel aus einer Trinkflasche).",
       [Lang.ES]: "Tu primer arma letal cuando eras niño... Solo es eficaz con agua pura (la de una Ración de agua por ejemplo)."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_watergun_3"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_watergun_3",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 6,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "watergun_2_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.WATER_PISTOL_2_SHOTS]: {
-    id: ItemId.WATER_PISTOL_2_SHOTS,
+  [ItemId.WATERGUN_2]: {
+    id: ItemId.WATERGUN_2,
     name: {
       [Lang.EN]: "Water Pistol (2 shots)",
       [Lang.FR]: "Pistolet à eau (2 charges)",
@@ -3452,11 +6345,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Wasserpistole erinnert dich irgendwie an Räuber und Gendarmen... Nur mit sauberem Wasser benutzen(zum Beispiel aus einer Trinkflasche).",
       [Lang.ES]: "Tu primer arma letal cuando eras niño... Solo es eficaz con agua pura (la de una Ración de agua por ejemplo)."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_watergun_2"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_watergun_2",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 4,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "watergun_1_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.WATER_PISTOL_1_SHOT]: {
-    id: ItemId.WATER_PISTOL_1_SHOT,
+  [ItemId.WATERGUN_1]: {
+    id: ItemId.WATERGUN_1,
     name: {
       [Lang.EN]: "Water Pistol (1 shot)",
       [Lang.FR]: "Pistolet à eau (1 charge)",
@@ -3469,11 +6377,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Wasserpistole erinnert dich irgendwie an Räuber und Gendarmen... Nur mit sauberem Wasser benutzen(zum Beispiel aus einer Trinkflasche).",
       [Lang.ES]: "Tu primer arma letal cuando eras niño... Solo es eficaz con agua pura (la de una Ración de agua por ejemplo)."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_watergun_1"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_watergun_1",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 2,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "watergun_empty_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.AQUA_SPLASH_5_SHOTS]: {
-    id: ItemId.AQUA_SPLASH_5_SHOTS,
+  [ItemId.WATERGUN_OPT_5]: {
+    id: ItemId.WATERGUN_OPT_5,
     name: {
       [Lang.EN]: "Aqua-Splash (5 shots)",
       [Lang.FR]: "Aqua-Splash (5 charges)",
@@ -3486,11 +6409,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Aqua-Splash-Kanone ist die Lieblingswaffe aller Wüstenwanderer! Nicht geeignet für Kinder unter 8 Jahren.",
       [Lang.ES]: "¡Un arma super poderosa en el Ultramundo! La etiqueta dice de 8 años a más."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_watergun_opt_5"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_watergun_opt_5",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 12,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "watergun_opt_4_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.AQUA_SPLASH_4_SHOTS]: {
-    id: ItemId.AQUA_SPLASH_4_SHOTS,
+  [ItemId.WATERGUN_OPT_4]: {
+    id: ItemId.WATERGUN_OPT_4,
     name: {
       [Lang.EN]: "Aqua-Splash (4 shots)",
       [Lang.FR]: "Aqua-Splash (4 charges)",
@@ -3503,11 +6441,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Aqua-Splash-Kanone ist die Lieblingswaffe aller Wüstenwanderer! Nicht geeignet für Kinder unter 8 Jahren.",
       [Lang.ES]: "¡Un arma super poderosa en el Ultramundo! La etiqueta dice de 8 años a más."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_watergun_opt_4"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_watergun_opt_4",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 9,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "watergun_opt_3_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.OPENED_PACKET_OF_CIGARETTES]: {
-    id: ItemId.OPENED_PACKET_OF_CIGARETTES,
+  [ItemId.CIGS]: {
+    id: ItemId.CIGS,
     name: {
       [Lang.EN]: "Opened packet of Cigarettes",
       [Lang.FR]: "Paquet de cigarettes entamé",
@@ -3520,11 +6473,36 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine gammelige alte Zigarettenschachtel, die nach Aas riecht. Du kannst dich richtig glücklich schätzen, sowas findet man heutzutage nur noch sehr selten. Auf der Packung ist ein Warnhinweis: \"Rauchen ist tödlich\".",
       [Lang.ES]: "El tabaco ya huele muy mal, pero es tan raro encontrar algo así en estos días... Lleva escrito: \"Fumar mata\". Sí, claro..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_cigs"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_cigs",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lights_#00",
+            odds: 33
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "cigs_#00",
+            odds: 67
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "terror"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PUTA_MARK_II_CALIBRATOR]: {
-    id: ItemId.PUTA_MARK_II_CALIBRATOR,
+  [ItemId.PILEGUN_UPKIT]: {
+    id: ItemId.PILEGUN_UPKIT,
     name: {
       [Lang.EN]: "PUTA Mark II Calibrator",
       [Lang.FR]: "Calibrateur PDTT Mark II",
@@ -3537,11 +6515,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Mit diesem veralteten Druckregler kannst du den Druck in der Schusskammer des Batteriewerfer 1-PDTG regeln.",
       [Lang.ES]: "Fue concebido para ser instalado en el Lanza-pilas 1-PDTG. Permite ajustar el disparo del arma."
     },
-    category: ItemCategory.Misc,
-    icon: "item_pilegun_upkit"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_pilegun_upkit",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.BATTERY_LAUNCHER_MK__II_EMPTY]: {
-    id: ItemId.BATTERY_LAUNCHER_MK__II_EMPTY,
+  [ItemId.PILEGUN_UP_EMPTY]: {
+    id: ItemId.PILEGUN_UP_EMPTY,
     name: {
       [Lang.EN]: "Battery Launcher Mk. II (empty)",
       [Lang.FR]: "Lance-pile Mark II (vide)",
@@ -3554,11 +6538,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Bei dieser verbesserten Version des normalen Batteriewerfers 1-PDTG ist der PDTT Mark II-Druckregler schon eingebaut. Durch Feinjustierung der Schusskraft ist es manchmal sogar möglich die verschossene Batterie wieder einzusammeln.",
       [Lang.ES]: "Esta versión mejorada del temible lanza-pilas lleva un cañón equipado con el Calibrador PDTT Mark II. Ajustando la potencia del tiro, el cañón permite, a veces, recuperar la pila disparada."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_pilegun_up_empty"
+    categories: [ItemCategory.Armoury],
+    icon: "item_pilegun_up_empty",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pilegun_up_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BATTERY_LAUNCHER_MK__II_LOADED]: {
-    id: ItemId.BATTERY_LAUNCHER_MK__II_LOADED,
+  [ItemId.PILEGUN_UP]: {
+    id: ItemId.PILEGUN_UP,
     name: {
       [Lang.EN]: "Battery Launcher Mk. II (loaded)",
       [Lang.FR]: "Lance-pile Mark II (chargé)",
@@ -3571,11 +6570,37 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Bei dieser verbesserten Version des normalen Batteriewerfers 1-PDTG ist der PDTT Mark II-Druckregler schon eingebaut. Durch Feinjustierung der Schusskraft ist es manchmal sogar möglich die verschossene Batterie wieder einzusammeln.",
       [Lang.ES]: "Esta versión mejorada del temible lanza-pilas lleva un cañón equipado con el Calibrador PDTT Mark II. Ajustando la potencia del tiro, el cañón permite, a veces, recuperar la pila disparada."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_pilegun_up"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_pilegun_up",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 11,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pile_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pilegun_up_empty_#00",
+            odds: 33
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pile_broken_#00",
+            odds: 100
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CRUSHED_BATTERY]: {
-    id: ItemId.CRUSHED_BATTERY,
+  [ItemId.PILE_BROKEN]: {
+    id: ItemId.PILE_BROKEN,
     name: {
       [Lang.EN]: "Crushed Battery",
       [Lang.FR]: "Pile broyée",
@@ -3588,11 +6613,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Das war mal eine Batterie. Jetzt ist es nur noch ein komplett zerdrücktes Stück Metall...",
       [Lang.ES]: "Antes era una pila. Ahora es un pedazo de metal aplastado..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_pile_broken"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_pile_broken",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.CONSTRUCTION_KIT_3]: {
-    id: ItemId.CONSTRUCTION_KIT_3,
+  [ItemId.RSC_PACK_3]: {
+    id: ItemId.RSC_PACK_3,
     name: {
       [Lang.EN]: "Construction Kit (3)",
       [Lang.FR]: "Carton de matériaux (3)",
@@ -3605,11 +6636,36 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese große Kiste ist in Zellophan eingeschweißt und mit bedruckten Etiketten nur so zugepflastert. Sie enthält wahrscheinlich Baumaterialien.",
       [Lang.ES]: "Esta gran cajota está muy bien empacada y debe contener materiales de construcción."
     },
-    category: ItemCategory.Box,
-    icon: "item_rsc_pack_3"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    icon: "item_rsc_pack_3",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "wood2_#00",
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "metal_#00",
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rsc_pack_2_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CONSTRUCTION_KIT_2]: {
-    id: ItemId.CONSTRUCTION_KIT_2,
+  [ItemId.RSC_PACK_2]: {
+    id: ItemId.RSC_PACK_2,
     name: {
       [Lang.EN]: "Construction Kit (2)",
       [Lang.FR]: "Carton de matériaux (2)",
@@ -3622,11 +6678,36 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese große Kiste ist in Zellophan eingeschweißt und mit bedruckten Etiketten nur so zugepflastert. Sie enthält wahrscheinlich Baumaterialien.",
       [Lang.ES]: "Esta gran cajota está muy bien empacada y debe contener materiales de construcción."
     },
-    category: ItemCategory.Box,
-    icon: "item_rsc_pack_2"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    icon: "item_rsc_pack_2",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "wood2_#00",
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "metal_#00",
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rsc_pack_1_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CONSTRUCTION_KIT_1]: {
-    id: ItemId.CONSTRUCTION_KIT_1,
+  [ItemId.RSC_PACK_1]: {
+    id: ItemId.RSC_PACK_1,
     name: {
       [Lang.EN]: "Construction Kit (1)",
       [Lang.FR]: "Carton de matériaux (1)",
@@ -3639,8 +6720,29 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese große Kiste ist in Zellophan eingeschweißt und mit bedruckten Etiketten nur so zugepflastert. Sie enthält wahrscheinlich Baumaterialien.",
       [Lang.ES]: "Esta gran cajota está muy bien empacada y debe contener materiales de construcción."
     },
-    category: ItemCategory.Box,
-    icon: "item_rsc_pack_1"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    icon: "item_rsc_pack_1",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "wood2_#00",
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "metal_#00",
+            odds: 50
+          }
+        ]
+      }
+    ]
   },
   [ItemId.CAR_DOOR]: {
     id: ItemId.CAR_DOOR,
@@ -3656,11 +6758,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese Autotür kann dir als Schutzschild dienen, wenn du eine Reihe hungriger Kadaver durchqueren musst. Die haben nämlich nur eines im Sinn: Dein köstliches Gehirn zu verschlingen.",
       [Lang.ES]: "Esta buena puerta de coche estadounidense te servirá como escudo para pasar entre las turbas de muertos vivientes deseosos de darte mordiscos."
     },
-    category: ItemCategory.Armor,
-    icon: "item_car_door"
+    categories: [ItemCategory.Defences, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    icon: "item_car_door",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 25,
+    actions: [
+      
+    ]
   },
-  [ItemId.CAR_DOOR_INCOMPLETE]: {
-    id: ItemId.CAR_DOOR_INCOMPLETE,
+  [ItemId.CAR_DOOR_PART]: {
+    id: ItemId.CAR_DOOR_PART,
     name: {
       [Lang.EN]: "Car Door (incomplete)",
       [Lang.FR]: "Portière de voiture incomplète",
@@ -3673,11 +6781,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Autotür, bei der ein entscheidendes Teil fehlt: Der Türgriff. Schlecht...",
       [Lang.ES]: "Una buena puerta de coche estadounidense, te serviría como escudo, pero le faltan piezas para poder ser sostenida..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_car_door_part"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    icon: "item_car_door_part",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.VIAL_OF_POISON]: {
-    id: ItemId.VIAL_OF_POISON,
+  [ItemId.POISON]: {
+    id: ItemId.POISON,
     name: {
       [Lang.EN]: "Vial of Poison",
       [Lang.FR]: "Fiole de poison",
@@ -3690,11 +6804,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese winzig kleine Dosis Gift reicht aus, um jeden deiner Mitbürger umzubringen. Wenn du es mit etwas Essen oder einer Droge vermischt, oder wenn du es in eine Trinkflasche kippst, ist dieses Gift eine tödliche Waffe.",
       [Lang.ES]: "Las pocas gotas que quedan dentro matarían a cualquier compañero. Tiene un gran poder de contaminación, ya sea en alimentos, estimulantes o una Ración de agua..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_poison"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_poison",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.CORROSIVE_LIQUID]: {
-    id: ItemId.CORROSIVE_LIQUID,
+  [ItemId.POISON_PART]: {
+    id: ItemId.POISON_PART,
     name: {
       [Lang.EN]: "Corrosive Liquid",
       [Lang.FR]: "Produit corrosif",
@@ -3707,11 +6827,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Mit den richtigen Zutaten kannst du dir ein schönes Gift mischen. Musst du denn unbedingt jemanden umbringen? Das willst du doch nicht wirklich... oder doch?",
       [Lang.ES]: "Mezclándolo con otros ingredientes este ácido puede volverse un potente veneno. Pero no deseas matar a alguien... ¿verdad?"
     },
-    category: ItemCategory.Misc,
-    icon: "item_poison_part"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_poison_part",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.SHREWD_CITIZEN_S_STASH]: {
-    id: ItemId.SHREWD_CITIZEN_S_STASH,
+  [ItemId.CHEST_HERO]: {
+    id: ItemId.CHEST_HERO,
     name: {
       [Lang.EN]: "Shrewd Citizen's Stash",
       [Lang.FR]: "Réserves d’un citoyen avisé",
@@ -3724,11 +6850,47 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sobald du in dieser Welt ein wenig Erfahrung gesammelt hast, weißt du, dass es wichtig ist, ein paar Gegenstände bei sich zu behalten. Denn eines Tages könnten sie dir das Leben retten.",
       [Lang.ES]: "Cuando se adquiere una cierta experiencia en este mundo, uno comprende la importancia de guardar algunos objetos, porque un día podrían salvarnos la vida."
     },
-    category: ItemCategory.Box,
-    icon: "item_chest_hero"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    icon: "item_chest_hero",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "watergun_empty_#00",
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pilegun_empty_#00",
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "flash_#00",
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "repair_one_#00",
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "smoke_bomb_#00",
+            odds: 20
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.GIFT_PARCEL]: {
-    id: ItemId.GIFT_PARCEL,
+  [ItemId.POSTAL_BOX]: {
+    id: ItemId.POSTAL_BOX,
     name: {
       [Lang.EN]: "Gift Parcel",
       [Lang.FR]: "Colis postal",
@@ -3741,11 +6903,42 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Adresse ist nicht mehr lesbar. Es scheint etwas drin zu sein... Das ist ja besser als Weihnachten!",
       [Lang.ES]: "Un paquete perdido por el correo (para variar). Hay algo dentro... ¿qué será?"
     },
-    category: ItemCategory.Box,
-    icon: "item_postal_box"
+    categories: [ItemCategory.Containers_and_boxes],
+    icon: "item_postal_box",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "money_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rp_book_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rp_book_#01",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rp_sheets_#00",
+            odds: 25
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.LUNCH_BOX]: {
-    id: ItemId.LUNCH_BOX,
+  [ItemId.FOOD_ARMAG]: {
+    id: ItemId.FOOD_ARMAG,
     name: {
       [Lang.EN]: "Lunch Box",
       [Lang.FR]: "Boîte-déjeuner",
@@ -3758,11 +6951,42 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Da Du hier kein richtiges Dinner mit Freunden erleben kannst, hast du dir ein paar leckere Happen beiseite gelegt und in dieser Lunch-Box aufbewahrt. Ab und zu muss man sich mal was gönnen ...",
       [Lang.ES]: "A falta de una buena comida en una mesa. con cubiertos y amigos, tienes esta lonchera Armagedón que habías escondido hace un tiempo bajo tu cama..."
     },
-    category: ItemCategory.Box,
-    icon: "item_food_armag"
+    categories: [ItemCategory.Containers_and_boxes],
+    icon: "item_food_armag",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "food_candies_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "food_noodles_hot_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "vegetable_tasty_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meat_#00",
+            odds: 25
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.HANDFUL_OF_SWEETS]: {
-    id: ItemId.HANDFUL_OF_SWEETS,
+  [ItemId.FOOD_CANDIES]: {
+    id: ItemId.FOOD_CANDIES,
     name: {
       [Lang.EN]: "Handful of Sweets",
       [Lang.FR]: "Poignée de bonbons",
@@ -3775,11 +6999,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Beim Anblick dieser Bonbons kommen dir die Tränen...",
       [Lang.ES]: "Se te salen las lágrimas al ver todos esos caramelitos de colores..."
     },
-    category: ItemCategory.Food,
-    icon: "item_food_candies"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_food_candies",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 7
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SHEET_OF_PLYWOOD]: {
-    id: ItemId.SHEET_OF_PLYWOOD,
+  [ItemId.OUT_DEF]: {
+    id: ItemId.OUT_DEF,
     name: {
       [Lang.EN]: "Sheet of Plywood",
       [Lang.FR]: "Morceau de contreplaqué",
@@ -3792,8 +7031,23 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieses alte Sperrholzstück stammt aus irgendeinem alten Gebäude. Mit ein wenig Einfallsreichtum könntest du es für eine neue Konstruktion wiederverwerten.",
       [Lang.ES]: "Debe haber salido de un antiguo edificio. Con un poco de ingenio puede servir para hacer un escondite."
     },
-    category: ItemCategory.Misc,
-    icon: "item_out_def"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.CampingBoost],
+    icon: "item_out_def",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: -1
+          }
+        ]
+      }
+    ]
   },
   [ItemId.TORCH]: {
     id: ItemId.TORCH,
@@ -3809,11 +7063,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die brennt bestimmt noch ein paar Stunden... Selbst damit kannst du dir die Zombies vom Leib halten.",
       [Lang.ES]: "Debe poder quedar encendida unas horas... Servirá para alejar a los zombies. Además, si la colocas en el suelo en el desierto, reducirá la penalización que impide realizar búsquedas de noche."
     },
-    category: ItemCategory.Armor,
-    icon: "item_torch"
+    categories: [ItemCategory.Defences, ItemCategory.GuardWeapon],
+    icon: "item_torch",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 15,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "torch_off_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BURNT_OUT_TORCH]: {
-    id: ItemId.BURNT_OUT_TORCH,
+  [ItemId.TORCH_OFF]: {
+    id: ItemId.TORCH_OFF,
     name: {
       [Lang.EN]: "Burnt out Torch",
       [Lang.FR]: "Torche consumée",
@@ -3826,11 +7095,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Mit diesem alten verbranntem Stück Holz kannst du wahrscheinlich nicht mehr viel anfangen...",
       [Lang.ES]: "Un viejo pedazo de madera calcinada que no tendrá mucha utilidad..."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_torch_off"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon, ItemCategory.Breakable],
+    icon: "item_torch_off",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 5,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 75
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.DRIED_MARSHMALLOWS]: {
-    id: ItemId.DRIED_MARSHMALLOWS,
+  [ItemId.CHAMA]: {
+    id: ItemId.CHAMA,
     name: {
       [Lang.EN]: "Dried Marshmallows",
       [Lang.FR]: "Chamallows séchés",
@@ -3843,11 +7128,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Handvoll steinharte Marshmallows, die nach Rattengift riechen. So wie sie jetzt sind, kannst du sie nicht essen...",
       [Lang.ES]: "Están tan duros que son difíciles de comer..."
     },
-    category: ItemCategory.Food,
-    icon: "item_chama"
+    categories: [ItemCategory.Food],
+    icon: "item_chama",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.BURNT_MARSHMALLOWS]: {
-    id: ItemId.BURNT_MARSHMALLOWS,
+  [ItemId.CHAMA_TASTY]: {
+    id: ItemId.CHAMA_TASTY,
     name: {
       [Lang.EN]: "Burnt Marshmallows",
       [Lang.FR]: "Chamallows calcinés",
@@ -3860,11 +7151,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Handvoll steinharter Marshmallows, die nach Rattengift riechen. Jetzt, da sie komplett geröstet sind, kannst du sie essen, und wenn du es dir genau überlegst, sind sie sogar richtig lecker...",
       [Lang.ES]: "Estarán secos y quemados, pero hagamos cuenta de que aún son comestibles."
     },
-    category: ItemCategory.Food,
-    icon: "item_chama_tasty"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_chama_tasty",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 7
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PC_BASE_UNIT]: {
-    id: ItemId.PC_BASE_UNIT,
+  [ItemId.PC]: {
+    id: ItemId.PC,
     name: {
       [Lang.EN]: "PC Base Unit",
       [Lang.FR]: "Unité centrale",
@@ -3877,8 +7183,24 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese alte Blechkiste war mal mit verschiedenen elektronischen Bauteilen gefüllt (CPU, Hauptplatine, Hardwareschnittstellen etc ...). Was willst du jetzt noch damit anfangen?",
       [Lang.ES]: "Esta vieja caja metálica contiene un montón de componentes eléctricos. Debe ser de algún antiguo servidor de Eternaltwin, ahora no sirve de mucho..."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_pc"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Breakable],
+    icon: "item_pc",
+    decoration: 3,
+    heavy: true,
+    watchPoints: 15,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 50
+          }
+        ]
+      }
+    ]
   },
   [ItemId.SAFE]: {
     id: ItemId.SAFE,
@@ -3894,11 +7216,81 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Toll... und wie findest du jetzt raus, was da drin ist? Ohne die Geheimkombination dürfte das etwas schwierig werden.",
       [Lang.ES]: "¿Qué tendrá dentro? Ah, claro, necesitas conocer la clave secreta para averiguarlo."
     },
-    category: ItemCategory.Box,
-    icon: "item_safe"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    icon: "item_safe",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: -1
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "safe_#00",
+            odds: 95
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pocket_belt_#00",
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "watergun_opt_part_#00",
+            odds: 5
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lawn_part_#00",
+            odds: 5
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "chainsaw_part_#00",
+            odds: 5
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "mixergun_part_#00",
+            odds: 5
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "cutcut_#00",
+            odds: 5
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pilegun_upkit_#00",
+            odds: 5
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meca_parts_#00",
+            odds: 5
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "big_pgun_part_#00",
+            odds: 8
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "book_gen_letter_#00",
+            odds: 8
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.ENCYCLOPEDIA]: {
-    id: ItemId.ENCYCLOPEDIA,
+  [ItemId.RP_TWIN]: {
+    id: ItemId.RP_TWIN,
     name: {
       [Lang.EN]: "Encyclopedia",
       [Lang.FR]: "Une encyclopédie",
@@ -3911,11 +7303,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser große staubige Schinken gehört zu einer Lexikonausgabe mit dem Titel \"Twinpedia\". Die Seiten sind mit Anmerkungen unterschiedlicher Handschriften vollgeschrieben.Es scheint als ob mehrere Personen daran und darin gearbeitet hätten.",
       [Lang.ES]: "Un libro muy gordo y empolvado. Sus páginas tienen muchas anotaciones misteriosas, como si hubiese pasado por las manos de varias personas."
     },
-    category: ItemCategory.Misc,
-    icon: "item_rp_twin"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.RP],
+    icon: "item_rp_twin",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_rp_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.WATER_COOLER_BOTTLE_EMPTY]: {
-    id: ItemId.WATER_COOLER_BOTTLE_EMPTY,
+  [ItemId.WATER_CAN_EMPTY]: {
+    id: ItemId.WATER_CAN_EMPTY,
     name: {
       [Lang.EN]: "Water Cooler Bottle (Empty)",
       [Lang.FR]: "Bonbonne d'eau (vide)",
@@ -3928,11 +7335,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein typischer Wasserspender, wie man ihn in jedem Großraumbüro antreffen kann. Wie durch ein Wunder ist er dir in die Hände gefallen. So ein Ding könnte hier gut nützlich sein...",
       [Lang.ES]: "Tuviste suerte al encontrarla, no es común ver eso por aquí... -- USO: si llevas una Ración de agua, será colocada en la bombona. Si no, la acción será beber el contenido de la bombona."
     },
-    category: ItemCategory.Misc,
-    icon: "item_water_can_empty"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    icon: "item_water_can_empty",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_can_1_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.WATER_COOLER_BOTTLE_1_RATION]: {
-    id: ItemId.WATER_COOLER_BOTTLE_1_RATION,
+  [ItemId.WATER_CAN_1]: {
+    id: ItemId.WATER_CAN_1,
     name: {
       [Lang.EN]: "Water Cooler Bottle (1 Ration)",
       [Lang.FR]: "Bonbonne d'eau (1 ration)",
@@ -3945,11 +7367,48 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein typischer Wasserspender, wie man ihn in jedem Großraumbüro antreffen kann. Wie durch ein Wunder ist er dir in die Hände gefallen. So ein Ding könnte hier gut nützlich sein...",
       [Lang.ES]: "Tuviste suerte al encontrarla, no es común ver eso por aquí... -- USO: si llevas una Ración de agua, será colocada en la bombona. Si no, la acción será beber el contenido de la bombona."
     },
-    category: ItemCategory.Food,
-    icon: "item_water_can_1"
+    categories: [ItemCategory.Food, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.APSource, ItemCategory.Water],
+    icon: "item_water_can_1",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 8,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_can_2_#00"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_can_empty_#00"
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "thirst1"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_meta_wound"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.WATER_COOLER_BOTTLE_2_RATIONS]: {
-    id: ItemId.WATER_COOLER_BOTTLE_2_RATIONS,
+  [ItemId.WATER_CAN_2]: {
+    id: ItemId.WATER_CAN_2,
     name: {
       [Lang.EN]: "Water Cooler Bottle (2 Rations)",
       [Lang.FR]: "Bonbonne d'eau (2 rations)",
@@ -3962,11 +7421,48 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein typischer Wasserspender, wie man ihn in jedem Großraumbüro antreffen kann. Wie durch ein Wunder ist er dir in die Hände gefallen. So ein Ding könnte hier gut nützlich sein...",
       [Lang.ES]: "Tuviste suerte al encontrarla, no es común ver eso por aquí... -- USO: si llevas una Ración de agua, será colocada en la bombona. Si no, la acción será beber el contenido de la bombona."
     },
-    category: ItemCategory.Food,
-    icon: "item_water_can_2"
+    categories: [ItemCategory.Food, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.APSource, ItemCategory.Water],
+    icon: "item_water_can_2",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 16,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_can_3_#00"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_can_1_#00"
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "thirst1"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_meta_wound"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.WATER_COOLER_BOTTLE_3_RATIONS]: {
-    id: ItemId.WATER_COOLER_BOTTLE_3_RATIONS,
+  [ItemId.WATER_CAN_3]: {
+    id: ItemId.WATER_CAN_3,
     name: {
       [Lang.EN]: "Water Cooler Bottle (3 Rations)",
       [Lang.FR]: "Bonbonne d'eau (3 rations)",
@@ -3979,11 +7475,38 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein typischer Wasserspender, wie man ihn in jedem Großraumbüro antreffen kann. Wie durch ein Wunder ist er dir in die Hände gefallen. So ein Ding könnte hier gut nützlich sein...",
       [Lang.ES]: "Tuviste suerte al encontrarla, no es común ver eso por aquí... -- USO: si llevas una Ración de agua, será colocada en la bombona. Si no, la acción será beber el contenido de la bombona."
     },
-    category: ItemCategory.Food,
-    icon: "item_water_can_3"
+    categories: [ItemCategory.Food, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.APSource, ItemCategory.Water],
+    icon: "item_water_can_3",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 24,
+    actions: [
+      {
+        type: ItemActionType.Drink,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_can_2_#00"
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "thirst1"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_meta_wound"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BETAPROPINE_5MG_EXPIRED]: {
-    id: ItemId.BETAPROPINE_5MG_EXPIRED,
+  [ItemId.BETA_DRUG_BAD]: {
+    id: ItemId.BETA_DRUG_BAD,
     name: {
       [Lang.EN]: "Betapropine 5mg (expired)",
       [Lang.FR]: "Betapropine 5mg périmée",
@@ -3996,11 +7519,51 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Wirkung dieser Tablette ist höchst zweifelhaft... Auf der Schachtel steht: \"Für BETA-Tester unter 18 Jahren nicht geeignet\". Seltsam...",
       [Lang.ES]: "Tiene un efecto misterioso... En la caja dice: \"No recomendado para beta-testers menores de 18 años\". Extraño."
     },
-    category: ItemCategory.Drug,
-    icon: "item_beta_drug_bad"
+    categories: [ItemCategory.Pharmacy, ItemCategory.APSource, ItemCategory.Drug],
+    icon: "item_beta_drug_bad",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_cobaye_#00"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged",
+            odds: 27
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_drug_#00",
+            odds: 27
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: 6,
+            odds: 13
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "terror",
+            odds: 7
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: 7,
+            odds: 7
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BETAPROPINE_5MG]: {
-    id: ItemId.BETAPROPINE_5MG,
+  [ItemId.BETA_DRUG]: {
+    id: ItemId.BETA_DRUG,
     name: {
       [Lang.EN]: "Betapropine 5mg",
       [Lang.FR]: "Betapropine 5mg",
@@ -4013,11 +7576,30 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Auf der Schachtel steht: \"Für BETA-Tester unter 18 Jahren nicht geeignet\". Seltsam...",
       [Lang.ES]: "En la caja dice: \"No recomendado para beta-testers menores de 18 años\". Extraño."
     },
-    category: ItemCategory.Drug,
-    icon: "item_beta_drug"
+    categories: [ItemCategory.Pharmacy, ItemCategory.APSource],
+    icon: "item_beta_drug",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 26
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_betadrug"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.FLESHROOMS]: {
-    id: ItemId.FLESHROOMS,
+  [ItemId.FRUIT_SUB_PART]: {
+    id: ItemId.FRUIT_SUB_PART,
     name: {
       [Lang.EN]: "Fleshrooms",
       [Lang.FR]: "Charognardes",
@@ -4030,11 +7612,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Aasbeeren sind Beeren, die auf verwesten Leichen wachsen. Man findet sie oft auf Zombies, aber erst recht auf Tierkadavern...Willst du sie wirklich essen?",
       [Lang.ES]: "Crecen generalmente en los cuerpos en descomposición: no es raro verlos en los zombies o en cadáveres de animales diversos... ¿Estás seguro de que eso se come?"
     },
-    category: ItemCategory.Misc,
-    icon: "item_fruit_sub_part"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.ShunnedItem],
+    icon: "item_fruit_sub_part",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.STICKY_PASTRY_BALL]: {
-    id: ItemId.STICKY_PASTRY_BALL,
+  [ItemId.FRUIT_PART]: {
+    id: ItemId.FRUIT_PART,
     name: {
       [Lang.EN]: "Sticky Pastry Ball",
       [Lang.FR]: "Boule de pâtes visqueuse",
@@ -4047,11 +7635,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine glitschige Kugel aus zusammengeklebten \"Aasbeeren\" \"Aasbeeren\" wachsen hauptsächtlich auf Kadavern.",
       [Lang.ES]: "Una colonia de hongos carroñeros que crecen generalmente en los cuerpos en descomposición..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_fruit_part"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.ShunnedItem],
+    icon: "item_fruit_part",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.POUND_OF_FLESH]: {
-    id: ItemId.POUND_OF_FLESH,
+  [ItemId.FLESH_PART]: {
+    id: ItemId.FLESH_PART,
     name: {
       [Lang.EN]: "Pound of Flesh",
       [Lang.FR]: "Lambeau de chair",
@@ -4064,11 +7658,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein altes Hautstück oder irgend etwas anderes, das mal zu einem Lebewesen gehörte. Was willst du damit anstellen?",
       [Lang.ES]: "Un viejo pedazo de piel u otra cosa que perteneció al cuerpo de un ser vivo. ¿Pero qué puedes hacer con eso?"
     },
-    category: ItemCategory.Misc,
-    icon: "item_flesh_part"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.ShunnedItem],
+    icon: "item_flesh_part",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.GRISLY_BOMB]: {
-    id: ItemId.GRISLY_BOMB,
+  [ItemId.FLESH]: {
+    id: ItemId.FLESH,
     name: {
       [Lang.EN]: "Grisly Bomb",
       [Lang.FR]: "Bombe macabre",
@@ -4081,11 +7681,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Das tolle an dieser unförmigen Fleischkugel ist, dass sie auf 10 Meter nach Aas stinkt. Damit kannst du die Zombies 'ne Zeit lang beschäftigen.",
       [Lang.ES]: "La ventaja de esta bola deforme de carne, es que huele a carroña en 10 metros a la redonda. Muy útil para entretener a los zombies por unos instantes."
     },
-    category: ItemCategory.Misc,
-    icon: "item_flesh"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_flesh",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetEscapeTime,
+            value: 40
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.THICK_SOLUTION]: {
-    id: ItemId.THICK_SOLUTION,
+  [ItemId.PHARMA_PART]: {
+    id: ItemId.PHARMA_PART,
     name: {
       [Lang.EN]: "Thick Solution",
       [Lang.FR]: "Substance épaisse",
@@ -4098,11 +7713,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieses kleine Fläschen enthält eine fluoresziernde Flüssigkeit. Erstaunlich! Vielleicht kannst du ja was Nützliches brauen, wenn du die Substanz mit etwas anderem mischst?",
       [Lang.ES]: "Este frasco contiene un líquido de colores... sorprendentes. Tal vez mezclándolo con otra cosa obtengas algo útil."
     },
-    category: ItemCategory.Drug,
-    icon: "item_pharma_part"
+    categories: [ItemCategory.Pharmacy, ItemCategory.ShunnedItem],
+    icon: "item_pharma_part",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.FLESHROOM_PUREE]: {
-    id: ItemId.FLESHROOM_PUREE,
+  [ItemId.FRUIT]: {
+    id: ItemId.FRUIT,
     name: {
       [Lang.EN]: "Fleshroom Puree",
       [Lang.FR]: "Purée de charognardes",
@@ -4115,11 +7736,30 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Brei stinkt wie die Pest, da die dafür verarbeiteten Beeren für gewöhnlich auf Kadavern wachsen. Wenn du vor einer akuten Infektion keine Angst hast könntest du ihn ja mal vorsichtig probieren. Vielleicht macht er ja satt?",
       [Lang.ES]: "Realmente esto apesta. Es una bola aplastada de hongos que crecieron en algún cadáver. Si no le tienes miedo a nada, ¿crees que esto podrá calmar tu hambre?"
     },
-    category: ItemCategory.Food,
-    icon: "item_fruit"
+    categories: [ItemCategory.Food, ItemCategory.APSource, ItemCategory.Poisonable],
+    icon: "item_fruit",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.Ghoulify,
+            odds: 4
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.STAGNANT_WATER_CAN]: {
-    id: ItemId.STAGNANT_WATER_CAN,
+  [ItemId.WATER_CUP_PART]: {
+    id: ItemId.WATER_CUP_PART,
     name: {
       [Lang.EN]: "Stagnant Water Can",
       [Lang.FR]: "Eau croupie",
@@ -4132,11 +7772,40 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser total verformte Eisenbehälter hat eine kleine Menge Wasser aufgefangen.Das Problem ist, das du es nicht trinken kannst, da es schmutzig ist.",
       [Lang.ES]: "Una pieza de metal oxidado ha conservado una pequeña cantidad de agua. El problema es que no es potable."
     },
-    category: ItemCategory.Misc,
-    icon: "item_water_cup_part"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.ShunnedItem],
+    icon: "item_water_cup_part",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_solban_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_cup_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_cup_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.AddWaterToWell,
+            value: "2-2"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PURIFIED_STAGNANT_WATER]: {
-    id: ItemId.PURIFIED_STAGNANT_WATER,
+  [ItemId.WATER_CUP]: {
+    id: ItemId.WATER_CUP,
     name: {
       [Lang.EN]: "Purified Stagnant Water",
       [Lang.FR]: "Eau croupie purifiée",
@@ -4149,11 +7818,34 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser total verformte Eisenbehälter enthält eine kleine Menge gereinigtes Wasser. Es ist nicht viel, aber besser als nichts.)",
       [Lang.ES]: "Una pieza de metal oxidado ha conservado una pequeña cantidad de agua. No es mucha, pero es mejor que nada."
     },
-    category: ItemCategory.Food,
-    icon: "item_water_cup"
+    categories: [ItemCategory.Food, ItemCategory.APSource, ItemCategory.Water],
+    icon: "item_water_cup",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Drink,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "thirst1"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_meta_wound"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BANNED_CITIZEN_S_NOTE]: {
-    id: ItemId.BANNED_CITIZEN_S_NOTE,
+  [ItemId.BANNED_NOTE]: {
+    id: ItemId.BANNED_NOTE,
     name: {
       [Lang.EN]: "Banned Citizen's Note",
       [Lang.FR]: "Note d'un citoyen banni",
@@ -4166,11 +7858,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Notizzettel gehörte einem <em>Verbannten</em>. Mal sehen, was er geschrieben hat...",
       [Lang.ES]: "Esta nota pertenecía a un Desterrado. ¿Qué pudo haber escrito?"
     },
-    category: ItemCategory.Misc,
-    icon: "item_banned_note"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.ShunnedItem],
+    icon: "item_banned_note",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.BLOODY_DRESSING]: {
-    id: ItemId.BLOODY_DRESSING,
+  [ItemId.INFECT_POISON_PART]: {
+    id: ItemId.INFECT_POISON_PART,
     name: {
       [Lang.EN]: "Bloody Dressing",
       [Lang.FR]: "Pansement ensanglanté",
@@ -4183,11 +7881,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser blutdurchtränkte Verband wurde vormals von einem infizierten Bürger getragen...",
       [Lang.ES]: "Esta tirita ensangrentada fue previamente usada en la gangrena de un habitante infectado..."
     },
-    category: ItemCategory.Drug,
-    icon: "item_infect_poison_part"
+    categories: [ItemCategory.Pharmacy],
+    icon: "item_infect_poison_part",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.CURSED_CUDDLY_TOY]: {
-    id: ItemId.CURSED_CUDDLY_TOY,
+  [ItemId.TEDDY_01]: {
+    id: ItemId.TEDDY_01,
     name: {
       [Lang.EN]: "Cursed Cuddly Toy",
       [Lang.FR]: "Teddy n'Ours maudit",
@@ -4200,11 +7904,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Das alleinige Ansehen des Teddys macht dich verrückt.Vielleicht solltest du ihn aus dem Fenster werfen? Immerhin befindest du dich in einem verlassenen Hotel...",
       [Lang.ES]: "Un peluche que habrá dado mucha \"felicidad\" a un niño... o pudo haberlo poseído..."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_teddy"
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
+    icon: "item_teddy",
+    decoration: 1,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "terror"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SAWDUST_STEAK]: {
-    id: ItemId.SAWDUST_STEAK,
+  [ItemId.WOODSTEAK]: {
+    id: ItemId.WOODSTEAK,
     name: {
       [Lang.EN]: "Sawdust Steak",
       [Lang.FR]: "Steak de sciure",
@@ -4217,11 +7936,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Man nehme eine Scheibe Fleisch, paniere das Ganze mit Sägemehl und streue anschließend einige Holzstücke darüber... et Voilà! Im Holz scheinen auch einige Holzwürmer gewesen zu sein, denn das Ding hört nicht auf sich zu bewegen.",
       [Lang.ES]: "Una rebanada de carne cubierta con serrín y viruta de madera... Pero tal vez no sean virutas, sino gusanos, lo que parece más lógico porque no dejan de moverse."
     },
-    category: ItemCategory.Food,
-    icon: "item_woodsteak"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_woodsteak",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 7
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SECOND_HAND_RED_COAT]: {
-    id: ItemId.SECOND_HAND_RED_COAT,
+  [ItemId.CHRISTMAS_SUIT_1]: {
+    id: ItemId.CHRISTMAS_SUIT_1,
     name: {
       [Lang.EN]: "Second-hand Red Coat",
       [Lang.FR]: "Veste rouge usée",
@@ -4234,11 +7968,18 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein wenig zu gross für dich. Sieht so aus als waren seine Vorbesitzer ein wenig beleibter und hatten schlechten Geschmack...was man ohne Zweifel erkennen kann.",
       [Lang.ES]: "Es un poco grande para ti: parece haber pertenecido a alguien con una gran barriga y mal gusto, como se puede ver claramente en el blanco del cuello y los puños."
     },
-    category: ItemCategory.Misc,
-    icon: "item_christmas_suit_1"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Event],
+    icon: "item_christmas_suit_1",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    event: GameEvent.Christmas,
+    actions: [
+      
+    ]
   },
-  [ItemId.RIPPED_RED_TROUSERS]: {
-    id: ItemId.RIPPED_RED_TROUSERS,
+  [ItemId.CHRISTMAS_SUIT_2]: {
+    id: ItemId.CHRISTMAS_SUIT_2,
     name: {
       [Lang.EN]: "Ripped Red Trousers",
       [Lang.FR]: "Pantalon rouge déchiré",
@@ -4251,11 +7992,18 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese alten Fetzen riechen nach Urin und wurden mehrmals geflickt. Besser aussehen würden sie....ohh, sie passt Dir perfekt.",
       [Lang.ES]: "Estos viejos pantalones huelen a orina y se han reparado con regularidad. Probablemente se vean mejor en... (¡ENCENDIDO!) ¡Te quedarán perfectamente!"
     },
-    category: ItemCategory.Misc,
-    icon: "item_christmas_suit_2"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Event],
+    icon: "item_christmas_suit_2",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    event: GameEvent.Christmas,
+    actions: [
+      
+    ]
   },
-  [ItemId.FOUL_SMELLING_RED_HAT]: {
-    id: ItemId.FOUL_SMELLING_RED_HAT,
+  [ItemId.CHRISTMAS_SUIT_3]: {
+    id: ItemId.CHRISTMAS_SUIT_3,
     name: {
       [Lang.EN]: "Foul-smelling Red Hat",
       [Lang.FR]: "Bonnet rouge malodorant",
@@ -4268,11 +8016,18 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Viele seltsame Gestalten haben diese stinkende Mütze schon getragen, und trotzdem geht dein Herz auf, als du sie aufsetzt.",
       [Lang.ES]: "Un sombrero que ha sido utilizado como nido por varias generaciones de palomas y otros animales malolientes. El revestimiento interior de excrementos secos le da una textura extraña... Y te pica la cabeza cuando te lo pones."
     },
-    category: ItemCategory.Misc,
-    icon: "item_christmas_suit_3"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Event],
+    icon: "item_christmas_suit_3",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    event: GameEvent.Christmas,
+    actions: [
+      
+    ]
   },
-  [ItemId.FOUL_SMELLING_VINTAGE_SUIT]: {
-    id: ItemId.FOUL_SMELLING_VINTAGE_SUIT,
+  [ItemId.CHRISTMAS_SUIT_FULL]: {
+    id: ItemId.CHRISTMAS_SUIT_FULL,
     name: {
       [Lang.EN]: "Foul-smelling Vintage Suit",
       [Lang.FR]: "Costume malodorant d'une autre époque",
@@ -4285,11 +8040,18 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Als du diesen Anzug anziehst, verspürst du den Drang, deinen Nachbarn eine Freude zu machen und seltsame Eintrittswege zu wählen. Nutze die Chance und bestehle deine Nachbarn nach Herzenslust.",
       [Lang.ES]: "Este atuendo te queda hasta el suelo (algunos dicen que incluso huele a ti). De repente sientes que deberías alegrar a tus vecinos deslizandote discretamente por sus chimeneas con los brazos llenos de regalos. Puedes usar esto como una táctica para robar, saquear y birlar tu camino hacia la felicidad a tus vecinos. Ah, la magia de la Navidad..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_christmas_suit_full"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Event],
+    icon: "item_christmas_suit_full",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    event: GameEvent.Christmas,
+    actions: [
+      
+    ]
   },
-  [ItemId.MOBILE_PHONE]: {
-    id: ItemId.MOBILE_PHONE,
+  [ItemId.IPHONE]: {
+    id: ItemId.IPHONE,
     name: {
       [Lang.EN]: "Mobile Phone",
       [Lang.FR]: "Téléphone portable",
@@ -4302,11 +8064,46 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieses uralte Modell, war mal ein ziemlich angesagtes Handy. Eines Tages jedoch fingen die Dinger urplötzlich zu explodieren an... Da das Handy weit verbreitet war, sind Millionen Menschen bei diesen Explosionen gestorben. Ganze Städte wurden von der Landkarte ausgelöscht. Hhmmm... Das gibt bestimmt eine gute Granate ab.",
       [Lang.ES]: "Es un modelo muy famoso... por haber explotado causando la muerte de miles de personas y borrando del mapa muchas ciudades en todo el mundo. Servirá como granada."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_iphone"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_iphone",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 5,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "deto_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "metal_bad_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pile_broken_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "electro_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "1-2"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.FESTERING_FLESH]: {
-    id: ItemId.FESTERING_FLESH,
+  [ItemId.SMELLY_MEAT]: {
+    id: ItemId.SMELLY_MEAT,
     name: {
       [Lang.EN]: "Festering Flesh",
       [Lang.FR]: "Pelures de peau",
@@ -4319,11 +8116,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser übelriechende Hautfetzen gehörte früher mal einem deiner Mitbürger. Jetzt gehört er den Maden... Mit seinem unerträglichen Gestank kannst du deinen eigenen Körpergeruch überdecken, so dass dich die Untoten nicht mehr so gut riechen können. Benutze diesen Gegenstand, um deine Überlebenschancen beim Campen zu verbessern (Dazu musst du den Hautfetzen bei Dir tragen).",
       [Lang.ES]: "Esta horripilante bolsa de piel fue arrancada a algún pobre hombre. Su mal olor te servirá para camuflar tu aroma a carne fresca. Aumenta las probabilidades de sobrevivir al acampar. Debes llevarlo puesto para recibir el bonus."
     },
-    category: ItemCategory.Misc,
-    icon: "item_smelly_meat"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.CampingBoost],
+    icon: "item_smelly_meat",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.NOVELTY_TORCH_OFF]: {
-    id: ItemId.NOVELTY_TORCH_OFF,
+  [ItemId.MAGLITE_OFF]: {
+    id: ItemId.MAGLITE_OFF,
     name: {
       [Lang.EN]: "Novelty Torch (off)",
       [Lang.FR]: "Maglite Pif'Gadget (éteinte)",
@@ -4336,11 +8139,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese große Taschenlampe ist wirklich nützlich für die Suche in der Wüste, vor allem Nachts. Möglicherweise kan man noch eine andere Verwendung für sie finden, wenn sie angehen würde....",
       [Lang.ES]: "Esta gran linterna de forma rara puede serte útil en tus búsquedas en el desierto. Si solo tuvieras una pila..."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_maglite_off"
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
+    icon: "item_maglite_off",
+    decoration: 5,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "maglite_2_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.NOVELTY_TORCH_1_CHARGE]: {
-    id: ItemId.NOVELTY_TORCH_1_CHARGE,
+  [ItemId.MAGLITE_1]: {
+    id: ItemId.MAGLITE_1,
     name: {
       [Lang.EN]: "Novelty Torch (1 charge)",
       [Lang.FR]: "Maglite Pif'Gadget (1 charge)",
@@ -4353,11 +8171,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese große Taschenlampe ist wirklich nützlich für die Suche in der Wüste, vor allem Nachts. Möglicherweise kann man noch eine andere Verwendung für sie finden.",
       [Lang.ES]: "Esta gran linterna de forma rara puede serte útil en tus búsquedas en el desierto."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_maglite_1"
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
+    icon: "item_maglite_1",
+    decoration: 5,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "maglite_2_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.NOVELTY_TORCH_2_CHARGES]: {
-    id: ItemId.NOVELTY_TORCH_2_CHARGES,
+  [ItemId.MAGLITE_2]: {
+    id: ItemId.MAGLITE_2,
     name: {
       [Lang.EN]: "Novelty Torch (2 charges)",
       [Lang.FR]: "Maglite Pif'Gadget (2 charges)",
@@ -4370,11 +8203,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese große Taschenlampe ist wirklich nützlich für die Suche in der Wüste, vor allem Nachts. Möglicherweise kann man noch eine andere Verwendung für sie finden.",
       [Lang.ES]: "Esta gran linterna de forma rara puede serte útil en tus búsquedas en el desierto."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_maglite_2"
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
+    icon: "item_maglite_2",
+    decoration: 5,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.TRAVELLER_S_CORPSE]: {
-    id: ItemId.TRAVELLER_S_CORPSE,
+  [ItemId.CADAVER]: {
+    id: ItemId.CADAVER,
     name: {
       [Lang.EN]: "Traveller's Corpse",
       [Lang.FR]: "Cadavre d'un voyageur",
@@ -4387,11 +8226,46 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese Leiche liegt hier schon ein bisschen länger rum: Fliegenmaden haben sich schon an ihm zu schaffen gemacht und den größten Teil gegessen... Bist du sicher, dass du DIESES DING schultern möchtest?",
       [Lang.ES]: "Los gusanos no han dejado mucho... ¿Estás seguro de querer llevar eso en los hombros?"
     },
-    category: ItemCategory.Food,
-    icon: "item_cadaver"
+    categories: [ItemCategory.Food, ItemCategory.Heavy, ItemCategory.APSource],
+    icon: "item_cadaver",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_cannib_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "cadaver_remains_#00"
+          },
+          {
+            type: ItemActionEffectType.Infect,
+            odds: 10
+          },
+          {
+            type: ItemActionEffectType.Ghoulify,
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.ReduceGhoulHunger,
+            value: -30
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.GNAWED_CORPSE]: {
-    id: ItemId.GNAWED_CORPSE,
+  [ItemId.CADAVER_REMAINS]: {
+    id: ItemId.CADAVER_REMAINS,
     name: {
       [Lang.EN]: "Gnawed Corpse",
       [Lang.FR]: "Cadavre rongé",
@@ -4404,11 +8278,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Loses herumliegendes Gebein. Sieht aus, als ob es von einem 'wilden Tier' angenagt worden wäre... Die Bissspuren sehen aber menschlich aus. Irgendetwas stimmt hier nicht...",
       [Lang.ES]: "Los huesos han sido roídos por algo o... alguien. Este pueblo me sorprende cada vez más."
     },
-    category: ItemCategory.Misc,
-    icon: "item_cadaver_remains"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    icon: "item_cadaver_remains",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.__PINE_FRESH___SMOKE_BOMB]: {
-    id: ItemId.__PINE_FRESH___SMOKE_BOMB,
+  [ItemId.SMOKE_BOMB]: {
+    id: ItemId.SMOKE_BOMB,
     name: {
       [Lang.EN]: "« Pine Fresh » Smoke Bomb",
       [Lang.FR]: "Fumigène « Senteur Sapin »",
@@ -4421,8 +8301,14 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Es handelt sich um eine bekannte Rauchgranatenmarke, die herzlich frisch nach Tannenzapfen riecht. BEACHTE: Dieser Gegenstand löscht drei Minuten lange alle Registereinträge. Die letzte Bewegungsaktion wird gelöscht, wenn sie spätestens eine Minute nach Benutzung der Rauchgranate erfolgt. ACHTUNG: Die Rauchgranate bitte erst NACH deiner Verheimlichungsaktion werfen.",
       [Lang.ES]: "Además de perfumar el ambiente, te permite borrar las notas en el Registro de los 3 últimos minutos y ocultar también tu próximo movimiento si es realizado en el minuto después de su uso. Atención: úsalo DESPUÉS de haber realizado las acciones que deseas ocultar, y en el Ultramundo..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_smoke_bomb"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_smoke_bomb",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
   [ItemId.SAND_BALL]: {
     id: ItemId.SAND_BALL,
@@ -4438,11 +8324,18 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Du hältst eine schlichte Sandkugel in der Hand, die du vorher mit ein paar fiesen Kieselsteinchen angereicherst hast. HeHe! Irgendwie verspürst du gerade eine unglaubliche Lust diesen Ball jemanden ins Gesicht zu werfen. Wenn schon kein Schnee, dann wenigstens 'ne Sandballschlacht!",
       [Lang.ES]: "Una bola de arena inofensiva (con un poco de grava por si acaso) que estás deseando lanzar a la cara de otro. No tienes idea de dónde vino este extraño deseo."
     },
-    category: ItemCategory.Misc,
-    icon: "item_sand_ball"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Event],
+    icon: "item_sand_ball",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    event: GameEvent.Christmas,
+    actions: [
+      
+    ]
   },
-  [ItemId.CONSTRUCTION_BLUEPRINT_COMMON]: {
-    id: ItemId.CONSTRUCTION_BLUEPRINT_COMMON,
+  [ItemId.BPLAN_C]: {
+    id: ItemId.BPLAN_C,
     name: {
       [Lang.EN]: "Construction Blueprint (common)",
       [Lang.FR]: "Plan de chantier (commun)",
@@ -4455,11 +8348,186 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Bauplan ermöglicht es, ein neues Gebäude in der Stadt zu bauen.",
       [Lang.ES]: "¡Tienes entre tus manos lo que parece un plano de construcción! Es difícil entender lo que es, habría que estudiarlo para sacar conclusiones."
     },
-    category: ItemCategory.Misc,
-    icon: "item_bplan_c"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Blueprint],
+    icon: "item_bplan_c",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_plate_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_plate_#03"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_plate_#02"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_plate_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_grater_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_fence_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_plate_#10"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_gazspray_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_acidspray_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_bgrenade_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_waterspray_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_grinder_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_shower_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_tube_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_shower_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_shower_#02"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_canon_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_canon_#02"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_canon_#03"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_wood_beam_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_cafet_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_slaughterhouse_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_cafet_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_strategy_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_acid_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_tagger_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_electro_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_tagger_#02"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_dig_#02"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_tnt_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "status_terror_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_bamba_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_courroie_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_courroie_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_tourello_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_trash_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_redemption_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_door_closed_#02"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_door_closed_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_ventilation_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_novlamps_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CONSTRUCTION_BLUEPRINT_UNCOMMON]: {
-    id: ItemId.CONSTRUCTION_BLUEPRINT_UNCOMMON,
+  [ItemId.BPLAN_U]: {
+    id: ItemId.BPLAN_U,
     name: {
       [Lang.EN]: "Construction Blueprint (uncommon)",
       [Lang.FR]: "Plan de chantier (inhabituel)",
@@ -4472,11 +8540,94 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Bauplan ermöglicht es, ein neues Gebäude in der Stadt zu bauen.",
       [Lang.ES]: "¡Tienes entre tus manos lo que parece un plano de construcción! Es difícil entender lo que es, habría que estudiarlo para sacar conclusiones."
     },
-    category: ItemCategory.Misc,
-    icon: "item_bplan_u"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Blueprint],
+    icon: "item_bplan_u",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_plate_#04"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_wallimprove_#02"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_bgrenade_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_eden_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_watercanon_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_rocketperf_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_hmeat_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_canon_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_saw_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_cemetery_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_chicken_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_shield_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_catapult3_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_city_up_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_score_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_spa4souls_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_pumpkin_raw_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_urban_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CONSTRUCTION_BLUEPRINT_RARE]: {
-    id: ItemId.CONSTRUCTION_BLUEPRINT_RARE,
+  [ItemId.BPLAN_R]: {
+    id: ItemId.BPLAN_R,
     name: {
       [Lang.EN]: "Construction Blueprint (rare)",
       [Lang.FR]: "Plan de chantier (rare)",
@@ -4489,11 +8640,162 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Bauplan ermöglicht es, ein neues Gebäude in der Stadt zu bauen.",
       [Lang.ES]: "¡Tienes entre tus manos lo que parece un plano de construcción! Es difícil entender lo que es, habría que estudiarlo para sacar conclusiones."
     },
-    category: ItemCategory.Misc,
-    icon: "item_bplan_r"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Blueprint],
+    icon: "item_bplan_r",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_plate_#05"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_home_def_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_jerrycan_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_digger_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_sprinkler_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_tube_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_appletree_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_coffin_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_strategy_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_infirmary_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_ikea_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_watchmen_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_watchmen_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_derrick_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_falsecity_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_valve_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_moving_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_scarecrow_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_court_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_trashclean_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_lighthouse_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_labyrinth_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_rocket_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_gallery_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_survarea_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_boomfruit_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_boomfruit_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_techtable_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_underground_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_pet_pig_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_watchmen_#02"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_grinder2_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_animfence_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_sewers_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_pet_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CONSTRUCTION_BLUEPRINT_VERY_RARE_]: {
-    id: ItemId.CONSTRUCTION_BLUEPRINT_VERY_RARE_,
+  [ItemId.BPLAN_E]: {
+    id: ItemId.BPLAN_E,
     name: {
       [Lang.EN]: "Construction Blueprint (very rare!)",
       [Lang.FR]: "Plan de chantier (très rare !)",
@@ -4506,11 +8808,74 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Bauplan ermöglicht es, ein neues Gebäude in der Stadt zu bauen.",
       [Lang.ES]: "¡Tienes entre tus manos lo que parece un plano de construcción! Es difícil entender lo que es, habría que estudiarlo para sacar conclusiones."
     },
-    category: ItemCategory.Misc,
-    icon: "item_bplan_e"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Blueprint],
+    icon: "item_bplan_e",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_waterdetect_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_trash_#06"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_castle_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_slave_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_arma_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_pmvbig_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_wheel_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_crow_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_cinema_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_balloon_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_derrick_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_pool_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_thermal_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.ARCHITECT_S_CHEST]: {
-    id: ItemId.ARCHITECT_S_CHEST,
+  [ItemId.BPLAN_BOX]: {
+    id: ItemId.BPLAN_BOX,
     name: {
       [Lang.EN]: "Architect's Chest",
       [Lang.FR]: "Coffre d'architecte",
@@ -4523,11 +8888,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Koffer enthält mehrere Dokumente und obskure Gegenstände (Bleistift, Kompass, Plastiklineale,...). Nichts was dir irgendwie helfen würde, in der Wüste zu überleben. ...zumindest auf den ersten Blick.",
       [Lang.ES]: "Contiene documentos y artículos de escritorio (lápices, compás, reglas...). Nada útil para sobrevivir en el desierto... O eso parece."
     },
-    category: ItemCategory.Box,
-    icon: "item_bplan_box"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    icon: "item_bplan_box",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "bplan_r_#00",
+            odds: 100
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SEALED_ARCHITECT_S_CHEST]: {
-    id: ItemId.SEALED_ARCHITECT_S_CHEST,
+  [ItemId.BPLAN_BOX_E]: {
+    id: ItemId.BPLAN_BOX_E,
     name: {
       [Lang.EN]: "Sealed Architect's Chest",
       [Lang.FR]: "Coffre d'architecte scellé",
@@ -4540,8 +8921,33 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Koffer enthält höchstwahrscheinlich ein sehr seltenes und kostbares Dokument...",
       [Lang.ES]: "Contiene seguramente un documento importante y raro..."
     },
-    category: ItemCategory.Box,
-    icon: "item_bplan_box_e"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    icon: "item_bplan_box_e",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: -1
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "bplan_box_e_#00",
+            odds: 95
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "bplan_e_#00",
+            odds: 100
+          }
+        ]
+      }
+    ]
   },
   [ItemId.EGG]: {
     id: ItemId.EGG,
@@ -4557,8 +8963,23 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Hier in dieser Einöde ein Ei zu finden, sollte dich eigentlich glücklich machen. Aber eine Frage lässt dir einfach keine Ruhe: Wo zum Teufel steckt das verdammte Huhn...",
       [Lang.ES]: "Eso sí que va a mejorar tu vida, pero una pregunta te viene a la mente: ¿Dónde está esa condenada gallina?..."
     },
-    category: ItemCategory.Food,
-    icon: "item_egg"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_egg",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 7
+          }
+        ]
+      }
+    ]
   },
   [ItemId.APPLE]: {
     id: ItemId.APPLE,
@@ -4574,11 +8995,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Als einer davon auf Sir Newton's Kopf fiel dachte er mit Sicherheit nicht zuerst an das erste universelle Gesetz der Schwerkraft... aber es sollten immerhin ein paar Vitamine enthalten sein.",
       [Lang.ES]: "Si haces que te caiga en la cabeza, tal vez te vengan ideas como a Newton... En todo caso, debe tener algunas vitaminas."
     },
-    category: ItemCategory.Food,
-    icon: "item_apple"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_apple",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 7
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.EXPLODING_GRAPEFRUIT]: {
-    id: ItemId.EXPLODING_GRAPEFRUIT,
+  [ItemId.BOOMFRUIT]: {
+    id: ItemId.BOOMFRUIT,
     name: {
       [Lang.EN]: "Exploding Grapefruit",
       [Lang.FR]: "Pamplemousse explosif",
@@ -4591,11 +9027,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sie ist sehr groß, fruchtig und macht \"tick-tack\".",
       [Lang.ES]: "Fresco, jugoso y hace \"tic tac\"."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_boomfruit"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_boomfruit",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 12,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.Kill,
+            value: "5-9"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.WORN_LEATHER_BAG]: {
-    id: ItemId.WORN_LEATHER_BAG,
+  [ItemId.BPLAN_DROP]: {
+    id: ItemId.BPLAN_DROP,
     name: {
       [Lang.EN]: "Worn Leather Bag",
       [Lang.FR]: "Sacoche usée",
@@ -4608,11 +9059,42 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese kleine Ledertasche scheint Unterlagen zu enthalten. Du betest inständig, dass es sich dabei um ein Männermagazin handelt, oder den Bauplan für ein neues, mächiges Gebäude. ...und nicht um die verblichenen Kopien einer Umsatzschätzung der Buchhaltung.",
       [Lang.ES]: "Parece que tiene documentos. Rezas por que tenga una revista para adultos o los planos de algo poderoso. Por favor, todo menos dinero..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_bplan_drop"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_bplan_drop",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "bplan_c_#00",
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "bplan_u_#00",
+            odds: 35
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "bplan_r_#00",
+            odds: 10
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "bplan_e_#00",
+            odds: 5
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.MAGNETIC_KEY]: {
-    id: ItemId.MAGNETIC_KEY,
+  [ItemId.MAGNETICKEY]: {
+    id: ItemId.MAGNETICKEY,
     name: {
       [Lang.EN]: "Magnetic Key",
       [Lang.FR]: "Clé magnétique",
@@ -4625,11 +9107,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Mit diesem HighTech-Schlüssel lassen sich Türen der Sicherheitsklasse 6.2 AOC öffnen. Nur Angehörige der Elite können sich damit brüsten, so einen Schlüssel zu besitzen. Leider ist der Schlüssel in einem so schlechten Zustand, dass er nur eine einzige Tür öffnet.",
       [Lang.ES]: "Esta llave de alta tecnología te permite abrir puertas aseguradas hasta el nivel 6.2 AOC, solo los técnicos de élite son dignos de tener una en su poder. Desafortunadamente, como la llave está en lamentables condiciones, solo te servirá para abrir una puerta más."
     },
-    category: ItemCategory.Misc,
-    icon: "item_magneticKey"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_magneticKey",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.BUMP_KEY]: {
-    id: ItemId.BUMP_KEY,
+  [ItemId.BUMPKEY]: {
+    id: ItemId.BUMPKEY,
     name: {
       [Lang.EN]: "Bump Key",
       [Lang.FR]: "Clé à percussion",
@@ -4642,11 +9130,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Schlüssel ist der Liebling aller Einbrecher und öffnet Türen so rasend schnell, dass man sich glatt fragt, warum man überhaupt noch normale Schlüssel benutzt. Leider ist der Schlüssel in einem so schlechten Zustand, dass er nur eine einzige Tür öffnet.",
       [Lang.ES]: "Esta llave, muy apreciada por los ladrones de casas, abre cualquier puerta en segundos. Entonces, ¿para qué sirven las llaves tradicionales? Desgraciadamente, su mal estado solo permite abrir una puerta."
     },
-    category: ItemCategory.Misc,
-    icon: "item_bumpKey"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_bumpKey",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.BOTTLE_OPENER]: {
-    id: ItemId.BOTTLE_OPENER,
+  [ItemId.CLASSICKEY]: {
+    id: ItemId.CLASSICKEY,
     name: {
       [Lang.EN]: "Bottle Opener",
       [Lang.FR]: "Décapsuleur",
@@ -4659,11 +9153,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Einige der Zimmer sind wahre Flaschenhälse. Darum ist das das perfekte Werkzeug, um sich Zutritt zu verschaffen und den einen oder anderen nützlichen Gegenstand herauszuholen! Leider ist der Flaschenöffner in einem so schlechten Zustand, dass er nur eine einzige Tür öffnet.",
       [Lang.ES]: "Como no tienes cervezas que abrir, mejor te pones a abrir puertas en busca de objetos útiles. Debido a su mal estado, solo puedes abrir una puerta con él."
     },
-    category: ItemCategory.Misc,
-    icon: "item_classicKey"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_classicKey",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.MAGNETIC_KEY_BLANK]: {
-    id: ItemId.MAGNETIC_KEY_BLANK,
+  [ItemId.PRINTS]: {
+    id: ItemId.PRINTS,
     name: {
       [Lang.EN]: "Magnetic Key Blank",
       [Lang.FR]: "Empreinte de clé magnétique",
@@ -4676,11 +9176,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Mit diesem Abdruck des HighTech-Schlüssels lassen sich Türen der Sicherheitsklasse 6.2 AOC öffnen.",
       [Lang.ES]: "La llave de alta tecnología de este molde te permitirá abrir puertas seguras clasificadas hasta el nivel 6.2 AOC."
     },
-    category: ItemCategory.Misc,
-    icon: "item_magnetic_print"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_magnetic_print",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.BUMP_KEY_BLANK]: {
-    id: ItemId.BUMP_KEY_BLANK,
+  [ItemId.PRINTS_01]: {
+    id: ItemId.PRINTS_01,
     name: {
       [Lang.EN]: "Bump Key Blank",
       [Lang.FR]: "Empreinte de clé à percussion",
@@ -4693,11 +9199,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Mit diesem Abdruck kannst du einen Schlagschlüssel, den Liebling aller Einbrecher, herstellen. Damit lassen sich Türen so rasend schnell öffnen, dass man sich glatt fragt, warum man überhaupt noch normale Schlüssel benutzt.",
       [Lang.ES]: "Este molde te permitirá obtener una llave de percusión, dicha llave es muy apreciada por los ladrones incipientes y permite abrir cualquier puerta en segundos."
     },
-    category: ItemCategory.Misc,
-    icon: "item_prints"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_prints",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.BOTTLE_OPENER_BLANK]: {
-    id: ItemId.BOTTLE_OPENER_BLANK,
+  [ItemId.PRINTS_02]: {
+    id: ItemId.PRINTS_02,
     name: {
       [Lang.EN]: "Bottle Opener Blank",
       [Lang.FR]: "Empreinte de décapsuleur",
@@ -4706,15 +9218,21 @@ export const items: Record<ItemId, Item> = {
     },
     description: {
       [Lang.EN]: "Some of the rooms here are a tight squeeze to say the least, so this would appear to be the perfect tool with which to gain access and get down to some serious rummaging. Thanks to this blank, you'll be able to obtain one!",
-      [Lang.FR]: "Certaines pièces sont de vraies boîtes de conserve, rien de mieux qu’un outil approprié pour aller à la pêche aux objets utiles ; et grâce à cette empreinte, vous pourrez l’obtenir !",
+      [Lang.FR]: "Certaines pièces sont de vraies boîtes de conserve, rien de mieux qu’un outil approprié pour aller à la pêche aux objets utiles ; et grâce à cette empreinte, vous pourrez l’obtenir !",
       [Lang.DE]: "Einige der Zimmer sind wahre Flaschenhälse. Darum ist das das perfekte Werkzeug, um sich Zutritt zu verschaffen und den einen oder anderen nützlichen Gegenstand herauszuholen! Dank dieses Abdrucks kannst du einen solchen Schlüssel herstellen.",
       [Lang.ES]: "Como no tienes cervezas que abrir, mejor te pones a abrir puertas en busca de objetos útiles. Debido a su mal estado, solo puedes abrir una puerta con él."
     },
-    category: ItemCategory.Misc,
-    icon: "item_bottle_print"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_bottle_print",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.GHOUL_VACCINE]: {
-    id: ItemId.GHOUL_VACCINE,
+  [ItemId.VAGOUL]: {
+    id: ItemId.VAGOUL,
     name: {
       [Lang.EN]: "Ghoul Vaccine",
       [Lang.FR]: "Sérum pour Goule",
@@ -4727,11 +9245,25 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieses extrem seltene Serum wurde durch der Untersuchung der DNA eines fast immunen Wesens gewonnen. Es hatte zuvor 3 Tage überlebt, obwohl es von einem Infizierten gebissen wurde. Mit dem Serum kann man einen Ghul wieder in einen normalen Menschen verwandeln.",
       [Lang.ES]: "Este suero extremadamente raro se ha desarrollado a partir del ADN de una muestra casi inmune que ha resistido una picadura infecciosa durante más de 3 días. Permite que un mutante vuelva a su estado humano normal."
     },
-    category: ItemCategory.Drug,
-    icon: "item_vagoul"
+    categories: [ItemCategory.Pharmacy],
+    icon: "item_vagoul",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.UnGhoulify
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.HOTEL_BLUEPRINT_UNCOMMON]: {
-    id: ItemId.HOTEL_BLUEPRINT_UNCOMMON,
+  [ItemId.HBPLAN_U]: {
+    id: ItemId.HBPLAN_U,
     name: {
       [Lang.EN]: "Hotel Blueprint (uncommon)",
       [Lang.FR]: "Plan de chantier (inhabituel)",
@@ -4744,11 +9276,54 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Bauplan ermöglicht es, ein neues Gebäude in der Stadt zu bauen.",
       [Lang.ES]: "¡Tienes entre tus manos lo que parece un plano de construcción! Es difícil entender lo que es, habría que estudiarlo para sacar conclusiones."
     },
-    category: ItemCategory.Misc,
-    icon: "item_hbplan_u"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Blueprint],
+    icon: "item_hbplan_u",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_bamba_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_catapult3_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_howlingbait_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_trash_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_trash_#02"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_trash_#04"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_court_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_plate_#03"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.HOTEL_BLUEPRINT_RARE]: {
-    id: ItemId.HOTEL_BLUEPRINT_RARE,
+  [ItemId.HBPLAN_R]: {
+    id: ItemId.HBPLAN_R,
     name: {
       [Lang.EN]: "Hotel Blueprint (rare)",
       [Lang.FR]: "Plan de chantier (rare)",
@@ -4761,11 +9336,58 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Bauplan ermöglicht es, ein neues Gebäude in der Stadt zu bauen.",
       [Lang.ES]: "¡Tienes entre tus manos lo que parece un plano de construcción! Es difícil entender lo que es, habría que estudiarlo para sacar conclusiones."
     },
-    category: ItemCategory.Misc,
-    icon: "item_hbplan_r"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Blueprint],
+    icon: "item_hbplan_r",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_sprinkler_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_digger_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_shield_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_city_up_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_falsecity_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_lastchance_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_lighthouse_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_strategy_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_valve_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.HOTEL_BLUEPRINT_VERY_RARE_]: {
-    id: ItemId.HOTEL_BLUEPRINT_VERY_RARE_,
+  [ItemId.HBPLAN_E]: {
+    id: ItemId.HBPLAN_E,
     name: {
       [Lang.EN]: "Hotel Blueprint (very rare!)",
       [Lang.FR]: "Plan de chantier (très rare !)",
@@ -4778,11 +9400,42 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Bauplan ermöglicht es, ein neues Gebäude in der Stadt zu bauen.",
       [Lang.ES]: "¡Tienes entre tus manos lo que parece un plano de construcción! Es difícil entender lo que es, habría que estudiarlo para sacar conclusiones."
     },
-    category: ItemCategory.Misc,
-    icon: "item_hbplan_e"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Blueprint],
+    icon: "item_hbplan_e",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_cinema_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_derrick_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_trash_#06"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_castle_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_coffin_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BUNKER_BLUEPRINT_UNCOMMON]: {
-    id: ItemId.BUNKER_BLUEPRINT_UNCOMMON,
+  [ItemId.BBPLAN_U]: {
+    id: ItemId.BBPLAN_U,
     name: {
       [Lang.EN]: "Bunker Blueprint (uncommon)",
       [Lang.FR]: "Plan de chantier (inhabituel)",
@@ -4795,11 +9448,50 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Bauplan ermöglicht es, ein neues Gebäude in der Stadt zu bauen.",
       [Lang.ES]: "¡Tienes entre tus manos lo que parece un plano de construcción! Es difícil entender lo que es, habría que estudiarlo para sacar conclusiones."
     },
-    category: ItemCategory.Misc,
-    icon: "item_bbplan_u"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Blueprint],
+    icon: "item_bbplan_u",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_bgrenade_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_bgrenade_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_trash_#03"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_trash_#05"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_watercanon_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_tourello_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_armor_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BUNKER_BLUEPRINT_RARE]: {
-    id: ItemId.BUNKER_BLUEPRINT_RARE,
+  [ItemId.BBPLAN_R]: {
+    id: ItemId.BBPLAN_R,
     name: {
       [Lang.EN]: "Bunker Blueprint (rare)",
       [Lang.FR]: "Plan de chantier (rare)",
@@ -4812,11 +9504,58 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Bauplan ermöglicht es, ein neues Gebäude in der Stadt zu bauen.",
       [Lang.ES]: "¡Tienes entre tus manos lo que parece un plano de construcción! Es difícil entender lo que es, habría que estudiarlo para sacar conclusiones."
     },
-    category: ItemCategory.Misc,
-    icon: "item_bbplan_r"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Blueprint],
+    icon: "item_bbplan_r",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_home_def_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_tube_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_labyrinth_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_eden_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_rocket_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_rocketperf_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_trashclean_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_valve_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_jerrycan_#01"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BUNKER_BLUEPRINT_VERY_RARE_]: {
-    id: ItemId.BUNKER_BLUEPRINT_VERY_RARE_,
+  [ItemId.BBPLAN_E]: {
+    id: ItemId.BBPLAN_E,
     name: {
       [Lang.EN]: "Bunker Blueprint (very rare!)",
       [Lang.FR]: "Plan de chantier (très rare !)",
@@ -4829,11 +9568,42 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Bauplan ermöglicht es, ein neues Gebäude in der Stadt zu bauen.",
       [Lang.ES]: "¡Tienes entre tus manos lo que parece un plano de construcción! Es difícil entender lo que es, habría que estudiarlo para sacar conclusiones."
     },
-    category: ItemCategory.Misc,
-    icon: "item_bbplan_e"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Blueprint],
+    icon: "item_bbplan_e",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_waterdetect_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_arma_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_slave_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_trash_#06"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_wheel_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.HOSPITAL_BLUEPRINT_UNCOMMON]: {
-    id: ItemId.HOSPITAL_BLUEPRINT_UNCOMMON,
+  [ItemId.MBPLAN_U]: {
+    id: ItemId.MBPLAN_U,
     name: {
       [Lang.EN]: "Hospital Blueprint (uncommon)",
       [Lang.FR]: "Plan de chantier (inhabituel)",
@@ -4846,11 +9616,38 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Bauplan ermöglicht es, ein neues Gebäude in der Stadt zu bauen.",
       [Lang.ES]: "¡Tienes entre tus manos lo que parece un plano de construcción! Es difícil entender lo que es, habría que estudiarlo para sacar conclusiones."
     },
-    category: ItemCategory.Misc,
-    icon: "item_mbplan_u"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Blueprint],
+    icon: "item_mbplan_u",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_ikea_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_hmeat_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_tourello_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_watchmen_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.HOSPITAL_BLUEPRINT_RARE]: {
-    id: ItemId.HOSPITAL_BLUEPRINT_RARE,
+  [ItemId.MBPLAN_R]: {
+    id: ItemId.MBPLAN_R,
     name: {
       [Lang.EN]: "Hospital Blueprint (rare)",
       [Lang.FR]: "Plan de chantier (rare)",
@@ -4863,11 +9660,58 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Bauplan ermöglicht es, ein neues Gebäude in der Stadt zu bauen.",
       [Lang.ES]: "¡Tienes entre tus manos lo que parece un plano de construcción! Es difícil entender lo que es, habría que estudiarlo para sacar conclusiones."
     },
-    category: ItemCategory.Misc,
-    icon: "item_mbplan_r"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Blueprint],
+    icon: "item_mbplan_r",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_digger_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_jerrycan_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_shield_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_appletree_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_chicken_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_infirmary_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_trashclean_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_lighthouse_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_rocketperf_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.HOSPITAL_BLUEPRINT_VERY_RARE_]: {
-    id: ItemId.HOSPITAL_BLUEPRINT_VERY_RARE_,
+  [ItemId.MBPLAN_E]: {
+    id: ItemId.MBPLAN_E,
     name: {
       [Lang.EN]: "Hospital Blueprint (very rare!)",
       [Lang.FR]: "Plan de chantier (très rare !)",
@@ -4880,11 +9724,42 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Bauplan ermöglicht es, ein neues Gebäude in der Stadt zu bauen.",
       [Lang.ES]: "¡Tienes entre tus manos lo que parece un plano de construcción! Es difícil entender lo que es, habría que estudiarlo para sacar conclusiones."
     },
-    category: ItemCategory.Misc,
-    icon: "item_mbplan_e"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Blueprint],
+    icon: "item_mbplan_e",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_strategy_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_balloon_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_crow_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_derrick_#01"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_pmvbig_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.LOST_SOUL]: {
-    id: ItemId.LOST_SOUL,
+  [ItemId.SOUL_BLUE]: {
+    id: ItemId.SOUL_BLUE,
     name: {
       [Lang.EN]: "Lost Soul",
       [Lang.FR]: "Âme errante",
@@ -4897,11 +9772,34 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Schwache Seele. Einmal in der Bank abgelegt, kann ein Schamane sie nehmen und in eine starke Seele umwandeln. Sie kann einen Schamanen noch in vielen anderen Situationen nützen.",
       [Lang.ES]: "Encuentras una forma vaporosa que parece lamentarse en su sitio. Quizás podrías recogerla y encontrarle alguna utilidad."
     },
-    category: ItemCategory.Misc,
-    icon: "item_soul_blue"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_soul_blue",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_collec_#00"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_mystic_#00"
+          },
+          {
+            type: ItemActionEffectType.Defense,
+            value: 5
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.TORTURED_SOUL]: {
-    id: ItemId.TORTURED_SOUL,
+  [ItemId.SOUL_RED]: {
+    id: ItemId.SOUL_RED,
     name: {
       [Lang.EN]: "Tortured Soul",
       [Lang.FR]: "Âme torturée",
@@ -4914,11 +9812,34 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Seele dieses Bürgers wurde schon zu lange ohne Rücksicht auf Rücksicht verlassen. Heute kommt dieses von Hass erfüllte Wesen, um die schlechten Vibes der Überseewelt zu nähren, ihr solltet euch schnell darum kümmern!",
       [Lang.ES]: "Esto no se parece al alma perdida promedio ... Tal vez deberías tener un poco de cuidado con esta. De hecho, tal vez deberías hablar con el Chamán de tu pueblo..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_soul_red"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_soul_red",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_collec_#00"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_mystic_#00"
+          },
+          {
+            type: ItemActionEffectType.Defense,
+            value: 5
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.WEAK_SOUL]: {
-    id: ItemId.WEAK_SOUL,
+  [ItemId.SOUL_BLUE_01]: {
+    id: ItemId.SOUL_BLUE_01,
     name: {
       [Lang.EN]: "Weak Soul",
       [Lang.FR]: "Âme faible",
@@ -4931,11 +9852,34 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Schwache Seele. Einmal in der Bank abgelegt, kann ein Schamane sie nehmen und in eine starke Seele umwandeln. Sie kann einen Schamanen noch in vielen anderen Situationen nützen.",
       [Lang.ES]: "Encuentras una forma vaporosa que parece lamentarse en su sitio. Quizás podrías recogerla y encontrarle alguna utilidad."
     },
-    category: ItemCategory.Misc,
-    icon: "item_soul_blue"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_soul_blue",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_collec_#00"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_mystic_#00"
+          },
+          {
+            type: ItemActionEffectType.Defense,
+            value: 5
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.MUG_OF_LUKEWARM_LIQUID]: {
-    id: ItemId.MUG_OF_LUKEWARM_LIQUID,
+  [ItemId.FEST]: {
+    id: ItemId.FEST,
     name: {
       [Lang.EN]: "Mug of lukewarm liquid",
       [Lang.FR]: "Chope de liquide tiédasse",
@@ -4948,11 +9892,34 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "In Wehmut versunken starrst du diesen überdimensionalen Bierkrug an... Sicher warm und geschmacklos, aber das Beste, das du seit der Apokalypse getrunken hast. Du musst wieder an all die verrückten Tage in München denken...",
       [Lang.ES]: "Sumergido en tu desesperación, te topas con un jarro de cerveza. ¡Aleluya!, quisieras decir, pero está caliente, no tiene espuma y sabe a orina. Al fin y al cabo es lo mejor que te pudo suceder hoy. ¿Salud?"
     },
-    category: ItemCategory.Food,
-    icon: "item_fest"
+    categories: [ItemCategory.Food, ItemCategory.APSource, ItemCategory.Alcohol],
+    icon: "item_fest",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drunk"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_alcool_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SANDY_PRETZEL]: {
-    id: ItemId.SANDY_PRETZEL,
+  [ItemId.BRETZ]: {
+    id: ItemId.BRETZ,
     name: {
       [Lang.EN]: "Sandy Pretzel",
       [Lang.FR]: "Bretzel sableux",
@@ -4965,11 +9932,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein leckerer, essbarer Snack... zumindest war es das einmal. Auf dieser Brezel wurde herumgetreten, sie riecht, als würde sie in Benzin getränkt (leider zu wenig, um sie für den Panzer im Südwesten der Stadt zu verwenden - schade) und es scheint, als wäre sie als Hammer oder als Zuhause für einen Holzwurm verwendet zu sein. Auf jedenfall erinnert sie dich jetzt stark an Prinzessin Beatrices Hochzeitshut.",
       [Lang.ES]: "Un delicioso bollo, o al menos lo fue una vez. Fue pisado, lamido y escupido y hasta usado para rascarse la espalda (algunos vellos pegados hacen pensar eso). Las larvas que le rodean se agitan, tan malo no debe ser. Alguna utilidad le encontrarás."
     },
-    category: ItemCategory.Food,
-    icon: "item_bretz"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_bretz",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.MANGY_DACHSHUND]: {
-    id: ItemId.MANGY_DACHSHUND,
+  [ItemId.TEKEL]: {
+    id: ItemId.TEKEL,
     name: {
       [Lang.EN]: "Mangy Dachshund",
       [Lang.FR]: "Teckel galeux",
@@ -4982,11 +9964,40 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Der einzige in diesem gottverlassenen Ort, der dir wirklich Liebe schenken kann, ohne dir danach deine Pillen zu stehlen. Soweit du dich mit Hunden auskennst, sieht er ziemlich seltsam aus, aber er ist treu, hat scharfe Zähne und kann wunderbar knurren. Und sollte es doch mal zum schlimmsten Fall kommen, wird sich der Metzger sicher freuen, sich um ihn zu \"kümmern\"...",
       [Lang.ES]: "Pateando latas y basura, le das a algo blando y con el golpe chilló. ¡Oh, qué lindo, un perrito! Te mira con sus enormes y tiernos ojos. En este lugar olvidado por Dios, solo tú podrías darle cariño. Sus dientes son afilados y te demuestra que sabe cuidar la casa haciendo un gruñido. En el peor de los casos, el carnicero... no, no."
     },
-    category: ItemCategory.Armor,
-    icon: "item_tekel"
+    categories: [ItemCategory.Defences, ItemCategory.GuardWeapon, ItemCategory.Animal],
+    icon: "item_tekel",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 18,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_animal_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meat_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meat_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "1"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.STAKE_LAUNCHER]: {
-    id: ItemId.STAKE_LAUNCHER,
+  [ItemId.RLAUNC]: {
+    id: ItemId.RLAUNC,
     name: {
       [Lang.EN]: "Stake Launcher",
       [Lang.FR]: "Lance-pieu",
@@ -4999,11 +10010,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Der Pfahlwerfer kann dazu verwendet werden, Barrikaden zu verstärken oder jede Art von Gegner abzuwehren. Leider ist nur noch ein Pfahl übrig...",
       [Lang.ES]: "Esta arma debió ser construida por algún maniático de las armas y el bricolage. Solo queda un dardo dentro del aparato."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_rlaunc"
+    categories: [ItemCategory.Armoury, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    icon: "item_rlaunc",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 30,
+    actions: [
+      
+    ]
   },
-  [ItemId.KALASHNI_SPLASH]: {
-    id: ItemId.KALASHNI_SPLASH,
+  [ItemId.KALACH]: {
+    id: ItemId.KALACH,
     name: {
       [Lang.EN]: "Kalashni-Splash",
       [Lang.FR]: "Kalachnik'eau",
@@ -5016,11 +10033,30 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine mächtige Wasserwaffe, dessen defeker Mechanismus nur noch für einen Schuss reicht.",
       [Lang.ES]: "Una poderosa arma de agua, cuyo mecanismo roto solo alcanza para un disparo."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_kalach"
+    categories: [ItemCategory.Armoury, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    icon: "item_kalach",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 24,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "kalach_#01"
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "3"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.HASTILY_BUILT_DESK]: {
-    id: ItemId.HASTILY_BUILT_DESK,
+  [ItemId.BUREAU]: {
+    id: ItemId.BUREAU,
     name: {
       [Lang.EN]: "Hastily-built Desk",
       [Lang.FR]: "Bureau monté à la rache",
@@ -5033,11 +10069,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser wackelige Tisch wurde offensichtlich in Eile gebaut. Doch könnte er, von den Barrikaden geworfen, bestimmt gut einige Zombies zerquetschen.",
       [Lang.ES]: "Este escritorio destartalado fue claramente construido con prisa. Sin embargo, lanzado desde lo alto de las murallas podría resultar más útil aplastando a algunos zombies."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_bureau"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    icon: "item_bureau",
+    decoration: 2,
+    heavy: true,
+    watchPoints: 20,
+    actions: [
+      
+    ]
   },
-  [ItemId.EMPTY_VENDING_MACHINE]: {
-    id: ItemId.EMPTY_VENDING_MACHINE,
+  [ItemId.DISTRI]: {
+    id: ItemId.DISTRI,
     name: {
       [Lang.EN]: "Empty Vending Machine",
       [Lang.FR]: "Distributeur vide",
@@ -5050,11 +10092,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ich weiß was du denkst: \"Kann dieser Automat nicht 20 Rationen Wasser und 50 Tüten Chips enthalten?!?\" Dummerweise sieht das nicht so aus...aber immerhin ist er sehr klotzig und enthält ein paar Knochen.",
       [Lang.ES]: "Es tan inútil como pesado, sin embargo podría ayudarte a aplastar algunos zombies si lo lanzas desde una muralla."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_distri"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    icon: "item_distri",
+    decoration: 4,
+    heavy: true,
+    watchPoints: 25,
+    actions: [
+      
+    ]
   },
-  [ItemId.SANTA_S_REINDEER]: {
-    id: ItemId.SANTA_S_REINDEER,
+  [ItemId.RENNE]: {
+    id: ItemId.RENNE,
     name: {
       [Lang.EN]: "Santa's Reindeer",
       [Lang.FR]: "Renne du papa noyel",
@@ -5067,11 +10115,18 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Es gab eine Zeit, da waren diese edlen Tiere legendär. Naja...diese Zeiten sind zwar vorbei, aber edel sind sie trotzdem noch.",
       [Lang.ES]: "Hubo un tiempo en que este magnífico animal se asoció con maravillosas leyendas... Esos días ya pasaron, pero sirven para otra cosa..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_renne"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Event],
+    icon: "item_renne",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 25,
+    event: GameEvent.Christmas,
+    actions: [
+      
+    ]
   },
-  [ItemId.EASTER_EGG]: {
-    id: ItemId.EASTER_EGG,
+  [ItemId.PAQUES]: {
+    id: ItemId.PAQUES,
     name: {
       [Lang.EN]: "Easter Egg",
       [Lang.FR]: "Oeuf de Pâques",
@@ -5084,11 +10139,18 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein weitgehend verschimmeltes Osterei. Sein fauliger Gestank erinnert ein wenig an Schießpulver. Hat der Schimmel etwa seine physikalischen Eigenschaften verändert? Könnte sich lohnen, auf einen Zombie zu werfen.",
       [Lang.ES]: "Un huevo de Pascua en gran parte mohoso, su hedor pútrido es un poco como la pólvora, ¿podría el moho haber cambiado sus propiedades físicas? Podría valer la pena probar con los zombies."
     },
-    category: ItemCategory.Misc,
-    icon: "item_paques"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon, ItemCategory.Event],
+    icon: "item_paques",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 18,
+    event: GameEvent.Easter,
+    actions: [
+      
+    ]
   },
-  [ItemId.COLLECTOR_PINS]: {
-    id: ItemId.COLLECTOR_PINS,
+  [ItemId.BADGE]: {
+    id: ItemId.BADGE,
     name: {
       [Lang.EN]: "Collector Pins",
       [Lang.FR]: "Pins de collectionneur",
@@ -5101,11 +10163,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Du siehst ein glitzernden Gegenstand. Beim näheren Betrachten fällt dir auf, dass es ein Abzeichen ist. Das Abzeichen gibt dir die Kraft von 10 Männern. Du fühlst, dass dieser legendäre Gegenstand was besonderes ist.",
       [Lang.ES]: "Hurgando en los desperdicios, un destello tenue te llama la atención. En una inspección más detallada, descubres que es una insignia ANZAC. Inmediatamente sientes la fuerza de diez guerreros dentro de ti. Guarda esta insignia con tu vida y la vida de aquellos que han caído antes que tú. Este objeto legendario debe tener algún tipo de efecto sobre la horda malvada..."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_badge"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_badge",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 14,
+    actions: [
+      
+    ]
   },
-  [ItemId.KALASHNI_SPLASH_EMPTY]: {
-    id: ItemId.KALASHNI_SPLASH_EMPTY,
+  [ItemId.KALACH_01]: {
+    id: ItemId.KALACH_01,
     name: {
       [Lang.EN]: "Kalashni-Splash (empty)",
       [Lang.FR]: "Kalachnik'eau (vide)",
@@ -5118,11 +10186,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Wasserwaffe ist immer sehr effektiv gegen Zombies.Das zählt allerdings nicht für leere...",
       [Lang.ES]: "Una poderosa arma de agua contra zombies. Como sea, no mata a mucha gente estando vacío..."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_kalach"
+    categories: [ItemCategory.Armoury],
+    icon: "item_kalach",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "kalach_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.WIRE_REEL]: {
-    id: ItemId.WIRE_REEL,
+  [ItemId.WIRE]: {
+    id: ItemId.WIRE,
     name: {
       [Lang.EN]: "Wire Reel",
       [Lang.FR]: "Bobine de fil de fer",
@@ -5135,11 +10218,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Pass auf, dich nicht in den Drähten zu verstricken - wir würden dir nur ungern die Finger amputieren müssen, um dich zu befreien...",
       [Lang.ES]: "Ten cuidado con no enredarte con él, sería triste tener que cortarte los dedos para liberarte."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_wire"
+    categories: [ItemCategory.Resources],
+    icon: "item_wire",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.EMPTY_OIL_CAN]: {
-    id: ItemId.EMPTY_OIL_CAN,
+  [ItemId.OILCAN]: {
+    id: ItemId.OILCAN,
     name: {
       [Lang.EN]: "Empty Oil Can",
       [Lang.FR]: "Bidon d'huile vide",
@@ -5152,11 +10241,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ab und an finden wir diese Behälter leer in der Wüste - meistens an der Seite einer Leiche. Wann lernen die Leute endlich, dass man Motoröl nicht trinken kann?",
       [Lang.ES]: "Estos bidones provienen de antiguos restaurantes de comida chatarra, otra de las causas por las que se acabó el mundo... Siempre junto a ellos hay un cadáver. ¿Cuándo entenderán algunos que el aceite no se bebe?"
     },
-    category: ItemCategory.Rsc,
-    icon: "item_oilcan"
+    categories: [ItemCategory.Resources],
+    icon: "item_oilcan",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.CONVEX_LENS]: {
-    id: ItemId.CONVEX_LENS,
+  [ItemId.LENS]: {
+    id: ItemId.LENS,
     name: {
       [Lang.EN]: "Convex Lens",
       [Lang.FR]: "Lentille convexe",
@@ -5169,11 +10264,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese fast makellose Linse wartet scheinbar nur darauf, von deiner Kreativität einem höheren Zweck zugeführt zu werden.",
       [Lang.ES]: "Esta lente en buen estado cuenta con tu ingeniosidad para ser utilizada eficazmente."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_lens"
+    categories: [ItemCategory.Resources],
+    icon: "item_lens",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.FURIOUS_KITTEN_PARTIALLY_DIGESTED]: {
-    id: ItemId.FURIOUS_KITTEN_PARTIALLY_DIGESTED,
+  [ItemId.ANGRYC]: {
+    id: ItemId.ANGRYC,
     name: {
       [Lang.EN]: "Furious Kitten (partially digested)",
       [Lang.FR]: "Petit chaton furieux (partiellement digéré)",
@@ -5186,11 +10287,46 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Das Kätzchen sieht ein wenig angefressen aus. Du solltest es besser nicht noch mehr reizen, es faucht ja jetzt schon.",
       [Lang.ES]: "Seguramente una mascota engullida que logró escapar antes de ser totalmente digerida. Parece encolerizada, mejor mantener distancia."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_angryc"
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Animal],
+    icon: "item_angryc",
+    decoration: 1,
+    heavy: false,
+    watchPoints: 18,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_animal_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "flesh_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "flesh_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_meta_wound",
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "999999",
+            odds: 50
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CLAYMORE_MINE]: {
-    id: ItemId.CLAYMORE_MINE,
+  [ItemId.CLAYMO]: {
+    id: ItemId.CLAYMO,
     name: {
       [Lang.EN]: "Claymore Mine",
       [Lang.FR]: "Mine Antipersonnelle",
@@ -5203,11 +10339,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Irgendwer hat sie mal in der Wüste vergraben, vermutlich um die Zombies aufzuhalten… Bisher haben sie sich nur als effektiv gegen unvorsichtige Mitbürger erwiesen.",
       [Lang.ES]: "Aún quedan minas en el desierto. En general, son más los humanos que los zombies quienes caminan sobre ellas. ¿Quién es el ser inferior en este caso?"
     },
-    category: ItemCategory.Weapon,
-    icon: "item_claymo"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_claymo",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 40,
+    actions: [
+      
+    ]
   },
-  [ItemId.LASER_DIODE]: {
-    id: ItemId.LASER_DIODE,
+  [ItemId.DIODE]: {
+    id: ItemId.DIODE,
     name: {
       [Lang.EN]: "Laser Diode",
       [Lang.FR]: "Diode laser",
@@ -5220,11 +10362,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein elektronisches Bauteil aus alter Zeit. Du hast nicht viel Ahnung von dem Zeug, aber es scheint noch zu funktionieren.",
       [Lang.ES]: "Un componente electrónico de una época pasada. Ahora encuéntrale un uso."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_diode"
+    categories: [ItemCategory.Resources],
+    icon: "item_diode",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.MAKESHIFT_GUITAR]: {
-    id: ItemId.MAKESHIFT_GUITAR,
+  [ItemId.GUITAR]: {
+    id: ItemId.GUITAR,
     name: {
       [Lang.EN]: "Makeshift Guitar",
       [Lang.FR]: "Guitare artisanale",
@@ -5237,8 +10385,14 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Früher konnte man damit die Damenwelt beeindrucken... Diese Zeiten sind vorbei, doch beliebt ist die Gitarre immer noch. Sie kommt zwar nicht an eine echte Les Paul '58 heran, aber die Stadt kann ein wenig Auflockerung gebrauchen. Wer hätte denn keinen Spaß an ein bisschen Musik?",
       [Lang.ES]: "Todo indica que perteneció al trío de \"Los Panchos\". Sus cuerdas están intactas, te servirá para cantar tus desgracias en alegres melodías."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_guitar"
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    icon: "item_guitar",
+    decoration: 6,
+    heavy: false,
+    watchPoints: 10,
+    actions: [
+      
+    ]
   },
   [ItemId.LSD]: {
     id: ItemId.LSD,
@@ -5254,11 +10408,46 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Keine Ahnung, wo dieses kleine, pinke Stück Papier herkommt, aber wenn Du es in den Mund nimmst kribbelt dein Gehirn!",
       [Lang.ES]: "Nadie sabe de dónde viene este papel rosado, pero al ponértelo en la lengua, sientes burbujas en el cerebro."
     },
-    category: ItemCategory.Drug,
-    icon: "item_lsd"
+    categories: [ItemCategory.Pharmacy, ItemCategory.APSource, ItemCategory.Drug],
+    icon: "item_lsd",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_cobaye_#00"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged",
+            odds: 31
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_drug_#00",
+            odds: 31
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: 6,
+            odds: 31
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "terror",
+            odds: 8
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BURNING_LASER_POINTER_4_CHARGES]: {
-    id: ItemId.BURNING_LASER_POINTER_4_CHARGES,
+  [ItemId.LPOINT4]: {
+    id: ItemId.LPOINT4,
     name: {
       [Lang.EN]: "Burning Laser Pointer (4 charges)",
       [Lang.FR]: "Pointeur laser brûlant (4 charges)",
@@ -5271,11 +10460,30 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "In der alten Welt war er verboten.In den Jahren wurde er weiter verbessert und die Strahlen gebündelt. Heute eignet er sich gut, um durch verrottetes Fleisch zu schneiden.",
       [Lang.ES]: "Prohibido en las universidades desde que un profesor le quitó la vista a media clase cuando hizo un gesto con las manos. ¡Ahora te servirá para rebanar carne putrefacta!"
     },
-    category: ItemCategory.Weapon,
-    icon: "item_lpoint4"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_lpoint4",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 20,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lpoint3_#00"
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "2"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BURNING_LASER_POINTER_3_CHARGES]: {
-    id: ItemId.BURNING_LASER_POINTER_3_CHARGES,
+  [ItemId.LPOINT3]: {
+    id: ItemId.LPOINT3,
     name: {
       [Lang.EN]: "Burning Laser Pointer (3 charges)",
       [Lang.FR]: "Pointeur laser brûlant (3 charges)",
@@ -5288,11 +10496,30 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "In der alten Welt war er verboten.In den Jahren wurde er weiter verbessert und die Strahlen gebündelt. Heute eignet er sich gut, um durch verrottetes Fleisch zu schneiden.",
       [Lang.ES]: "Prohibido en las universidades desde que un profesor le quitó la vista a media clase cuando hizo un gesto con las manos. ¡Ahora te servirá para rebanar carne putrefacta!"
     },
-    category: ItemCategory.Weapon,
-    icon: "item_lpoint3"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_lpoint3",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 15,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lpoint2_#00"
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "2"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BURNING_LASER_POINTER_2_CHARGES]: {
-    id: ItemId.BURNING_LASER_POINTER_2_CHARGES,
+  [ItemId.LPOINT2]: {
+    id: ItemId.LPOINT2,
     name: {
       [Lang.EN]: "Burning Laser Pointer (2 charges)",
       [Lang.FR]: "Pointeur laser brûlant (2 charges)",
@@ -5305,11 +10532,30 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "In der alten Welt war er verboten.In den Jahren wurde er weiter verbessert und die Strahlen gebündelt. Heute eignet er sich gut, um durch verrottetes Fleisch zu schneiden.",
       [Lang.ES]: "Prohibido en las universidades desde que un profesor le quitó la vista a media clase cuando hizo un gesto con las manos. ¡Ahora te servirá para rebanar carne putrefacta!"
     },
-    category: ItemCategory.Weapon,
-    icon: "item_lpoint2"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_lpoint2",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 10,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lpoint1_#00"
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "2"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BURNING_LASER_POINTER_1_CHARGE]: {
-    id: ItemId.BURNING_LASER_POINTER_1_CHARGE,
+  [ItemId.LPOINT1]: {
+    id: ItemId.LPOINT1,
     name: {
       [Lang.EN]: "Burning Laser Pointer (1 charge)",
       [Lang.FR]: "Pointeur laser brûlant (1 charge)",
@@ -5322,11 +10568,30 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "In der alten Welt war er verboten.In den Jahren wurde er weiter verbessert und die Strahlen gebündelt. Heute eignet er sich gut, um durch verrottetes Fleisch zu schneiden.",
       [Lang.ES]: "Prohibido en las universidades desde que un profesor le quitó la vista a media clase cuando hizo un gesto con las manos. ¡Ahora te servirá para rebanar carne putrefacta!"
     },
-    category: ItemCategory.Weapon,
-    icon: "item_lpoint1"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
+    icon: "item_lpoint1",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 5,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lpoint_#00"
+          },
+          {
+            type: ItemActionEffectType.Kill,
+            value: "2"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BURNING_LASER_POINTER_EMPTY]: {
-    id: ItemId.BURNING_LASER_POINTER_EMPTY,
+  [ItemId.LPOINT]: {
+    id: ItemId.LPOINT,
     name: {
       [Lang.EN]: "Burning Laser Pointer (Empty)",
       [Lang.FR]: "Pointeur laser brûlant déchargé",
@@ -5339,11 +10604,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "In der alten Welt war er verboten.In den Jahren wurde er weiter verbessert und die Strahlen gebündelt. Heute eignet er sich gut, um durch verrottetes Fleisch zu schneiden. Jetzt brauchst du nur noch eine Batterie...",
       [Lang.ES]: "Prohibido en las universidades desde que un profesor le quitó la vista a media clase cuando hizo un gesto con las manos. Pero las cabezas no ruedan solas, necesitas una pila..."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_lpoint"
+    categories: [ItemCategory.Armoury],
+    icon: "item_lpoint",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lpoint4_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.TELESCOPE]: {
-    id: ItemId.TELESCOPE,
+  [ItemId.SCOPE]: {
+    id: ItemId.SCOPE,
     name: {
       [Lang.EN]: "Telescope",
       [Lang.FR]: "Téléscope",
@@ -5356,11 +10636,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Vor langer Zeit hat man mit diesem Werkzeug die Sterne beobachtet. Heute beobachten wir Zombies. Damit braucht die Angriffsabschätzung nur noch halb so viele Bürger.",
       [Lang.ES]: "En el pasado, este objeto servía para contar estrellas en el cielo. Hoy, remplazamos las estrellas por zombies. Al tenerlo en El almacén, se reduce a la mitad la cantidad de personas necesarias para hacer un pronóstico del ataque."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_scope"
+    categories: [ItemCategory.Resources],
+    icon: "item_scope",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.IMPERSONAL_EXPLODING_DOORMAT]: {
-    id: ItemId.IMPERSONAL_EXPLODING_DOORMAT,
+  [ItemId.TRAPMA]: {
+    id: ItemId.TRAPMA,
     name: {
       [Lang.EN]: "Impersonal Exploding Doormat",
       [Lang.FR]: "Paillasson piégé",
@@ -5373,11 +10659,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Nichts sagt \"Willkommen zuhause\" mehr als eine spontane Fußamputation.",
       [Lang.ES]: "Una excelente manera de hacer que alguien se sienta realmente mal acogido, ¡Una bomba debajo del felpudo! ¿Por qué no pensamos en esto antes?"
     },
-    category: ItemCategory.Furniture,
-    icon: "item_trapma"
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
+    icon: "item_trapma",
+    decoration: 5,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.CHUCK_FIGURINE]: {
-    id: ItemId.CHUCK_FIGURINE,
+  [ItemId.CHUDOL]: {
+    id: ItemId.CHUDOL,
     name: {
       [Lang.EN]: "Chuck Figurine",
       [Lang.FR]: "Figurine de Chuck",
@@ -5390,11 +10682,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Der Geist von Chuck lebt in dieser Figur. Nichts kann ihr schaden und sie wird noch lange nach deinem Tod hier sein, stets unerschrocken im Angesicht der Zombies.",
       [Lang.ES]: "El espíritu del gran Chuck habita en este muñequito, nada le pasará. Incluso después de tu muerte, el peligro le será esquivo."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_chudol"
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
+    icon: "item_chudol",
+    decoration: 15,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.LITTLE_BOOK_OF_CALM]: {
-    id: ItemId.LITTLE_BOOK_OF_CALM,
+  [ItemId.LILBOO]: {
+    id: ItemId.LILBOO,
     name: {
       [Lang.EN]: "Little Book of Calm",
       [Lang.FR]: "Livre zen miniature",
@@ -5407,11 +10705,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieses Buch wurde in vielen Sprachen veröffentlicht. Es bietet Rat für aussichtslose Situationen und schützt so vor Angststarren.",
       [Lang.ES]: "Este librito fue un best-seller. Te ayuda a asimilar tranquilamente tu triste vida. Previene el estado aterrorizado si está en tu mochila."
     },
-    category: ItemCategory.Drug,
-    icon: "item_lilboo"
+    categories: [ItemCategory.Pharmacy, ItemCategory.RP],
+    icon: "item_lilboo",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_rp_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BAG_OF_DAMP_GRASS]: {
-    id: ItemId.BAG_OF_DAMP_GRASS,
+  [ItemId.RYEBAG]: {
+    id: ItemId.RYEBAG,
     name: {
       [Lang.EN]: "Bag of Damp Grass",
       [Lang.FR]: "Sac d'herbe fraîche",
@@ -5424,11 +10737,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Scheint nicht viel besser als Heu zu sein, aber es wird sicher für irgendwas verwendbar sein. Außer ziemlich enttäuschenden Zigaretten.",
       [Lang.ES]: "Hierba común y corriente, debe tener otra utilidad, además de ser enrollada y fumada."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_ryebag"
+    categories: [ItemCategory.Resources],
+    icon: "item_ryebag",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.ERGOT_FUNGUS]: {
-    id: ItemId.ERGOT_FUNGUS,
+  [ItemId.FUNGUS]: {
+    id: ItemId.FUNGUS,
     name: {
       [Lang.EN]: "Ergot Fungus",
       [Lang.FR]: "Claviceps Purpurea",
@@ -5441,11 +10760,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Manchmal finden wir Pilze auf Leichen nach deren Genuss man die merkwürdigsten Sachen von sich gibt. Es heißt, die Schäden am Gehirn seien irreparabel und dein aktueller Zustand könnte das sogar bestätigen...",
       [Lang.ES]: "Sobre los cadáveres suelen crecer hongos que provocan delirios muy graciosos. Dicen que su efecto es irreversible. Madre mía, a qué extremo has llegado..."
     },
-    category: ItemCategory.Food,
-    icon: "item_fungus"
+    categories: [ItemCategory.Food],
+    icon: "item_fungus",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.ERGOT_HOMEBREW]: {
-    id: ItemId.ERGOT_HOMEBREW,
+  [ItemId.HMBREW]: {
+    id: ItemId.HMBREW,
     name: {
       [Lang.EN]: "Ergot Homebrew",
       [Lang.FR]: "Cidre Claviceps Artisanal",
@@ -5458,11 +10783,34 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Gesöff der Krieger, Trank der Könige, Cocktail der Götter! Zweifelst Du an der Stärke dieses Getränkes, dann lass ruhig erst einmal Deine Nachbarn probieren.",
       [Lang.ES]: "\"Saltapatrás\", \"7 pecados\", \"Nos vemos en el suelo\"... Un licor exótico más, si quieres comprobar sus efectos, invítale un trago a un vecino."
     },
-    category: ItemCategory.Food,
-    icon: "item_hmbrew"
+    categories: [ItemCategory.Food, ItemCategory.APSource, ItemCategory.Alcohol],
+    icon: "item_hmbrew",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drunk"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_alcool_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CURSED_HIFI]: {
-    id: ItemId.CURSED_HIFI,
+  [ItemId.HIFIEV]: {
+    id: ItemId.HIFIEV,
     name: {
       [Lang.EN]: "Cursed HiFi",
       [Lang.FR]: "Chaine Hifi maudite",
@@ -5475,11 +10823,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Wenn kombiniert mit einer CD, diese HiFi Anlage hat das Potential zu einer Massenvernichtungswaffe zu werden.",
       [Lang.ES]: "Cuando es usado con un CD, esta unidad tiene el potencial de convertirse en un arma de destrucción masiva."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_hifiev"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy],
+    icon: "item_hifiev",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.PHIL_COLLINS_CD]: {
-    id: ItemId.PHIL_COLLINS_CD,
+  [ItemId.CDPHIL]: {
+    id: ItemId.CDPHIL,
     name: {
       [Lang.EN]: "Phil Collins CD",
       [Lang.FR]: "CD de Phil Collins",
@@ -5492,11 +10846,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Nichts ist besser, als mit ein wenig 80er Jahre Retro-Musik den Abend zu beleben! Dreh den Regler hoch und mach das Fenster auf!",
       [Lang.ES]: "Nada mejor que un poco de música ochentera para callar los gritos. ¡Sube el volumen y abre la ventana!"
     },
-    category: ItemCategory.Furniture,
-    icon: "item_cdphil"
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
+    icon: "item_cdphil",
+    decoration: 1,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.EARPLUGS]: {
-    id: ItemId.EARPLUGS,
+  [ItemId.BQUIES]: {
+    id: ItemId.BQUIES,
     name: {
       [Lang.EN]: "Earplugs",
       [Lang.FR]: "Boules Quies",
@@ -5509,11 +10869,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Hast du genug von dem Gequassel vor deiner Tür, den Streitereien nach zu viel Korn-Bräu oder Bürgern, die verzweifelt um ihr Leben schreien? Diese Ohrstöpsel sind genau das Richtige für dich!",
       [Lang.ES]: "Si ya no soportas el parloteo de tus vecinos, los insultos hacia tu persona o los gritos de moribundos infelices, estos tapones te harán sentir mejor."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_bquies"
+    categories: [ItemCategory.Resources],
+    icon: "item_bquies",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.BROKEN_STAFF]: {
-    id: ItemId.BROKEN_STAFF,
+  [ItemId.STAFF_01]: {
+    id: ItemId.STAFF_01,
     name: {
       [Lang.EN]: "Broken Staff",
       [Lang.FR]: "Bâton cassé",
@@ -5526,11 +10892,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein zerbrochener Stock. Leider zu kurz, um eine vernünftige Waffe zu sein, aber er ist nicht völlig nutzlos...",
       [Lang.ES]: "Un pedazo de palo. Demasiado corto para servir como arma, pero útil sin duda..."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_staff"
+    categories: [ItemCategory.Resources],
+    icon: "item_staff",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.BRITNEY_SPEARS_CD]: {
-    id: ItemId.BRITNEY_SPEARS_CD,
+  [ItemId.CDBRIT]: {
+    id: ItemId.CDBRIT,
     name: {
       [Lang.EN]: "Britney Spears CD",
       [Lang.FR]: "CD de Britney Spears",
@@ -5543,11 +10915,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Trotz dass Du glaubst, dies ist Musik für kleine Mädchen , ist das eine ernsthafte Verteidigungsmaßnahme . Sobald die ersten Töne von der Mini Hi-Fi Anlage erklingen, wird kein normaler Mensch in der Lage sein, sich deinem Haus zu nähern. Vorrausgesetzt unsere Zombies waren mal normal und kennen Facebook ....",
       [Lang.ES]: "A pesar de su inofensiva aparencia, que te lleva a creer que esto es música para niñas, esta es una seria medida defensiva. Tan pronto como las primeras ondas del disco emanen de un HIFI, ninguna persona normal podrá acercarse a tu casa. Dicho esto, si nuestros zombies fueran normales, MyHordes estaría disponible en Facebook, así que no pongas toda tu fe en ello..."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_cdbrit"
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
+    icon: "item_cdbrit",
+    decoration: 3,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.BEST_OF_THE_KING_CD]: {
-    id: ItemId.BEST_OF_THE_KING_CD,
+  [ItemId.CDELVI]: {
+    id: ItemId.CDELVI,
     name: {
       [Lang.EN]: "Best of The King CD",
       [Lang.FR]: "Compilation du King",
@@ -5560,11 +10938,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Bereit deine Hüften zu ein wenig Rock 'n' Roll zu schwingen? Diese Sammlung der besten Songs des King of Rock wird Stimmung in jede Party bringen.",
       [Lang.ES]: "¡A mover las caderas con El Rey del Rock and Roll!"
     },
-    category: ItemCategory.Furniture,
-    icon: "item_cdelvi"
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
+    icon: "item_cdelvi",
+    decoration: 7,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.ROCK_N_ROLL_HIFI]: {
-    id: ItemId.ROCK_N_ROLL_HIFI,
+  [ItemId.DFHIFI]: {
+    id: ItemId.DFHIFI,
     name: {
       [Lang.EN]: "Rock n Roll HiFi",
       [Lang.FR]: "Chaîne HI-FI Rock n'Roll",
@@ -5577,11 +10961,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Beflügelt durch die Hits des Kings, bist du motivierter als jemals zuvor!",
       [Lang.ES]: "¡Girando los golpes del Rey, te despertarás más motivado y con más energía que nunca!"
     },
-    category: ItemCategory.Furniture,
-    icon: "item_dfhifi"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
+    icon: "item_dfhifi",
+    decoration: 10,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.ANTI_PERSONNEL_HIFI]: {
-    id: ItemId.ANTI_PERSONNEL_HIFI,
+  [ItemId.DFHIFI_01]: {
+    id: ItemId.DFHIFI_01,
     name: {
       [Lang.EN]: "Anti-personnel HiFi",
       [Lang.FR]: "Chaîne Hi-Fi défensive",
@@ -5594,11 +10984,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Mit der richtigen CD und ein paar guten Ohrstöpseln wird diese HiFi zu einer gefährlichen Waffe, die dich und deine Mitbürger sicher schlafen lässt (zumindest in einiger Distanz)",
       [Lang.ES]: "El CD adecuado y unos buenos protectores auditivos forman esta poderosa arma que te permite descansar tranquilamente mientras otros se mantienen a una distancia segura."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_dfhifi"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
+    icon: "item_dfhifi",
+    decoration: 10,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.SCHR_DINGER_S_BOX]: {
-    id: ItemId.SCHR_DINGER_S_BOX,
+  [ItemId.CATBOX]: {
+    id: ItemId.CATBOX,
     name: {
       [Lang.EN]: "Schrödinger's Box",
       [Lang.FR]: "Boîte de Schrödinger",
@@ -5611,11 +11007,62 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sie ist verdammt schwer und du bist dir fast sicher, dass da etwas nützliches drin ist... Aber erstmal brauchst du etwas um sie zu öffnen - zumindest etwas besseres als deine Zähne.",
       [Lang.ES]: "Es pesada y seguramente contiene algo valioso... Solo falta encontrar algo mejor que tus dientes para abrirla."
     },
-    category: ItemCategory.Box,
-    icon: "item_catbox"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    icon: "item_catbox",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "poison_part_#00",
+            odds: 33
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pet_cat_#00",
+            odds: 33
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "angryc_#00",
+            odds: 33
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Open,
+        conditions: [ItemActionCondition.Technician],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "poison_part_#00",
+            odds: 33
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pet_cat_#00",
+            odds: 33
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "angryc_#00",
+            odds: 33
+          },
+          {
+            type: ItemActionEffectType.CP,
+            value: -1
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PSYCHADELIC_SPIRITUAL_COUNSEL]: {
-    id: ItemId.PSYCHADELIC_SPIRITUAL_COUNSEL,
+  [ItemId.CHKSPK]: {
+    id: ItemId.CHKSPK,
     name: {
       [Lang.EN]: "Psychadelic Spiritual Counsel",
       [Lang.FR]: "Discours rassurant multicoloré",
@@ -5628,11 +11075,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Keine Ahnung, ob es am LSD liegt oder daran, dass Chuck Norris so hart ist, er trinkt Napalm gegen Sodbrennen - aber diese Rede hat definitiv einen positiven Einfluss auf unsere Nachtwächter!",
       [Lang.ES]: "No sabemos si es por el efecto del LSD o de Chuck Norris, ¡pero este discurso motiva mucho a los centinelas!"
     },
-    category: ItemCategory.Misc,
-    icon: "item_chkspk"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_chkspk",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.FAT_SERPENT]: {
-    id: ItemId.FAT_SERPENT,
+  [ItemId.PET_SNAKE2]: {
+    id: ItemId.PET_SNAKE2,
     name: {
       [Lang.EN]: "Fat Serpent",
       [Lang.FR]: "Serpent agonisant",
@@ -5645,11 +11098,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese riesige Schlange scheint Verdauungsprobleme zu haben... SO kannst du jedenfalls nichts mehr mit ihr anfangen.",
       [Lang.ES]: "La protuberancia en el vientre de esta boa hace pensar que sufre una severa indigestión. En ese estado no sirve de nada..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_pet_snake2"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    icon: "item_pet_snake2",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 15,
+    actions: [
+      
+    ]
   },
-  [ItemId.CHRISTMAS_PRESENT_3]: {
-    id: ItemId.CHRISTMAS_PRESENT_3,
+  [ItemId.CHEST_CHRISTMAS_3]: {
+    id: ItemId.CHEST_CHRISTMAS_3,
     name: {
       [Lang.EN]: "Christmas Present (3)",
       [Lang.FR]: "Caisse surprise (3)",
@@ -5662,11 +11121,32 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sieht so aus als hätte dein Nachbar dir ein Geschenkt gemacht! Dein Name steht drauf! Was mag sie wohl enthalten?.",
       [Lang.ES]: "Tu nombre está escrito en ella, ¡parece que tienes un admirador! ¿qué puede contener?"
     },
-    category: ItemCategory.Box,
-    icon: "item_chest_christmas_3"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy, ItemCategory.Event],
+    icon: "item_chest_christmas_3",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    event: GameEvent.NewYear,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "omg_this_will_kill_you_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "chest_christmas_2_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CHRISTMAS_PRESENT_2]: {
-    id: ItemId.CHRISTMAS_PRESENT_2,
+  [ItemId.CHEST_CHRISTMAS_2]: {
+    id: ItemId.CHEST_CHRISTMAS_2,
     name: {
       [Lang.EN]: "Christmas Present (2)",
       [Lang.FR]: "Caisse surprise (2)",
@@ -5679,11 +11159,32 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sieht so aus als hätte dein Nachbar dir ein Geschenkt gemacht! Dein Name steht drauf! Was mag sie wohl enthalten?.",
       [Lang.ES]: "Tu nombre está escrito en ella, ¡parece que tienes un admirador! ¿qué puede contener?"
     },
-    category: ItemCategory.Box,
-    icon: "item_chest_christmas_2"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy, ItemCategory.Event],
+    icon: "item_chest_christmas_2",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    event: GameEvent.NewYear,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "christmas_candy_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "chest_christmas_1_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CHRISTMAS_PRESENT_1]: {
-    id: ItemId.CHRISTMAS_PRESENT_1,
+  [ItemId.CHEST_CHRISTMAS_1]: {
+    id: ItemId.CHEST_CHRISTMAS_1,
     name: {
       [Lang.EN]: "Christmas Present (1)",
       [Lang.FR]: "Caisse surprise (1)",
@@ -5696,11 +11197,28 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sieht so aus als hätte dein Nachbar dir ein Geschenkt gemacht! Dein Name steht drauf! Was mag sie wohl enthalten?.",
       [Lang.ES]: "Tu nombre está escrito en ella, ¡parece que tienes un admirador! ¿qué puede contener?"
     },
-    category: ItemCategory.Box,
-    icon: "item_chest_christmas_1"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy, ItemCategory.Event],
+    icon: "item_chest_christmas_1",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    event: GameEvent.NewYear,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "xmas_gift_#00",
+            odds: 100
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SUSPICIOUS_LOOKING_PLUM_JUICE]: {
-    id: ItemId.SUSPICIOUS_LOOKING_PLUM_JUICE,
+  [ItemId.OMG_THIS_WILL_KILL_YOU]: {
+    id: ItemId.OMG_THIS_WILL_KILL_YOU,
     name: {
       [Lang.EN]: "Suspicious looking plum juice",
       [Lang.FR]: "Jus de mirabelle suspect",
@@ -5713,11 +11231,18 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieses gut versiegelte Fläschen enthält Traubensaft. Das ist wirklich komisch... Warum sollte jemand Traubensaft versiegeln? Zumal ein Etikett angebracht wurde: 'Bei versehentlichen Verschlucken, bitte schnellstens die nächste Ambulanz aufsuchen'. Das willste doch nicht trinken? Oder etwa doch?!",
       [Lang.ES]: "Esta botella bien sellada contiene mosto. Extraño... ¿por qué alguien sellaría mosto? Tiene adjunta una etiqueta: \"Si se engiere, llame a una ambulancia lo antes posible\"."
     },
-    category: ItemCategory.Food,
-    icon: "item_omg_this_will_kill_you"
+    categories: [ItemCategory.Food, ItemCategory.Event],
+    icon: "item_omg_this_will_kill_you",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    event: GameEvent.Christmas,
+    actions: [
+      
+    ]
   },
-  [ItemId.LABEL]: {
-    id: ItemId.LABEL,
+  [ItemId.RP_SCROLL_01]: {
+    id: ItemId.RP_SCROLL_01,
     name: {
       [Lang.EN]: "Label",
       [Lang.FR]: "Une étiquette",
@@ -5730,11 +11255,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein Flaschenetikett... Auf der Rückseite ist es sogar beschrieben!",
       [Lang.ES]: "Una etiqueta de tequila... ¡Hey, tiene algo escrito detrás!"
     },
-    category: ItemCategory.Misc,
-    icon: "item_rp_scroll"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.RP],
+    icon: "item_rp_scroll",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_rp_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.TOWN_UNIFORM]: {
-    id: ItemId.TOWN_UNIFORM,
+  [ItemId.BASIC_SUIT]: {
+    id: ItemId.BASIC_SUIT,
     name: {
       [Lang.EN]: "Town Uniform",
       [Lang.FR]: "Uniforme de citoyen",
@@ -5747,11 +11287,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Klamotten, die du schon seit ein paar Jahren trägst. Sie sind abgetragen, erfüllen aber ihren Zweck: Sie sind bequem. In diesen Kleidern wirst du auch sterben, soviel steht schon einmal fest.",
       [Lang.ES]: "El mismo de siempre. El mismo que llevarás puesto hasta el final de tus días. Después de todo es cómodo para la lucha constante... ¿Qué querías? ¿una camisa floreada y un bonito sombrero de paja?"
     },
-    category: ItemCategory.Misc,
-    icon: "item_basic_suit"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_basic_suit",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.DIRTY_UNIFORM]: {
-    id: ItemId.DIRTY_UNIFORM,
+  [ItemId.BASIC_SUIT_DIRT]: {
+    id: ItemId.BASIC_SUIT_DIRT,
     name: {
       [Lang.EN]: "Dirty Uniform",
       [Lang.FR]: "Uniforme de citoyen sale",
@@ -5764,11 +11310,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Schau dich nur an! Deine Kleidung ist vollkommen verdreckt und blutbesprengt! Du solltest sie reinigen, sobald du daheim bist!",
       [Lang.ES]: "Está desgarrado, maloliente y lleno de manchas de todo tipo... No olvides lavarlo cuando vuelvas al pueblo."
     },
-    category: ItemCategory.Misc,
-    icon: "item_basic_suit_dirt"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_basic_suit_dirt",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "basic_suit_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CAMOUFLAGE_VEST]: {
-    id: ItemId.CAMOUFLAGE_VEST,
+  [ItemId.VEST_ON]: {
+    id: ItemId.VEST_ON,
     name: {
       [Lang.EN]: "Camouflage Vest",
       [Lang.FR]: "Tenue de camouflage",
@@ -5781,11 +11342,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Mit dieser Kleidung kannst du dich in der Wüste unerkannt fortbewegen. Dennoch ist Vorsicht geboten: Wenn sich in einer Zone zu viele Zombies aufhalten, kannst du erkannt werden.",
       [Lang.ES]: "Este traje te permite avanzar en el desierto sin temer ser visto por los zombies. Pero cuidado, puede no ser tan eficaz si atraviesas una zona controlada por numerosos muertos vivientes."
     },
-    category: ItemCategory.Misc,
-    icon: "item_vest_on"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_vest_on",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.CAMOUFLAGE_VEST_NOT_EQUIPPED_]: {
-    id: ItemId.CAMOUFLAGE_VEST_NOT_EQUIPPED_,
+  [ItemId.VEST_OFF]: {
+    id: ItemId.VEST_OFF,
     name: {
       [Lang.EN]: "Camouflage Vest (not equipped!)",
       [Lang.FR]: "Camouflage (inactif !)",
@@ -5798,11 +11365,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Du trägst keine Tarnkleidung und hast deswegen auch keinerlei Tarnungsvorteile!",
       [Lang.ES]: "No llevas puesto tu traje de camuflaje, serás visto en el paraje... ¡Me salió una rima!"
     },
-    category: ItemCategory.Misc,
-    icon: "item_vest_off"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_vest_off",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "vest_on_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SMALL_SPADE]: {
-    id: ItemId.SMALL_SPADE,
+  [ItemId.PELLE]: {
+    id: ItemId.PELLE,
     name: {
       [Lang.EN]: "Small Spade",
       [Lang.FR]: "Petite Pelle",
@@ -5815,11 +11397,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Mit der kleinen Schaufel musst du in der Wüste nicht so lange graben (automatisch aktiviert). Die Wahrscheinlichkeit einen Gegenstand zu finden ist ebenfalls größer.",
       [Lang.ES]: "La herramienta favorita de los excavadores. Sirve para reducir (automáticamente) el tiempo de búsqueda en el desierto. Y con ella, las oportunidades de encontrar algo son mucho más elevadas."
     },
-    category: ItemCategory.Misc,
-    icon: "item_pelle"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_pelle",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.THREE_LEGGED_LABRADOODLE]: {
-    id: ItemId.THREE_LEGGED_LABRADOODLE,
+  [ItemId.TAMED_PET]: {
+    id: ItemId.TAMED_PET,
     name: {
       [Lang.EN]: "Three-legged Labradoodle",
       [Lang.FR]: "Bichon maltais à 3 pattes",
@@ -5832,11 +11420,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Der kleine kläffende Malteser stinkt nach nassem Fell, humpelt und sabbert ohne Ende. Einmal pro Tag kannst du ihn mit deinem Rucksackinhalt in die Stadt schicken. Dabei spielt es keine Rolle, wo du dich gerade befindest... Dein treuer Begleiter schlägt sich.",
       [Lang.ES]: "Te sigue por todas partes, huele a perro mojado, cojea y babea en abundancia. Y por supuesto, ladra demasiado. Una vez al día puedes pedirle que lleve el contenido de tu mochila al pueblo, desde cualquier lugar del desierto."
     },
-    category: ItemCategory.Misc,
-    icon: "item_tamed_pet"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_tamed_pet",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "tamed_pet_drug_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.WELL_FED_LABRADOODLE]: {
-    id: ItemId.WELL_FED_LABRADOODLE,
+  [ItemId.TAMED_PET_DRUG]: {
+    id: ItemId.TAMED_PET_DRUG,
     name: {
       [Lang.EN]: "Well fed Labradoodle",
       [Lang.FR]: "Bichon maltais bien nourri",
@@ -5849,11 +11452,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Nun, da du dein Hündchen mit einem Leckerli ausreichend gestärkt hast, kann es selbst schwere und sperrige Gegenstände schleppen. Dir fällt auf, dass es ohne Ende sabbert. Es sieht aus, als würde es dich jeden Augenblick anspringen.",
       [Lang.ES]: "Ahora que ha vigorizado suficientemente a su perro con una golosina, puede cargar incluso objetos pesados y voluminosos. Eso sí, te das cuenta de que no para de babear... parece que va a saltarte encima en cualquier momento."
     },
-    category: ItemCategory.Misc,
-    icon: "item_tamed_pet_food"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_tamed_pet_food",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.TIRED_LABRADOODLE]: {
-    id: ItemId.TIRED_LABRADOODLE,
+  [ItemId.TAMED_PET_OFF]: {
+    id: ItemId.TAMED_PET_OFF,
     name: {
       [Lang.EN]: "Tired Labradoodle",
       [Lang.FR]: "Bichon maltais fatigué",
@@ -5866,11 +11475,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dein Hündchen sieht <em>müde</em> aus... Es keucht die ganze Zeit und starrt dich aus erschöpften Augen an.",
       [Lang.ES]: "Tu bichón parece cansado... Jadea constantemente y te mira con ojos agotados."
     },
-    category: ItemCategory.Misc,
-    icon: "item_tamed_pet_off"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_tamed_pet_off",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.SURVIVAL_BOOK]: {
-    id: ItemId.SURVIVAL_BOOK,
+  [ItemId.SURV_BOOK]: {
+    id: ItemId.SURV_BOOK,
     name: {
       [Lang.EN]: "Survival Book",
       [Lang.FR]: "Livre de survie",
@@ -5883,11 +11498,36 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Auch wenn der Titel anderes vermuten lässt: \"Tick, Trick und Tracks Schlaues Buch\" ist von unschätzbarem Wert. Es enthält zahlreiche Tipps und Tricks, wie man in der Natur am besten überleben und Nahrung finden kann.",
       [Lang.ES]: "Tu valiosa guía titulada \"El Manual de los Castores\". Hasta parece una edición para niños. Contiene una serie de consejos e instrucciones para ayudar sobrevivir en la naturaleza. Te ayudará a encontrar comida y agua fácilmente."
     },
-    category: ItemCategory.Misc,
-    icon: "item_surv_book"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_surv_book",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_sbook"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_sbook"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.HANDYMAN_S_TOOLBELT]: {
-    id: ItemId.HANDYMAN_S_TOOLBELT,
+  [ItemId.KEYMOL]: {
+    id: ItemId.KEYMOL,
     name: {
       [Lang.EN]: "Handyman's Toolbelt",
       [Lang.FR]: "Clé à molette de compet'",
@@ -5900,11 +11540,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Unverzichtbar, um auf den Baustellen der Stadt herumzuwuseln, kann der Schraubenschlüssel auch dazu verwendet werden, verschlossene Türen ganz einfach zu öffnen.",
       [Lang.ES]: "Este kit completo contiene una llave profesional que permite construir cosas más fácilmente. Contiene también las herramientas necesarias para hacer una llave igual a la que cerró una puerta."
     },
-    category: ItemCategory.Misc,
-    icon: "item_keymol"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_keymol",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.RIOT_SHIELD]: {
-    id: ItemId.RIOT_SHIELD,
+  [ItemId.SHIELD]: {
+    id: ItemId.SHIELD,
     name: {
       [Lang.EN]: "Riot Shield",
       [Lang.FR]: "Bouclier Anti-émeutes",
@@ -5917,11 +11563,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein großer Schutzschild, der keine Wünsche offen lässt, ermöglicht es dir, in der Wüste bis zu 2 zusätzliche Zombies auf Distanz zu halten.",
       [Lang.ES]: "Grande y a prueba de zombies. No se puede pedir más... Te protege de 2 zombies más en el desierto y aumenta las defensas si estás en el pueblo."
     },
-    category: ItemCategory.Misc,
-    icon: "item_shield"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_shield",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.VOODOO_MASK]: {
-    id: ItemId.VOODOO_MASK,
+  [ItemId.SHAMAN]: {
+    id: ItemId.SHAMAN,
     name: {
       [Lang.EN]: "Voodoo Mask",
       [Lang.FR]: "Masque Voodoo",
@@ -5934,11 +11586,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese uralte Maske ist erfüllt vom Wissen und der Macht tausender Voodoo-Priester. Mit ihr kann der Schamane ausfindig machen, wo in der Außenwelt die Seelen frisch verstorbenen Bürger herumwandeln.",
       [Lang.ES]: "Esta máscara esconde el conocimiento y el poder miles de sacerdotes vudú. El chamán la puede usar para revelar dónde deambulan las almas de los habitantes muertos en el Ultramundo."
     },
-    category: ItemCategory.Misc,
-    icon: "item_shaman"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_shaman",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.SUPER_FUZZ_POWDER]: {
-    id: ItemId.SUPER_FUZZ_POWDER,
+  [ItemId.FIREWORK_POWDER]: {
+    id: ItemId.FIREWORK_POWDER,
     name: {
       [Lang.EN]: "Super-Fuzz Powder",
       [Lang.FR]: "Poudre Super-Fuzz",
@@ -5951,11 +11609,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Je nach Epoche wurde dieses Pulver nacheinander als Zünder für verschiedene Artilleriegeschütze, dann als billige Droge für bedürftige Bürger und schließlich als Hauptbestandteil von Feuerwerkskörpern verwendet. In allen drei Fällen haben viele Menschen nicht überlebt.",
       [Lang.ES]: "Dependiendo de la era, este polvo fue usado esencialmente como detonador para varias piezas de artillería, luego como una droga barata para los habitantes necesitados y, finalmente como el principal componente de los fuegos artificiales. En los tres casos, muchas personas no han sobrevivido."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_firework_powder"
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
+    icon: "item_firework_powder",
+    decoration: 5,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.FIREWORK_LAUNCH_TUBE]: {
-    id: ItemId.FIREWORK_LAUNCH_TUBE,
+  [ItemId.FIREWORK_TUBE]: {
+    id: ItemId.FIREWORK_TUBE,
     name: {
       [Lang.EN]: "Firework Launch Tube",
       [Lang.FR]: "Tube de lancement Floush",
@@ -5968,11 +11632,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Mehrere lange Plastikschläuche ohne großes Interesse.",
       [Lang.ES]: "Varios largos tubos de plástico poco interesantes."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_firework_tube"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
+    icon: "item_firework_tube",
+    decoration: 2,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.BOX_OF_FIREWORKS]: {
-    id: ItemId.BOX_OF_FIREWORKS,
+  [ItemId.FIREWORK_BOX]: {
+    id: ItemId.FIREWORK_BOX,
     name: {
       [Lang.EN]: "Box of Fireworks",
       [Lang.FR]: "Caisse de feux d'artifice",
@@ -5985,11 +11655,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese Schachtel enthält eine ganze Reihe von hochgiftigen Chemikalien mit aufrüttelnden Namen wie: Natrium-Fuzz, Carbopotassium Bling Bling oder Rainbow Lithium Cyanurized.",
       [Lang.ES]: "Ésta caja contiene muchos químicos altamente tóxicos con nombres destacables como: Sodio Fuzz, Carbo-Potasio Bling Bling o Litio Arcoíris Cianurizado."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_firework_box"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
+    icon: "item_firework_box",
+    decoration: 3,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.CARVED_SOFT_PUMPKIN]: {
-    id: ItemId.CARVED_SOFT_PUMPKIN,
+  [ItemId.PUMPKIN_OFF]: {
+    id: ItemId.PUMPKIN_OFF,
     name: {
       [Lang.EN]: "Carved Soft Pumpkin",
       [Lang.FR]: "Citrouille molle sculptée",
@@ -6002,11 +11678,18 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Art großes, stinkendes Orangengemüse, wie Sie es noch nie zuvor gesehen haben. Ein grimassierendes Gesicht ist in sein Fleisch geritzt: Was für eine barbarische Tradition steckt hinter diesem Ritual?",
       [Lang.ES]: "Un tipo de vegetal naranja grande y maloliente como nunca has visto antes. Un rostro adusto está tallado en su carne: ¿cuál es la tradición bárbara detrás de este ritual?"
     },
-    category: ItemCategory.Furniture,
-    icon: "item_pumpkin_off"
+    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration, ItemCategory.Event],
+    icon: "item_pumpkin_off",
+    decoration: 5,
+    heavy: true,
+    watchPoints: 0,
+    event: GameEvent.Halloween,
+    actions: [
+      
+    ]
   },
-  [ItemId.LIT_PUMPKIN]: {
-    id: ItemId.LIT_PUMPKIN,
+  [ItemId.PUMPKIN_ON]: {
+    id: ItemId.PUMPKIN_ON,
     name: {
       [Lang.EN]: "Lit Pumpkin",
       [Lang.FR]: "Citrouille allumée",
@@ -6019,11 +11702,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Hier ist eine verrückte Idee: Dieses große, seltsame Gemüse wurde von seinem Fleisch befreit, geformt und es gibt eine brennende Kerze darin...",
       [Lang.ES]: "He aquí una idea loca: este gran y extraño vegetal ha sido despojado de su carne, de su forma, y hay una vela encendida en él..."
     },
-    category: ItemCategory.Armor,
-    icon: "item_pumpkin_on"
+    categories: [ItemCategory.Defences, ItemCategory.Decoration, ItemCategory.Event],
+    icon: "item_pumpkin_on",
+    decoration: 15,
+    heavy: false,
+    watchPoints: 0,
+    event: GameEvent.Halloween,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pumpkin_off_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.CROW_GARLAND]: {
-    id: ItemId.CROW_GARLAND,
+  [ItemId.XMAS_GIFT]: {
+    id: ItemId.XMAS_GIFT,
     name: {
       [Lang.EN]: "Crow garland",
       [Lang.FR]: "Guirlande de Corbeaux",
@@ -6036,11 +11735,18 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Girlande einer scheinbar uralten Tradition. Es wird empfohlen, es zu Hause als Dekoration aufzuhängen, es könnte gut für die Moral der Stadt sein.",
       [Lang.ES]: "Una guirnalda de una tradición aparentemente antigua. Se recomienda colgarla en casa como decoración, podría ser bueno para la moral del pueblo."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_xmas_gift"
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration, ItemCategory.Event],
+    icon: "item_xmas_gift",
+    decoration: 2,
+    heavy: false,
+    watchPoints: 0,
+    event: GameEvent.Christmas,
+    actions: [
+      
+    ]
   },
-  [ItemId.BROKEN_STAFF_2]: {
-    id: ItemId.BROKEN_STAFF_2,
+  [ItemId.STAFF2]: {
+    id: ItemId.STAFF2,
     name: {
       [Lang.EN]: "Broken Staff",
       [Lang.FR]: "Bâton cassé",
@@ -6053,11 +11759,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein zerbrochener Stock. Leider zu kurz, um eine vernünftige Waffe zu sein, aber er ist nicht völlig nutzlos...",
       [Lang.ES]: "Un pedazo de palo. Demasiado corto para servir como arma, pero útil sin duda..."
     },
-    category: ItemCategory.Rsc,
-    icon: "item_staff2"
+    categories: [ItemCategory.Resources],
+    icon: "item_staff2",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.VODKA_MARINOSTOV]: {
-    id: ItemId.VODKA_MARINOSTOV,
+  [ItemId.VODKA]: {
+    id: ItemId.VODKA,
     name: {
       [Lang.EN]: "Vodka Marinostov",
       [Lang.FR]: "Vodka Marinostov",
@@ -6070,11 +11782,34 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Nimm einen kräftigen Schluck aus der Pulle und deine Lebenskräfte werden wieder geweckt (Du erhältst alle deine AP zurück!). Da nimmt man die lose darin herum schwimmenden organischen Substanzen doch gerne in Kauf. Prost Kameraden!",
       [Lang.ES]: "Un buen trago que quema la garganta y te quita el cansancio, ¡recuperando además Puntos de Acción!... 85º de alcohol puro, con algunos bichos flotando en el fondo. ¡Salud camarada!"
     },
-    category: ItemCategory.Food,
-    icon: "item_vodka"
+    categories: [ItemCategory.Food, ItemCategory.APSource, ItemCategory.Alcohol],
+    icon: "item_vodka",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drunk"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_alcool_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.MYSTIC_POTION]: {
-    id: ItemId.MYSTIC_POTION,
+  [ItemId.POTION]: {
+    id: ItemId.POTION,
     name: {
       [Lang.EN]: "Mystic Potion",
       [Lang.FR]: "Potion chamanique",
@@ -6087,11 +11822,35 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese besondere Ration Wasser, oder genauer gesagt \"Weihwasser\", sollte es dir ermöglichen, unbeschadet mit gequälten Seelen in Kontakt zu treten... Hoffentlich...",
       [Lang.ES]: "Este frasco especial de agua, \"agua bendita\" si lo prefieres, debería permitirte interactuar con las torturadas almas sin miedo... Con suerte..."
     },
-    category: ItemCategory.Food,
-    icon: "item_potion"
+    categories: [ItemCategory.Food, ItemCategory.APSource, ItemCategory.Water],
+    icon: "item_potion",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Drink,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_shaman_immune",
+            odds: 98
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "thirst1"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PRE_WAR_CAMERA_3]: {
-    id: ItemId.PRE_WAR_CAMERA_3,
+  [ItemId.PHOTO_3]: {
+    id: ItemId.PHOTO_3,
     name: {
       [Lang.EN]: "Pre-war camera",
       [Lang.FR]: "Appareil photo d'avant-guerre",
@@ -6104,11 +11863,31 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese nostalgische Knipse aus dem letzten Jahrhundert wirkt, als hätte sie schon Aberhunderten Leuten die Netzhaut verbrannt. Ihr schwacher Blitz könnte dich aus brenzligen Situationen retten, wenn du Zombies damit blendest!",
       [Lang.ES]: "Esta máquina endemoniada debió haber quemado varias retinas con su flash mal ajustado. ¡Hey! ¡Te puede servir para escapar de situaciones peligrosas cegando a los zombies!"
     },
-    category: ItemCategory.Misc,
-    icon: "item_photo_3"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_photo_3",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "photo_2_#00"
+          },
+          {
+            type: ItemActionEffectType.GetEscapeTime,
+            value: 120,
+            odds: 99
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PRE_WAR_CAMERA_2]: {
-    id: ItemId.PRE_WAR_CAMERA_2,
+  [ItemId.PHOTO_2]: {
+    id: ItemId.PHOTO_2,
     name: {
       [Lang.EN]: "Pre-war camera",
       [Lang.FR]: "Appareil photo d'avant-guerre",
@@ -6121,11 +11900,31 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese nostalgische Knipse aus dem letzten Jahrhundert wirkt, als hätte sie schon Aberhunderten Leuten die Netzhaut verbrannt. Ihr schwacher Blitz könnte dich aus brenzligen Situationen retten, wenn du Zombies damit blendest!",
       [Lang.ES]: "Esta máquina endemoniada debió haber quemado varias retinas con su flash mal ajustado. ¡Hey! ¡Te puede servir para escapar de situaciones peligrosas cegando a los zombies!"
     },
-    category: ItemCategory.Misc,
-    icon: "item_photo_2"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_photo_2",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "photo_1_#00"
+          },
+          {
+            type: ItemActionEffectType.GetEscapeTime,
+            value: 60,
+            odds: 69
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PRE_WAR_CAMERA_1]: {
-    id: ItemId.PRE_WAR_CAMERA_1,
+  [ItemId.PHOTO_1]: {
+    id: ItemId.PHOTO_1,
     name: {
       [Lang.EN]: "Pre-war camera",
       [Lang.FR]: "Appareil photo d'avant-guerre",
@@ -6138,11 +11937,31 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese nostalgische Knipse aus dem letzten Jahrhundert wirkt, als hätte sie schon Aberhunderten Leuten die Netzhaut verbrannt. Ihr schwacher Blitz könnte dich aus brenzligen Situationen retten, wenn du Zombies damit blendest!",
       [Lang.ES]: "Esta máquina endemoniada debió haber quemado varias retinas con su flash mal ajustado. ¡Hey! ¡Te puede servir para escapar de situaciones peligrosas cegando a los zombies!"
     },
-    category: ItemCategory.Misc,
-    icon: "item_photo_1"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_photo_1",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "photo_off_#00"
+          },
+          {
+            type: ItemActionEffectType.GetEscapeTime,
+            value: 30,
+            odds: 35
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.PRE_WAR_CAMERA_OFF]: {
-    id: ItemId.PRE_WAR_CAMERA_OFF,
+  [ItemId.PHOTO_OFF]: {
+    id: ItemId.PHOTO_OFF,
     name: {
       [Lang.EN]: "Pre-war camera",
       [Lang.FR]: "Appareil photo d'avant-guerre",
@@ -6155,11 +11974,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese nostalgische Knipse aus dem letzten Jahrhundert wirkt, als hätte sie schon Aberhunderten Leuten die Netzhaut verbrannt. Ihr schwacher Blitz könnte dich aus brenzligen Situationen retten, wenn du Zombies damit blendest!",
       [Lang.ES]: "Esta máquina endemoniada debió haber quemado varias retinas con su flash mal ajustado. ¡Hey! ¡Te puede servir para escapar de situaciones peligrosas cegando a los zombies!"
     },
-    category: ItemCategory.Misc,
-    icon: "item_photo_off"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_photo_off",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.POWERFUL_SOUL]: {
-    id: ItemId.POWERFUL_SOUL,
+  [ItemId.SOUL_YELLOW]: {
+    id: ItemId.SOUL_YELLOW,
     name: {
       [Lang.EN]: "Powerful Soul",
       [Lang.FR]: "Âme forte",
@@ -6172,11 +11997,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Starke Seele. Wurde von einem Schamanen aus einer Schwachen Seele hergestellt.",
       [Lang.ES]: "¡Aprovecha la muerte de tus amigos! El alma de este habitante se ha vuelto útil para las construcciones, úsala para aumentar las defensas de tu pueblo."
     },
-    category: ItemCategory.Misc,
-    icon: "item_soul_yellow"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_soul_yellow",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.CROW_ELF]: {
-    id: ItemId.CROW_ELF,
+  [ItemId.FOOD_XMAS]: {
+    id: ItemId.FOOD_XMAS,
     name: {
       [Lang.EN]: "Crow elf",
       [Lang.FR]: "Corbeau lutin",
@@ -6189,11 +12020,18 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Das ist eine seltsam aussehende kleine Bestie... Scheint einer Krähe zu ähneln... Aber es ist grün und trägt einen komischen Hut...",
       [Lang.ES]: "Una pequeña bestia de aspecto extraño. Se asemeja a un cuervo... pero es verde y lleva un sombrero..."
     },
-    category: ItemCategory.Food,
-    icon: "item_food_xmas"
+    categories: [ItemCategory.Food, ItemCategory.Event],
+    icon: "item_food_xmas",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    event: GameEvent.Christmas,
+    actions: [
+      
+    ]
   },
-  [ItemId.CHOCOLATE_LOG]: {
-    id: ItemId.CHOCOLATE_LOG,
+  [ItemId.WOOD_XMAS]: {
+    id: ItemId.WOOD_XMAS,
     name: {
       [Lang.EN]: "Chocolate log",
       [Lang.FR]: "Bûche de Noël",
@@ -6206,11 +12044,27 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Entweder ein verschrumpelter alter Weihnachtskuchen oder etwas noch weniger Schmackhaftes, was am Weihnachtstag gebacken wird! Auf jeden Fall solltest du dieses Kuchen... artige Ding genießen.",
       [Lang.ES]: "¡Oh, un viejo pastel navideño arrugado! O algo menos sabroso... ¡Pero aún así horneado el día de Navidad! De cualquier modo, disfruta de este... pastel..."
     },
-    category: ItemCategory.Food,
-    icon: "item_wood_xmas"
+    categories: [ItemCategory.Food, ItemCategory.Heavy, ItemCategory.Decoration, ItemCategory.APSource, ItemCategory.Event],
+    icon: "item_wood_xmas",
+    decoration: 8,
+    heavy: true,
+    watchPoints: 0,
+    event: GameEvent.Christmas,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.GREEN_IMP_SUIT]: {
-    id: ItemId.GREEN_IMP_SUIT,
+  [ItemId.LEPRECHAUN_SUIT]: {
+    id: ItemId.LEPRECHAUN_SUIT,
     name: {
       [Lang.EN]: "Green Imp Suit",
       [Lang.FR]: "Costume de Lutin Vert",
@@ -6223,11 +12077,18 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "In dieser Aufmachung bist du so auffällig, dass dich niemand bemerkt oder zumindest glaubt, sich das nur eingebildet zu haben! Das würdest du doch nicht missbrauchen, oder?",
       [Lang.ES]: "¡En este traje, eres tan llamativo que los que te miran piensan que te han imaginado! No abusarías de ello, ¿verdad?"
     },
-    category: ItemCategory.Misc,
-    icon: "item_leprechaun_suit"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Event],
+    icon: "item_leprechaun_suit",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    event: GameEvent.StPatrick,
+    actions: [
+      
+    ]
   },
-  [ItemId.UNRECOGNISABLE_REMAINS]: {
-    id: ItemId.UNRECOGNISABLE_REMAINS,
+  [ItemId.BROKEN]: {
+    id: ItemId.BROKEN,
     name: {
       [Lang.EN]: "Unrecognisable Remains",
       [Lang.FR]: "Débris méconnaissables",
@@ -6240,11 +12101,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese Trümmerstücke waren mal Teil eines Gegenstandes, den du nicht mehr identifizieren kannst. Die Verformung der Teile lassen vermuten, dass dieser Gegenstand mit hoher Geschwindigkeit am Boden aufgeprallt ist...",
       [Lang.ES]: "Estos escombros alguna vez fueron parte de un objeto que ya no eres capaz de identificar. La deformación de las piezas sugiere que el objeto golpeó el suelo a gran velocidad..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_broken"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_broken",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.HANDFUL_OF_BULLETS]: {
-    id: ItemId.HANDFUL_OF_BULLETS,
+  [ItemId.BULLETS]: {
+    id: ItemId.BULLETS,
     name: {
       [Lang.EN]: "Handful of Bullets",
       [Lang.FR]: "Poignée de cartouches",
@@ -6257,11 +12124,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Handvoll Munition. Aber was hat das für einen Sinn?",
       [Lang.ES]: "Estos pequeños cilindros son extremadamente mortales. Si tan sólo supiéramos usarlos..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_bullets"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_bullets",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.CHRISTMAS_GIFT_PARCEL]: {
-    id: ItemId.CHRISTMAS_GIFT_PARCEL,
+  [ItemId.POSTAL_BOX_01]: {
+    id: ItemId.POSTAL_BOX_01,
     name: {
       [Lang.EN]: "Gift Parcel",
       [Lang.FR]: "Colis de Noël",
@@ -6274,11 +12147,42 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Adresse ist nicht mehr lesbar. Es scheint etwas drin zu sein... Frohe Weihnachten!",
       [Lang.ES]: "La dirección se ha vuelto ilegible, pero definitivamente hay algo dentro... ¡Feliz Navidad!"
     },
-    category: ItemCategory.Box,
-    icon: "item_postal_box"
+    categories: [ItemCategory.Containers_and_boxes],
+    icon: "item_postal_box",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "money_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rp_book_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rp_book_#01",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rp_sheets_#00",
+            odds: 25
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.LARGE_GIFT_PARCEL]: {
-    id: ItemId.LARGE_GIFT_PARCEL,
+  [ItemId.POSTAL_BOX_XL]: {
+    id: ItemId.POSTAL_BOX_XL,
     name: {
       [Lang.EN]: "Large Gift Parcel",
       [Lang.FR]: "Gros colis postal",
@@ -6291,8 +12195,39 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Die Adresse ist nicht mehr lesbar. Es scheint etwas drin zu sein... Frohe Weihnachten!",
       [Lang.ES]: "La dirección se ha vuelto ilegible, pero definitivamente hay algo dentro... ¡Feliz Navidad!"
     },
-    category: ItemCategory.Box,
-    icon: "item_postal_box_xl"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    icon: "item_postal_box_xl",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Open,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "machine_gun_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rsc_pack_2_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "rhum_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "vibr_empty_#00",
+            odds: 25
+          }
+        ]
+      }
+    ]
   },
   [ItemId.CHRISTMAS_CANDY]: {
     id: ItemId.CHRISTMAS_CANDY,
@@ -6308,11 +12243,56 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Es sieht aus wie eine Art Schokoladenbonbon mit alkoholischem Likör darin. Oder eine andere Füllung...",
       [Lang.ES]: "Parece una especie de pequeño caramelo de chocolate, que contiene licor alcohólico. O cualquier otro producto..."
     },
-    category: ItemCategory.Food,
-    icon: "item_christmas_candy"
+    categories: [ItemCategory.Food, ItemCategory.APSource, ItemCategory.Event],
+    icon: "item_christmas_candy",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    event: GameEvent.Christmas,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_cobaye_#00"
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: 8,
+            odds: 33
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "addict",
+            odds: 6
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_drug_#00",
+            odds: 6
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "terror",
+            odds: 17
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "infection",
+            odds: 10
+          },
+          {
+            type: ItemActionEffectType.Death,
+            odds: 1
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SCREAMING_ALARM_CLOCK_INCOMPLETE]: {
-    id: ItemId.SCREAMING_ALARM_CLOCK_INCOMPLETE,
+  [ItemId.ALARM_OFF]: {
+    id: ItemId.ALARM_OFF,
     name: {
       [Lang.EN]: "Screaming Alarm Clock (incomplete)",
       [Lang.FR]: "Réveil-Hurleur (éteint)",
@@ -6325,11 +12305,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Es gibt morges doch nichts schöner, als einen lauten Wecker, der dein Trommelfell schön stimuliert.",
       [Lang.ES]: "Nada mejor que perforarte los tímpanos para empezar la mañana."
     },
-    category: ItemCategory.Misc,
-    icon: "item_alarm_off"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_alarm_off",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "alarm_3_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.SCREAMING_ALARM_CLOCK_READY]: {
-    id: ItemId.SCREAMING_ALARM_CLOCK_READY,
+  [ItemId.ALARM_ON]: {
+    id: ItemId.ALARM_ON,
     name: {
       [Lang.EN]: "Screaming Alarm Clock (ready)",
       [Lang.FR]: "Réveil-Hurleur (allumé)",
@@ -6342,11 +12337,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Es gibt morges doch nichts schöner, als einen lauten Wecker, der dein Trommelfell schön stimuliert. Funktioniert einwandfrei.",
       [Lang.ES]: "Nada mejor que perforarte los tímpanos para empezar la mañana y recibir 1 Punto de Acción adicional después del ataque."
     },
-    category: ItemCategory.Misc,
-    icon: "item_alarm_on"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_alarm_on",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.SOFT_PUMPKIN]: {
-    id: ItemId.SOFT_PUMPKIN,
+  [ItemId.PUMPKIN_RAW]: {
+    id: ItemId.PUMPKIN_RAW,
     name: {
       [Lang.EN]: "Soft Pumpkin",
       [Lang.FR]: "Citrouille molle",
@@ -6359,11 +12360,18 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Art großes, stinkendes, orangefarbenes Gemüse, wie du es noch nie gesehen hast. Ein plötzlicher Drang, es auszugraben, ergreift dich, ohne dass du weißt warum...",
       [Lang.ES]: "Un tipo de verdura naranja grande y maloliente, como nunca has visto antes. Tienes un repentino impulso de tallarla, sin saber por qué..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_pumpkin_raw"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy, ItemCategory.Event],
+    icon: "item_pumpkin_raw",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    event: GameEvent.Halloween,
+    actions: [
+      
+    ]
   },
-  [ItemId.PRIMITIVE_HURLING_STICK]: {
-    id: ItemId.PRIMITIVE_HURLING_STICK,
+  [ItemId.HURLING_STICK]: {
+    id: ItemId.HURLING_STICK,
     name: {
       [Lang.EN]: "Primitive Hurling Stick",
       [Lang.FR]: "Bâton de hurling primitif",
@@ -6376,11 +12384,28 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein kleiner Ratschlag. Wenn du schon den falschen Kampf wählst... dann wähle wenigstens die richtige Waffe.",
       [Lang.ES]: "Solo un consejo. Si nada en este mundo es lógico no le busques razón a usar un arma como esta."
     },
-    category: ItemCategory.Weapon,
-    icon: "item_hurling_stick"
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon, ItemCategory.Event, ItemCategory.Breakable],
+    icon: "item_hurling_stick",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 15,
+    event: GameEvent.StPatrick,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_broken_#00",
+            odds: 15
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.STICKY_PINT]: {
-    id: ItemId.STICKY_PINT,
+  [ItemId.GUINESS]: {
+    id: ItemId.GUINESS,
     name: {
       [Lang.EN]: "Sticky Pint",
       [Lang.FR]: "Pinte collante",
@@ -6393,11 +12418,35 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Nichts ist besser als ein Pint des schwarzen Zeugs, um Poesie, Lachen und ähm, den Kampf gegen die Zombies zu inspirieren... *Genehmigt von Charlie Sheen",
       [Lang.ES]: "No hay nada mejor como una pinta de cerveza oscura para inspirar poesía, risas y lucha de zombies... *Aprobado por Charlie Sheen"
     },
-    category: ItemCategory.Food,
-    icon: "item_guiness"
+    categories: [ItemCategory.Food, ItemCategory.APSource, ItemCategory.Alcohol, ItemCategory.Event],
+    icon: "item_guiness",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    event: GameEvent.StPatrick,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drunk"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_alcool_#00"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BLACK_NECK_OOZE]: {
-    id: ItemId.BLACK_NECK_OOZE,
+  [ItemId.APRIL_DRUG]: {
+    id: ItemId.APRIL_DRUG,
     name: {
       [Lang.EN]: "Black Neck Ooze",
       [Lang.FR]: "Suintement cervical noir",
@@ -6410,11 +12459,39 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein Gift welches bei der Einnahme EXTREM virulent wirkt, wenn man dem Etikett Glauben schenken darf: Die Ingestion des Zervixschleim führt zu Tod, spontaner Verbrennung, Explosion der Lunge und zum Austritt des Gehirns aus allen Körperöffnungen. Aber nicht unbedingt in dieser Reihenfolge.",
       [Lang.ES]: "Un veneno que es EXTREMADAMENTE virulento cuando se ingiere, si se debe creer en la etiqueta: la ingestión de la exudación cervical causa la muerte, combustión espontánea, explosión de los pulmones y fuga del cerebro por todos los orificios. Pero no necesariamente en ese orden."
     },
-    category: ItemCategory.Drug,
-    icon: "item_april_drug"
+    categories: [ItemCategory.Pharmacy, ItemCategory.APSource, ItemCategory.Drug, ItemCategory.Event],
+    icon: "item_april_drug",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    event: GameEvent.AprilFools,
+    actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged"
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_drug_#00"
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: 8
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_april_ooze"
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.TOXIN]: {
-    id: ItemId.TOXIN,
+  [ItemId.INFECT_POISON]: {
+    id: ItemId.INFECT_POISON,
     name: {
       [Lang.EN]: "Toxin",
       [Lang.FR]: "Toxine",
@@ -6427,11 +12504,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Du hältst das Fläschchen an deine Nase....WOOOW! Der Gestank alleine könnte ein Pferd töten.",
       [Lang.ES]: "Acercas la sustancia a tu nariz y la hueles un poco... Puajjj! Parece que podría matar incluso a un caballo."
     },
-    category: ItemCategory.Misc,
-    icon: "item_infect_poison"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_infect_poison",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.IMPRESSIVE_PUMPKIN]: {
-    id: ItemId.IMPRESSIVE_PUMPKIN,
+  [ItemId.PUMPKIN_TASTY]: {
+    id: ItemId.PUMPKIN_TASTY,
     name: {
       [Lang.EN]: "Impressive Pumpkin",
       [Lang.FR]: "Citrouille impressionnante",
@@ -6444,11 +12527,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieses riesige orangefarbene Gemüse ist das einzig Bunte, das an diesem gruseligen Ort wächst... da möchte man am liebsten hineinbeißen!",
       [Lang.ES]: "Este enorme vegetal anaranjado es lo único colorido que crece en este tétrico recinto... ¡Desearás darle un mordisco!"
     },
-    category: ItemCategory.Food,
-    icon: "item_pumpkin_tasty"
+    categories: [ItemCategory.Food, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    icon: "item_pumpkin_tasty",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 15,
+    actions: [
+      
+    ]
   },
-  [ItemId.FIRST_AID_KIT]: {
-    id: ItemId.FIRST_AID_KIT,
+  [ItemId.MEDIC]: {
+    id: ItemId.MEDIC,
     name: {
       [Lang.EN]: "First Aid Kit",
       [Lang.FR]: "Boîte à pharmacie",
@@ -6461,11 +12550,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Was willst du mit diesen ganzen Verbänden? Was abgerissen wurde ist weg. Die kleine Pillen hingegen sind immer von Nutzen.",
       [Lang.ES]: "No lo llenes de tantos vendajes, disfrazarte de momia no servirá, en cambio, las pastillas siempre pueden ser útiles."
     },
-    category: ItemCategory.Drug,
-    icon: "item_medic"
+    categories: [ItemCategory.Pharmacy],
+    icon: "item_medic",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.HANGING_CROW_GARLAND]: {
-    id: ItemId.HANGING_CROW_GARLAND,
+  [ItemId.XMAS_GIFT_01]: {
+    id: ItemId.XMAS_GIFT_01,
     name: {
       [Lang.EN]: "Hanging Crow garland",
       [Lang.FR]: "Guirlande de Corbeaux suspendue",
@@ -6478,11 +12573,18 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Girlande einer scheinbar uralten Tradition. Es wird empfohlen, es zu Hause als Dekoration aufzuhängen, es könnte gut für die Moral der Stadt sein.",
       [Lang.ES]: "Una guirnalda de una tradición aparentemente antigua. Se recomienda colgarla en casa como decoración, podría ser bueno para la moral del pueblo."
     },
-    category: ItemCategory.Furniture,
-    icon: "item_xmas_gift"
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration, ItemCategory.Event],
+    icon: "item_xmas_gift",
+    decoration: 5,
+    heavy: false,
+    watchPoints: 0,
+    event: GameEvent.Christmas,
+    actions: [
+      
+    ]
   },
-  [ItemId.NO_LABRADOODLE]: {
-    id: ItemId.NO_LABRADOODLE,
+  [ItemId.TAMED_PET_GONE]: {
+    id: ItemId.TAMED_PET_GONE,
     name: {
       [Lang.EN]: "No labradoodle",
       [Lang.FR]: "Bichon maltais absent",
@@ -6495,11 +12597,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Du hast dein Hündchen <em>in deinem Haus zurückgelassen</em>... Hoffentlich nimmt es dir das nicht übel.",
       [Lang.ES]: "<em>Dejaste a tu cachorro en casa</em>... Espero que no se ofenda."
     },
-    category: ItemCategory.Misc,
-    icon: "item_tamed_pet_gone"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_tamed_pet_gone",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.SCREAMING_ALARM_CLOCK_1_CHARGE]: {
-    id: ItemId.SCREAMING_ALARM_CLOCK_1_CHARGE,
+  [ItemId.ALARM_1]: {
+    id: ItemId.ALARM_1,
     name: {
       [Lang.EN]: "Screaming Alarm Clock (1 charge)",
       [Lang.FR]: "Réveil-Hurleur (1 charge)",
@@ -6507,16 +12615,22 @@ export const items: Record<ItemId, Item> = {
       [Lang.ES]: "Despertador chillón (1 carga)"
     },
     description: {
-      [Lang.EN]: "There's nothing quite like a good alarm to stimulate the old eardrums of a morning. Works perfectly and lets you start your day in hell on the right foot with a bonus of 1 extra AP given after the attack.",
+      [Lang.EN]: "There’s nothing quite like the sound of an alarm going off to stimulate the old eardrums first thing in the morning. It works perfectly, rewarding you with an extra AP after the attack, so you can start your day in hell on the right foot!",
       [Lang.FR]: "Rien de tel qu'un bon réveil pour vous stimuler les tympans le matin. Fonctionne parfaitement et vous permettra de démarrer votre journée en enfer du bon pied en recevant 1 PA supplémentaire après l'attaque.",
       [Lang.DE]: "Es gibt morges doch nichts schöner, als einen lauten Wecker, der dein Trommelfell schön stimuliert. Funktioniert einwandfrei und lässt dich nach dem Angriff energetisch mit einem Bonus-AP in den Tag starten.",
       [Lang.ES]: "Nada mejor que perforarte los tímpanos para empezar la mañana. Funciona perfectamente y te permitirá empezar tu día en el infierno con el pie derecho recibiendo 1 PA adicional tras el ataque."
     },
-    category: ItemCategory.Misc,
-    icon: "item_alarm_1"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_alarm_1",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.SCREAMING_ALARM_CLOCK_2_CHARGES]: {
-    id: ItemId.SCREAMING_ALARM_CLOCK_2_CHARGES,
+  [ItemId.ALARM_2]: {
+    id: ItemId.ALARM_2,
     name: {
       [Lang.EN]: "Screaming Alarm Clock (2 charges)",
       [Lang.FR]: "Réveil-Hurleur (2 charges)",
@@ -6524,16 +12638,22 @@ export const items: Record<ItemId, Item> = {
       [Lang.ES]: "Despertador chillón (2 cargas)"
     },
     description: {
-      [Lang.EN]: "There's nothing quite like a good alarm to stimulate the old eardrums of a morning. Works perfectly and lets you start your day in hell on the right foot with a bonus of 1 extra AP given after the attack.",
+      [Lang.EN]: "There’s nothing quite like the sound of an alarm going off to stimulate the old eardrums first thing in the morning. It works perfectly, rewarding you with an extra AP after the attack, so you can start your day in hell on the right foot!",
       [Lang.FR]: "Rien de tel qu'un bon réveil pour vous stimuler les tympans le matin. Fonctionne parfaitement et vous permettra de démarrer votre journée en enfer du bon pied en recevant 1 PA supplémentaire après l'attaque.",
       [Lang.DE]: "Es gibt morges doch nichts schöner, als einen lauten Wecker, der dein Trommelfell schön stimuliert. Funktioniert einwandfrei und lässt dich nach dem Angriff energetisch mit einem Bonus-AP in den Tag starten.",
       [Lang.ES]: "Nada mejor que perforarte los tímpanos para empezar la mañana. Funciona perfectamente y te permitirá empezar tu día en el infierno con el pie derecho recibiendo 1 PA adicional tras el ataque."
     },
-    category: ItemCategory.Misc,
-    icon: "item_alarm_2"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_alarm_2",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.SCREAMING_ALARM_CLOCK_3_CHARGES]: {
-    id: ItemId.SCREAMING_ALARM_CLOCK_3_CHARGES,
+  [ItemId.ALARM_3]: {
+    id: ItemId.ALARM_3,
     name: {
       [Lang.EN]: "Screaming Alarm Clock (3 charges)",
       [Lang.FR]: "Réveil-Hurleur (3 charges)",
@@ -6541,16 +12661,22 @@ export const items: Record<ItemId, Item> = {
       [Lang.ES]: "Despertador chillón (3 cargas)"
     },
     description: {
-      [Lang.EN]: "There's nothing quite like a good alarm to stimulate the old eardrums of a morning. Works perfectly and lets you start your day in hell on the right foot with a bonus of 1 extra AP given after the attack.",
+      [Lang.EN]: "There’s nothing quite like the sound of an alarm going off to stimulate the old eardrums first thing in the morning. It works perfectly, rewarding you with an extra AP after the attack, so you can start your day in hell on the right foot!",
       [Lang.FR]: "Rien de tel qu'un bon réveil pour vous stimuler les tympans le matin. Fonctionne parfaitement et vous permettra de démarrer votre journée en enfer du bon pied en recevant 1 PA supplémentaire après l'attaque.",
       [Lang.DE]: "Es gibt morges doch nichts schöner, als einen lauten Wecker, der dein Trommelfell schön stimuliert. Funktioniert einwandfrei und lässt dich nach dem Angriff energetisch mit einem Bonus-AP in den Tag starten.",
       [Lang.ES]: "Nada mejor que perforarte los tímpanos para empezar la mañana. Funciona perfectamente y te permitirá empezar tu día en el infierno con el pie derecho recibiendo 1 PA adicional tras el ataque."
     },
-    category: ItemCategory.Misc,
-    icon: "item_alarm_3"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_alarm_3",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.MAGNETIC_KEY_INSTANT_BLANK]: {
-    id: ItemId.MAGNETIC_KEY_INSTANT_BLANK,
+  [ItemId.NOODLE_PRINTS]: {
+    id: ItemId.NOODLE_PRINTS,
     name: {
       [Lang.EN]: "Magnetic Key Instant Blank",
       [Lang.FR]: "Empreinte instantanée de clé magnétique",
@@ -6563,11 +12689,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Hightech-Schlüsselabdruck wurde aus einer Mischung von dehydrierten Nudeln und Schleim geformt. Damit kann man wirklich ALLES machen!",
       [Lang.ES]: "Esta impresión de llave de alta tecnología fue moldeada a partir de una mezcla de fideos deshidratados y una sustancia pegajosa. ¡Realmente puedes hacer CUALQUIER COSA con él!"
     },
-    category: ItemCategory.Food,
-    icon: "item_noodle_magnetic_print"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_noodle_magnetic_print",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 4
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BUMP_KEY_INSTANT_BLANK]: {
-    id: ItemId.BUMP_KEY_INSTANT_BLANK,
+  [ItemId.NOODLE_PRINTS_01]: {
+    id: ItemId.NOODLE_PRINTS_01,
     name: {
       [Lang.EN]: "Bump Key Instant Blank",
       [Lang.FR]: "Empreinte instantanée de clé à percussion",
@@ -6580,11 +12721,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Essen oder öffnen, du musst dich entscheiden! Mit diesem Schlüsselabdruck können kannst du einen Schlagschlüssel herstellen, wenn du ihn nicht vor der Rückkehr in die Stadt zerbrichst...",
       [Lang.ES]: "Comer o abrir, ¡tienes que elegir! Esta impresión de llave te permitirá obtener una llave de impacto, si no la rompes antes de regresar al pueblo..."
     },
-    category: ItemCategory.Food,
-    icon: "item_noodle_prints"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_noodle_prints",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 4
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.BOTTLE_OPENER_INSTANT_BLANK]: {
-    id: ItemId.BOTTLE_OPENER_INSTANT_BLANK,
+  [ItemId.NOODLE_PRINTS_02]: {
+    id: ItemId.NOODLE_PRINTS_02,
     name: {
       [Lang.EN]: "Bottle Opener Instant Blank",
       [Lang.FR]: "Empreinte instantanée de décapsuleur",
@@ -6597,11 +12753,26 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Wir wissen nicht wirklich, wie das möglich ist, aber es sieht auf jeden Fall solide aus. Das Nudelagglomerat hat die perfekte Form eines Flaschenöffners!",
       [Lang.ES]: "No estamos seguros de cómo es posible esto, pero de todos modos parece sólido. ¡El aglomerado de fideos tiene PERFECTAMENTE la forma de un abridor de botellas!"
     },
-    category: ItemCategory.Food,
-    icon: "item_noodle_bottle_print"
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_noodle_bottle_print",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 4
+          }
+        ]
+      }
+    ]
   },
-  [ItemId.WORN_OUT_SPORTS_SHOES]: {
-    id: ItemId.WORN_OUT_SPORTS_SHOES,
+  [ItemId.SHOE]: {
+    id: ItemId.SHOE,
     name: {
       [Lang.EN]: "Worn-out sports shoes",
       [Lang.FR]: "Chaussures de sport usées",
@@ -6614,11 +12785,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sie sind nicht mehr ganz neuwertig und riechen etwas streng... Trotzdem kannst du dich mit ihnen leichter durch das unwegsame Gelände in der Außenwelt bewegen.",
       [Lang.ES]: "Ya no son nuevos y huelen un poco fuerte... Sin embargo, te facilitan viajar por el terreno accidentado del Ultramundo."
     },
-    category: ItemCategory.Misc,
-    icon: "item_shoe"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_shoe",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.BICYCLE_WITHOUT_HANDLEBARS]: {
-    id: ItemId.BICYCLE_WITHOUT_HANDLEBARS,
+  [ItemId.BIKE_PART]: {
+    id: ItemId.BIKE_PART,
     name: {
       [Lang.EN]: "Bicycle without handlebars",
       [Lang.FR]: "VTT sans guidon",
@@ -6631,11 +12808,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein schönes Fahrrad, aber der wichtigste Teil davon fehlt: ein Lenker.",
       [Lang.ES]: "Una bicicleta preciosa, pero le falta la parte más importante: el manillar."
     },
-    category: ItemCategory.Misc,
-    icon: "item_bike_part"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    icon: "item_bike_part",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.MOUNTAIN_BIKE]: {
-    id: ItemId.MOUNTAIN_BIKE,
+  [ItemId.BIKE]: {
+    id: ItemId.BIKE,
     name: {
       [Lang.EN]: "Mountain bike",
       [Lang.FR]: "VTT",
@@ -6648,8 +12831,14 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Das Fahrrad alle maßgeschneiderten Landes, mit denen Sie überall hin gehen können, wo immer Sie wollen.",
       [Lang.ES]: "Una bicicleta de montaña hecha a medida con la que podrás ir a todas partes, donde quieras."
     },
-    category: ItemCategory.Misc,
-    icon: "item_bike"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    icon: "item_bike",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
   [ItemId.FLAG]: {
     id: ItemId.FLAG,
@@ -6665,11 +12854,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine lächerlich sichtbare Flagge. Vielleicht, wenn Sie es winken, wird etwas passieren ...?",
       [Lang.ES]: "Una bandera ridículamente visible. ¿Quizás si lo sacudes algo sucederá...?"
     },
-    category: ItemCategory.Misc,
-    icon: "item_flag"
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Decoration],
+    icon: "item_flag",
+    decoration: 5,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.SOCCER_BALL]: {
-    id: ItemId.SOCCER_BALL,
+  [ItemId.SOCCER]: {
+    id: ItemId.SOCCER,
     name: {
       [Lang.EN]: "Soccer ball",
       [Lang.FR]: "Ballon de foot",
@@ -6682,11 +12877,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Für den kleinen Kick zwischendurch.",
       [Lang.ES]: "Para una pequeña patada entre los dos."
     },
-    category: ItemCategory.Misc,
-    icon: "item_soccer"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_soccer",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.BURST_SOCCER_BALL]: {
-    id: ItemId.BURST_SOCCER_BALL,
+  [ItemId.SOCCER_PART]: {
+    id: ItemId.SOCCER_PART,
     name: {
       [Lang.EN]: "Burst Soccer ball",
       [Lang.FR]: "Ballon crevé",
@@ -6699,11 +12900,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein Ball, mit dem wir einiges an Spaß haben könnten. Wenn er nur nicht schon geplatzt wäre...",
       [Lang.ES]: "Una pelota con la que podríamos divertirnos mucho. Si no hubiera reventado ya..."
     },
-    category: ItemCategory.Misc,
-    icon: "item_soccer_part"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_soccer_part",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.QUANTUM_ENERGY]: {
-    id: ItemId.QUANTUM_ENERGY,
+  [ItemId.QUANTUM]: {
+    id: ItemId.QUANTUM,
     name: {
       [Lang.EN]: "Quantum Energy",
       [Lang.FR]: "Quantum Energy",
@@ -6716,11 +12923,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "\"Mach den Sprung... genieße eine Quantum!\" Der Slogan auf der Flasche ist verlockend, die leuchtend blaue Farbe jedoch nicht...",
       [Lang.ES]: "\"¡Atrévete... disfruta de un Quantum!\" El eslogan de la botella es tentador, pero el color azul fosforescente te hace dudar..."
     },
-    category: ItemCategory.Food,
-    icon: "item_quantum"
+    categories: [ItemCategory.Food],
+    icon: "item_quantum",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.PRE_WAR_CAMERA_4]: {
-    id: ItemId.PRE_WAR_CAMERA_4,
+  [ItemId.PHOTO_4]: {
+    id: ItemId.PHOTO_4,
     name: {
       [Lang.EN]: "Pre-war camera",
       [Lang.FR]: "Appareil photo d'avant-guerre",
@@ -6733,11 +12946,17 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese nostalgische Knipse aus dem letzten Jahrhundert wirkt, als hätte sie schon Aberhunderten Leuten die Netzhaut verbrannt. Ihr schwacher Blitz könnte dich aus brenzligen Situationen retten, wenn du Zombies damit blendest! Eine kleine Zahl an der Seite zeigt an, dass noch ein Foto übrig ist.",
       [Lang.ES]: "Esta máquina endemoniada debió haber quemado varias retinas con su flash mal ajustado. ¡Hey! ¡Te puede servir para escapar de situaciones peligrosas cegando a los zombies!"
     },
-    category: ItemCategory.Misc,
-    icon: "item_photo_4"
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_photo_4",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   },
-  [ItemId.CELLO_CASE]: {
-    id: ItemId.CELLO_CASE,
+  [ItemId.CELLO_BOX]: {
+    id: ItemId.CELLO_BOX,
     name: {
       [Lang.EN]: "Cello case",
       [Lang.FR]: "Étui pour violoncelle",
@@ -6750,7 +12969,13 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Du weißt nicht einmal mehr, wo du das her hast... Die Farbe fängt schon an, sich abzulösen. Ist das Teil wirklich nützlich?",
       [Lang.ES]: "Ni siquiera sabes de dónde lo has sacado... El color ya comienza a desteñirse. ¿Es esta cosa realmente útil?"
     },
-    category: ItemCategory.Box,
-    icon: "item_cello_box"
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    icon: "item_cello_box",
+    decoration: 0,
+    heavy: true,
+    watchPoints: 0,
+    actions: [
+      
+    ]
   }
 };

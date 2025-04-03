@@ -115,8 +115,8 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
             .pop()
             ?.split("/")
             .map((coord) => Number(coord.trim())) ?? [0, 0];
-          position.x = x;
-          position.y = y;
+          position.x = x ?? 0;
+          position.y = y ?? 0;
         }
       }
 

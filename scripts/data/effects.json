@@ -1,0 +1,1589 @@
+{
+  "picto_drug_exp": {
+    "type": "picto",
+    "data": "'r_cobaye_#00'"
+  },
+  "picto_animal": {
+    "type": "picto",
+    "data": "'r_animal_#00'"
+  },
+  "picto_masochism": {
+    "type": "picto",
+    "data": "'r_maso_#00'"
+  },
+  "picto_ban_emanc": {
+    "type": "picto",
+    "data": "'r_solban_#00'"
+  },
+  "picto_home_upgrade": {
+    "type": "picto",
+    "data": "'r_hbuild_#00'"
+  },
+  "picto_repair": {
+    "type": "picto",
+    "data": "'r_repair_#00'"
+  },
+  "picto_cannibal": {
+    "type": "picto",
+    "data": "'r_cannib_#00'"
+  },
+  "picto_soul_purify": {
+    "type": "picto",
+    "data": [
+      "'r_collec_#00'",
+      "'r_mystic_#00'"
+    ]
+  },
+  "town_well_2": {
+    "type": "well",
+    "data": 2
+  },
+  "town_well_1_3": {
+    "type": "well",
+    "data": [
+      1,
+      3
+    ]
+  },
+  "town_well_4_9": {
+    "type": "well",
+    "data": [
+      4,
+      9
+    ]
+  },
+  "town_sdef_5": {
+    "type": "soulDefense",
+    "data": 5
+  },
+  "town_bp_lv1": {
+    "type": "unlockBlueprint",
+    "data": 1
+  },
+  "town_bp_lv2": {
+    "type": "unlockBlueprint",
+    "data": 2
+  },
+  "town_bp_lv3": {
+    "type": "unlockBlueprint",
+    "data": 3
+  },
+  "town_bp_lv4": {
+    "type": "unlockBlueprint",
+    "data": 4
+  },
+  "town_bp_hotel_lv2": {
+    "type": "unlockBlueprint",
+    "data": [
+      "small_bamba_#00",
+      "small_catapult3_#00",
+      "small_howlingbait_#00",
+      "small_trash_#01",
+      "small_trash_#02",
+      "small_trash_#04",
+      "small_court_#00",
+      "item_plate_#03"
+    ]
+  },
+  "town_bp_hotel_lv3": {
+    "type": "unlockBlueprint",
+    "data": [
+      "small_sprinkler_#00",
+      "item_digger_#00",
+      "item_shield_#00",
+      "small_city_up_#00",
+      "small_falsecity_#00",
+      "small_lastchance_#00",
+      "small_lighthouse_#00",
+      "small_strategy_#00",
+      "small_valve_#00"
+    ]
+  },
+  "town_bp_hotel_lv4": {
+    "type": "unlockBlueprint",
+    "data": [
+      "small_cinema_#00",
+      "small_derrick_#01",
+      "small_trash_#06",
+      "small_castle_#00",
+      "small_coffin_#00"
+    ]
+  },
+  "town_bp_bunker_lv2": {
+    "type": "unlockBlueprint",
+    "data": [
+      "item_bgrenade_#00",
+      "item_bgrenade_#01",
+      "small_trash_#03",
+      "small_trash_#05",
+      "small_watercanon_#00",
+      "small_tourello_#00",
+      "small_armor_#00"
+    ]
+  },
+  "town_bp_bunker_lv3": {
+    "type": "unlockBlueprint",
+    "data": [
+      "item_home_def_#00",
+      "item_tube_#00",
+      "small_labyrinth_#00",
+      "small_eden_#00",
+      "small_rocket_#00",
+      "small_rocketperf_#00",
+      "small_trashclean_#00",
+      "small_valve_#00",
+      "item_jerrycan_#01"
+    ]
+  },
+  "town_bp_bunker_lv4": {
+    "type": "unlockBlueprint",
+    "data": [
+      "small_waterdetect_#00",
+      "small_arma_#00",
+      "small_slave_#00",
+      "small_trash_#06",
+      "small_wheel_#00"
+    ]
+  },
+  "town_bp_hospital_lv2": {
+    "type": "unlockBlueprint",
+    "data": [
+      "small_ikea_#00",
+      "item_hmeat_#00",
+      "small_tourello_#00",
+      "small_watchmen_#00"
+    ]
+  },
+  "town_bp_hospital_lv3": {
+    "type": "unlockBlueprint",
+    "data": [
+      "item_digger_#00",
+      "item_jerrycan_#01",
+      "item_shield_#00",
+      "small_appletree_#00",
+      "small_chicken_#00",
+      "small_infirmary_#00",
+      "small_trashclean_#00",
+      "small_lighthouse_#00",
+      "small_rocketperf_#00"
+    ]
+  },
+  "town_bp_hospital_lv4": {
+    "type": "unlockBlueprint",
+    "data": [
+      "small_strategy_#01",
+      "small_balloon_#00",
+      "small_crow_#00",
+      "small_derrick_#01",
+      "small_pmvbig_#00"
+    ]
+  },
+  "nessquick": {
+    "type": "clean",
+    "data": [
+      2,
+      3
+    ]
+  },
+  "zone_escape_30": {
+    "type": "escape",
+    "data": 30
+  },
+  "zone_escape_40": {
+    "type": "escape",
+    "data": 40
+  },
+  "zone_escape_60": {
+    "type": "escape",
+    "data": 60
+  },
+  "zone_escape_120": {
+    "type": "escape",
+    "data": 120
+  },
+  "zone_escape_300": {
+    "type": "escape",
+    "data": 300
+  },
+  "zone_escape_600_armag": {
+    "type": "escape",
+    "data": 600
+  },
+  "zone_chat_60": {
+    "type": "chatSilence",
+    "data": 60
+  },
+  "zone_improve_5": {
+    "type": "improveLevel",
+    "data": 5
+  },
+  "zone_improve_9": {
+    "type": "improveLevel",
+    "data": 9
+  },
+  "zone_kill_2": {
+    "type": "kills",
+    "data": 2
+  },
+  "zone_kill_2_4": {
+    "type": "kills",
+    "data": [
+      2,
+      4
+    ]
+  },
+  "zone_kill_5_9": {
+    "type": "kills",
+    "data": [
+      5,
+      9
+    ]
+  },
+  "zone_kill_6_10": {
+    "type": "kills",
+    "data": [
+      6,
+      10
+    ]
+  },
+  "home_def_1": {
+    "type": "defense",
+    "data": 1
+  },
+  "home_store_1": {
+    "type": "storage",
+    "data": 1
+  },
+  "home_store_2": {
+    "type": "storage",
+    "data": 2
+  },
+  "equip_item": {
+    "type": "morphSource",
+    "data": "equip: true"
+  },
+  "unequip_item": {
+    "type": "morphSource",
+    "data": "equip: false"
+  },
+  "cleanse_item": {
+    "type": "morphSource",
+    "data": "poison: false"
+  },
+  "repair_target": {
+    "type": "morphTarget",
+    "data": "break: false"
+  },
+  "poison_target": {
+    "type": "morphTarget",
+    "data": "poison: true"
+  },
+  "poison_infect_target": {
+    "type": "morphTarget",
+    "data": "poison: ItemPoisonType::Infectious"
+  },
+  "consume_water": {
+    "type": "consume",
+    "data": "'water_#00'"
+  },
+  "consume_matches": {
+    "type": "consume",
+    "data": "'lights_#00'"
+  },
+  "consume_battery": {
+    "type": "consume",
+    "data": "'pile_#00'"
+  },
+  "consume_micropur": {
+    "type": "consume",
+    "data": "'water_cleaner_#00'"
+  },
+  "consume_drug": {
+    "type": "consume",
+    "data": "'drug_#00'"
+  },
+  "consume_jerrycan": {
+    "type": "consume",
+    "data": "'jerrycan_#00'"
+  },
+  "consume_2_pharma": {
+    "type": "consume",
+    "data": [
+      null,
+      2
+    ]
+  },
+  "empty_jerrygun": {
+    "type": "morphSource",
+    "data": "'jerrygun_off_#00'"
+  },
+  "produce_watercan3": {
+    "type": "morphSource",
+    "data": "'water_can_3_#00'"
+  },
+  "produce_watercan2": {
+    "type": "morphSource",
+    "data": "'water_can_2_#00'"
+  },
+  "produce_watercan1": {
+    "type": "morphSource",
+    "data": "'water_can_1_#00'"
+  },
+  "produce_watercan0": {
+    "type": "morphSource",
+    "data": [
+      null,
+      null
+    ]
+  },
+  "hero_tamer_3": {
+    "type": "morphSource",
+    "data": "'tamed_pet_drug_#00'"
+  },
+  "hero_hunter": {
+    "type": "morphSource",
+    "data": "'vest_on_#00'"
+  },
+  "morph_open_can": {
+    "type": "morphSource",
+    "data": "'can_open_#00'"
+  },
+  "morph_elec_empty": {
+    "type": "morphSource",
+    "data": "'sport_elec_empty_#00'"
+  },
+  "morph_rsc_pack_2": {
+    "type": "morphSource",
+    "data": "'rsc_pack_2_#00'"
+  },
+  "morph_rsc_pack_1": {
+    "type": "morphSource",
+    "data": "'rsc_pack_1_#00'"
+  },
+  "morph_christmas_2": {
+    "type": "morphSource",
+    "data": "'chest_christmas_2_#00'"
+  },
+  "morph_christmas_1": {
+    "type": "morphSource",
+    "data": "'chest_christmas_1_#00'"
+  },
+  "morph_pilegun": {
+    "type": "morphSource",
+    "data": "'pilegun_#00'"
+  },
+  "morph_pilegun_up": {
+    "type": "morphSource",
+    "data": "'pilegun_up_#00'"
+  },
+  "morph_big_pgun": {
+    "type": "morphSource",
+    "data": "'big_pgun_#00'"
+  },
+  "morph_mixergun": {
+    "type": "morphSource",
+    "data": "'mixergun_#00'"
+  },
+  "morph_chainsaw": {
+    "type": "morphSource",
+    "data": "'chainsaw_#00'"
+  },
+  "morph_taser": {
+    "type": "morphSource",
+    "data": "'taser_#00'"
+  },
+  "morph_lpoint4": {
+    "type": "morphSource",
+    "data": "'lpoint4_#00'"
+  },
+  "morph_lamp_on": {
+    "type": "morphSource",
+    "data": "'lamp_on_#00'"
+  },
+  "morph_vibr": {
+    "type": "morphSource",
+    "data": "'vibr_#00'"
+  },
+  "morph_radius_mk2": {
+    "type": "morphSource",
+    "data": "'radius_mk2_#00'"
+  },
+  "morph_maglite_2": {
+    "type": "morphSource",
+    "data": "'maglite_2_#00'"
+  },
+  "morph_radio_on": {
+    "type": "morphSource",
+    "data": "'radio_on_#00'"
+  },
+  "morph_sport_elec": {
+    "type": "morphSource",
+    "data": "'sport_elec_#00'"
+  },
+  "morph_jerrygun": {
+    "type": "morphSource",
+    "data": "'jerrygun_#00'"
+  },
+  "morph_watergun_opt_5": {
+    "type": "morphSource",
+    "data": "'watergun_opt_5_#00'"
+  },
+  "morph_watergun_3": {
+    "type": "morphSource",
+    "data": "'watergun_3_#00'"
+  },
+  "morph_kalach": {
+    "type": "morphSource",
+    "data": "'kalach_#00'"
+  },
+  "morph_grenade": {
+    "type": "morphSource",
+    "data": "'grenade_#00'"
+  },
+  "morph_bgrenade": {
+    "type": "morphSource",
+    "data": "'bgrenade_#00'"
+  },
+  "morph_pilegun_empty": {
+    "type": "morphSource",
+    "data": "'pilegun_empty_#00'"
+  },
+  "morph_pilegun_up_empty": {
+    "type": "morphSource",
+    "data": "'pilegun_up_empty_#00'"
+  },
+  "morph_big_pgun_empty": {
+    "type": "morphSource",
+    "data": "'big_pgun_empty_#00'"
+  },
+  "morph_mixergun_empty": {
+    "type": "morphSource",
+    "data": "'mixergun_empty_#00'"
+  },
+  "morph_chainsaw_empty": {
+    "type": "morphSource",
+    "data": "'chainsaw_empty_#00'"
+  },
+  "morph_taser_empty": {
+    "type": "morphSource",
+    "data": "'taser_empty_#00'"
+  },
+  "morph_lpoint3": {
+    "type": "morphSource",
+    "data": "'lpoint3_#00'"
+  },
+  "morph_lpoint2": {
+    "type": "morphSource",
+    "data": "'lpoint2_#00'"
+  },
+  "morph_lpoint1": {
+    "type": "morphSource",
+    "data": "'lpoint1_#00'"
+  },
+  "morph_lpoint": {
+    "type": "morphSource",
+    "data": "'lpoint_#00'"
+  },
+  "morph_watergun_opt_4": {
+    "type": "morphSource",
+    "data": "'watergun_opt_4_#00'"
+  },
+  "morph_watergun_opt_3": {
+    "type": "morphSource",
+    "data": "'watergun_opt_3_#00'"
+  },
+  "morph_watergun_opt_2": {
+    "type": "morphSource",
+    "data": "'watergun_opt_2_#00'"
+  },
+  "morph_watergun_opt_1": {
+    "type": "morphSource",
+    "data": "'watergun_opt_1_#00'"
+  },
+  "morph_watergun_opt_empty": {
+    "type": "morphSource",
+    "data": "'watergun_opt_empty_#00'"
+  },
+  "morph_watergun_2": {
+    "type": "morphSource",
+    "data": "'watergun_2_#00'"
+  },
+  "morph_watergun_1": {
+    "type": "morphSource",
+    "data": "'watergun_1_#00'"
+  },
+  "morph_watergun_empty": {
+    "type": "morphSource",
+    "data": "'watergun_empty_#00'"
+  },
+  "morph_kalach_empty": {
+    "type": "morphSource",
+    "data": "'kalach_#01'"
+  },
+  "morph_torch_off": {
+    "type": "morphSource",
+    "data": "'torch_off_#00'"
+  },
+  "morph_staff2": {
+    "type": "morphSource",
+    "data": "'staff2_#00'"
+  },
+  "morph_repair_kit_part": {
+    "type": "morphSource",
+    "data": "'repair_kit_part_#00'"
+  },
+  "morph_radius_mk2_part": {
+    "type": "morphSource",
+    "data": "'radius_mk2_part_#00'"
+  },
+  "morph_bone": {
+    "type": "morphSource",
+    "data": "'bone_#00'"
+  },
+  "morph_cadaver_remains": {
+    "type": "morphSource",
+    "data": "'cadaver_remains_#00'"
+  },
+  "morph_basic_suit": {
+    "type": "morphSource",
+    "data": "'basic_suit_#00'"
+  },
+  "morph_photo_2": {
+    "type": "morphSource",
+    "data": "'photo_2_#00'"
+  },
+  "morph_photo_1": {
+    "type": "morphSource",
+    "data": "'photo_1_#00'"
+  },
+  "morph_photo_off": {
+    "type": "morphSource",
+    "data": "'photo_off_#00'"
+  },
+  "morph_alarm_on": {
+    "type": "morphSource",
+    "data": "'alarm_on_#00'"
+  },
+  "morph_pumpkin_off": {
+    "type": "morphSource",
+    "data": "'pumpkin_off_#00'"
+  },
+  "morph_vibr_empty": {
+    "type": "morphSource",
+    "data": "'vibr_empty_#00'"
+  },
+  "morph_undef": {
+    "type": "morphSource",
+    "data": "'undef_#00'"
+  },
+  "morph_meat": {
+    "type": "morphSource",
+    "data": "'meat_#00'"
+  },
+  "morph_alarm_1": {
+    "type": "morphSource",
+    "data": "'alarm_1_#00'"
+  },
+  "morph_alarm_2": {
+    "type": "morphSource",
+    "data": "'alarm_2_#00'"
+  },
+  "morph_alarm_3": {
+    "type": "morphSource",
+    "data": "'alarm_3_#00'"
+  },
+  "drink_ap_1": {
+    "type": "point",
+    "data": [
+      null,
+      0,
+      null
+    ]
+  },
+  "drink_ap_2": {
+    "type": "removesStatus",
+    "data": "'thirst1'"
+  },
+  "drink_no_ap": {
+    "type": "morphsStatus",
+    "data": [
+      null,
+      null
+    ]
+  },
+  "terrorize": {
+    "type": "addsStatus",
+    "data": "'terror'"
+  },
+  "unterrorize": {
+    "type": "removesStatus",
+    "data": "'terror'"
+  },
+  "infect_no_msg": {
+    "type": "addsStatus",
+    "data": "'infection'"
+  },
+  "disinfect": {
+    "type": "removesStatus",
+    "data": "'infection'"
+  },
+  "immune": {
+    "type": "addsStatus",
+    "data": "'immune'"
+  },
+  "give_shaman_immune": {
+    "type": "addsStatus",
+    "data": "'tg_shaman_immune'"
+  },
+  "heal_wound": {
+    "type": "removesStatus",
+    "data": "'tg_meta_wound'"
+  },
+  "inflict_wound": {
+    "type": "addsStatus",
+    "data": "'tg_meta_wound'"
+  },
+  "add_bandage": {
+    "type": "addsStatus",
+    "data": "'healed'"
+  },
+  "increase_lab_counter": {
+    "type": "count",
+    "data": "ActionCounter::ActionTypeHomeLab"
+  },
+  "increase_kitchen_counter": {
+    "type": "count",
+    "data": "ActionCounter::ActionTypeHomeKitchen"
+  },
+  "heal_ghoul": {
+    "type": "role",
+    "data": [
+      null,
+      null
+    ]
+  },
+  "satisfy_ghoul_50": {
+    "type": "ghoulHunger",
+    "data": -50
+  },
+  "satisfy_ghoul_30": {
+    "type": "ghoulHunger",
+    "data": -30
+  },
+  "satisfy_ghoul_10": {
+    "type": "ghoulHunger",
+    "data": -10
+  },
+  "satisfy_ghoul_15": {
+    "type": "ghoulHunger",
+    "data": -15
+  },
+  "april": {
+    "type": "addsStatus",
+    "data": "'tg_april_ooze'"
+  },
+  "hero_surv_0": {
+    "type": "addsStatus",
+    "data": "'tg_sbook'"
+  },
+  "hero_act": {
+    "type": "addsStatus",
+    "data": "'tg_hero'"
+  },
+  "hero_immune": {
+    "type": "addsStatus",
+    "data": "'hsurvive'"
+  },
+  "camp_hide": {
+    "type": "addsStatus",
+    "data": "'tg_hide'"
+  },
+  "camp_tomb": {
+    "type": "addsStatus",
+    "data": "'tg_tomb'"
+  },
+  "camp_unhide": {
+    "type": "removesStatus",
+    "data": "'tg_hide'"
+  },
+  "camp_untomb": {
+    "type": "removesStatus",
+    "data": "'tg_tomb'"
+  },
+  "status_betadrug": {
+    "type": "addsStatus",
+    "data": "'tg_betadrug'"
+  },
+  "status_teddy": {
+    "type": "addsStatus",
+    "data": "'tg_teddy'"
+  },
+  "status_home_heal_1": {
+    "type": "addsStatus",
+    "data": "'tg_home_heal_1'"
+  },
+  "status_home_heal_2": {
+    "type": "addsStatus",
+    "data": "'tg_home_heal_2'"
+  },
+  "status_home_defbuff": {
+    "type": "addsStatus",
+    "data": "'tg_home_defbuff'"
+  },
+  "status_rested": {
+    "type": "addsStatus",
+    "data": "'tg_rested'"
+  },
+  "status_clothes": {
+    "type": "count",
+    "data": "ActionCounter::ActionTypeClothes"
+  },
+  "status_home_clean": {
+    "type": "count",
+    "data": "ActionCounter::ActionTypeHomeCleanup"
+  },
+  "status_home_shower": {
+    "type": "count",
+    "data": "ActionCounter::ActionTypeShower"
+  },
+  "cyanide": {
+    "type": "kill",
+    "data": " CauseOfDeath::Cyanide"
+  },
+  "death_poison": {
+    "type": "kill",
+    "data": " CauseOfDeath::Poison"
+  },
+  "casino_dice": {
+    "type": "effectIndex",
+    "data": 1
+  },
+  "casino_card": {
+    "type": "effectIndex",
+    "data": 2
+  },
+  "casino_guitar": {
+    "type": "effectIndex",
+    "data": 3
+  },
+  "hero_tamer_1": {
+    "type": "effectIndex",
+    "data": 4
+  },
+  "hero_tamer_2": {
+    "type": "effectIndex",
+    "data": 5
+  },
+  "hero_surv_1": {
+    "type": "effectIndex",
+    "data": 6
+  },
+  "hero_surv_2": {
+    "type": "effectIndex",
+    "data": 7
+  },
+  "hero_return": {
+    "type": "effectIndex",
+    "data": 8
+  },
+  "hero_rescue": {
+    "type": "effectIndex",
+    "data": 9
+  },
+  "camp_activate": {
+    "type": "effectIndex",
+    "data": 10
+  },
+  "camp_deactivate": {
+    "type": "effectIndex",
+    "data": 11
+  },
+  "discover_random_ruin": {
+    "type": "effectIndex",
+    "data": 12
+  },
+  "use_guard_tower": {
+    "type": "effectIndex",
+    "data": 13
+  },
+  "fill_all_water_wp": {
+    "type": "effectIndex",
+    "data": 14
+  },
+  "casino_banned_note": {
+    "type": "effectIndex",
+    "data": 15
+  },
+  "hero_tamer_1b": {
+    "type": "effectIndex",
+    "data": 16
+  },
+  "hero_tamer_2b": {
+    "type": "effectIndex",
+    "data": 17
+  },
+  "vote_role_shaman": {
+    "type": "effectIndex",
+    "data": 18
+  },
+  "vote_role_guide": {
+    "type": "effectIndex",
+    "data": 19
+  },
+  "sandball": {
+    "type": "effectIndex",
+    "data": 20
+  },
+  "flare": {
+    "type": "effectIndex",
+    "data": 21
+  },
+  "contaminated_zone_infect": {
+    "type": "effectIndex",
+    "data": 22
+  },
+  "hero_bia": {
+    "type": "effectIndex",
+    "data": 70
+  },
+  "break_item": {
+    "type": "picto",
+    "data": [
+      "'r_broken_#00'",
+      "break: true"
+    ]
+  },
+  "drunk": {
+    "type": "addsStatus",
+    "data": [
+      "'drunk'",
+      "'r_alcool_#00'"
+    ]
+  },
+  "drug_any": {
+    "type": "addsStatus",
+    "data": [
+      "'drugged'",
+      "'r_drug_#00'"
+    ]
+  },
+  "drug_addict_no_msg": {
+    "type": "addsStatus",
+    "data": [
+      "'addict'",
+      "'r_drug_#00'"
+    ]
+  },
+  "kill_1_zombie_s": {
+    "type": "kills",
+    "data": 1
+  },
+  "kill_1_2_zombie": {
+    "type": "kills",
+    "data": [
+      1,
+      2
+    ]
+  },
+  "kill_2_zombie": {
+    "type": "kills",
+    "data": 2
+  },
+  "kill_3_zombie": {
+    "type": "kills",
+    "data": 3
+  },
+  "kill_all_zombie": {
+    "type": "kills",
+    "data": 999999
+  },
+  "zone_kill_punch": {
+    "type": "kills",
+    "data": 2
+  },
+  "ghoul_25_4": {
+    "type": "ghoul",
+    "data": [
+      4,
+      25
+    ]
+  },
+  "ghoul_25_5": {
+    "type": "ghoul",
+    "data": [
+      5,
+      25
+    ]
+  },
+  "ghoul_25_100": {
+    "type": "ghoul",
+    "data": [
+      100,
+      25
+    ]
+  },
+  "ghoul_5_100": {
+    "type": "ghoul",
+    "data": [
+      100,
+      25
+    ]
+  },
+  "find_rp": {
+    "type": "find_rp",
+    "data": 1
+  },
+  "home_lab_success": {
+    "type": "spawn",
+    "data": "drug_hero_#00"
+  },
+  "home_lab_failure": {
+    "type": "spawn",
+    "data": [
+      "drug_#00",
+      "xanax_#00",
+      "drug_random_#00",
+      "drug_water_#00",
+      "water_cleaner_#00"
+    ]
+  },
+  "home_kitchen_success": {
+    "type": "spawn",
+    "data": "dish_tasty_#00"
+  },
+  "home_kitchen_failure": {
+    "type": "spawn",
+    "data": "dish_#00"
+  },
+  "spawn_doggy": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "food_bar2_#00"
+        ],
+        "odds": 222
+      },
+      {
+        "items": [
+          "food_chick_#00"
+        ],
+        "odds": 194
+      },
+      {
+        "items": [
+          "food_biscuit_#00"
+        ],
+        "odds": 188
+      },
+      {
+        "items": [
+          "food_pims_#00"
+        ],
+        "odds": 186
+      },
+      {
+        "items": [
+          "food_bar3_#00"
+        ],
+        "odds": 181
+      },
+      {
+        "items": [
+          "food_tarte_#00"
+        ],
+        "odds": 174
+      },
+      {
+        "items": [
+          "food_bar1_#00"
+        ],
+        "odds": 168
+      },
+      {
+        "items": [
+          "food_sandw_#00"
+        ],
+        "odds": 162
+      }
+    ]
+  },
+  "spawn_lunch": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "food_candies_#00",
+          "food_noodles_hot_#00",
+          "vegetable_tasty_#00",
+          "meat_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_c_chest": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "pile_#00",
+          "radio_off_#00",
+          "pharma_#00",
+          "lights_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_h_chest": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "watergun_empty_#00",
+          "pilegun_empty_#00",
+          "flash_#00",
+          "repair_one_#00",
+          "smoke_bomb_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_postbox": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "money_#00",
+          "rp_book_#00",
+          "rp_book_#01",
+          "rp_sheets_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_postbox_xl": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "machine_gun_#00",
+          "rsc_pack_2_#00",
+          "rhum_#00",
+          "vibr_empty_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_letterbox": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "rp_book2_#00",
+          "rp_manual_#00",
+          "rp_scroll_#00",
+          "rp_scroll_#01",
+          "rp_sheets_#00",
+          "rp_letter_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_justbox": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "money_#00",
+          "rp_book_#00",
+          "rp_book_#01",
+          "rp_sheets_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_gamebox": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "dice_#00",
+          "cards_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_abox": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "bplan_r_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_cbox": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "bplan_c_#00"
+        ],
+        "odds": 50
+      },
+      {
+        "items": [
+          "bplan_u_#00"
+        ],
+        "odds": 35
+      },
+      {
+        "items": [
+          "bplan_r_#00"
+        ],
+        "odds": 10
+      },
+      {
+        "items": [
+          "bplan_e_#00"
+        ],
+        "odds": 5
+      }
+    ]
+  },
+  "spawn_xmas_dv": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "omg_this_will_kill_you_#00",
+          "pocket_belt_#00",
+          "christmas_candy_#00"
+        ],
+        "odds": 8
+      },
+      {
+        "items": [
+          "rp_manual_#00",
+          "rp_sheets_#00",
+          "rp_letter_#00",
+          "rp_scroll_#00",
+          "rp_book_#00",
+          "rp_book_#01",
+          "rp_book2_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_xmas_3": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "omg_this_will_kill_you_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_xmas_2": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "christmas_candy_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_xmas_1": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "xmas_gift_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_matbox": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "wood2_#00",
+          "metal_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_metalbox": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "bandage_#00"
+        ],
+        "odds": 28
+      },
+      {
+        "items": [
+          "vodka_#00"
+        ],
+        "odds": 20
+      },
+      {
+        "items": [
+          "drug_hero_#00",
+          "drug_#00"
+        ],
+        "odds": 16
+      },
+      {
+        "items": [
+          "explo_#00",
+          "rhum_#00"
+        ],
+        "odds": 8
+      },
+      {
+        "items": [
+          "lights_#00"
+        ],
+        "odds": 4
+      }
+    ]
+  },
+  "spawn_metalbox2": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "mixergun_part_#00",
+          "watergun_opt_part_#00"
+        ],
+        "odds": 19
+      },
+      {
+        "items": [
+          "pocket_belt_#00",
+          "chainsaw_part_#00",
+          "lawn_part_#00"
+        ],
+        "odds": 12
+      },
+      {
+        "items": [
+          "pilegun_upkit_#00",
+          "cutcut_#00"
+        ],
+        "odds": 10
+      },
+      {
+        "items": [
+          "big_pgun_part_#00"
+        ],
+        "odds": 7
+      }
+    ]
+  },
+  "spawn_catbox": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "poison_part_#00",
+          "pet_cat_#00",
+          "angryc_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_toolbox": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "pharma_#00"
+        ],
+        "odds": 25
+      },
+      {
+        "items": [
+          "explo_#00"
+        ],
+        "odds": 19
+      },
+      {
+        "items": [
+          "meca_parts_#00"
+        ],
+        "odds": 17
+      },
+      {
+        "items": [
+          "rustine_#00"
+        ],
+        "odds": 13
+      },
+      {
+        "items": [
+          "tube_#00"
+        ],
+        "odds": 13
+      },
+      {
+        "items": [
+          "pile_#00"
+        ],
+        "odds": 12
+      }
+    ]
+  },
+  "spawn_foodbox": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "hmeat_#00"
+        ],
+        "odds": 13
+      },
+      {
+        "items": [
+          "can_#00"
+        ],
+        "odds": 11
+      },
+      {
+        "items": [
+          "food_bag_#00",
+          "vegetable_#00"
+        ],
+        "odds": 8
+      },
+      {
+        "items": [
+          "meat_#00"
+        ],
+        "odds": 7
+      }
+    ]
+  },
+  "spawn_phone": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "deto_#00",
+          "metal_bad_#00",
+          "pile_broken_#00",
+          "electro_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_phone_nw": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "deto_#00",
+          "metal_bad_#00",
+          "pile_broken_#00",
+          "electro_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_proj": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "lens_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_empty_battery": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "pile_broken_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_battery": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "pile_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_safe": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "pocket_belt_#00"
+        ],
+        "odds": 15
+      },
+      {
+        "items": [
+          "watergun_opt_part_#00",
+          "lawn_part_#00",
+          "chainsaw_part_#00",
+          "mixergun_part_#00",
+          "cutcut_#00",
+          "pilegun_upkit_#00",
+          "meca_parts_#00"
+        ],
+        "odds": 10
+      },
+      {
+        "items": [
+          "big_pgun_part_#00",
+          "book_gen_letter_#00"
+        ],
+        "odds": 5
+      }
+    ]
+  },
+  "spawn_asafe": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "bplan_e_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_meat_4xs": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "meat_#00"
+        ],
+        "count": 4
+      }
+    ]
+  },
+  "spawn_meat_4x": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "undef_#00"
+        ],
+        "count": 4
+      }
+    ]
+  },
+  "spawn_meat_2xs": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "meat_#00"
+        ],
+        "count": 2
+      }
+    ]
+  },
+  "spawn_meat_2x": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "undef_#00"
+        ],
+        "count": 2
+      }
+    ]
+  },
+  "spawn_meat_bmb": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "flesh_#00"
+        ],
+        "count": 2
+      }
+    ]
+  },
+  "spawn_potion": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "potion_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_2_watercup": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "water_cup_#00"
+        ],
+        "count": 2
+      }
+    ]
+  },
+  "spawn_2_water": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "water_#00"
+        ],
+        "count": 2
+      }
+    ]
+  },
+  "spawn_3_water": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "water_#00"
+        ],
+        "count": 3
+      }
+    ]
+  }
+}

@@ -1,12 +1,6 @@
 import { ItemId } from './items';
 
-export enum Event {
-  StPatrick = 0,
-  Infective = 1,
-  Christmas = 2,
-};
-
-export enum ZoneBuildingId {
+export enum RuinId {
   CITIZEN_S_HOME = 1,
   SCOTTISH_SMITH_S_SUPERSTORE = 2,
   ONCE_INHABITED_CAVE = 3,
@@ -74,8 +68,8 @@ export enum ZoneBuildingId {
   BURIED_BUILDING = -1
 }
 
-export type ZoneBuilding = {
-  id: ZoneBuildingId;
+export type Ruin = {
+  id: RuinId;
   name: Record<Lang, string>;
   description: Record<Lang, string>;
   icon: string;
@@ -90,13 +84,13 @@ export type ZoneBuilding = {
   drops: {
     item: ItemId;
     odds: number;
-    event?: Event;
+    event?: GameEvent;
   }[];
 };
 
-export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
-  [ZoneBuildingId.CITIZEN_S_HOME]: {
-    id: ZoneBuildingId.CITIZEN_S_HOME,
+export const ruins: Record<RuinId, Ruin> = {
+  [RuinId.CITIZEN_S_HOME]: {
+    id: RuinId.CITIZEN_S_HOME,
     name: {
       [Lang.EN]: "Citizen's Home",
       [Lang.FR]: "Maison d’un citoyen",
@@ -120,7 +114,7 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.CITIZEN_S_WELCOME_PACK,
+        item: ItemId.CHEST_CITIZEN,
         odds: 50,
       },
         {
@@ -128,25 +122,25 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 100,
       },
         {
-        item: ItemId.PADLOCK_AND_CHAIN,
+        item: ItemId.LOCK,
         odds: 2,
       },
         {
-        item: ItemId.BROKEN_ELECTRONIC_DEVICE,
+        item: ItemId.ELECTRO_BOX,
         odds: 8,
       },
         {
-        item: ItemId.EKTORP_GLUTEN_CHAIR,
+        item: ItemId.CHAIR_BASIC,
         odds: 5,
       },
         {
-        item: ItemId.BEST_OF_THE_KING_CD,
+        item: ItemId.CDELVI,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.SCOTTISH_SMITH_S_SUPERSTORE]: {
-    id: ZoneBuildingId.SCOTTISH_SMITH_S_SUPERSTORE,
+  [RuinId.SCOTTISH_SMITH_S_SUPERSTORE]: {
+    id: RuinId.SCOTTISH_SMITH_S_SUPERSTORE,
     name: {
       [Lang.EN]: "Scottish Smith's Superstore",
       [Lang.FR]: "Épicerie Fargo",
@@ -170,45 +164,45 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.TWINOID_500MG,
+        item: ItemId.DRUG_HERO,
         odds: 20,
       },
         {
-        item: ItemId.TASTY_LOOKING_STEAK,
+        item: ItemId.MEAT,
         odds: 20,
       },
         {
-        item: ItemId.SPICY_CHINESE_NOODLES,
+        item: ItemId.FOOD_NOODLES_HOT,
         odds: 20,
       },
         {
-        item: ItemId.INTESTINE_MELON,
+        item: ItemId.VEGETABLE_TASTY,
         odds: 20,
       },
         {
-        item: ItemId.BROKEN_ELECTRONIC_DEVICE,
+        item: ItemId.ELECTRO_BOX,
         odds: 5,
       },
         {
-        item: ItemId.FLASH_POWDER,
+        item: ItemId.POWDER,
         odds: 5,
       },
         {
-        item: ItemId.DOGGY_BAG,
+        item: ItemId.FOOD_BAG,
         odds: 5,
       },
         {
-        item: ItemId.DOORMAT,
+        item: ItemId.DOOR_CARPET,
         odds: 5,
       },
         {
-        item: ItemId.BOX_OF_MATCHES,
+        item: ItemId.LIGHTS,
         odds: 5,
       }
     ]
   },
-  [ZoneBuildingId.ONCE_INHABITED_CAVE]: {
-    id: ZoneBuildingId.ONCE_INHABITED_CAVE,
+  [RuinId.ONCE_INHABITED_CAVE]: {
+    id: RuinId.ONCE_INHABITED_CAVE,
     name: {
       [Lang.EN]: "Once-inhabited Cave",
       [Lang.FR]: "Caverne anciennement habitée",
@@ -232,61 +226,61 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.WAD_OF_CASH,
+        item: ItemId.MONEY,
         odds: 50,
       },
         {
-        item: ItemId.FLASH_GRENADE,
+        item: ItemId.FLASH,
         odds: 10,
       },
         {
-        item: ItemId.BLOODY_HOT_COFFEE,
+        item: ItemId.COFFEE,
         odds: 10,
       },
         {
-        item: ItemId.EKTORP_GLUTEN_CHAIR,
+        item: ItemId.CHAIR_BASIC,
         odds: 10,
       },
         {
-        item: ItemId.J_RPEN_TABLE,
+        item: ItemId.TABLE,
         odds: 5,
       },
         {
-        item: ItemId.TEDDY_BEAR,
+        item: ItemId.TEDDY,
         odds: 1,
       },
         {
-        item: ItemId.OLD_WASHING_MACHINE,
+        item: ItemId.MACHINE_1,
         odds: 10,
       },
         {
-        item: ItemId.CARCINOGENIC_OVEN,
+        item: ItemId.MACHINE_2,
         odds: 10,
       },
         {
-        item: ItemId.BEER_FRIDGE,
+        item: ItemId.MACHINE_3,
         odds: 10,
       },
         {
-        item: ItemId.A_LETTER_WITH_NO_ADDRESS,
+        item: ItemId.RP_LETTER,
         odds: 2,
       },
         {
-        item: ItemId.STACK_OF_PAPERS,
+        item: ItemId.RP_SHEETS,
         odds: 2,
       },
         {
-        item: ItemId.RADIUS_MARK_II_INCOMPLETE,
+        item: ItemId.RADIUS_MK2_PART,
         odds: 1,
       },
         {
-        item: ItemId.TOOL_BAG,
+        item: ItemId.REPAIR_KIT_PART_RAW,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.OLD_HYDRAULIC_PUMP]: {
-    id: ZoneBuildingId.OLD_HYDRAULIC_PUMP,
+  [RuinId.OLD_HYDRAULIC_PUMP]: {
+    id: RuinId.OLD_HYDRAULIC_PUMP,
     name: {
       [Lang.EN]: "Old Hydraulic Pump",
       [Lang.FR]: "Vieille pompe hydraulique",
@@ -310,33 +304,33 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.FULL_JERRYCAN,
+        item: ItemId.JERRYCAN,
         odds: 60,
       },
         {
-        item: ItemId.COPPER_PIPE,
+        item: ItemId.TUBE,
         odds: 4,
       },
         {
-        item: ItemId.METAL_SUPPORT,
+        item: ItemId.METAL_BEAM,
         odds: 4,
       },
         {
-        item: ItemId.ELECTRONIC_COMPONENT,
+        item: ItemId.ELECTRO,
         odds: 1,
       },
         {
-        item: ItemId.JERRYCAN_GUN_UNATTACHED,
+        item: ItemId.JERRYGUN_PART,
         odds: 2,
       },
         {
-        item: ItemId.EMPTY_OIL_CAN,
+        item: ItemId.OILCAN,
         odds: 6,
       }
     ]
   },
-  [ZoneBuildingId.OLD_BICYCLE_HIRE_SHOP]: {
-    id: ZoneBuildingId.OLD_BICYCLE_HIRE_SHOP,
+  [RuinId.OLD_BICYCLE_HIRE_SHOP]: {
+    id: RuinId.OLD_BICYCLE_HIRE_SHOP,
     name: {
       [Lang.EN]: "Old Bicycle Hire Shop",
       [Lang.FR]: "Ancien Vélib’",
@@ -360,29 +354,29 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS,
+        item: ItemId.MECA_PARTS,
         odds: 2,
       },
         {
-        item: ItemId.COPPER_PIPE,
+        item: ItemId.TUBE,
         odds: 10,
       },
         {
-        item: ItemId.BELT,
+        item: ItemId.COURROIE,
         odds: 10,
       },
         {
-        item: ItemId.UTILITY_BELT,
+        item: ItemId.POCKET_BELT,
         odds: 10,
       },
         {
-        item: ItemId.RADIO_CASSETTE_PLAYER_NO_BATTERY,
+        item: ItemId.RADIO_OFF,
         odds: 5,
       }
     ]
   },
-  [ZoneBuildingId.DESERTED_FREIGHT_YARD]: {
-    id: ZoneBuildingId.DESERTED_FREIGHT_YARD,
+  [RuinId.DESERTED_FREIGHT_YARD]: {
+    id: RuinId.DESERTED_FREIGHT_YARD,
     name: {
       [Lang.EN]: "Deserted Freight Yard",
       [Lang.FR]: "Gare de triage désertée",
@@ -406,41 +400,41 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.METAL_SUPPORT,
+        item: ItemId.METAL_BEAM,
         odds: 3,
       },
         {
-        item: ItemId.PATCHWORK_BEAM,
+        item: ItemId.WOOD_BEAM,
         odds: 3,
       },
         {
-        item: ItemId.ADJUSTABLE_SPANNER,
+        item: ItemId.WRENCH,
         odds: 3,
       },
         {
-        item: ItemId.TWISTED_PLANK,
+        item: ItemId.WOOD2,
         odds: 10,
       },
         {
-        item: ItemId.WROUGHT_IRON,
+        item: ItemId.METAL,
         odds: 10,
       },
         {
-        item: ItemId.BELT,
+        item: ItemId.COURROIE,
         odds: 1,
       },
         {
-        item: ItemId.BLOODY_HOT_COFFEE,
+        item: ItemId.COFFEE,
         odds: 1,
       },
         {
-        item: ItemId.RUSTY_CHAIN,
+        item: ItemId.CHAIN,
         odds: 5,
       }
     ]
   },
-  [ZoneBuildingId.OLD_FIELD_HOSPITAL]: {
-    id: ZoneBuildingId.OLD_FIELD_HOSPITAL,
+  [RuinId.OLD_FIELD_HOSPITAL]: {
+    id: RuinId.OLD_FIELD_HOSPITAL,
     name: {
       [Lang.EN]: "Old Field Hospital",
       [Lang.FR]: "Vieil hôpital de campagne",
@@ -464,53 +458,53 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.PHARMACEUTICAL_PRODUCTS,
+        item: ItemId.PHARMA,
         odds: 20,
       },
         {
-        item: ItemId.UNLABELLED_DRUG,
+        item: ItemId.DRUG_RANDOM,
         odds: 30,
       },
         {
-        item: ItemId.VODKA_MARINOSTOV,
+        item: ItemId.VODKA,
         odds: 10,
       },
         {
-        item: ItemId.HYDRATONE_100MG,
+        item: ItemId.DRUG_WATER,
         odds: 10,
       },
         {
-        item: ItemId.BETAPROPINE_5MG_EXPIRED,
+        item: ItemId.BETA_DRUG_BAD,
         odds: 15,
       },
         {
-        item: ItemId.VALIUM_SHOT,
+        item: ItemId.XANAX,
         odds: 5,
       },
         {
-        item: ItemId.ANABOLIC_STEROIDS,
+        item: ItemId.DRUG,
         odds: 10,
       },
         {
-        item: ItemId.TWINOID_500MG,
+        item: ItemId.DRUG_HERO,
         odds: 5,
       },
         {
-        item: ItemId.PARACETOID_7G,
+        item: ItemId.DISINFECT,
         odds: 10,
       },
         {
-        item: ItemId.CYANIDE,
+        item: ItemId.CYANURE,
         odds: 10,
       },
         {
-        item: ItemId.ERGOT_FUNGUS,
+        item: ItemId.FUNGUS,
         odds: 5,
       }
     ]
   },
-  [ZoneBuildingId.OLD_AERODROME]: {
-    id: ZoneBuildingId.OLD_AERODROME,
+  [RuinId.OLD_AERODROME]: {
+    id: RuinId.OLD_AERODROME,
     name: {
       [Lang.EN]: "Old Aerodrome",
       [Lang.FR]: "Ancien aérodrome",
@@ -534,61 +528,61 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.METAL_SUPPORT,
+        item: ItemId.METAL_BEAM,
         odds: 30,
       },
         {
-        item: ItemId.KWIK_FIX,
+        item: ItemId.REPAIR_ONE,
         odds: 10,
       },
         {
-        item: ItemId.BROKEN_ELECTRONIC_DEVICE,
+        item: ItemId.ELECTRO_BOX,
         odds: 15,
       },
         {
-        item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS,
+        item: ItemId.MECA_PARTS,
         odds: 10,
       },
         {
-        item: ItemId.ENGINE_INCOMPLETE,
+        item: ItemId.ENGINE_PART,
         odds: 1,
       },
         {
-        item: ItemId.BELT,
+        item: ItemId.COURROIE,
         odds: 1,
       },
         {
-        item: ItemId.COPPER_PIPE,
+        item: ItemId.TUBE,
         odds: 1,
       },
         {
-        item: ItemId.INSTRUCTION_MANUAL,
+        item: ItemId.RP_MANUAL,
         odds: 1,
       },
         {
-        item: ItemId.SHEET_METAL_PARTS,
+        item: ItemId.PLATE_RAW,
         odds: 1,
       },
         {
-        item: ItemId.WIRE_MESH,
+        item: ItemId.FENCE,
         odds: 1,
       },
         {
-        item: ItemId.FULL_JERRYCAN,
+        item: ItemId.JERRYCAN,
         odds: 1,
       },
         {
-        item: ItemId.WIRE_REEL,
+        item: ItemId.WIRE,
         odds: 3,
       },
         {
-        item: ItemId.EMPTY_OIL_CAN,
+        item: ItemId.OILCAN,
         odds: 4,
       }
     ]
   },
-  [ZoneBuildingId.OLD_POLICE_STATION]: {
-    id: ZoneBuildingId.OLD_POLICE_STATION,
+  [RuinId.OLD_POLICE_STATION]: {
+    id: RuinId.OLD_POLICE_STATION,
     name: {
       [Lang.EN]: "Old Police Station",
       [Lang.FR]: "Ancien commissariat",
@@ -612,35 +606,35 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.REVOLVER_UNLOADED,
+        item: ItemId.GUN,
         odds: 5,
       },
         {
-        item: ItemId.ASSAULT_RIFLE_UNLOADED,
+        item: ItemId.MACHINE_GUN,
         odds: 2,
       },
         {
-        item: ItemId.TASER_INCOMPLETE,
+        item: ItemId.TASER_EMPTY,
         odds: 7,
       },
         {
-        item: ItemId.BATTERY_LAUNCHER_1_ITF_EMPTY,
+        item: ItemId.PILEGUN_EMPTY,
         odds: 5,
       },
         {
-        item: ItemId.TWINOID_500MG,
+        item: ItemId.DRUG_HERO,
         odds: 10,
       },
         {
-        item: ItemId.DEVASTATOR_INCOMPLETE,
+        item: ItemId.BIG_PGUN_PART,
         odds: 7,
       },
         {
-        item: ItemId.WATER_PISTOL_EMPTY,
+        item: ItemId.WATERGUN_EMPTY,
         odds: 7,
       },
         {
-        item: ItemId.SERRATED_KNIFE,
+        item: ItemId.KNIFE,
         odds: 5,
       },
         {
@@ -648,19 +642,19 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 4,
       },
         {
-        item: ItemId.MANBAG,
+        item: ItemId.BAG,
         odds: 5,
       },
         {
-        item: ItemId.ULTRA_RUCKSACK,
+        item: ItemId.BAGXL,
         odds: 1,
       },
         {
-        item: ItemId.MACHETE,
+        item: ItemId.CUTCUT,
         odds: 5,
       },
         {
-        item: ItemId.LARGE_METAL_CHEST,
+        item: ItemId.CHEST_XL,
         odds: 2,
       },
         {
@@ -668,33 +662,33 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 7,
       },
         {
-        item: ItemId.MATTRESS,
+        item: ItemId.BED,
         odds: 4,
       },
         {
-        item: ItemId.RADIUS_RADAR_BEACON,
+        item: ItemId.TAGGER,
         odds: 5,
       },
         {
-        item: ItemId.AQUA_SPLASH_INCOMPLETE,
+        item: ItemId.WATERGUN_OPT_PART,
         odds: 5,
       },
         {
-        item: ItemId.EKTORP_GLUTEN_CHAIR,
+        item: ItemId.CHAIR_BASIC,
         odds: 4,
       },
         {
-        item: ItemId.COMPACT_DETONATOR,
+        item: ItemId.DETO,
         odds: 5,
       },
         {
-        item: ItemId.WIRE_REEL,
+        item: ItemId.WIRE,
         odds: 3,
       }
     ]
   },
-  [ZoneBuildingId.NUCLEAR_BUNKER]: {
-    id: ZoneBuildingId.NUCLEAR_BUNKER,
+  [RuinId.NUCLEAR_BUNKER]: {
+    id: RuinId.NUCLEAR_BUNKER,
     name: {
       [Lang.EN]: "Nuclear Bunker",
       [Lang.FR]: "Abri anti-atomique",
@@ -718,19 +712,19 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.SHEET_METAL_PARTS,
+        item: ItemId.PLATE_RAW,
         odds: 5,
       },
         {
-        item: ItemId.ASSAULT_RIFLE_UNLOADED,
+        item: ItemId.MACHINE_GUN,
         odds: 4,
       },
         {
-        item: ItemId.JERRYCAN_GUN_UNATTACHED,
+        item: ItemId.JERRYGUN_PART,
         odds: 5,
       },
         {
-        item: ItemId.FULL_JERRYCAN,
+        item: ItemId.JERRYCAN,
         odds: 5,
       },
         {
@@ -738,15 +732,15 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 5,
       },
         {
-        item: ItemId.INCOMPLETE_CHAINSAW,
+        item: ItemId.CHAINSAW_PART,
         odds: 2,
       },
         {
-        item: ItemId.ELECTRIC_WHISK_INCOMPLETE,
+        item: ItemId.MIXERGUN_PART,
         odds: 5,
       },
         {
-        item: ItemId.PHARMACEUTICAL_PRODUCTS,
+        item: ItemId.PHARMA,
         odds: 6,
       },
         {
@@ -754,41 +748,41 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 9,
       },
         {
-        item: ItemId.TWINOID_500MG,
+        item: ItemId.DRUG_HERO,
         odds: 20,
       },
         {
-        item: ItemId.METAL_CHEST,
+        item: ItemId.CHEST,
         odds: 10,
       },
         {
-        item: ItemId.ELECTRONIC_COMPONENT,
+        item: ItemId.ELECTRO,
         odds: 8,
       },
         {
-        item: ItemId.TASER_INCOMPLETE,
+        item: ItemId.TASER_EMPTY,
         odds: 8,
       },
         {
-        item: ItemId.DEVASTATOR_INCOMPLETE,
+        item: ItemId.BIG_PGUN_PART,
         odds: 5,
       },
         {
-        item: ItemId.LARGE_METAL_CHEST,
+        item: ItemId.CHEST_XL,
         odds: 1,
       },
         {
-        item: ItemId.RADIUS_RADAR_BEACON,
+        item: ItemId.TAGGER,
         odds: 10,
       },
         {
-        item: ItemId.RADIUS_MARK_II_INCOMPLETE,
+        item: ItemId.RADIUS_MK2_PART,
         odds: 5,
       }
     ]
   },
-  [ZoneBuildingId.MAC_S_ATOMIC_CAFE]: {
-    id: ZoneBuildingId.MAC_S_ATOMIC_CAFE,
+  [RuinId.MAC_S_ATOMIC_CAFE]: {
+    id: RuinId.MAC_S_ATOMIC_CAFE,
     name: {
       [Lang.EN]: "Mac's Atomic Cafe",
       [Lang.FR]: "Atomic’ Café",
@@ -812,45 +806,45 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.BLOODY_HOT_COFFEE,
+        item: ItemId.COFFEE,
         odds: 20,
       },
         {
-        item: ItemId.ANABOLIC_STEROIDS,
+        item: ItemId.DRUG,
         odds: 5,
       },
         {
-        item: ItemId.PHARMACEUTICAL_PRODUCTS,
+        item: ItemId.PHARMA,
         odds: 5,
       },
         {
-        item: ItemId.HALF_EATEN_CHICKEN_WINGS,
+        item: ItemId.FOOD_CHICK,
         odds: 20,
       },
         {
-        item: ItemId._WAKE_THE_DEAD_,
+        item: ItemId.RHUM,
         odds: 10,
       },
         {
-        item: ItemId.VODKA_MARINOSTOV,
+        item: ItemId.VODKA,
         odds: 10,
       },
         {
-        item: ItemId.GIANT_RAT,
+        item: ItemId.PET_RAT,
         odds: 10,
       },
         {
-        item: ItemId.INCOMPLETE_CAFETI_RE,
+        item: ItemId.COFFEE_MACHINE_PART,
         odds: 1,
       },
         {
-        item: ItemId.BEST_OF_THE_KING_CD,
+        item: ItemId.CDELVI,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.MOTORWAY_SERVICES]: {
-    id: ZoneBuildingId.MOTORWAY_SERVICES,
+  [RuinId.MOTORWAY_SERVICES]: {
+    id: RuinId.MOTORWAY_SERVICES,
     name: {
       [Lang.EN]: "Motorway Services",
       [Lang.FR]: "Relais autoroutier",
@@ -874,61 +868,61 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.PACKET_OF_SOFT_CRISPS,
+        item: ItemId.FOOD_BAR1,
         odds: 10,
       },
         {
-        item: ItemId.MOULDY_NEAPOLITAN,
+        item: ItemId.FOOD_BAR2,
         odds: 10,
       },
         {
-        item: ItemId.DRIED_CHEWING_GUM,
+        item: ItemId.FOOD_BAR3,
         odds: 10,
       },
         {
-        item: ItemId.RANCID_JAFFA_CAKES,
+        item: ItemId.FOOD_BISCUIT,
         odds: 10,
       },
         {
-        item: ItemId.HALF_EATEN_CHICKEN_WINGS,
+        item: ItemId.FOOD_CHICK,
         odds: 10,
       },
         {
-        item: ItemId.OUT_OF_DATE_BISCUITS,
+        item: ItemId.FOOD_PIMS,
         odds: 10,
       },
         {
-        item: ItemId.STALE_TART,
+        item: ItemId.FOOD_TARTE,
         odds: 10,
       },
         {
-        item: ItemId._WAKE_THE_DEAD_,
+        item: ItemId.RHUM,
         odds: 7,
       },
         {
-        item: ItemId.BLOODY_HOT_COFFEE,
+        item: ItemId.COFFEE,
         odds: 1,
       },
         {
-        item: ItemId.RADIO_CASSETTE_PLAYER_NO_BATTERY,
+        item: ItemId.RADIO_OFF,
         odds: 3,
       },
         {
-        item: ItemId.GIANT_RAT,
+        item: ItemId.PET_RAT,
         odds: 20,
       },
         {
-        item: ItemId.J_RPEN_TABLE,
+        item: ItemId.TABLE,
         odds: 1,
       },
         {
-        item: ItemId.EMPTY_OIL_CAN,
+        item: ItemId.OILCAN,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.WRECKED_CARS]: {
-    id: ZoneBuildingId.WRECKED_CARS,
+  [RuinId.WRECKED_CARS]: {
+    id: RuinId.WRECKED_CARS,
     name: {
       [Lang.EN]: "Wrecked Cars",
       [Lang.FR]: "Carcasses de voitures",
@@ -952,57 +946,57 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.WROUGHT_IRON,
+        item: ItemId.METAL,
         odds: 50,
       },
         {
-        item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS,
+        item: ItemId.MECA_PARTS,
         odds: 5,
       },
         {
-        item: ItemId.KWIK_FIX,
+        item: ItemId.REPAIR_ONE,
         odds: 5,
       },
         {
-        item: ItemId.VODKA_MARINOSTOV,
+        item: ItemId.VODKA,
         odds: 2,
       },
         {
-        item: ItemId._WAKE_THE_DEAD_,
+        item: ItemId.RHUM,
         odds: 2,
       },
         {
-        item: ItemId.FULL_JERRYCAN,
+        item: ItemId.JERRYCAN,
         odds: 2,
       },
         {
-        item: ItemId.SHEET_METAL_PARTS,
+        item: ItemId.PLATE_RAW,
         odds: 10,
       },
         {
-        item: ItemId.BELT,
+        item: ItemId.COURROIE,
         odds: 3,
       },
         {
-        item: ItemId.COPPER_PIPE,
+        item: ItemId.TUBE,
         odds: 8,
       },
         {
-        item: ItemId.METAL_CHEST,
+        item: ItemId.CHEST,
         odds: 9,
       },
         {
-        item: ItemId.ENGINE_INCOMPLETE,
+        item: ItemId.ENGINE_PART,
         odds: 1,
       },
         {
-        item: ItemId.EMPTY_OIL_CAN,
+        item: ItemId.OILCAN,
         odds: 6,
       }
     ]
   },
-  [ZoneBuildingId.THE__SHATTERED_ILLUSIONS__BAR]: {
-    id: ZoneBuildingId.THE__SHATTERED_ILLUSIONS__BAR,
+  [RuinId.THE__SHATTERED_ILLUSIONS__BAR]: {
+    id: RuinId.THE__SHATTERED_ILLUSIONS__BAR,
     name: {
       [Lang.EN]: "The 'Shattered Illusions' Bar",
       [Lang.FR]: "Le bar des illusions perdues",
@@ -1026,41 +1020,41 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.STACK_OF_PAPERS,
+        item: ItemId.RP_SHEETS,
         odds: 5,
       },
         {
-        item: ItemId.INSTRUCTION_MANUAL,
+        item: ItemId.RP_MANUAL,
         odds: 5,
       },
         {
-        item: ItemId.SCROLL,
+        item: ItemId.RP_SCROLL,
         odds: 5,
       },
         {
-        item: ItemId.ILLEGIBLE_NOTEBOOK,
+        item: ItemId.RP_BOOK2,
         odds: 5,
       },
         {
-        item: ItemId.DUSTY_BOOK,
+        item: ItemId.RP_BOOK,
         odds: 5,
       },
         {
-        item: ItemId.OPENED_PACKET_OF_CIGARETTES,
+        item: ItemId.CIGS,
         odds: 5,
       },
         {
-        item: ItemId._WAKE_THE_DEAD_,
+        item: ItemId.RHUM,
         odds: 10,
       },
         {
-        item: ItemId.GUARD_DOG,
+        item: ItemId.PET_DOG,
         odds: 10,
       }
     ]
   },
-  [ZoneBuildingId.HOME_DEPOT]: {
-    id: ZoneBuildingId.HOME_DEPOT,
+  [RuinId.HOME_DEPOT]: {
+    id: RuinId.HOME_DEPOT,
     name: {
       [Lang.EN]: "Home Depot",
       [Lang.FR]: "Bricotout",
@@ -1084,19 +1078,19 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS,
+        item: ItemId.MECA_PARTS,
         odds: 5,
       },
         {
-        item: ItemId.SHEET_METAL_PARTS,
+        item: ItemId.PLATE_RAW,
         odds: 15,
       },
         {
-        item: ItemId.DAMAGED_HACKSAW,
+        item: ItemId.SAW_TOOL_PART,
         odds: 2,
       },
         {
-        item: ItemId.METAL_CHEST,
+        item: ItemId.CHEST,
         odds: 20,
       },
         {
@@ -1104,19 +1098,19 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 40,
       },
         {
-        item: ItemId.ADJUSTABLE_SPANNER,
+        item: ItemId.WRENCH,
         odds: 5,
       },
         {
-        item: ItemId.SWISS_ARMY_KNIFE,
+        item: ItemId.SWISS_KNIFE,
         odds: 15,
       },
         {
-        item: ItemId.PADLOCK_AND_CHAIN,
+        item: ItemId.LOCK,
         odds: 5,
       },
         {
-        item: ItemId.LARGE_METAL_CHEST,
+        item: ItemId.CHEST_XL,
         odds: 1,
       },
         {
@@ -1124,53 +1118,53 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 8,
       },
         {
-        item: ItemId.BATTERY,
+        item: ItemId.PILE,
         odds: 5,
       },
         {
-        item: ItemId.TOOLBOX,
+        item: ItemId.CHEST_TOOLS,
         odds: 20,
       },
         {
-        item: ItemId.COPPER_PIPE,
+        item: ItemId.TUBE,
         odds: 3,
       },
         {
-        item: ItemId.UTILITY_BELT,
+        item: ItemId.POCKET_BELT,
         odds: 1,
       },
         {
-        item: ItemId.SEMTEX,
+        item: ItemId.EXPLO,
         odds: 5,
       },
         {
-        item: ItemId.BROKEN_ELECTRONIC_DEVICE,
+        item: ItemId.ELECTRO_BOX,
         odds: 10,
       },
         {
-        item: ItemId.BAG_OF_CEMENT,
+        item: ItemId.CONCRETE,
         odds: 15,
       },
         {
-        item: ItemId.NESS_QUICK_WEEDKILLER,
+        item: ItemId.DIGGER,
         odds: 10,
       },
         {
-        item: ItemId.BOX_OF_MATCHES,
+        item: ItemId.LIGHTS,
         odds: 5,
       },
         {
-        item: ItemId.EMPTY_OIL_CAN,
+        item: ItemId.OILCAN,
         odds: 5,
       },
         {
-        item: ItemId.WIRE_REEL,
+        item: ItemId.WIRE,
         odds: 7,
       }
     ]
   },
-  [ZoneBuildingId.CONSTRUCTION_SITE_SHELTER]: {
-    id: ZoneBuildingId.CONSTRUCTION_SITE_SHELTER,
+  [RuinId.CONSTRUCTION_SITE_SHELTER]: {
+    id: RuinId.CONSTRUCTION_SITE_SHELTER,
     name: {
       [Lang.EN]: "Construction Site Shelter",
       [Lang.FR]: "Abri de chantier",
@@ -1194,39 +1188,39 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.BAG_OF_CEMENT,
+        item: ItemId.CONCRETE,
         odds: 7,
       },
         {
-        item: ItemId.METAL_SUPPORT,
+        item: ItemId.METAL_BEAM,
         odds: 10,
       },
         {
-        item: ItemId.TOOL_BAG,
+        item: ItemId.REPAIR_KIT_PART_RAW,
         odds: 5,
       },
         {
-        item: ItemId.FULL_JERRYCAN,
+        item: ItemId.JERRYCAN,
         odds: 10,
       },
         {
-        item: ItemId.RUSTY_CHAIN,
+        item: ItemId.CHAIN,
         odds: 10,
       },
         {
-        item: ItemId.BOXES,
+        item: ItemId.HOME_BOX,
         odds: 8,
       },
         {
-        item: ItemId.CONSTRUCTION_KIT_2,
+        item: ItemId.RSC_PACK_2,
         odds: 10,
       },
         {
-        item: ItemId.CONSTRUCTION_KIT_3,
+        item: ItemId.RSC_PACK_3,
         odds: 2,
       },
         {
-        item: ItemId.MAKESHIFT_BARRICADE,
+        item: ItemId.HOME_DEF,
         odds: 7,
       },
         {
@@ -1234,37 +1228,37 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 10,
       },
         {
-        item: ItemId.DAMAGED_HACKSAW,
+        item: ItemId.SAW_TOOL_PART,
         odds: 2,
       },
         {
-        item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS,
+        item: ItemId.MECA_PARTS,
         odds: 8,
       },
         {
-        item: ItemId.OLD_DOOR,
+        item: ItemId.DOOR,
         odds: 5,
       },
         {
-        item: ItemId.SCREWDRIVER,
+        item: ItemId.SCREW,
         odds: 8,
       },
         {
-        item: ItemId.ADJUSTABLE_SPANNER,
+        item: ItemId.WRENCH,
         odds: 8,
       },
         {
-        item: ItemId.MECHANISM,
+        item: ItemId.MECANISM,
         odds: 8,
       },
         {
-        item: ItemId.EMPTY_OIL_CAN,
+        item: ItemId.OILCAN,
         odds: 2,
       }
     ]
   },
-  [ZoneBuildingId.FRASER_D_S_KEBAB_ISH]: {
-    id: ZoneBuildingId.FRASER_D_S_KEBAB_ISH,
+  [RuinId.FRASER_D_S_KEBAB_ISH]: {
+    id: RuinId.FRASER_D_S_KEBAB_ISH,
     name: {
       [Lang.EN]: "Fraser D's Kebab-ish",
       [Lang.FR]: "Kebab « Chez Coluche »",
@@ -1288,57 +1282,57 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.TASTY_LOOKING_STEAK,
+        item: ItemId.MEAT,
         odds: 100,
       },
         {
-        item: ItemId.SUSPICIOUS_LOOKING_VEGETABLE,
+        item: ItemId.VEGETABLE,
         odds: 80,
       },
         {
-        item: ItemId.GIANT_RAT,
+        item: ItemId.PET_RAT,
         odds: 20,
       },
         {
-        item: ItemId.SERRATED_KNIFE,
+        item: ItemId.KNIFE,
         odds: 40,
       },
         {
-        item: ItemId.FULL_JERRYCAN,
+        item: ItemId.JERRYCAN,
         odds: 40,
       },
         {
-        item: ItemId.VODKA_MARINOSTOV,
+        item: ItemId.VODKA,
         odds: 5,
       },
         {
-        item: ItemId.INCOMPLETE_CHAINSAW,
+        item: ItemId.CHAINSAW_PART,
         odds: 2,
       },
         {
-        item: ItemId.ELECTRIC_WHISK_INCOMPLETE,
+        item: ItemId.MIXERGUN_PART,
         odds: 4,
       },
         {
-        item: ItemId.STINKING_PIG,
+        item: ItemId.PET_PIG,
         odds: 1,
       },
         {
-        item: ItemId.CYANIDE,
+        item: ItemId.CYANURE,
         odds: 1,
       },
         {
-        item: ItemId.INCOMPLETE_CAFETI_RE,
+        item: ItemId.COFFEE_MACHINE_PART,
         odds: 1,
       },
         {
-        item: ItemId.FOOD_PARCEL,
+        item: ItemId.CHEST_FOOD,
         odds: 10,
       }
     ]
   },
-  [ZoneBuildingId.DUKE_S_VILLA]: {
-    id: ZoneBuildingId.DUKE_S_VILLA,
+  [RuinId.DUKE_S_VILLA]: {
+    id: RuinId.DUKE_S_VILLA,
     name: {
       [Lang.EN]: "Duke's Villa",
       [Lang.FR]: "Villa de Duke",
@@ -1362,53 +1356,53 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.POCKET_VIBRATOR_INCOMPLETE,
+        item: ItemId.VIBR_EMPTY,
         odds: 10,
       },
         {
-        item: ItemId.TWINOID_500MG,
+        item: ItemId.DRUG_HERO,
         odds: 20,
       },
         {
-        item: ItemId.VODKA_MARINOSTOV,
+        item: ItemId.VODKA,
         odds: 10,
       },
         {
-        item: ItemId._WAKE_THE_DEAD_,
+        item: ItemId.RHUM,
         odds: 10,
       },
         {
-        item: ItemId.EMS_SYSTEM_INCOMPLETE,
+        item: ItemId.SPORT_ELEC_EMPTY,
         odds: 7,
       },
         {
-        item: ItemId.DEVASTATOR_INCOMPLETE,
+        item: ItemId.BIG_PGUN_PART,
         odds: 5,
       },
         {
-        item: ItemId.RADIUS_MARK_II_INCOMPLETE,
+        item: ItemId.RADIUS_MK2_PART,
         odds: 5,
       },
         {
-        item: ItemId.BATTERY,
+        item: ItemId.PILE,
         odds: 10,
       },
         {
-        item: ItemId.LARGE_METAL_CHEST,
+        item: ItemId.CHEST_XL,
         odds: 1,
       },
         {
-        item: ItemId.PLASTIC_BAG_AND_SEMTEX,
+        item: ItemId.BGRENADE_EMPTY,
         odds: 8,
       },
         {
-        item: ItemId.BURNING_LASER_POINTER_1_CHARGE,
+        item: ItemId.LPOINT1,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.DARK_WOODS]: {
-    id: ZoneBuildingId.DARK_WOODS,
+  [RuinId.DARK_WOODS]: {
+    id: RuinId.DARK_WOODS,
     name: {
       [Lang.EN]: "Dark Woods",
       [Lang.FR]: "Petit bois obscur",
@@ -1432,49 +1426,49 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.ROTTING_LOG,
+        item: ItemId.WOOD_BAD,
         odds: 100,
       },
         {
-        item: ItemId.HUMAN_FLESH,
+        item: ItemId.HMEAT,
         odds: 10,
       },
         {
-        item: ItemId.SUSPICIOUS_LOOKING_VEGETABLE,
+        item: ItemId.VEGETABLE,
         odds: 10,
       },
         {
-        item: ItemId.GIANT_RAT,
+        item: ItemId.PET_RAT,
         odds: 5,
       },
         {
-        item: ItemId.DAMAGED_HACKSAW,
+        item: ItemId.SAW_TOOL_PART,
         odds: 1,
       },
         {
-        item: ItemId.CHICKEN,
+        item: ItemId.PET_CHICK,
         odds: 5,
       },
         {
-        item: ItemId.PLASTIC_BAG,
+        item: ItemId.GRENADE_EMPTY,
         odds: 5,
       },
         {
-        item: ItemId.SHEET_METAL_PARTS,
+        item: ItemId.PLATE_RAW,
         odds: 5,
       },
         {
-        item: ItemId.BAG_OF_DAMP_GRASS,
+        item: ItemId.RYEBAG,
         odds: 6,
       },
         {
-        item: ItemId.FAT_SERPENT,
+        item: ItemId.PET_SNAKE2,
         odds: 4,
       }
     ]
   },
-  [ZoneBuildingId.COLLAPSED_MINESHAFT]: {
-    id: ZoneBuildingId.COLLAPSED_MINESHAFT,
+  [RuinId.COLLAPSED_MINESHAFT]: {
+    id: RuinId.COLLAPSED_MINESHAFT,
     name: {
       [Lang.EN]: "Collapsed Mineshaft",
       [Lang.FR]: "Mine effondrée",
@@ -1498,33 +1492,33 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.FLASH_POWDER,
+        item: ItemId.POWDER,
         odds: 30,
       },
         {
-        item: ItemId.UNSHAPED_CONCRETE_BLOCKS,
+        item: ItemId.CONCRETE_WALL,
         odds: 2,
       },
         {
-        item: ItemId.COMPACT_DETONATOR,
+        item: ItemId.DETO,
         odds: 5,
       },
         {
-        item: ItemId.SEMTEX,
+        item: ItemId.EXPLO,
         odds: 5,
       },
         {
-        item: ItemId.MECHANISM,
+        item: ItemId.MECANISM,
         odds: 5,
       },
         {
-        item: ItemId.HUMAN_FLESH,
+        item: ItemId.HMEAT,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.COLLAPSED_QUARRY]: {
-    id: ZoneBuildingId.COLLAPSED_QUARRY,
+  [RuinId.COLLAPSED_QUARRY]: {
+    id: RuinId.COLLAPSED_QUARRY,
     name: {
       [Lang.EN]: "Collapsed Quarry",
       [Lang.FR]: "Carrière effondrée",
@@ -1548,41 +1542,41 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.BAG_OF_CEMENT,
+        item: ItemId.CONCRETE,
         odds: 35,
       },
         {
-        item: ItemId.METAL_SUPPORT,
+        item: ItemId.METAL_BEAM,
         odds: 10,
       },
         {
-        item: ItemId.SHEET_METAL_PARTS,
+        item: ItemId.PLATE_RAW,
         odds: 10,
       },
         {
-        item: ItemId.TOOLBOX,
+        item: ItemId.CHEST_TOOLS,
         odds: 15,
       },
         {
-        item: ItemId.METAL_CHEST,
+        item: ItemId.CHEST,
         odds: 5,
       },
         {
-        item: ItemId.HUMAN_FLESH,
+        item: ItemId.HMEAT,
         odds: 2,
       },
         {
-        item: ItemId.PADLOCK_AND_CHAIN,
+        item: ItemId.LOCK,
         odds: 4,
       },
         {
-        item: ItemId.LARGE_METAL_CHEST,
+        item: ItemId.CHEST_XL,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.STRANGE_CIRCULAR_DEVICE]: {
-    id: ZoneBuildingId.STRANGE_CIRCULAR_DEVICE,
+  [RuinId.STRANGE_CIRCULAR_DEVICE]: {
+    id: RuinId.STRANGE_CIRCULAR_DEVICE,
     name: {
       [Lang.EN]: "Strange Circular Device",
       [Lang.FR]: "Un étrange appareil circulaire",
@@ -1606,29 +1600,29 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.SCRAP_METAL,
+        item: ItemId.METAL_BAD,
         odds: 40,
       },
         {
-        item: ItemId.SHEET_METAL_PARTS,
+        item: ItemId.PLATE_RAW,
         odds: 10,
       },
         {
-        item: ItemId.MOBILE_PHONE,
+        item: ItemId.IPHONE,
         odds: 5,
       },
         {
-        item: ItemId.LARGE_METAL_CHEST,
+        item: ItemId.CHEST_XL,
         odds: 1,
       },
         {
-        item: ItemId.ULTRA_RUCKSACK,
+        item: ItemId.BAGXL,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.PI_KEYA_FURNITURE]: {
-    id: ZoneBuildingId.PI_KEYA_FURNITURE,
+  [RuinId.PI_KEYA_FURNITURE]: {
+    id: RuinId.PI_KEYA_FURNITURE,
     name: {
       [Lang.EN]: "PI-KEYA Furniture",
       [Lang.FR]: "Meubles Kiela",
@@ -1652,11 +1646,11 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.CRATE_LID,
+        item: ItemId.WOOD_PLATE_PART,
         odds: 20,
       },
         {
-        item: ItemId.FLATPACKED_FURNITURE,
+        item: ItemId.DECO_BOX,
         odds: 40,
       },
         {
@@ -1664,45 +1658,45 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 10,
       },
         {
-        item: ItemId.DAMAGED_HACKSAW,
+        item: ItemId.SAW_TOOL_PART,
         odds: 1,
       },
         {
-        item: ItemId.J_RPEN_TABLE,
+        item: ItemId.TABLE,
         odds: 10,
       },
         {
-        item: ItemId.EKTORP_GLUTEN_CHAIR,
+        item: ItemId.CHAIR_BASIC,
         odds: 10,
       },
         {
-        item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS,
+        item: ItemId.MECA_PARTS,
         odds: 5,
       },
         {
-        item: ItemId.OLD_DOOR,
+        item: ItemId.DOOR,
         odds: 5,
       },
         {
-        item: ItemId.BOX_CUTTER,
+        item: ItemId.CUTTER,
         odds: 10,
       },
         {
-        item: ItemId.SCREWDRIVER,
+        item: ItemId.SCREW,
         odds: 10,
       },
         {
-        item: ItemId.MATTRESS,
+        item: ItemId.BED,
         odds: 10,
       },
         {
-        item: ItemId.TWISTED_PLANK,
+        item: ItemId.WOOD2,
         odds: 5,
       }
     ]
   },
-  [ZoneBuildingId.FAMILY_TOMB]: {
-    id: ZoneBuildingId.FAMILY_TOMB,
+  [RuinId.FAMILY_TOMB]: {
+    id: RuinId.FAMILY_TOMB,
     name: {
       [Lang.EN]: "Family Tomb",
       [Lang.FR]: "Caveau familial",
@@ -1726,29 +1720,29 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.HUMAN_FLESH,
+        item: ItemId.HMEAT,
         odds: 40,
       },
         {
-        item: ItemId.GIANT_RAT,
+        item: ItemId.PET_RAT,
         odds: 5,
       },
         {
-        item: ItemId.ASSAULT_RIFLE_UNLOADED,
+        item: ItemId.MACHINE_GUN,
         odds: 10,
       },
         {
-        item: ItemId.REVOLVER_UNLOADED,
+        item: ItemId.GUN,
         odds: 25,
       },
         {
-        item: ItemId.NESS_QUICK_WEEDKILLER,
+        item: ItemId.DIGGER,
         odds: 3,
       }
     ]
   },
-  [ZoneBuildingId.FAST_FOOD_RESTAURANT]: {
-    id: ZoneBuildingId.FAST_FOOD_RESTAURANT,
+  [RuinId.FAST_FOOD_RESTAURANT]: {
+    id: RuinId.FAST_FOOD_RESTAURANT,
     name: {
       [Lang.EN]: "Fast Food Restaurant",
       [Lang.FR]: "Fast-food",
@@ -1776,45 +1770,45 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 10,
       },
         {
-        item: ItemId.SUSPICIOUS_LOOKING_VEGETABLE,
+        item: ItemId.VEGETABLE,
         odds: 10,
       },
         {
-        item: ItemId.DOGGY_BAG,
+        item: ItemId.FOOD_BAG,
         odds: 10,
       },
         {
-        item: ItemId.HUMAN_FLESH,
+        item: ItemId.HMEAT,
         odds: 10,
       },
         {
-        item: ItemId.PHARMACEUTICAL_PRODUCTS,
+        item: ItemId.PHARMA,
         odds: 10,
       },
         {
-        item: ItemId.TASTY_LOOKING_STEAK,
+        item: ItemId.MEAT,
         odds: 40,
       },
         {
-        item: ItemId.BLOODY_HOT_COFFEE,
+        item: ItemId.COFFEE,
         odds: 70,
       },
         {
-        item: ItemId.INCOMPLETE_CAFETI_RE,
+        item: ItemId.COFFEE_MACHINE_PART,
         odds: 1,
       },
         {
-        item: ItemId.NESS_QUICK_WEEDKILLER,
+        item: ItemId.DIGGER,
         odds: 4,
       },
         {
-        item: ItemId.FOOD_PARCEL,
+        item: ItemId.CHEST_FOOD,
         odds: 5,
       }
     ]
   },
-  [ZoneBuildingId.PLANE_CRASH_SITE]: {
-    id: ZoneBuildingId.PLANE_CRASH_SITE,
+  [RuinId.PLANE_CRASH_SITE]: {
+    id: RuinId.PLANE_CRASH_SITE,
     name: {
       [Lang.EN]: "Plane Crash Site",
       [Lang.FR]: "Carlingue d’avion",
@@ -1838,89 +1832,89 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.BROKEN_ELECTRONIC_DEVICE,
+        item: ItemId.ELECTRO_BOX,
         odds: 10,
       },
         {
-        item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS,
+        item: ItemId.MECA_PARTS,
         odds: 10,
       },
         {
-        item: ItemId.METAL_SUPPORT,
+        item: ItemId.METAL_BEAM,
         odds: 30,
       },
         {
-        item: ItemId.WROUGHT_IRON,
+        item: ItemId.METAL,
         odds: 10,
       },
         {
-        item: ItemId.SHEET_METAL_PARTS,
+        item: ItemId.PLATE_RAW,
         odds: 30,
       },
         {
-        item: ItemId.SCREWDRIVER,
+        item: ItemId.SCREW,
         odds: 10,
       },
         {
-        item: ItemId.COPPER_PIPE,
+        item: ItemId.TUBE,
         odds: 20,
       },
         {
-        item: ItemId.BELT,
+        item: ItemId.COURROIE,
         odds: 10,
       },
         {
-        item: ItemId.POCKET_VIBRATOR_INCOMPLETE,
+        item: ItemId.VIBR_EMPTY,
         odds: 4,
       },
         {
-        item: ItemId.RADIUS_RADAR_BEACON,
+        item: ItemId.TAGGER,
         odds: 8,
       },
         {
-        item: ItemId.RADIUS_MARK_II_INCOMPLETE,
+        item: ItemId.RADIUS_MK2_PART,
         odds: 3,
       },
         {
-        item: ItemId.KWIK_FIX,
+        item: ItemId.REPAIR_ONE,
         odds: 10,
       },
         {
-        item: ItemId.TOOL_BAG,
+        item: ItemId.REPAIR_KIT_PART_RAW,
         odds: 4,
       },
         {
-        item: ItemId.TOOLBOX,
+        item: ItemId.CHEST_TOOLS,
         odds: 20,
       },
         {
-        item: ItemId.METAL_CHEST,
+        item: ItemId.CHEST,
         odds: 15,
       },
         {
-        item: ItemId.ENGINE_INCOMPLETE,
+        item: ItemId.ENGINE_PART,
         odds: 2,
       },
         {
-        item: ItemId.HUGE_SNAKE_OPHIOPHAGUS_TROUSER,
+        item: ItemId.PET_SNAKE,
         odds: 2,
       },
         {
-        item: ItemId.WIRE_REEL,
+        item: ItemId.WIRE,
         odds: 5,
       },
         {
-        item: ItemId.CHUCK_FIGURINE,
+        item: ItemId.CHUDOL,
         odds: 2,
       },
         {
-        item: ItemId.SCHR_DINGER_S_BOX,
+        item: ItemId.CATBOX,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.GARDEN_SHED]: {
-    id: ZoneBuildingId.GARDEN_SHED,
+  [RuinId.GARDEN_SHED]: {
+    id: RuinId.GARDEN_SHED,
     name: {
       [Lang.EN]: "Garden Shed",
       [Lang.FR]: "Cabane de jardin",
@@ -1944,69 +1938,69 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.NESS_QUICK_WEEDKILLER,
+        item: ItemId.DIGGER,
         odds: 30,
       },
         {
-        item: ItemId.DISMANTLED_MOWER,
+        item: ItemId.LAWN_PART,
         odds: 5,
       },
         {
-        item: ItemId.BROKEN_STAFF_2,
+        item: ItemId.STAFF2,
         odds: 1,
       },
         {
-        item: ItemId.BOX_OF_MATCHES,
+        item: ItemId.LIGHTS,
         odds: 5,
       },
         {
-        item: ItemId.JERRYCAN_GUN_UNATTACHED,
+        item: ItemId.JERRYGUN_PART,
         odds: 2,
       },
         {
-        item: ItemId.INCOMPLETE_CHAINSAW,
+        item: ItemId.CHAINSAW_PART,
         odds: 1,
       },
         {
-        item: ItemId.TOOLBOX,
+        item: ItemId.CHEST_TOOLS,
         odds: 10,
       },
         {
-        item: ItemId.INTESTINE_MELON,
+        item: ItemId.VEGETABLE_TASTY,
         odds: 10,
       },
         {
-        item: ItemId.BAG_OF_CEMENT,
+        item: ItemId.CONCRETE,
         odds: 3,
       },
         {
-        item: ItemId.QUALITY_LOG,
+        item: ItemId.WOOD_LOG,
         odds: 4,
       },
         {
-        item: ItemId.BROKEN_ELECTRONIC_DEVICE,
+        item: ItemId.ELECTRO_BOX,
         odds: 10,
       },
         {
-        item: ItemId.FULL_JERRYCAN,
+        item: ItemId.JERRYCAN,
         odds: 10,
       },
         {
-        item: ItemId.CONSTRUCTION_KIT_3,
+        item: ItemId.RSC_PACK_3,
         odds: 3,
       },
         {
-        item: ItemId.BAG_OF_DAMP_GRASS,
+        item: ItemId.RYEBAG,
         odds: 4,
       },
         {
-        item: ItemId.FURIOUS_KITTEN_PARTIALLY_DIGESTED,
+        item: ItemId.ANGRYC,
         odds: 2,
       }
     ]
   },
-  [ZoneBuildingId.LOOTED_SUPERMARKET]: {
-    id: ZoneBuildingId.LOOTED_SUPERMARKET,
+  [RuinId.LOOTED_SUPERMARKET]: {
+    id: RuinId.LOOTED_SUPERMARKET,
     name: {
       [Lang.EN]: "Looted Supermarket",
       [Lang.FR]: "Supermarché pillé",
@@ -2030,47 +2024,47 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.DUCT_TAPE,
+        item: ItemId.RUSTINE,
         odds: 10,
       },
         {
-        item: ItemId.BROKEN_ELECTRONIC_DEVICE,
+        item: ItemId.ELECTRO_BOX,
         odds: 5,
       },
         {
-        item: ItemId.DAMAGED_HACKSAW,
+        item: ItemId.SAW_TOOL_PART,
         odds: 1,
       },
         {
-        item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS,
+        item: ItemId.MECA_PARTS,
         odds: 6,
       },
         {
-        item: ItemId.TASTY_LOOKING_STEAK,
+        item: ItemId.MEAT,
         odds: 20,
       },
         {
-        item: ItemId.TWINOID_500MG,
+        item: ItemId.DRUG_HERO,
         odds: 5,
       },
         {
-        item: ItemId.PLASTIC_BAG,
+        item: ItemId.GRENADE_EMPTY,
         odds: 20,
       },
         {
-        item: ItemId.WONKY_SHOPPING_TROLLEY,
+        item: ItemId.CART_PART,
         odds: 20,
       },
         {
-        item: ItemId.WATER_RATION,
+        item: ItemId.WATER,
         odds: 5,
       },
         {
-        item: ItemId.BATTERY,
+        item: ItemId.PILE,
         odds: 8,
       },
         {
-        item: ItemId.FULL_JERRYCAN,
+        item: ItemId.JERRYCAN,
         odds: 5,
       },
         {
@@ -2078,19 +2072,19 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 8,
       },
         {
-        item: ItemId.VODKA_MARINOSTOV,
+        item: ItemId.VODKA,
         odds: 4,
       },
         {
-        item: ItemId._WAKE_THE_DEAD_,
+        item: ItemId.RHUM,
         odds: 4,
       },
         {
-        item: ItemId.JERRYCAN_GUN_UNATTACHED,
+        item: ItemId.JERRYGUN_PART,
         odds: 4,
       },
         {
-        item: ItemId.MATTRESS,
+        item: ItemId.BED,
         odds: 2,
       },
         {
@@ -2098,33 +2092,33 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 5,
       },
         {
-        item: ItemId.UNLABELLED_DRUG,
+        item: ItemId.DRUG_RANDOM,
         odds: 2,
       },
         {
-        item: ItemId.INCOMPLETE_CHAINSAW,
+        item: ItemId.CHAINSAW_PART,
         odds: 2,
       },
         {
-        item: ItemId.ELECTRIC_WHISK_INCOMPLETE,
+        item: ItemId.MIXERGUN_PART,
         odds: 3,
       },
         {
-        item: ItemId.NESS_QUICK_WEEDKILLER,
+        item: ItemId.DIGGER,
         odds: 4,
       },
         {
-        item: ItemId.WAD_OF_CASH,
+        item: ItemId.MONEY,
         odds: 7,
       },
         {
-        item: ItemId.DRIED_MARSHMALLOWS,
+        item: ItemId.CHAMA,
         odds: 5,
       }
     ]
   },
-  [ZoneBuildingId.CAVE]: {
-    id: ZoneBuildingId.CAVE,
+  [RuinId.CAVE]: {
+    id: RuinId.CAVE,
     name: {
       [Lang.EN]: "Cave",
       [Lang.FR]: "Caverne",
@@ -2148,37 +2142,37 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.HUMAN_FLESH,
+        item: ItemId.HMEAT,
         odds: 20,
       },
         {
-        item: ItemId.CITIZEN_S_WELCOME_PACK,
+        item: ItemId.CHEST_CITIZEN,
         odds: 15,
       },
         {
-        item: ItemId.TOOLBOX,
+        item: ItemId.CHEST_TOOLS,
         odds: 15,
       },
         {
-        item: ItemId.METAL_CHEST,
+        item: ItemId.CHEST,
         odds: 15,
       },
         {
-        item: ItemId.GIANT_RAT,
+        item: ItemId.PET_RAT,
         odds: 5,
       },
         {
-        item: ItemId.HUGE_SNAKE_OPHIOPHAGUS_TROUSER,
+        item: ItemId.PET_SNAKE,
         odds: 5,
       },
         {
-        item: ItemId.RADIUS_RADAR_BEACON,
+        item: ItemId.TAGGER,
         odds: 5,
       }
     ]
   },
-  [ZoneBuildingId.INDIAN_BURIAL_GROUND]: {
-    id: ZoneBuildingId.INDIAN_BURIAL_GROUND,
+  [RuinId.INDIAN_BURIAL_GROUND]: {
+    id: RuinId.INDIAN_BURIAL_GROUND,
     name: {
       [Lang.EN]: "Indian Burial Ground",
       [Lang.FR]: "Cimetière indien",
@@ -2202,33 +2196,33 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.BROKEN_HUMAN_BONE,
+        item: ItemId.BONE,
         odds: 100,
       },
         {
-        item: ItemId.HUMAN_FLESH,
+        item: ItemId.HMEAT,
         odds: 10,
       },
         {
-        item: ItemId.MEATY_BONE,
+        item: ItemId.BONE_MEAT,
         odds: 10,
       },
         {
-        item: ItemId.MANBAG,
+        item: ItemId.BAG,
         odds: 4,
       },
         {
-        item: ItemId.LARGE_METAL_CHEST,
+        item: ItemId.CHEST_XL,
         odds: 2,
       },
         {
-        item: ItemId.GIANT_RAT,
+        item: ItemId.PET_RAT,
         odds: 5,
       }
     ]
   },
-  [ZoneBuildingId.FAIRGROUND_STALL]: {
-    id: ZoneBuildingId.FAIRGROUND_STALL,
+  [RuinId.FAIRGROUND_STALL]: {
+    id: RuinId.FAIRGROUND_STALL,
     name: {
       [Lang.EN]: "Fairground Stall",
       [Lang.FR]: "Stand de fête foraine",
@@ -2252,61 +2246,61 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.PLASTIC_BAG,
+        item: ItemId.GRENADE_EMPTY,
         odds: 30,
       },
         {
-        item: ItemId.WATER_PISTOL_EMPTY,
+        item: ItemId.WATERGUN_EMPTY,
         odds: 10,
       },
         {
-        item: ItemId.BATTERY,
+        item: ItemId.PILE,
         odds: 7,
       },
         {
-        item: ItemId.POCKET_VIBRATOR_INCOMPLETE,
+        item: ItemId.VIBR_EMPTY,
         odds: 5,
       },
         {
-        item: ItemId.BATTERY_LAUNCHER_1_ITF_EMPTY,
+        item: ItemId.PILEGUN_EMPTY,
         odds: 5,
       },
         {
-        item: ItemId.DEVASTATOR_INCOMPLETE,
+        item: ItemId.BIG_PGUN_PART,
         odds: 5,
       },
         {
-        item: ItemId.MINI_HI_FI_BROKEN,
+        item: ItemId.MUSIC_PART,
         odds: 5,
       },
         {
-        item: ItemId.BOX_OF_GAMES,
+        item: ItemId.GAME_BOX,
         odds: 5,
       },
         {
-        item: ItemId.AQUA_SPLASH_INCOMPLETE,
+        item: ItemId.WATERGUN_OPT_PART,
         odds: 5,
       },
         {
-        item: ItemId.DRIED_MARSHMALLOWS,
+        item: ItemId.CHAMA,
         odds: 7,
       },
         {
-        item: ItemId.HANDFUL_OF_SWEETS,
+        item: ItemId.FOOD_CANDIES,
         odds: 5,
       },
         {
-        item: ItemId.CHUCK_FIGURINE,
+        item: ItemId.CHUDOL,
         odds: 2,
       },
         {
-        item: ItemId.PRIMITIVE_HURLING_STICK,
+        item: ItemId.HURLING_STICK,
         odds: 2,
       }
     ]
   },
-  [ZoneBuildingId.SMALL_HOUSE]: {
-    id: ZoneBuildingId.SMALL_HOUSE,
+  [RuinId.SMALL_HOUSE]: {
+    id: RuinId.SMALL_HOUSE,
     name: {
       [Lang.EN]: "Small House",
       [Lang.FR]: "Petite maison",
@@ -2330,69 +2324,69 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.DOGGY_BAG,
+        item: ItemId.FOOD_BAG,
         odds: 10,
       },
         {
-        item: ItemId.EKTORP_GLUTEN_CHAIR,
+        item: ItemId.CHAIR_BASIC,
         odds: 5,
       },
         {
-        item: ItemId.BROKEN_ELECTRONIC_DEVICE,
+        item: ItemId.ELECTRO_BOX,
         odds: 3,
       },
         {
-        item: ItemId.GIANT_RAT,
+        item: ItemId.PET_RAT,
         odds: 6,
       },
         {
-        item: ItemId.FULL_JERRYCAN,
+        item: ItemId.JERRYCAN,
         odds: 6,
       },
         {
-        item: ItemId.PHARMACEUTICAL_PRODUCTS,
+        item: ItemId.PHARMA,
         odds: 12,
       },
         {
-        item: ItemId.DUCT_TAPE,
+        item: ItemId.RUSTINE,
         odds: 10,
       },
         {
-        item: ItemId.BEDSIDE_LAMP,
+        item: ItemId.LAMP,
         odds: 2,
       },
         {
-        item: ItemId.WATER_RATION,
+        item: ItemId.WATER,
         odds: 10,
       },
         {
-        item: ItemId.ROCKING_CHAIR,
+        item: ItemId.CHAIR,
         odds: 2,
       },
         {
-        item: ItemId.DOORMAT,
+        item: ItemId.DOOR_CARPET,
         odds: 1,
       },
         {
-        item: ItemId.PERSIAN_RUG,
+        item: ItemId.CARPET,
         odds: 5,
       },
         {
-        item: ItemId.J_RPEN_TABLE,
+        item: ItemId.TABLE,
         odds: 8,
       },
         {
-        item: ItemId.SUSPICIOUS_LOOKING_VEGETABLE,
+        item: ItemId.VEGETABLE,
         odds: 4,
       },
         {
-        item: ItemId.MATTRESS,
+        item: ItemId.BED,
         odds: 3,
       }
     ]
   },
-  [ZoneBuildingId.WATER_PROCESSING_PLANT]: {
-    id: ZoneBuildingId.WATER_PROCESSING_PLANT,
+  [RuinId.WATER_PROCESSING_PLANT]: {
+    id: RuinId.WATER_PROCESSING_PLANT,
     name: {
       [Lang.EN]: "Water Processing Plant",
       [Lang.FR]: "Centrale hydraulique",
@@ -2416,29 +2410,29 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.FULL_JERRYCAN,
+        item: ItemId.JERRYCAN,
         odds: 85,
       },
         {
-        item: ItemId.WATER_RATION,
+        item: ItemId.WATER,
         odds: 5,
       },
         {
-        item: ItemId.SHEET_METAL_PARTS,
+        item: ItemId.PLATE_RAW,
         odds: 4,
       },
         {
-        item: ItemId.JERRYCAN_GUN_UNATTACHED,
+        item: ItemId.JERRYGUN_PART,
         odds: 4,
       },
         {
-        item: ItemId.HYDRATONE_100MG,
+        item: ItemId.DRUG_WATER,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.COSMETICS_LAB]: {
-    id: ZoneBuildingId.COSMETICS_LAB,
+  [RuinId.COSMETICS_LAB]: {
+    id: RuinId.COSMETICS_LAB,
     name: {
       [Lang.EN]: "Cosmetics Lab",
       [Lang.FR]: "Laboratoire cosmétique",
@@ -2462,65 +2456,65 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.PHARMACEUTICAL_PRODUCTS,
+        item: ItemId.PHARMA,
         odds: 40,
       },
         {
-        item: ItemId.TWINOID_500MG,
+        item: ItemId.DRUG_HERO,
         odds: 5,
       },
         {
-        item: ItemId.UNLABELLED_DRUG,
+        item: ItemId.DRUG_RANDOM,
         odds: 4,
       },
         {
-        item: ItemId.PARACETOID_7G,
+        item: ItemId.DISINFECT,
         odds: 5,
       },
         {
-        item: ItemId.TASTY_LOOKING_STEAK,
+        item: ItemId.MEAT,
         odds: 20,
       },
         {
-        item: ItemId.EMS_SYSTEM_INCOMPLETE,
+        item: ItemId.SPORT_ELEC_EMPTY,
         odds: 8,
       },
         {
-        item: ItemId.GUARD_DOG,
+        item: ItemId.PET_DOG,
         odds: 3,
       },
         {
-        item: ItemId.CHICKEN,
+        item: ItemId.PET_CHICK,
         odds: 3,
       },
         {
-        item: ItemId.HUGE_SNAKE_OPHIOPHAGUS_TROUSER,
+        item: ItemId.PET_SNAKE,
         odds: 5,
       },
         {
-        item: ItemId.GIANT_RAT,
+        item: ItemId.PET_RAT,
         odds: 20,
       },
         {
-        item: ItemId.STINKING_PIG,
+        item: ItemId.PET_PIG,
         odds: 10,
       },
         {
-        item: ItemId.FAT_CAT,
+        item: ItemId.PET_CAT,
         odds: 5,
       },
         {
-        item: ItemId.VALIUM_SHOT,
+        item: ItemId.XANAX,
         odds: 8,
       },
         {
-        item: ItemId.FURIOUS_KITTEN_PARTIALLY_DIGESTED,
+        item: ItemId.ANGRYC,
         odds: 4,
       }
     ]
   },
-  [ZoneBuildingId.AMBULANCE]: {
-    id: ZoneBuildingId.AMBULANCE,
+  [RuinId.AMBULANCE]: {
+    id: RuinId.AMBULANCE,
     name: {
       [Lang.EN]: "Ambulance",
       [Lang.FR]: "Ambulance",
@@ -2544,7 +2538,7 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.UNLABELLED_DRUG,
+        item: ItemId.DRUG_RANDOM,
         odds: 50,
       },
         {
@@ -2552,29 +2546,29 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 7,
       },
         {
-        item: ItemId.PHARMACEUTICAL_PRODUCTS,
+        item: ItemId.PHARMA,
         odds: 30,
       },
         {
-        item: ItemId.DAMAGED_HACKSAW,
+        item: ItemId.SAW_TOOL_PART,
         odds: 1,
       },
         {
-        item: ItemId.MACHETE,
+        item: ItemId.CUTCUT,
         odds: 1,
       },
         {
-        item: ItemId.RADIUS_MARK_II_INCOMPLETE,
+        item: ItemId.RADIUS_MK2_PART,
         odds: 4,
       },
         {
-        item: ItemId.LITTLE_BOOK_OF_CALM,
+        item: ItemId.LILBOO,
         odds: 5,
       }
     ]
   },
-  [ZoneBuildingId.WAREHOUSE]: {
-    id: ZoneBuildingId.WAREHOUSE,
+  [RuinId.WAREHOUSE]: {
+    id: RuinId.WAREHOUSE,
     name: {
       [Lang.EN]: "Warehouse",
       [Lang.FR]: "Hangars de stockage",
@@ -2598,45 +2592,45 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.TOOLBOX,
+        item: ItemId.CHEST_TOOLS,
         odds: 15,
       },
         {
-        item: ItemId.FOOD_PARCEL,
+        item: ItemId.CHEST_FOOD,
         odds: 15,
       },
         {
-        item: ItemId.CONSTRUCTION_KIT_1,
+        item: ItemId.RSC_PACK_1,
         odds: 15,
       },
         {
-        item: ItemId.CRATE_LID,
+        item: ItemId.WOOD_PLATE_PART,
         odds: 5,
       },
         {
-        item: ItemId.BOXES,
+        item: ItemId.HOME_BOX,
         odds: 5,
       },
         {
-        item: ItemId.CONSTRUCTION_KIT_2,
+        item: ItemId.RSC_PACK_2,
         odds: 5,
       },
         {
-        item: ItemId.CONSTRUCTION_KIT_3,
+        item: ItemId.RSC_PACK_3,
         odds: 2,
       },
         {
-        item: ItemId.PARCEL,
+        item: ItemId.BOOK_GEN_BOX,
         odds: 2,
       },
         {
-        item: ItemId.WIRE_MESH,
+        item: ItemId.FENCE,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.DISUSED_CAR_PARK]: {
-    id: ZoneBuildingId.DISUSED_CAR_PARK,
+  [RuinId.DISUSED_CAR_PARK]: {
+    id: RuinId.DISUSED_CAR_PARK,
     name: {
       [Lang.EN]: "Disused Car Park",
       [Lang.FR]: "Parking désaffecté",
@@ -2660,43 +2654,43 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.METAL_SUPPORT,
+        item: ItemId.METAL_BEAM,
         odds: 40,
       },
         {
-        item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS,
+        item: ItemId.MECA_PARTS,
         odds: 5,
       },
         {
-        item: ItemId.KWIK_FIX,
+        item: ItemId.REPAIR_ONE,
         odds: 12,
       },
         {
-        item: ItemId.FULL_JERRYCAN,
+        item: ItemId.JERRYCAN,
         odds: 2,
       },
         {
-        item: ItemId.SHEET_METAL_PARTS,
+        item: ItemId.PLATE_RAW,
         odds: 8,
       },
         {
-        item: ItemId.BELT,
+        item: ItemId.COURROIE,
         odds: 5,
       },
         {
-        item: ItemId.COPPER_PIPE,
+        item: ItemId.TUBE,
         odds: 10,
       },
         {
-        item: ItemId.TOOLBOX,
+        item: ItemId.CHEST_TOOLS,
         odds: 6,
       },
         {
-        item: ItemId.METAL_CHEST,
+        item: ItemId.CHEST,
         odds: 10,
       },
         {
-        item: ItemId.ENGINE_INCOMPLETE,
+        item: ItemId.ENGINE_PART,
         odds: 2,
       },
         {
@@ -2704,13 +2698,13 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 8,
       },
         {
-        item: ItemId.BAG_OF_CEMENT,
+        item: ItemId.CONCRETE,
         odds: 7,
       }
     ]
   },
-  [ZoneBuildingId.BROKEN_DOWN_TANK]: {
-    id: ZoneBuildingId.BROKEN_DOWN_TANK,
+  [RuinId.BROKEN_DOWN_TANK]: {
+    id: RuinId.BROKEN_DOWN_TANK,
     name: {
       [Lang.EN]: "Broken-down Tank",
       [Lang.FR]: "Char d’assaut en panne",
@@ -2734,65 +2728,65 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.REVOLVER_UNLOADED,
+        item: ItemId.GUN,
         odds: 5,
       },
         {
-        item: ItemId.ASSAULT_RIFLE_UNLOADED,
+        item: ItemId.MACHINE_GUN,
         odds: 1,
       },
         {
-        item: ItemId.FLASH_POWDER,
+        item: ItemId.POWDER,
         odds: 10,
       },
         {
-        item: ItemId.MECHANISM,
+        item: ItemId.MECANISM,
         odds: 10,
       },
         {
-        item: ItemId.BROKEN_ELECTRONIC_DEVICE,
+        item: ItemId.ELECTRO_BOX,
         odds: 10,
       },
         {
-        item: ItemId.RUSTY_CHAIN,
+        item: ItemId.CHAIN,
         odds: 10,
       },
         {
-        item: ItemId.INCOMPLETE_CAFETI_RE,
+        item: ItemId.COFFEE_MACHINE_PART,
         odds: 1,
       },
         {
-        item: ItemId.MAKESHIFT_BARRICADE,
+        item: ItemId.HOME_DEF,
         odds: 10,
       },
         {
-        item: ItemId.IRON_CHEST,
+        item: ItemId.HOME_BOX_XL,
         odds: 1,
       },
         {
-        item: ItemId.TOOL_BAG,
+        item: ItemId.REPAIR_KIT_PART_RAW,
         odds: 1,
       },
         {
-        item: ItemId.COMPACT_DETONATOR,
+        item: ItemId.DETO,
         odds: 1,
       },
         {
-        item: ItemId.SEMTEX,
+        item: ItemId.EXPLO,
         odds: 3,
       },
         {
-        item: ItemId.RADIUS_RADAR_BEACON,
+        item: ItemId.TAGGER,
         odds: 5,
       },
         {
-        item: ItemId.PUTA_MARK_II_CALIBRATOR,
+        item: ItemId.PILEGUN_UPKIT,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.MOTEL_666_DUSK]: {
-    id: ZoneBuildingId.MOTEL_666_DUSK,
+  [RuinId.MOTEL_666_DUSK]: {
+    id: RuinId.MOTEL_666_DUSK,
     name: {
       [Lang.EN]: "Motel 666 Dusk",
       [Lang.FR]: "Motel « Dusk »",
@@ -2816,53 +2810,53 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.FOOD_PARCEL,
+        item: ItemId.CHEST_FOOD,
         odds: 10,
       },
         {
-        item: ItemId.MECHANISM,
+        item: ItemId.MECANISM,
         odds: 10,
       },
         {
-        item: ItemId.MATTRESS,
+        item: ItemId.BED,
         odds: 10,
       },
         {
-        item: ItemId.DOORMAT,
+        item: ItemId.DOOR_CARPET,
         odds: 10,
       },
         {
-        item: ItemId.PERSIAN_RUG,
+        item: ItemId.CARPET,
         odds: 10,
       },
         {
-        item: ItemId.HUGE_SNAKE_OPHIOPHAGUS_TROUSER,
+        item: ItemId.PET_SNAKE,
         odds: 10,
       },
         {
-        item: ItemId.DISMANTLED_MOWER,
+        item: ItemId.LAWN_PART,
         odds: 3,
       },
         {
-        item: ItemId.METAL_CHEST,
+        item: ItemId.CHEST,
         odds: 7,
       },
         {
-        item: ItemId.BLOODY_HOT_COFFEE,
+        item: ItemId.COFFEE,
         odds: 10,
       },
         {
-        item: ItemId.J_RPEN_TABLE,
+        item: ItemId.TABLE,
         odds: 2,
       },
         {
-        item: ItemId.LITTLE_BOOK_OF_CALM,
+        item: ItemId.LILBOO,
         odds: 2,
       }
     ]
   },
-  [ZoneBuildingId.ARMY_OUTPOST]: {
-    id: ZoneBuildingId.ARMY_OUTPOST,
+  [RuinId.ARMY_OUTPOST]: {
+    id: RuinId.ARMY_OUTPOST,
     name: {
       [Lang.EN]: "Army Outpost",
       [Lang.FR]: "Avant-poste militaire",
@@ -2886,37 +2880,37 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.REVOLVER_UNLOADED,
+        item: ItemId.GUN,
         odds: 10,
       },
         {
-        item: ItemId.ASSAULT_RIFLE_UNLOADED,
+        item: ItemId.MACHINE_GUN,
         odds: 10,
       },
         {
-        item: ItemId.FOOD_PARCEL,
+        item: ItemId.CHEST_FOOD,
         odds: 10,
       },
         {
-        item: ItemId.WIRE_MESH,
+        item: ItemId.FENCE,
         odds: 10,
       },
         {
-        item: ItemId.BLOODY_HOT_COFFEE,
+        item: ItemId.COFFEE,
         odds: 10,
       },
         {
-        item: ItemId.CONSTRUCTION_KIT_3,
+        item: ItemId.RSC_PACK_3,
         odds: 2,
       },
         {
-        item: ItemId.WIRE_REEL,
+        item: ItemId.WIRE,
         odds: 4,
       }
     ]
   },
-  [ZoneBuildingId.POST_OFFICE]: {
-    id: ZoneBuildingId.POST_OFFICE,
+  [RuinId.POST_OFFICE]: {
+    id: RuinId.POST_OFFICE,
     name: {
       [Lang.EN]: "Post Office",
       [Lang.FR]: "Bureau de poste",
@@ -2940,50 +2934,50 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.ENVELOPE,
+        item: ItemId.BOOK_GEN_LETTER,
         odds: 20,
       },
         {
-        item: ItemId.PARCEL,
+        item: ItemId.BOOK_GEN_BOX,
         odds: 20,
       },
         {
-        item: ItemId.A_LETTER_WITH_NO_ADDRESS,
+        item: ItemId.RP_LETTER,
         odds: 20,
       },
         {
-        item: ItemId.LARGE_GIFT_PARCEL,
+        item: ItemId.POSTAL_BOX_XL,
         odds: 6,
       },
         {
-        item: ItemId.GIFT_PARCEL,
+        item: ItemId.POSTAL_BOX,
         odds: 20,
       },
         {
-        item: ItemId.WAD_OF_CASH,
+        item: ItemId.MONEY,
         odds: 3,
       },
         {
-        item: ItemId.INCOMPLETE_DECK_OF_CARDS,
+        item: ItemId.CARDS,
         odds: 1,
       },
         {
-        item: ItemId.EKTORP_GLUTEN_CHAIR,
+        item: ItemId.CHAIR_BASIC,
         odds: 3,
       },
         {
-        item: ItemId.J_RPEN_TABLE,
+        item: ItemId.TABLE,
         odds: 3,
       },
         {
-        item: ItemId.CHRISTMAS_GIFT_PARCEL,
+        item: ItemId.POSTAL_BOX_01,
         odds: 3,
-          event: Event.Christmas
+          event: GameEvent.Christmas
       }
     ]
   },
-  [ZoneBuildingId.SMUGGLERS_CACHE]: {
-    id: ZoneBuildingId.SMUGGLERS_CACHE,
+  [RuinId.SMUGGLERS_CACHE]: {
+    id: RuinId.SMUGGLERS_CACHE,
     name: {
       [Lang.EN]: "Once-inhabited Cave",
       [Lang.FR]: "Cache de contrebandiers",
@@ -3007,37 +3001,37 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.METAL_CHEST,
+        item: ItemId.CHEST,
         odds: 10,
       },
         {
-        item: ItemId.TOOLBOX,
+        item: ItemId.CHEST_TOOLS,
         odds: 40,
       },
         {
-        item: ItemId.CITIZEN_S_WELCOME_PACK,
+        item: ItemId.CHEST_CITIZEN,
         odds: 60,
       },
         {
-        item: ItemId.SHREWD_CITIZEN_S_STASH,
+        item: ItemId.CHEST_HERO,
         odds: 2,
       },
         {
-        item: ItemId.WAD_OF_CASH,
+        item: ItemId.MONEY,
         odds: 5,
       },
         {
-        item: ItemId.LARGE_METAL_CHEST,
+        item: ItemId.CHEST_XL,
         odds: 2,
       },
         {
-        item: ItemId.SCHR_DINGER_S_BOX,
+        item: ItemId.CATBOX,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.EQUIPPED_TRENCH]: {
-    id: ZoneBuildingId.EQUIPPED_TRENCH,
+  [RuinId.EQUIPPED_TRENCH]: {
+    id: RuinId.EQUIPPED_TRENCH,
     name: {
       [Lang.EN]: "Equipped Trench",
       [Lang.FR]: "Tranchée aménagée",
@@ -3061,25 +3055,25 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.BAG_OF_CEMENT,
+        item: ItemId.CONCRETE,
         odds: 40,
       },
         {
-        item: ItemId.PLASTIC_BAG_AND_SEMTEX,
+        item: ItemId.BGRENADE_EMPTY,
         odds: 10,
       },
         {
-        item: ItemId.REVOLVER_UNLOADED,
+        item: ItemId.GUN,
         odds: 5,
       },
         {
-        item: ItemId.ASSAULT_RIFLE_UNLOADED,
+        item: ItemId.MACHINE_GUN,
         odds: 3,
       }
     ]
   },
-  [ZoneBuildingId.TOWN_LIBRARY]: {
-    id: ZoneBuildingId.TOWN_LIBRARY,
+  [RuinId.TOWN_LIBRARY]: {
+    id: RuinId.TOWN_LIBRARY,
     name: {
       [Lang.EN]: "Town Library",
       [Lang.FR]: "Bibliothèque de quartier",
@@ -3103,53 +3097,53 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.STACK_OF_PAPERS,
+        item: ItemId.RP_SHEETS,
         odds: 10,
       },
         {
-        item: ItemId.INSTRUCTION_MANUAL,
+        item: ItemId.RP_MANUAL,
         odds: 10,
       },
         {
-        item: ItemId.SCROLL,
+        item: ItemId.RP_SCROLL,
         odds: 10,
       },
         {
-        item: ItemId.ILLEGIBLE_NOTEBOOK,
+        item: ItemId.RP_BOOK2,
         odds: 10,
       },
         {
-        item: ItemId.DUSTY_BOOK,
+        item: ItemId.RP_BOOK,
         odds: 10,
       },
         {
-        item: ItemId.GIANT_RAT,
+        item: ItemId.PET_RAT,
         odds: 2,
       },
         {
-        item: ItemId.OPENED_PACKET_OF_CIGARETTES,
+        item: ItemId.CIGS,
         odds: 2,
       },
         {
-        item: ItemId.BEDSIDE_LAMP,
+        item: ItemId.LAMP,
         odds: 1,
       },
         {
-        item: ItemId.EKTORP_GLUTEN_CHAIR,
+        item: ItemId.CHAIR_BASIC,
         odds: 10,
       },
         {
-        item: ItemId.FLATPACKED_FURNITURE,
+        item: ItemId.DECO_BOX,
         odds: 100,
       },
         {
-        item: ItemId.CONVEX_LENS,
+        item: ItemId.LENS,
         odds: 2,
       }
     ]
   },
-  [ZoneBuildingId.MINI_MARKET]: {
-    id: ZoneBuildingId.MINI_MARKET,
+  [RuinId.MINI_MARKET]: {
+    id: RuinId.MINI_MARKET,
     name: {
       [Lang.EN]: "Mini-market",
       [Lang.FR]: "Mini-market",
@@ -3177,61 +3171,61 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 10,
       },
         {
-        item: ItemId.BOX_OF_MATCHES,
+        item: ItemId.LIGHTS,
         odds: 10,
       },
         {
-        item: ItemId.OPENED_PACKET_OF_CIGARETTES,
+        item: ItemId.CIGS,
         odds: 10,
       },
         {
-        item: ItemId.DOORMAT,
+        item: ItemId.DOOR_CARPET,
         odds: 3,
       },
         {
-        item: ItemId.ANABOLIC_STEROIDS,
+        item: ItemId.DRUG,
         odds: 10,
       },
         {
-        item: ItemId.FULL_JERRYCAN,
+        item: ItemId.JERRYCAN,
         odds: 10,
       },
         {
-        item: ItemId.PACKET_OF_SOFT_CRISPS,
+        item: ItemId.FOOD_BAR1,
         odds: 10,
       },
         {
-        item: ItemId.CHINESE_NOODLES,
+        item: ItemId.FOOD_NOODLES,
         odds: 10,
       },
         {
-        item: ItemId.STRONG_SPICES,
+        item: ItemId.SPICES,
         odds: 5,
       },
         {
-        item: ItemId.WAD_OF_CASH,
+        item: ItemId.MONEY,
         odds: 10,
       },
         {
-        item: ItemId.CORROSIVE_LIQUID,
+        item: ItemId.POISON_PART,
         odds: 1,
       },
         {
-        item: ItemId.HANDFUL_OF_SWEETS,
+        item: ItemId.FOOD_CANDIES,
         odds: 2,
       },
         {
-        item: ItemId.DRIED_MARSHMALLOWS,
+        item: ItemId.CHAMA,
         odds: 2,
       },
         {
-        item: ItemId.LASER_DIODE,
+        item: ItemId.DIODE,
         odds: 5,
       }
     ]
   },
-  [ZoneBuildingId.THE__MAYOR_MOBILE_]: {
-    id: ZoneBuildingId.THE__MAYOR_MOBILE_,
+  [RuinId.THE__MAYOR_MOBILE_]: {
+    id: RuinId.THE__MAYOR_MOBILE_,
     name: {
       [Lang.EN]: "The 'Mayor-Mobile'",
       [Lang.FR]: "Camion « Mairie-mobile »",
@@ -3255,33 +3249,33 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.ENVELOPE,
+        item: ItemId.BOOK_GEN_LETTER,
         odds: 10,
       },
         {
-        item: ItemId.INSTRUCTION_MANUAL,
+        item: ItemId.RP_MANUAL,
         odds: 10,
       },
         {
-        item: ItemId.SCROLL,
+        item: ItemId.RP_SCROLL,
         odds: 10,
       },
         {
-        item: ItemId.STACK_OF_PAPERS,
+        item: ItemId.RP_SHEETS,
         odds: 10,
       },
         {
-        item: ItemId.A_LETTER_WITH_NO_ADDRESS,
+        item: ItemId.RP_LETTER,
         odds: 10,
       },
         {
-        item: ItemId.MECHANISM,
+        item: ItemId.MECANISM,
         odds: 10,
       }
     ]
   },
-  [ZoneBuildingId.WRECKED_TRANSPORTER]: {
-    id: ZoneBuildingId.WRECKED_TRANSPORTER,
+  [RuinId.WRECKED_TRANSPORTER]: {
+    id: RuinId.WRECKED_TRANSPORTER,
     name: {
       [Lang.EN]: "Wrecked Transporter",
       [Lang.FR]: "Camion en panne",
@@ -3305,57 +3299,57 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.FOOD_PARCEL,
+        item: ItemId.CHEST_FOOD,
         odds: 60,
       },
         {
-        item: ItemId.TOOLBOX,
+        item: ItemId.CHEST_TOOLS,
         odds: 20,
       },
         {
-        item: ItemId.ADJUSTABLE_SPANNER,
+        item: ItemId.WRENCH,
         odds: 5,
       },
         {
-        item: ItemId.BOX_OF_GAMES,
+        item: ItemId.GAME_BOX,
         odds: 7,
       },
         {
-        item: ItemId.BELT,
+        item: ItemId.COURROIE,
         odds: 1,
       },
         {
-        item: ItemId._WAKE_THE_DEAD_,
+        item: ItemId.RHUM,
         odds: 4,
       },
         {
-        item: ItemId.SHEET_METAL_PARTS,
+        item: ItemId.PLATE_RAW,
         odds: 5,
       },
         {
-        item: ItemId.RADIO_CASSETTE_PLAYER_NO_BATTERY,
+        item: ItemId.RADIO_OFF,
         odds: 2,
       },
         {
-        item: ItemId.FULL_JERRYCAN,
+        item: ItemId.JERRYCAN,
         odds: 5,
       },
         {
-        item: ItemId.RADIUS_MARK_II_INCOMPLETE,
+        item: ItemId.RADIUS_MK2_PART,
         odds: 5,
       },
         {
-        item: ItemId.MECHANISM,
+        item: ItemId.MECANISM,
         odds: 1,
       },
         {
-        item: ItemId.WIRE_REEL,
+        item: ItemId.WIRE,
         odds: 3,
       }
     ]
   },
-  [ZoneBuildingId.BURNT_SCHOOL]: {
-    id: ZoneBuildingId.BURNT_SCHOOL,
+  [RuinId.BURNT_SCHOOL]: {
+    id: RuinId.BURNT_SCHOOL,
     name: {
       [Lang.EN]: "Burnt School",
       [Lang.FR]: "École maternelle brûlée",
@@ -3379,7 +3373,7 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.HUMAN_FLESH,
+        item: ItemId.HMEAT,
         odds: 80,
       },
         {
@@ -3387,37 +3381,37 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 5,
       },
         {
-        item: ItemId.BATTERY,
+        item: ItemId.PILE,
         odds: 20,
       },
         {
-        item: ItemId.GIANT_RAT,
+        item: ItemId.PET_RAT,
         odds: 5,
       },
         {
-        item: ItemId.WATER_PISTOL_EMPTY,
+        item: ItemId.WATERGUN_EMPTY,
         odds: 20,
       },
         {
-        item: ItemId.AQUA_SPLASH_INCOMPLETE,
+        item: ItemId.WATERGUN_OPT_PART,
         odds: 2,
       },
         {
-        item: ItemId.BOX_OF_GAMES,
+        item: ItemId.GAME_BOX,
         odds: 10,
       },
         {
-        item: ItemId.CYANIDE,
+        item: ItemId.CYANURE,
         odds: 5,
       },
         {
-        item: ItemId.CONVEX_LENS,
+        item: ItemId.LENS,
         odds: 4,
       }
     ]
   },
-  [ZoneBuildingId.DILAPIDATED_BUILDING]: {
-    id: ZoneBuildingId.DILAPIDATED_BUILDING,
+  [RuinId.DILAPIDATED_BUILDING]: {
+    id: RuinId.DILAPIDATED_BUILDING,
     name: {
       [Lang.EN]: "Dilapidated Building",
       [Lang.FR]: "Immeuble délabré",
@@ -3441,35 +3435,35 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.OLD_DOOR,
+        item: ItemId.DOOR,
         odds: 8,
       },
         {
-        item: ItemId.EKTORP_GLUTEN_CHAIR,
+        item: ItemId.CHAIR_BASIC,
         odds: 15,
       },
         {
-        item: ItemId.BROKEN_ELECTRONIC_DEVICE,
+        item: ItemId.ELECTRO_BOX,
         odds: 15,
       },
         {
-        item: ItemId.MECHANISM,
+        item: ItemId.MECANISM,
         odds: 15,
       },
         {
-        item: ItemId.INSTRUCTION_MANUAL,
+        item: ItemId.RP_MANUAL,
         odds: 1,
       },
         {
-        item: ItemId.STACK_OF_PAPERS,
+        item: ItemId.RP_SHEETS,
         odds: 1,
       },
         {
-        item: ItemId.OPENED_PACKET_OF_CIGARETTES,
+        item: ItemId.CIGS,
         odds: 1,
       },
         {
-        item: ItemId.LUNCH_BOX,
+        item: ItemId.FOOD_ARMAG,
         odds: 1,
       },
         {
@@ -3477,37 +3471,37 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 1,
       },
         {
-        item: ItemId.OLD_WASHING_MACHINE,
+        item: ItemId.MACHINE_1,
         odds: 2,
       },
         {
-        item: ItemId.CARCINOGENIC_OVEN,
+        item: ItemId.MACHINE_2,
         odds: 2,
       },
         {
-        item: ItemId.BEER_FRIDGE,
+        item: ItemId.MACHINE_3,
         odds: 2,
       },
         {
-        item: ItemId.WAD_OF_CASH,
+        item: ItemId.MONEY,
         odds: 10,
       },
         {
-        item: ItemId.MOBILE_PHONE,
+        item: ItemId.IPHONE,
         odds: 2,
       },
         {
-        item: ItemId.WATER_COOLER_BOTTLE_EMPTY,
+        item: ItemId.WATER_CAN_EMPTY,
         odds: 1,
       },
         {
-        item: ItemId.J_RPEN_TABLE,
+        item: ItemId.TABLE,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.DERELICT_VILLA]: {
-    id: ZoneBuildingId.DERELICT_VILLA,
+  [RuinId.DERELICT_VILLA]: {
+    id: RuinId.DERELICT_VILLA,
     name: {
       [Lang.EN]: "Derelict Villa",
       [Lang.FR]: "Villa délabrée",
@@ -3535,35 +3529,35 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 40,
       },
         {
-        item: ItemId.PADLOCK_AND_CHAIN,
+        item: ItemId.LOCK,
         odds: 7,
       },
         {
-        item: ItemId.MATTRESS,
+        item: ItemId.BED,
         odds: 5,
       },
         {
-        item: ItemId.J_RPEN_TABLE,
+        item: ItemId.TABLE,
         odds: 8,
       },
         {
-        item: ItemId.BATTERY,
+        item: ItemId.PILE,
         odds: 20,
       },
         {
-        item: ItemId.PHARMACEUTICAL_PRODUCTS,
+        item: ItemId.PHARMA,
         odds: 12,
       },
         {
-        item: ItemId.SCREWDRIVER,
+        item: ItemId.SCREW,
         odds: 9,
       },
         {
-        item: ItemId.CITIZEN_S_WELCOME_PACK,
+        item: ItemId.CHEST_CITIZEN,
         odds: 20,
       },
         {
-        item: ItemId.BEDSIDE_LAMP,
+        item: ItemId.LAMP,
         odds: 7,
       },
         {
@@ -3571,19 +3565,19 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 9,
       },
         {
-        item: ItemId.PERSIAN_RUG,
+        item: ItemId.CARPET,
         odds: 4,
       },
         {
-        item: ItemId.DOORMAT,
+        item: ItemId.DOOR_CARPET,
         odds: 7,
       },
         {
-        item: ItemId.ROCKING_CHAIR,
+        item: ItemId.CHAIR,
         odds: 5,
       },
         {
-        item: ItemId.EKTORP_GLUTEN_CHAIR,
+        item: ItemId.CHAIR_BASIC,
         odds: 9,
       },
         {
@@ -3591,37 +3585,37 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 7,
       },
         {
-        item: ItemId.GUARD_DOG,
+        item: ItemId.PET_DOG,
         odds: 2,
       },
         {
-        item: ItemId.VODKA_MARINOSTOV,
+        item: ItemId.VODKA,
         odds: 2,
       },
         {
-        item: ItemId._WAKE_THE_DEAD_,
+        item: ItemId.RHUM,
         odds: 2,
       },
         {
-        item: ItemId.ELECTRIC_WHISK_INCOMPLETE,
+        item: ItemId.MIXERGUN_PART,
         odds: 1,
       },
         {
-        item: ItemId.EMS_SYSTEM_INCOMPLETE,
+        item: ItemId.SPORT_ELEC_EMPTY,
         odds: 4,
       },
         {
-        item: ItemId.EARPLUGS,
+        item: ItemId.BQUIES,
         odds: 1,
       },
         {
-        item: ItemId.BEST_OF_THE_KING_CD,
+        item: ItemId.CDELVI,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.ABANDONED_CONSTRUCTION_SITE]: {
-    id: ZoneBuildingId.ABANDONED_CONSTRUCTION_SITE,
+  [RuinId.ABANDONED_CONSTRUCTION_SITE]: {
+    id: RuinId.ABANDONED_CONSTRUCTION_SITE,
     name: {
       [Lang.EN]: "Abandoned Construction Site",
       [Lang.FR]: "Chantier à l’abandon",
@@ -3645,15 +3639,15 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS,
+        item: ItemId.MECA_PARTS,
         odds: 2,
       },
         {
-        item: ItemId.DAMAGED_HACKSAW,
+        item: ItemId.SAW_TOOL_PART,
         odds: 1,
       },
         {
-        item: ItemId.BROKEN_ELECTRONIC_DEVICE,
+        item: ItemId.ELECTRO_BOX,
         odds: 5,
       },
         {
@@ -3661,15 +3655,15 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 15,
       },
         {
-        item: ItemId.METAL_SUPPORT,
+        item: ItemId.METAL_BEAM,
         odds: 100,
       },
         {
-        item: ItemId.SHEET_METAL_PARTS,
+        item: ItemId.PLATE_RAW,
         odds: 40,
       },
         {
-        item: ItemId.METAL_CHEST,
+        item: ItemId.CHEST,
         odds: 20,
       },
         {
@@ -3677,41 +3671,41 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 40,
       },
         {
-        item: ItemId.ADJUSTABLE_SPANNER,
+        item: ItemId.WRENCH,
         odds: 10,
       },
         {
-        item: ItemId.SCREWDRIVER,
+        item: ItemId.SCREW,
         odds: 12,
       },
         {
-        item: ItemId.PADLOCK_AND_CHAIN,
+        item: ItemId.LOCK,
         odds: 5,
       },
         {
-        item: ItemId.LARGE_METAL_CHEST,
+        item: ItemId.CHEST_XL,
         odds: 1,
       },
         {
-        item: ItemId.UTILITY_BELT,
+        item: ItemId.POCKET_BELT,
         odds: 3,
       },
         {
-        item: ItemId.RADIO_CASSETTE_PLAYER_NO_BATTERY,
+        item: ItemId.RADIO_OFF,
         odds: 10,
       },
         {
-        item: ItemId.BAG_OF_CEMENT,
+        item: ItemId.CONCRETE,
         odds: 40,
       },
         {
-        item: ItemId.WIRE_MESH,
+        item: ItemId.FENCE,
         odds: 8,
       }
     ]
   },
-  [ZoneBuildingId.ABANDONED_WELL]: {
-    id: ZoneBuildingId.ABANDONED_WELL,
+  [RuinId.ABANDONED_WELL]: {
+    id: RuinId.ABANDONED_WELL,
     name: {
       [Lang.EN]: "Abandoned Well",
       [Lang.FR]: "Puits abandonné",
@@ -3735,21 +3729,21 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.FULL_JERRYCAN,
+        item: ItemId.JERRYCAN,
         odds: 2,
       },
         {
-        item: ItemId.WATER_RATION,
+        item: ItemId.WATER,
         odds: 30,
       },
         {
-        item: ItemId.STAGNANT_WATER_CAN,
+        item: ItemId.WATER_CUP_PART,
         odds: 10,
       }
     ]
   },
-  [ZoneBuildingId.DISUSED_SILOS]: {
-    id: ZoneBuildingId.DISUSED_SILOS,
+  [RuinId.DISUSED_SILOS]: {
+    id: RuinId.DISUSED_SILOS,
     name: {
       [Lang.EN]: "Disused Silos",
       [Lang.FR]: "Silos à l’abandon",
@@ -3773,17 +3767,17 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.FULL_JERRYCAN,
+        item: ItemId.JERRYCAN,
         odds: 20,
       },
         {
-        item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS,
+        item: ItemId.MECA_PARTS,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.BLOCKED_ROAD]: {
-    id: ZoneBuildingId.BLOCKED_ROAD,
+  [RuinId.BLOCKED_ROAD]: {
+    id: RuinId.BLOCKED_ROAD,
     name: {
       [Lang.EN]: "Blocked Road",
       [Lang.FR]: "Route barrée",
@@ -3807,31 +3801,31 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.UNSHAPED_CONCRETE_BLOCKS,
+        item: ItemId.CONCRETE_WALL,
         odds: 40,
       },
         {
-        item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS,
+        item: ItemId.MECA_PARTS,
         odds: 5,
       },
         {
-        item: ItemId.KWIK_FIX,
+        item: ItemId.REPAIR_ONE,
         odds: 5,
       },
         {
-        item: ItemId.SHEET_METAL_PARTS,
+        item: ItemId.PLATE_RAW,
         odds: 10,
       },
         {
-        item: ItemId.BELT,
+        item: ItemId.COURROIE,
         odds: 3,
       },
         {
-        item: ItemId.COPPER_PIPE,
+        item: ItemId.TUBE,
         odds: 8,
       },
         {
-        item: ItemId.METAL_CHEST,
+        item: ItemId.CHEST,
         odds: 9,
       },
         {
@@ -3839,13 +3833,13 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 5,
       },
         {
-        item: ItemId.ENGINE_INCOMPLETE,
+        item: ItemId.ENGINE_PART,
         odds: 1,
       }
     ]
   },
-  [ZoneBuildingId.ABANDONED_PARK]: {
-    id: ZoneBuildingId.ABANDONED_PARK,
+  [RuinId.ABANDONED_PARK]: {
+    id: RuinId.ABANDONED_PARK,
     name: {
       [Lang.EN]: "Abandoned Park",
       [Lang.FR]: "Parc à l’abandon",
@@ -3869,61 +3863,61 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.SUSPICIOUS_LOOKING_VEGETABLE,
+        item: ItemId.VEGETABLE,
         odds: 35,
       },
         {
-        item: ItemId.HUGE_SNAKE_OPHIOPHAGUS_TROUSER,
+        item: ItemId.PET_SNAKE,
         odds: 10,
       },
         {
-        item: ItemId.STINKING_PIG,
+        item: ItemId.PET_PIG,
         odds: 5,
       },
         {
-        item: ItemId.EKTORP_GLUTEN_CHAIR,
+        item: ItemId.CHAIR_BASIC,
         odds: 5,
       },
         {
-        item: ItemId.TWISTED_PLANK,
+        item: ItemId.WOOD2,
         odds: 10,
       },
         {
-        item: ItemId.BOX_OF_GAMES,
+        item: ItemId.GAME_BOX,
         odds: 5,
       },
         {
-        item: ItemId.MACHETE,
+        item: ItemId.CUTCUT,
         odds: 5,
       },
         {
-        item: ItemId.DISMANTLED_MOWER,
+        item: ItemId.LAWN_PART,
         odds: 10,
       },
         {
-        item: ItemId.AQUA_SPLASH_INCOMPLETE,
+        item: ItemId.WATERGUN_OPT_PART,
         odds: 2,
       },
         {
-        item: ItemId.WATER_PISTOL_EMPTY,
+        item: ItemId.WATERGUN_EMPTY,
         odds: 20,
       },
         {
-        item: ItemId.JERRYCAN_GUN_UNATTACHED,
+        item: ItemId.JERRYGUN_PART,
         odds: 2,
       },
         {
-        item: ItemId.NESS_QUICK_WEEDKILLER,
+        item: ItemId.DIGGER,
         odds: 10,
       },
         {
-        item: ItemId.BAG_OF_DAMP_GRASS,
+        item: ItemId.RYEBAG,
         odds: 4,
       }
     ]
   },
-  [ZoneBuildingId.GUNS__N__ZOMBIES_ARMOURY]: {
-    id: ZoneBuildingId.GUNS__N__ZOMBIES_ARMOURY,
+  [RuinId.GUNS__N__ZOMBIES_ARMOURY]: {
+    id: RuinId.GUNS__N__ZOMBIES_ARMOURY,
     name: {
       [Lang.EN]: "Guns 'n' Zombies Armoury",
       [Lang.FR]: "Armurerie Guns’n’Zombies",
@@ -3947,49 +3941,49 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.REVOLVER_UNLOADED,
+        item: ItemId.GUN,
         odds: 30,
       },
         {
-        item: ItemId.ASSAULT_RIFLE_UNLOADED,
+        item: ItemId.MACHINE_GUN,
         odds: 10,
       },
         {
-        item: ItemId.SERRATED_KNIFE,
+        item: ItemId.KNIFE,
         odds: 20,
       },
         {
-        item: ItemId.INCOMPLETE_CHAINSAW,
+        item: ItemId.CHAINSAW_PART,
         odds: 2,
       },
         {
-        item: ItemId.DEVASTATOR_INCOMPLETE,
+        item: ItemId.BIG_PGUN_PART,
         odds: 5,
       },
         {
-        item: ItemId.BATTERY_LAUNCHER_1_ITF_EMPTY,
+        item: ItemId.PILEGUN_EMPTY,
         odds: 20,
       },
         {
-        item: ItemId.MACHETE,
+        item: ItemId.CUTCUT,
         odds: 20,
       },
         {
-        item: ItemId.WATER_PISTOL_EMPTY,
+        item: ItemId.WATERGUN_EMPTY,
         odds: 20,
       },
         {
-        item: ItemId.AQUA_SPLASH_INCOMPLETE,
+        item: ItemId.WATERGUN_OPT_PART,
         odds: 5,
       },
         {
-        item: ItemId.COMPACT_DETONATOR,
+        item: ItemId.DETO,
         odds: 5,
       }
     ]
   },
-  [ZoneBuildingId.DISUSED_WAREHOUSE]: {
-    id: ZoneBuildingId.DISUSED_WAREHOUSE,
+  [RuinId.DISUSED_WAREHOUSE]: {
+    id: RuinId.DISUSED_WAREHOUSE,
     name: {
       [Lang.EN]: "Disused Warehouse",
       [Lang.FR]: "Entrepôt désaffecté",
@@ -4013,21 +4007,21 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.TOOLBOX,
+        item: ItemId.CHEST_TOOLS,
         odds: 40,
       },
         {
-        item: ItemId.CITIZEN_S_WELCOME_PACK,
+        item: ItemId.CHEST_CITIZEN,
         odds: 60,
       },
         {
-        item: ItemId.FOOD_PARCEL,
+        item: ItemId.CHEST_FOOD,
         odds: 60,
       }
     ]
   },
-  [ZoneBuildingId.CITIZEN_S_TENT]: {
-    id: ZoneBuildingId.CITIZEN_S_TENT,
+  [RuinId.CITIZEN_S_TENT]: {
+    id: RuinId.CITIZEN_S_TENT,
     name: {
       [Lang.EN]: "Citizen's Tent",
       [Lang.FR]: "Tente d’un citoyen",
@@ -4051,27 +4045,27 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.CITIZEN_S_WELCOME_PACK,
+        item: ItemId.CHEST_CITIZEN,
         odds: 3,
       },
         {
-        item: ItemId.SHREWD_CITIZEN_S_STASH,
+        item: ItemId.CHEST_HERO,
         odds: 30,
       },
         {
-        item: ItemId.VODKA_MARINOSTOV,
+        item: ItemId.VODKA,
         odds: 7,
       },
         {
-        item: ItemId._WAKE_THE_DEAD_,
+        item: ItemId.RHUM,
         odds: 7,
       },
         {
-        item: ItemId.BEDSIDE_LAMP,
+        item: ItemId.LAMP,
         odds: 15,
       },
         {
-        item: ItemId.BOX_OF_MATCHES,
+        item: ItemId.LIGHTS,
         odds: 7,
       },
         {
@@ -4079,47 +4073,47 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 3,
       },
         {
-        item: ItemId.METAL_CHEST,
+        item: ItemId.CHEST,
         odds: 5,
       },
         {
-        item: ItemId.BLOODY_HOT_COFFEE,
+        item: ItemId.COFFEE,
         odds: 5,
       },
         {
-        item: ItemId.BURNT_MARSHMALLOWS,
+        item: ItemId.CHAMA_TASTY,
         odds: 2,
       },
         {
-        item: ItemId.A_LETTER_WITH_NO_ADDRESS,
+        item: ItemId.RP_LETTER,
         odds: 5,
       },
         {
-        item: ItemId.BOXES,
+        item: ItemId.HOME_BOX,
         odds: 5,
       },
         {
-        item: ItemId.VALIUM_SHOT,
+        item: ItemId.XANAX,
         odds: 3,
       },
         {
-        item: ItemId.AQUA_SPLASH_INCOMPLETE,
+        item: ItemId.WATERGUN_OPT_PART,
         odds: 1,
       },
         {
-        item: ItemId.FOOD_PARCEL,
+        item: ItemId.CHEST_FOOD,
         odds: 15,
       },
         {
-        item: ItemId.DOORMAT,
+        item: ItemId.DOOR_CARPET,
         odds: 1,
       },
         {
-        item: ItemId.BANNED_CITIZEN_S_NOTE,
+        item: ItemId.BANNED_NOTE,
         odds: 10,
       },
         {
-        item: ItemId.ULTRA_RUCKSACK,
+        item: ItemId.BAGXL,
         odds: 1,
       },
         {
@@ -4128,8 +4122,8 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
       }
     ]
   },
-  [ZoneBuildingId.DESTROYED_PHARMACY]: {
-    id: ZoneBuildingId.DESTROYED_PHARMACY,
+  [RuinId.DESTROYED_PHARMACY]: {
+    id: RuinId.DESTROYED_PHARMACY,
     name: {
       [Lang.EN]: "Destroyed Pharmacy",
       [Lang.FR]: "Pharmacie détruite",
@@ -4153,39 +4147,39 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.PHARMACEUTICAL_PRODUCTS,
+        item: ItemId.PHARMA,
         odds: 100,
       },
         {
-        item: ItemId.ANABOLIC_STEROIDS,
+        item: ItemId.DRUG,
         odds: 10,
       },
         {
-        item: ItemId.CYANIDE,
+        item: ItemId.CYANURE,
         odds: 10,
       },
         {
-        item: ItemId.TWINOID_500MG,
+        item: ItemId.DRUG_HERO,
         odds: 4,
       },
         {
-        item: ItemId.PARACETOID_7G,
+        item: ItemId.DISINFECT,
         odds: 6,
       },
         {
-        item: ItemId.VALIUM_SHOT,
+        item: ItemId.XANAX,
         odds: 10,
       },
         {
-        item: ItemId.UNLABELLED_DRUG,
+        item: ItemId.DRUG_RANDOM,
         odds: 3,
       },
         {
-        item: ItemId.NESS_QUICK_WEEDKILLER,
+        item: ItemId.DIGGER,
         odds: 5,
       },
         {
-        item: ItemId.EARPLUGS,
+        item: ItemId.BQUIES,
         odds: 2,
       },
         {
@@ -4194,8 +4188,8 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
       }
     ]
   },
-  [ZoneBuildingId.SHADY_BAR]: {
-    id: ZoneBuildingId.SHADY_BAR,
+  [RuinId.SHADY_BAR]: {
+    id: RuinId.SHADY_BAR,
     name: {
       [Lang.EN]: "Shady Bar",
       [Lang.FR]: "Bar miteux",
@@ -4219,35 +4213,35 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.VODKA_MARINOSTOV,
+        item: ItemId.VODKA,
         odds: 12,
       },
         {
-        item: ItemId._WAKE_THE_DEAD_,
+        item: ItemId.RHUM,
         odds: 15,
       },
         {
-        item: ItemId.TASTY_LOOKING_STEAK,
+        item: ItemId.MEAT,
         odds: 8,
       },
         {
-        item: ItemId.ANABOLIC_STEROIDS,
+        item: ItemId.DRUG,
         odds: 4,
       },
         {
-        item: ItemId.GIANT_RAT,
+        item: ItemId.PET_RAT,
         odds: 5,
       },
         {
-        item: ItemId.FULL_JERRYCAN,
+        item: ItemId.JERRYCAN,
         odds: 3,
       },
         {
-        item: ItemId.EKTORP_GLUTEN_CHAIR,
+        item: ItemId.CHAIR_BASIC,
         odds: 4,
       },
         {
-        item: ItemId.DOGGY_BAG,
+        item: ItemId.FOOD_BAG,
         odds: 5,
       },
         {
@@ -4256,8 +4250,8 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
       }
     ]
   },
-  [ZoneBuildingId.ABANDONED_BUNKER]: {
-    id: ZoneBuildingId.ABANDONED_BUNKER,
+  [RuinId.ABANDONED_BUNKER]: {
+    id: RuinId.ABANDONED_BUNKER,
     name: {
       [Lang.EN]: "Abandoned Bunker",
       [Lang.FR]: "Bunker abandonné",
@@ -4281,162 +4275,162 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: true,
     drops: [
       {
-        item: ItemId.BUNKER_BLUEPRINT_UNCOMMON,
+        item: ItemId.BBPLAN_U,
         odds: 14,
       },
         {
-        item: ItemId.BUNKER_BLUEPRINT_RARE,
+        item: ItemId.BBPLAN_R,
         odds: 8,
       },
         {
-        item: ItemId.BUNKER_BLUEPRINT_VERY_RARE_,
+        item: ItemId.BBPLAN_E,
         odds: 7,
       },
         {
-        item: ItemId.WATER_RATION,
+        item: ItemId.WATER,
         odds: 4,
       },
         {
-        item: ItemId.UNSHAPED_CONCRETE_BLOCKS,
+        item: ItemId.CONCRETE_WALL,
         odds: 21,
       },
         {
-        item: ItemId.ROTTING_LOG,
+        item: ItemId.WOOD_BAD,
         odds: 4,
       },
         {
-        item: ItemId.KALASHNI_SPLASH_EMPTY,
+        item: ItemId.KALACH_01,
         odds: 2,
       },
         {
-        item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS,
+        item: ItemId.MECA_PARTS,
         odds: 11,
       },
         {
-        item: ItemId.TWISTED_PLANK,
+        item: ItemId.WOOD2,
         odds: 6,
       },
         {
-        item: ItemId.WROUGHT_IRON,
+        item: ItemId.METAL,
         odds: 8,
       },
         {
-        item: ItemId.COMPACT_DETONATOR,
+        item: ItemId.DETO,
         odds: 1,
       },
         {
-        item: ItemId.MAGNETIC_KEY,
+        item: ItemId.MAGNETICKEY,
         odds: 9,
       },
         {
-        item: ItemId.WAD_OF_CASH,
+        item: ItemId.MONEY,
         odds: 1,
       },
         {
-        item: ItemId.BATTERY,
+        item: ItemId.PILE,
         odds: 2,
       },
         {
-        item: ItemId.DEVASTATOR_EMPTY,
+        item: ItemId.BIG_PGUN_EMPTY,
         odds: 3,
       },
         {
-        item: ItemId.REVOLVER_UNLOADED,
+        item: ItemId.GUN,
         odds: 5,
       },
         {
-        item: ItemId.QUALITY_LOG,
+        item: ItemId.WOOD_LOG,
         odds: 8,
       },
         {
-        item: ItemId.STAGNANT_WATER_CAN,
+        item: ItemId.WATER_CUP_PART,
         odds: 3,
       },
         {
-        item: ItemId.SCRAP_METAL,
+        item: ItemId.METAL_BAD,
         odds: 2,
       },
         {
-        item: ItemId.METAL_SUPPORT,
+        item: ItemId.METAL_BEAM,
         odds: 3,
       },
         {
-        item: ItemId.BROKEN_ELECTRONIC_DEVICE,
+        item: ItemId.ELECTRO_BOX,
         odds: 1,
       },
         {
-        item: ItemId.ASSAULT_RIFLE_UNLOADED,
+        item: ItemId.MACHINE_GUN,
         odds: 1,
       },
         {
-        item: ItemId.SPY_FLARE,
+        item: ItemId.FLARE,
         odds: 1,
       },
         {
-        item: ItemId.SOLID_WOODEN_BOARD,
+        item: ItemId.WOOD_PLATE,
         odds: 1,
       },
         {
-        item: ItemId.BAG_OF_CEMENT,
+        item: ItemId.CONCRETE,
         odds: 4,
       },
         {
-        item: ItemId.CONSTRUCTION_KIT_1,
+        item: ItemId.RSC_PACK_1,
         odds: 4,
       },
         {
-        item: ItemId.CONSTRUCTION_KIT_2,
+        item: ItemId.RSC_PACK_2,
         odds: 2,
       },
         {
-        item: ItemId.CONSTRUCTION_KIT_3,
+        item: ItemId.RSC_PACK_3,
         odds: 1,
       },
         {
-        item: ItemId.PATCHWORK_BEAM,
+        item: ItemId.WOOD_BEAM,
         odds: 1,
       },
         {
-        item: ItemId.STAKE_LAUNCHER,
+        item: ItemId.RLAUNC,
         odds: 1,
       },
         {
-        item: ItemId.RADIUS_RADAR_BEACON,
+        item: ItemId.TAGGER,
         odds: 1,
       },
         {
-        item: ItemId.DEVASTATOR_LOADED,
+        item: ItemId.BIG_PGUN,
         odds: 1,
       },
         {
-        item: ItemId.DEVASTATOR_INCOMPLETE,
+        item: ItemId.BIG_PGUN_PART,
         odds: 4,
       },
         {
-        item: ItemId.BUMP_KEY,
+        item: ItemId.BUMPKEY,
         odds: 3,
       },
         {
-        item: ItemId.TOOL_BAG,
+        item: ItemId.REPAIR_KIT_PART_RAW,
         odds: 2,
       },
         {
-        item: ItemId.BOTTLE_OPENER,
+        item: ItemId.CLASSICKEY,
         odds: 3,
       },
         {
-        item: ItemId.SCREAMING_ALARM_CLOCK_INCOMPLETE,
+        item: ItemId.ALARM_OFF,
         odds: 3,
       },
         {
-        item: ItemId.BLOODY_DRESSING,
+        item: ItemId.INFECT_POISON_PART,
         odds: 10,
-          event: Event.Infective
+          event: GameEvent.Infective
       }
     ]
   },
-  [ZoneBuildingId.ABANDONED_HOTEL]: {
-    id: ZoneBuildingId.ABANDONED_HOTEL,
+  [RuinId.ABANDONED_HOTEL]: {
+    id: RuinId.ABANDONED_HOTEL,
     name: {
       [Lang.EN]: "Abandoned Hotel",
       [Lang.FR]: "Hôtel abandonné",
@@ -4460,27 +4454,27 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: true,
     drops: [
       {
-        item: ItemId.HOTEL_BLUEPRINT_UNCOMMON,
+        item: ItemId.HBPLAN_U,
         odds: 6900,
       },
         {
-        item: ItemId.HOTEL_BLUEPRINT_RARE,
+        item: ItemId.HBPLAN_R,
         odds: 4600,
       },
         {
-        item: ItemId.HOTEL_BLUEPRINT_VERY_RARE_,
+        item: ItemId.HBPLAN_E,
         odds: 2300,
       },
         {
-        item: ItemId.WATER_RATION,
+        item: ItemId.WATER,
         odds: 9000,
       },
         {
-        item: ItemId.BUMP_KEY,
+        item: ItemId.BUMPKEY,
         odds: 3000,
       },
         {
-        item: ItemId.BOTTLE_OPENER,
+        item: ItemId.CLASSICKEY,
         odds: 3000,
       },
         {
@@ -4488,114 +4482,114 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 6000,
       },
         {
-        item: ItemId.DOGGY_BAG,
+        item: ItemId.FOOD_BAG,
         odds: 6000,
       },
         {
-        item: ItemId.EKTORP_GLUTEN_CHAIR,
+        item: ItemId.CHAIR_BASIC,
         odds: 3000,
       },
         {
-        item: ItemId.J_RPEN_TABLE,
+        item: ItemId.TABLE,
         odds: 2000,
       },
         {
-        item: ItemId.MOULDY_NEAPOLITAN,
+        item: ItemId.FOOD_BAR2,
         odds: 4000,
       },
         {
-        item: ItemId.STRONG_SPICES,
+        item: ItemId.SPICES,
         odds: 3000,
       },
         {
-        item: ItemId.MATTRESS,
+        item: ItemId.BED,
         odds: 2000,
       },
         {
-        item: ItemId.FOOD_PARCEL,
+        item: ItemId.CHEST_FOOD,
         odds: 3000,
       },
         {
-        item: ItemId.UNSHAPED_CONCRETE_BLOCKS,
+        item: ItemId.CONCRETE_WALL,
         odds: 3000,
       },
         {
-        item: ItemId.MANBAG,
+        item: ItemId.BAG,
         odds: 3000,
       },
         {
-        item: ItemId.CHINESE_NOODLES,
+        item: ItemId.FOOD_NOODLES,
         odds: 4000,
       },
         {
-        item: ItemId.OUT_OF_DATE_BISCUITS,
+        item: ItemId.FOOD_PIMS,
         odds: 3000,
       },
         {
-        item: ItemId.PACKET_OF_SOFT_CRISPS,
+        item: ItemId.FOOD_BAR1,
         odds: 3000,
       },
         {
-        item: ItemId.DRIED_CHEWING_GUM,
+        item: ItemId.FOOD_BAR3,
         odds: 3000,
       },
         {
-        item: ItemId.HALF_EATEN_CHICKEN_WINGS,
+        item: ItemId.FOOD_CHICK,
         odds: 3000,
       },
         {
-        item: ItemId.EMPTY_VENDING_MACHINE,
+        item: ItemId.DISTRI,
         odds: 2000,
       },
         {
-        item: ItemId.STAKE_LAUNCHER,
+        item: ItemId.RLAUNC,
         odds: 2000,
       },
         {
-        item: ItemId.DODGY_HOMEMADE_DISH,
+        item: ItemId.DISH,
         odds: 3000,
       },
         {
-        item: ItemId.MOULDY_HAM_SANDWICH,
+        item: ItemId.FOOD_SANDW,
         odds: 3000,
       },
         {
-        item: ItemId.HASTILY_BUILT_DESK,
+        item: ItemId.BUREAU,
         odds: 2000,
       },
         {
-        item: ItemId.FLATPACKED_FURNITURE,
+        item: ItemId.DECO_BOX,
         odds: 4000,
       },
         {
-        item: ItemId.BEDSIDE_LAMP,
+        item: ItemId.LAMP,
         odds: 4000,
       },
         {
-        item: ItemId.CURSED_CUDDLY_TOY,
+        item: ItemId.TEDDY_01,
         odds: 2,
       },
         {
-        item: ItemId.TEDDY_BEAR,
+        item: ItemId.TEDDY,
         odds: 2000,
       },
         {
-        item: ItemId.PERSIAN_RUG,
+        item: ItemId.CARPET,
         odds: 2000,
       },
         {
-        item: ItemId.BOX_OF_GAMES,
+        item: ItemId.GAME_BOX,
         odds: 2000,
       },
         {
-        item: ItemId.BLOODY_DRESSING,
+        item: ItemId.INFECT_POISON_PART,
         odds: 5000,
-          event: Event.Infective
+          event: GameEvent.Infective
       }
     ]
   },
-  [ZoneBuildingId.ABANDONED_HOSPITAL]: {
-    id: ZoneBuildingId.ABANDONED_HOSPITAL,
+  [RuinId.ABANDONED_HOSPITAL]: {
+    id: RuinId.ABANDONED_HOSPITAL,
     name: {
       [Lang.EN]: "Abandoned Hospital",
       [Lang.FR]: "Hôpital abandonné",
@@ -4619,63 +4613,63 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
     explorable: true,
     drops: [
       {
-        item: ItemId.HOSPITAL_BLUEPRINT_UNCOMMON,
+        item: ItemId.MBPLAN_U,
         odds: 20,
       },
         {
-        item: ItemId.HOSPITAL_BLUEPRINT_RARE,
+        item: ItemId.MBPLAN_R,
         odds: 12,
       },
         {
-        item: ItemId.HOSPITAL_BLUEPRINT_VERY_RARE_,
+        item: ItemId.MBPLAN_E,
         odds: 5,
       },
         {
-        item: ItemId.WATER_RATION,
+        item: ItemId.WATER,
         odds: 9,
       },
         {
-        item: ItemId.UNLABELLED_DRUG,
+        item: ItemId.DRUG_RANDOM,
         odds: 10,
       },
         {
-        item: ItemId.SHEET_OF_PLYWOOD,
+        item: ItemId.OUT_DEF,
         odds: 14,
       },
         {
-        item: ItemId.ANABOLIC_STEROIDS,
+        item: ItemId.DRUG,
         odds: 3,
       },
         {
-        item: ItemId.VALIUM_SHOT,
+        item: ItemId.XANAX,
         odds: 16,
       },
         {
-        item: ItemId.WATER_COOLER_BOTTLE_EMPTY,
+        item: ItemId.WATER_CAN_EMPTY,
         odds: 4,
       },
         {
-        item: ItemId.MAGNETIC_KEY,
+        item: ItemId.MAGNETICKEY,
         odds: 9,
       },
         {
-        item: ItemId.PC_BASE_UNIT,
+        item: ItemId.PC,
         odds: 2,
       },
         {
-        item: ItemId.HYDRATONE_100MG,
+        item: ItemId.DRUG_WATER,
         odds: 3,
       },
         {
-        item: ItemId.EMPTY_VENDING_MACHINE,
+        item: ItemId.DISTRI,
         odds: 2,
       },
         {
-        item: ItemId.PARACETOID_7G,
+        item: ItemId.DISINFECT,
         odds: 6,
       },
         {
-        item: ItemId.PHARMACEUTICAL_PRODUCTS,
+        item: ItemId.PHARMA,
         odds: 3,
       },
         {
@@ -4683,50 +4677,50 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
         odds: 2,
       },
         {
-        item: ItemId.HASTILY_BUILT_DESK,
+        item: ItemId.BUREAU,
         odds: 1,
       },
         {
-        item: ItemId.CYANIDE,
+        item: ItemId.CYANURE,
         odds: 4,
       },
         {
-        item: ItemId.BOTTLE_OPENER,
+        item: ItemId.CLASSICKEY,
         odds: 3,
       },
         {
-        item: ItemId.WATER_COOLER_BOTTLE_3_RATIONS,
+        item: ItemId.WATER_CAN_3,
         odds: 2,
       },
         {
-        item: ItemId.WATER_COOLER_BOTTLE_2_RATIONS,
+        item: ItemId.WATER_CAN_2,
         odds: 2,
       },
         {
-        item: ItemId.WATER_COOLER_BOTTLE_1_RATION,
+        item: ItemId.WATER_CAN_1,
         odds: 3,
       },
         {
-        item: ItemId.MATTRESS,
+        item: ItemId.BED,
         odds: 2,
       },
         {
-        item: ItemId.BUMP_KEY,
+        item: ItemId.BUMPKEY,
         odds: 3,
       },
         {
-        item: ItemId.GHOUL_VACCINE,
+        item: ItemId.VAGOUL,
         odds: 3,
       },
         {
-        item: ItemId.BLOODY_DRESSING,
+        item: ItemId.INFECT_POISON_PART,
         odds: 15,
-          event: Event.Infective
+          event: GameEvent.Infective
       }
     ]
   },
-  [ZoneBuildingId.CROWS_FIT_GYM]: {
-    id: ZoneBuildingId.CROWS_FIT_GYM,
+  [RuinId.CROWS_FIT_GYM]: {
+    id: RuinId.CROWS_FIT_GYM,
     name: {
       [Lang.EN]: "Crows'fit Gym",
       [Lang.FR]: "Le Corbeau Sportif",
@@ -4739,7 +4733,7 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
       [Lang.DE]: "Das Grab der ehemaligen Sportler...",
       [Lang.ES]: "La tumba de ex-deportistas..."
     },
-    icon: "",
+    icon: "sports_crow",
     campingModifier: 0,
     spawnChance: 0,
     emptyChance: 0,
@@ -4752,8 +4746,8 @@ export const zoneBuildings: Record<ZoneBuildingId, ZoneBuilding> = {
       
     ]
   },
-  [ZoneBuildingId.BURIED_BUILDING]: {
-    id: ZoneBuildingId.BURIED_BUILDING,
+  [RuinId.BURIED_BUILDING]: {
+    id: RuinId.BURIED_BUILDING,
     name: {
       [Lang.EN]: "Buried building",
       [Lang.FR]: "Bâtiment non déterré",

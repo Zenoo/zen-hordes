@@ -1,14 +1,5 @@
 import { ItemId } from './items';
 
-export enum RecipeType {
-  Workshop = 1,
-  WorkshopShaman = 2,
-  WorkshopTech = 3,
-  ManualOutside = 11,
-  ManualInside = 12,
-  ManualAnywhere = 13,
-};
-
 export type RecipeItem = {
   item: ItemId;
   odds?: number;
@@ -24,7 +15,7 @@ export const recipes: Recipe[] = [
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.REPAIR_KIT_DAMAGED }
+      { item: ItemId.REPAIR_KIT_PART }
     ],
     out: [
       { item: ItemId.REPAIR_KIT }
@@ -36,305 +27,305 @@ export const recipes: Recipe[] = [
       { item: ItemId.CAN }
     ],
     out: [
-      { item: ItemId.OPEN_CAN }
+      { item: ItemId.CAN_OPEN }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.SHEET_METAL_PARTS }
+      { item: ItemId.PLATE_RAW }
     ],
     out: [
-      { item: ItemId.SHEET_METAL }
+      { item: ItemId.PLATE }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.QUALITY_LOG }
+      { item: ItemId.WOOD_LOG }
     ],
     out: [
-      { item: ItemId.TWISTED_PLANK }
+      { item: ItemId.WOOD2 }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.ROTTING_LOG }
+      { item: ItemId.WOOD_BAD }
     ],
     out: [
-      { item: ItemId.TWISTED_PLANK }
+      { item: ItemId.WOOD2 }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.TWISTED_PLANK }
+      { item: ItemId.WOOD2 }
     ],
     out: [
-      { item: ItemId.PATCHWORK_BEAM }
+      { item: ItemId.WOOD_BEAM }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.PATCHWORK_BEAM }
+      { item: ItemId.WOOD_BEAM }
     ],
     out: [
-      { item: ItemId.TWISTED_PLANK }
+      { item: ItemId.WOOD2 }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.SCRAP_METAL }
+      { item: ItemId.METAL_BAD }
     ],
     out: [
-      { item: ItemId.WROUGHT_IRON }
+      { item: ItemId.METAL }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.WROUGHT_IRON }
+      { item: ItemId.METAL }
     ],
     out: [
-      { item: ItemId.METAL_SUPPORT }
+      { item: ItemId.METAL_BEAM }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.METAL_SUPPORT }
+      { item: ItemId.METAL_BEAM }
     ],
     out: [
-      { item: ItemId.WROUGHT_IRON }
+      { item: ItemId.METAL }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.BROKEN_ELECTRONIC_DEVICE }
+      { item: ItemId.ELECTRO_BOX }
     ],
     out: [
-      { item: ItemId.BATTERY, odds: 15 },
-      { item: ItemId.BATTERY_LAUNCHER_1_ITF_EMPTY, odds: 16 },
-      { item: ItemId.ELECTRONIC_COMPONENT, odds: 23 },
-      { item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS, odds: 18 },
-      { item: ItemId.RADIUS_RADAR_BEACON, odds: 14 },
-      { item: ItemId.COMPACT_DETONATOR, odds: 14 }
+      { item: ItemId.PILE, odds: 15 },
+      { item: ItemId.PILEGUN_EMPTY, odds: 16 },
+      { item: ItemId.ELECTRO, odds: 23 },
+      { item: ItemId.MECA_PARTS, odds: 18 },
+      { item: ItemId.TAGGER, odds: 14 },
+      { item: ItemId.DETO, odds: 14 }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.MECHANISM }
+      { item: ItemId.MECANISM }
     ],
     out: [
-      { item: ItemId.WROUGHT_IRON, odds: 51 },
-      { item: ItemId.COPPER_PIPE, odds: 9 },
-      { item: ItemId.SCRAP_METAL, odds: 8 },
-      { item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS, odds: 32 }
+      { item: ItemId.METAL, odds: 51 },
+      { item: ItemId.TUBE, odds: 9 },
+      { item: ItemId.METAL_BAD, odds: 8 },
+      { item: ItemId.MECA_PARTS, odds: 32 }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.METAL_CHEST }
+      { item: ItemId.CHEST }
     ],
     out: [
-      { item: ItemId.ANABOLIC_STEROIDS, odds: 16 },
+      { item: ItemId.DRUG, odds: 16 },
       { item: ItemId.BANDAGE, odds: 28 },
-      { item: ItemId.VODKA_MARINOSTOV, odds: 20 },
-      { item: ItemId.SEMTEX, odds: 8 },
-      { item: ItemId.BOX_OF_MATCHES, odds: 4 },
-      { item: ItemId.TWINOID_500MG, odds: 16 },
-      { item: ItemId._WAKE_THE_DEAD_, odds: 8 }
+      { item: ItemId.VODKA, odds: 20 },
+      { item: ItemId.EXPLO, odds: 8 },
+      { item: ItemId.LIGHTS, odds: 4 },
+      { item: ItemId.DRUG_HERO, odds: 16 },
+      { item: ItemId.RHUM, odds: 8 }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.LARGE_METAL_CHEST }
+      { item: ItemId.CHEST_XL }
     ],
     out: [
-      { item: ItemId.AQUA_SPLASH_INCOMPLETE, odds: 19 },
-      { item: ItemId.PUTA_MARK_II_CALIBRATOR, odds: 10 },
-      { item: ItemId.UTILITY_BELT, odds: 12 },
-      { item: ItemId.MACHETE, odds: 10 },
-      { item: ItemId.INCOMPLETE_CHAINSAW, odds: 12 },
-      { item: ItemId.ELECTRIC_WHISK_INCOMPLETE, odds: 19 },
-      { item: ItemId.DEVASTATOR_INCOMPLETE, odds: 7 },
-      { item: ItemId.DISMANTLED_MOWER, odds: 12 }
+      { item: ItemId.WATERGUN_OPT_PART, odds: 19 },
+      { item: ItemId.PILEGUN_UPKIT, odds: 10 },
+      { item: ItemId.POCKET_BELT, odds: 12 },
+      { item: ItemId.CUTCUT, odds: 10 },
+      { item: ItemId.CHAINSAW_PART, odds: 12 },
+      { item: ItemId.MIXERGUN_PART, odds: 19 },
+      { item: ItemId.BIG_PGUN_PART, odds: 7 },
+      { item: ItemId.LAWN_PART, odds: 12 }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.TOOLBOX }
+      { item: ItemId.CHEST_TOOLS }
     ],
     out: [
-      { item: ItemId.BATTERY, odds: 12 },
-      { item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS, odds: 17 },
-      { item: ItemId.DUCT_TAPE, odds: 13 },
-      { item: ItemId.COPPER_PIPE, odds: 13 },
-      { item: ItemId.PHARMACEUTICAL_PRODUCTS, odds: 25 },
-      { item: ItemId.SEMTEX, odds: 19 }
+      { item: ItemId.PILE, odds: 12 },
+      { item: ItemId.MECA_PARTS, odds: 17 },
+      { item: ItemId.RUSTINE, odds: 13 },
+      { item: ItemId.TUBE, odds: 13 },
+      { item: ItemId.PHARMA, odds: 25 },
+      { item: ItemId.EXPLO, odds: 19 }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.FOOD_PARCEL }
+      { item: ItemId.CHEST_FOOD }
     ],
     out: [
-      { item: ItemId.DOGGY_BAG, odds: 8 },
+      { item: ItemId.FOOD_BAG, odds: 8 },
       { item: ItemId.CAN, odds: 11 },
-      { item: ItemId.TASTY_LOOKING_STEAK, odds: 7 },
-      { item: ItemId.HUMAN_FLESH, odds: 13 },
-      { item: ItemId.SUSPICIOUS_LOOKING_VEGETABLE, odds: 8 }
+      { item: ItemId.MEAT, odds: 7 },
+      { item: ItemId.HMEAT, odds: 13 },
+      { item: ItemId.VEGETABLE, odds: 8 }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.FLATPACKED_FURNITURE }
+      { item: ItemId.DECO_BOX }
     ],
     out: [
-      { item: ItemId.OLD_DOOR, odds: 44 },
-      { item: ItemId.EKTORP_GLUTEN_CHAIR, odds: 60 },
+      { item: ItemId.DOOR, odds: 44 },
+      { item: ItemId.CHAIR_BASIC, odds: 60 },
       { item: ItemId.TRESTLE, odds: 35 },
-      { item: ItemId.J_RPEN_TABLE, odds: 35 },
-      { item: ItemId.ROCKING_CHAIR, odds: 46 }
+      { item: ItemId.TABLE, odds: 35 },
+      { item: ItemId.CHAIR, odds: 46 }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.SCHR_DINGER_S_BOX }
+      { item: ItemId.CATBOX }
     ],
     out: [
-      { item: ItemId.CORROSIVE_LIQUID },
-      { item: ItemId.FAT_CAT },
-      { item: ItemId.FURIOUS_KITTEN_PARTIALLY_DIGESTED }
+      { item: ItemId.POISON_PART },
+      { item: ItemId.PET_CAT },
+      { item: ItemId.ANGRYC }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.MAGNETIC_KEY_BLANK }
+      { item: ItemId.PRINTS }
     ],
     out: [
-      { item: ItemId.MAGNETIC_KEY }
+      { item: ItemId.MAGNETICKEY }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.BUMP_KEY_BLANK }
+      { item: ItemId.PRINTS_01 }
     ],
     out: [
-      { item: ItemId.BUMP_KEY }
+      { item: ItemId.BUMPKEY }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.BOTTLE_OPENER_BLANK }
+      { item: ItemId.PRINTS_02 }
     ],
     out: [
-      { item: ItemId.BOTTLE_OPENER }
+      { item: ItemId.CLASSICKEY }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.CROW_ELF }
+      { item: ItemId.FOOD_XMAS }
     ],
     out: [
-      { item: ItemId.CHOCOLATE_LOG }
+      { item: ItemId.WOOD_XMAS }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.MAGNETIC_KEY_INSTANT_BLANK }
+      { item: ItemId.NOODLE_PRINTS }
     ],
     out: [
-      { item: ItemId.MAGNETIC_KEY }
+      { item: ItemId.MAGNETICKEY }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.BUMP_KEY_INSTANT_BLANK }
+      { item: ItemId.NOODLE_PRINTS_01 }
     ],
     out: [
-      { item: ItemId.BUMP_KEY }
+      { item: ItemId.BUMPKEY }
     ]
   },
   {
     type: RecipeType.Workshop,
     in: [
-      { item: ItemId.BOTTLE_OPENER_INSTANT_BLANK }
+      { item: ItemId.NOODLE_PRINTS_02 }
     ],
     out: [
-      { item: ItemId.BOTTLE_OPENER }
+      { item: ItemId.CLASSICKEY }
     ]
   },
   {
     type: RecipeType.WorkshopShaman,
     in: [
-      { item: ItemId.LOST_SOUL }
+      { item: ItemId.SOUL_BLUE }
     ],
     out: [
-      { item: ItemId.POWERFUL_SOUL }
+      { item: ItemId.SOUL_YELLOW }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.INCOMPLETE_CAFETI_RE },
-      { item: ItemId.CYANIDE },
-      { item: ItemId.ELECTRONIC_COMPONENT },
-      { item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS },
-      { item: ItemId.DUCT_TAPE },
-      { item: ItemId.WROUGHT_IRON },
-      { item: ItemId.COPPER_PIPE }
+      { item: ItemId.COFFEE_MACHINE_PART },
+      { item: ItemId.CYANURE },
+      { item: ItemId.ELECTRO },
+      { item: ItemId.MECA_PARTS },
+      { item: ItemId.RUSTINE },
+      { item: ItemId.METAL },
+      { item: ItemId.TUBE }
     ],
     out: [
-      { item: ItemId.CAFETI_RE }
+      { item: ItemId.COFFEE_MACHINE }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.MINI_HI_FI_BROKEN },
-      { item: ItemId.BATTERY },
-      { item: ItemId.ELECTRONIC_COMPONENT }
+      { item: ItemId.MUSIC_PART },
+      { item: ItemId.PILE },
+      { item: ItemId.ELECTRO }
     ],
     out: [
-      { item: ItemId.MINI_HI_FI_ON }
+      { item: ItemId.MUSIC }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.WIRE_REEL },
-      { item: ItemId.EMPTY_OIL_CAN },
-      { item: ItemId.BROKEN_STAFF_2 }
+      { item: ItemId.WIRE },
+      { item: ItemId.OILCAN },
+      { item: ItemId.STAFF2 }
     ],
     out: [
-      { item: ItemId.MAKESHIFT_GUITAR }
+      { item: ItemId.GUITAR }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.CAR_DOOR_INCOMPLETE },
-      { item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS },
-      { item: ItemId.DUCT_TAPE },
-      { item: ItemId.WROUGHT_IRON }
+      { item: ItemId.CAR_DOOR_PART },
+      { item: ItemId.MECA_PARTS },
+      { item: ItemId.RUSTINE },
+      { item: ItemId.METAL }
     ],
     out: [
       { item: ItemId.CAR_DOOR }
@@ -343,8 +334,8 @@ export const recipes: Recipe[] = [
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.BOX_OF_MATCHES },
-      { item: ItemId.ROTTING_LOG }
+      { item: ItemId.LIGHTS },
+      { item: ItemId.WOOD_BAD }
     ],
     out: [
       { item: ItemId.TORCH }
@@ -353,114 +344,114 @@ export const recipes: Recipe[] = [
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.CRATE_LID },
-      { item: ItemId.TWISTED_PLANK }
+      { item: ItemId.WOOD_PLATE_PART },
+      { item: ItemId.WOOD2 }
     ],
     out: [
-      { item: ItemId.SOLID_WOODEN_BOARD }
+      { item: ItemId.WOOD_PLATE }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.BAG_OF_CEMENT },
-      { item: ItemId.WATER_RATION }
+      { item: ItemId.CONCRETE },
+      { item: ItemId.WATER }
     ],
     out: [
-      { item: ItemId.UNSHAPED_CONCRETE_BLOCKS }
+      { item: ItemId.CONCRETE_WALL }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.DRIED_MARSHMALLOWS },
+      { item: ItemId.CHAMA },
       { item: ItemId.TORCH }
     ],
     out: [
-      { item: ItemId.BURNT_MARSHMALLOWS }
+      { item: ItemId.CHAMA_TASTY }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.CHINESE_NOODLES },
-      { item: ItemId.STRONG_SPICES },
-      { item: ItemId.WATER_RATION }
+      { item: ItemId.FOOD_NOODLES },
+      { item: ItemId.SPICES },
+      { item: ItemId.WATER }
     ],
     out: [
-      { item: ItemId.SPICY_CHINESE_NOODLES }
+      { item: ItemId.FOOD_NOODLES_HOT }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.CAFETI_RE },
-      { item: ItemId.BATTERY },
-      { item: ItemId.PHARMACEUTICAL_PRODUCTS },
-      { item: ItemId.ROTTING_LOG }
+      { item: ItemId.COFFEE_MACHINE },
+      { item: ItemId.PILE },
+      { item: ItemId.PHARMA },
+      { item: ItemId.WOOD_BAD }
     ],
     out: [
-      { item: ItemId.CAFETI_RE },
-      { item: ItemId.BLOODY_HOT_COFFEE }
+      { item: ItemId.COFFEE_MACHINE },
+      { item: ItemId.COFFEE }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.AQUA_SPLASH_INCOMPLETE },
-      { item: ItemId.COPPER_PIPE },
-      { item: ItemId.COMPACT_DETONATOR },
-      { item: ItemId.PLASTIC_BAG },
-      { item: ItemId.DUCT_TAPE }
+      { item: ItemId.WATERGUN_OPT_PART },
+      { item: ItemId.TUBE },
+      { item: ItemId.DETO },
+      { item: ItemId.GRENADE_EMPTY },
+      { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.AQUA_SPLASH_EMPTY }
+      { item: ItemId.WATERGUN_OPT_EMPTY }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.PUTA_MARK_II_CALIBRATOR },
-      { item: ItemId.BATTERY_LAUNCHER_1_ITF_EMPTY },
-      { item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS },
-      { item: ItemId.ELECTRONIC_COMPONENT },
-      { item: ItemId.DUCT_TAPE }
+      { item: ItemId.PILEGUN_UPKIT },
+      { item: ItemId.PILEGUN_EMPTY },
+      { item: ItemId.MECA_PARTS },
+      { item: ItemId.ELECTRO },
+      { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.BATTERY_LAUNCHER_MK__II_EMPTY }
+      { item: ItemId.PILEGUN_UP_EMPTY }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.ELECTRIC_WHISK_INCOMPLETE },
-      { item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS },
-      { item: ItemId.ELECTRONIC_COMPONENT },
-      { item: ItemId.DUCT_TAPE }
+      { item: ItemId.MIXERGUN_PART },
+      { item: ItemId.MECA_PARTS },
+      { item: ItemId.ELECTRO },
+      { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.ELECTRIC_WHISK_NO_BATTERY }
+      { item: ItemId.MIXERGUN_EMPTY }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.JERRYCAN_GUN_UNATTACHED },
-      { item: ItemId.FULL_JERRYCAN },
-      { item: ItemId.DUCT_TAPE }
+      { item: ItemId.JERRYGUN_PART },
+      { item: ItemId.JERRYCAN },
+      { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.JERRYCAN_GUN_READY }
+      { item: ItemId.JERRYGUN }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.INCOMPLETE_CHAINSAW },
+      { item: ItemId.CHAINSAW_PART },
       { item: ItemId.ENGINE },
-      { item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS },
-      { item: ItemId.BELT },
-      { item: ItemId.DUCT_TAPE }
+      { item: ItemId.MECA_PARTS },
+      { item: ItemId.COURROIE },
+      { item: ItemId.RUSTINE }
     ],
     out: [
       { item: ItemId.CHAINSAW_EMPTY }
@@ -469,102 +460,102 @@ export const recipes: Recipe[] = [
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.SEMTEX },
-      { item: ItemId.PLASTIC_BAG },
-      { item: ItemId.COMPACT_DETONATOR },
-      { item: ItemId.DUCT_TAPE }
+      { item: ItemId.EXPLO },
+      { item: ItemId.GRENADE_EMPTY },
+      { item: ItemId.DETO },
+      { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.PLASTIC_BAG_AND_SEMTEX }
+      { item: ItemId.BGRENADE_EMPTY }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.DISMANTLED_MOWER },
-      { item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS },
-      { item: ItemId.WROUGHT_IRON },
-      { item: ItemId.DUCT_TAPE }
+      { item: ItemId.LAWN_PART },
+      { item: ItemId.MECA_PARTS },
+      { item: ItemId.METAL },
+      { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.LAWNMOWER }
+      { item: ItemId.LAWN }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.FLASH_POWDER },
-      { item: ItemId.PLASTIC_BAG },
-      { item: ItemId.DUCT_TAPE }
+      { item: ItemId.POWDER },
+      { item: ItemId.GRENADE_EMPTY },
+      { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.FLASH_GRENADE }
+      { item: ItemId.FLASH }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.DEVASTATOR_INCOMPLETE },
-      { item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS },
-      { item: ItemId.BELT }
+      { item: ItemId.BIG_PGUN_PART },
+      { item: ItemId.MECA_PARTS },
+      { item: ItemId.COURROIE }
     ],
     out: [
-      { item: ItemId.DEVASTATOR_EMPTY }
+      { item: ItemId.BIG_PGUN_EMPTY }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.WONKY_SHOPPING_TROLLEY },
-      { item: ItemId.DUCT_TAPE },
-      { item: ItemId.WROUGHT_IRON },
-      { item: ItemId.COPPER_PIPE }
+      { item: ItemId.CART_PART },
+      { item: ItemId.RUSTINE },
+      { item: ItemId.METAL },
+      { item: ItemId.TUBE }
     ],
     out: [
-      { item: ItemId.SHOPPING_TROLLEY }
+      { item: ItemId.CART }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.CORROSIVE_LIQUID },
-      { item: ItemId.BATTERY },
-      { item: ItemId.PHARMACEUTICAL_PRODUCTS }
+      { item: ItemId.POISON_PART },
+      { item: ItemId.PILE },
+      { item: ItemId.PHARMA }
     ],
     out: [
-      { item: ItemId.VIAL_OF_POISON }
+      { item: ItemId.POISON }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.POUND_OF_FLESH },
-      { item: ItemId.POUND_OF_FLESH }
+      { item: ItemId.FLESH_PART },
+      { item: ItemId.FLESH_PART }
     ],
     out: [
-      { item: ItemId.GRISLY_BOMB }
+      { item: ItemId.FLESH }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.DAMAGED_HACKSAW },
-      { item: ItemId.DUCT_TAPE },
-      { item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS }
+      { item: ItemId.SAW_TOOL_PART },
+      { item: ItemId.RUSTINE },
+      { item: ItemId.MECA_PARTS }
     ],
     out: [
-      { item: ItemId.HACKSAW }
+      { item: ItemId.SAW_TOOL }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.ENGINE_INCOMPLETE },
-      { item: ItemId.DUCT_TAPE },
-      { item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS },
-      { item: ItemId.WROUGHT_IRON },
-      { item: ItemId.COMPACT_DETONATOR },
-      { item: ItemId.BROKEN_HUMAN_BONE }
+      { item: ItemId.ENGINE_PART },
+      { item: ItemId.RUSTINE },
+      { item: ItemId.MECA_PARTS },
+      { item: ItemId.METAL },
+      { item: ItemId.DETO },
+      { item: ItemId.BONE }
     ],
     out: [
       { item: ItemId.ENGINE }
@@ -573,10 +564,10 @@ export const recipes: Recipe[] = [
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.TOOL_BAG },
-      { item: ItemId.DUCT_TAPE },
-      { item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS },
-      { item: ItemId.TWISTED_PLANK }
+      { item: ItemId.REPAIR_KIT_PART_RAW },
+      { item: ItemId.RUSTINE },
+      { item: ItemId.MECA_PARTS },
+      { item: ItemId.WOOD2 }
     ],
     out: [
       { item: ItemId.REPAIR_KIT }
@@ -585,90 +576,90 @@ export const recipes: Recipe[] = [
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.FLESHROOMS },
-      { item: ItemId.FLESHROOMS }
+      { item: ItemId.FRUIT_SUB_PART },
+      { item: ItemId.FRUIT_SUB_PART }
     ],
     out: [
-      { item: ItemId.STICKY_PASTRY_BALL }
+      { item: ItemId.FRUIT_PART }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.PHARMACEUTICAL_PRODUCTS },
-      { item: ItemId.PHARMACEUTICAL_PRODUCTS }
+      { item: ItemId.PHARMA },
+      { item: ItemId.PHARMA }
     ],
     out: [
-      { item: ItemId.ANABOLIC_STEROIDS, odds: 42 },
-      { item: ItemId.VALIUM_SHOT, odds: 40 },
-      { item: ItemId.UNLABELLED_DRUG, odds: 46 },
-      { item: ItemId.HYDRATONE_100MG, odds: 46 },
-      { item: ItemId.WATER_PURIFYING_TABLETS, odds: 43 },
-      { item: ItemId.TWINOID_500MG, odds: 49 }
+      { item: ItemId.DRUG, odds: 42 },
+      { item: ItemId.XANAX, odds: 40 },
+      { item: ItemId.DRUG_RANDOM, odds: 46 },
+      { item: ItemId.DRUG_WATER, odds: 46 },
+      { item: ItemId.WATER_CLEANER, odds: 43 },
+      { item: ItemId.DRUG_HERO, odds: 49 }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.THICK_SOLUTION },
-      { item: ItemId.THICK_SOLUTION }
+      { item: ItemId.PHARMA_PART },
+      { item: ItemId.PHARMA_PART }
     ],
     out: [
-      { item: ItemId.ANABOLIC_STEROIDS, odds: 1 },
-      { item: ItemId.VALIUM_SHOT, odds: 1 },
-      { item: ItemId.UNLABELLED_DRUG, odds: 2 },
-      { item: ItemId.HYDRATONE_100MG, odds: 2 },
-      { item: ItemId.WATER_PURIFYING_TABLETS, odds: 1 },
-      { item: ItemId.PHARMACEUTICAL_PRODUCTS, odds: 7 }
+      { item: ItemId.DRUG, odds: 1 },
+      { item: ItemId.XANAX, odds: 1 },
+      { item: ItemId.DRUG_RANDOM, odds: 2 },
+      { item: ItemId.DRUG_WATER, odds: 2 },
+      { item: ItemId.WATER_CLEANER, odds: 1 },
+      { item: ItemId.PHARMA, odds: 7 }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.CLAYMORE_MINE },
-      { item: ItemId.DOORMAT }
+      { item: ItemId.CLAYMO },
+      { item: ItemId.DOOR_CARPET }
     ],
     out: [
-      { item: ItemId.IMPERSONAL_EXPLODING_DOORMAT }
+      { item: ItemId.TRAPMA }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.WIRE_REEL },
-      { item: ItemId.SEMTEX },
-      { item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS },
-      { item: ItemId.DUCT_TAPE }
+      { item: ItemId.WIRE },
+      { item: ItemId.EXPLO },
+      { item: ItemId.MECA_PARTS },
+      { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.CLAYMORE_MINE }
+      { item: ItemId.CLAYMO }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.COPPER_PIPE },
-      { item: ItemId.CONVEX_LENS }
+      { item: ItemId.TUBE },
+      { item: ItemId.LENS }
     ],
     out: [
-      { item: ItemId.TELESCOPE }
+      { item: ItemId.SCOPE }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.BAG_OF_DAMP_GRASS },
-      { item: ItemId.CONVEX_LENS }
+      { item: ItemId.RYEBAG },
+      { item: ItemId.LENS }
     ],
     out: [
-      { item: ItemId.ERGOT_FUNGUS }
+      { item: ItemId.FUNGUS }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.ERGOT_FUNGUS },
-      { item: ItemId.CORROSIVE_LIQUID }
+      { item: ItemId.FUNGUS },
+      { item: ItemId.POISON_PART }
     ],
     out: [
       { item: ItemId.LSD }
@@ -677,192 +668,192 @@ export const recipes: Recipe[] = [
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.CHUCK_FIGURINE },
+      { item: ItemId.CHUDOL },
       { item: ItemId.LSD }
     ],
     out: [
-      { item: ItemId.PSYCHADELIC_SPIRITUAL_COUNSEL }
+      { item: ItemId.CHKSPK }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.FLESHROOMS },
-      { item: ItemId.STICKY_PASTRY_BALL }
+      { item: ItemId.FRUIT_SUB_PART },
+      { item: ItemId.FRUIT_PART }
     ],
     out: [
-      { item: ItemId.FLESHROOM_PUREE }
+      { item: ItemId.FRUIT }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.BEST_OF_THE_KING_CD },
-      { item: ItemId.MINI_HI_FI_ON }
+      { item: ItemId.CDELVI },
+      { item: ItemId.MUSIC }
     ],
     out: [
-      { item: ItemId.ROCK_N_ROLL_HIFI }
+      { item: ItemId.DFHIFI }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.PHIL_COLLINS_CD },
-      { item: ItemId.MINI_HI_FI_ON }
+      { item: ItemId.CDPHIL },
+      { item: ItemId.MUSIC }
     ],
     out: [
-      { item: ItemId.CURSED_HIFI }
+      { item: ItemId.HIFIEV }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.BRITNEY_SPEARS_CD },
-      { item: ItemId.MINI_HI_FI_ON }
+      { item: ItemId.CDBRIT },
+      { item: ItemId.MUSIC }
     ],
     out: [
-      { item: ItemId.CURSED_HIFI }
+      { item: ItemId.HIFIEV }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.CURSED_HIFI },
-      { item: ItemId.EARPLUGS }
+      { item: ItemId.HIFIEV },
+      { item: ItemId.BQUIES }
     ],
     out: [
-      { item: ItemId.ANTI_PERSONNEL_HIFI }
+      { item: ItemId.DFHIFI_01 }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.WIRE_REEL },
-      { item: ItemId.HANDFUL_OF_NUTS_AND_BOLTS },
-      { item: ItemId.COPPER_PIPE },
-      { item: ItemId.NOVELTY_TORCH_2_CHARGES },
-      { item: ItemId.LASER_DIODE }
+      { item: ItemId.WIRE },
+      { item: ItemId.MECA_PARTS },
+      { item: ItemId.TUBE },
+      { item: ItemId.MAGLITE_2 },
+      { item: ItemId.DIODE }
     ],
     out: [
-      { item: ItemId.BURNING_LASER_POINTER_4_CHARGES }
+      { item: ItemId.LPOINT4 }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.ERGOT_FUNGUS },
-      { item: ItemId.VODKA_MARINOSTOV },
-      { item: ItemId.EMPTY_OIL_CAN }
+      { item: ItemId.FUNGUS },
+      { item: ItemId.VODKA },
+      { item: ItemId.OILCAN }
     ],
     out: [
-      { item: ItemId.ERGOT_HOMEBREW }
+      { item: ItemId.HMBREW }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.CROW_ELF },
-      { item: ItemId.OPEN_CAN }
+      { item: ItemId.FOOD_XMAS },
+      { item: ItemId.CAN_OPEN }
     ],
     out: [
-      { item: ItemId.CHOCOLATE_LOG }
+      { item: ItemId.WOOD_XMAS }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.REVOLVER_UNLOADED },
-      { item: ItemId.HANDFUL_OF_BULLETS }
+      { item: ItemId.GUN },
+      { item: ItemId.BULLETS }
     ],
     out: [
-      { item: ItemId.REVOLVER_UNLOADED }
+      { item: ItemId.GUN }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.ASSAULT_RIFLE_UNLOADED },
-      { item: ItemId.HANDFUL_OF_BULLETS }
+      { item: ItemId.MACHINE_GUN },
+      { item: ItemId.BULLETS }
     ],
     out: [
-      { item: ItemId.ASSAULT_RIFLE_UNLOADED }
+      { item: ItemId.MACHINE_GUN }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.SECOND_HAND_RED_COAT },
-      { item: ItemId.RIPPED_RED_TROUSERS },
-      { item: ItemId.FOUL_SMELLING_RED_HAT }
+      { item: ItemId.CHRISTMAS_SUIT_1 },
+      { item: ItemId.CHRISTMAS_SUIT_2 },
+      { item: ItemId.CHRISTMAS_SUIT_3 }
     ],
     out: [
-      { item: ItemId.FOUL_SMELLING_VINTAGE_SUIT }
+      { item: ItemId.CHRISTMAS_SUIT_FULL }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.SECOND_HAND_RED_COAT },
-      { item: ItemId.RIPPED_RED_TROUSERS },
-      { item: ItemId.FOUL_SMELLING_RED_HAT }
+      { item: ItemId.CHRISTMAS_SUIT_1 },
+      { item: ItemId.CHRISTMAS_SUIT_2 },
+      { item: ItemId.CHRISTMAS_SUIT_3 }
     ],
     out: [
-      { item: ItemId.FOUL_SMELLING_VINTAGE_SUIT }
+      { item: ItemId.CHRISTMAS_SUIT_FULL }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.SECOND_HAND_RED_COAT },
-      { item: ItemId.RIPPED_RED_TROUSERS },
-      { item: ItemId.FOUL_SMELLING_RED_HAT }
+      { item: ItemId.CHRISTMAS_SUIT_1 },
+      { item: ItemId.CHRISTMAS_SUIT_2 },
+      { item: ItemId.CHRISTMAS_SUIT_3 }
     ],
     out: [
-      { item: ItemId.FOUL_SMELLING_VINTAGE_SUIT }
+      { item: ItemId.CHRISTMAS_SUIT_FULL }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.CARVED_SOFT_PUMPKIN },
-      { item: ItemId.BOX_OF_MATCHES },
-      { item: ItemId.PHARMACEUTICAL_PRODUCTS }
+      { item: ItemId.PUMPKIN_OFF },
+      { item: ItemId.LIGHTS },
+      { item: ItemId.PHARMA }
     ],
     out: [
-      { item: ItemId.LIT_PUMPKIN }
+      { item: ItemId.PUMPKIN_ON }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.FAT_SERPENT },
-      { item: ItemId.BOX_CUTTER }
+      { item: ItemId.PET_SNAKE2 },
+      { item: ItemId.CUTTER }
     ],
     out: [
-      { item: ItemId.FURIOUS_KITTEN_PARTIALLY_DIGESTED }
+      { item: ItemId.ANGRYC }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.SOFT_PUMPKIN },
-      { item: ItemId.PATHETIC_PENKNIFE }
+      { item: ItemId.PUMPKIN_RAW },
+      { item: ItemId.SMALL_KNIFE }
     ],
     out: [
-      { item: ItemId.CARVED_SOFT_PUMPKIN }
+      { item: ItemId.PUMPKIN_OFF }
     ]
   },
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.BLOODY_DRESSING },
-      { item: ItemId.ANABOLIC_STEROIDS },
-      { item: ItemId.PHARMACEUTICAL_PRODUCTS },
-      { item: ItemId.WATER_RATION },
-      { item: ItemId.HYDRATONE_100MG }
+      { item: ItemId.INFECT_POISON_PART },
+      { item: ItemId.DRUG },
+      { item: ItemId.PHARMA },
+      { item: ItemId.WATER },
+      { item: ItemId.DRUG_WATER }
     ],
     out: [
-      { item: ItemId.TOXIN }
+      { item: ItemId.INFECT_POISON }
     ]
   }
 ];

@@ -10,9 +10,14 @@ import { displayMapPreview, insertMapPreview, openBBHCityPage, removeMapPreview 
 import { listenToBackgroundMessages } from "./messageListener";
 import { displayShamanSoulsButton } from "./shamanSoulsButton";
 import { initStore } from "./store";
+import { insertWiki, displayWikiButton } from "./wiki";
 
 // Initialize the store
 await initStore();
+// TODO: wrong % for staff break chance
+// TODO: Differentiate Open action from OpenWithOpener
+// TODO: Implement rotating items in tooltips (repairable items, etc)
+// TODO: Add an onsite wiki (items/buildings/ruins)
 // TODO: Display infection chances on items
 // TODO: Display decoration points on items
 // TODO: Add better tooltips toggle to settings
@@ -26,6 +31,7 @@ listenToBackgroundMessages();
 // Actions that can be performed immediately
 // should be handled here
 insertMapPreview();
+insertWiki();
 
 // Actions that need to wait for specific elements
 // to be added to the DOM should be handled here
@@ -35,6 +41,7 @@ onMount((node) => {
   displayUpdateButton(node);
   insertBetterTooltips(node);
   displayShamanSoulsButton(node);
+  displayWikiButton(node);
 });
 
 // Actions that need to be performed on hover

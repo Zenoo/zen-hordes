@@ -31,7 +31,13 @@ const decodeRequestBody = (
 // Send message to the content script
 const sendMessageToContentScript = async (message: Message) => {
   const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
-  chrome.tabs.sendMessage(tabs[0].id ?? 0, message);
+  const tab = tabs[0];
+
+  if (!tab?.id) {
+    return;
+  }
+
+  chrome.tabs.sendMessage(tab.id, message);
 };
 
 // Watched requests queue (empties after the request is completed)

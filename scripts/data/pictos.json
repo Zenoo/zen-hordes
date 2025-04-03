@@ -1,0 +1,2054 @@
+{
+  "r_heroac_#00": {
+    "id": 1,
+    "img": "pictos/r_heroac.2a464a9d.gif",
+    "name": {
+      "fr": "Actions héroïques",
+      "en": "Heroic Actions",
+      "de": "Heldentaten",
+      "es": "Acciones heroicas"
+    },
+    "desc": {
+      "fr": "Nombre de choses vraiment hors du commun que vous avez faites.",
+      "en": "Number of truly extraordinary things you've done.",
+      "de": "Anzahl deiner wirklich außergewöhnlichen Heldentaten.",
+      "es": "Cantidad de acciones extraordinarias que has realizado."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_alcool_#00": {
+    "id": 2,
+    "img": "pictos/r_alcool.81820878.gif",
+    "name": {
+      "fr": "Alcools",
+      "en": "Alcohol",
+      "de": "Alkohol",
+      "es": "Alcoholes"
+    },
+    "desc": {
+      "fr": "Litres de substances alcoolisées artisanales que vous avez avalés.",
+      "en": "The number of litres of home-made alcoholic substances you have consumed.",
+      "de": "Anzahl der Liter selbstgebrannten Alkohols, den du gesoffen hast.",
+      "es": "Litros de bebidas alcohólicas artesanales que has ingerido."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_homeup_#00": {
+    "id": 3,
+    "img": "pictos/r_homeup.0f6c842e.gif",
+    "name": {
+      "fr": "Améliora­tions de maison",
+      "en": "Home Improvements",
+      "de": "Hausverbesserung",
+      "es": "Mejoras en casa"
+    },
+    "desc": {
+      "fr": "Nombre d’améliorations générales apportées à votre maison.",
+      "en": "Number of upgrades you have made to your place (improvements).",
+      "de": "Anzahl der Verbesserungen und Ausbauten, die du an deinem eigenem Haus vorgenommen hast.",
+      "es": "Cantidad de mejoras hechas a tu vivienda."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_refine_#00": {
+    "id": 4,
+    "img": "pictos/r_refine.ec8218e2.gif",
+    "name": {
+      "fr": "Artisanat",
+      "en": "Craftsman",
+      "de": "Handwerk",
+      "es": "Artesano"
+    },
+    "desc": {
+      "fr": "Nombre de petits objets bricolés ou démolis à l’atelier.",
+      "en": "The number of objects you have assembled or dismantled at the workshop.",
+      "de": "Anzahl der Gegenstände, die du in der Werkstatt zusammengebaut oder zerstört hast.",
+      "es": "Cantidad de cachivaches armados o destruidos en el taller."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_cwater_#00": {
+    "id": 5,
+    "img": "pictos/r_cwater.6317e2ce.gif",
+    "name": {
+      "fr": "Arroseur",
+      "en": "Sprinkler",
+      "de": "Leichenwäscher",
+      "es": "Mojador de muertos"
+    },
+    "desc": {
+      "fr": "Cérémonies d’arrosage pratiquées sur des cadavres de citoyens.",
+      "en": "The number of ceremonial showers given to corpses of citizens to ensure their non-return.",
+      "de": "Anzahl der Leichenwaschzeremonien, die du mit den Körpern deiner verstorbenen Mitbürger durchgeführt hast.",
+      "es": "Veces que has regado con agua los cadáveres del pueblo."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_solban_#00": {
+    "id": 6,
+    "img": "pictos/r_solban.e1d2ecf1.gif",
+    "name": {
+      "fr": "Banni émancipé",
+      "en": "Emancipation of the Shunned",
+      "de": "Autarker Verbannter",
+      "es": "Desterrado emancipado"
+    },
+    "desc": {
+      "fr": "Nombre d’objets de fortune confectionnés à partir de débris trouvés dans les poubelles de la ville. Il faut être banni(e) pour recevoir cette distinction.",
+      "en": "The number of lucky finds you have stumbled across while rummaging in the town's garbage.",
+      "de": "Anzahl der brauchbaren Gegenstände, die du in der Mülldeponie vor der Stadt gefunden hast. Nur Verbannte können diese Auszeichnung erhalten.",
+      "es": "Cantidad de objetos de fortuna fabricado con desechos encontrados en la basura del pueblo. Solo los desterrados pueden recibir este reconocimiento."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_ban_#00": {
+    "id": 7,
+    "img": "pictos/r_ban.e376f594.gif",
+    "name": {
+      "fr": "Bannisse­ments",
+      "en": "Banishments",
+      "de": "Verbannungen",
+      "es": "Destierros"
+    },
+    "desc": {
+      "fr": "Nombre d’exclusions définitives de la communauté.",
+      "en": "The number of times you have been run out of town by a lynch mob.",
+      "de": "Anzahl der Stadtverbannungen.",
+      "es": "Cantidad de veces que fuiste expulsado de la comunidad."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_wound_#00": {
+    "id": 8,
+    "img": "pictos/r_wound.08831b3d.gif",
+    "name": {
+      "fr": "Blessures",
+      "en": "Injuries",
+      "de": "Schwere Verletzungen",
+      "es": "Magulladuras"
+    },
+    "desc": {
+      "fr": "Nombre de mutilations ou démembrements qui ne vous ont pas coûté la vie.",
+      "en": "Number of mutilations or dismemberments which didn't quite cost your life.",
+      "de": "Anzahl der Verstümmelungen und Gliedabtrennungen, die dich das Leben gekostet haben.",
+      "es": "Cantidad de mutilaciones o desarticulaciones que no te quitaron la vida."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_cookr_#00": {
+    "id": 9,
+    "img": "pictos/r_cookr.f98dcacf.gif",
+    "name": {
+      "fr": "Bons p’tits plats",
+      "en": "Tasty Dishes",
+      "de": "Hausmannskost",
+      "es": "Delicias"
+    },
+    "desc": {
+      "fr": "Délicieux mets que vous avez concoctés avec des ingrédients douteux.",
+      "en": "The number of delicious meals you have prepaired from dubious ingredients.",
+      "de": "Anzahl köstlicher Speisen, die du in der Küche gezaubert hast.",
+      "es": "Platillos preparados con ingredientes de procedencia dudosa."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_animal_#00": {
+    "id": 10,
+    "img": "pictos/r_animal.cca8b6c1.gif",
+    "name": {
+      "fr": "Boucherie",
+      "en": "Butcher",
+      "de": "Metzger",
+      "es": "Carnicería"
+    },
+    "desc": {
+      "fr": "Nombre d’animaux que vous avez exterminés (à la main, au mixer, au sani-broyeur…).",
+      "en": "The number of animals you have exterminated (by hand, with a mixer, with a saniflow macerator...).",
+      "de": "Anzahl der Tiere, die du umgebracht hast (mit deinen Händen, im Mixer, in der Fäkalienhebeanlage...).",
+      "es": "Cantidad de animales que has exterminado (con las manos, con un machete, con una batidora...)"
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_cmplst_#00": {
+    "id": 11,
+    "img": "pictos/r_cmplst.c7fa40ef.gif",
+    "name": {
+      "fr": "Campeur de l’au-delà",
+      "en": "Zen Camper",
+      "de": "Camper im Jenseits",
+      "es": "Campista del Más Allá"
+    },
+    "desc": {
+      "fr": "Nombre de nuits survécues tandis que la ville était dévastée !",
+      "en": "Number of nights survived after the town has been devastated!",
+      "de": "Anzahl der Nächte, die du draußen überlebt hast als die Stadt schon zerstört war!",
+      "es": "Cantidad de noches sobrevividas mientras que el pueblo estaba devastado."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_camp_#00": {
+    "id": 12,
+    "img": "pictos/r_camp.61ddba37.gif",
+    "name": {
+      "fr": "Campeur téméraire",
+      "en": "Daredevil Camper",
+      "de": "Mutiger Camper",
+      "es": "Campista temerario"
+    },
+    "desc": {
+      "fr": "Nombre de nuits passées dehors et auxquelles vous avez survécu.",
+      "en": "The number of nights you have spent in the World Beyond... and survived!",
+      "de": "Anzahl der Nächte, die du draußen geschlafen und überlebt hast.",
+      "es": "Cantidad de noches pasadas fuera del pueblo y que has sobrevivido."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_cannib_#00": {
+    "id": 13,
+    "img": "pictos/r_cannib.43615c0f.gif",
+    "name": {
+      "fr": "Cannibalisme",
+      "en": "Cannibalism",
+      "de": "Kannibalismus",
+      "es": "Canibalismo"
+    },
+    "desc": {
+      "fr": "Nombre de repas à base de viande humaine…",
+      "en": "Number of times you have dined on human flesh...",
+      "de": "Die Anzahl der Kilos an Menschenfleisch, die von dir verzehrt wurden...",
+      "es": "Cantidad de veces que tragaste carne humana..."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_watgun_#00": {
+    "id": 14,
+    "img": "pictos/r_watgun.c656f55c.gif",
+    "name": {
+      "fr": "Canons à eau",
+      "en": "Water Guns",
+      "de": "Wasserkanonen",
+      "es": "Cañones de agua"
+    },
+    "desc": {
+      "fr": "Nombre de gros jouets à base d’eau que vous avez fabriqués.",
+      "en": "The number of water-based toys you have built.",
+      "de": "Anzahl an großen Wasserwaffen, die du gebaut hast.",
+      "es": "Cantidad de grandes juguetes de agua que has fabricado."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_chstxl_#00": {
+    "id": 15,
+    "img": "pictos/r_chstxl.3a489398.gif",
+    "name": {
+      "fr": "Chanceux",
+      "en": "Luck",
+      "de": "Glückspilz",
+      "es": "Suertudo"
+    },
+    "desc": {
+      "fr": "Nombre de gros coffres en métal que vous avez dégotés dans l'Outre-Monde.",
+      "en": "Number of large metal chests you have found in the World Beyond.",
+      "de": "Anzahl der großen Metallkoffer, die du in der Außenwelt ausgegraben hast.",
+      "es": "Cantidad de grandes cofres de metal que has encontrado en el Ultramundo."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_buildr_#00": {
+    "id": 16,
+    "img": "pictos/r_buildr.ad20d831.gif",
+    "name": {
+      "fr": "Chantiers",
+      "en": "Constructions",
+      "de": "Baustellen",
+      "es": "Construcciones"
+    },
+    "desc": {
+      "fr": "Points d'action et/ou de chantier investis dans l'avancement d'un chantier en ville.",
+      "en": "The number of action / construction points you have invested in the construction projects in town.",
+      "de": "Anzahl der Aktionspunkte, die du für den Bau neuer Kontruktionen und Stadtgebäude verwendet hast.",
+      "es": "Puntos de acción o de construcción invertidos en el avance de una obra en el pueblo."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_nodrug_#00": {
+    "id": 17,
+    "img": "pictos/r_nodrug.41e1fde3.gif",
+    "name": {
+      "fr": "Clair(e)",
+      "en": "Clean",
+      "de": "Clean",
+      "es": "Limpio"
+    },
+    "desc": {
+      "fr": "Capacité à rester Clair(e) (aucune drogue consommée) au cours de toute une vie.",
+      "en": "Your capacity to stay clean (take no drugs) during a lifetime.",
+      "de": "Anzahl der Punkte, die du erworben hast, indem du in einer Stadt komplett clean geblieben bist.",
+      "es": "Capacidad de rechazar el consumo de todo estimulante en tu vida."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_collec_#00": {
+    "id": 18,
+    "img": "pictos/r_collec.a1926566.gif",
+    "name": {
+      "fr": "Purificateur d'âmes",
+      "en": "Soul Purificator",
+      "de": "Seelenreiniger",
+      "es": "Purificador de almas"
+    },
+    "desc": {
+      "fr": "Nombre d'âmes de citoyens décédés que vous avez purifiées.",
+      "en": "The number of dead citizens' souls you purified.",
+      "de": "Anzahl der Seelen verstorbener Bürger, die Sie gereinigt haben.",
+      "es": "Cantidad de almas recolectadas que has purificado."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_wrestl_#00": {
+    "id": 19,
+    "img": "pictos/r_wrestl.7c9185e5.gif",
+    "name": {
+      "fr": "Combats désespérés",
+      "en": "Fights of despair",
+      "de": "Kämpfe um Leben und Tod",
+      "es": "Combates mortales"
+    },
+    "desc": {
+      "fr": "Zombies éliminés de vos propres mains, sans arme ni capacité spéciale. Wahou.",
+      "en": "The number of zombies you have killed with your bare hands, using no weapons or special abilities. Wow!",
+      "de": "Anzahl der Zombies, die du mit den bloßen Händen umgebracht hast. Wow!",
+      "es": "Zombies que mataste con tus propias manos, sin armas ni competencias especiales. ¡Eso macho!"
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_ebuild_#00": {
+    "id": 20,
+    "img": "pictos/r_ebuild.168588c5.gif",
+    "name": {
+      "fr": "Construction de Merveilles",
+      "en": "Wonder Constructions",
+      "de": "Wunderwerke",
+      "es": "Construcción de Maravillas"
+    },
+    "desc": {
+      "fr": "Nombre de Merveilles que vous avez réussi à construire.",
+      "en": "The number of wonders you have constructed.",
+      "de": "Anzahl der Wunderwerke, an deren Bau du mitgewirkt hast.",
+      "es": "Cantidad de maravillas que has logrado construir."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_cooked_#00": {
+    "id": 21,
+    "img": "pictos/r_cooked.2b0cbfb0.gif",
+    "name": {
+      "fr": "Cuisine exotique",
+      "en": "Extreme BBQ Chef",
+      "de": "Grillmeister",
+      "es": "Cocina exótica"
+    },
+    "desc": {
+      "fr": "Anciens amis que vous avez cuisinés au Cremato-cue.",
+      "en": "The number of former friends and fellow residents you have cooked and eaten.",
+      "de": "Anzahl deiner Alten Freunde, die du im Kremato-Cue gegrillt hast.",
+      "es": "Viejos amigos a los que has cocinado en el Cremato-bar."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_digger_#00": {
+    "id": 22,
+    "img": "pictos/r_digger.f1413730.gif",
+    "name": {
+      "fr": "Déblaiement",
+      "en": "Excavations",
+      "de": "Ausgrabungsarbeiten",
+      "es": "Desmonte"
+    },
+    "desc": {
+      "fr": "Points d'action investis dans le déblaiement d'un bâtiment dans l'Outre-Monde.",
+      "en": "The number of action points you have invested in excavating ruins in the World Beyond.",
+      "de": "Anzahl der Aktionspunkte, die du verbraucht hast, um eine Gebäuderuine in der Außenwelt freizulegen.",
+      "es": "Puntos de acción invertidos en despejar un edificio en el Ultramundo."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_deco_#00": {
+    "id": 23,
+    "img": "pictos/r_deco.1e30a246.gif",
+    "name": {
+      "fr": "Décoration",
+      "en": "Decoration",
+      "de": "Hauseinrichtung",
+      "es": "Decoración"
+    },
+    "desc": {
+      "fr": "Nombre de points de décoration que vous avez pris la peine d'ajouter à votre habitat.",
+      "en": "The number of decoration points you have taken the trouble to add to your dwelling place.",
+      "de": "Anzahl der Punkte, die du durch sinnlose Einrichtungsverschönerungen gewonnen hast.",
+      "es": "Cantidad de puntos de decoración que has agregado a tu hogar."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_surgrp_#00": {
+    "id": 24,
+    "img": "pictos/r_surgrp.ae495108.gif",
+    "name": {
+      "fr": "Dernière ligne",
+      "en": "Last line of defence",
+      "de": "Letzte Verteidigungslinie",
+      "es": "Última línea"
+    },
+    "desc": {
+      "fr": "Vous faites partie des derniers à avoir vu les Hordes déferler sur la ville...",
+      "en": "You were one of the last people to see the Hordes descend on the town...",
+      "de": "Du gehörst zu den letzten Bürgern der Stadt, die die Zombiehorde 'empfangen' hat...",
+      "es": "Fuiste uno de los últimos en ver las hordas de zombies invadir el pueblo."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_drug_#00": {
+    "id": 25,
+    "img": "pictos/r_drug.b51341b7.gif",
+    "name": {
+      "fr": "Drogues",
+      "en": "Drugs",
+      "de": "Drogen",
+      "es": "Estimulantes"
+    },
+    "desc": {
+      "fr": "Nombre de petits cachets rigolos que vous avez avalés (ou placés ailleurs...).",
+      "en": "The number of funny little pills you have swallowed (or hidden elsewhere...)..",
+      "de": "Anzahl kleiner lustiger Pillen, die du geschluckt oder sonstwie eingenommen hast.",
+      "es": "Cantidad de pequeñas pildoritas de colores que has tragado (o colocado en otra parte...)"
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_cobaye_#00": {
+    "id": 26,
+    "img": "pictos/r_cobaye.8b4a78bb.gif",
+    "name": {
+      "fr": "Expérimentations",
+      "en": "Drug Tests",
+      "de": "Drogenerfahrungen",
+      "es": "Experimentaciones"
+    },
+    "desc": {
+      "fr": "Drogues aux effets dangereux que vous avez avalées.",
+      "en": "The number of times you have tested dangerous drugs... on yourself.",
+      "de": "Anzahl der gefährlichen Drogen, die du genommen hast.",
+      "es": "Estimulantes con efectos peligrosos que has probado."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_ruine_#00": {
+    "id": 27,
+    "img": "pictos/r_ruine.efd33014.gif",
+    "name": {
+      "fr": "Exploration de ruine",
+      "en": "Ruin Explorations",
+      "de": "Gebäude erkunden",
+      "es": "Exploración de ruinas"
+    },
+    "desc": {
+      "fr": "Nombre de fois où vous avez osé pénétrer dans une ruine abandonnée.",
+      "en": "The number of times you've dared to go inside an abandoned ruin.",
+      "de": "Anzahl der verlassenen Gebäude, die du untersucht hast.",
+      "es": "Cantidad de veces que has osado entrar en una ruina abandonada"
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_explor_#00": {
+    "id": 28,
+    "img": "pictos/r_explor.1e870cda.gif",
+    "name": {
+      "fr": "Explorations avancées",
+      "en": "Distant Discoveries",
+      "de": "Komplexe Expeditionen",
+      "es": "Exploraciones avanzadas"
+    },
+    "desc": {
+      "fr": "Nombre de bâtiments dans des zones éloignées que vous avez explorés.",
+      "en": "Number of buildings you have explored in far-flung zones.",
+      "de": "Anzahl der entfernten Gebäude, die von dir erkundet wurden.",
+      "es": "Cantidad de edificios en zonas alejadas que has explorado."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_explo2_#00": {
+    "id": 29,
+    "img": "pictos/r_explo2.840dcb93.gif",
+    "name": {
+      "fr": "Explorations très lointaines",
+      "en": "Expert Expeditions",
+      "de": "Expertenexpeditionen",
+      "es": "Exploraciones muy lejanas"
+    },
+    "desc": {
+      "fr": "Nombre de bâtiments dans des zones vraiment très éloignées que vous avez explorés.",
+      "en": "Number of buildings explored in EXTREMELY far away places.",
+      "de": "Anzahl SEHR WEIT entfernter Gebäude, die von dir erkundet wurden.",
+      "es": "Cantidad de edificios que has explorado en zonas REALMENTE muy alejadas."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_share_#00": {
+    "id": 30,
+    "img": "pictos/r_share.cc20a2f3.gif",
+    "name": {
+      "fr": "Générosité",
+      "en": "Generosity",
+      "de": "Großzügigkeit",
+      "es": "Generosidad"
+    },
+    "desc": {
+      "fr": "Nombre de jours de mode héros/actions héroïques que vous avez offert à un autre citoyen dans le besoin.",
+      "en": "The number of Hero days/Heroic actions that you have given to another citizen in need.",
+      "de": "Anzahl der Heldentage, die du einem anderem Bürger in Not geschenkt hast.",
+      "es": "Cantidad de días de Modo Héroe/Acciones Heroicas que regalaste a otro habitante necesitado."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_guide_#00": {
+    "id": 31,
+    "img": "pictos/r_guide.cc129a02.gif",
+    "name": {
+      "fr": "Guide Spirituel",
+      "en": "Spiritual Guide",
+      "de": "Spiritueller Führer",
+      "es": "Guía Espiritual"
+    },
+    "desc": {
+      "fr": "Jours passés en tant que guide pour les noobs en Région non éloignée.",
+      "en": "The number of days spent shepherding the noobs through the valleys of small maps and finding lost children.",
+      "de": "Anzahl der Tage, die du als Führer von Anfängern in den kleinen Regionen verbracht hast.",
+      "es": "Días pasados como guía en las regiones amateur."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_drgmkr_#00": {
+    "id": 32,
+    "img": "pictos/r_drgmkr.d1f835ea.gif",
+    "name": {
+      "fr": "Laborantin",
+      "en": "Lab Rat",
+      "de": "Laborant",
+      "es": "Laboratorio"
+    },
+    "desc": {
+      "fr": "Cachets de Twinoïd produits dans votre Laboratoire personnel.",
+      "en": "The number of little pills created in your personal laboratory.",
+      "de": "Anzahl der kleinen bunten Pillen aus deinem privaten Hobbylabor.",
+      "es": "Pastillas de Twinoid elaboradas en tu laboratorio personal."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_theft_#00": {
+    "id": 33,
+    "img": "pictos/r_theft.453aa036.gif",
+    "name": {
+      "fr": "Larcins",
+      "en": "Thefts",
+      "de": "Diebstähle",
+      "es": "Hurtos"
+    },
+    "desc": {
+      "fr": "Nombre d'objets volés chez vos voisins (en vie).",
+      "en": "Number of objects you have stole from your fellow residents (alive).",
+      "de": "Anzahl der Gegenstände, die du bei deinen (lebenden) Nachbarn geklaut hast.",
+      "es": "Cantidad de objetos robados a tus vecinos (en vida)."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_broken_#00": {
+    "id": 34,
+    "img": "pictos/r_broken.21934c03.gif",
+    "name": {
+      "fr": "Maladresses",
+      "en": "Breakages",
+      "de": "Schusseligkeiten",
+      "es": "Torpezas"
+    },
+    "desc": {
+      "fr": "Nombre d'objets que vous avez cassés au cours de vos expériences maladroites.",
+      "en": "Number of objects you have broken through your own clumsiness.",
+      "de": "Anzahl der Gegenstände, die du durch seine Tollpatschigkeit kaputt gemacht hast.",
+      "es": "Cantidad de objetos que has roto en tus experiencias fallidas."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_maso_#00": {
+    "id": 35,
+    "img": "pictos/r_maso.c3ca6f58.gif",
+    "name": {
+      "fr": "Masochisme",
+      "en": "Masochism",
+      "de": "Masochismus",
+      "es": "Masoquismo"
+    },
+    "desc": {
+      "fr": "Moments de bonheur dans la souffrance la plus totale.",
+      "en": "The number of joyous moments in all this suffering.",
+      "de": "Anzahl der Glücksmomente, die du glücklich oder schmerzgeplagt genossen hast.",
+      "es": "Momentos de felicidad en el sufrimiento más profundo."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_bgum_#00": {
+    "id": 36,
+    "img": "pictos/r_bgum.50a67852.gif",
+    "name": {
+      "fr": "Médailles communautaires",
+      "en": "Community Awards",
+      "de": "Event-Auszeichnungen",
+      "es": "Reconocimiento de la Comunidad"
+    },
+    "desc": {
+      "fr": "Récompenses obtenues dans le cadre d'animations communautaires.",
+      "en": "Rewards earned through working with the community.",
+      "de": "Auszeichnung für die Teilnahme an Events bei 'Die Verdammten'.",
+      "es": "Recompensa obtenida por trabajar con la comunidad."
+    },
+    "community": true,
+    "rare": true
+  },
+  "r_ebcstl_#00": {
+    "id": 37,
+    "img": "pictos/r_ebcstl.bac38661.gif",
+    "name": {
+      "fr": "Merveille : Château de sable",
+      "en": "Wonder: Sandcastle",
+      "de": "Wunderwerk: Sandschloss",
+      "es": "Maravilla: Castillo de arena"
+    },
+    "desc": {
+      "fr": "Summum de lʼinutile",
+      "en": "You really built that?",
+      "de": "Das hast du nicht wirklich gebaut?",
+      "es": "¿Realmente has construido eso?"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_ebpmv_#00": {
+    "id": 38,
+    "img": "pictos/r_ebpmv.219a7ab4.gif",
+    "name": {
+      "fr": "Merveille : PMV géant",
+      "en": "Wonder: Giant BRD",
+      "de": "Wunderwerk: Riesiger KVF",
+      "es": "Maravilla: COSA gigante"
+    },
+    "desc": {
+      "fr": "Gloire au PMV géant !",
+      "en": "BRDs for everyone! The people demand BRDs",
+      "de": "Huldigt den Riesigen KVF!",
+      "es": "¡Gloria a la COSA gigante!"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_ebgros_#00": {
+    "id": 39,
+    "img": "pictos/r_ebgros.dd5ca73c.gif",
+    "name": {
+      "fr": "Merveille : Roue de Grostas",
+      "en": "Wonder: Fearfulness Wheel",
+      "de": "Wunderwerk: Rad des Schreckens",
+      "es": "Maravilla: Gran Noria de Znarf"
+    },
+    "desc": {
+      "fr": "Regardez, on voit les zombies de là haut !",
+      "en": "Look, I can see the zeds from up here!",
+      "de": "Sieh nur, man kann von da oben die Zombies sehen!",
+      "es": "Increíble, ¡desde aquí los zombies se ven como hormiguitas!"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_ebcrow_#00": {
+    "id": 40,
+    "img": "pictos/r_ebcrow.c599721b.gif",
+    "name": {
+      "fr": "Merveille : Statue du Corbeau",
+      "en": "Wonder: Statue of the Crow",
+      "de": "Wunderwerk: Statue des Raben",
+      "es": "Maravilla: Estatua del Cuervo"
+    },
+    "desc": {
+      "fr": "Le Corbeau est bon, le Corbeau est bienfaisant. [édité par Corbilla Fortuna]",
+      "en": "The Crow is good, the Crow is all-powerful. [edited by the Crow]",
+      "de": "Der Rabe ist gut, der Rabe ist ein Segen für die Stadt. [editiert vom Raben]",
+      "es": "El Cuervo es un tipazo, el Cuervo es bondadoso. [Firmado: El Cuervo]"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_forum_#00": {
+    "id": 41,
+    "img": "pictos/r_forum.f5602d5e.gif",
+    "name": {
+      "fr": "Messages",
+      "en": "Messages",
+      "de": "Nachrichten",
+      "es": "Mensajes"
+    },
+    "desc": {
+      "fr": "Quantité de messages utiles (ou pas) que vous avez laissés sur le forum de la ville.",
+      "en": "The number of worthwhile (or otherwise) messages you have left on the town forums.",
+      "de": "Anzahl der sinnvollen (oder sinnlosen...) Nachrichten, die du im Stadtforum geschrieben hast.",
+      "es": "Cantidad de mensajes útiles (o no) que has publicado en el foro del pueblo."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_jtamer_#00": {
+    "id": 42,
+    "img": "pictos/r_jtamer.c2d1e8b8.gif",
+    "name": {
+      "fr": "Apprivoiseur",
+      "en": "Tamer",
+      "de": "Dompteur",
+      "es": "Domador"
+    },
+    "desc": {
+      "fr": "Jours passés à torturer des bichons maltais.",
+      "en": "Days spent as a Tamer, torturing Labradoodles.",
+      "de": "Anzahl der Tage, an denen du kleine Malteserhunde malträtiert hast.",
+      "es": "Días pasados torturando perritos."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_jrangr_#00": {
+    "id": 43,
+    "img": "pictos/r_jrangr.4953e0c7.gif",
+    "name": {
+      "fr": "Éclaireur",
+      "en": "Scout",
+      "de": "Aufklärer",
+      "es": "Explorador"
+    },
+    "desc": {
+      "fr": "Jours passés dans les ombres en tant qu'Éclaireur.",
+      "en": "Days spent in the shadows as a Scout.",
+      "de": "Anzahl der Tage, die du als Aufklärer gespielt hast.",
+      "es": "Días pasados en la oscuridad como Explorador."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_jermit_#00": {
+    "id": 44,
+    "img": "pictos/r_jermit.3409fe67.gif",
+    "name": {
+      "fr": "Ermite",
+      "en": "Survivalist",
+      "de": "Einsiedler",
+      "es": "Ermitaño"
+    },
+    "desc": {
+      "fr": "Jours passés à manger n'importe quoi en tant qu'Ermite.",
+      "en": "Days spent as a survivalist, eating roots, worms and other such delicacies.",
+      "de": "Anzahl der Tage, die du als Einsiedler gespielt hast.",
+      "es": "Días pasados comiendo cualquier cosa como Ermitaño."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_jcolle_#00": {
+    "id": 45,
+    "img": "pictos/r_jcolle.1afca0f6.gif",
+    "name": {
+      "fr": "Fouineur",
+      "en": "Scavenger",
+      "de": "Buddler",
+      "es": "Excavador"
+    },
+    "desc": {
+      "fr": "Jours passés à gratter le sol en tant que Fouineur.",
+      "en": "Days spent as a scavenger foraging around.",
+      "de": "Anzahl der Tage, die du als Buddler gespielt hast.",
+      "es": "Días pasados escarbando el suelo como Excavador."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_jguard_#00": {
+    "id": 46,
+    "img": "pictos/r_jguard.4899a7c1.gif",
+    "name": {
+      "fr": "Gardien",
+      "en": "Guardian",
+      "de": "Wächter",
+      "es": "Guardián"
+    },
+    "desc": {
+      "fr": "Jours passés avec votre bouclier en tant que Gardien.",
+      "en": "Days spent shepherding the weak through the valleys of darkness and finding lost children!",
+      "de": "Anzahl der Tage, die du als Wächter gespielt hast.",
+      "es": "Días pasados con tu escudo como Guardián."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_jtech_#00": {
+    "id": 47,
+    "img": "pictos/r_jtech.1b0db507.gif",
+    "name": {
+      "fr": "Technicien",
+      "en": "Technician",
+      "de": "Techniker",
+      "es": "Técnico"
+    },
+    "desc": {
+      "fr": "Jours passés à jouer avec des outils pointus.",
+      "en": "The number of days you've spent jiggling and fiddling with pointy tools.",
+      "de": "Anzahl der Tage, die du als Techniker gespielt hast.",
+      "es": "Días pasados jugando con herramientas."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_dcity_#00": {
+    "id": 48,
+    "img": "pictos/r_dcity.bdc58dfd.gif",
+    "name": {
+      "fr": "Morts dans votre lit",
+      "en": "Dead in your bed",
+      "de": "In deinem Bett gestorben",
+      "es": "¡Si me muero, mejor que sea cómodamente!"
+    },
+    "desc": {
+      "fr": "Mère-grand, comme vous avez de grandes dents... GROAR !",
+      "en": "Grandma, what big teeth you have... GROAR!",
+      "de": "Großmutter, was hast du für große Zähne... Grrrooooaaar!",
+      "es": "¡Si me muero, mejor que sea cómodamente!"
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_dwater_#00": {
+    "id": 49,
+    "img": "pictos/r_dwater.9739f1ff.gif",
+    "name": {
+      "fr": "Morts par Déshydratation",
+      "en": "Deaths by Dehydration",
+      "de": "Dehydrationstode",
+      "es": "Muertes por deshidratación"
+    },
+    "desc": {
+      "fr": "Nombre de morts par déshydratation terminale. Oui oui, l'eau, c'est important.",
+      "en": "Number of times you have died from dehydration. Yes indeed, it turns out water is important.",
+      "de": "Gibt die Anzahl der Dehydrationen an, an denen du gestorben bist. Doch, doch! Wasser ist wichtig !",
+      "es": "Cantidad de muertes por deshidratación terminal. Sí, el agua es importante."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_dinfec_#00": {
+    "id": 50,
+    "img": "pictos/r_dinfec.147c4573.gif",
+    "name": {
+      "fr": "Mort par infection",
+      "en": "Deaths by Infection",
+      "de": "Tödliche Infektionen",
+      "es": "Muertes por infección"
+    },
+    "desc": {
+      "fr": "Nombre d'extinctions des suites d'une infection virulente.",
+      "en": "Number of deaths from generalised infection.",
+      "de": "Anzahl der Infektionen, die dich das Leben gekostet haben.",
+      "es": "Cantidad de fallecimientos por infecciones."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_dnucl_#00": {
+    "id": 51,
+    "img": "pictos/r_dnucl.071fc267.gif",
+    "name": {
+      "fr": "Mort par l’atome",
+      "en": "Atomic death",
+      "de": "Tod durch Radioaktivität",
+      "es": "Muerte por radioactividad"
+    },
+    "desc": {
+      "fr": "Nombre d’existences vaporisées par la toute-puissance de l’atome.",
+      "en": "Number of existences entirely vaporized by the all-powerful atom.",
+      "de": "Gibt an, wie oft du unter dem Einfluß von Radioaktivität das Zeitliche gesegnet hast.",
+      "es": "Resulta que has sido bendecido con un poco... pero sólo un poquito de radioactividad."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_ddrug_#00": {
+    "id": 52,
+    "img": "pictos/r_ddrug.2721708b.gif",
+    "name": {
+      "fr": "Morts par Manque",
+      "en": "Deaths from withdrawal",
+      "de": "Tod durch Entzug",
+      "es": "Muertes por abstinencia"
+    },
+    "desc": {
+      "fr": "Nuits que vous n'avez pas passées, par manque de drogue.",
+      "en": "Nights you didn't see the other side of, due to lack of drugs.",
+      "de": "Die Anzahl der Male, in denen dein unfreiwilliger 'cold turkey' gescheitert ist...",
+      "es": "Veces que has muerto por falta de estimulantes."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_surlst_#00": {
+    "id": 53,
+    "img": "pictos/r_surlst.38986d10.gif",
+    "name": {
+      "fr": "Mort Ultime",
+      "en": "Last Man Standing",
+      "de": "Letzter Toter",
+      "es": "¡El Último Habitante!"
+    },
+    "desc": {
+      "fr": "Vous êtes le ou la dernière à mourir ! Très peu de citoyens ont réalisé cet exploit !",
+      "en": "You were the last to die! Very few citizens have accomplished this feat!",
+      "de": "Du bist die oder der letzte, die draufgeht. Diese Ehre wird nur sehr wenigen Bürgen zuteil.",
+      "es": "Fuiste el último en morir en tu pueblo. ¡Muy pocos jugadores han logrado esta hazaña!"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_suhard_#00": {
+    "id": 54,
+    "img": "pictos/r_suhard.cd1cc92f.gif",
+    "name": {
+      "fr": "Mort Ultime du Pandémonium !",
+      "en": "Last Man Standing - Hardcore!",
+      "de": "Letzter Toter in einer Pandämoniumstadt",
+      "es": "El Último Superviviente en Pandemonio"
+    },
+    "desc": {
+      "fr": "Vous êtes le ou la dernière à mourir au cours d'une ville du Pandémonium !",
+      "en": "you were the last to bite the bullet in a Hardcore town!",
+      "de": "Du bist der oder die Letzte, die in einer Pandämoniumstadt draufgeht!",
+      "es": "¡Fuiste el último en morir en un pueblo del Pandemonio!"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_mystic_#00": {
+    "id": 55,
+    "img": "pictos/r_mystic.189d782e.gif",
+    "name": {
+      "fr": "Mysticisme",
+      "en": "Mystic Points",
+      "de": "Mystic",
+      "es": "Puntos de Misticismo"
+    },
+    "desc": {
+      "fr": "Nombre d'âmes que votre ville a pu libérer.",
+      "en": "The number of souls your town has managed to recycle.",
+      "de": "Anzahl der Seelen, die die Stadt befreien konnte",
+      "es": "Cantidad de almas que tu pueblo pudo reciclar en las construcciones"
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_doutsd_#00": {
+    "id": 56,
+    "img": "pictos/r_doutsd.5249da1b.gif",
+    "name": {
+      "fr": "Nuits dans le désert",
+      "en": "Night in the desert",
+      "de": "Wüstenausflüge",
+      "es": "Noches en el desierto"
+    },
+    "desc": {
+      "fr": "Petites promenades dehors dont vous n'êtes jamais revenu(e).",
+      "en": "Little walks you took outside from which you never returned.",
+      "de": "Die Auszeichnung spiegelt die Anzahl der Wüstenausflüge wieder, von denen du nicht mehr zurückgekehrt bist.",
+      "es": "Veces en las que saliste a pasear fuera del pueblo y nunca más volviste."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_door_#00": {
+    "id": 57,
+    "img": "pictos/r_door.a45ac87f.gif",
+    "name": {
+      "fr": "Ouverture de porte",
+      "en": "Covert Concierge",
+      "de": "Geöffnete Tür",
+      "es": "Apertura de puertas"
+    },
+    "desc": {
+      "fr": "Nombre de portes déverrouillées par vos soins dans les ruines.",
+      "en": "The number of doors you've unlocked while exploring ruins.",
+      "de": "Anzahl der verschlossenen Türen, die du in verlassenen Gebäuden geöffnet hast.",
+      "es": "Cantidad de puertas abiertas en las ruinas."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_dhang_#00": {
+    "id": 58,
+    "img": "pictos/r_dhang.810a3c70.gif",
+    "name": {
+      "fr": "Pendaisons",
+      "en": "Hanging",
+      "de": "Hängend",
+      "es": "Horcas"
+    },
+    "desc": {
+      "fr": "Nombre de villes au cours desquelles on ne pouvait plus vous supporter.",
+      "en": "Number of towns which, in the end, just couldn't put up with your crap anymore.",
+      "de": "Anzahl der Städte, in denen Sie nicht mehr unterstützt werden konnten.",
+      "es": "Cantidad de pueblos en los que fuiste considerado indeseable."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_plundr_#00": {
+    "id": 59,
+    "img": "pictos/r_plundr.e34ccb94.gif",
+    "name": {
+      "fr": "Pillages de maison",
+      "en": "Pillages",
+      "de": "Häuserplünderungen",
+      "es": "Saqueos en casas"
+    },
+    "desc": {
+      "fr": "Objets arrachés au corps encore chaud de vos anciens amis.",
+      "en": "Objects prised from the still-warm clutches of your former friends.",
+      "de": "Anzahl der Gegenstände, die du deinen noch verreckenden Freunden entrissen hast.",
+      "es": "Objetos arrancados del cuerpo aún tibio de tus vecinos."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_wondrs_#00": {
+    "id": 60,
+    "img": "pictos/r_wondrs.4b6b2a56.gif",
+    "name": {
+      "fr": "Projets insensés",
+      "en": "Extreme Projects",
+      "de": "Absurde Projekte",
+      "es": "Proyectos delirantes"
+    },
+    "desc": {
+      "fr": "Nombre de projets insensés achevés de votre vivant.",
+      "en": "The number of extreme projects you have carried out.",
+      "de": "Anzahl der Absurden Projekte, deren Fertigstellung du noch erlebt hast.",
+      "es": "Cantidad de proyectos delirantes terminados durante tu triste vida."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_repair_#00": {
+    "id": 61,
+    "img": "pictos/r_repair.2a689caa.gif",
+    "name": {
+      "fr": "Réparations",
+      "en": "Repairs",
+      "de": "Reparaturen",
+      "es": "Reparaciones"
+    },
+    "desc": {
+      "fr": "Objets cassés que vous avez remis en état de marche.",
+      "en": "Number of broken items that you've repaired.",
+      "de": "Anzahl kaputter Gegenstände, die du wieder repariert hast.",
+      "es": "Objetos rotos que has reparado."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_brep_#00": {
+    "id": 62,
+    "img": "pictos/r_brep.88cf80b5.gif",
+    "name": {
+      "fr": "Réparations de chantiers",
+      "en": "Building Repairs",
+      "de": "Gebäudereparaturen",
+      "es": "Reparación de construcciones"
+    },
+    "desc": {
+      "fr": "Points d'action investis dans les réparations sans fin des chantiers.",
+      "en": "Action Points invested in the ongoing repairs of buildings.",
+      "de": "Anzahl der Aktionspunkte, die du in Reparaturen auf der Baustelle gesteckt hast.",
+      "es": "Puntos de acción invertidos en reparaciones interminables."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_rp_#00": {
+    "id": 63,
+    "img": "pictos/r_rp.4fd67236.gif",
+    "name": {
+      "fr": "Rôliste",
+      "en": "Roleplayer",
+      "de": "Textsammler",
+      "es": "Rolista"
+    },
+    "desc": {
+      "fr": "Documents et autres découvertes 'roleplay'.",
+      "en": "The number of documents and other uncovered 'roleplay' items.",
+      "de": "Anzahl der Dokumente und Texte, die du in der Wüste gefunden hast.",
+      "es": "Documentos y otros descubrimientos en el juego de rol."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_cgarb_#00": {
+    "id": 64,
+    "img": "pictos/r_cgarb.7063996e.gif",
+    "name": {
+      "fr": "Sorteur",
+      "en": "Removals",
+      "de": "Leichenentsorger",
+      "es": "Lanzamuertos"
+    },
+    "desc": {
+      "fr": "Nombre d'amis morts que vous avez tirés hors de la ville.",
+      "en": "The number of dead friends you've dragged out of town.",
+      "de": "Anzahl deiner toten Freunde, die du außerhalb der Stadt entsorgt hast.",
+      "es": "Cantidad de amigos muertos que has tirado fuera del pueblo."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_batgun_#00": {
+    "id": 65,
+    "img": "pictos/r_batgun.3f4478df.gif",
+    "name": {
+      "fr": "Super lance-piles",
+      "en": "Battery Launcher Builder",
+      "de": "Batteriewerferfabrikant",
+      "es": "Super lanzapilas"
+    },
+    "desc": {
+      "fr": "Nombre de puissants lance-piles que vous avez fabriqués.",
+      "en": "The number of Battery launchers you have built.",
+      "de": "Anzahl der Batteriewerfer, die du gebaut hast.",
+      "es": "Cantidad de lanza-pilas que has fabricado."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_pande_#00": {
+    "id": 66,
+    "img": "pictos/r_pande.91c2b58b.gif",
+    "name": {
+      "fr": "Survivant de l'enfer !",
+      "en": "Survivor of Hell!",
+      "de": "Überlebende der Hölle!",
+      "es": "Superviviente del Infierno"
+    },
+    "desc": {
+      "fr": "Vous êtes un vrai survivant de l'enfer.",
+      "en": "You are a true survivor of hell.",
+      "de": "Sie sind ein wahrer Überlebenskünstler der Hölle.",
+      "es": "Eres un verdadero superviviente del infierno"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_hbuild_#00": {
+    "id": 67,
+    "img": "pictos/r_hbuild.65e0b9c2.gif",
+    "name": {
+      "fr": "Travaux chez soi",
+      "en": "Homemaker",
+      "de": "Hausarbeiten",
+      "es": "Trabajador hogareño"
+    },
+    "desc": {
+      "fr": "Nombre de petits travaux effectués dans votre maison.",
+      "en": "Number of DIY projects successfully completed around the house.",
+      "de": "Anzahl der Ausbauten, die du an deinem Haus vorgenommen hast.",
+      "es": "Cantidad de pequeños trabajos hechos en casa."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_tronco_#00": {
+    "id": 68,
+    "img": "pictos/r_tronco.5dbc557f.gif",
+    "name": {
+      "fr": "Tronçonneuses",
+      "en": "Chainsaws",
+      "de": "Kettensägen",
+      "es": "Sierras eléctricas"
+    },
+    "desc": {
+      "fr": "Nombre de tronçonneuses que vous avez assemblées.",
+      "en": "The number of chainsaws you have built.",
+      "de": "Anzahl an Kettensägen, die du gebaut hast.",
+      "es": "Cantidad de sierras eléctricas que has armado."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_guard_#00": {
+    "id": 69,
+    "img": "pictos/r_guard.17003195.gif",
+    "name": {
+      "fr": "Veilleur",
+      "en": "Watchman",
+      "de": "Stadtwächter",
+      "es": "Centinela"
+    },
+    "desc": {
+      "fr": "Nombre de nuits survécues en tant que Veilleur.",
+      "en": "The number of nights survived as a watchman.",
+      "de": "Anzahl der Nächte, die du als Stadtwächter überlebt hast.",
+      "es": "Cantidad de noches que sobreviviste como Centinela."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_winbas_#00": {
+    "id": 70,
+    "img": "pictos/r_winbas.fd8d3f96.gif",
+    "name": {
+      "fr": "Ville classée",
+      "en": "Ranked Towns",
+      "de": "Gerankte Stadt",
+      "es": "Habitante prestigioso"
+    },
+    "desc": {
+      "fr": "Nombre de villes présentes dans le classement top 15 d'une saison précédente.",
+      "en": "Number of towns which figured in last season's rankings.",
+      "de": "Anzahl der Städte, in denen Du mitgespielt hast, die es in einer vergangenen Saison ins Ranking geschafft haben.",
+      "es": "Cantidad de veces en que has participado en pueblos presentes en una clasificación anterior."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_wintop_#00": {
+    "id": 71,
+    "img": "pictos/r_wintop.bede67a9.gif",
+    "name": {
+      "fr": "Ville légendaire !",
+      "en": "Legendary Towns!",
+      "de": "Legendäre Stadt",
+      "es": "Habitante legendario"
+    },
+    "desc": {
+      "fr": "Nombre de villes arrivées en première place du classement d'une saison précédente.",
+      "en": "Number of towns which made the number one spot from previous seasons.",
+      "de": "Anzahl der Städte, in denen Du mitgespielt hast, die in einer vergangenen Saison als Erste abgeschnitten haben.",
+      "es": "Cantidad de pueblos colocados en el primer lugar en una clasificación anterior."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_winthi_#00": {
+    "id": 72,
+    "img": "pictos/r_winthi.7055c42f.gif",
+    "name": {
+      "fr": "Ville participante",
+      "en": "Participating Town",
+      "de": "Teilnehmende Stadt",
+      "es": "Pueblo participante"
+    },
+    "desc": {
+      "fr": "Nombre de villes présentes dans le classement top 35 d'une saison précédente.",
+      "en": "Number of towns represented in the top 35 rankings of a past season.",
+      "de": "Anzahl der Städte, die in der Top-35-Rangliste einer vergangenen Saison vertreten waren.",
+      "es": "Cantidad de pueblos representadas en las primeras 35 clasificaciones de la temporada pasada"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_killz_#00": {
+    "id": 73,
+    "img": "pictos/r_killz.78934ff3.gif",
+    "name": {
+      "fr": "Zombies éliminés",
+      "en": "Zombies eliminated",
+      "de": "Getötete Zombies",
+      "es": "Zombies eliminados"
+    },
+    "desc": {
+      "fr": "Total de créatures mort-vivantes que vous avez renvoyées sous terre par n'importe quel moyen.",
+      "en": "Total number of the living-dead you have sent back underground by whatever means.",
+      "de": "Gibt die Gesamtanzahl, der von dir umgebrachten Zombies an. Jede Tötungsmethode wird gezählt.",
+      "es": "Total de muertos vivientes que volviste a enviar bajo tierra de cualquier manera."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_beta_#00": {
+    "id": 74,
+    "img": "pictos/r_beta.35dab84c.gif",
+    "name": {
+      "fr": "Ancien bêta-testeur",
+      "en": "In with the bricks",
+      "de": "Ehemaliger BETA-Tester",
+      "es": "Beta-tester"
+    },
+    "desc": {
+      "fr": "Distinction rarissime réservée aux tout premiers citoyens de 'Hordes'.",
+      "en": "An extremely rare distinction, awarded only to the very earliest citizens of 'Die2Nite'.",
+      "de": "Dies ist eine äußerst seltene Auszeichnung, die den ersten Spielern von 'Die Verdammten' vorbehalten ist.",
+      "es": "Distinción rarísima otorgada a quienes participaron en la fase Beta, los primeros jugadores de Zombinoia."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_sandb_#00": {
+    "id": 75,
+    "img": "pictos/r_sandb.c3505991.gif",
+    "name": {
+      "fr": "Boules de sable !",
+      "en": "Sand balls!",
+      "de": "Sandbälle! Yeah!",
+      "es": "Bolas de arena"
+    },
+    "desc": {
+      "fr": "Nombre de boules de sable envoyées au visage d'autres joueurs.",
+      "en": "Number of sandballs successfully thrown at another citizen's chevy chase.",
+      "de": "Anzahl der Sandbälle, die du deinen Mitspielern ins Gesicht geworfen hast. Kicher, kicher...",
+      "es": "Cantidad de bolas de arena lanzadas a la cara de otros jugadores."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_paques_#00": {
+    "id": 76,
+    "img": "pictos/r_paques.7a1a78b8.gif",
+    "name": {
+      "fr": "Crucifixion",
+      "en": "Crucifixion",
+      "de": "Kreuzigung",
+      "es": "Crucifixión"
+    },
+    "desc": {
+      "fr": "Réjouissez vous, vous n'aurez pas eu à marcher.",
+      "en": "Rejoice you didn't have to walk.",
+      "de": "Freuen Sie sich, Sie hätten nicht laufen müssen.",
+      "es": "Alégrate de que no tuviste que caminar"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_santac_#00": {
+    "id": 77,
+    "img": "pictos/r_santac.fc5dfc02.gif",
+    "name": {
+      "fr": "Le Père Noël est une ordure",
+      "en": "Father Christmas is a little sh*t",
+      "de": "Den Weihnachtsmann gibt es nicht",
+      "es": "Maldito Papá Noel"
+    },
+    "desc": {
+      "fr": "Nombre de cadeaux volés à vos amis.",
+      "en": "The number of presents you have stolen from your friends.",
+      "de": "Anzahl der Geschenke, die du deinen Freunden geklaut hast.",
+      "es": "Cantidad de regalos robados a amigos"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_chaman_#00": {
+    "id": 78,
+    "img": "pictos/r_chaman.bf0962a4.gif",
+    "name": {
+      "fr": "Chaman",
+      "en": "Shaman",
+      "de": "Schamane",
+      "es": "Chamán"
+    },
+    "desc": {
+      "fr": "Jours passés à trafiquer l'âme des morts.",
+      "en": "Days spent trafficking the dead souls.",
+      "de": "Tagelang wurde an den Seelen der Toten herumgepfuscht.",
+      "es": "Días pasados jugando con almas de muertos."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_armag_#00": {
+    "id": 79,
+    "img": "pictos/r_armag.647834c4.gif",
+    "name": {
+      "fr": "Témoin de l'Armageddon",
+      "en": "Armageddon Witness",
+      "de": "Zeuge von Harmagedon",
+      "es": "Testigo del Armagedón"
+    },
+    "desc": {
+      "fr": "Marque rarissime réservée aux âmes qui ont vécu le grand Armageddon de l'univers de Hordes !",
+      "en": "An extremely rare distinction reserved for souls who have experienced the great Armageddon of Die2Nite!",
+      "de": "Eine äußerst seltene Auszeichnung, die den Seelen vorbehalten ist, die das große Harmagedon des Universums von Die Verdammten erlebt haben!",
+      "es": "¡Una Distinción extremadamente rara reservado para las almas que presenciaron El Gran Armagedón!"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_ginfec_#00": {
+    "id": 80,
+    "img": "pictos/r_ginfec.6ac990f7.gif",
+    "name": {
+      "fr": "Témoin de la Grande Contamination",
+      "en": "Witness to the Great Contamination",
+      "de": "Zeuge der großen Verseuchung",
+      "es": "Testigo de la Gran Contaminación"
+    },
+    "desc": {
+      "fr": "Marque rarissime réservée aux âmes qui ont vécu la Grande Contamination Hordienne !",
+      "en": "Extremely rare distinction reserved for souls who have experienced the Great Contamination of Die2Nite!",
+      "de": "Äußerst seltene Marke, die für Seelen reserviert ist, die die Große Kontamination von Die Verdammten erlebt haben!",
+      "es": "¡Distinción extremadamente rara reservada para las almas que presenciaron La Gran Contaminación!"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_ptame_#00": {
+    "id": 81,
+    "img": "pictos/r_ptame.d34db37f.gif",
+    "name": {
+      "fr": "Valeur de l'âme",
+      "en": "Soul Value",
+      "de": "Seelenpunkte",
+      "es": "Puntos de Alma"
+    },
+    "desc": {
+      "fr": "Nombre de points d'âme que vous avez obtenu au cours de vos incarnations.",
+      "en": "The number of soul points you have accumulated in the course of your many lives.",
+      "de": "Anzahl der Seelenpunkte, die du durch deine Inkarnationen erhalten hast.",
+      "es": "Cantidad de Puntos de Alma que has ganado en tus reencarnaciones."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_jsham_#00": {
+    "id": 82,
+    "img": "pictos/r_jsham.2f79e21a.gif",
+    "name": {
+      "fr": "Chaman",
+      "en": "Shaman",
+      "de": "Schamane",
+      "es": "Chamán"
+    },
+    "desc": {
+      "fr": "Jours passés à trafiquer l'âme des morts.",
+      "en": "Days spent trafficking the souls of the dead.",
+      "de": "Anzahl der Tage, die du als Schamane gespielt hast.",
+      "es": "Días pasados jugando con almas de muertos como Chamán."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_rrefer_#00": {
+    "id": 83,
+    "img": "pictos/r_rrefer.fb52fda4.gif",
+    "name": {
+      "fr": "Riche gourou",
+      "en": "Golden Child",
+      "de": "Reicher Guru",
+      "es": "Gurú Rico"
+    },
+    "desc": {
+      "fr": "Nombre de nouveaux citoyens que vous avez convaincu de mourir ET de payer pour ça.",
+      "en": "The number of new citizens you have convinced to come to die2nite.com AND to pay for the privilege.",
+      "de": "Anzahl der Bürger, die du dazu bringen konntest, bei Die Verdammten zu sterben UND dafür zu bezahlen.",
+      "es": "Número de nuevos habitantes a los que convenció para morir Y pagar por ello."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_fjvani_#00": {
+    "id": 84,
+    "img": "pictos/r_fjvani.85935557.gif",
+    "name": {
+      "fr": "Traqueur de geeks",
+      "en": "Geeks tracker",
+      "de": "Verdammt in Saarbrücken",
+      "es": "Rastreador friki"
+    },
+    "desc": {
+      "fr": "Marque rarissime réservée aux animateurs présents au stand Motion Twin du Festival du Jeu Vidéo 2008 à Paris !",
+      "en": "Extremely rare brand reserved for animators present at the Motion Twin stand of the 2008 Video Game Festival in Paris!",
+      "de": "Teilnehmer beim Community-Treffen in Saarbrücken am 6. November 2011",
+      "es": "¡Una marca extremadamente rara reservada para los animadores presentes en el stand Motion Twin del Video Game Festival 2008 en París!"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_fjv2_#00": {
+    "id": 85,
+    "img": "pictos/r_fjv2.d6450e68.gif",
+    "name": {
+      "fr": "Festival du Jeu Vidéo 2010",
+      "en": "Video Game Festival 2010",
+      "de": "Video Game Festival 2010",
+      "es": "Festival de Videojuegos 2010"
+    },
+    "desc": {
+      "fr": "Vous étiez présent(e) au Festival du Jeu Vidéo à Paris en 2010 : merci !",
+      "en": "You were present at the Video Game Festival in Paris in 2010: thank you!",
+      "de": "Du warst beim Video Game Festival 2010 in Paris dabei: Danke!",
+      "es": "Estuviste presente en el Festival de Videojuegos de París en 2010: ¡gracias!"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_fjv_#00": {
+    "id": 86,
+    "img": "pictos/r_fjv.a267ed0b.gif",
+    "name": {
+      "fr": "Chair à canon du FJV'08",
+      "en": "FJV'08 cannon fodder",
+      "de": "FJV'08 Kanonenfutter",
+      "es": "Carne de cañón FJV'08"
+    },
+    "desc": {
+      "fr": "Le porteur de cette marque a participé à la grande chasse organisée au Festival du Jeu Vidéo 2008.",
+      "en": "The bearer of this brand participated in the big hunt organized at the 2008 Video Game Festival.",
+      "de": "Der Besitzer dieses Abzeichens hat an der Schnitzeljagt beim Video Game Festival 2008 teilgenommen.",
+      "es": "El portador de esta marca participó en la gran caza organizada en el Festival de Videojuegos 2008."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_comu_#00": {
+    "id": 87,
+    "img": "pictos/r_comu.54a583e2.gif",
+    "name": {
+      "fr": "Organisation du Choc",
+      "en": "Clash Team",
+      "de": "Community-Auszeichnung",
+      "es": "Organización de Choque"
+    },
+    "desc": {
+      "fr": "Votre organisation sans faille lors du choc des héros a permis de créer un évènement dont on parlera encore longtemps !",
+      "en": "Awarded for being part of the event team in the Clash of the Titans. Reporters, Video Makers, Town Leaders, we salute you.",
+      "de": "Auszeichnung für außergewöhnliche Verdienste um die Community von Die Verdammten.",
+      "es": "¡Tu organización impecable durante el Choque de Héroes creó un evento del que se hablará durante mucho tiempo!"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_comu2_#00": {
+    "id": 88,
+    "img": "pictos/r_comu2.8056bfb7.gif",
+    "name": {
+      "fr": "PDG du Choc",
+      "en": "Clash CEO",
+      "de": "Clash CEO",
+      "es": "Director ejecutivo de Clash"
+    },
+    "desc": {
+      "fr": "Décerné pour être l'un des organisateurs ou développeurs de la communauté dans le choc des héros. Notre communauté vous remercie !",
+      "en": "Awarded for being one of the community organizers or developers in the Clash of the Titans. Our community thanks you!",
+      "de": "Für die Community-Organisatoren und Entwickler des Clash of the Titans Events. Die Gemeinschaft sagt Danke!",
+      "es": "Otorgado por ser uno de los organizadores o desarrolladores de la comunidad en Choque de Héroes. ¡Nuestra comunidad te lo agradece!"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_cott_#00": {
+    "id": 89,
+    "img": "pictos/r_cott.79b25fa9.gif",
+    "name": {
+      "fr": "Titan du Choc",
+      "en": "Clash Titan",
+      "de": "Schlachtenbummler",
+      "es": "Titán de choque"
+    },
+    "desc": {
+      "fr": "Une distinction très rare, décernée uniquement aux quelques intrépides qui ont participé au tout premier Choc des Héros.",
+      "en": "A very rare distinction, awarded only to the intrepid few who participated in the very first Clash of the Titans.",
+      "de": "Diese seltene Auszeichnung haben nur jene Verdammten erhalten, die an der Schlacht der Berufe teilgenommen haben.",
+      "es": "Una Distinción muy rara, otorgada solo a los pocos intrépidos que participaron en el primer Choque de Héroes."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_cdh_#00": {
+    "id": 90,
+    "img": "pictos/r_cdh.c93b5dc5.gif",
+    "name": {
+      "fr": "Choc des héros",
+      "en": "Shock of Heroes",
+      "de": "Shock of heroes",
+      "es": "Choque de héroes"
+    },
+    "desc": {
+      "fr": "Récompense honorifique pour une participation au Choc des Héros !",
+      "en": "Honorary reward for participating in the Shock of heroes!",
+      "de": "Ehrenpreis für die Teilname am Shock of Heroes Event!",
+      "es": "¡Recompensa honorífica por participar al Choque de Héroes!"
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_derwin_#00": {
+    "id": 91,
+    "img": "pictos/r_derwin.fa2f3a0f.gif",
+    "name": {
+      "fr": "Mort Ultime du CDH",
+      "en": "Clash Colossus",
+      "de": "Ultimativer Tod des SoH",
+      "es": "Héroe de Leyenda"
+    },
+    "desc": {
+      "fr": "Distinction du plus grand héros ayant survécu le plus longtemps lors du choc des héros, vous faîtes désormais parti de la légende de l'outre-monde !",
+      "en": "Distinction of the greatest hero having survived the longest during the Shock of heroes, you are now part of the legend of the World Beyond!",
+      "de": "Auszeichnung für den größten Helden, der während des Shock of Heroes Events am längsten überlebt hat. Du bist nun eine Legende der Außenwelt!",
+      "es": "Esta Distinción es entregada a un solo hombre, aquel que cumplió con su destino legendario y mantuvo a la muerte fuera de su camino en el Choque de Héroes."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_ermwin_#00": {
+    "id": 92,
+    "img": "pictos/r_ermwin.3e77c858.gif",
+    "name": {
+      "fr": "Ermite gagnant du CDH",
+      "en": "Survivalist - Winner of SoH",
+      "de": "Einsiedler - Gewinner des SoH",
+      "es": "Ganador Ermitaño del CDH"
+    },
+    "desc": {
+      "fr": "Victoire en tant qu'Ermite lors du Choc des Héros !",
+      "en": "This rare award was given to the Survivalists who won the battle of the professions with their Town. Respect!",
+      "de": "Diese seltene Auszeichnung wurde den Einsiedlern verliehen, die mit ihrer Stadt die Schlacht der Berufe gewonnen haben. Respekt!",
+      "es": "¡Victoria como Ermitaño durante el Choque de Héroes!"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_cdhwin_#00": {
+    "id": 93,
+    "img": "pictos/r_cdhwin.417c8855.gif",
+    "name": {
+      "fr": "Fouineur gagnant du CDH",
+      "en": "Scavenger - Winner of SoH",
+      "de": "Buddler - Gewinner des SoH",
+      "es": "Ganador Excavador del CDH"
+    },
+    "desc": {
+      "fr": "Victoire en tant que Fouineur lors du Choc des Héros !",
+      "en": "Victory for the Scavengers at the Shock of Heroes event!",
+      "de": "Sieg für die Buddler beim Shock of Heroes Event!",
+      "es": "¡Victoria como Excavador durante el choque de héroes!"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_defwin_#00": {
+    "id": 94,
+    "img": "pictos/r_defwin.b4910f04.gif",
+    "name": {
+      "fr": "Gardien gagnant du CDH",
+      "en": "Guardian - Winner of SoH",
+      "de": "Wächter - Gewinner des SoH",
+      "es": "Campeón de Choque de héroes"
+    },
+    "desc": {
+      "fr": "Victoire en tant que Gardien lors du Choc des Héros !",
+      "en": "Victory as a Guardian during the Shock of heroes!",
+      "de": "Sieg für die Wächter beim Shock of Heroes Event!",
+      "es": "¡Victoria como Guardián durante el Choque de Héroes!"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_kohlmb_#00": {
+    "id": 95,
+    "img": "pictos/r_kohlmb.870f8174.gif",
+    "name": {
+      "fr": "Citoyen Koh-Lambdais",
+      "en": "Citizen Koh-Lambdais",
+      "de": "Bewohner Koh-Lambdas",
+      "es": "Habitante Koh-Lambdais"
+    },
+    "desc": {
+      "fr": "Ce citoyen était présent lors de la Réunification (dernier round) du Koh-Lambda !",
+      "en": "This citizen was present during the Reunification (last round) of Koh-Lambda!",
+      "de": "Dieser Bürger war bei der Wiedervereinigung (letzte Runde) von Koh-Lambda dabei!",
+      "es": "¡Este habitante estuvo presente durante la Reunificación (última ronda) de Koh-Lambda!"
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_lepre_#00": {
+    "id": 96,
+    "img": "pictos/r_lepre.c4f59434.gif",
+    "name": {
+      "fr": "Le lutin vous a bien eu",
+      "en": "The leprechaun got you good",
+      "de": "Der Kobold hat dich erwischt",
+      "es": "Duendecillo"
+    },
+    "desc": {
+      "fr": "Nombre d'objets de vos amis que vous avez volés.",
+      "en": "Number of your friends' items you have stolen.",
+      "de": "Anzahl der Gegenstände, die du von deinen Freunden gestohlen hast",
+      "es": "Parece que le has robado algo a un amigo."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_goodg_#00": {
+    "id": 97,
+    "img": "pictos/r_goodg.25353bf8.gif",
+    "name": {
+      "fr": "Good Guy",
+      "en": "Good Guy",
+      "de": "Netter Kerl",
+      "es": "Buen chico"
+    },
+    "desc": {
+      "fr": "Vous faites partie des joueurs les plus intégres de Hordes, le fair-play, plus qu'un principe, c'est un état d'esprit.",
+      "en": "You are one of the most integrated players in Die2Nite, fair play, more than a principle, it is a state of mind.",
+      "de": "Du bist einer der am besten integrierten Spieler in Die Verdammten und verhälst dich immer fair, nicht nur aus Prinzip, sondern aus Überzeugung.",
+      "es": "Eres uno de los jugadores más integrados en Zombinoia, el juego limpio es más que un principio, es un estado de ánimo."
+    },
+    "community": true,
+    "rare": true
+  },
+  "r_beta2_#00": {
+    "id": 98,
+    "img": "pictos/r_beta2.ab102589.gif",
+    "name": {
+      "fr": "Beta-testeur next gen",
+      "en": "Next gen Beta-Tester",
+      "de": "Beta-Tester der neuen Zeit",
+      "es": "Beta-tester de próxima generación"
+    },
+    "desc": {
+      "fr": "Distinction rarissime réservée aux tout premiers citoyens de 'MyHordes'. Les drogues c'est pas bien.",
+      "en": "An extremely rare distinction, awarded only to the very earliest citizens of 'MyHordes'. Drugs are not good.",
+      "de": "Dies ist eine äußert seltene Auszeichnung, die den ersten Spielern von 'MyHordes' vorbehalten ist. Drogen sind nicht gut.",
+      "es": "Una Distinción extremadamente rara, otorgada solo a los primeros habitantes de 'MyHordes'. Las drogas no son buenas."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_rangwin_#00": {
+    "id": 99,
+    "img": "pictos/r_rangwin.c3324c52.gif",
+    "name": {
+      "fr": "Éclaireur gagnant du CDH",
+      "en": "Scout - Winner of the SoH",
+      "de": "Aufklärer - Gewinner des SoH",
+      "es": "Ganador Explorador del CDH"
+    },
+    "desc": {
+      "fr": "Victoire en tant qu'Éclaireur lors du Choc des Héros !",
+      "en": "Victory as a Scout during the Shock of Heroes!",
+      "de": "Sieg für die Aufklärer beim Shock of Heroes Event!",
+      "es": "¡Victoria como Explorador durante el Choque de Héroes!"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_gsp_#00": {
+    "id": 100,
+    "img": "pictos/r_gsp.3b617d93.gif",
+    "name": {
+      "fr": "Gagnant de GSP",
+      "en": "Winner of CYP",
+      "de": "HAZ-Gewinner",
+      "es": "Ganador del CTP"
+    },
+    "desc": {
+      "fr": "Récompense honorifique décernée au gagnant de Guérir sa Pictophilie !",
+      "en": "Honorary reward awarded to the winner of the Cure his Pictophilia.",
+      "de": "Ehrenauszeichnung für den Gewinner der Heilung für die Auszeichnungssucht.",
+      "es": "¡Premio honorario dado al ganador de \"Curando tu Pictofilia\"!"
+    },
+    "community": true,
+    "rare": false
+  },
+  "r_collec2_#00": {
+    "id": 101,
+    "img": "pictos/r_collec2.72c54112.gif",
+    "name": {
+      "fr": "Collecteur d'âmes",
+      "en": "Soul Collector",
+      "de": "Kernsammler",
+      "es": "Recolector de Almas"
+    },
+    "desc": {
+      "fr": "Nombres d'âmes de citoyens décédés collectées dans l'outre-monde",
+      "en": "The number of dead citizens' souls collected in the World Beyond",
+      "de": "Anzahl der im Ausland gesammelten Seelen verstorbener Bürger",
+      "es": "Cantidad de almas recolectadas de habitantes fallecidos en el Ultramundo"
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_mystic2_#00": {
+    "id": 102,
+    "img": "pictos/r_mystic2.067e128e.gif",
+    "name": {
+      "fr": "Transformation mystique",
+      "en": "Mystical transformation",
+      "de": "Mystische Transformation",
+      "es": "Transformación Mística"
+    },
+    "desc": {
+      "fr": "Nombre d'âmes trafiquées par vos soins à l'Atelier.",
+      "en": "Number of souls trafficked by you at the Workshop.",
+      "de": "Anzahl der Seelen, die du in der Werkstatt umgewandelt hast",
+      "es": "Cantidad de almas que has transformado en el Taller"
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_ufc_#00": {
+    "id": 103,
+    "img": "pictos/r_ufc.67f72140.gif",
+    "name": {
+      "fr": "UFC",
+      "en": "UFC",
+      "de": "UFC",
+      "es": "UFC"
+    },
+    "desc": {
+      "fr": "Prix d'honneur pour la participation à l'UFC!",
+      "en": "Honorary prize for participation in the UFC!",
+      "de": "Ehrenpreis für die Teilnahme am UFC!",
+      "es": "¡Premio honorífico por participación en el UFC!"
+    },
+    "community": true,
+    "rare": false
+  },
+  "r_ripflash_#00": {
+    "id": 104,
+    "img": "pictos/r_ripflash.0945924d.gif",
+    "name": {
+      "fr": "Sommes-nous toujours dans l'alpha?",
+      "en": "Are we still in the Alpha?",
+      "de": "Sind wir noch in der Alpha?",
+      "es": "¿Ya salimos de la versión Alfa?"
+    },
+    "desc": {
+      "fr": "C'est une récompense extrêmement rare réservée aux premiers joueurs de MyHordes ayant vécu la fin avec un grand F.",
+      "en": "This is an extremely rare reward reserved for the first MyHordes players to experience the final with a capital F.",
+      "de": "Dies ist eine äußerst seltene Belohnung, die den ersten MyHordes-Spielern vorbehalten ist, die das Finale mit großem F erlebt haben.",
+      "es": "Esta es una Distinción extremadamente rara reservada a los primeros jugadores de MyHordes, quienes presenciaron el final, uno con F mayúscula."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_tamwin_#00": {
+    "id": 105,
+    "img": "pictos/r_tamwin.16e5521b.gif",
+    "name": {
+      "fr": "Apprivoiseur légendaire",
+      "en": "Legendary tamer",
+      "de": "Legendärer Dompteur",
+      "es": "Domador legendario"
+    },
+    "desc": {
+      "fr": "Victoire en tant qu'Apprivoiseur lors du Choc des Héros !",
+      "en": "Award for the tamer members who won the Clash of the Titans event!",
+      "de": "Auszeichnung für die Mitglieder der Dompteuren-Liga, die beim Shock of Heroes Event gewonnen haben!",
+      "es": "Distinción entregada a los miembros del pueblo domador que ganó el Choque de Héroes."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_jbasic_#00": {
+    "id": 106,
+    "img": "pictos/r_jbasic.1d567d4b.gif",
+    "name": {
+      "fr": "Habitant",
+      "en": "Resident",
+      "de": "Einwohner",
+      "es": "Habitante"
+    },
+    "desc": {
+      "fr": "Jours passés en tant qu'Habitant.",
+      "en": "Number of days spent as a regular Resident.",
+      "de": "Anzahl der Tage, die du als Einwohner gespielt hast.",
+      "es": "Días pasados ​​como un simple habitante."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_scaddh_#00": {
+    "id": 107,
+    "img": "pictos/r_scaddh.33e2fa2e.gif",
+    "name": {
+      "fr": "Fouineur gagnant du DDH",
+      "en": "Scavenger - Winner of DoE",
+      "de": "Buddler - Gewinner des DdA",
+      "es": "DdO - Ganador Excavador"
+    },
+    "desc": {
+      "fr": "Victoire en tant que Fouineur lors du Duel des Huit !",
+      "en": "Victory as a Scavenger during the Duel of Eights!",
+      "de": "Auszeichnung für die Mitglieder der Buddler-Liga, die beim Duell der Achter gewonnen haben!",
+      "es": "Distinción entregada a los miembros del pueblo Excavador que ganó el Duelo de Ocho."
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_ddh_#00": {
+    "id": 108,
+    "img": "pictos/r_ddh.83cb999c.gif",
+    "name": {
+      "fr": "Duel des Huit",
+      "en": "Duel of Eights",
+      "de": "Duell der Achter",
+      "es": "Duelo de los Ocho"
+    },
+    "desc": {
+      "fr": "Récompense honorifique pour une participation au Duel des Huit !",
+      "en": "Honorary reward for participating in the Duel of Eights!",
+      "de": "Ehrenpreis für die Teilname am Duell der Achter Event!",
+      "es": "¡Recompensa honorífica por participar al Duelo de los Ocho!"
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_eventwin_#00": {
+    "id": 109,
+    "img": "pictos/r_eventwin.d6e7ec53.gif",
+    "name": {
+      "fr": "Gagnant d'évènement",
+      "en": "Event winner",
+      "de": "Eventsieger",
+      "es": "Ganador de evento"
+    },
+    "desc": {
+      "fr": "Distinction obtenue suite à votre désignation comme vainqueur d'un événement communautaire, bravo !",
+      "en": "Distinction obtained following your designation as winner of a community event, congrats!",
+      "de": "Auszeichnung für deinen Sieg in einem Community-Event, Glückwünsch!",
+      "es": "Distinción obtenida tras su designación como ganador de un evento comunitario, ¡enhorabuena!"
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_eventpart_#00": {
+    "id": 110,
+    "img": "pictos/r_eventpart.54996885.gif",
+    "name": {
+      "fr": "Participant d'évènement",
+      "en": "Event participant",
+      "de": "Eventteilnehmer",
+      "es": "Participante de evento"
+    },
+    "desc": {
+      "fr": "Distinction obtenue suite à votre participation à un événement communautaire.",
+      "en": "Distinction obtained following your participation in a community event.",
+      "de": "Auszeichnung für deine Teilnahme an einem Community-Event.",
+      "es": "Distinción obtenida tras su participación en un evento comunitario."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_thermal_#00": {
+    "id": 111,
+    "img": "pictos/r_thermal.f6f43ac0.gif",
+    "name": {
+      "fr": "Thermes de l'Or bleu",
+      "en": "Blue Gold Thermal baths",
+      "de": "Blaugoldige Thermalbäder",
+      "es": "Baños Termales de Oro Azul"
+    },
+    "desc": {
+      "fr": "Hé, tu aurais dû penser à ton savon !",
+      "en": "Hey, you should have thought about your soap!",
+      "de": "Hey, du hättest an deine Seife denken sollen!",
+      "es": "¡Oye, deberías haber previsto jabón!"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_cburn_#00": {
+    "id": 112,
+    "img": "pictos/r_cburn.5fa2e830.gif",
+    "name": {
+      "fr": "Crémateur de corps",
+      "en": "Body cremators",
+      "de": "Leichenverbrenner",
+      "es": "Cremación de cuerpos"
+    },
+    "desc": {
+      "fr": "Nombre de rituels funéraires effectués sur les cadavres des citoyens",
+      "en": "Performed fiery burial rituals on the corpses of citizens",
+      "de": "Durchgeführte feurige Begräbnisrituale an den Leichen von Bürgern",
+      "es": "Realizaron rituales funerarios ardientes con los cuerpos de los habitantes"
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_decofeist_#00": {
+    "id": 113,
+    "img": "pictos/r_decofeist.2f5e3f26.gif",
+    "name": {
+      "fr": "Décoration festive",
+      "en": "Festive Decoration",
+      "de": "Festliche Dekoration",
+      "es": "Decoración festiva"
+    },
+    "desc": {
+      "fr": "Nombre de festivités auxquelles vous avez assisté.",
+      "en": "Number of festivities you attended.",
+      "de": "Anzahl der Feierlichkeiten, an denen Sie teilgenommen haben.",
+      "es": "Número de festividades en las que has participado."
+    },
+    "community": false,
+    "rare": false
+  },
+  "r_techwin_#00": {
+    "id": 114,
+    "img": "pictos/r_techwin.a0e3ee5d.gif",
+    "name": {
+      "fr": "Technicien gagnant du CDH",
+      "en": "Technician - Winner of the SoH",
+      "de": "Techniker - Gewinner des SoH",
+      "es": "Ganador Técnico del CDH"
+    },
+    "desc": {
+      "fr": "Victoire en tant que Technicien lors du Choc des Héros !",
+      "en": "Victory as a Technician during the Shock of Heroes!",
+      "de": "Sieg für die Techniker beim Shock of Heroes Event!",
+      "es": "¡Victoria como Técnico durante el Choque de Héroes!"
+    },
+    "community": false,
+    "rare": true
+  }
+}

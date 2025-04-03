@@ -1,0 +1,1090 @@
+{
+  "1": {
+    "id": 1,
+    "img": "ruin/home.cc9a1e8c.gif",
+    "name": {
+      "fr": "Maison d’un citoyen",
+      "en": "Citizen's Home",
+      "de": "Abgelegenes Haus",
+      "es": "Casa de un habitante"
+    },
+    "desc": {
+      "fr": "Ici vivait un Citoyen qui avait décidé de s'installer hors de la ville, pensant survivre plus longtemps, loin des querelles et des trahisons. <strong>La moitié de son corps est toujours dans le salon</strong>.",
+      "en": "This was home to a citizen who decided to settle down outside the town, thinking they would survive for longer unaffected by the quarrels and betrayals inherent in town life. Half of their corpse is still in the living room.",
+      "de": "Hier wohnte ein Bürger, der sich außerhalb der Stadt niedergelassen hat, weil er den Streitigkeiten und dem Verrat, die das Stadtleben mit sich bringt, entfliehen wollte. Die Hälfte seiner Leiche liegt immer noch im Wohnzimmer.",
+      "es": "Aquí vivió un habitante que se instaló en el desierto, pensando empezar una nueva vida, lejos de la traición y de las intrigas de sus compañeros. <strong>La mitad de su cuerpo aún está tirado en un rincón</strong>."
+    },
+    "explorable": false
+  },
+  "2": {
+    "id": 2,
+    "img": "ruin/albi.5d89d1bd.gif",
+    "name": {
+      "fr": "Épicerie Fargo",
+      "en": "Scottish Smith's Superstore",
+      "de": "Albi Supermarkt",
+      "es": "Tienda Don Chicho"
+    },
+    "desc": {
+      "fr": "Une enseigne de la chaîne de magasins Brian Fargo. On y trouve généralement tout ce qu’il faut pour nettoyer et entretenir sa maison. Les plus démunis y trouveront de quoi manger…",
+      "en": "One of the many Smith's Superstores that proliferated around the year 2010 then disappeared... specialising in making things as cheap as possible, you should be able to find whatever you need here. Whether you're potless or just being tighter than two coats of paint, shop at Smiths!",
+      "de": "Einer der vielen Albi Supermarkt, die um das Jahr 2010 herum aus dem Boden schossen und später dann verschwanden... spezialisiert darauf, Dinge so billig wie möglich zu verscherbeln. Hier findest du alles finden, was du brauchst - egal ob du einfach pleite bist oder eisern auf ein neues Stück Seife sparst, kaufe bei ALBI ein!",
+      "es": "Ahí se encuentran muchos productos de limpieza. Los más desfavorecidos encontrarán algo de comer..."
+    },
+    "explorable": false
+  },
+  "3": {
+    "id": 3,
+    "img": "ruin/cave.9dd737bf.gif",
+    "name": {
+      "fr": "Caverne anciennement habitée",
+      "en": "Once-inhabited Cave",
+      "de": "Alte Höhle",
+      "es": "Cueva"
+    },
+    "desc": {
+      "fr": "Il y a des réflexes qui ne pardonnent pas. Prenez par exemple le coup de la caverne : vous êtes poursuivi(e) et vous vous engouffrez bêtement dans une caverne pour vous mettre à l’abri. Le problème qui se pose alors : maintenant que vous êtes dans une impasse, combien de temps allez-vous pouvoir hurler en attendant que vos poursuivants vous rattrapent ? Le type au fond, à qui il manque la moitié du visage, n’a pas dû crier bien longtemps.",
+      "en": "Some actions cannot be forgiven. Take, for example, the case of the cavern: your group are being followed and you stupidly rush into a cave to hide. For how long can you cry while you wait for your pursuers to catch up ? The guy lagging behind, who is half-blind, didn't have to cry for long...",
+      "de": "Manche Fehler enden zwangsläufig tödlich. Nehmt als Beispiel diese Höhle. Stellt euch vor, ihr werdet von einer Zombiemeute verfolgt und eilt überstürzt in eine Höhle, um Schutz zu suchen. Ihr werdet dann folgendes Problem haben: Wie kommt ihr heil wieder raus, wenn die Biester euch gefolgt sind? Der zerfledderte Typ an der Wand dort hinten scheint dies nicht bedacht zu haben...",
+      "es": "El típico caso de un hombre que se mete en una cueva huyendo de una turba de zombies. Todo bien hasta allí, hasta que el hombre recuerda que tenía 2 zombies abrazados a su espalda. El pobre gritó de todo menos «Por favor»."
+    },
+    "explorable": false
+  },
+  "4": {
+    "id": 4,
+    "img": "ruin/pump.391a1768.gif",
+    "name": {
+      "fr": "Vieille pompe hydraulique",
+      "en": "Old Hydraulic Pump",
+      "de": "Alte Hydraulikpumpe",
+      "es": "Vieja Bomba hidráulica"
+    },
+    "desc": {
+      "fr": "Une antique pompe rongée par la rouille, capable de puiser de l’eau dans le désert… Le seul problème c’est que même si vous arrivez à la faire fonctionner, cette eau sera généralement <strong>non-potable</strong> et devra être <strong>purifiée en ville</strong> avec les produits adéquats.",
+      "en": "An old pump which is rusting away, but is nonetheless capable of drawing water in the desert... The only problem is that even if you manage to get it working, the water will generally be undrinkable and will need to be purified in town with the appropriate equipment...",
+      "de": "Eine alte Pumpe, die zwar vor sich hin rostet, aber dennoch in der Lage ist, in der Wüste Wasser zu schöpfen... Das einzige Problem ist, dass das Wasser, selbst wenn Sie es zum Funktionieren bringen, im Grunde genommen ungenießbar ist und in der Stadt mit den entsprechenden Geräten gereinigt werden muss.",
+      "es": "Esta bomba hidráulica está bastante corroída y tiene aún la capacidad de extraer agua en el desierto... Si llegas a hacerla funcionar, el agua <strong>no será potable</strong> y deberá ser <strong>purificada en el pueblo</strong> con los productos necesarios."
+    },
+    "explorable": false
+  },
+  "5": {
+    "id": 5,
+    "img": "ruin/bike.a7e9c737.gif",
+    "name": {
+      "fr": "Ancien Vélib’",
+      "en": "Old Bicycle Hire Shop",
+      "de": "Alter Fahrradverleih",
+      "es": "Taller de bicicletas"
+    },
+    "desc": {
+      "fr": "Une ancienne gare à vélos jonchée de pièces de ferraille, d’outils et de débris en tout genre.",
+      "en": "An old bicycle hire warehouse, littered with pieces of metal, tools and all kinds of debris.",
+      "de": "Ein altes Fahrradverleihlager, das mit Metallstücken, Werkzeugen und allen Arten von Schutt übersät ist.",
+      "es": "Un antiguo taller de reparación de bicicletas repleta de herramientas y chatarra de todo tipo."
+    },
+    "explorable": false
+  },
+  "6": {
+    "id": 6,
+    "img": "ruin/freight.f5a90d79.gif",
+    "name": {
+      "fr": "Gare de triage désertée",
+      "en": "Deserted Freight Yard",
+      "de": "Alter Rangierbahnhof",
+      "es": "Plataforma ferroviaria"
+    },
+    "desc": {
+      "fr": "Cette plaque tournante centrale du réseau ferroviaire du pays dispatchait et aiguillait les marchandises venues de tous les horizons, sans interruption, 24h/24. Aujourd’hui, le « vaste réseau » en question mesure environ 150 mètres de long, si on compte les vestiges de rails, un peu plus loin.",
+      "en": "The turntable in the middle of this rail depot constantly dispatched and received merchandise from all over the world, 24 hours a day. Today, all that remains is a 150 metre long section, maybe a bit more if you include the remaining rails.",
+      "de": "Dieser Rangierbahnhof war einmal das zentrale Drehkreuz des Landes. Waren aus aller Herren Länder wurden hier rund um die Uhr umgeladen und in alle Himmelsrichtungen versendet. Das 'weitverzweigte Netzt' ist heute noch ungefähr 150 Meter lang, vorausgesetzt man zählt die Gleisüberbleibsel da hinten noch mit.",
+      "es": "Esta plataforma ferroviaria se dedicaba a la distribución de mercancías. Ya que estás aquí, ¿por qué no echarle un vistazo?"
+    },
+    "explorable": false
+  },
+  "7": {
+    "id": 7,
+    "img": "ruin/hospital.fc9f63e6.gif",
+    "name": {
+      "fr": "Vieil hôpital de campagne",
+      "en": "Old Field Hospital",
+      "de": "Altes Feldkrankenhaus",
+      "es": "Hospital de campaña"
+    },
+    "desc": {
+      "fr": "Les restes qui jonchent les allées de cet hôpital improvisé devaient être des patients. Difficile de savoir combien ils ont pu être à mourir ici, le soir de l’attaque… Peut-être qu’en comptant le nombre de bras et en divisant par deux ?",
+      "en": "The remains which litter the corridors of this improvised hospital must be what is left of the patients. It's difficult to say how many must have died here on the night of the attack... Maybe if you count the number of arms on the ground and divide by two ?",
+      "de": "Die menschlichen Überreste, die in der Auffahrt liegen gehören den ehemaligen Patienten dieses improvisierten Krankenhauses. Schwer zu sagen, wie viele Menschen hier beim abendlichen Angriff gestorben sind... Wenn du die Anzahl der Arme durch zwei teilst, vielleicht bekommst du dann eine grobe Schätzung?",
+      "es": "Entre los cuerpos regados en los pasillos de este hospital improvisado se encuentran pacientes, enfermeras y víctimas del ataque... Es difícil saber cuántos hay. ¿Tal vez contando la cantidad de brazos y dividiéndolas entre dos?"
+    },
+    "explorable": false
+  },
+  "8": {
+    "id": 8,
+    "img": "ruin/aerodrome.6ef1f90f.gif",
+    "name": {
+      "fr": "Ancien aérodrome",
+      "en": "Old Aerodrome",
+      "de": "Altes Flugfeld",
+      "es": "Antiguo aeródromo"
+    },
+    "desc": {
+      "fr": "Tout ce qui décolle de cet aérodrome pourrissant, ce sont les mouches. Peut-être qu’en fouinant dans les entrepôts, vous parviendrez à mettre la main sur un truc utile. Genre, un A360 en état de marche.",
+      "en": "The only things taking off or landing at this crumbling aerodrome are the flies. Maybe if you forage around in the warehouses you will find something useful. Like, say, an A380 in working order.",
+      "de": "Das Einzige, was auf diesem bröckelnden Flugplatz startet oder landet, sind die Fliegen. Vielleicht finden Sie etwas Nützliches, wenn Sie in den Lagerhallen herumstöbern. Zum Beispiel einen A380 in funktionstüchtigem Zustand.",
+      "es": "Lo único que vuela en este lugar son las moscas. Tal vez hurgando en el depósito encuentres algo útil. Algo como un Boeing 747 que funcione."
+    },
+    "explorable": false
+  },
+  "9": {
+    "id": 9,
+    "img": "ruin/police.7c302f3d.gif",
+    "name": {
+      "fr": "Ancien commissariat",
+      "en": "Old Police Station",
+      "de": "Altes Polizeipräsidium",
+      "es": "Antigua comisaría"
+    },
+    "desc": {
+      "fr": "L’imposant bâtiment s’étend sur plusieurs centaines de mètres. Il est divisé en de nombreuses salles, mais beaucoup se sont effondrées il y a bien longtemps. Si l’on en croit les nombreux impacts de balles et les barricades improvisées, <strong>ce commissariat a été le théâtre d’affrontements particulièrement violents</strong>.",
+      "en": "This imposing building stretches over several hundred metres. It is split into numerous rooms but many of them collapsed a long time ago. If you look at the number of bullet holes and improvised barricades, it seems that this police station was the scene of some particularly violent confrontations.",
+      "de": "Dieses beeindruckende Gebäude erstreckt sich auf mehrere Hundert Meter. Es enthält zahlreiche Räume, die größtenteils eingestürzt sind. Die große Anzahl an Einschusslöchern in den Wänden und die improvisierten Barrikaden lassen vermuten, dass das Gebäude vor einiger Zeit Schauplatz heftiger Gefechte gewesen ist.",
+      "es": "Este impresionante edificio se extiende por varios cientos de metros. Posee numerosas habitaciones, la mayoría de las cuales se han derrumbado casi por completo. La gran cantidad de agujeros de bala en las paredes y las barricadas improvisadas sugieren que el edificio fue escenario de feroces combates hace ya un tiempo."
+    },
+    "explorable": false
+  },
+  "10": {
+    "id": 10,
+    "img": "ruin/bunker.83ad92a0.gif",
+    "name": {
+      "fr": "Abri anti-atomique",
+      "en": "Nuclear Bunker",
+      "de": "Atombunker",
+      "es": "Refugio Anti-atómico"
+    },
+    "desc": {
+      "fr": "Le numéro est à moitié effacé, mais il s’agissait vraisemblablement de l’<strong>abri 14</strong>. Si l’on en juge par les corps décrépis à l’intérieur, le système de fermeture du sas <strong>n’a pas dû fonctionner comme prévu</strong>. Ça arrive.",
+      "en": "The number has been partially worn away, but this was in all likelihood shelter number 14. Judging by the crumbling bodies inside, the airlock system couldn't have worked as expected. Shit happens.",
+      "de": "Die Farbe der am Bunkereingang gepinselten Zahl ist fast vollständig abgeblättert, aber es handelt sich wahrscheinlich um den Bunker 14. Im Inneren liegen überall verweste Leichen herum. Scheint so, als ob der Schließmechanismus versagt hätte. Das kommt vor.",
+      "es": "El número en la puerta no se distingue bien... Pero se puede notar que se trata del <strong>Refugio 14</strong>. Viendo el estado de los cadáveres en su interior, todo indica que el sistema de cierre del Portal <strong>no funcionó correctamente</strong>. Suele pasar..."
+    },
+    "explorable": false
+  },
+  "11": {
+    "id": 11,
+    "img": "ruin/cafe.688cc86a.gif",
+    "name": {
+      "fr": "Atomic’ Café",
+      "en": "Mac's Atomic Cafe",
+      "de": "Atomic Cafe",
+      "es": "Atomic Café"
+    },
+    "desc": {
+      "fr": "Le rendez-vous branché du désert : venez goûter notre Nuka-Cola, spécialité de la maison, aux vrais extraits d’hormones animales.",
+      "en": "The Atomic Cafe is (or was) the place to be: A faded poster invites you to come to the summer party on 2 May 2010: Hawaiian Theme, Prize for Best Dressed (Half Naked Girls + Guys) DJ Dave from 1pm, Free BBQ, Improved Look Beer Garden, Party Games, Live Football, Cocktails, £2 Bottled Beer, £2 Alcopop, £1 Tequila... Get Involved!",
+      "de": "Das Atomic Cafe ist (oder war) der Ort, an dem man sein sollte: Ein verblichenes Plakat lädt Sie zum Sommerfest am 2. Mai 2010 ein: Hawaiianisches Thema, Preis für den bestangezogenen (halbnackten Mädchen + Jungs) DJ Dave ab 13.00 Uhr, kostenloses BBQ, Biergarten mit verbessertem Look, Partyspiele, Live-Fußball, Cocktails, £2 Flaschenbier, £2 Alcopop, £1 Tequila... Beteiligen Sie sich!",
+      "es": "El lugar de moda en el desierto, famoso por la Toro-Cola, la especialidad de la casa preparada con hormonas animales."
+    },
+    "explorable": false
+  },
+  "12": {
+    "id": 12,
+    "img": "ruin/autobahn.c0eade22.gif",
+    "name": {
+      "fr": "Relais autoroutier",
+      "en": "Motorway Services",
+      "de": "Autobahnraststätte",
+      "es": "Restaurante de autopista"
+    },
+    "desc": {
+      "fr": "À une certaine époque, c’était sûrement le coin le plus branché de toute l’autoroute A217, avec ses bières frelatées, son odeur d’urine et ses rats morts sur le comptoir. Personne avant vous ne semble s’y être arrêté depuis des lustres.",
+      "en": "At one time, this would certainly have been one of the most trendy joints on the M25, with watered-down drinks, the aroma of stale piss and dead rats on the bar. You must be the first person to set foot in here in years.",
+      "de": "Früher wäre dies sicherlich einer der trendigsten Joints auf der M25 gewesen, mit verwässerten Getränken, dem Aroma von abgestandener Pisse und toten Ratten auf der Bar. Sie müssen seit Jahren der erste Mensch sein, der hier einen Fuß hinein gesetzt hat.",
+      "es": "En una época, fue una parada obligatoria en la A-667. Apreciado por su variedad de carnes, a pesar de su olor a orina y las ratas muertas en los rincones. Es una pena que ya no haya restaurantes así..."
+    },
+    "explorable": false
+  },
+  "13": {
+    "id": 13,
+    "img": "ruin/cars.c99aeeaa.gif",
+    "name": {
+      "fr": "Carcasses de voitures",
+      "en": "Wrecked Cars",
+      "de": "Autowracks",
+      "es": "Carrocerías de autos"
+    },
+    "desc": {
+      "fr": "Un modèle plutôt commun de <strong>break familial</strong> encastré dans un modèle tout aussi commun de <strong>fourgonnette</strong>… Ce petit accident semble avoir provoqué un <strong>carambolage</strong> de grande envergure si l’on en juge par l’amas de carcasses calcinées tout autour.",
+      "en": "Looks like an altercation between a small van and a station wagon... This minor accident seems to have caused a substantial pile-up judging by the number of burnt corpses lying around.",
+      "de": "Ein Kombi, der sich in einen Kleintransporter verkeilt hat. Der großen Anzahl an verkohlten Leichen nach zu urteilen, hat hier ein Unfall eine richtig große Karambolage verursacht.",
+      "es": "Un modelo común de <strong>automóvil familiar</strong> empotrado en otro modelo común de <strong>furgoneta</strong>... Este choque debió provocar un <strong>accidente</strong> de gran envergadura a juzgar por la cadena de coches semi-destruidos que se encuentran alrededor."
+    },
+    "explorable": false
+  },
+  "14": {
+    "id": 14,
+    "img": "ruin/bar2.85143042.gif",
+    "name": {
+      "fr": "Le bar des illusions perdues",
+      "en": "The 'Shattered Illusions' Bar",
+      "de": "Bar der verlorenen Hoffnungen",
+      "es": "El bar de las ilusiones perdidas"
+    },
+    "desc": {
+      "fr": "Ce bar étrange se trouve caché derrière une petite colline et vous auriez tout aussi bien pu passer à côté sans le remarquer. L’intérieur est décoré d’innombrables portraits et photos en noir et blanc. On y retrouve souvent un type habillé dans une sorte de pyjama rayé sur les bords, debout aux côtés de diverses personnes.",
+      "en": "This bar is hidden behind a small hill in such a location that you could easily have walked straight past it without realising. The interior is decorated with countless black and white portraits and photos. There is often a guy in the pictures wearing some striped pyjama-type outfit standing next to various other people.",
+      "de": "Diese Bar ist hinter einem kleinen Hügel an einer solchen Stelle versteckt, dass man leicht direkt daran vorbeigehen könnte, ohne es zu merken. Der Innenraum ist mit unzähligen Schwarzweiß-Portraits und Fotos geschmückt. Auf den Bildern ist oft ein Typ in gestreifter Pyjama-Kleidung zu sehen, der neben verschiedenen anderen Personen steht.",
+      "es": "Este extraño bar se encuentra detrás de una colina y nadie se había dado cuenta de su existencia. El interior está decorado con muchísimas fotos en blanco y negro, en todas ellas hay un hombre vestido con un traje a rayas junto a diversas personas."
+    },
+    "explorable": false
+  },
+  "15": {
+    "id": 15,
+    "img": "ruin/obi.abd43129.gif",
+    "name": {
+      "fr": "Bricotout",
+      "en": "Home Depot",
+      "de": "Baumarkt",
+      "es": "La casa del constructor"
+    },
+    "desc": {
+      "fr": "Le relais des <strong>bricoleurs</strong>. Véritable petit paradis rempli de trésors inestimables pour un monde comme le nôtre… Leur slogan est tout à fait d’actualité : « Pillez-nous avant que d’autres ne s’en chargent pour vous ! »",
+      "en": "A veritable Mecca for the DIY enthusiast. A paradise full of invaluable treasures for a world like ours... Their advertising slogan is even more appropriate nowadays: Pillage our store before someone else beats you to it!",
+      "de": "Der Baumarkt ist das zweite Zuhause eines jeden Handwerkers. In dieser Welt avanciert er jedoch zu einem wahren Paradies! Gegenstände von unschätzbarem Wert warten nur darauf von dir entdeckt zu werden... Der Werbespruch auf dem Dach hat zudem nichts von seiner Aktualität eingebüßt: 'Plündern Sie uns bevor es andere tun!'",
+      "es": "Un paraíso para los amantes de las tuercas y destornilladores... Su eslogan sigue siendo vigente: « Más barato, imposible »"
+    },
+    "explorable": false
+  },
+  "16": {
+    "id": 16,
+    "img": "ruin/container.00ef2a9d.gif",
+    "name": {
+      "fr": "Abri de chantier",
+      "en": "Construction Site Shelter",
+      "de": "Baustellencontainer",
+      "es": "Refugio en construcción"
+    },
+    "desc": {
+      "fr": "Un très grand container métallique posé au milieu de nulle part. Il devait se trouver à côté d’un chantier, à une époque, mais il n’en reste rien aujourd'hui. À part cette « cabane ».",
+      "en": "A huge metal box-like creation stuck in the middle of nowhere. It would usually be found beside a building site, and once upon a time it probably was, but there is no sign of it today. Well, except this 'cabin'...",
+      "de": "Dieser riesige gelbe Metallcontainer macht einen verlorenen Eindruck. Weit und breit keine Baustelle. Der Gemeinschaftsraum im Inneren ist mit leeren Bierflaschen übersät",
+      "es": "Un gran container de metal en medio del desierto. Aquí debió haber gente tabajando, pero hoy no queda nada más que esta \"cabaña\"."
+    },
+    "explorable": false
+  },
+  "17": {
+    "id": 17,
+    "img": "ruin/doner.9843df27.gif",
+    "name": {
+      "fr": "Kebab « Chez Coluche »",
+      "en": "Fraser D's Kebab-ish",
+      "de": "Dönerbude Utsel-Brutzel",
+      "es": "Sándwiches «San Guchito»"
+    },
+    "desc": {
+      "fr": "Si vous avez un petit creux, ne vous arrêtez surtout pas ici ! Ou c’est le cuistot lui-même qui viendra vous dévorer, après vous avoir découpé à la scie circulaire.",
+      "en": "If you're a bit peckish, esurient or just plain hungry, whatever you do, don't stop here! Here it's the chef that wants to eat... you... after he cuts off your head with a circular saw.",
+      "de": "Von wegen Döner macht schöner. Scheint so als hätte der Besitzer dieser Bude das mit den Dönern und den Spießen missverstanden. Wer hier reingeht kommt garantiert nicht mehr raus.",
+      "es": "¿Tienes ganas de comer algo rico? ¡Ni se te ocurra venir aquí! o será el propio cocinero quien saldrá a devorarte!"
+    },
+    "explorable": false
+  },
+  "18": {
+    "id": 18,
+    "img": "ruin/duke.ae2b10ff.gif",
+    "name": {
+      "fr": "Villa de Duke",
+      "en": "Duke's Villa",
+      "de": "Dukes Villa",
+      "es": "Mansión de Duke"
+    },
+    "desc": {
+      "fr": "La maison d’un certain « Duke » si on en croit la plaque d’entrée calcinée, ancien « Héros Pour Toujours »… Plus qu’une villa, l’endroit semble être une vaste <strong>forteresse aménagée</strong>.",
+      "en": "The home of a certain Duke R. Cooke, and if one is to believe the plaque on the door... a home for Heroes... this place is much bigger than a villa, it's a fully equipped fortress!",
+      "de": "Das Heim eines gewissen Duke R. Cooke, und wenn man der Gedenktafel an der Tür glauben darf... ein Heim für Helden... dieser Ort ist viel größer als eine Villa, es ist eine voll ausgestattete Festung !",
+      "es": "El hogar de un tal Duke R. Cooke, y si puedes creer en la placa en la puerta... un hogar para héroes... ¡Este lugar es mucho más grande que una mansión, es una fortaleza completamente equipada!"
+    },
+    "explorable": false
+  },
+  "19": {
+    "id": 19,
+    "img": "ruin/woods.f286c24d.gif",
+    "name": {
+      "fr": "Petit bois obscur",
+      "en": "Dark Woods",
+      "de": "Dunkler Hain",
+      "es": "Bosque oscuro"
+    },
+    "desc": {
+      "fr": "Les restes <strong>calcinés</strong> d’une forêt. C’était probablement un endroit agréable avant… Aujourd’hui, on prie juste pour ne jamais s’y perdre la nuit.",
+      "en": "The burnt remains of a small forest. It was probably a nice area beforehand... Now you're just hoping you won't have to spend the night here.",
+      "de": "Die verbrannten Überreste eines kleinen Waldes. Es war wahrscheinlich vorher eine schöne Gegend... Jetzt hoffen Sie nur noch, dass Sie hier nicht übernachten müssen.",
+      "es": "Los restos <strong>carbonizados</strong> de un bosque. Antes debió ser un lugar agradable... Hoy, sería una pesadilla perderse en él."
+    },
+    "explorable": false
+  },
+  "20": {
+    "id": 20,
+    "img": "ruin/mine.df2a8744.gif",
+    "name": {
+      "fr": "Mine effondrée",
+      "en": "Collapsed Mineshaft",
+      "de": "Eingestürzte Mine",
+      "es": "Mina colapsada"
+    },
+    "desc": {
+      "fr": "Une ancienne mine qui n’a pas résisté aux outrages du temps. Dieu sait quel genre de lubie pouvait pousser les gens de l’époque à creuser si profond pour trouver quelque chose d’utile. Surtout quand il suffit d’à peine gratter le sol pour dégoter un délicieux cafard à manger. « Tiens, j’ai faim », pensez-vous.",
+      "en": "An old mine which has not resisted the ravages of time well. God knows what caprice could have led people to look so deep underground to find something useful. Especially when you only just have to scratch the surface to find some delicious cockroaches to crunch on! You start to feel hungry just thinking about it...",
+      "de": "Diese alte Mine hat es nicht vermocht den Wetterwidrigkeiten Stand zu halten. Nur Gott weiß, was die Menschen damals angetrieben hat, so tief zu graben, um der Erde nützliche Rohstoffe zu entreißen. Dabei reicht es mit den Füßen leicht am Boden zu kratzen und schon kommt eine leckere Kakerlake vorbeigehuscht. Du denkst dir: 'Lecker, die esse ich doch mal gleich'",
+      "es": "Una antigua mina destruida seguramente por la avaricia de sus trabajadores. ¿Pero qué interés tendrían de excavar tan profundo? Sobre todo cuando escarbando en el suelo se encuentran deliciosas cucarachas. \"Por cierto, ya es hora de la merienda\" te dices..."
+    },
+    "explorable": false
+  },
+  "21": {
+    "id": 21,
+    "img": "ruin/quarry.3c83a077.gif",
+    "name": {
+      "fr": "Carrière effondrée",
+      "en": "Collapsed Quarry",
+      "de": "Eingestürzter Steinbruch",
+      "es": "Cantera derrumbada"
+    },
+    "desc": {
+      "fr": "Une <strong>zone d’extraction de minéraux</strong> qui porte les stigmates d’un <strong>terrible accident</strong> : tout un flanc semble s’être <strong>effondré</strong> sur les hommes, les machines et les bâtiments.",
+      "en": "This mineral extraction zone bears all the hallmarks of a terrible accident: the hillside seems to have collapsed onto the workers, machines and buildings below.",
+      "de": "Diese Mineralienabbauzone trägt alle Merkmale eines schrecklichen Unglücks : der Hang scheint auf die Arbeiter, Maschinen und Gebäude darunter eingestürzt zu sein.",
+      "es": "Una <strong>zona de extracción de minerales</strong> que lleva las marcas de un <strong>terrible accidente</strong>: toda una ladera se <strong>derrumbó</strong> sobre la gente, las máquinas y los edificios."
+    },
+    "explorable": false
+  },
+  "22": {
+    "id": 22,
+    "img": "ruin/ufo.3970247f.gif",
+    "name": {
+      "fr": "Un étrange appareil circulaire",
+      "en": "Strange Circular Device",
+      "de": "Ein seltsames kreisförmiges Gerät",
+      "es": "Un extraño aparato circular"
+    },
+    "desc": {
+      "fr": "Ça ressemble à un large disque métallique surmonté de ce qui devait être un poste de pilotage. Cela pourrait tout aussi bien être un genre de moissonneuse-batteuse un peu high-tech.",
+      "en": "It looks like a large metal disk with what appears to be some kind of cockpit mounted on top. It could also be some type of high-tech combine harvester.",
+      "de": "Das Ganze sieht wie eine komische runde Metallscheibe aus, die mal zu einen Flugzeugcockpit gehörte. Aber du bist dir nicht ganz sicher, denn es könnte sich auch um ein Mähdrescherteil handeln...",
+      "es": "Parece un enorme disco metálico de lo que pudo haber sido una trilladora acgrícola..."
+    },
+    "explorable": false
+  },
+  "23": {
+    "id": 23,
+    "img": "ruin/ekea.503f6666.gif",
+    "name": {
+      "fr": "Meubles Kiela",
+      "en": "PI-KEYA Furniture",
+      "de": "E-KEA",
+      "es": "Muebles Kiela"
+    },
+    "desc": {
+      "fr": "La chaîne de magasins Kiela était autrefois spécialisée dans la fabrication et la vente de meubles bon marché. On dit que la piètre qualité de leurs produits serait l’une des raisons qui a poussé le monde à sa perte…",
+      "en": "PI-KEYA: These enormous stores used to be in every city (always rather annoyingly situated on the outskirts). They specialised in the manufacture and sale of cheap furniture, usually with one bolt / screw / fastener missing. It is said that the poor quality of their products was one of the reasons for society going to ruin...",
+      "de": "E-KEA: Diese riesigen Geschäfte gab es früher in jeder Stadt (immer ziemlich ärgerlich am Stadtrand gelegen). Sie spezialisierten sich auf die Herstellung und den Verkauf von Billigmöbeln, denen meist ein Bolzen / Schraube / Verbindungselement fehlte. Es wird gesagt, dass die schlechte Qualität ihrer Produkte einer der Gründe für den Niedergang der Gesellschaft war...",
+      "es": "Estas enormes tiendas solían estar en todos los pueblos (siempre a las afueras, en el peor lugar posible). Se especializaron en la fabricación y venta de muebles baratos, que en su mayoría carecían de tornillos. Se dice que la mala calidad de sus productos fue una de las razones del declive de la sociedad..."
+    },
+    "explorable": false
+  },
+  "24": {
+    "id": 24,
+    "img": "ruin/tomb.c8b5fe07.gif",
+    "name": {
+      "fr": "Caveau familial",
+      "en": "Family Tomb",
+      "de": "Familiengrab",
+      "es": "Cripta familiar"
+    },
+    "desc": {
+      "fr": "Un <strong>caveau familial</strong> décrépi. C’est à peine si l’on distingue encore l’entrée, presque entièrement dissimulée sous la <strong>végétation pourrissante</strong>. Les <strong>cadavres</strong>, quant à eux, se sont levés et sont sortis depuis bien longtemps…",
+      "en": "A dilapidated family crypt. You can only just make out the entrance, as it's almost completely obscured by decaying vegetation. Apparently the bodies got up and left some time ago...",
+      "de": "Eine verfallene Familiengruft. Man kann den Eingang gerade noch erkennen, da er fast vollständig von verrottender Vegetation verdeckt ist. Anscheinend sind die Leichen vor einiger Zeit aufgestanden und gegangen...",
+      "es": "Una <strong>cripta familiar</strong> decadente. Apenas se distingue la entrada detrás de la <strong>vegetación descompuesta</strong>. Los <strong>cadáveres</strong> salieron temprano..."
+    },
+    "explorable": false
+  },
+  "25": {
+    "id": 25,
+    "img": "ruin/mczombie.da39f2a0.gif",
+    "name": {
+      "fr": "Fast-food",
+      "en": "Fast Food Restaurant",
+      "de": "Fast Food Restaurant",
+      "es": "Restaurante «Burger Twin»"
+    },
+    "desc": {
+      "fr": "Une odeur atroce de cadavre faisandé émane de ce bâtiment : les réserves de viande se sont transformées en répugnants <strong>monticules de moisissure blanche</strong> qui ont commencé à « s’écouler » par les portes…",
+      "en": "There is a horrendous stench of decaying bodies coming from this building: The stocks of meat have transformed into disgusting mounds of mouldy white flesh which are leaking a thick pungent liquid which now covers the floor and has even started to run out the door...",
+      "de": "Aus diesem Gebäude strömt ein entsetzlicher Gestank von verwesenden Leichen : Die Fleischvorräte haben sich in ekelerregende Hügel aus schimmeligem, weißem Fleisch verwandelt, aus denen eine dicke, scharfe Flüssigkeit austritt, die nun den Boden bedeckt und sogar begonnen hat, aus der Tür zu laufen...",
+      "es": "Un olor atroz a cadáver sale de este edificio. La carne guardada se ha transformado en <strong>montículos de podredumbre blanca</strong> que comenzó a gelatinizarse..."
+    },
+    "explorable": false
+  },
+  "26": {
+    "id": 26,
+    "img": "ruin/plane.e9447956.gif",
+    "name": {
+      "fr": "Carlingue d’avion",
+      "en": "Plane Crash Site",
+      "de": "Flugzeugwrack",
+      "es": "Fuselaje de avión"
+    },
+    "desc": {
+      "fr": "Un <strong>long courrier</strong> s’est écrasé au milieu de nulle part… Difficile de savoir ce qu’il transportait, le sable du désert l’a presque totalement rongé. La présence de quelques sièges suggère toutefois qu’il avait à son bord des passagers, entre autres. Aucune trace des corps…",
+      "en": "This long-haul aircraft has crashed in the middle of nowhere... It's difficult to know what it was carrying, the desert sand has almost entirely eroded the fuselage. The presence of some seats suggests there were at least some passengers on board. There is no trace of the bodies though...",
+      "de": "Dieser Langstreckenflieger ist mitten im nirgendwo abgestürzt... Da der Wüstensand das Wrack fast vollkommen eingegraben hat und sich der Zahn der Zeit in das Material gefressen hat, lässt sich nicht mehr sagen, was das Flugzeug transportierte. Du lässt deinen Blick schweifen, es sind jedoch weit und breit keine Leichen erkennbar...",
+      "es": "Este avión comercial se estrelló en medio del desierto... Es difícil saber lo que transportaba, la arena ha cubierto casi todo. La presencia de asientos hace pensar que habían pasajeros, pero no hay rastro de cuerpos..."
+    },
+    "explorable": false
+  },
+  "27": {
+    "id": 27,
+    "img": "ruin/shed.9794b7de.gif",
+    "name": {
+      "fr": "Cabane de jardin",
+      "en": "Garden Shed",
+      "de": "Gartenhaus",
+      "es": "Cabaña de jardín"
+    },
+    "desc": {
+      "fr": "Au milieu d’un petit square totalement décrépi, vous trouvez un vaste abri de jardin. La porte cède facilement, révélant une vaste pièce remplie d’étagères et d’outillages en tout genre.",
+      "en": "In the middle of a completely derelict square, you find a sizeable garden shed. The door gives way easily, revealing a vast space full of shelf units and all kinds of tools.",
+      "de": "Mitten auf einem völlig verfallenen Platz befindet sich ein großer Gartenschuppen. Die Tür gibt leicht nach und gibt den Blick frei auf einen riesigen Raum voller Regale und allerlei Werkzeug.",
+      "es": "En medio de lo que fue un parque encuentras una pequeña cabaña. La puerta se abre fácilmente, revelando estantes con herramientas de todo tipo."
+    },
+    "explorable": false
+  },
+  "28": {
+    "id": 28,
+    "img": "ruin/supermarket.ae982d4d.gif",
+    "name": {
+      "fr": "Supermarché pillé",
+      "en": "Looted Supermarket",
+      "de": "Geplünderte Mall",
+      "es": "Supermercado saqueado"
+    },
+    "desc": {
+      "fr": "Ce gigantesque amas de brique et de métal était probablement autrefois un grand centre commercial, grouillant d’activité et illuminé de mille feux. Aujourd’hui, il n’y grouille que de la vermine et autres immondices rampantes… Nul doute, toutefois, qu’il recèle aussi bon nombre de richesses.",
+      "en": "This hulking mass of metal and brisk was probably a large shopping centre, swarming with activity and illuminated by a thousand lights. Today nothing swarms except the vermin and other crawling filth... There's no doubt though that it contains lots of goodies...",
+      "de": "Dieser riesige Haufen aus Schutt und Metall war früher mal ein hell erleuchtetes Einkaufszentrum, das vor Menschen nur so wimmelte. Das Einzige, was hier noch herumwimmelt, sind Würmer und anderes Gekreuch und Gefleuch... Du bist jedoch zuversichtlich, hier allerhand nützliche Gegenstände zu finden.",
+      "es": "Este gran terreno de escombros fue seguramente un enorme centro comercial, de esos que tenían gente circulando como hormigas. Hoy no queda más que eso: insectos y otros bichos... Debe contener más de un tesoro."
+    },
+    "explorable": false
+  },
+  "29": {
+    "id": 29,
+    "img": "ruin/cave2.149d05fd.gif",
+    "name": {
+      "fr": "Caverne",
+      "en": "Cave",
+      "de": "Höhle",
+      "es": "Caverna"
+    },
+    "desc": {
+      "fr": "Une sorte de <strong>tumulus</strong> qui devait autrefois servir de sépulture ou d’abri… Allez savoir. L’intérieur est plongé dans <strong>le noir le plus total</strong>, l’air y est <strong>glacial</strong> et une odeur insupportable de <strong>charogne</strong> en émane…",
+      "en": "Some kind of stone cavern which must previously have served as a burial place or shelter... Go and take a look. Inside, it is absolutely pitch black, the air is icy and there is a strong smell of rotting flesh...",
+      "de": "Eine Art Steinhöhle, die früher als Grabstätte oder Unterschlupf gedient haben muss... Schauen Sie sich das an. Im Inneren ist es absolut stockfinster, die Luft ist eisig und es riecht stark nach verfaulendem Fleisch...",
+      "es": "Una especie de <strong>gruta</strong> que debió servir como sepulcro o refugio... Su interior presenta una <strong>oscuridad total</strong>, el aire es <strong>glacial</strong> y huele a <strong>carroña</strong>."
+    },
+    "explorable": false
+  },
+  "30": {
+    "id": 30,
+    "img": "ruin/cemetary.019105d6.gif",
+    "name": {
+      "fr": "Cimetière indien",
+      "en": "Indian Burial Ground",
+      "de": "Indianerfriedhof",
+      "es": "Cementerio indio"
+    },
+    "desc": {
+      "fr": "Un ancien cimetière presque entièrement recouvert de sable et de végétation pourrissante. C’est finalement un endroit plutôt rassurant en comparaison du reste du monde…",
+      "en": "An ancient Indian burial ground which is almost entirely covered in sand and decaying vegetation. In comparison with the rest of the world, you feel strangely at ease here...",
+      "de": "Ein altes indianisches Gräberfeld, das fast vollständig mit Sand und verrottender Vegetation bedeckt ist. Im Vergleich zum Rest der Welt fühlt man sich hier seltsam wohl...",
+      "es": "Un antiguo cementerio cubierto de arena y mala hierba. Es un lugar reconfortante, comparándolo con el pueblo..."
+    },
+    "explorable": false
+  },
+  "31": {
+    "id": 31,
+    "img": "ruin/fair.fd43d095.gif",
+    "name": {
+      "fr": "Stand de fête foraine",
+      "en": "Fairground Stall",
+      "de": "Jahrmarktstand",
+      "es": "Stand de feria de atracciones"
+    },
+    "desc": {
+      "fr": "Un endroit comme celui-ci est une aubaine de nos jours… Nul doute que vous trouverez ici de quoi vous équiper décemment en jouets en plastique et autres gadgets utiles.",
+      "en": "Places like this are a godsend these days... You are guaranteed all the plastic toys you could want here... and maybe some other useful gadgets.",
+      "de": "Orte wie dieser sind heutzutage ein Geschenk des Himmels... Hier gibt es garantiert alles an Plastikspielzeug, was man sich wünschen kann... und vielleicht noch ein paar andere nützliche Gadgets.",
+      "es": "Este lugar es una bendición... Aquí podrás encontrar lo necesario para equiparte con juguetes de plástico y otras cosas indispensables."
+    },
+    "explorable": false
+  },
+  "32": {
+    "id": 32,
+    "img": "ruin/house.d62c777d.gif",
+    "name": {
+      "fr": "Petite maison",
+      "en": "Small House",
+      "de": "Kleines Haus",
+      "es": "Casita"
+    },
+    "desc": {
+      "fr": "Une vieille bicoque laissée à l’abandon depuis des années. Presque entièrement ensevelie sous le sable. Parfois, vous pouvez entendre des <strong>grattements inquiétants</strong> venant de ce qui doit être la cave…",
+      "en": "An old shack which has been uninhabited for years. Almost completely buried in sand, but you can still hear some unsettling groaning noises coming from what must be the cellar...",
+      "de": "Eine alte Hütte, die seit Jahren unbewohnt ist. Fast vollständig im Sand begraben, aber man hört immer noch einige beunruhigende Stöhngeräusche aus dem, was der Keller sein muss...",
+      "es": "Una vieja casa abandonada que se tambalea con el viento. Está llena de arena. A veces puedes oir <strong>algo que se mueve</strong> en lo que sería el sótano..."
+    },
+    "explorable": false
+  },
+  "33": {
+    "id": 33,
+    "img": "ruin/water.b0887632.gif",
+    "name": {
+      "fr": "Centrale hydraulique",
+      "en": "Water Processing Plant",
+      "de": "Kleinwasserkraftwerk",
+      "es": "Central hidráulica"
+    },
+    "desc": {
+      "fr": "Cette centrale capte les eaux des nappes phréatiques environnantes et les transvase dans de gigantesques réservoirs en béton. Le <strong>système de filtrage semble en panne</strong>, mais on doit pouvoir récupérer l’eau contaminée stockée ici.",
+      "en": "This plant collects groundwater from the surrounding area and transfers it into enormous concrete reservoirs. The filtration system seems to be broken, but you should be able to recover the contaminated water that is stored here...",
+      "de": "Das Kraftwerk sammelt das benachbarte Grundwasser in einem Stauraum. Die Energie der Bewegung des fließenden Wassers wird auf eine Turbine übertragen, wodurch dieses in Drehbewegung mit hohem Drehmoment versetzt wird. Das Filtersystem scheint kaputt zu sein, aber das schmutzige Wasser kann trotzdem eingesammelt werden.",
+      "es": "Esta central extrae el agua de las capas freáticas y la deposita en un reservorio de concreto. El <strong>sistema de filtrado parece no funcionar</strong>, pero se debe poder recuperar el agua contaminada que se encuentra almacenada aquí."
+    },
+    "explorable": false
+  },
+  "34": {
+    "id": 34,
+    "img": "ruin/lab.18cdd16b.gif",
+    "name": {
+      "fr": "Laboratoire cosmétique",
+      "en": "Cosmetics Lab",
+      "de": "Kosmetiklabor",
+      "es": "Laboratorio de cosméticos"
+    },
+    "desc": {
+      "fr": "Ce bâtiment lugubre a servi autrefois pour divers tests de produits sur des animaux. Ça sent le camphre, l’éther et la charogne. Et ce n’est que l’entrée…",
+      "en": "This depressing building once served as an animal testing facility (rabbits doing mid-terms etc...). It smells of camphor, ether and rotting carcasses. And you've not even gone inside yet...",
+      "de": "Dieses bedrückende Gebäude diente einst als Einrichtung für Tierversuche (Kaninchen in Zwischenprüfungen etc...). Es riecht nach Kampfer, Äther und verrottenden Kadavern. Und Sie sind noch nicht einmal hineingegangen...",
+      "es": "Este frío edificio sirvió alguna vez para elaborar cosméticos y probarlos en animales. Los cadáveres de las ratas tienen la piel llena de brotes asquerosos. Esperas no haber usado nunca una de esas cremas..."
+    },
+    "explorable": false
+  },
+  "35": {
+    "id": 35,
+    "img": "ruin/ambulance.5e5281b4.gif",
+    "name": {
+      "fr": "Ambulance",
+      "en": "Ambulance",
+      "de": "Krankenwagen",
+      "es": "Ambulancia"
+    },
+    "desc": {
+      "fr": "Une ambulance arrêtée au milieu de la route. Elle ne comporte plus de roue, ni de moteur… Aucune trace de lutte, ni d’accident. Pourtant vous ne trouvez aucun corps non plus…",
+      "en": "This ambulance has been abandoned in the middle of the road. The wheels are gone, as is the engine... There are no signs of a struggle, and no signs of an accident. There are no bodies either come to that...",
+      "de": "Dieser Krankenwagen ist mitten auf der Straße stehen geblieben. Er hat keine Reifen mehr und auch der Motor fehlt... Außerdem finden sich keinerlei Anzeichen für einen Kampf oder Unfall... Höchst seltsam...",
+      "es": "Una ambulancia detenida en medio de la vía. Ya no tiene ruedas ni motor... No hay huellas de pelea, ni de accidente. Tampoco encuentras cuerpos..."
+    },
+    "explorable": false
+  },
+  "36": {
+    "id": 36,
+    "img": "ruin/warehouse.8a350d7b.gif",
+    "name": {
+      "fr": "Hangars de stockage",
+      "en": "Warehouse",
+      "de": "Lagerhalle",
+      "es": "Hangares"
+    },
+    "desc": {
+      "fr": "Le dépôt d’un grand magasin qui a certainement déposé son bilan il y a bien longtemps. Enfin, c’est ce que laisse supposer la présence d’une trentaine de corps pendus dans le hangar numéro 2. Vous supposez qu’il s’agit du conseil d'administration ; reste à savoir s’il s’agit d’un suicide collectif (le fait qu’ils aient les mains attachées vous laisse perplexe).",
+      "en": "This was the storage unit for a department store which went to the wall some time ago. So this would lead you to think that the thirty corpses hanging in stockroom 2 were the board of directors. Now you just need to work out if it was a mass suicide (the fact that they all have their hands tied together confuses you though...).",
+      "de": "Die letzte Inventur hat hier schon vor einiger Zeit stattgefunden... Die 30 Leichen, die in Halle 2 hängen, lassen darauf vermuten, dass mit den Bilanzen etwas nicht stimmte. Dem Umfang ihrer Bäuche nach zu urteilen, handelt es sich wahrscheinlich um den Verwaltungsrat. War es ein kollektiver Selbstmord? Ihr gefesselten Hände sprechen nicht dafür.",
+      "es": "El depósito de una gran tienda que quebró hace mucho tiempo. Es lo que hace pensar la cantidad de cuerpos colgados en el hangar número 2. Supones que fue un suicidio colectivo de los miembros del consejo de dirección, pero el hecho de que tengan las manos atadas te deja perplejo."
+    },
+    "explorable": false
+  },
+  "37": {
+    "id": 37,
+    "img": "ruin/carpark.e1a2af98.gif",
+    "name": {
+      "fr": "Parking désaffecté",
+      "en": "Disused Car Park",
+      "de": "Leeres Parkhaus",
+      "es": "Parqueadero abandonado"
+    },
+    "desc": {
+      "fr": "Un parking souterrain presque entièrement enseveli. Idéal pour <strong>mourir dans le noir</strong>, sans que personne ne vous entende…",
+      "en": "An almost completely buried underground parking lot. An ideal venue to 'go quietly into the night' as long as nobody hears you...",
+      "de": "Ein unterirdisches Parkhaus, das fast vollständig vom Sand begraben wurde - der ideale Ort, um alleine zu sterben. Niemand wird dich hören...",
+      "es": "Un estacionamiento subterráneo cubierto de arena. Ideal para <strong>morir en la oscuridad</strong>, sin que nadie te escuche..."
+    },
+    "explorable": false
+  },
+  "38": {
+    "id": 38,
+    "img": "ruin/tank.f51642ed.gif",
+    "name": {
+      "fr": "Char d’assaut en panne",
+      "en": "Broken-down Tank",
+      "de": "Liegengebliebener Kampfpanzer",
+      "es": "Tanque averiado"
+    },
+    "desc": {
+      "fr": "Ce char militaire est un peu une métaphore de la <strong>boîte de conserve</strong>, avec le soldat dans le rôle de la sardine et la centaine de zombies dans le rôle du citoyen affamé. C’est le citoyen qui a gagné.",
+      "en": "This military vehicle is like the metaphorical food can. The soldier is inside, playing the role of a sardine, and a hundred zombies outside are playing the hungry citizen. The citizen wins...",
+      "de": "Dieses militärische Vehikel ist wie die metaphorische Konservendose. Der Soldat ist drinnen und spielt die Rolle einer Sardine, und hundert Zombies draußen spielen den hungrigen Bürger. Der Bürger gewinnt...",
+      "es": "Metafóricamente sería: <strong>Una lata de sardinas</strong> en manos de una centena de zombies hambrientos. Y de la sardina no quedó nada..."
+    },
+    "explorable": false
+  },
+  "39": {
+    "id": 39,
+    "img": "ruin/motel.b485d3d1.gif",
+    "name": {
+      "fr": "Motel « Dusk »",
+      "en": "Motel 666 Dusk",
+      "de": "Motel 'Dusk'",
+      "es": "Hostal «Hollywood Inn»"
+    },
+    "desc": {
+      "fr": "Vous vous demandez quel genre de personne pouvait bien venir passer sa nuit dans un trou aussi paumé que ce motel miteux. Sans doute le genre : représentant pour une obscure société de livraison fuyant un passé qui le rattrapera tôt ou tard. « Faudra que je pense à vérifier la chambre 215, au cas où », pensez-vous, sans trop savoir pourquoi.",
+      "en": "You ask yourself what kind of person would enjoy spending a night in a shabby hole like this motel. No doubt some sleazy sales rep whose dodgy past will catch up with him sooner or later. I really must check out room 215, you think to yourself, without really knowing why'.",
+      "de": "Beim Anblick des Gebäudes stellst du dir die Frage, wer in diesem schäbigen Motel früher übernachtet hat. Bilder und Szenen verschiedener Roadmovies schießen dir durch den Kopf: Thelma&Louise, Natural Born Killers... Du denkst dir: 'Vielleicht sollte ich als Erstes Zimmer 215 kontrollieren. Man weiß ja nie...'.",
+      "es": "Te preguntas a quién se le podría ocurrir venir a alojarse en un hostal tan lejano y miserable... Mirando el registro de huéspedes, sí hay alguien: Un tal Valedres, en la habitación 215. Tal vez valga la pena explorar..."
+    },
+    "explorable": false
+  },
+  "40": {
+    "id": 40,
+    "img": "ruin/army.8469ca10.gif",
+    "name": {
+      "fr": "Avant-poste militaire",
+      "en": "Army Outpost",
+      "de": "Militärischer Wachposten",
+      "es": "Puesto militar"
+    },
+    "desc": {
+      "fr": "Ha ça, ils étaient sûrement préparés à tout, les soldats installés ici : armes, provisions et périmètre de sécurité de 150m. Sauf peut-être au fait que leur lieutenant comptait les dévorer pendant la nuit. Non franchement, un bon mur et une bonne dictature des familles, rien de tel pour survivre ici.",
+      "en": "The soldiers stationed here were prepared for anything: weapons, supplies, and a 150m security perimeter. Anything except their lieutenant eating them during the night. Joking aside, with a solid wall and a healthy dictatorship, (from a survival point of view) there's nothing like it!",
+      "de": "Die hier stationierten Soldaten waren auf alles vorbereitet: Waffen, Vorräte und eine 150 m lange Sicherheitszone. Auf alles, außer darauf, dass ihr Leutnant sie während der Nacht verspeiste. Spaß beiseite, mit einer soliden Mauer und einer gesunden Diktatur gibt es (unter dem Gesichtspunkt des Überlebens) nichts Vergleichbares !",
+      "es": "Soldados armados hasta los dientes, entrenamientos diarios, provisiones y perímetro de seguridad de 150m. Todo estaba bien preparado, solo que no contaban con que el general los devorase a todos una noche de abril..."
+    },
+    "explorable": false
+  },
+  "41": {
+    "id": 41,
+    "img": "ruin/post.91001fec.gif",
+    "name": {
+      "fr": "Bureau de poste",
+      "en": "Post Office",
+      "de": "Postfiliale",
+      "es": "Oficina de correos"
+    },
+    "desc": {
+      "fr": "Un bâtiment qui semble avoir résisté aux affres du temps, vestige d’un antique service postal. Peu de chances que vous y trouviez quoi que ce soit de grand intérêt, sauf si vous aimez la lecture…",
+      "en": "This building seems to have resisted the ravages of time, a vestige of the postal service of years ago. It's unlikely that you'll find anything of great interest here, unless you like reading...",
+      "de": "Dieses Gebäude scheint von den turbulenten Ereignissen der Vergangenheit verschont worden zu sein. Es ist noch vollkommen intakt und erinnert an ein klassisches Postbüro mit doppelten Schalterfenstern und durchsiebtem Sprechfenster. Hier wirst du kaum etwas Nützliches finden außer etwas zum Lesen...",
+      "es": "El edificio resistió bien el paso del tiempo. Además de reliquias del servicio postal, no crees encontrar nada interesante, a menos que te guste leer..."
+    },
+    "explorable": false
+  },
+  "42": {
+    "id": 42,
+    "img": "ruin/cave3.c4d2a976.gif",
+    "name": {
+      "fr": "Cache de contrebandiers",
+      "en": "Smugglers' Cache",
+      "de": "Räuberhöhle",
+      "es": "Escondite de contrabandistas"
+    },
+    "desc": {
+      "fr": "Un trou dans le sol vaguement <strong>dissimulé</strong> par quelques planches et du sable. Il débouche sur une large caverne humide remplie de <strong>débris en tout genre</strong>, résultats de <strong>pillages dans une ville voisine</strong>, probablement. Qui sait si <strong>votre ville</strong> ne s’est pas construite sur ces pillages ? Peut-être que les <strong>premiers citoyens</strong> ont participé à ces attaques…",
+      "en": "A hole in the ground that has been somewhat concealed by some planks and some sand. It opens out into a large humid cavern filled with all kinds of debris, no doubt the result of pillaging by a neighbouring town. Who could say that your town wasn't built using ill-gotten gains from such pillaging ? Perhaps the first citizens were responsible for these attacks...",
+      "de": "Der Zugang zu dieser Höhle ist ein notdürftig abgedecktes Loch in der Erde. Er führt in eine übergroße feuchte Grotte, die mit allerlei Trümmern und Gerümpel gefüllt ist. Höchstwahrscheinlich handelt es sich um Beutegut, das bei der Plünderung einer benachbarten Stadt eingesackt wurde. Vielleicht wurde deine Stadt mit diesem Raubgut errichtet? Und wer weiß: Womöglich haben die ersten Einwohner deiner Stadt an diesen Raubzügen teilgenommen...",
+      "es": "Un hoyo <strong>se esconde</strong> en el suelo detrás de tablas y arena. Lleva a una caverna húmeda llena de <strong>cachivaches</strong> acumulados probablemente con los <strong>robos a un pueblo vecino</strong>. Quién sabe si <strong>tu pueblo</strong> se construyó con base en objetos robados. Puede ser que los <strong>primeros habitantes</strong> hayan sido los autores de todo esto..."
+    },
+    "explorable": false
+  },
+  "43": {
+    "id": 43,
+    "img": "ruin/trench.d3ebf360.gif",
+    "name": {
+      "fr": "Tranchée aménagée",
+      "en": "Equipped Trench",
+      "de": "Schützengraben",
+      "es": "Trincheras militares"
+    },
+    "desc": {
+      "fr": "Les nombreux <strong>cratères</strong> et autres <strong>taches de sang séché</strong> laissent à penser qu’une <strong>bataille de grande envergure</strong> s’est déroulée ici. La plupart des tranchées se sont effondrées, mais il reste <strong>quelques trous à fouiller</strong>.",
+      "en": "Numerous craters and splashes of dried blood lead you to think that a large - scale battle took place here. Most of the trenches are buried, but there are still some that are worth exploring...",
+      "de": "Dieser von Einschusskratern und schwarzen getrockneten Blutlachen übersäte Schützengraben lässt erahnen, was sich hier abgespielt hat. Der größte Teil des Grabens ist in sich zusammengestürzt, doch hier und dort erblickst du noch ein paar begehbare Stellen, die sich nach nutzbaren Gegenständen absuchen lassen.",
+      "es": "Los numerosos <strong>cráteres</strong> y <strong>manchas de sangre seca</strong> hacen pensar que una <strong>gran batalla</strong> tuvo lugar aquí. La mayoría de las trincheras fueron saqueadas, pero quedan aún <strong>algunas que pueden contener algo interesante</strong>."
+    },
+    "explorable": false
+  },
+  "44": {
+    "id": 44,
+    "img": "ruin/dll.adf07e7b.gif",
+    "name": {
+      "fr": "Bibliothèque de quartier",
+      "en": "Town Library",
+      "de": "Stadtbücherei",
+      "es": "Biblioteca de barrio"
+    },
+    "desc": {
+      "fr": "Un ensemble de plusieurs petites maisons qui constituaient autrefois une bibliothèque de quartier. Aujourd'hui, les livres sont, pour la plupart, déchirés ou brûlés, le sol est jonché de pages arrachées et les étagères sont renversées.",
+      "en": "What was once the local library is now a collection of several small houses. Today, the books are mostly torn or burnt, the ground is littered with torn pages and the shelves have been knocked over.",
+      "de": "Was einst die örtliche Bibliothek war, ist heute eine Ansammlung von mehreren kleinen Häusern. Heute sind die Bücher größtenteils zerrissen oder verbrannt, der Boden ist mit zerrissenen Seiten übersät und die Regale sind umgestoßen worden.",
+      "es": "Un pequeño edificio que servía de biblioteca para los vecinos. Hoy la mayoría de libros están quemados o rotos, el piso está lleno de hojas arrancadas y estanterías caídas."
+    },
+    "explorable": false
+  },
+  "45": {
+    "id": 45,
+    "img": "ruin/emma.785807a6.gif",
+    "name": {
+      "fr": "Mini-market",
+      "en": "Mini-market",
+      "de": "Tante Emma Laden",
+      "es": "Minimercado «Ocxo»"
+    },
+    "desc": {
+      "fr": "Ce petit magasin proposait toutes sortes de produits de consommation courants : nourriture, boissons, produits d’entretien… Ouvert 24h/24 et 7j/7 si l’on en croit ce qui est imprimé sur la vitrine. Le trou béant dans la façade lui donne raison.",
+      "en": "This small convenience store sold pretty much all the day-to-day necessities: Food, drinks, cleaning products... Open 24/7 365 days a year if you believe the printing on the window. The gaping hole in said window makes this statement 100% correct!",
+      "de": "In diesem Geschäft konnte man früher allerlei Produkte des täglichen Bedarfs kaufen: Lebensmittel, Getränke, Reinigungsmittel... An der Tür steht: Rund um die Uhr geöffnet (auch am Wochenende). In der Tat, das klaffenden Loch in der Mauer bestätigt dies.",
+      "es": "Esta tienda vendía todo tipo de productos de consumo diario: comida, bebidas, productos de limpieza... Abierto las 24 horas, los 7 días de la semana, según lo que dice en la entrada. La puerta destrozada le da la razón."
+    },
+    "explorable": false
+  },
+  "46": {
+    "id": 46,
+    "img": "ruin/mayor.5f30da0d.gif",
+    "name": {
+      "fr": "Camion « Mairie-mobile »",
+      "en": "The 'Mayor-Mobile'",
+      "de": "Truck 'Rathaus auf Rädern'",
+      "es": "Bus turístico"
+    },
+    "desc": {
+      "fr": "« Vos démarches citoyennes juste en bas de chez vous ». Pas de doute, les zombies ont complètement adhéré au concept, si l’on en croit les traces de griffes un peu partout à l’intérieur du camion et les restes humains soigneusement éparpillés dans les rayonnages.",
+      "en": "Your representative on your doorstep. The zombies thoroughly approved of this concept if you notice the claw marks on the upholstery in the cab and the human remains sprayed everywhere.",
+      "de": "Ihr Vertreter vor Ihrer Haustür. Die Zombies stimmten diesem Konzept voll und ganz zu, wenn man die Krallenspuren auf den Polstern der Kabine und die überall versprühten menschlichen Überreste bemerkt.",
+      "es": "Un buen día los pobladores salieron a hacer una excursión por el desierto en este bus cantando alegremente: «Vamo' pa' la playa, pa' curarte el alma», pero cuando cantaron la famosa canción de The Cranberries: «...in your head...zombie, zombie... » Una turba de muertos vivientes se unió al coro... dejando 40 muertos."
+    },
+    "explorable": false
+  },
+  "47": {
+    "id": 47,
+    "img": "ruin/lkw.0660bf4d.gif",
+    "name": {
+      "fr": "Camion en panne",
+      "en": "Wrecked Transporter",
+      "de": "Umgekippter Laster",
+      "es": "Camión averiado"
+    },
+    "desc": {
+      "fr": "Un camion de transport du groupe soviétique <strong>Transtwinä</strong>. La cabine du conducteur est totalement <strong>encastrée dans un arbre</strong>, mais les <strong>entailles</strong> profondes dans le siège et le <strong>sang</strong> qui tapisse toutes les parois laissent supposer que l’accident n'est pas la cause de la mort…",
+      "en": "A soviet transporter from the 'Trastwin' corporation. The driver's cab is wrapped round a tree, but the slashes in the seat and the blood-soaked interior would suggest that the crash was not the cause of death...",
+      "de": "Es handelt sich um einen Transportlaster der sowjetischen Firma Transtwinï. Die Fahrerkabine hat sich komplett in einem Baum verkeilt. Der aufgeschlitzte Fahrersitz, sowie die großflächigen Blutspuren an den Wänden, lassen darauf schließen, dass der Unfall nicht die Todesursache war...",
+      "es": "Un camión de la empresa rusa <strong>Transtwina</strong>. La cabina del conductor está totalmente <strong>encastrada en un árbol</strong>, pero los <strong>arañazos</strong> profundos en el asiento y la <strong>sangre</strong> en las paredes hacen pensar que no fue un accidente..."
+    },
+    "explorable": false
+  },
+  "48": {
+    "id": 48,
+    "img": "ruin/school.4528857e.gif",
+    "name": {
+      "fr": "École maternelle brûlée",
+      "en": "Burnt School",
+      "de": "Verbrannte Grundschule",
+      "es": "Escuela quemada"
+    },
+    "desc": {
+      "fr": "Les dessins enfantins peints sur les parois calcinées contrastent effroyablement avec les restes vaguement humains dispersés çà et là. Par moments, on croirait même entendre des <strong>rires lugubres</strong> sous les décombres.",
+      "en": "The childish drawings painted on the charred walls provide a stark contrast to the vaguely human remains strewn here and there. At times, you believe you can hear sinister laughter coming from beneath the rubble.",
+      "de": "Die fröhlichen Kinderzeichnungen an den Wänden stehen im starken Kontrast zu den nicht identifizierbaren menschlichen Überresten am Boden. Du hast das Gefühl, ein dunkles Kichern aus dem Bauschutt zu hören.",
+      "es": "Era una escuela de niños muy pequeños, los dibujos en las paredes lo indican. El contraste con los restos de cuerpos humanos en el suelo es desolador. Por momentos te parece oir <strong>ecos de risas</strong> entre los escombros."
+    },
+    "explorable": false
+  },
+  "49": {
+    "id": 49,
+    "img": "ruin/office.cb2f3143.gif",
+    "name": {
+      "fr": "Immeuble délabré",
+      "en": "Dilapidated Building",
+      "de": "Verfallenes Bürogebäude",
+      "es": "Edificio deteriorado"
+    },
+    "desc": {
+      "fr": "Un bel immeuble de bureaux où il devait faire bon venir travailler au petit matin, entouré de ses collègues anonymes, pour accomplir on ne sait trop quel but global, et avec pour seule préoccupation : sa propre survie. Vous vous dites que les choses n’ont peut-être finalement pas tant changé que ça…",
+      "en": "A nice office building where people used to get on with their work, starting early in the morning, surrounded by anonymous colleagues, trying to finish who knows what project but with one clear goal: their own survival. You think to yourself that maybe things haven't really changed all that much...",
+      "de": "In dieses schöne Gebäude gingen die Menschen früher zur Arbeit. Pünktlichkeit und Dresscode waren Pflicht. Die tägliche Routine bestand darin, mit einer Gruppe unbekannter Kollegen Zielvorgaben zu erreichen und um sein eigenes Überleben zu kämpfen... Hhmmm, wenn du so drüber nachdenkst: So viel hat sich gar nicht geändert - bis auf den Dresscode vielleicht.",
+      "es": "El edificio de una gran empresa donde la gente venía a trabajar, con compañeros anónimos y con un solo objetivo: sobrevivir. Vaya, las cosas no han cambiado mucho..."
+    },
+    "explorable": false
+  },
+  "50": {
+    "id": 50,
+    "img": "ruin/villa.167b7e01.gif",
+    "name": {
+      "fr": "Villa délabrée",
+      "en": "Derelict Villa",
+      "de": "Verfallene Villa",
+      "es": "Pueblo fantasma"
+    },
+    "desc": {
+      "fr": "Quelqu’un a vécu ici, il y a très longtemps. Peut-être même que cette personne était entourée d’une famille qui l’aimait et qu’ils y ont coulé des jours heureux tous ensemble ? Aujourd’hui il n’en reste rien ; un peu de poussière et la désolation la plus totale. Et parfois même un cadavre qui marche vers vous en grinçant des dents.",
+      "en": "Someone lived here a LONG time ago. Perhaps someone who was surrounded by a family who loved them and with whom they spent many happy hours together ? Today, all that remains is a little dust and utter desolation... and the occasional corpse who trudges towards you, gnashing its teeth.",
+      "de": "Jemand hat hier vor langer Zeit gelebt. Vielleicht jemand, der von einer Familie umgeben war, die ihn liebte und mit der er viele glückliche Stunden zusammen verbrachte ? Heute ist alles, was bleibt, ein wenig Staub und völlige Verwüstung... und gelegentlich eine Leiche, die mit den Zähnen knirschend auf einen zustürmt.",
+      "es": "Alguien vivió aquí hace mucho tiempo. ¿Habrá tenido una familia que le amaba y un hogar feliz? Hoy no queda nada, solo polvo y una desolación total. De vez en cuando, un cadáver tiembla rechinando los dientes."
+    },
+    "explorable": false
+  },
+  "51": {
+    "id": 51,
+    "img": "ruin/construction.d3cb5c36.gif",
+    "name": {
+      "fr": "Chantier à l’abandon",
+      "en": "Abandoned Construction Site",
+      "de": "Verlassene Baustelle",
+      "es": "Sitio de construcción abandonado"
+    },
+    "desc": {
+      "fr": "Il est impossible de déterminer ce qu’ils voulaient bâtir ici. Une école, un parking, un grand magasin… Seules les structures métalliques rouillées témoignent encore du <strong>mystérieux projet</strong> qui se tramait ici.",
+      "en": "It's impossible to guess what they were wanting to build here. It could have been a school, a car park, a department store... The rusting metal supports are the only remaining evidence of whatever mysterious project was underway here.",
+      "de": "Soll das eine Schule, ein Parkhaus oder vielleicht ein Kaufhaus sein? Du kannst es nicht erkennen... Das einzige, was von diesem geheimnisvollen Projekt noch übrig ist, sind ein paar verrostete Metallstrukturen.",
+      "es": "Te cuesta imaginar lo que se quiso construir aquí. ¿Una escuela, una prisión?... Solo las estructuras metálicas fueron testigos de ese <strong>misterioso proyecto</strong>."
+    },
+    "explorable": false
+  },
+  "52": {
+    "id": 52,
+    "img": "ruin/well.31a6c52c.gif",
+    "name": {
+      "fr": "Puits abandonné",
+      "en": "Abandoned Well",
+      "de": "Verlassener Brunnen",
+      "es": "Pozo abandonado"
+    },
+    "desc": {
+      "fr": "En voilà, une sacrée aubaine ! <strong>Un puits encore en état de marche</strong>, complètement perdu au milieu de nulle part. Et personne avec son Registre à la main pour vous dire « fais pas ci, fais pas ça, prends pas trop d’eau, gnagnagna… ». Allez, une petite rasade, ça sera notre petit secret.",
+      "en": "Wow - this is a bloody godsend! A well which still works! Completely lost in the middle of nowhere there is nobody here with their rulebook to tell you 'Don't do this, don't do that, don't take too much water, blah blah blah...' Go on, take a drink, it'll be our little secret...",
+      "de": "Wow - das ist ein verdammtes Geschenk des Himmels! Ein Brunnen, der immer noch funktioniert ! Völlig verloren in der Mitte von Nirgendwo gibt es hier niemanden mit seinem Regelwerk, der Ihnen sagt: 'Tun Sie dies nicht, tun Sie das nicht, nehmen Sie nicht zu viel Wasser, bla bla bla bla...'. Na los, nimm einen Drink, es wird unser kleines Geheimnis sein...",
+      "es": "¡Gracias Frocoa! <strong>Un pozo</strong> totalmente perdido en medio del desierto y que además se ve muy bien. Nadie con un Registro en mano que te diga «oye, ¿A dónde vás, qué llevas? no tomes mucha agua...». Pero, shhhh, no se lo digas a nadie."
+    },
+    "explorable": false
+  },
+  "53": {
+    "id": 53,
+    "img": "ruin/silo.c82e75d5.gif",
+    "name": {
+      "fr": "Silos à l’abandon",
+      "en": "Disused Silos",
+      "de": "Verlassene Silos",
+      "es": "Silos abandonados"
+    },
+    "desc": {
+      "fr": "Cet endroit devait servir de stockage pour le grain, mais avec le temps, les cuves ont fini par se remplir d’eau de pluie (c’était il y a bien longtemps…). Il doit y avoir de quoi s’approvisionner par ici…",
+      "en": "Originally constructed for storing grain, but as time passed and the grain ran out, the tanks filled with rainwater (and a dead rat). You'll need the right kit to make use of it though...",
+      "de": "Ursprünglich zur Lagerung von Getreide konstruiert, aber als die Zeit verging und das Getreide knapp wurde, füllten sich die Tanks mit Regenwasser (und einer toten Ratte). Sie brauchen allerdings den richtigen Bausatz, um sie zu benutzen...",
+      "es": "Este lugar debió servir para almacenar los granos. Pero con el tiempo, los depósitos se llenaron con agua de lluvia. Aquí podrías abastecerte."
+    },
+    "explorable": false
+  },
+  "54": {
+    "id": 54,
+    "img": "ruin/street.81202b0d.gif",
+    "name": {
+      "fr": "Route barrée",
+      "en": "Blocked Road",
+      "de": "Versperrte Straße",
+      "es": "Pista bloqueada"
+    },
+    "desc": {
+      "fr": "Ce qui s'est déroulé ici est assez <strong>incompréhensible</strong> : un énorme <strong>rocher</strong> semble s'être écrasé en plein milieu d'une route, comme <strong>tombé de nulle part</strong>...",
+      "en": "Something truly bizarre seems to have happened here: a huge rock seems to have crash landed in the middle of the road, like some kind of tombstone...",
+      "de": "Was hier passiert ist erschließt sich dir nicht so ganz... Ein riesiger Felsen ist mit voller Wucht auf die Straße geschleudert worden - doch woher kam er? Rings um dich ist nichts als Wüste...",
+      "es": "Lo que sucedió aquí es <strong>incomprensible</strong>: una enorme <strong>roca</strong> cayó en medio del camino, como <strong>caída del cielo</strong>..."
+    },
+    "explorable": false
+  },
+  "55": {
+    "id": 55,
+    "img": "ruin/park.734991f6.gif",
+    "name": {
+      "fr": "Parc à l’abandon",
+      "en": "Abandoned Park",
+      "de": "Verwilderter Park",
+      "es": "Parque abandonado"
+    },
+    "desc": {
+      "fr": "Un lieu de recueillement et de sérénité... Pour peu que vous soyez armé(e) et prêt(e) à lutter pour votre survie. La végétation locale est <strong>sinistre</strong> et <strong>sent la mort</strong> à plein nez, des <strong>créatures</strong> indéfinissables se déplacent dans les ombres... Vous avez constamment la sensation qu'une saleté va vous <strong>bondir</strong> dessus depuis un fourré.",
+      "en": "A place of peace and serenity... If you are armed and ready to fight for your life. The surrounding vegetation is sinister and smells strongly of death, unidentified creatures lurk in the shadows... You have the overwhelming feeling that some creature is going to burst out from a hedge and attack you.",
+      "de": "Ein Ort des Friedens und der Gelassenheit... Wenn Sie bewaffnet und bereit sind, um Ihr Leben zu kämpfen. Die umgebende Vegetation ist unheimlich und riecht stark nach Tod, unidentifizierte Kreaturen lauern im Schatten... Sie haben das überwältigende Gefühl, dass eine Kreatur aus einer Hecke ausbrechen und Sie angreifen wird.",
+      "es": "Un lugar de paz y serenidad... siempre y cuando estés armado para sobrevivir. La vegetación es <strong>siniestra</strong> y <strong>huele a muerte</strong>, <strong>criaturas</strong> indescriptibles se mueven entre las sombras... Sientes constantemente que algo horrible va a <strong>lanzarse sobre ti</strong> desde la maleza."
+    },
+    "explorable": false
+  },
+  "56": {
+    "id": 56,
+    "img": "ruin/guns.deadfc5e.gif",
+    "name": {
+      "fr": "Armurerie Guns’n’Zombies",
+      "en": "Guns 'n' Zombies Armoury",
+      "de": "Waffengeschäft Guns'n'Zombies",
+      "es": "Armería «Guns'n'Zombies»"
+    },
+    "desc": {
+      "fr": "Un filon d'armes pour qui aime bien tuer ou menacer. Les crevasses, impacts de balles et décombres en disent long sur les <strong>évènements</strong> qui sont survenus ici...",
+      "en": "If you like to menace, maim or murder, you've hit the mother lode here... The shrapnel stuck in the walls, bullet holes and wreckage all around give you a good idea of what genre of 'events' took place here...",
+      "de": "Wenn Sie drohen, verstümmeln oder morden wollen, haben Sie hier die Hauptader getroffen... Die in den Wänden steckenden Schrapnelle, Einschusslöcher und Trümmer ringsum geben Ihnen eine gute Vorstellung davon, welche Art von 'Ereignissen' sich hier abgespielt haben...",
+      "es": "Como un niño en una tienda de juguetes. Así se sienten los aficionados a los balazos en este lugar. Los agujeros en las paredes dicen mucho sobre el <strong>ambiente</strong> que se vivía aquí..."
+    },
+    "explorable": false
+  },
+  "57": {
+    "id": 57,
+    "img": "ruin/warehouse2.7fe5807d.gif",
+    "name": {
+      "fr": "Entrepôt désaffecté",
+      "en": "Disused Warehouse",
+      "de": "Warenlager",
+      "es": "Depósito abandonado"
+    },
+    "desc": {
+      "fr": "L'entrepôt de stockage d'un ancien supermarché dont la <strong>porte a résisté aux tentatives de pillages</strong>. Il doit sûrement contenir <strong>diverses babioles</strong> intéressantes...",
+      "en": "The door to this supermarket stockroom has thus far resisted would-be pillagers... surely there must be something tasty inside worth having...",
+      "de": "Das Schiebetor dieses Supermarktlagers hat allen Plünderungsversuchen erfolgreich getrotzt. Durch einen etwas versteckten Seiteneingang gelangst du ins Innere und machst dich sofort auf die Suche nach Dingen, die du noch gebrauchen kannst...",
+      "es": "Servía para almacenar los productos de un antiguo supermercado y <strong>su puerta resistió a los saqueos</strong>. Debe contener <strong>algunas cosillas</strong> interesantes..."
+    },
+    "explorable": false
+  },
+  "58": {
+    "id": 58,
+    "img": "ruin/tent.3b1d997c.gif",
+    "name": {
+      "fr": "Tente d’un citoyen",
+      "en": "Citizen's Tent",
+      "de": "Zelt eines Bürgers",
+      "es": "Tienda de un habitante"
+    },
+    "desc": {
+      "fr": "Une bonne planque, c'est certain. Le type qui a monté ce camp savait comment mettre ses fesses à l'abri des zombies : camouflage naturel, bonne visibilité alentours, plusieurs issues et même un trou pour se cacher sous terre au besoin. Le nom « Shenji » est brodé dans la toile de la tente.",
+      "en": "A good hideout, that's for sure. Whoever put this up certainly knew how to keep his ass well away from zombie clutches: natural camouflage, good all-round visibility, multiple exits and even a hole to hide underground if need be. The name 'C. Norris' has been written on the canvas in unicorn's tears.",
+      "de": "Dieses Zelt macht einen wirklich soliden Eindruck und war bestimmt mal ein gutes Versteck. Derjenige, der es aufgestellt hat, wusste wie man sich vor Zombies schützt. Das Zelt verfügt über ein farblich abgestimmtes Tarnnetz, mehrere Ein- und Ausgänge, sowie über ein unterirdisches Notversteck für brenzlige Situation. Bei näherem Hinsehen entdeckst du auf der Zeltplane einen eingestickten Namen: 'Shenji'",
+      "es": "Un buen escondite. El tipo que construyó esto sabía esconder muy bien su trasero de los zombies: Camuflaje natural, buena visibilidad de los alrededores desde el interior, varias posibilidades de escape y de esconderse bajo la tierra si fuese necesario. El nombre «Shenji» está bordado en la tela."
+    },
+    "explorable": false
+  },
+  "59": {
+    "id": 59,
+    "img": "ruin/pharma.3f0b7226.gif",
+    "name": {
+      "fr": "Pharmacie détruite",
+      "en": "Destroyed Pharmacy",
+      "de": "Zerstörte Apotheke",
+      "es": "Farmatodito destruido"
+    },
+    "desc": {
+      "fr": "Une petite pharmacie de quartier... perdue au milieu du désert. Les <strong>odeurs innommables</strong> font penser à tout sauf à des médicaments.",
+      "en": "A small local pharmacy... serving the erm... middle of the desert apparently. The unmentionable smells make you think of everything except medicines.",
+      "de": "Mitten in der Wüste entdeckst du eine kleine Stadtviertelapotheke – grotesk! Ein unbeschreibbarer Gestank liegt in der Luft und es riecht nach allem möglichen, außer nach Gesundheit.",
+      "es": "Una pequeña farmacia de barrio perdida en medio del desierto. Los <strong>olores innombrables</strong> hacen pensar que aquí no solo habían medicamentos."
+    },
+    "explorable": false
+  },
+  "60": {
+    "id": 60,
+    "img": "ruin/bar.17db6dc1.gif",
+    "name": {
+      "fr": "Bar miteux",
+      "en": "Shady Bar",
+      "de": "ZomBIER Bar",
+      "es": "Bar de mala muerte"
+    },
+    "desc": {
+      "fr": "Ça ne ressemble plus vraiment à un bar, mais la présence d'une enseigne à demi enfouie dans le sable et d'un comptoir ne laisse pas trop planer le doute. La plupart des bouteilles sont <strong>cassées</strong>, mais on doit pouvoir y trouver des choses utiles...",
+      "en": "It doesn't really look like a bar anymore, but the half-buried sign in the sand and the presence of some broken glass don't leave much doubt. Most of the bottles are broken, but you can almost certainly find something useful here...",
+      "de": "Es sieht eigentlich nicht mehr wie eine Bar aus, aber das halb im Sand vergrabene Schild und das Vorhandensein einiger zerbrochener Optiken lassen keinen großen Zweifel aufkommen. Die meisten Flaschen sind zerbrochen, aber Sie können hier mit ziemlicher Sicherheit etwas Nützliches finden...",
+      "es": "Lo único que indica que se trata de un bar es el panel con el logo de una cerveza y la gran cantidad de <strong>botellas rotas</strong>. Algo interesante podrías encontrar aquí..."
+    },
+    "explorable": false
+  },
+  "61": {
+    "id": 61,
+    "img": "ruin/deserted_bunker.eac61ddc.gif",
+    "name": {
+      "fr": "Bunker abandonné",
+      "en": "Abandoned Bunker",
+      "de": "Verlassener Bunker",
+      "es": "Bunker Abandonado"
+    },
+    "desc": {
+      "fr": "Ce bâtiment délabré semble avoir été un bunker. Vous découvrez une entrée dans le bâtiment, une odeur de moisi vous frappe. Vous faites la grimace, mais vous pourriez presque certainement trouver quelque chose d'utile ici...",
+      "en": "Bunkers are old refuges built by the military to contain the pandemic. If the soldiers at the time were still human, they would surely have advised their officers against trying to \"educate\" the first carriers of the virus.",
+      "de": "Diese heruntergekommene Gebäude scheint einmal ein Bunker gewesen zu sein. Du entdeckst einen Einstieg ins Gebäude, modriger Gestank schlägt dir entgegen. Du verziehst das Gesicht, aber hier könntest du mit ziemlicher Sicherheit etwas Nützliches finden...",
+      "es": "Los bunkers son refugios antiguos construidos por los militares para contener la pandemia. Si los soldados en ese momento todavía fueran humanos, seguramente habrían aconsejado a sus oficiales que no trataran de \"educar\" a los primeros portadores del virus."
+    },
+    "explorable": true
+  },
+  "62": {
+    "id": 62,
+    "img": "ruin/deserted_hotel.3a346c02.gif",
+    "name": {
+      "fr": "Hôtel abandonné",
+      "en": "Abandoned Hotel",
+      "de": "Verlassenes Hotel",
+      "es": "Hotel Abandonado"
+    },
+    "desc": {
+      "fr": "Ce bâtiment délabré semble avoir été un hôtel. Vous découvrez une entrée dans le bâtiment, une odeur de moisi vous frappe. Vous faites la grimace, mais vous pourriez presque certainement trouver quelque chose d'utile ici...",
+      "en": "Formerly luxury hotels, which no doubt welcomed some highly privileged guests over the years. However, it didn't take long for these buildings to come under attack from the two hordes, firstly the horde of immigrants from contaminated countries and secondly their putrefied pursuers.",
+      "de": "Diese heruntergekommene Gebäude scheint einmal ein Hotel gewesen zu sein. Du entdeckst einen Einstieg ins Gebäude, modriger Gestank schlägt dir entgegen. Du verziehst das Gesicht, aber hier könntest du mit ziemlicher Sicherheit etwas Nützliches finden...",
+      "es": "Antiguos hoteles de lujo que acogieron a los ricos en alguna época, no mucho después el edificio fue atacado por las hordas de indigentes zombies infectados en las calles."
+    },
+    "explorable": true
+  },
+  "63": {
+    "id": 63,
+    "img": "ruin/deserted_hospital.1e29a492.gif",
+    "name": {
+      "fr": "Hôpital abandonné",
+      "en": "Abandoned Hospital",
+      "de": "Verlassenes Hospital",
+      "es": "Hospital Abandonado"
+    },
+    "desc": {
+      "fr": "Ce bâtiment délabré semble avoir été un hôpital. Vous découvrez une entrée dans le bâtiment, une odeur de moisi vous frappe. Vous faites la grimace, mais vous pourriez presque certainement trouver quelque chose d'utile ici...",
+      "en": "This dilapidated building seems to have once been a hospital. When you discover an entrance into the building, musty stench hits you. You grimace, but here you could almost certainly find something useful...",
+      "de": "Diese heruntergekommene Gebäude scheint einmal ein Hospital gewesen zu sein. Du entdeckst einen Einstieg ins Gebäude, modriger Gestank schlägt dir entgegen. Du verziehst das Gesicht, aber hier könntest du mit ziemlicher Sicherheit etwas Nützliches finden...",
+      "es": "Este edificio en ruinas parece haber sido un hospital. Descubres una entrada al edificio, te golpea un olor a humedad. Haces una mueca, pero es casi seguro que encontrarás algo útil aquí..."
+    },
+    "explorable": true
+  },
+  "64": {
+    "id": 64,
+    "img": "ruin/sports_crow.e8c7ebc8.gif",
+    "name": {
+      "fr": "Le Corbeau Sportif",
+      "en": "Crows'fit Gym",
+      "de": "Die Sportkrähe",
+      "es": "El Cuervo deportivo"
+    },
+    "desc": {
+      "fr": "La tombe des anciens sportifs...",
+      "en": "The grave of former athletes...",
+      "de": "Das Grab der ehemaligen Sportler...",
+      "es": "La tumba de ex-deportistas..."
+    },
+    "explorable": false
+  }
+}
