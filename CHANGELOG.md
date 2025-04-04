@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.5.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.4.1...zen-hordes-v1.5.0) (2025-04-04)
+
+
+### Features
+
+* Import items and buildings data from MH ([1eca796](https://github.com/Zenoo/zen-hordes/commit/1eca796fccaea18808b2ff216c53997f0ed6b2c7))
+* Ingame wiki ([aaabe59](https://github.com/Zenoo/zen-hordes/commit/aaabe59a34319ba1a43e1aeccbfe3cad3c9c749f))
+* Item recipes ([fea39a3](https://github.com/Zenoo/zen-hordes/commit/fea39a306dd7ad66efa50e6177199f7a0a7f22bd))
+* Shaman souls location button ([95b8e79](https://github.com/Zenoo/zen-hordes/commit/95b8e7919647f6ed9739e8d9ba52054cd95fedd3))
+
+
+### Bug Fixes
+
+* Add missing recipes provoking items ([97df697](https://github.com/Zenoo/zen-hordes/commit/97df6974a84431c18b8f43013facce5cd222d738))
+* Laser charge odds ([fecd1cf](https://github.com/Zenoo/zen-hordes/commit/fecd1cf209bf2bb59d3c32ffbebe5509f24ae744))
+* Missing bank blocker max items in translation ([b0dd2bd](https://github.com/Zenoo/zen-hordes/commit/b0dd2bd27564b7ceaaeaba4dd645f3f823c63067))
+* Port on Firefox Android ([b624ef6](https://github.com/Zenoo/zen-hordes/commit/b624ef6195aa47ef0f257af5a6a69e792a35dea9))
+* Refactor update logic for better readability ([efd6c36](https://github.com/Zenoo/zen-hordes/commit/efd6c36d97e693edccfb615cdd4cc29254875171))
+* typos + item highlights ([7993747](https://github.com/Zenoo/zen-hordes/commit/7993747463ef66c0502e75dbc0593da12c0107bc))
+
 ## [1.4.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.4.0...zen-hordes-v1.4.1) (2025-03-16)
 
 
