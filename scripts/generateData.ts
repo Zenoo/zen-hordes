@@ -8,6 +8,8 @@ import {
   JSONRuinPrototypeObject,
 } from "./ApiTypes";
 import { exportActionEffects } from "./exportActionEffects";
+import { overwriteItemData } from "./itemOverwrites";
+import { overwriteRecipeData } from "./recipeOverwrites";
 
 const CONFIG = {
   callApi: false,
@@ -69,7 +71,7 @@ type ItemAction = {
   effects: ItemActionEffect[];
 };
 
-type Item = {
+export type Item = {
   id: string;
   numericalId: number;
   name: Record<Lang, string>;
@@ -1018,6 +1020,8 @@ const generateItems = async () => {
     }
   });
 
+  overwriteItemData(items);
+
   const itemIdEnum = `export enum ItemId {
   ${Object.values(items)
     .map((item) => `${sanitizeItemId(item)} = "${item.id}"`)
@@ -1364,7 +1368,7 @@ ${ruinsObject}`;
   console.log("ruins.ts file has been generated.");
 };
 
-enum RecipeType {
+export enum RecipeType {
   Workshop = 1,
   WorkshopShaman = 2,
   WorkshopTech = 3,
@@ -1388,7 +1392,7 @@ type RecipeItem = {
   odds?: number;
 };
 
-type Recipe = {
+export type Recipe = {
   type: RecipeType;
   in: RecipeItem[];
   out: RecipeItem[];
@@ -1444,6 +1448,8 @@ const generateRecipes = (items: Record<number, Item>) => {
       out: outputs,
     });
   });
+
+  overwriteRecipeData(recipes);
 
   const types = `import { ItemId } from './items';
 

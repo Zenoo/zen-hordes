@@ -26,7 +26,7 @@ export const store = {
   "last-bank-item-taken": Date.now(),
   "last-water-ration-taken": new Date(0).getTime(),
   // Game state
-  "hordes-lang": document.documentElement.lang as Lang,
+  "hordes-lang": (document.documentElement.getAttribute('data-language') ?? Lang.EN) as Lang,
   "town-id": 0,
   // Updater settings
   "user-key": "",

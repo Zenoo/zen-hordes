@@ -855,5 +855,17 @@ export const recipes: Recipe[] = [
     out: [
       { item: ItemId.INFECT_POISON }
     ]
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.LPOINT },
+      { item: ItemId.PILE }
+    ],
+    out: [
+      { item: ItemId.LPOINT2, odds: 1 },
+      { item: ItemId.LPOINT3, odds: 1 },
+      { item: ItemId.LPOINT4, odds: 1 }
+    ]
   }
 ];

@@ -10610,16 +10610,7 @@ export const items: Record<ItemId, Item> = {
     heavy: false,
     watchPoints: 0,
     actions: [
-      {
-        type: ItemActionType.Use,
-        conditions: [],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "lpoint4_#00"
-          }
-        ]
-      }
+      
     ]
   },
   [ItemId.SCOPE]: {
