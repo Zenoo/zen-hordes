@@ -22,7 +22,7 @@ enum Lang {
   DE = "de",
 }
 
-enum ItemActionType {
+export enum ItemActionType {
   Eat,
   Drink,
   Open,
@@ -35,7 +35,7 @@ enum ItemActionCondition {
   Technician,
 }
 
-enum ItemActionEffectType {
+export enum ItemActionEffectType {
   AP,
   SP,
   MP,
@@ -62,6 +62,7 @@ enum ItemActionEffectType {
 type ItemActionEffect = {
   type: ItemActionEffectType;
   value?: number | string;
+  count?: number | string;
   odds?: number;
 };
 
@@ -250,6 +251,9 @@ const generateItems = async () => {
 
     if (action?.meta.includes("profession_tech")) {
       conditions.push(ItemActionCondition.Technician);
+    }
+    if (action?.meta.includes("role_ghoul")) {
+      conditions.push(ItemActionCondition.Ghoul);
     }
 
     return conditions;
@@ -513,9 +517,15 @@ const generateItems = async () => {
             break;
           }
 
+          // Ignore some statuses
+          const effectData = String(effectsData[effectName].data).slice(1, -1);
+          if (["tg_teddy", "tg_betadrug", "tg_sbook"].includes(effectData)) {
+            break;
+          }
+
           effects.push({
             type: ItemActionEffectType.AddStatus,
-            value: String(effectsData[effectName].data).slice(1, -1),
+            value: effectData,
             ...odds,
           });
           break;
@@ -1093,7 +1103,10 @@ const generateItems = async () => {
                         : effect.value
                     }`
                   : ""
-              }${effect.odds ? `,\n            odds: ${effect.odds}` : ""}
+              }${effect.count ? `,\n            count: ${typeof effect.count === "string" ? `"${effect.count}"` : effect.count}` : ""
+              }${
+                effect.odds ? `,\n            odds: ${effect.odds}` : ""
+              }
           }`
             )
             .join(",\n          ")}
@@ -1271,8 +1284,7 @@ const generateRuins = (items: Record<number, Item>) => {
       throw new Error(`Building with id ${ruinData.id} not found`);
     }
 
-    ruin.icon =
-      /ruin\/(.+)\..+\.gif/.exec(ruinData.img ?? "")?.[1] ?? "";
+    ruin.icon = /ruin\/(.+)\..+\.gif/.exec(ruinData.img ?? "")?.[1] ?? "";
     if (typeof ruinData.explorable === "boolean") {
       ruin.explorable = ruinData.explorable;
     }

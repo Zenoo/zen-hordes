@@ -91,6 +91,7 @@ declare global {
   type ItemActionEffect = {
     type: ItemActionEffectType;
     value?: number | string;
+    count?: number | string;
     odds?: number;
   };
 

@@ -2,13 +2,81 @@ import { Item, ItemId, items } from "../data/items";
 import { Recipe, recipes } from "../data/recipes";
 import { ASSETS } from "../utils/constants";
 import { store } from "./store";
+import { t } from "./translate";
+
+const T: Translations = {
+  en: {
+    [`action-type.${ItemActionType.Eat}`]: "Eat",
+    [`action-type.${ItemActionType.Drink}`]: "Drink",
+    [`action-type.${ItemActionType.Open}`]: "Open",
+    [`recipe-type.${RecipeType.ManualAnywhere}`]: "Assemble",
+    [`recipe-type.${RecipeType.ManualInside}`]: "Assemble (inside)",
+    [`recipe-type.${RecipeType.ManualOutside}`]: "Assemble (outside)",
+    [`recipe-type.${RecipeType.Workshop}`]: "Workshop",
+    [`recipe-type.${RecipeType.WorkshopShaman}`]: "Workshop (shaman)",
+    [`recipe-type.${RecipeType.WorkshopTech}`]: "Workshop (technician)",
+  },
+  fr: {
+    [`action-type.${ItemActionType.Eat}`]: "Manger",
+    [`action-type.${ItemActionType.Drink}`]: "Boire",
+    [`action-type.${ItemActionType.Open}`]: "Ouvrir",
+    [`recipe-type.${RecipeType.ManualAnywhere}`]: "Assembler",
+    [`recipe-type.${RecipeType.ManualInside}`]: "Assembler (intérieur)",
+    [`recipe-type.${RecipeType.ManualOutside}`]: "Assembler (extérieur)",
+    [`recipe-type.${RecipeType.Workshop}`]: "Atelier",
+    [`recipe-type.${RecipeType.WorkshopShaman}`]: "Atelier (chaman)",
+    [`recipe-type.${RecipeType.WorkshopTech}`]: "Atelier (technicien)",
+  },
+  es: {
+    [`action-type.${ItemActionType.Eat}`]: "Comer",
+    [`action-type.${ItemActionType.Drink}`]: "Beber",
+    [`action-type.${ItemActionType.Open}`]: "Abrir",
+    [`recipe-type.${RecipeType.ManualAnywhere}`]: "Ensamblar",
+    [`recipe-type.${RecipeType.ManualInside}`]: "Ensamblar (interior)",
+    [`recipe-type.${RecipeType.ManualOutside}`]: "Ensamblar (exterior)",
+    [`recipe-type.${RecipeType.Workshop}`]: "Taller",
+    [`recipe-type.${RecipeType.WorkshopShaman}`]: "Taller (chamán)",
+    [`recipe-type.${RecipeType.WorkshopTech}`]: "Taller (técnico)",
+  },
+  de: {
+    [`action-type.${ItemActionType.Eat}`]: "Essen",
+    [`action-type.${ItemActionType.Drink}`]: "Trinken",
+    [`action-type.${ItemActionType.Open}`]: "Öffnen",
+    [`recipe-type.${RecipeType.ManualAnywhere}`]: "Zusammenbauen",
+    [`recipe-type.${RecipeType.ManualInside}`]: "Zusammenbauen (innen)",
+    [`recipe-type.${RecipeType.ManualOutside}`]: "Zusammenbauen (außen)",
+    [`recipe-type.${RecipeType.Workshop}`]: "Werkstatt",
+    [`recipe-type.${RecipeType.WorkshopShaman}`]: "Werkstatt (Schamane)",
+    [`recipe-type.${RecipeType.WorkshopTech}`]: "Werkstatt (Techniker)",
+  },
+};
+
+const getStatusIcon = (status: string) => {
+  switch (status) {
+    case "tg_meta_wound":
+      return "wound1";
+    default:
+      return status;
+  }
+};
 
 const findItem = (node: HTMLElement) => {
+  if (
+    node.classList.contains("zen-wiki-item") &&
+    node.getAttribute("data-type") === "item"
+  ) {
+    const itemId = node.getAttribute("data-id") as ItemId;
+    return items[itemId];
+  }
+
   return Object.values(items).find((item) => {
     return (
       item.name[store["hordes-lang"]] ===
-      node.querySelector("h1")?.textContent?.trim() &&
-      (/item\/(.+)\..+\.gif/.exec((node.querySelector("h1 img") as HTMLImageElement | undefined)?.src ?? '')?.[1] ?? "") === item.icon
+        node.querySelector("h1")?.textContent?.trim() &&
+      (/item\/(.+)\..+\.gif/.exec(
+        (node.querySelector("h1 img") as HTMLImageElement | undefined)?.src ??
+          ""
+      )?.[1] ?? "") === item.icon
     );
   });
 };
@@ -71,6 +139,8 @@ const getActionTypeIcon = (type: ItemActionType) => {
   switch (type) {
     case ItemActionType.Eat:
       return "icons/actions/eat.gif";
+    case ItemActionType.Drink:
+      return "icons/actions/drink.gif";
     case ItemActionType.Open:
       return "icons/item/item_can_opener.gif";
     default:
@@ -84,6 +154,7 @@ type DisplayedIcon = {
   amount?: number | string;
   text?: string;
   crossed?: boolean;
+  classList?: string[];
 };
 
 const convertEffectToDisplayedItem = (effect: ItemActionEffect) => {
@@ -153,8 +224,10 @@ const convertEffectToDisplayedItem = (effect: ItemActionEffect) => {
       break;
     }
     case ItemActionEffectType.GetPicto: {
-      displayedIcon.icon = `picto/${effect.value}.gif`;
-      displayedIcon.amount = 1;
+      displayedIcon.icon = `pictos/${effect.value
+        ?.toString()
+        .replace(/_#\d+/g, "")}.gif`;
+      displayedIcon.classList = ["picto"];
       break;
     }
     case ItemActionEffectType.AddWaterToWell: {
@@ -201,7 +274,13 @@ const convertEffectToDisplayedItem = (effect: ItemActionEffect) => {
       break;
     }
     case ItemActionEffectType.AddStatus: {
-      displayedIcon.icon = `status/status_${effect.value}.gif`;
+      displayedIcon.icon = `status/status_${getStatusIcon(
+        effect.value?.toString() ?? ""
+      )}.gif`;
+
+      if (effect.count) {
+        displayedIcon.amount = effect.count.toString().split("-")[0];
+      }
       break;
     }
     case ItemActionEffectType.Death: {
@@ -242,14 +321,16 @@ const createLine = (
     }));
   } else {
     // Item action
-    inputIcons.push(...data.conditions.map((condition) => {
-      switch (condition) {
-        case ItemActionCondition.Technician:
-          return { icon: "professions/tech.gif" };
-        default:
-          return { icon: "icons/item/item_broken.gif" };
-      }
-    }));
+    inputIcons.push(
+      ...data.conditions.map((condition) => {
+        switch (condition) {
+          case ItemActionCondition.Technician:
+            return { icon: "professions/tech.gif" };
+          default:
+            return { icon: "icons/item/item_broken.gif" };
+        }
+      })
+    );
 
     inputIcons.push({
       id: items[item.id].id,
@@ -265,6 +346,10 @@ const createLine = (
     inputImg.alt = inputIcon.id
       ? items[inputIcon.id].name[store["hordes-lang"]]
       : inputIcon.icon;
+    if (inputIcon.id) {
+      inputImg.setAttribute('data-id', inputIcon.id);
+      inputImg.setAttribute('title', items[inputIcon.id].name[store["hordes-lang"]]);
+    }
 
     // Highlight the item if it's the current item
     if (inputIcon.id === currentItemId) {
@@ -297,12 +382,15 @@ const createLine = (
   if ("in" in data) {
     // Recipe
     actionIcon = getRecipeTypeIcon(data.type);
+    icon.alt = t(T, `recipe-type.${data.type}`);
+    icon.title = t(T, `recipe-type.${data.type}`);
   } else {
     // Item action
     actionIcon = getActionTypeIcon(data.type);
+    icon.alt = t(T, `action-type.${data.type}`);
+    icon.title = t(T, `action-type.${data.type}`);
   }
   icon.src = `${ASSETS}/${actionIcon}`;
-  icon.alt = "→";
   actionCell.append(icon);
 
   // Outputs
@@ -340,6 +428,10 @@ const createLine = (
     output.alt = outputIcon.id
       ? items[outputIcon.id].name[store["hordes-lang"]]
       : outputIcon.icon;
+    if (outputIcon.id) {
+      output.setAttribute('data-id', outputIcon.id);
+      output.setAttribute('title', items[outputIcon.id].name[store["hordes-lang"]]);
+    }
 
     // Highlight the ingredient if it's the current item
     if (outputIcon.id === currentItemId) {
@@ -358,6 +450,8 @@ const createLine = (
       wrapper.classList.add("crossed");
     }
 
+    wrapper.classList.add(...(outputIcon.classList ?? []));
+
     wrapper.append(output);
     outputCell.append(wrapper);
   });
@@ -370,14 +464,22 @@ const createLine = (
 export const insertBetterTooltips = (node: HTMLElement) => {
   if (!store["better-tooltips"]) return;
 
-  if (node.classList.contains("tooltip") && node.classList.contains("item")) {
+  if (
+    node.classList.contains("zen-wiki-item") ||
+    (node.classList.contains("tooltip") &&
+      node.classList.contains("item") &&
+      node.querySelector("h1 img"))
+  ) {
     const processed = node.classList.contains("zen-better-tooltip");
     if (processed) return;
 
     node.classList.add("zen-better-tooltip");
 
     const item = findItem(node);
-    if (!item) return;
+    if (!item) {
+      console.error("Item not found in tooltip:", node);
+      return;
+    }
 
     // Decoration
     if (item.decoration) {

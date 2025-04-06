@@ -5,12 +5,13 @@ import { displayUpdateButton } from "./externalSiteUpdater";
 import { offHover } from "./hooks/offHover";
 import { onClick } from "./hooks/onClick";
 import { onHover } from "./hooks/onHover";
+import { onMiddleClick } from "./hooks/onMiddleClick";
 import { onMount } from "./hooks/onMount";
 import { displayMapPreview, insertMapPreview, openBBHCityPage, removeMapPreview } from "./mapPreview";
 import { listenToBackgroundMessages } from "./messageListener";
 import { displayShamanSoulsButton } from "./shamanSoulsButton";
 import { initStore } from "./store";
-import { insertWiki, displayWikiButton } from "./wiki";
+import { insertWiki, openItemInWiki } from "./wiki";
 
 // Initialize the store
 await initStore();
@@ -41,7 +42,6 @@ onMount((node) => {
   displayUpdateButton(node);
   insertBetterTooltips(node);
   displayShamanSoulsButton(node);
-  displayWikiButton(node);
 });
 
 // Actions that need to be performed on hover
@@ -60,4 +60,10 @@ offHover((_event) => {
 // should be handled here
 onClick((node) => {
   openBBHCityPage(node);
+});
+
+// Actions that need to be performed on a middle click
+// should be handled here
+onMiddleClick((node, event) => {
+  openItemInWiki(node, event);
 });

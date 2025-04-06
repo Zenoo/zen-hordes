@@ -420,7 +420,13 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.RemoveStatus,
             value: "thirst1"
-          },
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [ItemActionCondition.Ghoul],
+        effects: [
           {
             type: ItemActionEffectType.AddStatus,
             value: "tg_meta_wound"
@@ -2326,6 +2332,20 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.Ghoulify,
             odds: 5
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Eat,
+        conditions: [ItemActionCondition.Ghoul],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_cannib_#00"
           },
           {
             type: ItemActionEffectType.ReduceGhoulHunger,
@@ -4966,6 +4986,24 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.Ghoulify,
             odds: 100
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Eat,
+        conditions: [ItemActionCondition.Ghoul],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_cannib_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "bone_#00"
           },
           {
             type: ItemActionEffectType.ReduceGhoulHunger,
@@ -5436,10 +5474,6 @@ export const items: Record<ItemId, Item> = {
         type: ItemActionType.Use,
         conditions: [],
         effects: [
-          {
-            type: ItemActionEffectType.AddStatus,
-            value: "tg_teddy"
-          },
           {
             type: ItemActionEffectType.RemoveStatus,
             value: "terror",
@@ -7398,10 +7432,20 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.RemoveStatus,
             value: "thirst1"
-          },
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [ItemActionCondition.Ghoul],
+        effects: [
           {
             type: ItemActionEffectType.AddStatus,
             value: "tg_meta_wound"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_can_empty_#00"
           }
         ]
       }
@@ -7452,10 +7496,20 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.RemoveStatus,
             value: "thirst1"
-          },
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [ItemActionCondition.Ghoul],
+        effects: [
           {
             type: ItemActionEffectType.AddStatus,
             value: "tg_meta_wound"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_can_1_#00"
           }
         ]
       }
@@ -7496,10 +7550,20 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.RemoveStatus,
             value: "thirst1"
-          },
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [ItemActionCondition.Ghoul],
+        effects: [
           {
             type: ItemActionEffectType.AddStatus,
             value: "tg_meta_wound"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_can_2_#00"
           }
         ]
       }
@@ -7589,10 +7653,6 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.AP,
             value: 26
-          },
-          {
-            type: ItemActionEffectType.AddStatus,
-            value: "tg_betadrug"
           }
         ]
       }
@@ -7755,6 +7815,16 @@ export const items: Record<ItemId, Item> = {
             odds: 4
           }
         ]
+      },
+      {
+        type: ItemActionType.Eat,
+        conditions: [ItemActionCondition.Ghoul],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
       }
     ]
   },
@@ -7835,7 +7905,13 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.RemoveStatus,
             value: "thirst1"
-          },
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [ItemActionCondition.Ghoul],
+        effects: [
           {
             type: ItemActionEffectType.AddStatus,
             value: "tg_meta_wound"
@@ -8255,6 +8331,24 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.Ghoulify,
             odds: 100
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Eat,
+        conditions: [ItemActionCondition.Ghoul],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_cannib_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "cadaver_remains_#00"
           },
           {
             type: ItemActionEffectType.ReduceGhoulHunger,
@@ -11496,12 +11590,44 @@ export const items: Record<ItemId, Item> = {
     watchPoints: 0,
     actions: [
       {
-        type: ItemActionType.Use,
+        type: ItemActionType.Drink,
         conditions: [],
         effects: [
           {
             type: ItemActionEffectType.AddStatus,
-            value: "tg_sbook"
+            value: "hasdrunk",
+            count: "1-4",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "hasdrunk",
+            count: "5-9",
+            odds: 85
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "hasdrunk",
+            count: "10-12",
+            odds: 80
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "hasdrunk",
+            count: "13-14",
+            odds: 70
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "hasdrunk",
+            count: "15-19",
+            odds: 60
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "hasdrunk",
+            count: "20-99",
+            odds: 50
           }
         ]
       },
@@ -11511,7 +11637,39 @@ export const items: Record<ItemId, Item> = {
         effects: [
           {
             type: ItemActionEffectType.AddStatus,
-            value: "tg_sbook"
+            value: "haseaten",
+            count: "1-4",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "haseaten",
+            count: "5-9",
+            odds: 85
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "haseaten",
+            count: "10-12",
+            odds: 80
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "haseaten",
+            count: "13-14",
+            odds: 70
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "haseaten",
+            count: "15-19",
+            odds: 60
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "haseaten",
+            count: "20-99",
+            odds: 50
           }
         ]
       }
@@ -11835,6 +11993,21 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.RemoveStatus,
             value: "thirst1"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [ItemActionCondition.Ghoul],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_meta_wound"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_shaman_immune",
+            odds: 98
           }
         ]
       }

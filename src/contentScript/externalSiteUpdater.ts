@@ -270,7 +270,11 @@ export const displayUpdateButton = (node: HTMLElement) => {
     }
 
     // Hover tooltip
-    tooltip(button, t(T, "updateExternalApps"));
+    tooltip({
+      target: button,
+      content: t(T, "updateExternalApps"),
+      classList: ["zen-update-tooltip"],
+    });
 
     // Click event
     button.addEventListener("click", () => {
