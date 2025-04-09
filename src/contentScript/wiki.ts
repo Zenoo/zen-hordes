@@ -48,6 +48,7 @@ const T: Translations = {
     ruins: "Ruins",
     search: "Search",
     all: "All items",
+    nothingFound: "Nothing matches your search",
     "item.category.8": "Heavy items",
     "item.category.7": "Defense items",
     "item.category.9": "Guard weapons",
@@ -87,6 +88,7 @@ const T: Translations = {
     ruins: "Bâtiments",
     search: "Rechercher",
     all: "Tous les objets",
+    nothingFound: "Rien ne correspond à votre recherche",
     "item.category.8": "Objets lourds",
     "item.category.7": "Objets de défense",
     "item.category.9": "Armes de garde",
@@ -126,6 +128,7 @@ const T: Translations = {
     ruins: "Ruinen",
     search: "Suche",
     all: "Alle Gegenstände",
+    nothingFound: "Nichts gefunden",
     "item.category.8": "Schwere Gegenstände",
     "item.category.7": "Verteidigungsgegenstände",
     "item.category.9": "Wachwaffen",
@@ -165,6 +168,7 @@ const T: Translations = {
     ruins: "Ruinas",
     search: "Buscar",
     all: "Todos los objetos",
+    nothingFound: "Nada coincide con tu búsqueda",
     "item.category.8": "Objetos pesados",
     "item.category.7": "Objetos de defensa",
     "item.category.9": "Armas de guardia",
@@ -313,6 +317,7 @@ const updateWiki = (state: Partial<WikiState>, resetSearch?: boolean) => {
       : ruins;
 
   // Filter items
+  let visibleCount = 0;
   Object.values(targets).forEach((target: Item | Building | Ruin) => {
     const li = tab.querySelector(`li[data-id="${target.id}"]`);
 
@@ -341,9 +346,14 @@ const updateWiki = (state: Partial<WikiState>, resetSearch?: boolean) => {
     if (
       !filteredOut &&
       (!search ||
-        target.name[store["hordes-lang"]].toLowerCase().includes(search))
+        target.name[store["hordes-lang"]]
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/\p{Diacritic}/gu, "")
+          .includes(search.normalize("NFD").replace(/\p{Diacritic}/gu, "")))
     ) {
       visible = true;
+      visibleCount++;
     } else {
       visible = false;
     }
@@ -360,6 +370,14 @@ const updateWiki = (state: Partial<WikiState>, resetSearch?: boolean) => {
       li.classList.remove("filtered-out");
     }
   });
+
+  // Show empty item if no items are visible
+  const emptyItem = tab.querySelector(".zen-wiki-item.empty");
+  if (visibleCount === 0) {
+    emptyItem?.classList.add("visible");
+  } else {
+    emptyItem?.classList.remove("visible");
+  }
 };
 
 /**
@@ -423,8 +441,8 @@ export const insertWiki = () => {
   backdrop.appendChild(wiki);
 
   backdrop.addEventListener("click", (event) => {
-    // Close on backdrop click
-    if (event.target === backdrop) {
+    // Close on backdrop click (don't close if search is focused)
+    if (event.target === backdrop && search !== document.activeElement) {
       closeWiki(backdrop);
       return;
     }
@@ -586,74 +604,89 @@ export const insertWiki = () => {
         itemList.classList.add("zen-wiki-item-list");
         tab.appendChild(itemList);
 
-        Object.values(items).forEach((item) => {
-          const li = document.createElement("li");
-          li.classList.add("zen-wiki-item", "visible");
-          li.setAttribute("data-id", item.id);
-          li.setAttribute("data-type", "item");
+        // Empty item
+        const emptyItem = document.createElement("li");
+        emptyItem.classList.add("zen-wiki-item", "empty");
 
-          const title = document.createElement("h4");
-          li.appendChild(title);
+        const emptyText = document.createElement("p");
+        emptyText.textContent = t(T, "nothingFound");
+        emptyItem.appendChild(emptyText);
+        itemList.appendChild(emptyItem);
 
-          const icon = document.createElement("img");
-          icon.src = `${ASSETS}/icons/item/${item.icon}.gif`;
-          icon.alt = item.name[store["hordes-lang"]];
-          title.appendChild(icon);
+        Object.values(items)
+          .sort((a, b) =>
+            a.name[store["hordes-lang"]].localeCompare(
+              b.name[store["hordes-lang"]]
+            )
+          )
+          .forEach((item) => {
+            const li = document.createElement("li");
+            li.classList.add("zen-wiki-item", "visible");
+            li.setAttribute("data-id", item.id);
+            li.setAttribute("data-type", "item");
 
-          const name = document.createElement("span");
-          name.textContent = item.name[store["hordes-lang"]];
-          title.appendChild(name);
+            const title = document.createElement("h4");
+            li.appendChild(title);
 
-          const description = document.createElement("p");
-          setTextContent(description, item.description[store["hordes-lang"]]);
-          li.appendChild(description);
+            const icon = document.createElement("img");
+            icon.src = `${ASSETS}/icons/item/${item.icon}.gif`;
+            icon.alt = item.name[store["hordes-lang"]];
+            title.appendChild(icon);
 
-          // Item tags
-          if (item.heavy) {
-            const tag = document.createElement("div");
-            tag.classList.add("item-tag", "item-tag-heavy");
-            tag.textContent = t(T, "item.tag.heavy");
-            li.appendChild(tag);
-          }
+            const name = document.createElement("span");
+            name.textContent = item.name[store["hordes-lang"]];
+            title.appendChild(name);
 
-          if (item.decoration) {
-            const tag = document.createElement("div");
-            tag.classList.add("item-tag", "item-tag-deco");
-            tag.textContent = t(T, "item.tag.deco");
-            li.appendChild(tag);
-          }
+            const description = document.createElement("p");
+            setTextContent(description, item.description[store["hordes-lang"]]);
+            li.appendChild(description);
 
-          if (item.categories.includes(ItemCategory.Defences)) {
-            const tag = document.createElement("div");
-            tag.classList.add("item-tag", "item-tag-defense");
-            tag.textContent = t(T, "item.tag.defense");
-            li.appendChild(tag);
-          }
+            // Item tags
+            if (item.heavy) {
+              const tag = document.createElement("div");
+              tag.classList.add("item-tag", "item-tag-heavy");
+              tag.textContent = t(T, "item.tag.heavy");
+              li.appendChild(tag);
+            }
 
-          if (item.categories.includes(ItemCategory.Armoury)) {
-            const tag = document.createElement("div");
-            tag.classList.add("item-tag", "item-tag-weapon");
-            tag.textContent = t(T, "item.tag.weapon");
-            li.appendChild(tag);
-          }
+            if (item.decoration) {
+              const tag = document.createElement("div");
+              tag.classList.add("item-tag", "item-tag-deco");
+              tag.textContent = t(T, "item.tag.deco");
+              li.appendChild(tag);
+            }
 
-          if (item.categories.includes(ItemCategory.GuardWeapon)) {
-            const tag = document.createElement("div");
-            tag.classList.add("item-tag", "item-tag-weapon");
-            tag.textContent = t(T, "item.tag.guard-weapon");
+            if (item.categories.includes(ItemCategory.Defences)) {
+              const tag = document.createElement("div");
+              tag.classList.add("item-tag", "item-tag-defense");
+              tag.textContent = t(T, "item.tag.defense");
+              li.appendChild(tag);
+            }
 
-            const value = document.createElement("em");
-            value.textContent = t(T, "item.tag.guard-weapon.points", {
-              value: item.watchPoints,
-            });
-            tag.appendChild(value);
-            li.appendChild(tag);
-          }
+            if (item.categories.includes(ItemCategory.Armoury)) {
+              const tag = document.createElement("div");
+              tag.classList.add("item-tag", "item-tag-weapon");
+              tag.textContent = t(T, "item.tag.weapon");
+              li.appendChild(tag);
+            }
 
-          insertBetterTooltips(li);
+            if (item.categories.includes(ItemCategory.GuardWeapon)) {
+              const tag = document.createElement("div");
+              tag.classList.add("item-tag", "item-tag-weapon");
+              tag.textContent = t(T, "item.tag.guard-weapon");
 
-          itemList.appendChild(li);
-        });
+              const value = document.createElement("em");
+              value.textContent = t(T, "item.tag.guard-weapon.points", {
+                value: item.watchPoints,
+              });
+              tag.appendChild(value);
+              li.appendChild(tag);
+            }
+
+            insertBetterTooltips(li);
+
+            itemList.appendChild(li);
+          });
         break;
       }
       case "buildings": {
@@ -756,19 +789,20 @@ export const openItemInWiki = (node: HTMLElement, event: MouseEvent) => {
   backdrop.classList.add("visible");
 
   // Open items tab
-  updateWiki({
-    tab: "items",
-    category: "all",
-  }, true);
+  updateWiki(
+    {
+      tab: "items",
+      category: "all",
+    },
+    true
+  );
 
   // Find item
   const item = Object.values(items).find((item) => {
     return (
-      item.name[store["hordes-lang"]] ===
-        node.getAttribute('alt')?.trim() &&
-      (/item\/(.+)\..+\.gif/.exec(
-        node.getAttribute('src') ?? ""
-      )?.[1] ?? "") === item.icon
+      item.name[store["hordes-lang"]] === node.getAttribute("alt")?.trim() &&
+      (/item\/(.+)\..+\.gif/.exec(node.getAttribute("src") ?? "")?.[1] ??
+        "") === item.icon
     );
   });
 
@@ -791,5 +825,4 @@ export const openItemInWiki = (node: HTMLElement, event: MouseEvent) => {
     top: itemElement.offsetTop - scrollable.offsetTop,
     behavior: "auto",
   });
-
 };

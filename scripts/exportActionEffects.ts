@@ -119,6 +119,10 @@ export const exportActionEffects = async () => {
     },
     home_kitchen_success: { type: "spawn", data: "dish_tasty_#00" },
     home_kitchen_failure: { type: "spawn", data: "dish_#00" },
+    // Clones
+    drug_addict_no_msg: effectsList["drug_addict"] ? { ...effectsList["drug_addict"] } : undefined,
+    infect: effectsList["infect_no_msg"] ? { ...effectsList["infect_no_msg"] } : undefined,
+    kill_1_zombie: effectsList["kill_1_zombie_s"] ? { ...effectsList["kill_1_zombie_s"] } : undefined,
   };
 
   // Spawn effects

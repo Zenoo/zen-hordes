@@ -62,6 +62,8 @@ declare global {
     Ghoul,
     BrokenItem,
     Technician,
+    BoxOpener,
+    OnARuin,
   }
 
   const enum ItemActionEffectType {
@@ -86,6 +88,7 @@ declare global {
     RemoveStatus,
     AddStatus,
     Death,
+    EP,
   }
 
   type ItemActionEffect = {

@@ -867,13 +867,6 @@
       "'r_drug_#00'"
     ]
   },
-  "drug_addict_no_msg": {
-    "type": "addsStatus",
-    "data": [
-      "'addict'",
-      "'r_drug_#00'"
-    ]
-  },
   "kill_1_zombie_s": {
     "type": "kills",
     "data": 1
@@ -954,6 +947,14 @@
   "home_kitchen_failure": {
     "type": "spawn",
     "data": "dish_#00"
+  },
+  "infect": {
+    "type": "addsStatus",
+    "data": "'infection'"
+  },
+  "kill_1_zombie": {
+    "type": "kills",
+    "data": 1
   },
   "spawn_doggy": {
     "type": "spawn",

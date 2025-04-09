@@ -16,5 +16,31 @@ export const overwriteRecipeData = (recipes: Recipe[]) => {
       {item: "lpoint3_#00", odds: 1},
       {item: "lpoint4_#00", odds: 1},
     ],
-  })
+  });
+
+  // Add soccer recipe
+  recipes.push({
+    type: RecipeType.ManualAnywhere,
+    in: [
+      {item: "soccer_part_#00"},
+      {item: "rustine_#00"},
+    ],
+    out: [
+      {item: "soccer_#00"},
+    ],
+  });
+
+  // Add bike recipe
+  recipes.push({
+    type: RecipeType.ManualAnywhere,
+    in: [
+      {item: "rustine_#00"},
+      {item: "chain_#00"},
+      {item: "metal_#00"},
+      {item: "bike_part_#00"},
+    ],
+    out: [
+      {item: "bike_#00"},
+    ],
+  });
 };

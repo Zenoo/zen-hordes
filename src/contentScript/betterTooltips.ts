@@ -9,45 +9,85 @@ const T: Translations = {
     [`action-type.${ItemActionType.Eat}`]: "Eat",
     [`action-type.${ItemActionType.Drink}`]: "Drink",
     [`action-type.${ItemActionType.Open}`]: "Open",
+    [`action-type.${ItemActionType.Use}`]: "Use",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Assemble",
     [`recipe-type.${RecipeType.ManualInside}`]: "Assemble (inside)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Assemble (outside)",
     [`recipe-type.${RecipeType.Workshop}`]: "Workshop",
     [`recipe-type.${RecipeType.WorkshopShaman}`]: "Workshop (shaman)",
     [`recipe-type.${RecipeType.WorkshopTech}`]: "Workshop (technician)",
+    [`event.${GameEvent.StPatrick}`]: "St. Patrick's Day",
+    [`event.${GameEvent.AprilFools}`]: "April Fool's Day",
+    [`event.${GameEvent.Easter}`]: "Easter",
+    [`event.${GameEvent.Halloween}`]: "Halloween",
+    [`event.${GameEvent.Christmas}`]: "Christmas",
+    [`event.${GameEvent.NewYear}`]: "New Year",
+    [`condition.${ItemActionCondition.Ghoul}`]: "Ghoul",
+    [`condition.${ItemActionCondition.Technician}`]: "Technician",
+    [`condition.${ItemActionCondition.OnARuin}`]: "On a ruin",
   },
   fr: {
     [`action-type.${ItemActionType.Eat}`]: "Manger",
     [`action-type.${ItemActionType.Drink}`]: "Boire",
     [`action-type.${ItemActionType.Open}`]: "Ouvrir",
+    [`action-type.${ItemActionType.Use}`]: "Utiliser",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Assembler",
     [`recipe-type.${RecipeType.ManualInside}`]: "Assembler (intérieur)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Assembler (extérieur)",
     [`recipe-type.${RecipeType.Workshop}`]: "Atelier",
     [`recipe-type.${RecipeType.WorkshopShaman}`]: "Atelier (chaman)",
     [`recipe-type.${RecipeType.WorkshopTech}`]: "Atelier (technicien)",
+    [`event.${GameEvent.StPatrick}`]: "Saint Patrick",
+    [`event.${GameEvent.AprilFools}`]: "Poisson d'Avril",
+    [`event.${GameEvent.Easter}`]: "Pâques",
+    [`event.${GameEvent.Halloween}`]: "Halloween",
+    [`event.${GameEvent.Christmas}`]: "Noël",
+    [`event.${GameEvent.NewYear}`]: "Nouvel An",
+    [`condition.${ItemActionCondition.Ghoul}`]: "Ghoul",
+    [`condition.${ItemActionCondition.Technician}`]: "Technicien",
+    [`condition.${ItemActionCondition.OnARuin}`]: "Sur un bâtiment",
   },
   es: {
     [`action-type.${ItemActionType.Eat}`]: "Comer",
     [`action-type.${ItemActionType.Drink}`]: "Beber",
     [`action-type.${ItemActionType.Open}`]: "Abrir",
+    [`action-type.${ItemActionType.Use}`]: "Usar",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Ensamblar",
     [`recipe-type.${RecipeType.ManualInside}`]: "Ensamblar (interior)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Ensamblar (exterior)",
     [`recipe-type.${RecipeType.Workshop}`]: "Taller",
     [`recipe-type.${RecipeType.WorkshopShaman}`]: "Taller (chamán)",
     [`recipe-type.${RecipeType.WorkshopTech}`]: "Taller (técnico)",
+    [`event.${GameEvent.StPatrick}`]: "Día de San Patricio",
+    [`event.${GameEvent.AprilFools}`]: "Día de los Inocentes",
+    [`event.${GameEvent.Easter}`]: "Pascua",
+    [`event.${GameEvent.Halloween}`]: "Halloween",
+    [`event.${GameEvent.Christmas}`]: "Navidad",
+    [`event.${GameEvent.NewYear}`]: "Año Nuevo",
+    [`condition.${ItemActionCondition.Ghoul}`]: "Ghoul",
+    [`condition.${ItemActionCondition.Technician}`]: "Técnico",
+    [`condition.${ItemActionCondition.OnARuin}`]: "En un edificio",
   },
   de: {
     [`action-type.${ItemActionType.Eat}`]: "Essen",
     [`action-type.${ItemActionType.Drink}`]: "Trinken",
     [`action-type.${ItemActionType.Open}`]: "Öffnen",
+    [`action-type.${ItemActionType.Use}`]: "Benutzen",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Zusammenbauen",
     [`recipe-type.${RecipeType.ManualInside}`]: "Zusammenbauen (innen)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Zusammenbauen (außen)",
     [`recipe-type.${RecipeType.Workshop}`]: "Werkstatt",
     [`recipe-type.${RecipeType.WorkshopShaman}`]: "Werkstatt (Schamane)",
     [`recipe-type.${RecipeType.WorkshopTech}`]: "Werkstatt (Techniker)",
+    [`event.${GameEvent.StPatrick}`]: "St. Patrick's Tag",
+    [`event.${GameEvent.AprilFools}`]: "Aprilscherz",
+    [`event.${GameEvent.Easter}`]: "Ostern",
+    [`event.${GameEvent.Halloween}`]: "Halloween",
+    [`event.${GameEvent.Christmas}`]: "Weihnachten",
+    [`event.${GameEvent.NewYear}`]: "Neujahr",
+    [`condition.${ItemActionCondition.Ghoul}`]: "Ghoul",
+    [`condition.${ItemActionCondition.Technician}`]: "Techniker",
+    [`condition.${ItemActionCondition.OnARuin}`]: "Auf einem Gebäude",
   },
 };
 
@@ -135,14 +175,17 @@ const getRecipeTypeIcon = (type: RecipeType) => {
   }
 };
 
-const getActionTypeIcon = (type: ItemActionType) => {
-  switch (type) {
+const getActionTypeIcon = (action: ItemAction) => {
+  switch (action.type) {
     case ItemActionType.Eat:
       return "icons/actions/eat.gif";
     case ItemActionType.Drink:
       return "icons/actions/drink.gif";
     case ItemActionType.Open:
-      return "icons/item/item_can_opener.gif";
+      if (action.conditions.includes(ItemActionCondition.BoxOpener)) {
+        return "icons/item/item_can_opener.gif";
+      }
+      return "icons/small_next.gif";
     default:
       return "icons/small_next.gif";
   }
@@ -154,6 +197,7 @@ type DisplayedIcon = {
   amount?: number | string;
   text?: string;
   crossed?: boolean;
+  alt?: string;
   classList?: string[];
 };
 
@@ -287,6 +331,13 @@ const convertEffectToDisplayedItem = (effect: ItemActionEffect) => {
       displayedIcon.icon = "icons/death.gif";
       break;
     }
+    case ItemActionEffectType.EP: {
+      displayedIcon.icon = `icons/ep_small${
+        store["hordes-lang"] !== Lang.DE ? `_${store["hordes-lang"]}` : ""
+      }.gif`;
+      displayedIcon.amount = Number(effect.value);
+      break;
+    }
     default:
       console.log("Unknown effect type:", effect.type);
       throw new Error("Unknown effect type");
@@ -322,14 +373,28 @@ const createLine = (
   } else {
     // Item action
     inputIcons.push(
-      ...data.conditions.map((condition) => {
-        switch (condition) {
-          case ItemActionCondition.Technician:
-            return { icon: "professions/tech.gif" };
-          default:
-            return { icon: "icons/item/item_broken.gif" };
-        }
-      })
+      ...data.conditions
+        .filter((condition) => condition !== ItemActionCondition.BoxOpener)
+        .map((condition) => {
+          let icon = "icons/item/item_broken.gif";
+
+          switch (condition) {
+            case ItemActionCondition.Technician:
+              icon = "professions/tech.gif";
+              break;
+            case ItemActionCondition.Ghoul:
+              icon = "roles/ghoul.gif";
+              break;
+            case ItemActionCondition.OnARuin:
+              icon = "emotes/ruin.gif";
+              break;
+          }
+
+          return {
+            icon,
+            alt: t(T, `condition.${condition}`),
+          };
+        })
     );
 
     inputIcons.push({
@@ -343,12 +408,17 @@ const createLine = (
     inputCell.append(wrapper);
     const inputImg = document.createElement("img");
     inputImg.src = `${ASSETS}/${inputIcon.icon}`;
-    inputImg.alt = inputIcon.id
-      ? items[inputIcon.id].name[store["hordes-lang"]]
-      : inputIcon.icon;
+    inputImg.alt =
+      inputIcon.alt ??
+      (inputIcon.id
+        ? items[inputIcon.id].name[store["hordes-lang"]]
+        : inputIcon.icon);
     if (inputIcon.id) {
-      inputImg.setAttribute('data-id', inputIcon.id);
-      inputImg.setAttribute('title', items[inputIcon.id].name[store["hordes-lang"]]);
+      inputImg.setAttribute("data-id", inputIcon.id);
+      inputImg.setAttribute(
+        "title",
+        items[inputIcon.id].name[store["hordes-lang"]]
+      );
     }
 
     // Highlight the item if it's the current item
@@ -386,7 +456,7 @@ const createLine = (
     icon.title = t(T, `recipe-type.${data.type}`);
   } else {
     // Item action
-    actionIcon = getActionTypeIcon(data.type);
+    actionIcon = getActionTypeIcon(data);
     icon.alt = t(T, `action-type.${data.type}`);
     icon.title = t(T, `action-type.${data.type}`);
   }
@@ -425,12 +495,17 @@ const createLine = (
     outputCell.append(wrapper);
     const output = document.createElement("img");
     output.src = `${ASSETS}/${outputIcon.icon}`;
-    output.alt = outputIcon.id
-      ? items[outputIcon.id].name[store["hordes-lang"]]
-      : outputIcon.icon;
+    output.alt =
+      outputIcon.alt ??
+      (outputIcon.id
+        ? items[outputIcon.id].name[store["hordes-lang"]]
+        : outputIcon.icon);
     if (outputIcon.id) {
-      output.setAttribute('data-id', outputIcon.id);
-      output.setAttribute('title', items[outputIcon.id].name[store["hordes-lang"]]);
+      output.setAttribute("data-id", outputIcon.id);
+      output.setAttribute(
+        "title",
+        items[outputIcon.id].name[store["hordes-lang"]]
+      );
     }
 
     // Highlight the ingredient if it's the current item
@@ -481,6 +556,15 @@ export const insertBetterTooltips = (node: HTMLElement) => {
       return;
     }
 
+    // Additional info
+    if (item.info) {
+      // Create an info tag
+      const infoTag = document.createElement("div");
+      infoTag.classList.add("item-tag", "item-tag-info");
+      infoTag.textContent = item.info[store["hordes-lang"]];
+      node.querySelector('p')?.after(infoTag);
+    }
+
     // Decoration
     if (item.decoration) {
       const decorationNode = node.querySelector(".item-tag-deco");
@@ -500,9 +584,22 @@ export const insertBetterTooltips = (node: HTMLElement) => {
       decorationNode.append(span);
     }
 
+    // Event
+    if (typeof item.event !== "undefined") {
+      // Create an event tag
+      const eventTag = document.createElement("div");
+      eventTag.classList.add("item-tag", "item-tag-event");
+      eventTag.setAttribute("data-event", item.event.toString());
+      eventTag.textContent = t(T, `event.${item.event}`);
+      node.append(eventTag);
+    }
+
     // Recipes/Actions
     const itemRecipes = findRecipes(item);
-    if (!itemRecipes.length && !item.actions.length) return;
+    const relatedItems = findItemsWithRelatedActions(item);
+    if (!itemRecipes.length && !item.actions.length && !relatedItems.length) {
+      return;
+    }
 
     const table = document.createElement("table");
     const tbody = document.createElement("tbody");
@@ -519,7 +616,6 @@ export const insertBetterTooltips = (node: HTMLElement) => {
     });
 
     // Add a row for each related action
-    const relatedItems = findItemsWithRelatedActions(item);
     relatedItems.forEach((otherItem) => {
       otherItem.actions.forEach((action) => {
         tbody.append(createLine(item.id, otherItem, action));

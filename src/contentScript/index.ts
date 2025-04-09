@@ -15,6 +15,7 @@ import { insertWiki, openItemInWiki } from "./wiki";
 
 // Initialize the store
 await initStore();
+// TODO: Ignore lang changes if XX_XX
 // TODO: wrong % for staff break chance
 // TODO: Differentiate Open action from OpenWithOpener
 // TODO: Implement rotating items in tooltips (repairable items, etc)

@@ -29,10 +29,12 @@ export enum ItemActionType {
   Use,
 }
 
-enum ItemActionCondition {
+export enum ItemActionCondition {
   Ghoul,
   BrokenItem,
   Technician,
+  BoxOpener,
+  OnARuin,
 }
 
 export enum ItemActionEffectType {
@@ -57,6 +59,7 @@ export enum ItemActionEffectType {
   RemoveStatus,
   AddStatus,
   Death,
+  EP,
 }
 
 type ItemActionEffect = {
@@ -77,6 +80,7 @@ export type Item = {
   numericalId: number;
   name: Record<Lang, string>;
   description: Record<Lang, string>;
+  info?: Record<Lang, string>;
   categories: string[];
   icon: string;
   decoration: number;
@@ -254,6 +258,16 @@ const generateItems = async () => {
     }
     if (action?.meta.includes("role_ghoul")) {
       conditions.push(ItemActionCondition.Ghoul);
+    }
+    if (
+      [
+        "have_can_opener_hd",
+        "have_can_opener",
+        "have_box_opener_hd",
+        "have_box_opener",
+      ].some((condition) => action?.meta.includes(condition))
+    ) {
+      conditions.push(ItemActionCondition.BoxOpener);
     }
 
     return conditions;
@@ -762,9 +776,12 @@ const generateItems = async () => {
     actionIds?.forEach((actionId) => {
       // Actions to ignore
       switch (actionId) {
-        case "open_toolbox_t1": {
+        case "pumpkin":
+        case "open_metalbox_t1":
+        case "open_toolbox_t1":
+        case "drug_hyd_1":
+        case "drug_hyd_2":
           return;
-        }
       }
 
       const actionData = actionsData.actions[actionId];
@@ -1042,6 +1059,7 @@ const generateItems = async () => {
   id: ItemId;
   name: Record<Lang, string>;
   description: Record<Lang, string>;
+  info?: Record<Lang, string>;
   categories: ItemCategory[];
   icon: string;
   decoration: number;
@@ -1073,7 +1091,18 @@ const generateItems = async () => {
             )}"`
         )
         .join(",\n      ")}
-    },
+    },${
+      item.info
+        ? `\n    info: {\n      ${languages
+            .map(
+              (lang) =>
+                `[Lang.${lang.toUpperCase()}]: "${sanitizeText(
+                  item.info?.[lang] ?? ""
+                )}"`
+            )
+            .join(",\n      ")}\n    },`
+        : ""
+    }
     categories: [${item.categories
       .map((category) => `ItemCategory.${category}`)
       .join(", ")}],
@@ -1103,10 +1132,15 @@ const generateItems = async () => {
                         : effect.value
                     }`
                   : ""
-              }${effect.count ? `,\n            count: ${typeof effect.count === "string" ? `"${effect.count}"` : effect.count}` : ""
               }${
-                effect.odds ? `,\n            odds: ${effect.odds}` : ""
-              }
+                effect.count
+                  ? `,\n            count: ${
+                      typeof effect.count === "string"
+                        ? `"${effect.count}"`
+                        : effect.count
+                    }`
+                  : ""
+              }${effect.odds ? `,\n            odds: ${effect.odds}` : ""}
           }`
             )
             .join(",\n          ")}

@@ -26,7 +26,7 @@ export const store = {
   "last-bank-item-taken": Date.now(),
   "last-water-ration-taken": new Date(0).getTime(),
   // Game state
-  "hordes-lang": (document.documentElement.getAttribute('data-language') ?? Lang.EN) as Lang,
+  "hordes-lang": (document.documentElement.lang ?? Lang.EN) as Lang,
   "town-id": 0,
   // Updater settings
   "user-key": "",
@@ -52,7 +52,7 @@ export const initStore = async () => {
   // Clear old storage
   await chrome.storage.sync.remove("lang");
 
-  // Update lang (don't update if tab is unloaded)
+  // Update lang (don't update if wrong format)
   if (store["hordes-lang"].length === 2) {
     setStore("hordes-lang", store["hordes-lang"]);
   }

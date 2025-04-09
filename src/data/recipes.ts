@@ -867,5 +867,27 @@ export const recipes: Recipe[] = [
       { item: ItemId.LPOINT3, odds: 1 },
       { item: ItemId.LPOINT4, odds: 1 }
     ]
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.SOCCER_PART },
+      { item: ItemId.RUSTINE }
+    ],
+    out: [
+      { item: ItemId.SOCCER }
+    ]
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.RUSTINE },
+      { item: ItemId.CHAIN },
+      { item: ItemId.METAL },
+      { item: ItemId.BIKE_PART }
+    ],
+    out: [
+      { item: ItemId.BIKE }
+    ]
   }
 ];

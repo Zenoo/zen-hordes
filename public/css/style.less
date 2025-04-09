@@ -426,11 +426,58 @@ body.zen-map-preview-enabled {
 // Better tooltips
 .zen-better-tooltip {
 
+  // Info tag
+  .item-tag-info {
+    height: unset !important;
+
+    &::after {
+      background-position-x: 50%;
+      background-position-y: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(https://zenoo.github.io/zen-hordes/tags/tag_1.gif);
+    }
+  }
+
   // Decoration
   .zen-item-decoration {
     display: inline-block;
     margin-left: 4px;
     font-weight: bold;
+  }
+
+  // Event
+  .item-tag-event {
+    &::after {
+      background-position-x: 50%;
+      background-position-y: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &[data-event="0"]::after {
+      background-image: url(https://zenoo.github.io/zen-hordes/icons/item/item_leprechaun_suit.gif);
+    }
+
+    &[data-event="2"]::after {
+      background-image: url(https://zenoo.github.io/zen-hordes/icons/item/item_christmas_suit_full.gif);
+    }
+
+    &[data-event="3"]::after {
+      background-image: url(https://zenoo.github.io/zen-hordes/icons/item/item_april_drug.gif);
+    }
+
+    &[data-event="4"]::after {
+      background-image: url(https://zenoo.github.io/zen-hordes/icons/item/item_paques.gif);
+    }
+
+    &[data-event="5"]::after {
+      background-image: url(https://zenoo.github.io/zen-hordes/icons/item/item_pumpkin_on.gif);
+    }
+
+    &[data-event="6"]::after {
+      background-image: url(https://zenoo.github.io/zen-hordes/icons/item/item_chest_christmas_3.gif);
+    }
   }
 
   // Recipes/Actions
@@ -484,10 +531,10 @@ body.zen-map-preview-enabled {
           }
 
           &.crossed {
-            ::after {
+            &::after {
               content: url(https://zenoo.github.io/zen-hordes/icons/error.png);
               position: absolute;
-              bottom: 0;
+              bottom: -4px;
               right: 0;
               z-index: 1;
             }
@@ -724,8 +771,9 @@ body.zen-map-preview-enabled {
           margin: 0;
         }
 
-        .input,.output {
-          img[title]{
+        .input,
+        .output {
+          img[title] {
             cursor: pointer;
           }
         }
