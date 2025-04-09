@@ -563,6 +563,54 @@ const createLine = (
   return line;
 };
 
+const getIconSource = (icon: string) => {
+  switch (icon) {
+    case "EP":
+      return `icons/ep_small${
+        store["hordes-lang"] !== Lang.DE ? `_${store["hordes-lang"]}` : ""
+      }.gif`;
+    case "AP":
+      return `icons/ap_small${
+        store["hordes-lang"] !== Lang.DE ? `_${store["hordes-lang"]}` : ""
+      }.gif`;
+    case "SP":
+      return `icons/sp_small${
+        store["hordes-lang"] !== Lang.DE ? `_${store["hordes-lang"]}` : ""
+      }.gif`;
+    case "CP":
+      return `icons/pc_small${
+        store["hordes-lang"] !== Lang.DE ? `_${store["hordes-lang"]}` : ""
+      }.gif`;
+    case "MP":
+      return `icons/sp_small${
+        store["hordes-lang"] !== Lang.DE ? `_${store["hordes-lang"]}` : ""
+      }.gif`;
+  }
+
+  return icon;
+};
+
+/**
+ * @param content Can include icon tags like {{icon}}
+ */
+const setTextWithIcons = (node: HTMLElement, content: string) => {
+  const iconRegex = /{{([^}]+)}}/g;
+  const textParts = content.split(iconRegex);
+
+  textParts.forEach((part, index) => {
+    if (index % 2 === 0) {
+      // Text part
+      node.append(document.createTextNode(part));
+    } else {
+      // Icon part
+      const img = document.createElement("img");
+      img.src = `${ASSETS}/${getIconSource(part)}`;
+      img.alt = part;
+      node.append(img);
+    }
+  });
+};
+
 export const insertBetterTooltips = (node: HTMLElement) => {
   if (!store["better-tooltips"]) return;
 
@@ -588,7 +636,7 @@ export const insertBetterTooltips = (node: HTMLElement) => {
       // Create an info tag
       const infoTag = document.createElement("div");
       infoTag.classList.add("item-tag", "item-tag-info");
-      infoTag.textContent = item.info[store["hordes-lang"]];
+      setTextWithIcons(infoTag, item.info[store["hordes-lang"]]);
       node.querySelector("p")?.after(infoTag);
     }
 
@@ -638,9 +686,14 @@ export const insertBetterTooltips = (node: HTMLElement) => {
           return bOdds / bTotal - aOdds / aTotal;
         })
         .map((ruin) => {
-          const total = ruin.drops.reduce((acc, drop) => acc + drop.odds, 0);
+          // 0 = unknown
           const odds =
             ruin.drops.find((drop) => drop.item === item.id)?.odds ?? 0;
+          if (odds === 0) {
+            return `${ruin.name[store["hordes-lang"]]} (?%)`;
+          }
+
+          const total = ruin.drops.reduce((acc, drop) => acc + drop.odds, 0);
 
           return `${ruin.name[store["hordes-lang"]]} (${Math.round(
             (odds / total) * 100

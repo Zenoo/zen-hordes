@@ -136,6 +136,14 @@ export const ruins: Record<RuinId, Ruin> = {
       {
         item: ItemId.CDELVI,
         odds: 1,
+      },
+      {
+        item: ItemId.SHOE,
+        odds: 0,
+      },
+      {
+        item: ItemId.BIKE_PART,
+        odds: 0,
       }
     ]
   },
@@ -372,6 +380,10 @@ export const ruins: Record<RuinId, Ruin> = {
       {
         item: ItemId.RADIO_OFF,
         odds: 5,
+      },
+      {
+        item: ItemId.BIKE_PART,
+        odds: 0,
       }
     ]
   },
@@ -840,6 +852,10 @@ export const ruins: Record<RuinId, Ruin> = {
       {
         item: ItemId.CDELVI,
         odds: 1,
+      },
+      {
+        item: ItemId.QUANTUM,
+        odds: 0,
       }
     ]
   },
@@ -1398,6 +1414,10 @@ export const ruins: Record<RuinId, Ruin> = {
       {
         item: ItemId.LPOINT1,
         odds: 1,
+      },
+      {
+        item: ItemId.BIKE_PART,
+        odds: 0,
       }
     ]
   },
@@ -1910,6 +1930,14 @@ export const ruins: Record<RuinId, Ruin> = {
       {
         item: ItemId.CATBOX,
         odds: 1,
+      },
+      {
+        item: ItemId.SOCCER,
+        odds: 0,
+      },
+      {
+        item: ItemId.SHOE,
+        odds: 0,
       }
     ]
   },
@@ -1996,6 +2024,10 @@ export const ruins: Record<RuinId, Ruin> = {
       {
         item: ItemId.ANGRYC,
         odds: 2,
+      },
+      {
+        item: ItemId.SOCCER,
+        odds: 0,
       }
     ]
   },
@@ -2114,6 +2146,10 @@ export const ruins: Record<RuinId, Ruin> = {
       {
         item: ItemId.CHAMA,
         odds: 5,
+      },
+      {
+        item: ItemId.QUANTUM,
+        odds: 0,
       }
     ]
   },
@@ -2296,6 +2332,10 @@ export const ruins: Record<RuinId, Ruin> = {
       {
         item: ItemId.HURLING_STICK,
         odds: 2,
+      },
+      {
+        item: ItemId.SOCCER,
+        odds: 0,
       }
     ]
   },
@@ -2906,6 +2946,18 @@ export const ruins: Record<RuinId, Ruin> = {
       {
         item: ItemId.WIRE,
         odds: 4,
+      },
+      {
+        item: ItemId.FLAG,
+        odds: 3,
+      },
+      {
+        item: ItemId.SHOE,
+        odds: 0,
+      },
+      {
+        item: ItemId.SOCCER,
+        odds: 0,
       }
     ]
   },

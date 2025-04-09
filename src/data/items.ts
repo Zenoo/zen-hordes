@@ -13139,6 +13139,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Sie sind nicht mehr ganz neuwertig und riechen etwas streng... Trotzdem kannst du dich mit ihnen leichter durch das unwegsame Gelände in der Außenwelt bewegen.",
       [Lang.ES]: "Ya no son nuevos y huelen un poco fuerte... Sin embargo, te facilitan viajar por el terreno accidentado del Ultramundo."
     },
+    info: {
+      [Lang.EN]: "Daily {{EP}} gain increased by 1. Items giving at least 4{{AP}} give 1 additional {{EP}}.",
+      [Lang.FR]: "Gain quotidien de {{EP}} augmenté de 1. Les objets donnant au moins 4{{AP}} donnent 1 {{EP}} supplémentaire.",
+      [Lang.DE]: "Täglicher {{EP}}-Gewinn um 1 erhöht. Gegenstände, die mindestens 4{{AP}} geben, geben zusätzlich 1 {{EP}}.",
+      [Lang.ES]: "Aumento diario de {{EP}} en 1. Los objetos que dan al menos 4{{AP}} dan 1 {{EP}} adicional."
+    },
     categories: [ItemCategory.Miscellaneous],
     icon: "item_shoe",
     decoration: 0,
@@ -13193,6 +13199,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.FR]: "Un VTT sur mesure avec lequel vous pourrez aller partout, où vous voulez.",
       [Lang.DE]: "Das Fahrrad alle maßgeschneiderten Landes, mit denen Sie überall hin gehen können, wo immer Sie wollen.",
       [Lang.ES]: "Una bicicleta de montaña hecha a medida con la que podrás ir a todas partes, donde quieras."
+    },
+    info: {
+      [Lang.EN]: "Daily {{EP}} gain increased by 2. Items giving at least 4{{AP}} give 2 additional {{EP}}.",
+      [Lang.FR]: "Gain quotidien de {{EP}} augmenté de 2. Les objets donnant au moins 4{{AP}} donnent 2 {{EP}} supplémentaires.",
+      [Lang.DE]: "Täglicher {{EP}}-Gewinn um 2 erhöht. Gegenstände, die mindestens 4{{AP}} geben, geben zusätzlich 2 {{EP}}.",
+      [Lang.ES]: "Aumento diario de {{EP}} en 2. Los objetos que dan al menos 4{{AP}} dan 2 {{EP}} adicionales."
     },
     categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
     icon: "item_bike",
