@@ -1,5 +1,6 @@
 import { Item, ItemId, items } from "../data/items";
 import { Recipe, recipes } from "../data/recipes";
+import { ruins } from "../data/ruins";
 import { ASSETS } from "../utils/constants";
 import { store } from "./store";
 import { t } from "./translate";
@@ -25,6 +26,9 @@ const T: Translations = {
     [`condition.${ItemActionCondition.Ghoul}`]: "Ghoul",
     [`condition.${ItemActionCondition.Technician}`]: "Technician",
     [`condition.${ItemActionCondition.OnARuin}`]: "On a ruin",
+    [`condition.${ItemActionCondition.Thirsty}`]: "Thirsty",
+    [`condition.${ItemActionCondition.Dehydrated}`]: "Dehydrated",
+    foundIn: "Found in",
   },
   fr: {
     [`action-type.${ItemActionType.Eat}`]: "Manger",
@@ -46,6 +50,9 @@ const T: Translations = {
     [`condition.${ItemActionCondition.Ghoul}`]: "Ghoul",
     [`condition.${ItemActionCondition.Technician}`]: "Technicien",
     [`condition.${ItemActionCondition.OnARuin}`]: "Sur un bâtiment",
+    [`condition.${ItemActionCondition.Thirsty}`]: "Assoiffé",
+    [`condition.${ItemActionCondition.Dehydrated}`]: "Déshydraté",
+    foundIn: "Trouvé dans",
   },
   es: {
     [`action-type.${ItemActionType.Eat}`]: "Comer",
@@ -67,6 +74,9 @@ const T: Translations = {
     [`condition.${ItemActionCondition.Ghoul}`]: "Ghoul",
     [`condition.${ItemActionCondition.Technician}`]: "Técnico",
     [`condition.${ItemActionCondition.OnARuin}`]: "En un edificio",
+    [`condition.${ItemActionCondition.Thirsty}`]: "Sediento",
+    [`condition.${ItemActionCondition.Dehydrated}`]: "Deshidratado",
+    foundIn: "Encontrado en",
   },
   de: {
     [`action-type.${ItemActionType.Eat}`]: "Essen",
@@ -88,6 +98,9 @@ const T: Translations = {
     [`condition.${ItemActionCondition.Ghoul}`]: "Ghoul",
     [`condition.${ItemActionCondition.Technician}`]: "Techniker",
     [`condition.${ItemActionCondition.OnARuin}`]: "Auf einem Gebäude",
+    [`condition.${ItemActionCondition.Thirsty}`]: "Durstig",
+    [`condition.${ItemActionCondition.Dehydrated}`]: "Dehydriert",
+    foundIn: "Gefunden in",
   },
 };
 
@@ -162,6 +175,14 @@ const findItemsWithRelatedActions = (item: Item) => {
     });
 };
 
+const findRuinDrops = (item: Item) => {
+  return Object.values(ruins).filter((ruin) => {
+    return ruin.drops.some((drop) => {
+      return drop.item === item.id;
+    });
+  });
+};
+
 const getRecipeTypeIcon = (type: RecipeType) => {
   switch (type) {
     case RecipeType.ManualAnywhere:
@@ -197,7 +218,7 @@ type DisplayedIcon = {
   amount?: number | string;
   text?: string;
   crossed?: boolean;
-  alt?: string;
+  title?: string;
   classList?: string[];
 };
 
@@ -388,11 +409,17 @@ const createLine = (
             case ItemActionCondition.OnARuin:
               icon = "emotes/ruin.gif";
               break;
+            case ItemActionCondition.Thirsty:
+              icon = "status/status_thirst1.gif";
+              break;
+            case ItemActionCondition.Dehydrated:
+              icon = "status/status_thirst2.gif";
+              break;
           }
 
           return {
             icon,
-            alt: t(T, `condition.${condition}`),
+            title: t(T, `condition.${condition}`),
           };
         })
     );
@@ -408,8 +435,8 @@ const createLine = (
     inputCell.append(wrapper);
     const inputImg = document.createElement("img");
     inputImg.src = `${ASSETS}/${inputIcon.icon}`;
-    inputImg.alt =
-      inputIcon.alt ??
+    inputImg.title =
+      inputIcon.title ??
       (inputIcon.id
         ? items[inputIcon.id].name[store["hordes-lang"]]
         : inputIcon.icon);
@@ -495,8 +522,8 @@ const createLine = (
     outputCell.append(wrapper);
     const output = document.createElement("img");
     output.src = `${ASSETS}/${outputIcon.icon}`;
-    output.alt =
-      outputIcon.alt ??
+    output.title =
+      outputIcon.title ??
       (outputIcon.id
         ? items[outputIcon.id].name[store["hordes-lang"]]
         : outputIcon.icon);
@@ -562,7 +589,7 @@ export const insertBetterTooltips = (node: HTMLElement) => {
       const infoTag = document.createElement("div");
       infoTag.classList.add("item-tag", "item-tag-info");
       infoTag.textContent = item.info[store["hordes-lang"]];
-      node.querySelector('p')?.after(infoTag);
+      node.querySelector("p")?.after(infoTag);
     }
 
     // Decoration
@@ -592,6 +619,35 @@ export const insertBetterTooltips = (node: HTMLElement) => {
       eventTag.setAttribute("data-event", item.event.toString());
       eventTag.textContent = t(T, `event.${item.event}`);
       node.append(eventTag);
+    }
+
+    // Ruin drops
+    const ruinDrops = findRuinDrops(item);
+    if (ruinDrops.length) {
+      // Create an ruin drop tag
+      const ruinDropTag = document.createElement("div");
+      ruinDropTag.classList.add("item-tag", "item-tag-ruin-drop");
+      ruinDropTag.textContent = `${t(T, `foundIn`)}: ${ruinDrops
+        .sort((a, b) => {
+          const aTotal = a.drops.reduce((acc, drop) => acc + drop.odds, 0);
+          const bTotal = b.drops.reduce((acc, drop) => acc + drop.odds, 0);
+          const aOdds =
+            a.drops.find((drop) => drop.item === item.id)?.odds ?? 0;
+          const bOdds =
+            b.drops.find((drop) => drop.item === item.id)?.odds ?? 0;
+          return bOdds / bTotal - aOdds / aTotal;
+        })
+        .map((ruin) => {
+          const total = ruin.drops.reduce((acc, drop) => acc + drop.odds, 0);
+          const odds =
+            ruin.drops.find((drop) => drop.item === item.id)?.odds ?? 0;
+
+          return `${ruin.name[store["hordes-lang"]]} (${Math.round(
+            (odds / total) * 100
+          )}%)`;
+        })
+        .join(", ")}`;
+      node.append(ruinDropTag);
     }
 
     // Recipes/Actions

@@ -117,23 +117,23 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.CHEST_CITIZEN,
         odds: 50,
       },
-        {
+      {
         item: ItemId.CAN,
         odds: 100,
       },
-        {
+      {
         item: ItemId.LOCK,
         odds: 2,
       },
-        {
+      {
         item: ItemId.ELECTRO_BOX,
         odds: 8,
       },
-        {
+      {
         item: ItemId.CHAIR_BASIC,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CDELVI,
         odds: 1,
       }
@@ -167,35 +167,35 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.DRUG_HERO,
         odds: 20,
       },
-        {
+      {
         item: ItemId.MEAT,
         odds: 20,
       },
-        {
+      {
         item: ItemId.FOOD_NOODLES_HOT,
         odds: 20,
       },
-        {
+      {
         item: ItemId.VEGETABLE_TASTY,
         odds: 20,
       },
-        {
+      {
         item: ItemId.ELECTRO_BOX,
         odds: 5,
       },
-        {
+      {
         item: ItemId.POWDER,
         odds: 5,
       },
-        {
+      {
         item: ItemId.FOOD_BAG,
         odds: 5,
       },
-        {
+      {
         item: ItemId.DOOR_CARPET,
         odds: 5,
       },
-        {
+      {
         item: ItemId.LIGHTS,
         odds: 5,
       }
@@ -229,51 +229,51 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.MONEY,
         odds: 50,
       },
-        {
+      {
         item: ItemId.FLASH,
         odds: 10,
       },
-        {
+      {
         item: ItemId.COFFEE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CHAIR_BASIC,
         odds: 10,
       },
-        {
+      {
         item: ItemId.TABLE,
         odds: 5,
       },
-        {
+      {
         item: ItemId.TEDDY,
         odds: 1,
       },
-        {
+      {
         item: ItemId.MACHINE_1,
         odds: 10,
       },
-        {
+      {
         item: ItemId.MACHINE_2,
         odds: 10,
       },
-        {
+      {
         item: ItemId.MACHINE_3,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RP_LETTER,
         odds: 2,
       },
-        {
+      {
         item: ItemId.RP_SHEETS,
         odds: 2,
       },
-        {
+      {
         item: ItemId.RADIUS_MK2_PART,
         odds: 1,
       },
-        {
+      {
         item: ItemId.REPAIR_KIT_PART_RAW,
         odds: 1,
       }
@@ -307,23 +307,23 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.JERRYCAN,
         odds: 60,
       },
-        {
+      {
         item: ItemId.TUBE,
         odds: 4,
       },
-        {
+      {
         item: ItemId.METAL_BEAM,
         odds: 4,
       },
-        {
+      {
         item: ItemId.ELECTRO,
         odds: 1,
       },
-        {
+      {
         item: ItemId.JERRYGUN_PART,
         odds: 2,
       },
-        {
+      {
         item: ItemId.OILCAN,
         odds: 6,
       }
@@ -357,19 +357,19 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.MECA_PARTS,
         odds: 2,
       },
-        {
+      {
         item: ItemId.TUBE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.COURROIE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.POCKET_BELT,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RADIO_OFF,
         odds: 5,
       }
@@ -403,31 +403,31 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.METAL_BEAM,
         odds: 3,
       },
-        {
+      {
         item: ItemId.WOOD_BEAM,
         odds: 3,
       },
-        {
+      {
         item: ItemId.WRENCH,
         odds: 3,
       },
-        {
+      {
         item: ItemId.WOOD2,
         odds: 10,
       },
-        {
+      {
         item: ItemId.METAL,
         odds: 10,
       },
-        {
+      {
         item: ItemId.COURROIE,
         odds: 1,
       },
-        {
+      {
         item: ItemId.COFFEE,
         odds: 1,
       },
-        {
+      {
         item: ItemId.CHAIN,
         odds: 5,
       }
@@ -461,43 +461,43 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.PHARMA,
         odds: 20,
       },
-        {
+      {
         item: ItemId.DRUG_RANDOM,
         odds: 30,
       },
-        {
+      {
         item: ItemId.VODKA,
         odds: 10,
       },
-        {
+      {
         item: ItemId.DRUG_WATER,
         odds: 10,
       },
-        {
+      {
         item: ItemId.BETA_DRUG_BAD,
         odds: 15,
       },
-        {
+      {
         item: ItemId.XANAX,
         odds: 5,
       },
-        {
+      {
         item: ItemId.DRUG,
         odds: 10,
       },
-        {
+      {
         item: ItemId.DRUG_HERO,
         odds: 5,
       },
-        {
+      {
         item: ItemId.DISINFECT,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CYANURE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.FUNGUS,
         odds: 5,
       }
@@ -531,51 +531,51 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.METAL_BEAM,
         odds: 30,
       },
-        {
+      {
         item: ItemId.REPAIR_ONE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.ELECTRO_BOX,
         odds: 15,
       },
-        {
+      {
         item: ItemId.MECA_PARTS,
         odds: 10,
       },
-        {
+      {
         item: ItemId.ENGINE_PART,
         odds: 1,
       },
-        {
+      {
         item: ItemId.COURROIE,
         odds: 1,
       },
-        {
+      {
         item: ItemId.TUBE,
         odds: 1,
       },
-        {
+      {
         item: ItemId.RP_MANUAL,
         odds: 1,
       },
-        {
+      {
         item: ItemId.PLATE_RAW,
         odds: 1,
       },
-        {
+      {
         item: ItemId.FENCE,
         odds: 1,
       },
-        {
+      {
         item: ItemId.JERRYCAN,
         odds: 1,
       },
-        {
+      {
         item: ItemId.WIRE,
         odds: 3,
       },
-        {
+      {
         item: ItemId.OILCAN,
         odds: 4,
       }
@@ -609,79 +609,79 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.GUN,
         odds: 5,
       },
-        {
+      {
         item: ItemId.MACHINE_GUN,
         odds: 2,
       },
-        {
+      {
         item: ItemId.TASER_EMPTY,
         odds: 7,
       },
-        {
+      {
         item: ItemId.PILEGUN_EMPTY,
         odds: 5,
       },
-        {
+      {
         item: ItemId.DRUG_HERO,
         odds: 10,
       },
-        {
+      {
         item: ItemId.BIG_PGUN_PART,
         odds: 7,
       },
-        {
+      {
         item: ItemId.WATERGUN_EMPTY,
         odds: 7,
       },
-        {
+      {
         item: ItemId.KNIFE,
         odds: 5,
       },
-        {
+      {
         item: ItemId.BANDAGE,
         odds: 4,
       },
-        {
+      {
         item: ItemId.BAG,
         odds: 5,
       },
-        {
+      {
         item: ItemId.BAGXL,
         odds: 1,
       },
-        {
+      {
         item: ItemId.CUTCUT,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CHEST_XL,
         odds: 2,
       },
-        {
+      {
         item: ItemId.REPAIR_KIT,
         odds: 7,
       },
-        {
+      {
         item: ItemId.BED,
         odds: 4,
       },
-        {
+      {
         item: ItemId.TAGGER,
         odds: 5,
       },
-        {
+      {
         item: ItemId.WATERGUN_OPT_PART,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CHAIR_BASIC,
         odds: 4,
       },
-        {
+      {
         item: ItemId.DETO,
         odds: 5,
       },
-        {
+      {
         item: ItemId.WIRE,
         odds: 3,
       }
@@ -715,67 +715,67 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.PLATE_RAW,
         odds: 5,
       },
-        {
+      {
         item: ItemId.MACHINE_GUN,
         odds: 4,
       },
-        {
+      {
         item: ItemId.JERRYGUN_PART,
         odds: 5,
       },
-        {
+      {
         item: ItemId.JERRYCAN,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CAN,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CHAINSAW_PART,
         odds: 2,
       },
-        {
+      {
         item: ItemId.MIXERGUN_PART,
         odds: 5,
       },
-        {
+      {
         item: ItemId.PHARMA,
         odds: 6,
       },
-        {
+      {
         item: ItemId.REPAIR_KIT,
         odds: 9,
       },
-        {
+      {
         item: ItemId.DRUG_HERO,
         odds: 20,
       },
-        {
+      {
         item: ItemId.CHEST,
         odds: 10,
       },
-        {
+      {
         item: ItemId.ELECTRO,
         odds: 8,
       },
-        {
+      {
         item: ItemId.TASER_EMPTY,
         odds: 8,
       },
-        {
+      {
         item: ItemId.BIG_PGUN_PART,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CHEST_XL,
         odds: 1,
       },
-        {
+      {
         item: ItemId.TAGGER,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RADIUS_MK2_PART,
         odds: 5,
       }
@@ -809,35 +809,35 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.COFFEE,
         odds: 20,
       },
-        {
+      {
         item: ItemId.DRUG,
         odds: 5,
       },
-        {
+      {
         item: ItemId.PHARMA,
         odds: 5,
       },
-        {
+      {
         item: ItemId.FOOD_CHICK,
         odds: 20,
       },
-        {
+      {
         item: ItemId.RHUM,
         odds: 10,
       },
-        {
+      {
         item: ItemId.VODKA,
         odds: 10,
       },
-        {
+      {
         item: ItemId.PET_RAT,
         odds: 10,
       },
-        {
+      {
         item: ItemId.COFFEE_MACHINE_PART,
         odds: 1,
       },
-        {
+      {
         item: ItemId.CDELVI,
         odds: 1,
       }
@@ -871,51 +871,51 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.FOOD_BAR1,
         odds: 10,
       },
-        {
+      {
         item: ItemId.FOOD_BAR2,
         odds: 10,
       },
-        {
+      {
         item: ItemId.FOOD_BAR3,
         odds: 10,
       },
-        {
+      {
         item: ItemId.FOOD_BISCUIT,
         odds: 10,
       },
-        {
+      {
         item: ItemId.FOOD_CHICK,
         odds: 10,
       },
-        {
+      {
         item: ItemId.FOOD_PIMS,
         odds: 10,
       },
-        {
+      {
         item: ItemId.FOOD_TARTE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RHUM,
         odds: 7,
       },
-        {
+      {
         item: ItemId.COFFEE,
         odds: 1,
       },
-        {
+      {
         item: ItemId.RADIO_OFF,
         odds: 3,
       },
-        {
+      {
         item: ItemId.PET_RAT,
         odds: 20,
       },
-        {
+      {
         item: ItemId.TABLE,
         odds: 1,
       },
-        {
+      {
         item: ItemId.OILCAN,
         odds: 1,
       }
@@ -949,47 +949,47 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.METAL,
         odds: 50,
       },
-        {
+      {
         item: ItemId.MECA_PARTS,
         odds: 5,
       },
-        {
+      {
         item: ItemId.REPAIR_ONE,
         odds: 5,
       },
-        {
+      {
         item: ItemId.VODKA,
         odds: 2,
       },
-        {
+      {
         item: ItemId.RHUM,
         odds: 2,
       },
-        {
+      {
         item: ItemId.JERRYCAN,
         odds: 2,
       },
-        {
+      {
         item: ItemId.PLATE_RAW,
         odds: 10,
       },
-        {
+      {
         item: ItemId.COURROIE,
         odds: 3,
       },
-        {
+      {
         item: ItemId.TUBE,
         odds: 8,
       },
-        {
+      {
         item: ItemId.CHEST,
         odds: 9,
       },
-        {
+      {
         item: ItemId.ENGINE_PART,
         odds: 1,
       },
-        {
+      {
         item: ItemId.OILCAN,
         odds: 6,
       }
@@ -1023,31 +1023,31 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.RP_SHEETS,
         odds: 5,
       },
-        {
+      {
         item: ItemId.RP_MANUAL,
         odds: 5,
       },
-        {
+      {
         item: ItemId.RP_SCROLL,
         odds: 5,
       },
-        {
+      {
         item: ItemId.RP_BOOK2,
         odds: 5,
       },
-        {
+      {
         item: ItemId.RP_BOOK,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CIGS,
         odds: 5,
       },
-        {
+      {
         item: ItemId.RHUM,
         odds: 10,
       },
-        {
+      {
         item: ItemId.PET_DOG,
         odds: 10,
       }
@@ -1081,83 +1081,83 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.MECA_PARTS,
         odds: 5,
       },
-        {
+      {
         item: ItemId.PLATE_RAW,
         odds: 15,
       },
-        {
+      {
         item: ItemId.SAW_TOOL_PART,
         odds: 2,
       },
-        {
+      {
         item: ItemId.CHEST,
         odds: 20,
       },
-        {
+      {
         item: ItemId.REPAIR_KIT,
         odds: 40,
       },
-        {
+      {
         item: ItemId.WRENCH,
         odds: 5,
       },
-        {
+      {
         item: ItemId.SWISS_KNIFE,
         odds: 15,
       },
-        {
+      {
         item: ItemId.LOCK,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CHEST_XL,
         odds: 1,
       },
-        {
+      {
         item: ItemId.TRESTLE,
         odds: 8,
       },
-        {
+      {
         item: ItemId.PILE,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CHEST_TOOLS,
         odds: 20,
       },
-        {
+      {
         item: ItemId.TUBE,
         odds: 3,
       },
-        {
+      {
         item: ItemId.POCKET_BELT,
         odds: 1,
       },
-        {
+      {
         item: ItemId.EXPLO,
         odds: 5,
       },
-        {
+      {
         item: ItemId.ELECTRO_BOX,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CONCRETE,
         odds: 15,
       },
-        {
+      {
         item: ItemId.DIGGER,
         odds: 10,
       },
-        {
+      {
         item: ItemId.LIGHTS,
         odds: 5,
       },
-        {
+      {
         item: ItemId.OILCAN,
         odds: 5,
       },
-        {
+      {
         item: ItemId.WIRE,
         odds: 7,
       }
@@ -1191,67 +1191,67 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.CONCRETE,
         odds: 7,
       },
-        {
+      {
         item: ItemId.METAL_BEAM,
         odds: 10,
       },
-        {
+      {
         item: ItemId.REPAIR_KIT_PART_RAW,
         odds: 5,
       },
-        {
+      {
         item: ItemId.JERRYCAN,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CHAIN,
         odds: 10,
       },
-        {
+      {
         item: ItemId.HOME_BOX,
         odds: 8,
       },
-        {
+      {
         item: ItemId.RSC_PACK_2,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RSC_PACK_3,
         odds: 2,
       },
-        {
+      {
         item: ItemId.HOME_DEF,
         odds: 7,
       },
-        {
+      {
         item: ItemId.TRESTLE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.SAW_TOOL_PART,
         odds: 2,
       },
-        {
+      {
         item: ItemId.MECA_PARTS,
         odds: 8,
       },
-        {
+      {
         item: ItemId.DOOR,
         odds: 5,
       },
-        {
+      {
         item: ItemId.SCREW,
         odds: 8,
       },
-        {
+      {
         item: ItemId.WRENCH,
         odds: 8,
       },
-        {
+      {
         item: ItemId.MECANISM,
         odds: 8,
       },
-        {
+      {
         item: ItemId.OILCAN,
         odds: 2,
       }
@@ -1285,47 +1285,47 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.MEAT,
         odds: 100,
       },
-        {
+      {
         item: ItemId.VEGETABLE,
         odds: 80,
       },
-        {
+      {
         item: ItemId.PET_RAT,
         odds: 20,
       },
-        {
+      {
         item: ItemId.KNIFE,
         odds: 40,
       },
-        {
+      {
         item: ItemId.JERRYCAN,
         odds: 40,
       },
-        {
+      {
         item: ItemId.VODKA,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CHAINSAW_PART,
         odds: 2,
       },
-        {
+      {
         item: ItemId.MIXERGUN_PART,
         odds: 4,
       },
-        {
+      {
         item: ItemId.PET_PIG,
         odds: 1,
       },
-        {
+      {
         item: ItemId.CYANURE,
         odds: 1,
       },
-        {
+      {
         item: ItemId.COFFEE_MACHINE_PART,
         odds: 1,
       },
-        {
+      {
         item: ItemId.CHEST_FOOD,
         odds: 10,
       }
@@ -1359,43 +1359,43 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.VIBR_EMPTY,
         odds: 10,
       },
-        {
+      {
         item: ItemId.DRUG_HERO,
         odds: 20,
       },
-        {
+      {
         item: ItemId.VODKA,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RHUM,
         odds: 10,
       },
-        {
+      {
         item: ItemId.SPORT_ELEC_EMPTY,
         odds: 7,
       },
-        {
+      {
         item: ItemId.BIG_PGUN_PART,
         odds: 5,
       },
-        {
+      {
         item: ItemId.RADIUS_MK2_PART,
         odds: 5,
       },
-        {
+      {
         item: ItemId.PILE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CHEST_XL,
         odds: 1,
       },
-        {
+      {
         item: ItemId.BGRENADE_EMPTY,
         odds: 8,
       },
-        {
+      {
         item: ItemId.LPOINT1,
         odds: 1,
       }
@@ -1429,39 +1429,39 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.WOOD_BAD,
         odds: 100,
       },
-        {
+      {
         item: ItemId.HMEAT,
         odds: 10,
       },
-        {
+      {
         item: ItemId.VEGETABLE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.PET_RAT,
         odds: 5,
       },
-        {
+      {
         item: ItemId.SAW_TOOL_PART,
         odds: 1,
       },
-        {
+      {
         item: ItemId.PET_CHICK,
         odds: 5,
       },
-        {
+      {
         item: ItemId.GRENADE_EMPTY,
         odds: 5,
       },
-        {
+      {
         item: ItemId.PLATE_RAW,
         odds: 5,
       },
-        {
+      {
         item: ItemId.RYEBAG,
         odds: 6,
       },
-        {
+      {
         item: ItemId.PET_SNAKE2,
         odds: 4,
       }
@@ -1495,23 +1495,23 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.POWDER,
         odds: 30,
       },
-        {
+      {
         item: ItemId.CONCRETE_WALL,
         odds: 2,
       },
-        {
+      {
         item: ItemId.DETO,
         odds: 5,
       },
-        {
+      {
         item: ItemId.EXPLO,
         odds: 5,
       },
-        {
+      {
         item: ItemId.MECANISM,
         odds: 5,
       },
-        {
+      {
         item: ItemId.HMEAT,
         odds: 1,
       }
@@ -1545,31 +1545,31 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.CONCRETE,
         odds: 35,
       },
-        {
+      {
         item: ItemId.METAL_BEAM,
         odds: 10,
       },
-        {
+      {
         item: ItemId.PLATE_RAW,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CHEST_TOOLS,
         odds: 15,
       },
-        {
+      {
         item: ItemId.CHEST,
         odds: 5,
       },
-        {
+      {
         item: ItemId.HMEAT,
         odds: 2,
       },
-        {
+      {
         item: ItemId.LOCK,
         odds: 4,
       },
-        {
+      {
         item: ItemId.CHEST_XL,
         odds: 1,
       }
@@ -1603,19 +1603,19 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.METAL_BAD,
         odds: 40,
       },
-        {
+      {
         item: ItemId.PLATE_RAW,
         odds: 10,
       },
-        {
+      {
         item: ItemId.IPHONE,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CHEST_XL,
         odds: 1,
       },
-        {
+      {
         item: ItemId.BAGXL,
         odds: 1,
       }
@@ -1649,47 +1649,47 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.WOOD_PLATE_PART,
         odds: 20,
       },
-        {
+      {
         item: ItemId.DECO_BOX,
         odds: 40,
       },
-        {
+      {
         item: ItemId.TRESTLE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.SAW_TOOL_PART,
         odds: 1,
       },
-        {
+      {
         item: ItemId.TABLE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CHAIR_BASIC,
         odds: 10,
       },
-        {
+      {
         item: ItemId.MECA_PARTS,
         odds: 5,
       },
-        {
+      {
         item: ItemId.DOOR,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CUTTER,
         odds: 10,
       },
-        {
+      {
         item: ItemId.SCREW,
         odds: 10,
       },
-        {
+      {
         item: ItemId.BED,
         odds: 10,
       },
-        {
+      {
         item: ItemId.WOOD2,
         odds: 5,
       }
@@ -1723,19 +1723,19 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.HMEAT,
         odds: 40,
       },
-        {
+      {
         item: ItemId.PET_RAT,
         odds: 5,
       },
-        {
+      {
         item: ItemId.MACHINE_GUN,
         odds: 10,
       },
-        {
+      {
         item: ItemId.GUN,
         odds: 25,
       },
-        {
+      {
         item: ItemId.DIGGER,
         odds: 3,
       }
@@ -1769,39 +1769,39 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.CAN,
         odds: 10,
       },
-        {
+      {
         item: ItemId.VEGETABLE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.FOOD_BAG,
         odds: 10,
       },
-        {
+      {
         item: ItemId.HMEAT,
         odds: 10,
       },
-        {
+      {
         item: ItemId.PHARMA,
         odds: 10,
       },
-        {
+      {
         item: ItemId.MEAT,
         odds: 40,
       },
-        {
+      {
         item: ItemId.COFFEE,
         odds: 70,
       },
-        {
+      {
         item: ItemId.COFFEE_MACHINE_PART,
         odds: 1,
       },
-        {
+      {
         item: ItemId.DIGGER,
         odds: 4,
       },
-        {
+      {
         item: ItemId.CHEST_FOOD,
         odds: 5,
       }
@@ -1835,79 +1835,79 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.ELECTRO_BOX,
         odds: 10,
       },
-        {
+      {
         item: ItemId.MECA_PARTS,
         odds: 10,
       },
-        {
+      {
         item: ItemId.METAL_BEAM,
         odds: 30,
       },
-        {
+      {
         item: ItemId.METAL,
         odds: 10,
       },
-        {
+      {
         item: ItemId.PLATE_RAW,
         odds: 30,
       },
-        {
+      {
         item: ItemId.SCREW,
         odds: 10,
       },
-        {
+      {
         item: ItemId.TUBE,
         odds: 20,
       },
-        {
+      {
         item: ItemId.COURROIE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.VIBR_EMPTY,
         odds: 4,
       },
-        {
+      {
         item: ItemId.TAGGER,
         odds: 8,
       },
-        {
+      {
         item: ItemId.RADIUS_MK2_PART,
         odds: 3,
       },
-        {
+      {
         item: ItemId.REPAIR_ONE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.REPAIR_KIT_PART_RAW,
         odds: 4,
       },
-        {
+      {
         item: ItemId.CHEST_TOOLS,
         odds: 20,
       },
-        {
+      {
         item: ItemId.CHEST,
         odds: 15,
       },
-        {
+      {
         item: ItemId.ENGINE_PART,
         odds: 2,
       },
-        {
+      {
         item: ItemId.PET_SNAKE,
         odds: 2,
       },
-        {
+      {
         item: ItemId.WIRE,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CHUDOL,
         odds: 2,
       },
-        {
+      {
         item: ItemId.CATBOX,
         odds: 1,
       }
@@ -1941,59 +1941,59 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.DIGGER,
         odds: 30,
       },
-        {
+      {
         item: ItemId.LAWN_PART,
         odds: 5,
       },
-        {
+      {
         item: ItemId.STAFF2,
         odds: 1,
       },
-        {
+      {
         item: ItemId.LIGHTS,
         odds: 5,
       },
-        {
+      {
         item: ItemId.JERRYGUN_PART,
         odds: 2,
       },
-        {
+      {
         item: ItemId.CHAINSAW_PART,
         odds: 1,
       },
-        {
+      {
         item: ItemId.CHEST_TOOLS,
         odds: 10,
       },
-        {
+      {
         item: ItemId.VEGETABLE_TASTY,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CONCRETE,
         odds: 3,
       },
-        {
+      {
         item: ItemId.WOOD_LOG,
         odds: 4,
       },
-        {
+      {
         item: ItemId.ELECTRO_BOX,
         odds: 10,
       },
-        {
+      {
         item: ItemId.JERRYCAN,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RSC_PACK_3,
         odds: 3,
       },
-        {
+      {
         item: ItemId.RYEBAG,
         odds: 4,
       },
-        {
+      {
         item: ItemId.ANGRYC,
         odds: 2,
       }
@@ -2027,91 +2027,91 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.RUSTINE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.ELECTRO_BOX,
         odds: 5,
       },
-        {
+      {
         item: ItemId.SAW_TOOL_PART,
         odds: 1,
       },
-        {
+      {
         item: ItemId.MECA_PARTS,
         odds: 6,
       },
-        {
+      {
         item: ItemId.MEAT,
         odds: 20,
       },
-        {
+      {
         item: ItemId.DRUG_HERO,
         odds: 5,
       },
-        {
+      {
         item: ItemId.GRENADE_EMPTY,
         odds: 20,
       },
-        {
+      {
         item: ItemId.CART_PART,
         odds: 20,
       },
-        {
+      {
         item: ItemId.WATER,
         odds: 5,
       },
-        {
+      {
         item: ItemId.PILE,
         odds: 8,
       },
-        {
+      {
         item: ItemId.JERRYCAN,
         odds: 5,
       },
-        {
+      {
         item: ItemId.REPAIR_KIT,
         odds: 8,
       },
-        {
+      {
         item: ItemId.VODKA,
         odds: 4,
       },
-        {
+      {
         item: ItemId.RHUM,
         odds: 4,
       },
-        {
+      {
         item: ItemId.JERRYGUN_PART,
         odds: 4,
       },
-        {
+      {
         item: ItemId.BED,
         odds: 2,
       },
-        {
+      {
         item: ItemId.CAN_OPENER,
         odds: 5,
       },
-        {
+      {
         item: ItemId.DRUG_RANDOM,
         odds: 2,
       },
-        {
+      {
         item: ItemId.CHAINSAW_PART,
         odds: 2,
       },
-        {
+      {
         item: ItemId.MIXERGUN_PART,
         odds: 3,
       },
-        {
+      {
         item: ItemId.DIGGER,
         odds: 4,
       },
-        {
+      {
         item: ItemId.MONEY,
         odds: 7,
       },
-        {
+      {
         item: ItemId.CHAMA,
         odds: 5,
       }
@@ -2145,27 +2145,27 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.HMEAT,
         odds: 20,
       },
-        {
+      {
         item: ItemId.CHEST_CITIZEN,
         odds: 15,
       },
-        {
+      {
         item: ItemId.CHEST_TOOLS,
         odds: 15,
       },
-        {
+      {
         item: ItemId.CHEST,
         odds: 15,
       },
-        {
+      {
         item: ItemId.PET_RAT,
         odds: 5,
       },
-        {
+      {
         item: ItemId.PET_SNAKE,
         odds: 5,
       },
-        {
+      {
         item: ItemId.TAGGER,
         odds: 5,
       }
@@ -2199,23 +2199,23 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.BONE,
         odds: 100,
       },
-        {
+      {
         item: ItemId.HMEAT,
         odds: 10,
       },
-        {
+      {
         item: ItemId.BONE_MEAT,
         odds: 10,
       },
-        {
+      {
         item: ItemId.BAG,
         odds: 4,
       },
-        {
+      {
         item: ItemId.CHEST_XL,
         odds: 2,
       },
-        {
+      {
         item: ItemId.PET_RAT,
         odds: 5,
       }
@@ -2249,51 +2249,51 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.GRENADE_EMPTY,
         odds: 30,
       },
-        {
+      {
         item: ItemId.WATERGUN_EMPTY,
         odds: 10,
       },
-        {
+      {
         item: ItemId.PILE,
         odds: 7,
       },
-        {
+      {
         item: ItemId.VIBR_EMPTY,
         odds: 5,
       },
-        {
+      {
         item: ItemId.PILEGUN_EMPTY,
         odds: 5,
       },
-        {
+      {
         item: ItemId.BIG_PGUN_PART,
         odds: 5,
       },
-        {
+      {
         item: ItemId.MUSIC_PART,
         odds: 5,
       },
-        {
+      {
         item: ItemId.GAME_BOX,
         odds: 5,
       },
-        {
+      {
         item: ItemId.WATERGUN_OPT_PART,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CHAMA,
         odds: 7,
       },
-        {
+      {
         item: ItemId.FOOD_CANDIES,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CHUDOL,
         odds: 2,
       },
-        {
+      {
         item: ItemId.HURLING_STICK,
         odds: 2,
       }
@@ -2327,59 +2327,59 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.FOOD_BAG,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CHAIR_BASIC,
         odds: 5,
       },
-        {
+      {
         item: ItemId.ELECTRO_BOX,
         odds: 3,
       },
-        {
+      {
         item: ItemId.PET_RAT,
         odds: 6,
       },
-        {
+      {
         item: ItemId.JERRYCAN,
         odds: 6,
       },
-        {
+      {
         item: ItemId.PHARMA,
         odds: 12,
       },
-        {
+      {
         item: ItemId.RUSTINE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.LAMP,
         odds: 2,
       },
-        {
+      {
         item: ItemId.WATER,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CHAIR,
         odds: 2,
       },
-        {
+      {
         item: ItemId.DOOR_CARPET,
         odds: 1,
       },
-        {
+      {
         item: ItemId.CARPET,
         odds: 5,
       },
-        {
+      {
         item: ItemId.TABLE,
         odds: 8,
       },
-        {
+      {
         item: ItemId.VEGETABLE,
         odds: 4,
       },
-        {
+      {
         item: ItemId.BED,
         odds: 3,
       }
@@ -2413,19 +2413,19 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.JERRYCAN,
         odds: 85,
       },
-        {
+      {
         item: ItemId.WATER,
         odds: 5,
       },
-        {
+      {
         item: ItemId.PLATE_RAW,
         odds: 4,
       },
-        {
+      {
         item: ItemId.JERRYGUN_PART,
         odds: 4,
       },
-        {
+      {
         item: ItemId.DRUG_WATER,
         odds: 1,
       }
@@ -2459,55 +2459,55 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.PHARMA,
         odds: 40,
       },
-        {
+      {
         item: ItemId.DRUG_HERO,
         odds: 5,
       },
-        {
+      {
         item: ItemId.DRUG_RANDOM,
         odds: 4,
       },
-        {
+      {
         item: ItemId.DISINFECT,
         odds: 5,
       },
-        {
+      {
         item: ItemId.MEAT,
         odds: 20,
       },
-        {
+      {
         item: ItemId.SPORT_ELEC_EMPTY,
         odds: 8,
       },
-        {
+      {
         item: ItemId.PET_DOG,
         odds: 3,
       },
-        {
+      {
         item: ItemId.PET_CHICK,
         odds: 3,
       },
-        {
+      {
         item: ItemId.PET_SNAKE,
         odds: 5,
       },
-        {
+      {
         item: ItemId.PET_RAT,
         odds: 20,
       },
-        {
+      {
         item: ItemId.PET_PIG,
         odds: 10,
       },
-        {
+      {
         item: ItemId.PET_CAT,
         odds: 5,
       },
-        {
+      {
         item: ItemId.XANAX,
         odds: 8,
       },
-        {
+      {
         item: ItemId.ANGRYC,
         odds: 4,
       }
@@ -2541,27 +2541,27 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.DRUG_RANDOM,
         odds: 50,
       },
-        {
+      {
         item: ItemId.BANDAGE,
         odds: 7,
       },
-        {
+      {
         item: ItemId.PHARMA,
         odds: 30,
       },
-        {
+      {
         item: ItemId.SAW_TOOL_PART,
         odds: 1,
       },
-        {
+      {
         item: ItemId.CUTCUT,
         odds: 1,
       },
-        {
+      {
         item: ItemId.RADIUS_MK2_PART,
         odds: 4,
       },
-        {
+      {
         item: ItemId.LILBOO,
         odds: 5,
       }
@@ -2595,35 +2595,35 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.CHEST_TOOLS,
         odds: 15,
       },
-        {
+      {
         item: ItemId.CHEST_FOOD,
         odds: 15,
       },
-        {
+      {
         item: ItemId.RSC_PACK_1,
         odds: 15,
       },
-        {
+      {
         item: ItemId.WOOD_PLATE_PART,
         odds: 5,
       },
-        {
+      {
         item: ItemId.HOME_BOX,
         odds: 5,
       },
-        {
+      {
         item: ItemId.RSC_PACK_2,
         odds: 5,
       },
-        {
+      {
         item: ItemId.RSC_PACK_3,
         odds: 2,
       },
-        {
+      {
         item: ItemId.BOOK_GEN_BOX,
         odds: 2,
       },
-        {
+      {
         item: ItemId.FENCE,
         odds: 1,
       }
@@ -2657,47 +2657,47 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.METAL_BEAM,
         odds: 40,
       },
-        {
+      {
         item: ItemId.MECA_PARTS,
         odds: 5,
       },
-        {
+      {
         item: ItemId.REPAIR_ONE,
         odds: 12,
       },
-        {
+      {
         item: ItemId.JERRYCAN,
         odds: 2,
       },
-        {
+      {
         item: ItemId.PLATE_RAW,
         odds: 8,
       },
-        {
+      {
         item: ItemId.COURROIE,
         odds: 5,
       },
-        {
+      {
         item: ItemId.TUBE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CHEST_TOOLS,
         odds: 6,
       },
-        {
+      {
         item: ItemId.CHEST,
         odds: 10,
       },
-        {
+      {
         item: ItemId.ENGINE_PART,
         odds: 2,
       },
-        {
+      {
         item: ItemId.TRESTLE,
         odds: 8,
       },
-        {
+      {
         item: ItemId.CONCRETE,
         odds: 7,
       }
@@ -2731,55 +2731,55 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.GUN,
         odds: 5,
       },
-        {
+      {
         item: ItemId.MACHINE_GUN,
         odds: 1,
       },
-        {
+      {
         item: ItemId.POWDER,
         odds: 10,
       },
-        {
+      {
         item: ItemId.MECANISM,
         odds: 10,
       },
-        {
+      {
         item: ItemId.ELECTRO_BOX,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CHAIN,
         odds: 10,
       },
-        {
+      {
         item: ItemId.COFFEE_MACHINE_PART,
         odds: 1,
       },
-        {
+      {
         item: ItemId.HOME_DEF,
         odds: 10,
       },
-        {
+      {
         item: ItemId.HOME_BOX_XL,
         odds: 1,
       },
-        {
+      {
         item: ItemId.REPAIR_KIT_PART_RAW,
         odds: 1,
       },
-        {
+      {
         item: ItemId.DETO,
         odds: 1,
       },
-        {
+      {
         item: ItemId.EXPLO,
         odds: 3,
       },
-        {
+      {
         item: ItemId.TAGGER,
         odds: 5,
       },
-        {
+      {
         item: ItemId.PILEGUN_UPKIT,
         odds: 1,
       }
@@ -2813,43 +2813,43 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.CHEST_FOOD,
         odds: 10,
       },
-        {
+      {
         item: ItemId.MECANISM,
         odds: 10,
       },
-        {
+      {
         item: ItemId.BED,
         odds: 10,
       },
-        {
+      {
         item: ItemId.DOOR_CARPET,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CARPET,
         odds: 10,
       },
-        {
+      {
         item: ItemId.PET_SNAKE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.LAWN_PART,
         odds: 3,
       },
-        {
+      {
         item: ItemId.CHEST,
         odds: 7,
       },
-        {
+      {
         item: ItemId.COFFEE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.TABLE,
         odds: 2,
       },
-        {
+      {
         item: ItemId.LILBOO,
         odds: 2,
       }
@@ -2883,27 +2883,27 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.GUN,
         odds: 10,
       },
-        {
+      {
         item: ItemId.MACHINE_GUN,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CHEST_FOOD,
         odds: 10,
       },
-        {
+      {
         item: ItemId.FENCE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.COFFEE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RSC_PACK_3,
         odds: 2,
       },
-        {
+      {
         item: ItemId.WIRE,
         odds: 4,
       }
@@ -2937,39 +2937,39 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.BOOK_GEN_LETTER,
         odds: 20,
       },
-        {
+      {
         item: ItemId.BOOK_GEN_BOX,
         odds: 20,
       },
-        {
+      {
         item: ItemId.RP_LETTER,
         odds: 20,
       },
-        {
+      {
         item: ItemId.POSTAL_BOX_XL,
         odds: 6,
       },
-        {
+      {
         item: ItemId.POSTAL_BOX,
         odds: 20,
       },
-        {
+      {
         item: ItemId.MONEY,
         odds: 3,
       },
-        {
+      {
         item: ItemId.CARDS,
         odds: 1,
       },
-        {
+      {
         item: ItemId.CHAIR_BASIC,
         odds: 3,
       },
-        {
+      {
         item: ItemId.TABLE,
         odds: 3,
       },
-        {
+      {
         item: ItemId.POSTAL_BOX_01,
         odds: 3,
           event: GameEvent.Christmas
@@ -3004,27 +3004,27 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.CHEST,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CHEST_TOOLS,
         odds: 40,
       },
-        {
+      {
         item: ItemId.CHEST_CITIZEN,
         odds: 60,
       },
-        {
+      {
         item: ItemId.CHEST_HERO,
         odds: 2,
       },
-        {
+      {
         item: ItemId.MONEY,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CHEST_XL,
         odds: 2,
       },
-        {
+      {
         item: ItemId.CATBOX,
         odds: 1,
       }
@@ -3058,15 +3058,15 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.CONCRETE,
         odds: 40,
       },
-        {
+      {
         item: ItemId.BGRENADE_EMPTY,
         odds: 10,
       },
-        {
+      {
         item: ItemId.GUN,
         odds: 5,
       },
-        {
+      {
         item: ItemId.MACHINE_GUN,
         odds: 3,
       }
@@ -3100,43 +3100,43 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.RP_SHEETS,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RP_MANUAL,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RP_SCROLL,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RP_BOOK2,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RP_BOOK,
         odds: 10,
       },
-        {
+      {
         item: ItemId.PET_RAT,
         odds: 2,
       },
-        {
+      {
         item: ItemId.CIGS,
         odds: 2,
       },
-        {
+      {
         item: ItemId.LAMP,
         odds: 1,
       },
-        {
+      {
         item: ItemId.CHAIR_BASIC,
         odds: 10,
       },
-        {
+      {
         item: ItemId.DECO_BOX,
         odds: 100,
       },
-        {
+      {
         item: ItemId.LENS,
         odds: 2,
       }
@@ -3170,55 +3170,55 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.CAN,
         odds: 10,
       },
-        {
+      {
         item: ItemId.LIGHTS,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CIGS,
         odds: 10,
       },
-        {
+      {
         item: ItemId.DOOR_CARPET,
         odds: 3,
       },
-        {
+      {
         item: ItemId.DRUG,
         odds: 10,
       },
-        {
+      {
         item: ItemId.JERRYCAN,
         odds: 10,
       },
-        {
+      {
         item: ItemId.FOOD_BAR1,
         odds: 10,
       },
-        {
+      {
         item: ItemId.FOOD_NOODLES,
         odds: 10,
       },
-        {
+      {
         item: ItemId.SPICES,
         odds: 5,
       },
-        {
+      {
         item: ItemId.MONEY,
         odds: 10,
       },
-        {
+      {
         item: ItemId.POISON_PART,
         odds: 1,
       },
-        {
+      {
         item: ItemId.FOOD_CANDIES,
         odds: 2,
       },
-        {
+      {
         item: ItemId.CHAMA,
         odds: 2,
       },
-        {
+      {
         item: ItemId.DIODE,
         odds: 5,
       }
@@ -3252,23 +3252,23 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.BOOK_GEN_LETTER,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RP_MANUAL,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RP_SCROLL,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RP_SHEETS,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RP_LETTER,
         odds: 10,
       },
-        {
+      {
         item: ItemId.MECANISM,
         odds: 10,
       }
@@ -3302,47 +3302,47 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.CHEST_FOOD,
         odds: 60,
       },
-        {
+      {
         item: ItemId.CHEST_TOOLS,
         odds: 20,
       },
-        {
+      {
         item: ItemId.WRENCH,
         odds: 5,
       },
-        {
+      {
         item: ItemId.GAME_BOX,
         odds: 7,
       },
-        {
+      {
         item: ItemId.COURROIE,
         odds: 1,
       },
-        {
+      {
         item: ItemId.RHUM,
         odds: 4,
       },
-        {
+      {
         item: ItemId.PLATE_RAW,
         odds: 5,
       },
-        {
+      {
         item: ItemId.RADIO_OFF,
         odds: 2,
       },
-        {
+      {
         item: ItemId.JERRYCAN,
         odds: 5,
       },
-        {
+      {
         item: ItemId.RADIUS_MK2_PART,
         odds: 5,
       },
-        {
+      {
         item: ItemId.MECANISM,
         odds: 1,
       },
-        {
+      {
         item: ItemId.WIRE,
         odds: 3,
       }
@@ -3376,35 +3376,35 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.HMEAT,
         odds: 80,
       },
-        {
+      {
         item: ItemId.BANDAGE,
         odds: 5,
       },
-        {
+      {
         item: ItemId.PILE,
         odds: 20,
       },
-        {
+      {
         item: ItemId.PET_RAT,
         odds: 5,
       },
-        {
+      {
         item: ItemId.WATERGUN_EMPTY,
         odds: 20,
       },
-        {
+      {
         item: ItemId.WATERGUN_OPT_PART,
         odds: 2,
       },
-        {
+      {
         item: ItemId.GAME_BOX,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CYANURE,
         odds: 5,
       },
-        {
+      {
         item: ItemId.LENS,
         odds: 4,
       }
@@ -3438,63 +3438,63 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.DOOR,
         odds: 8,
       },
-        {
+      {
         item: ItemId.CHAIR_BASIC,
         odds: 15,
       },
-        {
+      {
         item: ItemId.ELECTRO_BOX,
         odds: 15,
       },
-        {
+      {
         item: ItemId.MECANISM,
         odds: 15,
       },
-        {
+      {
         item: ItemId.RP_MANUAL,
         odds: 1,
       },
-        {
+      {
         item: ItemId.RP_SHEETS,
         odds: 1,
       },
-        {
+      {
         item: ItemId.CIGS,
         odds: 1,
       },
-        {
+      {
         item: ItemId.FOOD_ARMAG,
         odds: 1,
       },
-        {
+      {
         item: ItemId.SAFE,
         odds: 1,
       },
-        {
+      {
         item: ItemId.MACHINE_1,
         odds: 2,
       },
-        {
+      {
         item: ItemId.MACHINE_2,
         odds: 2,
       },
-        {
+      {
         item: ItemId.MACHINE_3,
         odds: 2,
       },
-        {
+      {
         item: ItemId.MONEY,
         odds: 10,
       },
-        {
+      {
         item: ItemId.IPHONE,
         odds: 2,
       },
-        {
+      {
         item: ItemId.WATER_CAN_EMPTY,
         odds: 1,
       },
-        {
+      {
         item: ItemId.TABLE,
         odds: 1,
       }
@@ -3528,87 +3528,87 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.CAN,
         odds: 40,
       },
-        {
+      {
         item: ItemId.LOCK,
         odds: 7,
       },
-        {
+      {
         item: ItemId.BED,
         odds: 5,
       },
-        {
+      {
         item: ItemId.TABLE,
         odds: 8,
       },
-        {
+      {
         item: ItemId.PILE,
         odds: 20,
       },
-        {
+      {
         item: ItemId.PHARMA,
         odds: 12,
       },
-        {
+      {
         item: ItemId.SCREW,
         odds: 9,
       },
-        {
+      {
         item: ItemId.CHEST_CITIZEN,
         odds: 20,
       },
-        {
+      {
         item: ItemId.LAMP,
         odds: 7,
       },
-        {
+      {
         item: ItemId.REPAIR_KIT,
         odds: 9,
       },
-        {
+      {
         item: ItemId.CARPET,
         odds: 4,
       },
-        {
+      {
         item: ItemId.DOOR_CARPET,
         odds: 7,
       },
-        {
+      {
         item: ItemId.CHAIR,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CHAIR_BASIC,
         odds: 9,
       },
-        {
+      {
         item: ItemId.CAN_OPENER,
         odds: 7,
       },
-        {
+      {
         item: ItemId.PET_DOG,
         odds: 2,
       },
-        {
+      {
         item: ItemId.VODKA,
         odds: 2,
       },
-        {
+      {
         item: ItemId.RHUM,
         odds: 2,
       },
-        {
+      {
         item: ItemId.MIXERGUN_PART,
         odds: 1,
       },
-        {
+      {
         item: ItemId.SPORT_ELEC_EMPTY,
         odds: 4,
       },
-        {
+      {
         item: ItemId.BQUIES,
         odds: 1,
       },
-        {
+      {
         item: ItemId.CDELVI,
         odds: 1,
       }
@@ -3642,63 +3642,63 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.MECA_PARTS,
         odds: 2,
       },
-        {
+      {
         item: ItemId.SAW_TOOL_PART,
         odds: 1,
       },
-        {
+      {
         item: ItemId.ELECTRO_BOX,
         odds: 5,
       },
-        {
+      {
         item: ItemId.TRESTLE,
         odds: 15,
       },
-        {
+      {
         item: ItemId.METAL_BEAM,
         odds: 100,
       },
-        {
+      {
         item: ItemId.PLATE_RAW,
         odds: 40,
       },
-        {
+      {
         item: ItemId.CHEST,
         odds: 20,
       },
-        {
+      {
         item: ItemId.REPAIR_KIT,
         odds: 40,
       },
-        {
+      {
         item: ItemId.WRENCH,
         odds: 10,
       },
-        {
+      {
         item: ItemId.SCREW,
         odds: 12,
       },
-        {
+      {
         item: ItemId.LOCK,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CHEST_XL,
         odds: 1,
       },
-        {
+      {
         item: ItemId.POCKET_BELT,
         odds: 3,
       },
-        {
+      {
         item: ItemId.RADIO_OFF,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CONCRETE,
         odds: 40,
       },
-        {
+      {
         item: ItemId.FENCE,
         odds: 8,
       }
@@ -3732,11 +3732,11 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.JERRYCAN,
         odds: 2,
       },
-        {
+      {
         item: ItemId.WATER,
         odds: 30,
       },
-        {
+      {
         item: ItemId.WATER_CUP_PART,
         odds: 10,
       }
@@ -3770,7 +3770,7 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.JERRYCAN,
         odds: 20,
       },
-        {
+      {
         item: ItemId.MECA_PARTS,
         odds: 1,
       }
@@ -3804,35 +3804,35 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.CONCRETE_WALL,
         odds: 40,
       },
-        {
+      {
         item: ItemId.MECA_PARTS,
         odds: 5,
       },
-        {
+      {
         item: ItemId.REPAIR_ONE,
         odds: 5,
       },
-        {
+      {
         item: ItemId.PLATE_RAW,
         odds: 10,
       },
-        {
+      {
         item: ItemId.COURROIE,
         odds: 3,
       },
-        {
+      {
         item: ItemId.TUBE,
         odds: 8,
       },
-        {
+      {
         item: ItemId.CHEST,
         odds: 9,
       },
-        {
+      {
         item: ItemId.TRESTLE,
         odds: 5,
       },
-        {
+      {
         item: ItemId.ENGINE_PART,
         odds: 1,
       }
@@ -3866,51 +3866,51 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.VEGETABLE,
         odds: 35,
       },
-        {
+      {
         item: ItemId.PET_SNAKE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.PET_PIG,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CHAIR_BASIC,
         odds: 5,
       },
-        {
+      {
         item: ItemId.WOOD2,
         odds: 10,
       },
-        {
+      {
         item: ItemId.GAME_BOX,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CUTCUT,
         odds: 5,
       },
-        {
+      {
         item: ItemId.LAWN_PART,
         odds: 10,
       },
-        {
+      {
         item: ItemId.WATERGUN_OPT_PART,
         odds: 2,
       },
-        {
+      {
         item: ItemId.WATERGUN_EMPTY,
         odds: 20,
       },
-        {
+      {
         item: ItemId.JERRYGUN_PART,
         odds: 2,
       },
-        {
+      {
         item: ItemId.DIGGER,
         odds: 10,
       },
-        {
+      {
         item: ItemId.RYEBAG,
         odds: 4,
       }
@@ -3944,39 +3944,39 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.GUN,
         odds: 30,
       },
-        {
+      {
         item: ItemId.MACHINE_GUN,
         odds: 10,
       },
-        {
+      {
         item: ItemId.KNIFE,
         odds: 20,
       },
-        {
+      {
         item: ItemId.CHAINSAW_PART,
         odds: 2,
       },
-        {
+      {
         item: ItemId.BIG_PGUN_PART,
         odds: 5,
       },
-        {
+      {
         item: ItemId.PILEGUN_EMPTY,
         odds: 20,
       },
-        {
+      {
         item: ItemId.CUTCUT,
         odds: 20,
       },
-        {
+      {
         item: ItemId.WATERGUN_EMPTY,
         odds: 20,
       },
-        {
+      {
         item: ItemId.WATERGUN_OPT_PART,
         odds: 5,
       },
-        {
+      {
         item: ItemId.DETO,
         odds: 5,
       }
@@ -4010,11 +4010,11 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.CHEST_TOOLS,
         odds: 40,
       },
-        {
+      {
         item: ItemId.CHEST_CITIZEN,
         odds: 60,
       },
-        {
+      {
         item: ItemId.CHEST_FOOD,
         odds: 60,
       }
@@ -4048,75 +4048,75 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.CHEST_CITIZEN,
         odds: 3,
       },
-        {
+      {
         item: ItemId.CHEST_HERO,
         odds: 30,
       },
-        {
+      {
         item: ItemId.VODKA,
         odds: 7,
       },
-        {
+      {
         item: ItemId.RHUM,
         odds: 7,
       },
-        {
+      {
         item: ItemId.LAMP,
         odds: 15,
       },
-        {
+      {
         item: ItemId.LIGHTS,
         odds: 7,
       },
-        {
+      {
         item: ItemId.BANDAGE,
         odds: 3,
       },
-        {
+      {
         item: ItemId.CHEST,
         odds: 5,
       },
-        {
+      {
         item: ItemId.COFFEE,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CHAMA_TASTY,
         odds: 2,
       },
-        {
+      {
         item: ItemId.RP_LETTER,
         odds: 5,
       },
-        {
+      {
         item: ItemId.HOME_BOX,
         odds: 5,
       },
-        {
+      {
         item: ItemId.XANAX,
         odds: 3,
       },
-        {
+      {
         item: ItemId.WATERGUN_OPT_PART,
         odds: 1,
       },
-        {
+      {
         item: ItemId.CHEST_FOOD,
         odds: 15,
       },
-        {
+      {
         item: ItemId.DOOR_CARPET,
         odds: 1,
       },
-        {
+      {
         item: ItemId.BANNED_NOTE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.BAGXL,
         odds: 1,
       },
-        {
+      {
         item: ItemId.LSD,
         odds: 1,
       }
@@ -4150,39 +4150,39 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.PHARMA,
         odds: 100,
       },
-        {
+      {
         item: ItemId.DRUG,
         odds: 10,
       },
-        {
+      {
         item: ItemId.CYANURE,
         odds: 10,
       },
-        {
+      {
         item: ItemId.DRUG_HERO,
         odds: 4,
       },
-        {
+      {
         item: ItemId.DISINFECT,
         odds: 6,
       },
-        {
+      {
         item: ItemId.XANAX,
         odds: 10,
       },
-        {
+      {
         item: ItemId.DRUG_RANDOM,
         odds: 3,
       },
-        {
+      {
         item: ItemId.DIGGER,
         odds: 5,
       },
-        {
+      {
         item: ItemId.BQUIES,
         odds: 2,
       },
-        {
+      {
         item: ItemId.LSD,
         odds: 1,
       }
@@ -4216,35 +4216,35 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.VODKA,
         odds: 12,
       },
-        {
+      {
         item: ItemId.RHUM,
         odds: 15,
       },
-        {
+      {
         item: ItemId.MEAT,
         odds: 8,
       },
-        {
+      {
         item: ItemId.DRUG,
         odds: 4,
       },
-        {
+      {
         item: ItemId.PET_RAT,
         odds: 5,
       },
-        {
+      {
         item: ItemId.JERRYCAN,
         odds: 3,
       },
-        {
+      {
         item: ItemId.CHAIR_BASIC,
         odds: 4,
       },
-        {
+      {
         item: ItemId.FOOD_BAG,
         odds: 5,
       },
-        {
+      {
         item: ItemId.CAN_OPENER,
         odds: 4,
       }
@@ -4278,151 +4278,151 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.BBPLAN_U,
         odds: 14,
       },
-        {
+      {
         item: ItemId.BBPLAN_R,
         odds: 8,
       },
-        {
+      {
         item: ItemId.BBPLAN_E,
         odds: 7,
       },
-        {
+      {
         item: ItemId.WATER,
         odds: 4,
       },
-        {
+      {
         item: ItemId.CONCRETE_WALL,
         odds: 21,
       },
-        {
+      {
         item: ItemId.WOOD_BAD,
         odds: 4,
       },
-        {
+      {
         item: ItemId.KALACH_01,
         odds: 2,
       },
-        {
+      {
         item: ItemId.MECA_PARTS,
         odds: 11,
       },
-        {
+      {
         item: ItemId.WOOD2,
         odds: 6,
       },
-        {
+      {
         item: ItemId.METAL,
         odds: 8,
       },
-        {
+      {
         item: ItemId.DETO,
         odds: 1,
       },
-        {
+      {
         item: ItemId.MAGNETICKEY,
         odds: 9,
       },
-        {
+      {
         item: ItemId.MONEY,
         odds: 1,
       },
-        {
+      {
         item: ItemId.PILE,
         odds: 2,
       },
-        {
+      {
         item: ItemId.BIG_PGUN_EMPTY,
         odds: 3,
       },
-        {
+      {
         item: ItemId.GUN,
         odds: 5,
       },
-        {
+      {
         item: ItemId.WOOD_LOG,
         odds: 8,
       },
-        {
+      {
         item: ItemId.WATER_CUP_PART,
         odds: 3,
       },
-        {
+      {
         item: ItemId.METAL_BAD,
         odds: 2,
       },
-        {
+      {
         item: ItemId.METAL_BEAM,
         odds: 3,
       },
-        {
+      {
         item: ItemId.ELECTRO_BOX,
         odds: 1,
       },
-        {
+      {
         item: ItemId.MACHINE_GUN,
         odds: 1,
       },
-        {
+      {
         item: ItemId.FLARE,
         odds: 1,
       },
-        {
+      {
         item: ItemId.WOOD_PLATE,
         odds: 1,
       },
-        {
+      {
         item: ItemId.CONCRETE,
         odds: 4,
       },
-        {
+      {
         item: ItemId.RSC_PACK_1,
         odds: 4,
       },
-        {
+      {
         item: ItemId.RSC_PACK_2,
         odds: 2,
       },
-        {
+      {
         item: ItemId.RSC_PACK_3,
         odds: 1,
       },
-        {
+      {
         item: ItemId.WOOD_BEAM,
         odds: 1,
       },
-        {
+      {
         item: ItemId.RLAUNC,
         odds: 1,
       },
-        {
+      {
         item: ItemId.TAGGER,
         odds: 1,
       },
-        {
+      {
         item: ItemId.BIG_PGUN,
         odds: 1,
       },
-        {
+      {
         item: ItemId.BIG_PGUN_PART,
         odds: 4,
       },
-        {
+      {
         item: ItemId.BUMPKEY,
         odds: 3,
       },
-        {
+      {
         item: ItemId.REPAIR_KIT_PART_RAW,
         odds: 2,
       },
-        {
+      {
         item: ItemId.CLASSICKEY,
         odds: 3,
       },
-        {
+      {
         item: ItemId.ALARM_OFF,
         odds: 3,
       },
-        {
+      {
         item: ItemId.INFECT_POISON_PART,
         odds: 10,
           event: GameEvent.Infective
@@ -4457,131 +4457,131 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.HBPLAN_U,
         odds: 6900,
       },
-        {
+      {
         item: ItemId.HBPLAN_R,
         odds: 4600,
       },
-        {
+      {
         item: ItemId.HBPLAN_E,
         odds: 2300,
       },
-        {
+      {
         item: ItemId.WATER,
         odds: 9000,
       },
-        {
+      {
         item: ItemId.BUMPKEY,
         odds: 3000,
       },
-        {
+      {
         item: ItemId.CLASSICKEY,
         odds: 3000,
       },
-        {
+      {
         item: ItemId.CAN,
         odds: 6000,
       },
-        {
+      {
         item: ItemId.FOOD_BAG,
         odds: 6000,
       },
-        {
+      {
         item: ItemId.CHAIR_BASIC,
         odds: 3000,
       },
-        {
+      {
         item: ItemId.TABLE,
         odds: 2000,
       },
-        {
+      {
         item: ItemId.FOOD_BAR2,
         odds: 4000,
       },
-        {
+      {
         item: ItemId.SPICES,
         odds: 3000,
       },
-        {
+      {
         item: ItemId.BED,
         odds: 2000,
       },
-        {
+      {
         item: ItemId.CHEST_FOOD,
         odds: 3000,
       },
-        {
+      {
         item: ItemId.CONCRETE_WALL,
         odds: 3000,
       },
-        {
+      {
         item: ItemId.BAG,
         odds: 3000,
       },
-        {
+      {
         item: ItemId.FOOD_NOODLES,
         odds: 4000,
       },
-        {
+      {
         item: ItemId.FOOD_PIMS,
         odds: 3000,
       },
-        {
+      {
         item: ItemId.FOOD_BAR1,
         odds: 3000,
       },
-        {
+      {
         item: ItemId.FOOD_BAR3,
         odds: 3000,
       },
-        {
+      {
         item: ItemId.FOOD_CHICK,
         odds: 3000,
       },
-        {
+      {
         item: ItemId.DISTRI,
         odds: 2000,
       },
-        {
+      {
         item: ItemId.RLAUNC,
         odds: 2000,
       },
-        {
+      {
         item: ItemId.DISH,
         odds: 3000,
       },
-        {
+      {
         item: ItemId.FOOD_SANDW,
         odds: 3000,
       },
-        {
+      {
         item: ItemId.BUREAU,
         odds: 2000,
       },
-        {
+      {
         item: ItemId.DECO_BOX,
         odds: 4000,
       },
-        {
+      {
         item: ItemId.LAMP,
         odds: 4000,
       },
-        {
+      {
         item: ItemId.TEDDY_01,
         odds: 2,
       },
-        {
+      {
         item: ItemId.TEDDY,
         odds: 2000,
       },
-        {
+      {
         item: ItemId.CARPET,
         odds: 2000,
       },
-        {
+      {
         item: ItemId.GAME_BOX,
         odds: 2000,
       },
-        {
+      {
         item: ItemId.INFECT_POISON_PART,
         odds: 5000,
           event: GameEvent.Infective
@@ -4616,103 +4616,103 @@ export const ruins: Record<RuinId, Ruin> = {
         item: ItemId.MBPLAN_U,
         odds: 20,
       },
-        {
+      {
         item: ItemId.MBPLAN_R,
         odds: 12,
       },
-        {
+      {
         item: ItemId.MBPLAN_E,
         odds: 5,
       },
-        {
+      {
         item: ItemId.WATER,
         odds: 9,
       },
-        {
+      {
         item: ItemId.DRUG_RANDOM,
         odds: 10,
       },
-        {
+      {
         item: ItemId.OUT_DEF,
         odds: 14,
       },
-        {
+      {
         item: ItemId.DRUG,
         odds: 3,
       },
-        {
+      {
         item: ItemId.XANAX,
         odds: 16,
       },
-        {
+      {
         item: ItemId.WATER_CAN_EMPTY,
         odds: 4,
       },
-        {
+      {
         item: ItemId.MAGNETICKEY,
         odds: 9,
       },
-        {
+      {
         item: ItemId.PC,
         odds: 2,
       },
-        {
+      {
         item: ItemId.DRUG_WATER,
         odds: 3,
       },
-        {
+      {
         item: ItemId.DISTRI,
         odds: 2,
       },
-        {
+      {
         item: ItemId.DISINFECT,
         odds: 6,
       },
-        {
+      {
         item: ItemId.PHARMA,
         odds: 3,
       },
-        {
+      {
         item: ItemId.CHAINSAW_EMPTY,
         odds: 2,
       },
-        {
+      {
         item: ItemId.BUREAU,
         odds: 1,
       },
-        {
+      {
         item: ItemId.CYANURE,
         odds: 4,
       },
-        {
+      {
         item: ItemId.CLASSICKEY,
         odds: 3,
       },
-        {
+      {
         item: ItemId.WATER_CAN_3,
         odds: 2,
       },
-        {
+      {
         item: ItemId.WATER_CAN_2,
         odds: 2,
       },
-        {
+      {
         item: ItemId.WATER_CAN_1,
         odds: 3,
       },
-        {
+      {
         item: ItemId.BED,
         odds: 2,
       },
-        {
+      {
         item: ItemId.BUMPKEY,
         odds: 3,
       },
-        {
+      {
         item: ItemId.VAGOUL,
         odds: 3,
       },
-        {
+      {
         item: ItemId.INFECT_POISON_PART,
         odds: 15,
           event: GameEvent.Infective
@@ -4743,7 +4743,66 @@ export const ruins: Record<RuinId, Ruin> = {
     },
     explorable: false,
     drops: [
-      
+      {
+        item: ItemId.DRUG,
+        odds: 16.7,
+      },
+      {
+        item: ItemId.WATER,
+        odds: 15.2,
+      },
+      {
+        item: ItemId.SHOE,
+        odds: 12.1,
+      },
+      {
+        item: ItemId.METAL_BAD,
+        odds: 9.1,
+      },
+      {
+        item: ItemId.FOOD_BAG,
+        odds: 5.7,
+      },
+      {
+        item: ItemId.FLAG,
+        odds: 5.7,
+      },
+      {
+        item: ItemId.QUANTUM,
+        odds: 5.7,
+      },
+      {
+        item: ItemId.SPORT_ELEC,
+        odds: 4.6,
+      },
+      {
+        item: ItemId.PHARMA,
+        odds: 4.6,
+      },
+      {
+        item: ItemId.TASER,
+        odds: 4.6,
+      },
+      {
+        item: ItemId.BIKE_PART,
+        odds: 3,
+      },
+      {
+        item: ItemId.DRUG_HERO,
+        odds: 3,
+      },
+      {
+        item: ItemId.COFFEE,
+        odds: 1.5,
+      },
+      {
+        item: ItemId.METAL_BEAM,
+        odds: 1.5,
+      },
+      {
+        item: ItemId.POCKET_BELT,
+        odds: 1.5,
+      }
     ]
   },
   [RuinId.BURIED_BUILDING]: {

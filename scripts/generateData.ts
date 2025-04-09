@@ -10,6 +10,7 @@ import {
 import { exportActionEffects } from "./exportActionEffects";
 import { overwriteItemData } from "./itemOverwrites";
 import { overwriteRecipeData } from "./recipeOverwrites";
+import { overwriteRuinData } from "./ruinOverwrites";
 
 const CONFIG = {
   callApi: false,
@@ -35,6 +36,8 @@ export enum ItemActionCondition {
   Technician,
   BoxOpener,
   OnARuin,
+  Thirsty,
+  Dehydrated,
 }
 
 export enum ItemActionEffectType {
@@ -1179,7 +1182,7 @@ type ExportedZoneBuildingData = {
   explorable: number;
 };
 
-type Ruin = {
+export type Ruin = {
   id: number;
   name: Record<Lang, string>;
   description: Record<Lang, string>;
@@ -1223,7 +1226,7 @@ const sanitizeRuinId = (building: Ruin) => {
 };
 
 const generateRuins = (items: Record<number, Item>) => {
-  const buildings: Record<number, Ruin> = {};
+  const ruins: Record<number, Ruin> = {};
 
   languages.forEach((lang) => {
     const filePath = path.join(
@@ -1235,10 +1238,10 @@ const generateRuins = (items: Record<number, Item>) => {
       fs.readFileSync(filePath, "utf-8")
     ) as Record<string, ExportedZoneBuildingData>;
 
-    Object.values(data).forEach((buildingData) => {
-      if (!buildings[buildingData.id]) {
-        buildings[buildingData.id] = {
-          id: buildingData.id,
+    Object.values(data).forEach((ruinData) => {
+      if (!ruins[ruinData.id]) {
+        ruins[ruinData.id] = {
+          id: ruinData.id,
           name: {} as Record<Lang, string>,
           description: {} as Record<Lang, string>,
           icon: "",
@@ -1246,27 +1249,27 @@ const generateRuins = (items: Record<number, Item>) => {
           spawnChance: 0,
           emptyChance: 0,
           km: {
-            min: buildingData.km_min,
-            max: buildingData.km_max,
+            min: ruinData.km_min,
+            max: ruinData.km_max,
           },
-          explorable: buildingData.explorable === 1,
+          explorable: ruinData.explorable === 1,
           drops: [],
         };
       }
 
-      const building = buildings[buildingData.id];
+      const building = ruins[ruinData.id];
       if (!building) {
-        throw new Error(`Building with id ${buildingData.id} not found`);
+        throw new Error(`Ruin with id ${ruinData.id} not found`);
       }
-      building.name[lang] = buildingData.name.replace(/"/g, '\\"');
-      building.description[lang] = buildingData.desc.replace(/"/g, '\\"');
+      building.name[lang] = ruinData.name.replace(/"/g, '\\"');
+      building.description[lang] = ruinData.desc.replace(/"/g, '\\"');
     });
   });
 
-  // Export zone buildings data from the main repo
+  // Export ruin data from the main repo
   execSync("php scripts/exportZoneBuildings.php", { stdio: "inherit" });
 
-  const zoneBuildingsData = JSON.parse(
+  const ruinsData = JSON.parse(
     fs.readFileSync(path.join(__dirname, "data", "zoneBuildings.json"), "utf-8")
   ) as Record<
     string,
@@ -1280,21 +1283,21 @@ const generateRuins = (items: Record<number, Item>) => {
     }
   >;
 
-  Object.values(zoneBuildingsData).forEach((buildingData) => {
-    const germanName = buildingData.label;
+  Object.values(ruinsData).forEach((ruinData) => {
+    const germanName = ruinData.label;
 
-    const building = Object.values(buildings).find(
+    const ruin = Object.values(ruins).find(
       (b) => b.name.de === germanName
     );
-    if (!building) {
-      throw new Error(`Building with name ${germanName} not found`);
+    if (!ruin) {
+      throw new Error(`Ruin with name ${germanName} not found`);
     }
 
-    building.icon = buildingData.icon;
-    building.campingModifier = buildingData.camping;
-    building.spawnChance = buildingData.chance;
-    building.emptyChance = buildingData.empty;
-    building.drops = Object.entries(buildingData.drops).map(
+    ruin.icon = ruinData.icon;
+    ruin.campingModifier = ruinData.camping;
+    ruin.spawnChance = ruinData.chance;
+    ruin.emptyChance = ruinData.empty;
+    ruin.drops = Object.entries(ruinData.drops).map(
       ([itemId, dropData]) => {
         const item = getItemByUid(items, itemId);
 
@@ -1313,9 +1316,9 @@ const generateRuins = (items: Record<number, Item>) => {
   ) as Record<string, JSONRuinPrototypeObject>;
 
   Object.values(mhRuinsData).forEach((ruinData) => {
-    const ruin = buildings[ruinData.id ?? -99];
+    const ruin = ruins[ruinData.id ?? -99];
     if (!ruin) {
-      throw new Error(`Building with id ${ruinData.id} not found`);
+      throw new Error(`Ruin with id ${ruinData.id} not found`);
     }
 
     ruin.icon = /ruin\/(.+)\..+\.gif/.exec(ruinData.img ?? "")?.[1] ?? "";
@@ -1324,15 +1327,17 @@ const generateRuins = (items: Record<number, Item>) => {
     }
   });
 
-  const buildingIdEnum = `export enum RuinId {
-  ${Object.values(buildings)
-    .map((building) => `${sanitizeRuinId(building)} = ${building.id}`)
+  overwriteRuinData(ruins);
+
+  const ruinIdEnum = `export enum RuinId {
+  ${Object.values(ruins)
+    .map((ruin) => `${sanitizeRuinId(ruin)} = ${ruin.id}`)
     .join(",\n  ")}
 }`;
 
   const types = `import { ItemId } from './items';
 
-${buildingIdEnum}
+${ruinIdEnum}
 
 export type Ruin = {
   id: RuinId;
@@ -1355,7 +1360,7 @@ export type Ruin = {
 };`;
 
   const ruinsObject = `export const ruins: Record<RuinId, Ruin> = {
-  ${Object.values(buildings)
+  ${Object.values(ruins)
     .map(
       (building) => `[RuinId.${sanitizeRuinId(building)}]: {
     id: RuinId.${sanitizeRuinId(building)},
@@ -1395,7 +1400,7 @@ export type Ruin = {
           }
       }`
         )
-        .join(",\n        ")}
+        .join(",\n      ")}
     ]
   }`
     )

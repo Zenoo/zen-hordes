@@ -64,6 +64,8 @@ declare global {
     Technician,
     BoxOpener,
     OnARuin,
+    Thirsty,
+    Dehydrated,
   }
 
   const enum ItemActionEffectType {

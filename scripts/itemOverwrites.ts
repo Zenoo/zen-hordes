@@ -1,7 +1,12 @@
 // These overwrites are needed since
 // the source does not contain accurate data
 
-import { Item, ItemActionCondition, ItemActionEffectType, ItemActionType } from "./generateData";
+import {
+  Item,
+  ItemActionCondition,
+  ItemActionEffectType,
+  ItemActionType,
+} from "./generateData";
 
 const survivalistBookChances = [
   { period: "1-4", odds: 100 },
@@ -46,41 +51,6 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         ];
         break;
       }
-      case "cello_box_#00": {
-        // Open box
-        item.actions.push({
-          type: ItemActionType.Open,
-          conditions: [],
-          effects: [
-            {
-              type: ItemActionEffectType.CreateItem,
-              value: "gun_#00",
-              odds: 1,
-            },
-            {
-              type: ItemActionEffectType.CreateItem,
-              value: "machine_gun_#00",
-              odds: 1,
-            },
-            {
-              type: ItemActionEffectType.CreateItem,
-              value: "knife_#00",
-              odds: 1,
-            },
-            {
-              type: ItemActionEffectType.CreateItem,
-              value: "money_#00",
-              odds: 1,
-            },
-            {
-              type: ItemActionEffectType.CreateItem,
-              value: "pet_cat_#00",
-              odds: 1,
-            },
-          ],
-        });
-        break;
-      }
       case "photo_4_#00": {
         // Use
         item.actions.push({
@@ -94,8 +64,8 @@ export const overwriteItemData = (items: Record<string, Item>) => {
             {
               type: ItemActionEffectType.GetEscapeTime,
               value: 180,
-              odds: 99
-            }
+              odds: 99,
+            },
           ],
         });
 
@@ -114,20 +84,48 @@ export const overwriteItemData = (items: Record<string, Item>) => {
       }
       case "quantum_#00": {
         // Use
-        item.actions.push({
-          type: ItemActionType.Use,
-          conditions: [],
-          effects: [
+        item.actions.push(
+          ...[
             {
-              type: ItemActionEffectType.EP,
-              value: 8
+              type: ItemActionType.Use,
+              conditions: [],
+              effects: [
+                {
+                  type: ItemActionEffectType.EP,
+                  value: 8,
+                },
+                {
+                  type: ItemActionEffectType.AddStatus,
+                  value: "thirst1",
+                },
+              ],
             },
             {
-              type: ItemActionEffectType.AddStatus,
-              value: "thirst1",
-            }
-          ],
-        });
+              type: ItemActionType.Use,
+              conditions: [ItemActionCondition.Thirsty],
+              effects: [
+                {
+                  type: ItemActionEffectType.EP,
+                  value: 8,
+                },
+                {
+                  type: ItemActionEffectType.AddStatus,
+                  value: "thirst2",
+                },
+              ],
+            },
+            {
+              type: ItemActionType.Use,
+              conditions: [ItemActionCondition.Dehydrated],
+              effects: [
+                {
+                  type: ItemActionEffectType.EP,
+                  value: 8,
+                },
+              ],
+            },
+          ]
+        );
         break;
       }
       case "soccer_#00": {
@@ -145,9 +143,16 @@ export const overwriteItemData = (items: Record<string, Item>) => {
               type: ItemActionEffectType.CreateItem,
               value: "soccer_part_#00",
               odds: 7,
-            }
+            },
           ],
         });
+        // info
+        item.info = {
+          en: "Usable once a day. Not usable if exhausted.",
+          fr: "Utilisable une fois par jour. Non utilisable si épuisé.",
+          de: "Einmal täglich verwendbar. Nicht verwendbar, wenn erschöpft.",
+          es: "Utilizable una vez al día. No utilizable si está agotado.",
+        };
         break;
       }
       case "flag_#00": {
@@ -157,7 +162,7 @@ export const overwriteItemData = (items: Record<string, Item>) => {
           fr: "Tous les citoyens qui ont utilisé le drapeau reçoivent une pénalité jusqu'au matin suivant : 2,5 % des zombies attaquant les citoyens seront dirigés vers leur maison à la place.",
           de: "Alle Bürger, die die Flagge benutzt haben, erhalten bis zum nächsten Morgen eine Strafe: 2,5 % der Zombies, die die Bürger angreifen, werden stattdessen zu ihrem Haus geleitet.",
           es: "Todos los ciudadanos que hayan usado la bandera reciben una penalización hasta la mañana siguiente: el 2,5% de los zombis que atacan a los ciudadanos serán dirigidos a su casa en su lugar.",
-        }
+        };
         break;
       }
       case "bike_#00": {

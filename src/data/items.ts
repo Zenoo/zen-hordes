@@ -13255,6 +13255,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Für den kleinen Kick zwischendurch.",
       [Lang.ES]: "Para una pequeña patada entre los dos."
     },
+    info: {
+      [Lang.EN]: "Usable once a day. Not usable if exhausted.",
+      [Lang.FR]: "Utilisable une fois par jour. Non utilisable si épuisé.",
+      [Lang.DE]: "Einmal täglich verwendbar. Nicht verwendbar, wenn erschöpft.",
+      [Lang.ES]: "Utilizable una vez al día. No utilizable si está agotado."
+    },
     categories: [ItemCategory.Miscellaneous],
     icon: "item_soccer",
     decoration: 0,
@@ -13335,6 +13341,30 @@ export const items: Record<ItemId, Item> = {
             value: "thirst1"
           }
         ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [ItemActionCondition.Thirsty],
+        effects: [
+          {
+            type: ItemActionEffectType.EP,
+            value: 8
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "thirst2"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [ItemActionCondition.Dehydrated],
+        effects: [
+          {
+            type: ItemActionEffectType.EP,
+            value: 8
+          }
+        ]
       }
     ]
   },
@@ -13405,37 +13435,7 @@ export const items: Record<ItemId, Item> = {
     heavy: true,
     watchPoints: 0,
     actions: [
-      {
-        type: ItemActionType.Open,
-        conditions: [],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "gun_#00",
-            odds: 1
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "machine_gun_#00",
-            odds: 1
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "knife_#00",
-            odds: 1
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "money_#00",
-            odds: 1
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "pet_cat_#00",
-            odds: 1
-          }
-        ]
-      }
+      
     ]
   }
 };

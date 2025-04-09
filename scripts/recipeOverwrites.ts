@@ -18,6 +18,21 @@ export const overwriteRecipeData = (recipes: Recipe[]) => {
     ],
   });
 
+  // Add cello box drops
+  recipes.push({
+    type: RecipeType.ManualAnywhere,
+    in: [
+      {item: "cello_box_#00"},
+    ],
+    out: [
+      {item: "gun_#00", odds: 1},
+      {item: "machine_gun_#00", odds: 1},
+      {item: "knife_#00", odds: 1},
+      {item: "money_#00", odds: 1},
+      {item: "pet_cat_#00", odds: 1},
+    ],
+  });
+
   // Add soccer recipe
   recipes.push({
     type: RecipeType.ManualAnywhere,

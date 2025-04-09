@@ -871,6 +871,19 @@ export const recipes: Recipe[] = [
   {
     type: RecipeType.ManualAnywhere,
     in: [
+      { item: ItemId.CELLO_BOX }
+    ],
+    out: [
+      { item: ItemId.GUN, odds: 1 },
+      { item: ItemId.MACHINE_GUN, odds: 1 },
+      { item: ItemId.KNIFE, odds: 1 },
+      { item: ItemId.MONEY, odds: 1 },
+      { item: ItemId.PET_CAT, odds: 1 }
+    ]
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
       { item: ItemId.SOCCER_PART },
       { item: ItemId.RUSTINE }
     ],
