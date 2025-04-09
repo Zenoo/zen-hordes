@@ -441,6 +441,7 @@ const createLine = (
         ? items[inputIcon.id].name[store["hordes-lang"]]
         : inputIcon.icon);
     if (inputIcon.id) {
+      inputImg.setAttribute("data-type", "item");
       inputImg.setAttribute("data-id", inputIcon.id);
       inputImg.setAttribute(
         "title",
@@ -528,6 +529,7 @@ const createLine = (
         ? items[outputIcon.id].name[store["hordes-lang"]]
         : outputIcon.icon);
     if (outputIcon.id) {
+      output.setAttribute("data-type", "item");
       output.setAttribute("data-id", outputIcon.id);
       output.setAttribute(
         "title",
@@ -675,7 +677,12 @@ export const insertBetterTooltips = (node: HTMLElement) => {
       // Create an ruin drop tag
       const ruinDropTag = document.createElement("div");
       ruinDropTag.classList.add("item-tag", "item-tag-ruin-drop");
-      ruinDropTag.textContent = `${t(T, `foundIn`)}: ${ruinDrops
+
+      const foundIn = document.createElement("span");
+      foundIn.textContent = `${t(T, `foundIn`)}: `;
+      ruinDropTag.append(foundIn);
+
+      ruinDrops
         .sort((a, b) => {
           const aTotal = a.drops.reduce((acc, drop) => acc + drop.odds, 0);
           const bTotal = b.drops.reduce((acc, drop) => acc + drop.odds, 0);
@@ -685,21 +692,31 @@ export const insertBetterTooltips = (node: HTMLElement) => {
             b.drops.find((drop) => drop.item === item.id)?.odds ?? 0;
           return bOdds / bTotal - aOdds / aTotal;
         })
-        .map((ruin) => {
+        .forEach((ruin) => {
+          const span = document.createElement("span");
+          span.setAttribute("data-type", "ruin");
+          span.setAttribute("data-id", ruin.id.toString());
+
           // 0 = unknown
           const odds =
             ruin.drops.find((drop) => drop.item === item.id)?.odds ?? 0;
           if (odds === 0) {
-            return `${ruin.name[store["hordes-lang"]]} (?%)`;
+            span.textContent = `${ruin.name[store["hordes-lang"]]} (?%)`;
+          } else {
+            const total = ruin.drops.reduce((acc, drop) => acc + drop.odds, 0);
+
+            span.textContent = `${ruin.name[store["hordes-lang"]]} (${Math.round(
+              (odds / total) * 100
+            )}%)`;
           }
 
-          const total = ruin.drops.reduce((acc, drop) => acc + drop.odds, 0);
+          ruinDropTag.append(span);
+          ruinDropTag.append(", ");
+        });
 
-          return `${ruin.name[store["hordes-lang"]]} (${Math.round(
-            (odds / total) * 100
-          )}%)`;
-        })
-        .join(", ")}`;
+      // Remove the last comma and space
+      ruinDropTag.childNodes[ruinDropTag.childNodes.length - 1]?.remove();
+
       node.append(ruinDropTag);
     }
 

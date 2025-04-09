@@ -447,14 +447,21 @@ export const insertWiki = () => {
       return;
     }
 
-    // Click on item
     const target = event.target as HTMLElement;
 
-    if (target.tagName === "IMG" && target.hasAttribute("data-id")) {
-      WIKI_STATE.search = "";
-      WIKI_STATE.tab = "items";
-      WIKI_STATE.category = "all";
-      updateWiki(WIKI_STATE, true);
+    // Click on item
+    if (
+      target.tagName === "IMG" &&
+      target.getAttribute("data-type") === "item"
+    ) {
+      updateWiki(
+        {
+          search: "",
+          tab: "items",
+          category: "all",
+        },
+        true
+      );
 
       // Scroll to the item
       const scrollable = target.closest(".zen-wiki") as HTMLElement | null;
@@ -465,6 +472,40 @@ export const insertWiki = () => {
       ) as HTMLElement | null;
       if (!item) {
         console.error("Item not found in wiki", target.getAttribute("data-id"));
+        return;
+      }
+
+      item.classList.add("clicked");
+
+      scrollable?.scrollTo({
+        top: item.offsetTop - scrollable.offsetTop,
+        behavior: "smooth",
+      });
+      return;
+    }
+
+    // Click on ruin
+    if (
+      target.tagName === "SPAN" &&
+      target.getAttribute("data-type") === "ruin"
+    ) {
+      updateWiki(
+        {
+          search: "",
+          tab: "ruins",
+        },
+        true
+      );
+
+      // Scroll to the item
+      const scrollable = target.closest(".zen-wiki") as HTMLElement | null;
+      const item = scrollable?.querySelector(
+        `.zen-wiki-item[data-type="ruin"][data-id="${target.getAttribute(
+          "data-id"
+        )}"]`
+      ) as HTMLElement | null;
+      if (!item) {
+        console.error("Ruin not found in wiki", target.getAttribute("data-id"));
         return;
       }
 
@@ -512,8 +553,9 @@ export const insertWiki = () => {
   leftMenu.appendChild(search);
 
   search.addEventListener("input", (event) => {
-    WIKI_STATE.search = (event.target as HTMLInputElement).value;
-    updateWiki(WIKI_STATE);
+    updateWiki({
+      search: (event.target as HTMLInputElement).value,
+    });
   });
 
   const list = document.createElement("ul");
@@ -536,10 +578,14 @@ export const insertWiki = () => {
     list.appendChild(li);
 
     li.addEventListener("click", () => {
-      WIKI_STATE.search = "";
-      WIKI_STATE.tab = tab.type;
-      WIKI_STATE.category = "all";
-      updateWiki(WIKI_STATE, true);
+      updateWiki(
+        {
+          search: "",
+          tab: tab.type,
+          category: "all",
+        },
+        true
+      );
     });
   });
 
@@ -575,10 +621,14 @@ export const insertWiki = () => {
     categoryList.appendChild(li);
 
     li.addEventListener("click", () => {
-      WIKI_STATE.search = "";
-      WIKI_STATE.tab = "items";
-      WIKI_STATE.category = category.type;
-      updateWiki(WIKI_STATE, true);
+      updateWiki(
+        {
+          search: "",
+          tab: "items",
+          category: category.type,
+        },
+        true
+      );
     });
   });
 
@@ -695,34 +745,40 @@ export const insertWiki = () => {
         buildingList.classList.add("zen-wiki-item-list");
         tab.appendChild(buildingList);
 
-        Object.values(buildings).forEach((building) => {
-          const li = document.createElement("li");
-          li.classList.add("zen-wiki-item", "visible");
-          li.setAttribute("data-id", building.id);
+        Object.values(buildings)
+          .sort((a, b) =>
+            a.name[store["hordes-lang"]].localeCompare(
+              b.name[store["hordes-lang"]]
+            )
+          )
+          .forEach((building) => {
+            const li = document.createElement("li");
+            li.classList.add("zen-wiki-item", "visible");
+            li.setAttribute("data-type", "building");
+            li.setAttribute("data-id", building.id);
 
-          const title = document.createElement("h4");
-          li.appendChild(title);
+            const title = document.createElement("h4");
+            li.appendChild(title);
 
-          const icon = document.createElement("img");
-          icon.src = `${ASSETS}/building/${building.icon}.gif`;
-          icon.alt = building.name[store["hordes-lang"]];
-          title.appendChild(icon);
+            const icon = document.createElement("img");
+            icon.src = `${ASSETS}/building/${building.icon}.gif`;
+            icon.alt = building.name[store["hordes-lang"]];
+            title.appendChild(icon);
 
-          const name = document.createElement("span");
-          name.textContent = building.name[store["hordes-lang"]];
-          title.appendChild(name);
+            const name = document.createElement("span");
+            name.textContent = building.name[store["hordes-lang"]];
+            title.appendChild(name);
 
-          const description = document.createElement("p");
-          setTextContent(
-            description,
-            building.description[store["hordes-lang"]]
-          );
-          li.appendChild(description);
+            const description = document.createElement("p");
+            setTextContent(
+              description,
+              building.description[store["hordes-lang"]]
+            );
+            li.appendChild(description);
 
-          // TODO: Add building stats
-
-          buildingList.appendChild(li);
-        });
+            // TODO: Add building stats
+            buildingList.appendChild(li);
+          });
         break;
       }
       case "ruins": {
@@ -731,34 +787,81 @@ export const insertWiki = () => {
         ruinList.classList.add("zen-wiki-item-list");
         tab.appendChild(ruinList);
 
-        Object.values(ruins).forEach((ruin) => {
-          const li = document.createElement("li");
-          li.classList.add("zen-wiki-item", "visible");
-          li.setAttribute("data-id", ruin.id.toString());
+        Object.values(ruins)
+          .sort((a, b) =>
+            a.name[store["hordes-lang"]].localeCompare(
+              b.name[store["hordes-lang"]]
+            )
+          )
+          .forEach((ruin) => {
+            const li = document.createElement("li");
+            li.classList.add("zen-wiki-item", "visible", "zen-better-tooltip");
+            li.setAttribute("data-type", "ruin");
+            li.setAttribute("data-id", ruin.id.toString());
 
-          const title = document.createElement("h4");
-          li.appendChild(title);
+            const title = document.createElement("h4");
+            li.appendChild(title);
 
-          // No icon for buried building
-          if (ruin.id !== RuinId.BURIED_BUILDING) {
-            const icon = document.createElement("img");
-            icon.src = `${ASSETS}/ruin/${ruin.icon}.gif`;
-            icon.alt = ruin.name[store["hordes-lang"]];
-            title.appendChild(icon);
-          }
+            // No icon for buried building
+            if (ruin.id !== RuinId.BURIED_BUILDING) {
+              const icon = document.createElement("img");
+              icon.src = `${ASSETS}/ruin/${ruin.icon}.gif`;
+              icon.alt = ruin.name[store["hordes-lang"]];
+              title.appendChild(icon);
+            }
 
-          const name = document.createElement("span");
-          name.textContent = ruin.name[store["hordes-lang"]];
-          title.appendChild(name);
+            const name = document.createElement("span");
+            name.textContent = ruin.name[store["hordes-lang"]];
+            title.appendChild(name);
 
-          const description = document.createElement("p");
-          setTextContent(description, ruin.description[store["hordes-lang"]]);
-          li.appendChild(description);
+            const description = document.createElement("p");
+            setTextContent(description, ruin.description[store["hordes-lang"]]);
+            li.appendChild(description);
 
-          // TODO: Add ruin stats
+            // TODO: Add ruin stats
 
-          ruinList.appendChild(li);
-        });
+            // Drops
+            const table = document.createElement("table");
+            const tbody = document.createElement("tbody");
+            table.append(tbody);
+            const line = document.createElement("tr");
+            tbody.append(line);
+            const cell = document.createElement("td");
+            cell.classList.add("output");
+            line.append(cell);
+
+            const totalOdds = ruin.drops.reduce((acc, d) => acc + d.odds, 0);
+
+            ruin.drops
+              .sort((a, b) => b.odds / totalOdds - a.odds / totalOdds)
+              .forEach((drop) => {
+                const wrapper = document.createElement("div");
+                cell.append(wrapper);
+
+                // Icon
+                const dropImg = document.createElement("img");
+                dropImg.src = `${ASSETS}/icons/item/${
+                  items[drop.item].icon
+                }.gif`;
+                dropImg.title = items[drop.item].name[store["hordes-lang"]];
+                dropImg.setAttribute("data-id", drop.item);
+
+                // Odds
+                wrapper.setAttribute(
+                  "data-text",
+                  drop.odds
+                    ? `${Math.round((drop.odds / totalOdds) * 100)}%`
+                    : "?%"
+                );
+
+                wrapper.append(dropImg);
+                cell.append(wrapper);
+              });
+
+            li.append(table);
+
+            ruinList.appendChild(li);
+          });
         break;
       }
       default: {
