@@ -56,6 +56,7 @@ declare global {
     Drink,
     Open,
     Use,
+    Death,
   }
 
   const enum ItemActionCondition {
@@ -66,6 +67,7 @@ declare global {
     OnARuin,
     Thirsty,
     Dehydrated,
+    HaveBattery,
   }
 
   const enum ItemActionEffectType {
@@ -125,6 +127,7 @@ declare global {
     ManualOutside = 11,
     ManualInside = 12,
     ManualAnywhere = 13,
+    ExplorableRuinDoor = 101,
   }
 }
 

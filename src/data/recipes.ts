@@ -902,5 +902,44 @@ export const recipes: Recipe[] = [
     out: [
       { item: ItemId.BIKE }
     ]
+  },
+  {
+    type: RecipeType.ExplorableRuinDoor,
+    in: [
+      { item: ItemId.FOOD_NOODLES },
+      { item: ItemId.PHARMA }
+    ],
+    out: [
+      { item: ItemId.NOODLE_PRINTS }
+    ]
+  },
+  {
+    type: RecipeType.ExplorableRuinDoor,
+    in: [
+      { item: ItemId.FOOD_NOODLES },
+      { item: ItemId.PHARMA }
+    ],
+    out: [
+      { item: ItemId.NOODLE_PRINTS_01 }
+    ]
+  },
+  {
+    type: RecipeType.ExplorableRuinDoor,
+    in: [
+      { item: ItemId.FOOD_NOODLES },
+      { item: ItemId.PHARMA }
+    ],
+    out: [
+      { item: ItemId.NOODLE_PRINTS_02 }
+    ]
+  },
+  {
+    type: RecipeType.ManualInside,
+    in: [
+      { item: ItemId.XMAS_GIFT }
+    ],
+    out: [
+      { item: ItemId.XMAS_GIFT_01 }
+    ]
   }
 ];

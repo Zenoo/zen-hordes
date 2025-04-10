@@ -1327,7 +1327,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveBattery],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -3433,7 +3433,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveBattery],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -3786,7 +3786,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveBattery],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -3818,7 +3818,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveBattery],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -3850,7 +3850,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveBattery],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -3882,7 +3882,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveBattery],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -3914,7 +3914,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveBattery],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -3990,7 +3990,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveBattery],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -5058,7 +5058,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveBattery],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -5735,7 +5735,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveBattery],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -6746,7 +6746,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveBattery],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -8406,7 +8406,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveBattery],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -8438,7 +8438,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveBattery],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -12662,7 +12662,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveBattery],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -12934,7 +12934,16 @@ export const items: Record<ItemId, Item> = {
     watchPoints: 0,
     event: GameEvent.Christmas,
     actions: [
-      
+      {
+        type: ItemActionType.Death,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_decofeist_#00"
+          }
+        ]
+      }
     ]
   },
   [ItemId.TAMED_PET_GONE]: {
@@ -12974,13 +12983,32 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Es gibt morges doch nichts schöner, als einen lauten Wecker, der dein Trommelfell schön stimuliert. Funktioniert einwandfrei und lässt dich nach dem Angriff energetisch mit einem Bonus-AP in den Tag starten.",
       [Lang.ES]: "Nada mejor que perforarte los tímpanos para empezar la mañana. Funciona perfectamente y te permitirá empezar tu día en el infierno con el pie derecho recibiendo 1 PA adicional tras el ataque."
     },
+    info: {
+      [Lang.EN]: "Automatically used during the attack if equipped.",
+      [Lang.FR]: "Utilisé automatiquement pendant l'attaque s'il est équipé.",
+      [Lang.DE]: "Automatisch verwendet während des Angriffs, wenn es ausgestattet ist.",
+      [Lang.ES]: "Utilizado automáticamente durante el ataque si está equipado."
+    },
     categories: [ItemCategory.Miscellaneous],
     icon: "item_alarm_1",
     decoration: 0,
     heavy: false,
     watchPoints: 0,
     actions: [
-      
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 1
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "alarm_off_#00"
+          }
+        ]
+      }
     ]
   },
   [ItemId.ALARM_2]: {
@@ -12997,13 +13025,32 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Es gibt morges doch nichts schöner, als einen lauten Wecker, der dein Trommelfell schön stimuliert. Funktioniert einwandfrei und lässt dich nach dem Angriff energetisch mit einem Bonus-AP in den Tag starten.",
       [Lang.ES]: "Nada mejor que perforarte los tímpanos para empezar la mañana. Funciona perfectamente y te permitirá empezar tu día en el infierno con el pie derecho recibiendo 1 PA adicional tras el ataque."
     },
+    info: {
+      [Lang.EN]: "Automatically used during the attack if equipped.",
+      [Lang.FR]: "Utilisé automatiquement pendant l'attaque s'il est équipé.",
+      [Lang.DE]: "Automatisch verwendet während des Angriffs, wenn es ausgestattet ist.",
+      [Lang.ES]: "Utilizado automáticamente durante el ataque si está equipado."
+    },
     categories: [ItemCategory.Miscellaneous],
     icon: "item_alarm_2",
     decoration: 0,
     heavy: false,
     watchPoints: 0,
     actions: [
-      
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 1
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "alarm_1_#00"
+          }
+        ]
+      }
     ]
   },
   [ItemId.ALARM_3]: {
@@ -13020,13 +13067,32 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Es gibt morges doch nichts schöner, als einen lauten Wecker, der dein Trommelfell schön stimuliert. Funktioniert einwandfrei und lässt dich nach dem Angriff energetisch mit einem Bonus-AP in den Tag starten.",
       [Lang.ES]: "Nada mejor que perforarte los tímpanos para empezar la mañana. Funciona perfectamente y te permitirá empezar tu día en el infierno con el pie derecho recibiendo 1 PA adicional tras el ataque."
     },
+    info: {
+      [Lang.EN]: "Automatically used during the attack if equipped.",
+      [Lang.FR]: "Utilisé automatiquement pendant l'attaque s'il est équipé.",
+      [Lang.DE]: "Automatisch verwendet während des Angriffs, wenn es ausgestattet ist.",
+      [Lang.ES]: "Utilizado automáticamente durante el ataque si está equipado."
+    },
     categories: [ItemCategory.Miscellaneous],
     icon: "item_alarm_3",
     decoration: 0,
     heavy: false,
     watchPoints: 0,
     actions: [
-      
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 1
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "alarm_2_#00"
+          }
+        ]
+      }
     ]
   },
   [ItemId.NOODLE_PRINTS]: {
@@ -13055,7 +13121,7 @@ export const items: Record<ItemId, Item> = {
         effects: [
           {
             type: ItemActionEffectType.AP,
-            value: 4
+            value: 6
           }
         ]
       }
@@ -13087,7 +13153,7 @@ export const items: Record<ItemId, Item> = {
         effects: [
           {
             type: ItemActionEffectType.AP,
-            value: 4
+            value: 6
           }
         ]
       }
@@ -13119,7 +13185,7 @@ export const items: Record<ItemId, Item> = {
         effects: [
           {
             type: ItemActionEffectType.AP,
-            value: 4
+            value: 6
           }
         ]
       }

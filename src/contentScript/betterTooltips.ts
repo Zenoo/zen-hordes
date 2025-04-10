@@ -1,4 +1,5 @@
 import { Item, ItemId, items } from "../data/items";
+import { PictoId, pictos } from "../data/pictos";
 import { Recipe, recipes } from "../data/recipes";
 import { ruins } from "../data/ruins";
 import { ASSETS } from "../utils/constants";
@@ -11,12 +12,14 @@ const T: Translations = {
     [`action-type.${ItemActionType.Drink}`]: "Drink",
     [`action-type.${ItemActionType.Open}`]: "Open",
     [`action-type.${ItemActionType.Use}`]: "Use",
+    [`action-type.${ItemActionType.Death}`]: "Death",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Assemble",
     [`recipe-type.${RecipeType.ManualInside}`]: "Assemble (inside)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Assemble (outside)",
     [`recipe-type.${RecipeType.Workshop}`]: "Workshop",
     [`recipe-type.${RecipeType.WorkshopShaman}`]: "Workshop (shaman)",
     [`recipe-type.${RecipeType.WorkshopTech}`]: "Workshop (technician)",
+    [`recipe-type.${RecipeType.ExplorableRuinDoor}`]: "Explorable Ruin Door",
     [`event.${GameEvent.StPatrick}`]: "St. Patrick's Day",
     [`event.${GameEvent.AprilFools}`]: "April Fool's Day",
     [`event.${GameEvent.Easter}`]: "Easter",
@@ -35,12 +38,14 @@ const T: Translations = {
     [`action-type.${ItemActionType.Drink}`]: "Boire",
     [`action-type.${ItemActionType.Open}`]: "Ouvrir",
     [`action-type.${ItemActionType.Use}`]: "Utiliser",
+    [`action-type.${ItemActionType.Death}`]: "Mort",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Assembler",
     [`recipe-type.${RecipeType.ManualInside}`]: "Assembler (intérieur)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Assembler (extérieur)",
     [`recipe-type.${RecipeType.Workshop}`]: "Atelier",
     [`recipe-type.${RecipeType.WorkshopShaman}`]: "Atelier (chaman)",
     [`recipe-type.${RecipeType.WorkshopTech}`]: "Atelier (technicien)",
+    [`recipe-type.${RecipeType.ExplorableRuinDoor}`]: "Porte de ruine",
     [`event.${GameEvent.StPatrick}`]: "Saint Patrick",
     [`event.${GameEvent.AprilFools}`]: "Poisson d'Avril",
     [`event.${GameEvent.Easter}`]: "Pâques",
@@ -59,12 +64,14 @@ const T: Translations = {
     [`action-type.${ItemActionType.Drink}`]: "Beber",
     [`action-type.${ItemActionType.Open}`]: "Abrir",
     [`action-type.${ItemActionType.Use}`]: "Usar",
+    [`action-type.${ItemActionType.Death}`]: "Muerte",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Ensamblar",
     [`recipe-type.${RecipeType.ManualInside}`]: "Ensamblar (interior)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Ensamblar (exterior)",
     [`recipe-type.${RecipeType.Workshop}`]: "Taller",
     [`recipe-type.${RecipeType.WorkshopShaman}`]: "Taller (chamán)",
     [`recipe-type.${RecipeType.WorkshopTech}`]: "Taller (técnico)",
+    [`recipe-type.${RecipeType.ExplorableRuinDoor}`]: "Puerta de ruina",
     [`event.${GameEvent.StPatrick}`]: "Día de San Patricio",
     [`event.${GameEvent.AprilFools}`]: "Día de los Inocentes",
     [`event.${GameEvent.Easter}`]: "Pascua",
@@ -83,12 +90,14 @@ const T: Translations = {
     [`action-type.${ItemActionType.Drink}`]: "Trinken",
     [`action-type.${ItemActionType.Open}`]: "Öffnen",
     [`action-type.${ItemActionType.Use}`]: "Benutzen",
+    [`action-type.${ItemActionType.Death}`]: "Tod",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Zusammenbauen",
     [`recipe-type.${RecipeType.ManualInside}`]: "Zusammenbauen (innen)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Zusammenbauen (außen)",
     [`recipe-type.${RecipeType.Workshop}`]: "Werkstatt",
     [`recipe-type.${RecipeType.WorkshopShaman}`]: "Werkstatt (Schamane)",
     [`recipe-type.${RecipeType.WorkshopTech}`]: "Werkstatt (Techniker)",
+    [`recipe-type.${RecipeType.ExplorableRuinDoor}`]: "Erforschen Ruine Tür",
     [`event.${GameEvent.StPatrick}`]: "St. Patrick's Tag",
     [`event.${GameEvent.AprilFools}`]: "Aprilscherz",
     [`event.${GameEvent.Easter}`]: "Ostern",
@@ -186,13 +195,16 @@ const findRuinDrops = (item: Item) => {
 const getRecipeTypeIcon = (type: RecipeType) => {
   switch (type) {
     case RecipeType.ManualAnywhere:
-    case RecipeType.ManualInside:
     case RecipeType.ManualOutside:
       return "icons/small_next.gif";
+    case RecipeType.ManualInside:
+      return "icons/small_home.gif";
     case RecipeType.Workshop:
     case RecipeType.WorkshopShaman:
     case RecipeType.WorkshopTech:
       return "icons/small_refine.gif";
+    case RecipeType.ExplorableRuinDoor:
+      return "icons/small_enter.gif";
   }
 };
 
@@ -207,8 +219,10 @@ const getActionTypeIcon = (action: ItemAction) => {
         return "icons/item/item_can_opener.gif";
       }
       return "icons/small_next.gif";
+    case ItemActionType.Death:
+      return "icons/death.gif";
     default:
-      return "icons/small_next.gif";
+      return "icons/item/item_broken.gif";
   }
 };
 
@@ -289,10 +303,14 @@ const convertEffectToDisplayedItem = (effect: ItemActionEffect) => {
       break;
     }
     case ItemActionEffectType.GetPicto: {
-      displayedIcon.icon = `pictos/${effect.value
-        ?.toString()
-        .replace(/_#\d+/g, "")}.gif`;
+      const picto = pictos[effect.value as PictoId];
+      if (!picto) {
+        throw new Error(`Picto not found: ${effect.value}`);
+      }
+
+      displayedIcon.icon = `pictos/${picto.icon}.gif`;
       displayedIcon.classList = ["picto"];
+      displayedIcon.title = picto.name[store["hordes-lang"]];
       break;
     }
     case ItemActionEffectType.AddWaterToWell: {
@@ -397,30 +415,35 @@ const createLine = (
       ...data.conditions
         .filter((condition) => condition !== ItemActionCondition.BoxOpener)
         .map((condition) => {
-          let icon = "icons/item/item_broken.gif";
+          const displayedIcon: DisplayedIcon = {
+            icon: "icons/item/item_broken.gif",
+            title: t(T, `condition.${condition}`),
+          };
 
           switch (condition) {
             case ItemActionCondition.Technician:
-              icon = "professions/tech.gif";
+              displayedIcon.icon = "professions/tech.gif";
               break;
             case ItemActionCondition.Ghoul:
-              icon = "roles/ghoul.gif";
+              displayedIcon.icon = "roles/ghoul.gif";
               break;
             case ItemActionCondition.OnARuin:
-              icon = "emotes/ruin.gif";
+              displayedIcon.icon = "emotes/ruin.gif";
               break;
             case ItemActionCondition.Thirsty:
-              icon = "status/status_thirst1.gif";
+              displayedIcon.icon = "status/status_thirst1.gif";
               break;
             case ItemActionCondition.Dehydrated:
-              icon = "status/status_thirst2.gif";
+              displayedIcon.icon = "status/status_thirst2.gif";
+              break;
+            case ItemActionCondition.HaveBattery:
+              displayedIcon.icon = "icons/item/item_pile.gif";
+              displayedIcon.id = ItemId.PILE;
+              displayedIcon.title = undefined;
               break;
           }
 
-          return {
-            icon,
-            title: t(T, `condition.${condition}`),
-          };
+          return displayedIcon;
         })
     );
 
@@ -705,9 +728,9 @@ export const insertBetterTooltips = (node: HTMLElement) => {
           } else {
             const total = ruin.drops.reduce((acc, drop) => acc + drop.odds, 0);
 
-            span.textContent = `${ruin.name[store["hordes-lang"]]} (${Math.round(
-              (odds / total) * 100
-            )}%)`;
+            span.textContent = `${
+              ruin.name[store["hordes-lang"]]
+            } (${Math.round((odds / total) * 100)}%)`;
           }
 
           ruinDropTag.append(span);

@@ -4171,6 +4171,10 @@ export const ruins: Record<RuinId, Ruin> = {
       {
         item: ItemId.LSD,
         odds: 1,
+      },
+      {
+        item: ItemId.SHOE,
+        odds: 0,
       }
     ]
   },

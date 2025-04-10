@@ -5,7 +5,8 @@ import {
   Api,
   JSONBuildingPrototypeObject,
   JSONItemPrototypeObject,
-  JSONRuinPrototypeObject,
+  JSONPictoPrototypeObject,
+  JSONRuinPrototypeObject
 } from "./ApiTypes";
 import { exportActionEffects } from "./exportActionEffects";
 import { overwriteItemData } from "./itemOverwrites";
@@ -28,6 +29,7 @@ export enum ItemActionType {
   Drink,
   Open,
   Use,
+  Death,
 }
 
 export enum ItemActionCondition {
@@ -38,6 +40,7 @@ export enum ItemActionCondition {
   OnARuin,
   Thirsty,
   Dehydrated,
+  HaveBattery,
 }
 
 export enum ItemActionEffectType {
@@ -261,6 +264,9 @@ const generateItems = async () => {
     }
     if (action?.meta.includes("role_ghoul")) {
       conditions.push(ItemActionCondition.Ghoul);
+    }
+    if (action?.meta.includes("have_battery")) {
+      conditions.push(ItemActionCondition.HaveBattery);
     }
     if (
       [
@@ -1426,6 +1432,7 @@ export enum RecipeType {
   ManualOutside = 11,
   ManualInside = 12,
   ManualAnywhere = 13,
+  ExplorableRuinDoor = 101,
 }
 
 type ExportedRecipeData = Record<
@@ -1725,6 +1732,131 @@ ${buildingsObject}`;
   console.log("buildings.ts file has been generated.");
 };
 
+type Picto = {
+  id: string;
+  numericalId: number;
+  name: Record<Lang, string>;
+  description: Record<Lang, string>;
+  icon: string;
+  community: boolean;
+  rare: boolean;
+}
+
+const sanitizePictoId = (picto?: Picto) => {
+  if (!picto) {
+    throw new Error("Picto is undefined");
+  }
+
+  return picto.id
+    .replace(/^r_/, "")
+    .replace("_#00", "")
+    .replace(/_#(\d+)/, "_$1")
+    .toUpperCase();
+};
+
+const generatePictos = async () => {
+  const pictos: Record<string, Picto> = {};
+
+  const filePath = path.join(__dirname, "data", "pictos.json");
+  const data = JSON.parse(fs.readFileSync(filePath, "utf-8")) as Record<
+    string,
+    Required<JSONPictoPrototypeObject>
+  >;
+
+  Object.entries(data).forEach(([id, pictoData]) => {
+    // All languages are available
+    if (
+      typeof pictoData.name !== "object" ||
+      typeof pictoData.desc !== "object"
+    ) {
+      throw new Error(`Picto with id ${id} is missing translations`);
+    }
+
+    pictos[id] = {
+      id,
+      numericalId: pictoData.id,
+      icon: /pictos\/(.+)\..+\.gif/.exec(pictoData.img)?.[1] ?? "",
+      name: {
+        [Lang.EN]: pictoData.name.en ?? "",
+        [Lang.FR]: pictoData.name.fr ?? "",
+        [Lang.DE]: pictoData.name.de ?? "",
+        [Lang.ES]: pictoData.name.es ?? "",
+      },
+      description: {
+        [Lang.EN]: pictoData.desc.en ?? "",
+        [Lang.FR]: pictoData.desc.fr ?? "",
+        [Lang.DE]: pictoData.desc.de ?? "",
+        [Lang.ES]: pictoData.desc.es ?? "",
+      },
+      community: pictoData.community,
+      rare: pictoData.rare,
+    };
+  });
+
+  const pictoIdEnum = `export enum PictoId {
+  ${Object.values(pictos)
+    .map((picto) => `${sanitizePictoId(picto)} = "${picto.id}"`)
+    .join(",\n  ")}
+}`;
+
+  const pictoType = `export type Picto = {
+  id: PictoId;
+  numericalId: number;
+  name: Record<Lang, string>;
+  description: Record<Lang, string>;
+  icon: string;
+  community: boolean;
+  rare: boolean;
+};`;
+
+  const pictosObject = `export const pictos: Record<PictoId, Picto> = {
+  ${Object.values(pictos)
+    .map(
+      (picto) => `[PictoId.${sanitizePictoId(picto)}]: {
+    id: PictoId.${sanitizePictoId(picto)},
+    numericalId: ${picto.numericalId},
+    name: {
+      ${languages
+        .map(
+          (lang) =>
+            `[Lang.${lang.toUpperCase()}]: "${sanitizeText(
+              picto.name[lang]
+            )}"`
+        )
+        .join(",\n      ")}
+    },
+    description: {
+      ${languages
+        .map(
+          (lang) =>
+            `[Lang.${lang.toUpperCase()}]: "${sanitizeText(
+              picto.description[lang]
+            )}"`
+        )
+        .join(",\n      ")}
+    },
+    icon: "${picto.icon}",
+    community: ${picto.community},
+    rare: ${picto.rare}
+  }`
+    )
+    .join(",\n  ")}
+};`;
+
+  const output = `${pictoIdEnum}
+
+${pictoType}
+
+${pictosObject}`;
+
+  fs.writeFileSync(
+    path.join(__dirname, "..", "src", "data", "pictos.ts"),
+    output,
+    "utf-8"
+  );
+  console.log("pictos.ts file has been generated.");
+};
+
 (async () => {
   // Update the API data
   if (CONFIG.callApi) {
@@ -1773,6 +1905,7 @@ ${buildingsObject}`;
   generateRuins(items);
   generateRecipes(items);
   generateBuildings();
+  generatePictos();
 
   console.log("Data generation completed.");
 })().catch((error: unknown) => {

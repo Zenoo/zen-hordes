@@ -209,6 +209,111 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         };
         break;
       }
+      case "noodle_prints_#00":
+      case "noodle_prints_#01":
+      case "noodle_prints_#02": {
+        // Eating instant blanks gives 6 AP
+        const eatEffect = item.actions
+          .find((action) => action.type === ItemActionType.Eat)
+          ?.effects.find((effect) => effect.type === ItemActionEffectType.AP);
+
+        if (eatEffect) {
+          eatEffect.value = 6;
+        }
+        break;
+      }
+      case "alarm_1_#00": {
+        // Use
+        item.actions.push({
+          type: ItemActionType.Use,
+          conditions: [],
+          effects: [
+            {
+              type: ItemActionEffectType.AP,
+              value: 1,
+            },
+            {
+              type: ItemActionEffectType.CreateItem,
+              value: "alarm_off_#00",
+            },
+          ],
+        });
+
+        // info
+        item.info = {
+          en: "Automatically used during the attack if equipped.",
+          fr: "Utilisé automatiquement pendant l'attaque s'il est équipé.",
+          de: "Automatisch verwendet während des Angriffs, wenn es ausgestattet ist.",
+          es: "Utilizado automáticamente durante el ataque si está equipado.",
+        };
+        break;
+      }
+      case "alarm_2_#00": {
+        // Use
+        item.actions.push({
+          type: ItemActionType.Use,
+          conditions: [],
+          effects: [
+            {
+              type: ItemActionEffectType.AP,
+              value: 1,
+            },
+            {
+              type: ItemActionEffectType.CreateItem,
+              value: "alarm_1_#00",
+            },
+          ],
+        });
+
+        // info
+        item.info = {
+          en: "Automatically used during the attack if equipped.",
+          fr: "Utilisé automatiquement pendant l'attaque s'il est équipé.",
+          de: "Automatisch verwendet während des Angriffs, wenn es ausgestattet ist.",
+          es: "Utilizado automáticamente durante el ataque si está equipado.",
+        };
+        break;
+      }
+      case "alarm_3_#00": {
+        // Use
+        item.actions.push({
+          type: ItemActionType.Use,
+          conditions: [],
+          effects: [
+            {
+              type: ItemActionEffectType.AP,
+              value: 1,
+            },
+            {
+              type: ItemActionEffectType.CreateItem,
+              value: "alarm_2_#00",
+            },
+          ],
+        });
+
+        // info
+        item.info = {
+          en: "Automatically used during the attack if equipped.",
+          fr: "Utilisé automatiquement pendant l'attaque s'il est équipé.",
+          de: "Automatisch verwendet während des Angriffs, wenn es ausgestattet ist.",
+          es: "Utilizado automáticamente durante el ataque si está equipado.",
+        };
+        break;
+      }
+      case "xmas_gift_#01": {
+        // Death
+        item.actions.push({
+          type: ItemActionType.Death,
+          conditions: [],
+          effects: [
+            {
+              type: ItemActionEffectType.GetPicto,
+              value: "r_decofeist_#00",
+            },
+          ],
+        });
+        break;
+      }
     }
   }
 };
