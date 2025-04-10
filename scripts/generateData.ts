@@ -6,7 +6,7 @@ import {
   JSONBuildingPrototypeObject,
   JSONItemPrototypeObject,
   JSONPictoPrototypeObject,
-  JSONRuinPrototypeObject
+  JSONRuinPrototypeObject,
 } from "./ApiTypes";
 import { exportActionEffects } from "./exportActionEffects";
 import { overwriteItemData } from "./itemOverwrites";
@@ -93,6 +93,7 @@ export type Item = {
   heavy: boolean;
   watchPoints: number;
   event?: string;
+  available?: boolean;
   actions: ItemAction[];
 };
 
@@ -760,7 +761,8 @@ const generateItems = async () => {
           []
         );
 
-        const totalOdds = grouped.reduce((acc, [, odds]) => acc + odds, 0);
+        const totalOdds = result.group.reduce((acc, [, odds]) => acc + odds, 0);
+
         grouped.forEach(([effect, odds]) => {
           addEffect(
             item,
@@ -1075,6 +1077,7 @@ const generateItems = async () => {
   heavy: boolean;
   watchPoints: number;
   event?: GameEvent;
+  available?: boolean;
   actions: ItemAction[];
 };`;
 
@@ -1120,6 +1123,10 @@ const generateItems = async () => {
     heavy: ${item.heavy},
     watchPoints: ${item.watchPoints},${
         item.event ? `\n    event: GameEvent.${item.event},` : ""
+      }${
+        typeof item.available !== "undefined"
+          ? `\n    available: ${item.available},`
+          : ""
       }
     actions: [
       ${item.actions
@@ -1292,9 +1299,7 @@ const generateRuins = (items: Record<number, Item>) => {
   Object.values(ruinsData).forEach((ruinData) => {
     const germanName = ruinData.label;
 
-    const ruin = Object.values(ruins).find(
-      (b) => b.name.de === germanName
-    );
+    const ruin = Object.values(ruins).find((b) => b.name.de === germanName);
     if (!ruin) {
       throw new Error(`Ruin with name ${germanName} not found`);
     }
@@ -1303,17 +1308,15 @@ const generateRuins = (items: Record<number, Item>) => {
     ruin.campingModifier = ruinData.camping;
     ruin.spawnChance = ruinData.chance;
     ruin.emptyChance = ruinData.empty;
-    ruin.drops = Object.entries(ruinData.drops).map(
-      ([itemId, dropData]) => {
-        const item = getItemByUid(items, itemId);
+    ruin.drops = Object.entries(ruinData.drops).map(([itemId, dropData]) => {
+      const item = getItemByUid(items, itemId);
 
-        return {
-          id: item.id,
-          odds: Array.isArray(dropData) ? dropData[0] : dropData,
-          event: Array.isArray(dropData) ? dropData[1] : undefined,
-        };
-      }
-    );
+      return {
+        id: item.id,
+        odds: Array.isArray(dropData) ? dropData[0] : dropData,
+        event: Array.isArray(dropData) ? dropData[1] : undefined,
+      };
+    });
   });
 
   // Update with MH ruin data
@@ -1401,7 +1404,7 @@ export type Ruin = {
         )},
         odds: ${drop.odds},${
             drop.event
-              ? `\n          event: GameEvent.${GameEvent[drop.event]}`
+              ? `\n        event: GameEvent.${GameEvent[drop.event]}`
               : ""
           }
       }`
@@ -1448,6 +1451,8 @@ type ExportedRecipeData = Record<
 type RecipeItem = {
   item: string;
   odds?: number;
+  infected?: boolean;
+  poisoned?: boolean;
 };
 
 export type Recipe = {
@@ -1507,13 +1512,15 @@ const generateRecipes = (items: Record<number, Item>) => {
     });
   });
 
-  overwriteRecipeData(recipes);
+  overwriteRecipeData(recipes, items);
 
   const types = `import { ItemId } from './items';
 
 export type RecipeItem = {
   item: ItemId;
   odds?: number;
+  infected?: boolean;
+  poisoned?: boolean;
 }
 
 export type Recipe = {
@@ -1543,7 +1550,9 @@ export type Recipe = {
           (o) =>
             `{ item: ItemId.${sanitizeItemId(
               Object.values(items).find((it) => it.id === o.item)
-            )}${o.odds ? `, odds: ${o.odds}` : ""} }`
+            )}${o.odds ? `, odds: ${o.odds}` : ""}${
+              o.infected ? `, infected: true` : ""
+            }${o.poisoned ? `, poisoned: true` : ""} }`
         )
         .join(",\n      ")}
     ]
@@ -1740,7 +1749,7 @@ type Picto = {
   icon: string;
   community: boolean;
   rare: boolean;
-}
+};
 
 const sanitizePictoId = (picto?: Picto) => {
   if (!picto) {
@@ -1819,9 +1828,7 @@ const generatePictos = async () => {
       ${languages
         .map(
           (lang) =>
-            `[Lang.${lang.toUpperCase()}]: "${sanitizeText(
-              picto.name[lang]
-            )}"`
+            `[Lang.${lang.toUpperCase()}]: "${sanitizeText(picto.name[lang])}"`
         )
         .join(",\n      ")}
     },

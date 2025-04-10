@@ -386,6 +386,7 @@ export type Item = {
   heavy: boolean;
   watchPoints: number;
   event?: GameEvent;
+  available?: boolean;
   actions: ItemAction[];
 };
 
@@ -621,7 +622,7 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "taser_empty_#00",
-            odds: 41
+            odds: 70
           }
         ]
       }
@@ -686,7 +687,7 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "mixergun_empty_#00",
-            odds: 29
+            odds: 40
           },
           {
             type: ItemActionEffectType.Kill,
@@ -723,7 +724,7 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "chainsaw_empty_#00",
-            odds: 23
+            odds: 30
           },
           {
             type: ItemActionEffectType.Kill,
@@ -873,7 +874,7 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "staff2_#00",
-            odds: 33
+            odds: 50
           },
           {
             type: ItemActionEffectType.Kill,
@@ -4032,7 +4033,7 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "big_pgun_empty_#00",
-            odds: 33
+            odds: 100
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -4351,27 +4352,27 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.AddStatus,
             value: "drugged",
-            odds: 27
+            odds: 80
           },
           {
             type: ItemActionEffectType.GetPicto,
             value: "r_drug_#00",
-            odds: 27
+            odds: 80
           },
           {
             type: ItemActionEffectType.AP,
             value: 6,
-            odds: 13
+            odds: 40
           },
           {
             type: ItemActionEffectType.AddStatus,
             value: "terror",
-            odds: 7
+            odds: 20
           },
           {
             type: ItemActionEffectType.AP,
             value: 7,
-            odds: 7
+            odds: 20
           }
         ]
       }
@@ -6788,7 +6789,7 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "pilegun_up_empty_#00",
-            odds: 33
+            odds: 100
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -7783,27 +7784,27 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.AddStatus,
             value: "drugged",
-            odds: 27
+            odds: 80
           },
           {
             type: ItemActionEffectType.GetPicto,
             value: "r_drug_#00",
-            odds: 27
+            odds: 80
           },
           {
             type: ItemActionEffectType.AP,
             value: 6,
-            odds: 13
+            odds: 40
           },
           {
             type: ItemActionEffectType.AddStatus,
             value: "terror",
-            odds: 7
+            odds: 20
           },
           {
             type: ItemActionEffectType.AP,
             value: 7,
-            odds: 7
+            odds: 20
           }
         ]
       }
@@ -10702,22 +10703,22 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.AddStatus,
             value: "drugged",
-            odds: 31
+            odds: 100
           },
           {
             type: ItemActionEffectType.GetPicto,
             value: "r_drug_#00",
-            odds: 31
+            odds: 100
           },
           {
             type: ItemActionEffectType.AP,
             value: 6,
-            odds: 31
+            odds: 100
           },
           {
             type: ItemActionEffectType.AddStatus,
             value: "terror",
-            odds: 8
+            odds: 25
           }
         ]
       }
@@ -12618,23 +12619,31 @@ export const items: Record<ItemId, Item> = {
             value: "r_cobaye_#00"
           },
           {
+            type: ItemActionEffectType.EP,
+            value: 3
+          },
+          {
             type: ItemActionEffectType.AP,
-            value: 8,
-            odds: 33
+            value: 8
           },
           {
             type: ItemActionEffectType.AddStatus,
             value: "terror",
-            odds: 17
+            odds: 41
           },
           {
             type: ItemActionEffectType.AddStatus,
             value: "infection",
-            odds: 10
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "addict",
+            odds: 15
           },
           {
             type: ItemActionEffectType.Death,
-            odds: 1
+            odds: 2
           }
         ]
       }
@@ -12691,6 +12700,7 @@ export const items: Record<ItemId, Item> = {
     decoration: 0,
     heavy: false,
     watchPoints: 0,
+    available: false,
     actions: [
       
     ]
@@ -12813,6 +12823,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Ein Gift welches bei der Einnahme EXTREM virulent wirkt, wenn man dem Etikett Glauben schenken darf: Die Ingestion des Zervixschleim führt zu Tod, spontaner Verbrennung, Explosion der Lunge und zum Austritt des Gehirns aus allen Körperöffnungen. Aber nicht unbedingt in dieser Reihenfolge.",
       [Lang.ES]: "Un veneno que es EXTREMADAMENTE virulento cuando se ingiere, si se debe creer en la etiqueta: la ingestión de la exudación cervical causa la muerte, combustión espontánea, explosión de los pulmones y fuga del cerebro por todos los orificios. Pero no necesariamente en ese orden."
     },
+    info: {
+      [Lang.EN]: "The infection is triggered after the next attack.",
+      [Lang.FR]: "L'infection se déclenche après la prochaine attaque.",
+      [Lang.DE]: "Die Infektion wird nach dem nächsten Angriff ausgelöst.",
+      [Lang.ES]: "La infección se desencadena después del siguiente ataque."
+    },
     categories: [ItemCategory.Pharmacy, ItemCategory.APSource, ItemCategory.Drug, ItemCategory.Event],
     icon: "item_april_drug",
     decoration: 0,
@@ -12881,13 +12897,28 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieses riesige orangefarbene Gemüse ist das einzig Bunte, das an diesem gruseligen Ort wächst... da möchte man am liebsten hineinbeißen!",
       [Lang.ES]: "Este enorme vegetal anaranjado es lo único colorido que crece en este tétrico recinto... ¡Desearás darle un mordisco!"
     },
+    info: {
+      [Lang.EN]: "Increase a watchman's safety by 1%.",
+      [Lang.FR]: "Augmente la sécurité d'un veilleur de 1%.",
+      [Lang.DE]: "Erhöht die Sicherheit eines Wächters um 1%.",
+      [Lang.ES]: "Aumenta la seguridad de un vigilante en un 1%."
+    },
     categories: [ItemCategory.Food, ItemCategory.Heavy, ItemCategory.GuardWeapon],
     icon: "item_pumpkin_tasty",
     decoration: 0,
     heavy: true,
     watchPoints: 15,
     actions: [
-      
+      {
+        type: ItemActionType.Eat,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 7
+          }
+        ]
+      }
     ]
   },
   [ItemId.MEDIC]: {

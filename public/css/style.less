@@ -474,7 +474,7 @@ body.zen-map-preview-enabled {
     }
 
     &[data-event="5"]::after {
-      background-image: url(https://zenoo.github.io/zen-hordes/icons/item/item_pumpkin_on.gif);
+      background-image: url(https://zenoo.github.io/zen-hordes/icons/item/item_pumpkin_off.gif);
     }
 
     &[data-event="6"]::after {
@@ -553,6 +553,21 @@ body.zen-map-preview-enabled {
               content: url(https://zenoo.github.io/zen-hordes/icons/error.png);
               position: absolute;
               bottom: -4px;
+              right: 0;
+              z-index: 1;
+            }
+          }
+
+          &.infected {
+            &::after {
+              content: '';
+              background-image: url(https://zenoo.github.io/zen-hordes/status/status_infection.gif);
+              background-size: 100%;
+              background-repeat: no-repeat;
+              position: absolute;
+              width: 8px;
+              height: 8px;
+              top: 0;
               right: 0;
               z-index: 1;
             }
@@ -791,7 +806,7 @@ body.zen-map-preview-enabled {
 
         .input,
         .output {
-          img[title] {
+          img[data-type="item"] {
             cursor: pointer;
           }
         }

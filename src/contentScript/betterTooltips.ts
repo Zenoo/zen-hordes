@@ -32,6 +32,7 @@ const T: Translations = {
     [`condition.${ItemActionCondition.Thirsty}`]: "Thirsty",
     [`condition.${ItemActionCondition.Dehydrated}`]: "Dehydrated",
     foundIn: "Found in",
+    unavailable: "Not available anymore",
   },
   fr: {
     [`action-type.${ItemActionType.Eat}`]: "Manger",
@@ -58,6 +59,7 @@ const T: Translations = {
     [`condition.${ItemActionCondition.Thirsty}`]: "Assoiffé",
     [`condition.${ItemActionCondition.Dehydrated}`]: "Déshydraté",
     foundIn: "Trouvé dans",
+    unavailable: "N'est plus disponible",
   },
   es: {
     [`action-type.${ItemActionType.Eat}`]: "Comer",
@@ -84,6 +86,7 @@ const T: Translations = {
     [`condition.${ItemActionCondition.Thirsty}`]: "Sediento",
     [`condition.${ItemActionCondition.Dehydrated}`]: "Deshidratado",
     foundIn: "Encontrado en",
+    unavailable: "Ya no disponible",
   },
   de: {
     [`action-type.${ItemActionType.Eat}`]: "Essen",
@@ -110,6 +113,7 @@ const T: Translations = {
     [`condition.${ItemActionCondition.Thirsty}`]: "Durstig",
     [`condition.${ItemActionCondition.Dehydrated}`]: "Dehydriert",
     foundIn: "Gefunden in",
+    unavailable: "Nicht mehr verfügbar",
   },
 };
 
@@ -117,6 +121,8 @@ const getStatusIcon = (status: string) => {
   switch (status) {
     case "tg_meta_wound":
       return "wound1";
+    case "tg_april_ooze":
+      return "infection";
     default:
       return status;
   }
@@ -221,6 +227,8 @@ const getActionTypeIcon = (action: ItemAction) => {
       return "icons/small_next.gif";
     case ItemActionType.Death:
       return "icons/death.gif";
+    case ItemActionType.Use:
+      return "icons/small_next.gif";
     default:
       return "icons/item/item_broken.gif";
   }
@@ -232,6 +240,7 @@ type DisplayedIcon = {
   amount?: number | string;
   text?: string;
   crossed?: boolean;
+  infected?: boolean;
   title?: string;
   classList?: string[];
 };
@@ -408,6 +417,7 @@ const createLine = (
       id: items[inItem.item].id,
       icon: `icons/item/${items[inItem.item].icon}.gif`,
       text: inItem.odds?.toString(),
+      infected: inItem.infected,
     }));
   } else {
     // Item action
@@ -462,7 +472,7 @@ const createLine = (
       inputIcon.title ??
       (inputIcon.id
         ? items[inputIcon.id].name[store["hordes-lang"]]
-        : inputIcon.icon);
+        : '');
     if (inputIcon.id) {
       inputImg.setAttribute("data-type", "item");
       inputImg.setAttribute("data-id", inputIcon.id);
@@ -487,6 +497,10 @@ const createLine = (
 
     if (inputIcon.crossed) {
       wrapper.classList.add("crossed");
+    }
+
+    if (inputIcon.infected) {
+      wrapper.classList.add("infected");
     }
 
     wrapper.append(inputImg);
@@ -533,6 +547,7 @@ const createLine = (
       text: outItem.odds
         ? `${Math.round((outItem.odds / total) * 100)}%`
         : undefined,
+      infected: outItem.infected,
     }));
   } else {
     // Item action
@@ -550,7 +565,7 @@ const createLine = (
       outputIcon.title ??
       (outputIcon.id
         ? items[outputIcon.id].name[store["hordes-lang"]]
-        : outputIcon.icon);
+        : '');
     if (outputIcon.id) {
       output.setAttribute("data-type", "item");
       output.setAttribute("data-id", outputIcon.id);
@@ -575,6 +590,10 @@ const createLine = (
 
     if (outputIcon.crossed) {
       wrapper.classList.add("crossed");
+    }
+
+    if (outputIcon.infected) {
+      wrapper.classList.add("infected");
     }
 
     wrapper.classList.add(...(outputIcon.classList ?? []));
@@ -662,6 +681,15 @@ export const insertBetterTooltips = (node: HTMLElement) => {
       const infoTag = document.createElement("div");
       infoTag.classList.add("item-tag", "item-tag-info");
       setTextWithIcons(infoTag, item.info[store["hordes-lang"]]);
+      node.querySelector("p")?.after(infoTag);
+    }
+
+    // Unavailable items
+    if (item.available === false) {
+      // Create an info tag
+      const infoTag = document.createElement("div");
+      infoTag.classList.add("item-tag", "item-tag-info");
+      infoTag.textContent = t(T, "unavailable");
       node.querySelector("p")?.after(infoTag);
     }
 

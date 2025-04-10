@@ -15,13 +15,7 @@ import { insertWiki, openItemInWiki } from "./wiki";
 
 // Initialize the store
 await initStore();
-// TODO: Ignore lang changes if XX_XX
-// TODO: wrong % for staff break chance
-// TODO: Differentiate Open action from OpenWithOpener
 // TODO: Implement rotating items in tooltips (repairable items, etc)
-// TODO: Add an onsite wiki (items/buildings/ruins)
-// TODO: Display infection chances on items
-// TODO: Display decoration points on items
 // TODO: Add better tooltips toggle to settings
 // TODO: Reset first water ration on death page display
 // TODO: Add a list of items to bring back, with priorities (1-5)

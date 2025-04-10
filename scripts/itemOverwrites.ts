@@ -314,6 +314,86 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         });
         break;
       }
+      case "pumpkin_tasty_#00": {
+        // Use
+        item.actions.push({
+          type: ItemActionType.Eat,
+          conditions: [],
+          effects: [
+            {
+              type: ItemActionEffectType.AP,
+              value: 7,
+            },
+          ],
+        });
+
+        // info
+        item.info = {
+          en: "Increase a watchman's safety by 1%.",
+          fr: "Augmente la sécurité d'un veilleur de 1%.",
+          de: "Erhöht die Sicherheit eines Wächters um 1%.",
+          es: "Aumenta la seguridad de un vigilante en un 1%.",
+        };
+        break;
+      }
+      case "april_drug_#00": {
+        // info
+        item.info = {
+          en: "The infection is triggered after the next attack.",
+          fr: "L'infection se déclenche après la prochaine attaque.",
+          de: "Die Infektion wird nach dem nächsten Angriff ausgelöst.",
+          es: "La infección se desencadena después del siguiente ataque.",
+        };
+        break;
+      }
+      case "alarm_on_#00": {
+        // Unavailable
+        item.available = false;
+        break;
+      }
+      case "christmas_candy_#00": {
+        // Eating effects
+        const eatAction = item.actions.find(
+          (action) => action.type === ItemActionType.Eat
+        );
+
+        if (eatAction) {
+          eatAction.effects = [
+            {
+              type: ItemActionEffectType.GetPicto,
+              value: "r_cobaye_#00"
+            },
+            {
+              type: ItemActionEffectType.EP,
+              value: 3
+            },
+            {
+              type: ItemActionEffectType.AP,
+              value: 8
+            },
+            {
+              type: ItemActionEffectType.AddStatus,
+              value: "terror",
+              odds: 41
+            },
+            {
+              type: ItemActionEffectType.AddStatus,
+              value: "infection",
+              odds: 25
+            },
+            {
+              type: ItemActionEffectType.AddStatus,
+              value: "addict",
+              odds: 15
+            },
+            {
+              type: ItemActionEffectType.Death,
+              odds: 2
+            }
+          ];
+        }
+        break;
+      }
     }
   }
 };

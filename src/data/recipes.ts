@@ -3,6 +3,8 @@ import { ItemId } from './items';
 export type RecipeItem = {
   item: ItemId;
   odds?: number;
+  infected?: boolean;
+  poisoned?: boolean;
 }
 
 export type Recipe = {
@@ -940,6 +942,73 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.XMAS_GIFT_01 }
+    ]
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.MEDIC }
+    ],
+    out: [
+      { item: ItemId.XANAX, odds: 37 },
+      { item: ItemId.DRUG_WATER, odds: 37 },
+      { item: ItemId.WATER_CLEANER, odds: 37 },
+      { item: ItemId.RYEBAG, odds: 37 },
+      { item: ItemId.DISINFECT, odds: 28 },
+      { item: ItemId.PHARMA, odds: 20 },
+      { item: ItemId.CYANURE, odds: 2 },
+      { item: ItemId.DRUG, odds: 1 },
+      { item: ItemId.BANDAGE, odds: 1 }
+    ]
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.WATER },
+      { item: ItemId.INFECT_POISON }
+    ],
+    out: [
+      { item: ItemId.WATER, infected: true }
+    ]
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.CAN_OPEN },
+      { item: ItemId.INFECT_POISON }
+    ],
+    out: [
+      { item: ItemId.CAN_OPEN, infected: true }
+    ]
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.DRUG },
+      { item: ItemId.INFECT_POISON }
+    ],
+    out: [
+      { item: ItemId.DRUG, infected: true }
+    ]
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.VEGETABLE },
+      { item: ItemId.INFECT_POISON }
+    ],
+    out: [
+      { item: ItemId.VEGETABLE, infected: true }
+    ]
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.FRUIT },
+      { item: ItemId.INFECT_POISON }
+    ],
+    out: [
+      { item: ItemId.FRUIT, infected: true }
     ]
   }
 ];
