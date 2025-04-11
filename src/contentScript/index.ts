@@ -5,7 +5,7 @@ import { displayUpdateButton } from "./externalSiteUpdater";
 import { offHover } from "./hooks/offHover";
 import { onClick } from "./hooks/onClick";
 import { onHover } from "./hooks/onHover";
-import { onMiddleClick } from "./hooks/onMiddleClick";
+import { onKey } from "./hooks/onKey";
 import { onMount } from "./hooks/onMount";
 import { displayMapPreview, insertMapPreview, openBBHCityPage, removeMapPreview } from "./mapPreview";
 import { listenToBackgroundMessages } from "./messageListener";
@@ -57,8 +57,8 @@ onClick((node) => {
   openBBHCityPage(node);
 });
 
-// Actions that need to be performed on a middle click
+// Actions that need to be performed on a key press
 // should be handled here
-onMiddleClick((node, event) => {
-  openItemInWiki(node, event);
+onKey("h", (node) => {
+  openItemInWiki(node);
 });

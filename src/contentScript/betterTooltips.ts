@@ -681,16 +681,16 @@ export const insertBetterTooltips = (node: HTMLElement) => {
       const infoTag = document.createElement("div");
       infoTag.classList.add("item-tag", "item-tag-info");
       setTextWithIcons(infoTag, item.info[store["hordes-lang"]]);
-      node.querySelector("p")?.after(infoTag);
+      node.append(infoTag);
     }
 
     // Unavailable items
     if (item.available === false) {
       // Create an info tag
-      const infoTag = document.createElement("div");
-      infoTag.classList.add("item-tag", "item-tag-info");
-      infoTag.textContent = t(T, "unavailable");
-      node.querySelector("p")?.after(infoTag);
+      const tag = document.createElement("div");
+      tag.classList.add("item-tag", "item-tag-info");
+      tag.textContent = t(T, "unavailable");
+      node.append(tag);
     }
 
     // Decoration

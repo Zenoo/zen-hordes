@@ -873,14 +873,9 @@ export const insertWiki = () => {
   updateWiki(WIKI_STATE);
 };
 
-export const openItemInWiki = (node: HTMLElement, event: MouseEvent) => {
+export const openItemInWiki = (node: HTMLElement) => {
   if (!store["wiki"]) return;
   if (!node.closest(".item-icon")) return;
-
-  // Prevent default action
-  event.preventDefault();
-  event.stopPropagation();
-  event.stopImmediatePropagation();
 
   // Open wiki
   const backdrop = document.querySelector(".zen-wiki-backdrop");
