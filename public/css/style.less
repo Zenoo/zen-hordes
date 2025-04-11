@@ -440,6 +440,20 @@ body.zen-map-preview-enabled {
       background-image: url(https://zenoo.github.io/zen-hordes/tags/tag_1.gif);
     }
   }
+  // Private town tag
+  .item-tag-private {
+    height: unset !important;
+    font-size: 10px;
+    text-align: left;
+
+    &::after {
+      background-position-x: 50%;
+      background-position-y: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(https://zenoo.github.io/zen-hordes/icons/item/item_chair.gif);
+    }
+  }
 
   // Decoration
   .zen-item-decoration {
@@ -549,8 +563,18 @@ body.zen-map-preview-enabled {
           }
 
           &.crossed {
-            &::after {
+            &::before {
               content: url(https://zenoo.github.io/zen-hordes/icons/error.png);
+              position: absolute;
+              bottom: -4px;
+              right: 0;
+              z-index: 1;
+            }
+          }
+
+          &.checked {
+            &::before {
+              content: url(https://zenoo.github.io/zen-hordes/icons/success.png);
               position: absolute;
               bottom: -4px;
               right: 0;

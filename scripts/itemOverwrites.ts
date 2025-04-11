@@ -394,6 +394,51 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         }
         break;
       }
+      case "leprechaun_suit_#00": {
+        // Use
+        item.actions.push({
+          type: ItemActionType.Steal,
+          conditions: [],
+          effects: [
+            {
+              type: ItemActionEffectType.GetPicto,
+              value: "r_lepre_#00",
+            },
+          ],
+        });
+
+        // info
+        item.info = {
+          en: "Allows you to anonymously steal from other players' houses.",
+          fr: "Vous permet de voler anonymement dans les maisons d'autres joueurs.",
+          de: "Erlaubt es Ihnen, anonym in die Häuser anderer Spieler zu stehlen.",
+          es: "Te permite robar anónimamente en las casas de otros jugadores.",
+        };
+        break;
+      }
+      case "soul_yellow_#00": {
+        // Private town only
+        item.categories.push("PrivateTown");
+        break;
+      }
+      case "water_#00": {
+        // WATER -> POTION
+        item.actions.push({
+          type: ItemActionType.Use,
+          conditions: [ItemActionCondition.Shaman],
+          effects: [
+            {
+              type: ItemActionEffectType.MP,
+              value: -1,
+            },
+            {
+              type: ItemActionEffectType.CreateItem,
+              value: "potion_#00",
+            },
+          ],
+        });
+        break;
+      }
     }
   }
 };

@@ -30,6 +30,7 @@ export enum ItemActionType {
   Open,
   Use,
   Death,
+  Steal,
 }
 
 export enum ItemActionCondition {
@@ -41,6 +42,7 @@ export enum ItemActionCondition {
   Thirsty,
   Dehydrated,
   HaveBattery,
+  Shaman,
 }
 
 export enum ItemActionEffectType {
@@ -97,12 +99,31 @@ export type Item = {
   actions: ItemAction[];
 };
 
-const sanitizeItemId = (item?: Item) => {
+const sanitizeItemId = (item?: Item | string) => {
+  const sanitize = (id: string) =>
+    id
+      .replace("_#00", "")
+      .replace(/_#(\d+)/, "_$1")
+      .toUpperCase();
+
+  if (typeof item === "string") {
+    return sanitize(item);
+  }
+
   if (!item) {
     throw new Error("Item is undefined");
   }
 
-  return item.id
+  return sanitize(item.id);
+};
+
+const sanitizePictoId = (picto?: Picto) => {
+  if (!picto) {
+    throw new Error("Picto is undefined");
+  }
+
+  return picto.id
+    .replace(/^r_/, "")
     .replace("_#00", "")
     .replace(/_#(\d+)/, "_$1")
     .toUpperCase();
@@ -1068,6 +1089,7 @@ const generateItems = async () => {
 
   const itemType = `export type Item = {
   id: ItemId;
+  numericalId: number;
   name: Record<Lang, string>;
   description: Record<Lang, string>;
   info?: Record<Lang, string>;
@@ -1086,6 +1108,7 @@ const generateItems = async () => {
     .map(
       (item) => `[ItemId.${sanitizeItemId(item)}]: {
     id: ItemId.${sanitizeItemId(item)},
+    numericalId: ${item.numericalId},
     name: {
       ${languages
         .map(
@@ -1459,6 +1482,7 @@ export type Recipe = {
   type: RecipeType;
   in: RecipeItem[];
   out: RecipeItem[];
+  pictos?: string[];
 };
 
 const generateRecipes = (items: Record<number, Item>) => {
@@ -1515,6 +1539,7 @@ const generateRecipes = (items: Record<number, Item>) => {
   overwriteRecipeData(recipes, items);
 
   const types = `import { ItemId } from './items';
+import { PictoId } from './pictos';
 
 export type RecipeItem = {
   item: ItemId;
@@ -1527,6 +1552,7 @@ export type Recipe = {
   type: RecipeType;
   in: RecipeItem[];
   out: RecipeItem[];
+  pictos?: PictoId[];
 };`;
 
   const recipesArray = `export const recipes: Recipe[] = [
@@ -1555,7 +1581,13 @@ export type Recipe = {
             }${o.poisoned ? `, poisoned: true` : ""} }`
         )
         .join(",\n      ")}
-    ]
+    ],${
+      recipe.pictos
+        ? `\n    pictos: [${recipe.pictos
+            .map((p) => `PictoId.${sanitizePictoId({ id: p } as Picto)}`)
+            .join(", ")}],`
+        : ""
+    }
   }`
     )
     .join(",\n  ")}
@@ -1586,25 +1618,32 @@ type Building = {
   hasUpgrade: boolean;
   rarity: number;
   temporary: boolean;
-  parentId: number;
+  parent?: string;
   resources: {
-    id: number;
+    id: string;
     amount: number;
   }[];
 };
 
-const sanitizeBuildingId = (building?: Building) => {
+const sanitizeBuildingId = (building?: Building | string) => {
+  const sanitize = (id: string) =>
+    id
+      .replace("_#00", "")
+      .replace(/_#(\d+)/, "_$1")
+      .toUpperCase();
+
+  if (typeof building === "string") {
+    return sanitize(building);
+  }
+
   if (!building) {
     throw new Error("Building is undefined");
   }
 
-  return building.id
-    .replace("_#00", "")
-    .replace(/_#(\d+)/, "_$1")
-    .toUpperCase();
+  return sanitize(building.id);
 };
 
-const generateBuildings = async () => {
+const generateBuildings = async (items: Record<number, Item>) => {
   const buildings: Record<string, Building> = {};
 
   const filePath = path.join(__dirname, "data", "buildings.json");
@@ -1645,9 +1684,13 @@ const generateBuildings = async () => {
       hasUpgrade: buildingData.hasUpgrade,
       rarity: buildingData.rarity,
       temporary: buildingData.temporary,
-      parentId: buildingData.parent,
+      parent: Object.entries(data).find(
+        ([, b]) => b.id === buildingData.parent
+      )?.[0],
       resources: buildingData.resources.map((r) => ({
-        id: r.rsc?.id ?? 0,
+        id:
+          Object.values(items).find((i) => i.numericalId === r.rsc?.id)?.id ??
+          "",
         amount: r.amount ?? 0,
       })),
     };
@@ -1661,6 +1704,7 @@ const generateBuildings = async () => {
 
   const buildingType = `export type Building = {
   id: BuildingId;
+  numericalId: number;
   name: Record<Lang, string>;
   description: Record<Lang, string>;
   icon: string;
@@ -1671,9 +1715,9 @@ const generateBuildings = async () => {
   hasUpgrade: boolean;
   rarity: number;
   temporary: boolean;
-  parentId: number;
+  parent?: BuildingId;
   resources: {
-    id: number;
+    id: ItemId;
     amount: number;
   }[];
 };`;
@@ -1683,6 +1727,7 @@ const generateBuildings = async () => {
     .map(
       (building) => `[BuildingId.${sanitizeBuildingId(building)}]: {
     id: BuildingId.${sanitizeBuildingId(building)},
+    numericalId: ${building.numericalId},
     name: {
       ${languages
         .map(
@@ -1710,13 +1755,16 @@ const generateBuildings = async () => {
     defense: ${building.defense},
     hasUpgrade: ${building.hasUpgrade},
     rarity: ${building.rarity},
-    temporary: ${building.temporary},
-    parentId: ${building.parentId},
+    temporary: ${building.temporary},${
+        building.parent
+          ? `\n    parent: BuildingId.${sanitizeBuildingId(building.parent)},`
+          : ""
+      }
     resources: [
       ${building.resources
         .map(
           (r) => `{
-        id: ${r.id},
+        id: ItemId.${sanitizeItemId(r.id)},
         amount: ${r.amount}
       }`
         )
@@ -1727,7 +1775,9 @@ const generateBuildings = async () => {
     .join(",\n  ")}
 };`;
 
-  const output = `${buildingIdEnum}
+  const output = `import { ItemId } from './items';
+
+${buildingIdEnum}
 
 ${buildingType}
 
@@ -1749,18 +1799,6 @@ type Picto = {
   icon: string;
   community: boolean;
   rare: boolean;
-};
-
-const sanitizePictoId = (picto?: Picto) => {
-  if (!picto) {
-    throw new Error("Picto is undefined");
-  }
-
-  return picto.id
-    .replace(/^r_/, "")
-    .replace("_#00", "")
-    .replace(/_#(\d+)/, "_$1")
-    .toUpperCase();
 };
 
 const generatePictos = async () => {
@@ -1911,7 +1949,7 @@ ${pictosObject}`;
   const items = await generateItems();
   generateRuins(items);
   generateRecipes(items);
-  generateBuildings();
+  generateBuildings(items);
   generatePictos();
 
   console.log("Data generation completed.");

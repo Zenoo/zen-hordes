@@ -753,7 +753,7 @@ export const insertWiki = () => {
           )
           .forEach((building) => {
             const li = document.createElement("li");
-            li.classList.add("zen-wiki-item", "visible");
+            li.classList.add("zen-wiki-item", "visible", "zen-better-tooltip");
             li.setAttribute("data-type", "building");
             li.setAttribute("data-id", building.id);
 
@@ -777,6 +777,41 @@ export const insertWiki = () => {
             li.appendChild(description);
 
             // TODO: Add building stats
+
+            // Resources
+            const table = document.createElement("table");
+            const tbody = document.createElement("tbody");
+            table.append(tbody);
+            const line = document.createElement("tr");
+            tbody.append(line);
+            const cell = document.createElement("td");
+            cell.classList.add("output");
+            line.append(cell);
+
+            building.resources
+              .sort((a, b) => b.amount - a.amount)
+              .forEach((resource) => {
+                const wrapper = document.createElement("div");
+                cell.append(wrapper);
+
+                // Icon
+                const resourceImg = document.createElement("img");
+                resourceImg.src = `${ASSETS}/icons/item/${
+                  items[resource.id].icon
+                }.gif`;
+                resourceImg.title =
+                  items[resource.id].name[store["hordes-lang"]];
+                resourceImg.setAttribute("data-type", "item");
+                resourceImg.setAttribute("data-id", resource.id);
+
+                // Odds
+                wrapper.setAttribute("data-text", resource.amount.toString());
+
+                wrapper.append(resourceImg);
+                cell.append(wrapper);
+              });
+
+            li.append(table);
             buildingList.appendChild(li);
           });
         break;
@@ -844,6 +879,7 @@ export const insertWiki = () => {
                   items[drop.item].icon
                 }.gif`;
                 dropImg.title = items[drop.item].name[store["hordes-lang"]];
+                dropImg.setAttribute("data-type", "item");
                 dropImg.setAttribute("data-id", drop.item);
 
                 // Odds

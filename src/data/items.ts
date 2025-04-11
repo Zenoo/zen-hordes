@@ -377,6 +377,7 @@ export enum ItemId {
 
 export type Item = {
   id: ItemId;
+  numericalId: number;
   name: Record<Lang, string>;
   description: Record<Lang, string>;
   info?: Record<Lang, string>;
@@ -393,6 +394,7 @@ export type Item = {
 export const items: Record<ItemId, Item> = {
   [ItemId.WATER]: {
     id: ItemId.WATER,
+    numericalId: 1,
     name: {
       [Lang.EN]: "Water Ration",
       [Lang.FR]: "Ration d'eau",
@@ -434,11 +436,26 @@ export const items: Record<ItemId, Item> = {
             value: "tg_meta_wound"
           }
         ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [ItemActionCondition.Shaman],
+        effects: [
+          {
+            type: ItemActionEffectType.MP,
+            value: -1
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "potion_#00"
+          }
+        ]
       }
     ]
   },
   [ItemId.PILE]: {
     id: ItemId.PILE,
+    numericalId: 2,
     name: {
       [Lang.EN]: "Battery",
       [Lang.FR]: "Pile",
@@ -462,6 +479,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CAN]: {
     id: ItemId.CAN,
+    numericalId: 3,
     name: {
       [Lang.EN]: "Can",
       [Lang.FR]: "Boîte de conserve",
@@ -518,6 +536,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CAN_OPEN]: {
     id: ItemId.CAN_OPEN,
+    numericalId: 4,
     name: {
       [Lang.EN]: "Open Can",
       [Lang.FR]: "Boîte de conserve ouverte",
@@ -550,6 +569,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PILEGUN]: {
     id: ItemId.PILEGUN,
+    numericalId: 5,
     name: {
       [Lang.EN]: "Battery Launcher 1-ITF (loaded)",
       [Lang.FR]: "Lance-Pile 1-PDTG (chargé)",
@@ -592,6 +612,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.TASER]: {
     id: ItemId.TASER,
+    numericalId: 6,
     name: {
       [Lang.EN]: "Taser",
       [Lang.FR]: "Taser d'auto-défense",
@@ -630,6 +651,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATERGUN_OPT_EMPTY]: {
     id: ItemId.WATERGUN_OPT_EMPTY,
+    numericalId: 7,
     name: {
       [Lang.EN]: "Aqua-Splash (empty)",
       [Lang.FR]: "Aqua-Splash (vide)",
@@ -662,6 +684,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MIXERGUN]: {
     id: ItemId.MIXERGUN,
+    numericalId: 8,
     name: {
       [Lang.EN]: "Electric Whisk (loaded)",
       [Lang.FR]: "Batteur électrique (chargé)",
@@ -699,6 +722,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHAINSAW]: {
     id: ItemId.CHAINSAW,
+    numericalId: 9,
     name: {
       [Lang.EN]: "Chainsaw (loaded)",
       [Lang.FR]: "Tronçonneuse",
@@ -736,6 +760,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.LAWN]: {
     id: ItemId.LAWN,
+    numericalId: 10,
     name: {
       [Lang.EN]: "Lawnmower",
       [Lang.FR]: "Tondeuse à gazon",
@@ -773,6 +798,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WRENCH]: {
     id: ItemId.WRENCH,
+    numericalId: 11,
     name: {
       [Lang.EN]: "Adjustable Spanner",
       [Lang.FR]: "Clé à Molette",
@@ -811,6 +837,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SCREW]: {
     id: ItemId.SCREW,
+    numericalId: 12,
     name: {
       [Lang.EN]: "Screwdriver",
       [Lang.FR]: "Tournevis",
@@ -849,6 +876,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.STAFF]: {
     id: ItemId.STAFF,
+    numericalId: 13,
     name: {
       [Lang.EN]: "Staff",
       [Lang.FR]: "Grand Bâton Sec",
@@ -887,6 +915,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.KNIFE]: {
     id: ItemId.KNIFE,
+    numericalId: 14,
     name: {
       [Lang.EN]: "Serrated Knife",
       [Lang.FR]: "Couteau à dents",
@@ -924,6 +953,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CUTCUT]: {
     id: ItemId.CUTCUT,
+    numericalId: 15,
     name: {
       [Lang.EN]: "Machete",
       [Lang.FR]: "Coupe-Coupe",
@@ -961,6 +991,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SMALL_KNIFE]: {
     id: ItemId.SMALL_KNIFE,
+    numericalId: 16,
     name: {
       [Lang.EN]: "Pathetic Penknife",
       [Lang.FR]: "Canif dérisoire",
@@ -999,6 +1030,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SWISS_KNIFE]: {
     id: ItemId.SWISS_KNIFE,
+    numericalId: 17,
     name: {
       [Lang.EN]: "Swiss Army Knife",
       [Lang.FR]: "Couteau suisse",
@@ -1037,6 +1069,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CUTTER]: {
     id: ItemId.CUTTER,
+    numericalId: 18,
     name: {
       [Lang.EN]: "Box Cutter",
       [Lang.FR]: "Cutter",
@@ -1075,6 +1108,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CART]: {
     id: ItemId.CART,
+    numericalId: 19,
     name: {
       [Lang.EN]: "Shopping Trolley",
       [Lang.FR]: "Caddie",
@@ -1098,6 +1132,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CAN_OPENER]: {
     id: ItemId.CAN_OPENER,
+    numericalId: 20,
     name: {
       [Lang.EN]: "Can Opener",
       [Lang.FR]: "Ouvre-boîte",
@@ -1135,6 +1170,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BAG]: {
     id: ItemId.BAG,
+    numericalId: 21,
     name: {
       [Lang.EN]: "Manbag",
       [Lang.FR]: "Sac supplémentaire",
@@ -1158,6 +1194,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.LIGHTS]: {
     id: ItemId.LIGHTS,
+    numericalId: 22,
     name: {
       [Lang.EN]: "Box of Matches",
       [Lang.FR]: "Boîte d'allumettes",
@@ -1181,6 +1218,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.XANAX]: {
     id: ItemId.XANAX,
+    numericalId: 23,
     name: {
       [Lang.EN]: "Valium Shot",
       [Lang.FR]: "Piqure de calmant",
@@ -1221,6 +1259,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHAIR]: {
     id: ItemId.CHAIR,
+    numericalId: 24,
     name: {
       [Lang.EN]: "Rocking Chair",
       [Lang.FR]: "Rocking Chair",
@@ -1244,6 +1283,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RP_BOOK]: {
     id: ItemId.RP_BOOK,
+    numericalId: 25,
     name: {
       [Lang.EN]: "Dusty Book",
       [Lang.FR]: "Livre poussiéreux",
@@ -1276,6 +1316,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BED]: {
     id: ItemId.BED,
+    numericalId: 26,
     name: {
       [Lang.EN]: "Mattress",
       [Lang.FR]: "Matelas",
@@ -1308,6 +1349,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.LAMP]: {
     id: ItemId.LAMP,
+    numericalId: 27,
     name: {
       [Lang.EN]: "Bedside Lamp",
       [Lang.FR]: "Lampe de chevet éteinte",
@@ -1340,6 +1382,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CARPET]: {
     id: ItemId.CARPET,
+    numericalId: 28,
     name: {
       [Lang.EN]: "Persian Rug",
       [Lang.FR]: "Tapis persan",
@@ -1363,6 +1406,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MUSIC_PART]: {
     id: ItemId.MUSIC_PART,
+    numericalId: 29,
     name: {
       [Lang.EN]: "Mini HI-Fi (Broken)",
       [Lang.FR]: "Petite chaîne Hi-Fi en panne",
@@ -1386,6 +1430,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.LOCK]: {
     id: ItemId.LOCK,
+    numericalId: 30,
     name: {
       [Lang.EN]: "Padlock and Chain",
       [Lang.FR]: "Chaîne de Porte + cadenas",
@@ -1409,6 +1454,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DOOR_CARPET]: {
     id: ItemId.DOOR_CARPET,
+    numericalId: 31,
     name: {
       [Lang.EN]: "Doormat",
       [Lang.FR]: "Paillasson",
@@ -1432,6 +1478,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DICE]: {
     id: ItemId.DICE,
+    numericalId: 32,
     name: {
       [Lang.EN]: "Dice",
       [Lang.FR]: "Dés",
@@ -1455,6 +1502,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.ENGINE]: {
     id: ItemId.ENGINE,
+    numericalId: 33,
     name: {
       [Lang.EN]: "Engine",
       [Lang.FR]: "Moteur",
@@ -1478,6 +1526,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.COURROIE]: {
     id: ItemId.COURROIE,
+    numericalId: 34,
     name: {
       [Lang.EN]: "Belt",
       [Lang.FR]: "Courroie",
@@ -1501,6 +1550,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MECA_PARTS]: {
     id: ItemId.MECA_PARTS,
+    numericalId: 35,
     name: {
       [Lang.EN]: "Handful of nuts and bolts",
       [Lang.FR]: "Poignée de vis et écrous",
@@ -1524,6 +1574,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PET_CHICK]: {
     id: ItemId.PET_CHICK,
+    numericalId: 36,
     name: {
       [Lang.EN]: "Chicken",
       [Lang.FR]: "Poule",
@@ -1570,6 +1621,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PET_PIG]: {
     id: ItemId.PET_PIG,
+    numericalId: 37,
     name: {
       [Lang.EN]: "Stinking Pig",
       [Lang.FR]: "Cochon malodorant",
@@ -1626,6 +1678,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PET_RAT]: {
     id: ItemId.PET_RAT,
+    numericalId: 38,
     name: {
       [Lang.EN]: "Giant Rat",
       [Lang.FR]: "Rat géant",
@@ -1672,6 +1725,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PET_DOG]: {
     id: ItemId.PET_DOG,
+    numericalId: 39,
     name: {
       [Lang.EN]: "Guard Dog",
       [Lang.FR]: "Chien hargneux (alias Pepette)",
@@ -1718,6 +1772,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PET_CAT]: {
     id: ItemId.PET_CAT,
+    numericalId: 40,
     name: {
       [Lang.EN]: "Fat Cat",
       [Lang.FR]: "Gros chat mignon",
@@ -1764,6 +1819,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PET_SNAKE]: {
     id: ItemId.PET_SNAKE,
+    numericalId: 41,
     name: {
       [Lang.EN]: "Huge Snake (Ophiophagus trouser)",
       [Lang.FR]: "Serpent de 2 mètres",
@@ -1820,6 +1876,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.VIBR]: {
     id: ItemId.VIBR,
+    numericalId: 42,
     name: {
       [Lang.EN]: "Pocket Vibrator (charged)",
       [Lang.FR]: "Petit manche vibrant (chargé)",
@@ -1860,6 +1917,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DRUG]: {
     id: ItemId.DRUG,
+    numericalId: 43,
     name: {
       [Lang.EN]: "Anabolic Steroids",
       [Lang.FR]: "Stéroïdes Anabolisants",
@@ -1900,6 +1958,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MEAT]: {
     id: ItemId.MEAT,
+    numericalId: 44,
     name: {
       [Lang.EN]: "Tasty-looking Steak",
       [Lang.FR]: "Steak appétissant",
@@ -1932,6 +1991,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.UNDEF]: {
     id: ItemId.UNDEF,
+    numericalId: 45,
     name: {
       [Lang.EN]: "Unspecified Meat",
       [Lang.FR]: "Viande indéfinissable",
@@ -1964,6 +2024,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SHEET]: {
     id: ItemId.SHEET,
+    numericalId: 46,
     name: {
       [Lang.EN]: "Groundsheet",
       [Lang.FR]: "Toile de tente",
@@ -1987,6 +2048,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BAGXL]: {
     id: ItemId.BAGXL,
+    numericalId: 47,
     name: {
       [Lang.EN]: "Ultra-Rucksack",
       [Lang.FR]: "Sac super-pratique",
@@ -2010,6 +2072,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.JERRYCAN]: {
     id: ItemId.JERRYCAN,
+    numericalId: 48,
     name: {
       [Lang.EN]: "Full Jerrycan",
       [Lang.FR]: "Jerrycan",
@@ -2067,6 +2130,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WOOD2]: {
     id: ItemId.WOOD2,
+    numericalId: 49,
     name: {
       [Lang.EN]: "Twisted Plank",
       [Lang.FR]: "Planche tordue",
@@ -2090,6 +2154,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.METAL]: {
     id: ItemId.METAL,
+    numericalId: 50,
     name: {
       [Lang.EN]: "Wrought Iron",
       [Lang.FR]: "Ferraille",
@@ -2113,6 +2178,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.GRENADE]: {
     id: ItemId.GRENADE,
+    numericalId: 51,
     name: {
       [Lang.EN]: "Water Bomb",
       [Lang.FR]: "Bombe à eau",
@@ -2145,6 +2211,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PLATE]: {
     id: ItemId.PLATE,
+    numericalId: 52,
     name: {
       [Lang.EN]: "Sheet Metal",
       [Lang.FR]: "Plaque de tôle",
@@ -2177,6 +2244,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.JERRYGUN_PART]: {
     id: ItemId.JERRYGUN_PART,
+    numericalId: 53,
     name: {
       [Lang.EN]: "Jerrycan Gun (unattached)",
       [Lang.FR]: "Pompe à Jerrycan (démontée)",
@@ -2200,6 +2268,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BANDAGE]: {
     id: ItemId.BANDAGE,
+    numericalId: 54,
     name: {
       [Lang.EN]: "Bandage",
       [Lang.FR]: "Bandage rudimentaire",
@@ -2236,6 +2305,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.VODKA_DE]: {
     id: ItemId.VODKA_DE,
+    numericalId: 55,
     name: {
       [Lang.EN]: "Stale Beer",
       [Lang.FR]: "1774 éventée",
@@ -2276,6 +2346,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.JERRYGUN_OFF]: {
     id: ItemId.JERRYGUN_OFF,
+    numericalId: 56,
     name: {
       [Lang.EN]: "Jerrycan Gun (empty)",
       [Lang.FR]: "Pompe à Jerrycan (vide)",
@@ -2308,6 +2379,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CINEMA]: {
     id: ItemId.CINEMA,
+    numericalId: 57,
     name: {
       [Lang.EN]: "Retro Overhead Projector",
       [Lang.FR]: "Rétroprojecteur rétro",
@@ -2345,6 +2417,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.EXPLO]: {
     id: ItemId.EXPLO,
+    numericalId: 58,
     name: {
       [Lang.EN]: "Semtex",
       [Lang.FR]: "Explosifs bruts",
@@ -2368,6 +2441,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.HMEAT]: {
     id: ItemId.HMEAT,
+    numericalId: 59,
     name: {
       [Lang.EN]: "Human Flesh",
       [Lang.FR]: "Viande humaine",
@@ -2426,6 +2500,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.GRENADE_EMPTY]: {
     id: ItemId.GRENADE_EMPTY,
+    numericalId: 60,
     name: {
       [Lang.EN]: "Plastic Bag",
       [Lang.FR]: "Sac plastique",
@@ -2458,6 +2533,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BGRENADE]: {
     id: ItemId.BGRENADE,
+    numericalId: 61,
     name: {
       [Lang.EN]: "Exploding Water Bomb",
       [Lang.FR]: "Bombe à eau explosive",
@@ -2490,6 +2566,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BGRENADE_EMPTY]: {
     id: ItemId.BGRENADE_EMPTY,
+    numericalId: 62,
     name: {
       [Lang.EN]: "Plastic Bag and Semtex",
       [Lang.FR]: "Sac plastique + explosif",
@@ -2522,6 +2599,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHAINSAW_PART]: {
     id: ItemId.CHAINSAW_PART,
+    numericalId: 63,
     name: {
       [Lang.EN]: "Incomplete Chainsaw",
       [Lang.FR]: "Tronçonneuse incomplète",
@@ -2545,6 +2623,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MIXERGUN_PART]: {
     id: ItemId.MIXERGUN_PART,
+    numericalId: 64,
     name: {
       [Lang.EN]: "Electric Whisk (incomplete)",
       [Lang.FR]: "Batteur électrique incomplet",
@@ -2568,6 +2647,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RUSTINE]: {
     id: ItemId.RUSTINE,
+    numericalId: 65,
     name: {
       [Lang.EN]: "Duct Tape",
       [Lang.FR]: "Rustine",
@@ -2591,6 +2671,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.LAWN_PART]: {
     id: ItemId.LAWN_PART,
+    numericalId: 66,
     name: {
       [Lang.EN]: "Dismantled Mower",
       [Lang.FR]: "Tondeuse démontée",
@@ -2614,6 +2695,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.TUBE]: {
     id: ItemId.TUBE,
+    numericalId: 67,
     name: {
       [Lang.EN]: "Copper Pipe",
       [Lang.FR]: "Tube de cuivre",
@@ -2637,6 +2719,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CART_PART]: {
     id: ItemId.CART_PART,
+    numericalId: 68,
     name: {
       [Lang.EN]: "Wonky Shopping Trolley",
       [Lang.FR]: "Caddie bancal",
@@ -2660,6 +2743,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.POCKET_BELT]: {
     id: ItemId.POCKET_BELT,
+    numericalId: 69,
     name: {
       [Lang.EN]: "Utility Belt",
       [Lang.FR]: "Ceinture à poches",
@@ -2683,6 +2767,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DRUG_HERO]: {
     id: ItemId.DRUG_HERO,
+    numericalId: 70,
     name: {
       [Lang.EN]: "Twinoid 500mg",
       [Lang.FR]: "Twinoïde 500mg",
@@ -2723,6 +2808,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHEST]: {
     id: ItemId.CHEST,
+    numericalId: 71,
     name: {
       [Lang.EN]: "Metal Chest",
       [Lang.FR]: "Boîte en métal",
@@ -2831,6 +2917,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHEST_XL]: {
     id: ItemId.CHEST_XL,
+    numericalId: 72,
     name: {
       [Lang.EN]: "Large Metal Chest",
       [Lang.FR]: "Gros coffre en métal",
@@ -2995,6 +3082,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHEST_TOOLS]: {
     id: ItemId.CHEST_TOOLS,
+    numericalId: 73,
     name: {
       [Lang.EN]: "Toolbox",
       [Lang.FR]: "Caisse de matériel",
@@ -3093,6 +3181,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.LAMP_ON]: {
     id: ItemId.LAMP_ON,
+    numericalId: 74,
     name: {
       [Lang.EN]: "Bedside Lamp (on)",
       [Lang.FR]: "Lampe de chevet (Allumée)",
@@ -3116,6 +3205,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MUSIC]: {
     id: ItemId.MUSIC,
+    numericalId: 75,
     name: {
       [Lang.EN]: "Mini Hi-Fi (on)",
       [Lang.FR]: "Petite chaîne HiFi (Allumée)",
@@ -3139,6 +3229,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PHARMA]: {
     id: ItemId.PHARMA,
+    numericalId: 76,
     name: {
       [Lang.EN]: "Pharmaceutical Products",
       [Lang.FR]: "Produits Pharmaceutiques",
@@ -3162,6 +3253,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PLATE_RAW]: {
     id: ItemId.PLATE_RAW,
+    numericalId: 77,
     name: {
       [Lang.EN]: "Sheet Metal (parts)",
       [Lang.FR]: "Fragments de tôle",
@@ -3185,6 +3277,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RHUM]: {
     id: ItemId.RHUM,
+    numericalId: 78,
     name: {
       [Lang.EN]: "“Wake The Dead”",
       [Lang.FR]: "« Debout-les-morts »",
@@ -3225,6 +3318,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.COFFEE]: {
     id: ItemId.COFFEE,
+    numericalId: 79,
     name: {
       [Lang.EN]: "Bloody Hot Coffee",
       [Lang.FR]: "Café brûlant",
@@ -3257,6 +3351,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.COFFEE_MACHINE]: {
     id: ItemId.COFFEE_MACHINE,
+    numericalId: 80,
     name: {
       [Lang.EN]: "Cafetière",
       [Lang.FR]: "Cafetière",
@@ -3280,6 +3375,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.COFFEE_MACHINE_PART]: {
     id: ItemId.COFFEE_MACHINE_PART,
+    numericalId: 81,
     name: {
       [Lang.EN]: "Incomplete Cafetière",
       [Lang.FR]: "Cafetière incomplète",
@@ -3303,6 +3399,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.ELECTRO]: {
     id: ItemId.ELECTRO,
+    numericalId: 82,
     name: {
       [Lang.EN]: "Electronic component",
       [Lang.FR]: "Composant électronique",
@@ -3326,6 +3423,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHEST_CITIZEN]: {
     id: ItemId.CHEST_CITIZEN,
+    numericalId: 83,
     name: {
       [Lang.EN]: "Citizen's Welcome Pack",
       [Lang.FR]: "Affaires d'un citoyen",
@@ -3374,6 +3472,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DRUG_WATER]: {
     id: ItemId.DRUG_WATER,
+    numericalId: 84,
     name: {
       [Lang.EN]: "Hydratone 100mg",
       [Lang.FR]: "Hydratone 100mg",
@@ -3414,6 +3513,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RADIO_OFF]: {
     id: ItemId.RADIO_OFF,
+    numericalId: 85,
     name: {
       [Lang.EN]: "Radio Cassette Player (no battery)",
       [Lang.FR]: "Radio K7 (éteint)",
@@ -3446,6 +3546,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RADIO_ON]: {
     id: ItemId.RADIO_ON,
+    numericalId: 86,
     name: {
       [Lang.EN]: "Radio Cassette Player",
       [Lang.FR]: "Radio K7",
@@ -3469,6 +3570,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CYANURE]: {
     id: ItemId.CYANURE,
+    numericalId: 87,
     name: {
       [Lang.EN]: "Cyanide",
       [Lang.FR]: "Cyanure",
@@ -3500,6 +3602,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DOOR]: {
     id: ItemId.DOOR,
+    numericalId: 88,
     name: {
       [Lang.EN]: "Old Door",
       [Lang.FR]: "Vieille porte",
@@ -3532,6 +3635,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.VEGETABLE]: {
     id: ItemId.VEGETABLE,
+    numericalId: 89,
     name: {
       [Lang.EN]: "Suspicious-looking Vegetable",
       [Lang.FR]: "Légume suspect",
@@ -3564,6 +3668,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.REPAIR_KIT_PART]: {
     id: ItemId.REPAIR_KIT_PART,
+    numericalId: 90,
     name: {
       [Lang.EN]: "Repair Kit (damaged)",
       [Lang.FR]: "Kit de bricolage (abimé)",
@@ -3587,6 +3692,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.REPAIR_KIT]: {
     id: ItemId.REPAIR_KIT,
+    numericalId: 91,
     name: {
       [Lang.EN]: "Repair Kit",
       [Lang.FR]: "Kit de bricolage",
@@ -3627,6 +3733,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATERGUN_EMPTY]: {
     id: ItemId.WATERGUN_EMPTY,
+    numericalId: 92,
     name: {
       [Lang.EN]: "Water Pistol (empty)",
       [Lang.FR]: "Pistolet à eau (vide)",
@@ -3659,6 +3766,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATERGUN_OPT_3]: {
     id: ItemId.WATERGUN_OPT_3,
+    numericalId: 93,
     name: {
       [Lang.EN]: "Aqua-Splash (3 shots)",
       [Lang.FR]: "Aqua-Splash (3 charges)",
@@ -3695,6 +3803,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATERGUN_OPT_2]: {
     id: ItemId.WATERGUN_OPT_2,
+    numericalId: 94,
     name: {
       [Lang.EN]: "Aqua-Splash (2 shots)",
       [Lang.FR]: "Aqua-Splash (2 charges)",
@@ -3731,6 +3840,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATERGUN_OPT_1]: {
     id: ItemId.WATERGUN_OPT_1,
+    numericalId: 95,
     name: {
       [Lang.EN]: "Aqua-Splash (1 shot)",
       [Lang.FR]: "Aqua-Splash (1 charge)",
@@ -3767,6 +3877,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MIXERGUN_EMPTY]: {
     id: ItemId.MIXERGUN_EMPTY,
+    numericalId: 96,
     name: {
       [Lang.EN]: "Electric Whisk (no battery)",
       [Lang.FR]: "Batteur électrique (éteint)",
@@ -3799,6 +3910,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHAINSAW_EMPTY]: {
     id: ItemId.CHAINSAW_EMPTY,
+    numericalId: 97,
     name: {
       [Lang.EN]: "Chainsaw (empty)",
       [Lang.FR]: "Tronçonneuse (éteinte)",
@@ -3831,6 +3943,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PILEGUN_EMPTY]: {
     id: ItemId.PILEGUN_EMPTY,
+    numericalId: 98,
     name: {
       [Lang.EN]: "Battery Launcher 1-ITF (empty)",
       [Lang.FR]: "Lance-Pile 1-PDTG (vide)",
@@ -3863,6 +3976,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.TASER_EMPTY]: {
     id: ItemId.TASER_EMPTY,
+    numericalId: 99,
     name: {
       [Lang.EN]: "Taser (incomplete)",
       [Lang.FR]: "Taser d'auto-défense (éteint)",
@@ -3895,6 +4009,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SPORT_ELEC_EMPTY]: {
     id: ItemId.SPORT_ELEC_EMPTY,
+    numericalId: 100,
     name: {
       [Lang.EN]: "EMS System (incomplete)",
       [Lang.FR]: "Sport-élec (éteint)",
@@ -3927,6 +4042,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SPORT_ELEC]: {
     id: ItemId.SPORT_ELEC,
+    numericalId: 101,
     name: {
       [Lang.EN]: "EMS System (charged)",
       [Lang.FR]: "Sport-élec (chargé)",
@@ -3971,6 +4087,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BIG_PGUN_EMPTY]: {
     id: ItemId.BIG_PGUN_EMPTY,
+    numericalId: 102,
     name: {
       [Lang.EN]: "Devastator (empty)",
       [Lang.FR]: "Devastator (vide)",
@@ -4003,6 +4120,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BIG_PGUN]: {
     id: ItemId.BIG_PGUN,
+    numericalId: 103,
     name: {
       [Lang.EN]: "Devastator (loaded)",
       [Lang.FR]: "Devastator (chargé)",
@@ -4050,6 +4168,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BIG_PGUN_PART]: {
     id: ItemId.BIG_PGUN_PART,
+    numericalId: 104,
     name: {
       [Lang.EN]: "Devastator (incomplete)",
       [Lang.FR]: "Devastator incomplet",
@@ -4073,6 +4192,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.TAGGER]: {
     id: ItemId.TAGGER,
+    numericalId: 105,
     name: {
       [Lang.EN]: "Radius Radar Beacon",
       [Lang.FR]: "Balise « Radius »",
@@ -4096,6 +4216,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FLARE]: {
     id: ItemId.FLARE,
+    numericalId: 106,
     name: {
       [Lang.EN]: "Spy Flare",
       [Lang.FR]: "Fusée éclairante",
@@ -4119,6 +4240,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.JERRYGUN]: {
     id: ItemId.JERRYGUN,
+    numericalId: 107,
     name: {
       [Lang.EN]: "Jerrycan Gun (ready)",
       [Lang.FR]: "Pompe à jerrycan (prête)",
@@ -4156,6 +4278,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHAIR_BASIC]: {
     id: ItemId.CHAIR_BASIC,
+    numericalId: 108,
     name: {
       [Lang.EN]: "Ektorp-Gluten Chair",
       [Lang.FR]: "Chaise Ektörp-Gluten",
@@ -4194,6 +4317,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.GUN]: {
     id: ItemId.GUN,
+    numericalId: 109,
     name: {
       [Lang.EN]: "Revolver (unloaded)",
       [Lang.FR]: "Revolver (vide)",
@@ -4217,6 +4341,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MACHINE_GUN]: {
     id: ItemId.MACHINE_GUN,
+    numericalId: 110,
     name: {
       [Lang.EN]: "Assault Rifle (unloaded)",
       [Lang.FR]: "Fusil d'assaut (vide)",
@@ -4240,6 +4365,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DETO]: {
     id: ItemId.DETO,
+    numericalId: 111,
     name: {
       [Lang.EN]: "Compact detonator",
       [Lang.FR]: "Détonateur compact",
@@ -4263,6 +4389,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CONCRETE]: {
     id: ItemId.CONCRETE,
+    numericalId: 112,
     name: {
       [Lang.EN]: "Bag of Cement",
       [Lang.FR]: "Sac de ciment",
@@ -4286,6 +4413,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CONCRETE_WALL]: {
     id: ItemId.CONCRETE_WALL,
+    numericalId: 113,
     name: {
       [Lang.EN]: "Unshaped Concrete Blocks",
       [Lang.FR]: "Pavés de béton informes",
@@ -4323,6 +4451,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DRUG_RANDOM]: {
     id: ItemId.DRUG_RANDOM,
+    numericalId: 114,
     name: {
       [Lang.EN]: "Unlabelled Drug",
       [Lang.FR]: "Médicament sans étiquette",
@@ -4380,6 +4509,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DISINFECT]: {
     id: ItemId.DISINFECT,
+    numericalId: 115,
     name: {
       [Lang.EN]: "Paracetoid 7g",
       [Lang.FR]: "Paracétoïde 7g",
@@ -4424,6 +4554,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DIGGER]: {
     id: ItemId.DIGGER,
+    numericalId: 116,
     name: {
       [Lang.EN]: "Ness-Quick Weedkiller",
       [Lang.FR]: "Désherbant Ness-Quick",
@@ -4456,6 +4587,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHEST_FOOD]: {
     id: ItemId.CHEST_FOOD,
+    numericalId: 117,
     name: {
       [Lang.EN]: "Food Parcel",
       [Lang.FR]: "Caisse de nourriture",
@@ -4544,6 +4676,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FOOD_BAG]: {
     id: ItemId.FOOD_BAG,
+    numericalId: 118,
     name: {
       [Lang.EN]: "Doggy Bag",
       [Lang.FR]: "Doggy-bag",
@@ -4612,6 +4745,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FOOD_BAR1]: {
     id: ItemId.FOOD_BAR1,
+    numericalId: 119,
     name: {
       [Lang.EN]: "Packet of Soft Crisps",
       [Lang.FR]: "Paquet de chips molles",
@@ -4644,6 +4778,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FOOD_BAR2]: {
     id: ItemId.FOOD_BAR2,
+    numericalId: 120,
     name: {
       [Lang.EN]: "Mouldy Neapolitan",
       [Lang.FR]: "Napolitains moisis",
@@ -4676,6 +4811,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FOOD_BAR3]: {
     id: ItemId.FOOD_BAR3,
+    numericalId: 121,
     name: {
       [Lang.EN]: "Dried Chewing Gum",
       [Lang.FR]: "Chewing-gums séchés",
@@ -4708,6 +4844,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FOOD_BISCUIT]: {
     id: ItemId.FOOD_BISCUIT,
+    numericalId: 122,
     name: {
       [Lang.EN]: "Rancid Jaffa Cakes",
       [Lang.FR]: "Petits beurres rances",
@@ -4740,6 +4877,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FOOD_CHICK]: {
     id: ItemId.FOOD_CHICK,
+    numericalId: 123,
     name: {
       [Lang.EN]: "Half-eaten Chicken Wings",
       [Lang.FR]: "Ailerons de poulet entamés",
@@ -4772,6 +4910,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FOOD_PIMS]: {
     id: ItemId.FOOD_PIMS,
+    numericalId: 124,
     name: {
       [Lang.EN]: "Out-of-Date Biscuits",
       [Lang.FR]: "Pim's périmé",
@@ -4804,6 +4943,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FOOD_TARTE]: {
     id: ItemId.FOOD_TARTE,
+    numericalId: 125,
     name: {
       [Lang.EN]: "Stale Tart",
       [Lang.FR]: "Biscuit fade",
@@ -4836,6 +4976,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FOOD_SANDW]: {
     id: ItemId.FOOD_SANDW,
+    numericalId: 126,
     name: {
       [Lang.EN]: "Mouldy Ham Sandwich",
       [Lang.FR]: "Jambon-beurre moisi",
@@ -4868,6 +5009,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FOOD_NOODLES]: {
     id: ItemId.FOOD_NOODLES,
+    numericalId: 127,
     name: {
       [Lang.EN]: "Chinese Noodles",
       [Lang.FR]: "Nouilles chinoises",
@@ -4900,6 +5042,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SPICES]: {
     id: ItemId.SPICES,
+    numericalId: 128,
     name: {
       [Lang.EN]: "Strong Spices",
       [Lang.FR]: "Epices fortes",
@@ -4923,6 +5066,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FOOD_NOODLES_HOT]: {
     id: ItemId.FOOD_NOODLES_HOT,
+    numericalId: 129,
     name: {
       [Lang.EN]: "Spicy Chinese Noodles",
       [Lang.FR]: "Nouilles chinoises épicées",
@@ -4955,6 +5099,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CARDS]: {
     id: ItemId.CARDS,
+    numericalId: 130,
     name: {
       [Lang.EN]: "Incomplete Deck of Cards",
       [Lang.FR]: "Jeu de cartes incomplet",
@@ -4978,6 +5123,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.GAME_BOX]: {
     id: ItemId.GAME_BOX,
+    numericalId: 131,
     name: {
       [Lang.EN]: "Box of Games",
       [Lang.FR]: "Boîte de jeu",
@@ -5016,6 +5162,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATERGUN_OPT_PART]: {
     id: ItemId.WATERGUN_OPT_PART,
+    numericalId: 132,
     name: {
       [Lang.EN]: "Aqua-Splash (incomplete)",
       [Lang.FR]: "Aqua-Splash (démonté)",
@@ -5039,6 +5186,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.VIBR_EMPTY]: {
     id: ItemId.VIBR_EMPTY,
+    numericalId: 133,
     name: {
       [Lang.EN]: "Pocket Vibrator (incomplete)",
       [Lang.FR]: "Petit manche vibrant (déchargé)",
@@ -5071,6 +5219,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BONE_MEAT]: {
     id: ItemId.BONE_MEAT,
+    numericalId: 134,
     name: {
       [Lang.EN]: "Meaty Bone",
       [Lang.FR]: "Os charnu",
@@ -5141,6 +5290,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BONE]: {
     id: ItemId.BONE,
+    numericalId: 135,
     name: {
       [Lang.EN]: "Broken Human Bone",
       [Lang.FR]: "Os humain fêlé",
@@ -5178,6 +5328,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WOOD_BEAM]: {
     id: ItemId.WOOD_BEAM,
+    numericalId: 136,
     name: {
       [Lang.EN]: "Patchwork Beam",
       [Lang.FR]: "Poutre rafistolée",
@@ -5201,6 +5352,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.METAL_BEAM]: {
     id: ItemId.METAL_BEAM,
+    numericalId: 137,
     name: {
       [Lang.EN]: "Metal Support",
       [Lang.FR]: "Structures métalliques",
@@ -5224,6 +5376,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.METAL_BAD]: {
     id: ItemId.METAL_BAD,
+    numericalId: 138,
     name: {
       [Lang.EN]: "Scrap Metal",
       [Lang.FR]: "Débris métalliques",
@@ -5247,6 +5400,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WOOD_BAD]: {
     id: ItemId.WOOD_BAD,
+    numericalId: 139,
     name: {
       [Lang.EN]: "Rotting Log",
       [Lang.FR]: "Souche de bois pourrie",
@@ -5270,6 +5424,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SAW_TOOL]: {
     id: ItemId.SAW_TOOL,
+    numericalId: 140,
     name: {
       [Lang.EN]: "Hacksaw",
       [Lang.FR]: "Scie à métaux",
@@ -5293,6 +5448,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WOOD_LOG]: {
     id: ItemId.WOOD_LOG,
+    numericalId: 141,
     name: {
       [Lang.EN]: "Quality Log",
       [Lang.FR]: "Buche en bon état",
@@ -5316,6 +5472,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.ELECTRO_BOX]: {
     id: ItemId.ELECTRO_BOX,
+    numericalId: 142,
     name: {
       [Lang.EN]: "Broken Electronic Device",
       [Lang.FR]: "Appareil électronique en panne",
@@ -5339,6 +5496,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DECO_BOX]: {
     id: ItemId.DECO_BOX,
+    numericalId: 143,
     name: {
       [Lang.EN]: "Flatpacked Furniture",
       [Lang.FR]: "Meuble en kit",
@@ -5362,6 +5520,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SAW_TOOL_PART]: {
     id: ItemId.SAW_TOOL_PART,
+    numericalId: 144,
     name: {
       [Lang.EN]: "Damaged Hacksaw",
       [Lang.FR]: "Scie à métaux abimée",
@@ -5385,6 +5544,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MECANISM]: {
     id: ItemId.MECANISM,
+    numericalId: 145,
     name: {
       [Lang.EN]: "Mechanism",
       [Lang.FR]: "Mécanisme",
@@ -5408,6 +5568,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.TRESTLE]: {
     id: ItemId.TRESTLE,
+    numericalId: 146,
     name: {
       [Lang.EN]: "Trestle",
       [Lang.FR]: "Tréteau",
@@ -5440,6 +5601,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.TABLE]: {
     id: ItemId.TABLE,
+    numericalId: 147,
     name: {
       [Lang.EN]: "Järpen Table",
       [Lang.FR]: "Table Järpen",
@@ -5472,6 +5634,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATER_CLEANER]: {
     id: ItemId.WATER_CLEANER,
+    numericalId: 148,
     name: {
       [Lang.EN]: "Water Purifying Tablets",
       [Lang.FR]: "Micropur effervescent",
@@ -5495,6 +5658,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.VEGETABLE_TASTY]: {
     id: ItemId.VEGETABLE_TASTY,
+    numericalId: 149,
     name: {
       [Lang.EN]: "Intestine Melon",
       [Lang.FR]: "Melon d'intestin",
@@ -5527,6 +5691,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.POWDER]: {
     id: ItemId.POWDER,
+    numericalId: 150,
     name: {
       [Lang.EN]: "Flash Powder",
       [Lang.FR]: "Poudre-comète brute",
@@ -5550,6 +5715,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FLASH]: {
     id: ItemId.FLASH,
+    numericalId: 151,
     name: {
       [Lang.EN]: "Flash Grenade",
       [Lang.FR]: "Bombe Pulvérine",
@@ -5582,6 +5748,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.TEDDY]: {
     id: ItemId.TEDDY,
+    numericalId: 152,
     name: {
       [Lang.EN]: "Teddy Bear",
       [Lang.FR]: "Teddy n'Ours",
@@ -5615,6 +5782,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WOOD_PLATE_PART]: {
     id: ItemId.WOOD_PLATE_PART,
+    numericalId: 153,
     name: {
       [Lang.EN]: "Crate Lid",
       [Lang.FR]: "Morceau de caisse",
@@ -5638,6 +5806,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WOOD_PLATE]: {
     id: ItemId.WOOD_PLATE,
+    numericalId: 154,
     name: {
       [Lang.EN]: "Solid Wooden Board",
       [Lang.FR]: "Plaque de bois solide",
@@ -5670,6 +5839,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MONEY]: {
     id: ItemId.MONEY,
+    numericalId: 155,
     name: {
       [Lang.EN]: "Wad of Cash",
       [Lang.FR]: "Liasse de billets",
@@ -5693,6 +5863,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.REPAIR_KIT_PART_RAW]: {
     id: ItemId.REPAIR_KIT_PART_RAW,
+    numericalId: 156,
     name: {
       [Lang.EN]: "Tool Bag",
       [Lang.FR]: "Outils en vrac",
@@ -5716,6 +5887,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RADIUS_MK2_PART]: {
     id: ItemId.RADIUS_MK2_PART,
+    numericalId: 157,
     name: {
       [Lang.EN]: "Radius Mark II (incomplete)",
       [Lang.FR]: "Radius Mark II (déchargé)",
@@ -5748,6 +5920,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RADIUS_MK2]: {
     id: ItemId.RADIUS_MK2,
+    numericalId: 158,
     name: {
       [Lang.EN]: "Radius Mark II",
       [Lang.FR]: "Radius Mark II",
@@ -5781,6 +5954,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.REPAIR_ONE]: {
     id: ItemId.REPAIR_ONE,
+    numericalId: 159,
     name: {
       [Lang.EN]: "Kwik-fix",
       [Lang.FR]: "Brico'Facile",
@@ -5817,6 +5991,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.ENGINE_PART]: {
     id: ItemId.ENGINE_PART,
+    numericalId: 160,
     name: {
       [Lang.EN]: "Engine (incomplete)",
       [Lang.FR]: "Moteur incomplet",
@@ -5840,6 +6015,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MACHINE_1]: {
     id: ItemId.MACHINE_1,
+    numericalId: 161,
     name: {
       [Lang.EN]: "Old Washing Machine",
       [Lang.FR]: "Vieille machine à laver",
@@ -5877,6 +6053,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MACHINE_2]: {
     id: ItemId.MACHINE_2,
+    numericalId: 162,
     name: {
       [Lang.EN]: "Carcinogenic Oven",
       [Lang.FR]: "Four cancérigène",
@@ -5914,6 +6091,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MACHINE_3]: {
     id: ItemId.MACHINE_3,
+    numericalId: 163,
     name: {
       [Lang.EN]: "Beer Fridge",
       [Lang.FR]: "Réfrigérateur d'étudiant",
@@ -5951,6 +6129,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RP_LETTER]: {
     id: ItemId.RP_LETTER,
+    numericalId: 164,
     name: {
       [Lang.EN]: "A letter with no address",
       [Lang.FR]: "Une lettre sans adresse",
@@ -5983,6 +6162,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RP_SCROLL]: {
     id: ItemId.RP_SCROLL,
+    numericalId: 165,
     name: {
       [Lang.EN]: "Scroll",
       [Lang.FR]: "Feuille raccornie",
@@ -6015,6 +6195,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RP_MANUAL]: {
     id: ItemId.RP_MANUAL,
+    numericalId: 166,
     name: {
       [Lang.EN]: "Instruction Manual",
       [Lang.FR]: "Manuel d'instructions",
@@ -6047,6 +6228,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RP_BOOK2]: {
     id: ItemId.RP_BOOK2,
+    numericalId: 167,
     name: {
       [Lang.EN]: "Illegible Notebook",
       [Lang.FR]: "Carnet illisible",
@@ -6079,6 +6261,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RP_BOOK_01]: {
     id: ItemId.RP_BOOK_01,
+    numericalId: 168,
     name: {
       [Lang.EN]: "Photo Album",
       [Lang.FR]: "Album photo",
@@ -6111,6 +6294,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RP_SHEETS]: {
     id: ItemId.RP_SHEETS,
+    numericalId: 169,
     name: {
       [Lang.EN]: "Stack of Papers",
       [Lang.FR]: "Pile de feuilles",
@@ -6143,6 +6327,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHAIN]: {
     id: ItemId.CHAIN,
+    numericalId: 170,
     name: {
       [Lang.EN]: "Rusty Chain",
       [Lang.FR]: "Grosse chaîne rouillée",
@@ -6181,6 +6366,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DISH]: {
     id: ItemId.DISH,
+    numericalId: 171,
     name: {
       [Lang.EN]: "Dodgy Homemade Dish",
       [Lang.FR]: "Plat fait-maison douteux",
@@ -6213,6 +6399,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DISH_TASTY]: {
     id: ItemId.DISH_TASTY,
+    numericalId: 172,
     name: {
       [Lang.EN]: "Tasty Homemade Dish",
       [Lang.FR]: "Bon plat fait-maison",
@@ -6245,6 +6432,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.HOME_BOX_XL]: {
     id: ItemId.HOME_BOX_XL,
+    numericalId: 173,
     name: {
       [Lang.EN]: "Iron Chest",
       [Lang.FR]: "Cantine en fer",
@@ -6281,6 +6469,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.HOME_BOX]: {
     id: ItemId.HOME_BOX,
+    numericalId: 174,
     name: {
       [Lang.EN]: "Boxes",
       [Lang.FR]: "Cartons",
@@ -6317,6 +6506,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.HOME_DEF]: {
     id: ItemId.HOME_DEF,
+    numericalId: 175,
     name: {
       [Lang.EN]: "Makeshift Barricade",
       [Lang.FR]: "Barricades à clouer",
@@ -6353,6 +6543,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BOOK_GEN_LETTER]: {
     id: ItemId.BOOK_GEN_LETTER,
+    numericalId: 176,
     name: {
       [Lang.EN]: "Envelope",
       [Lang.FR]: "Une enveloppe",
@@ -6411,6 +6602,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BOOK_GEN_BOX]: {
     id: ItemId.BOOK_GEN_BOX,
+    numericalId: 177,
     name: {
       [Lang.EN]: "Parcel",
       [Lang.FR]: "Un colis",
@@ -6459,6 +6651,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FENCE]: {
     id: ItemId.FENCE,
+    numericalId: 178,
     name: {
       [Lang.EN]: "Wire Mesh",
       [Lang.FR]: "Morceau de grillage",
@@ -6482,6 +6675,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATERGUN_3]: {
     id: ItemId.WATERGUN_3,
+    numericalId: 179,
     name: {
       [Lang.EN]: "Water Pistol (3 shots)",
       [Lang.FR]: "Pistolet à eau (3 charges)",
@@ -6518,6 +6712,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATERGUN_2]: {
     id: ItemId.WATERGUN_2,
+    numericalId: 180,
     name: {
       [Lang.EN]: "Water Pistol (2 shots)",
       [Lang.FR]: "Pistolet à eau (2 charges)",
@@ -6554,6 +6749,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATERGUN_1]: {
     id: ItemId.WATERGUN_1,
+    numericalId: 181,
     name: {
       [Lang.EN]: "Water Pistol (1 shot)",
       [Lang.FR]: "Pistolet à eau (1 charge)",
@@ -6590,6 +6786,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATERGUN_OPT_5]: {
     id: ItemId.WATERGUN_OPT_5,
+    numericalId: 182,
     name: {
       [Lang.EN]: "Aqua-Splash (5 shots)",
       [Lang.FR]: "Aqua-Splash (5 charges)",
@@ -6626,6 +6823,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATERGUN_OPT_4]: {
     id: ItemId.WATERGUN_OPT_4,
+    numericalId: 183,
     name: {
       [Lang.EN]: "Aqua-Splash (4 shots)",
       [Lang.FR]: "Aqua-Splash (4 charges)",
@@ -6662,6 +6860,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CIGS]: {
     id: ItemId.CIGS,
+    numericalId: 184,
     name: {
       [Lang.EN]: "Opened packet of Cigarettes",
       [Lang.FR]: "Paquet de cigarettes entamé",
@@ -6704,6 +6903,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PILEGUN_UPKIT]: {
     id: ItemId.PILEGUN_UPKIT,
+    numericalId: 185,
     name: {
       [Lang.EN]: "PUTA Mark II Calibrator",
       [Lang.FR]: "Calibrateur PDTT Mark II",
@@ -6727,6 +6927,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PILEGUN_UP_EMPTY]: {
     id: ItemId.PILEGUN_UP_EMPTY,
+    numericalId: 186,
     name: {
       [Lang.EN]: "Battery Launcher Mk. II (empty)",
       [Lang.FR]: "Lance-pile Mark II (vide)",
@@ -6759,6 +6960,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PILEGUN_UP]: {
     id: ItemId.PILEGUN_UP,
+    numericalId: 187,
     name: {
       [Lang.EN]: "Battery Launcher Mk. II (loaded)",
       [Lang.FR]: "Lance-pile Mark II (chargé)",
@@ -6806,6 +7008,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PILE_BROKEN]: {
     id: ItemId.PILE_BROKEN,
+    numericalId: 188,
     name: {
       [Lang.EN]: "Crushed Battery",
       [Lang.FR]: "Pile broyée",
@@ -6829,6 +7032,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RSC_PACK_3]: {
     id: ItemId.RSC_PACK_3,
+    numericalId: 189,
     name: {
       [Lang.EN]: "Construction Kit (3)",
       [Lang.FR]: "Carton de matériaux (3)",
@@ -6871,6 +7075,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RSC_PACK_2]: {
     id: ItemId.RSC_PACK_2,
+    numericalId: 190,
     name: {
       [Lang.EN]: "Construction Kit (2)",
       [Lang.FR]: "Carton de matériaux (2)",
@@ -6913,6 +7118,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RSC_PACK_1]: {
     id: ItemId.RSC_PACK_1,
+    numericalId: 191,
     name: {
       [Lang.EN]: "Construction Kit (1)",
       [Lang.FR]: "Carton de matériaux (1)",
@@ -6951,6 +7157,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CAR_DOOR]: {
     id: ItemId.CAR_DOOR,
+    numericalId: 192,
     name: {
       [Lang.EN]: "Car Door",
       [Lang.FR]: "Portière de voiture",
@@ -6974,6 +7181,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CAR_DOOR_PART]: {
     id: ItemId.CAR_DOOR_PART,
+    numericalId: 193,
     name: {
       [Lang.EN]: "Car Door (incomplete)",
       [Lang.FR]: "Portière de voiture incomplète",
@@ -6997,6 +7205,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.POISON]: {
     id: ItemId.POISON,
+    numericalId: 194,
     name: {
       [Lang.EN]: "Vial of Poison",
       [Lang.FR]: "Fiole de poison",
@@ -7020,6 +7229,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.POISON_PART]: {
     id: ItemId.POISON_PART,
+    numericalId: 195,
     name: {
       [Lang.EN]: "Corrosive Liquid",
       [Lang.FR]: "Produit corrosif",
@@ -7043,6 +7253,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHEST_HERO]: {
     id: ItemId.CHEST_HERO,
+    numericalId: 196,
     name: {
       [Lang.EN]: "Shrewd Citizen's Stash",
       [Lang.FR]: "Réserves d’un citoyen avisé",
@@ -7096,6 +7307,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.POSTAL_BOX]: {
     id: ItemId.POSTAL_BOX,
+    numericalId: 197,
     name: {
       [Lang.EN]: "Gift Parcel",
       [Lang.FR]: "Colis postal",
@@ -7144,6 +7356,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FOOD_ARMAG]: {
     id: ItemId.FOOD_ARMAG,
+    numericalId: 198,
     name: {
       [Lang.EN]: "Lunch Box",
       [Lang.FR]: "Boîte-déjeuner",
@@ -7192,6 +7405,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FOOD_CANDIES]: {
     id: ItemId.FOOD_CANDIES,
+    numericalId: 199,
     name: {
       [Lang.EN]: "Handful of Sweets",
       [Lang.FR]: "Poignée de bonbons",
@@ -7224,6 +7438,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.OUT_DEF]: {
     id: ItemId.OUT_DEF,
+    numericalId: 200,
     name: {
       [Lang.EN]: "Sheet of Plywood",
       [Lang.FR]: "Morceau de contreplaqué",
@@ -7256,6 +7471,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.TORCH]: {
     id: ItemId.TORCH,
+    numericalId: 201,
     name: {
       [Lang.EN]: "Torch",
       [Lang.FR]: "Torche",
@@ -7292,6 +7508,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.TORCH_OFF]: {
     id: ItemId.TORCH_OFF,
+    numericalId: 202,
     name: {
       [Lang.EN]: "Burnt out Torch",
       [Lang.FR]: "Torche consumée",
@@ -7330,6 +7547,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHAMA]: {
     id: ItemId.CHAMA,
+    numericalId: 203,
     name: {
       [Lang.EN]: "Dried Marshmallows",
       [Lang.FR]: "Chamallows séchés",
@@ -7353,6 +7571,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHAMA_TASTY]: {
     id: ItemId.CHAMA_TASTY,
+    numericalId: 204,
     name: {
       [Lang.EN]: "Burnt Marshmallows",
       [Lang.FR]: "Chamallows calcinés",
@@ -7385,6 +7604,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PC]: {
     id: ItemId.PC,
+    numericalId: 205,
     name: {
       [Lang.EN]: "PC Base Unit",
       [Lang.FR]: "Unité centrale",
@@ -7422,6 +7642,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SAFE]: {
     id: ItemId.SAFE,
+    numericalId: 206,
     name: {
       [Lang.EN]: "Safe",
       [Lang.FR]: "Coffre-fort",
@@ -7509,6 +7730,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RP_TWIN]: {
     id: ItemId.RP_TWIN,
+    numericalId: 207,
     name: {
       [Lang.EN]: "Encyclopedia",
       [Lang.FR]: "Une encyclopédie",
@@ -7541,6 +7763,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATER_CAN_EMPTY]: {
     id: ItemId.WATER_CAN_EMPTY,
+    numericalId: 208,
     name: {
       [Lang.EN]: "Water Cooler Bottle (Empty)",
       [Lang.FR]: "Bonbonne d'eau (vide)",
@@ -7573,6 +7796,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATER_CAN_1]: {
     id: ItemId.WATER_CAN_1,
+    numericalId: 209,
     name: {
       [Lang.EN]: "Water Cooler Bottle (1 Ration)",
       [Lang.FR]: "Bonbonne d'eau (1 ration)",
@@ -7637,6 +7861,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATER_CAN_2]: {
     id: ItemId.WATER_CAN_2,
+    numericalId: 210,
     name: {
       [Lang.EN]: "Water Cooler Bottle (2 Rations)",
       [Lang.FR]: "Bonbonne d'eau (2 rations)",
@@ -7701,6 +7926,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATER_CAN_3]: {
     id: ItemId.WATER_CAN_3,
+    numericalId: 211,
     name: {
       [Lang.EN]: "Water Cooler Bottle (3 Rations)",
       [Lang.FR]: "Bonbonne d'eau (3 rations)",
@@ -7755,6 +7981,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BETA_DRUG_BAD]: {
     id: ItemId.BETA_DRUG_BAD,
+    numericalId: 212,
     name: {
       [Lang.EN]: "Betapropine 5mg (expired)",
       [Lang.FR]: "Betapropine 5mg périmée",
@@ -7812,6 +8039,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BETA_DRUG]: {
     id: ItemId.BETA_DRUG,
+    numericalId: 213,
     name: {
       [Lang.EN]: "Betapropine 5mg",
       [Lang.FR]: "Betapropine 5mg",
@@ -7844,6 +8072,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FRUIT_SUB_PART]: {
     id: ItemId.FRUIT_SUB_PART,
+    numericalId: 214,
     name: {
       [Lang.EN]: "Fleshrooms",
       [Lang.FR]: "Charognardes",
@@ -7867,6 +8096,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FRUIT_PART]: {
     id: ItemId.FRUIT_PART,
+    numericalId: 215,
     name: {
       [Lang.EN]: "Sticky Pastry Ball",
       [Lang.FR]: "Boule de pâtes visqueuse",
@@ -7890,6 +8120,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FLESH_PART]: {
     id: ItemId.FLESH_PART,
+    numericalId: 216,
     name: {
       [Lang.EN]: "Pound of Flesh",
       [Lang.FR]: "Lambeau de chair",
@@ -7913,6 +8144,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FLESH]: {
     id: ItemId.FLESH,
+    numericalId: 217,
     name: {
       [Lang.EN]: "Grisly Bomb",
       [Lang.FR]: "Bombe macabre",
@@ -7945,6 +8177,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PHARMA_PART]: {
     id: ItemId.PHARMA_PART,
+    numericalId: 218,
     name: {
       [Lang.EN]: "Thick Solution",
       [Lang.FR]: "Substance épaisse",
@@ -7968,6 +8201,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FRUIT]: {
     id: ItemId.FRUIT,
+    numericalId: 219,
     name: {
       [Lang.EN]: "Fleshroom Puree",
       [Lang.FR]: "Purée de charognardes",
@@ -8014,6 +8248,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATER_CUP_PART]: {
     id: ItemId.WATER_CUP_PART,
+    numericalId: 220,
     name: {
       [Lang.EN]: "Stagnant Water Can",
       [Lang.FR]: "Eau croupie",
@@ -8060,6 +8295,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WATER_CUP]: {
     id: ItemId.WATER_CUP,
+    numericalId: 221,
     name: {
       [Lang.EN]: "Purified Stagnant Water",
       [Lang.FR]: "Eau croupie purifiée",
@@ -8106,6 +8342,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BANNED_NOTE]: {
     id: ItemId.BANNED_NOTE,
+    numericalId: 222,
     name: {
       [Lang.EN]: "Banned Citizen's Note",
       [Lang.FR]: "Note d'un citoyen banni",
@@ -8129,6 +8366,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.INFECT_POISON_PART]: {
     id: ItemId.INFECT_POISON_PART,
+    numericalId: 223,
     name: {
       [Lang.EN]: "Bloody Dressing",
       [Lang.FR]: "Pansement ensanglanté",
@@ -8152,6 +8390,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.TEDDY_01]: {
     id: ItemId.TEDDY_01,
+    numericalId: 224,
     name: {
       [Lang.EN]: "Cursed Cuddly Toy",
       [Lang.FR]: "Teddy n'Ours maudit",
@@ -8184,6 +8423,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WOODSTEAK]: {
     id: ItemId.WOODSTEAK,
+    numericalId: 225,
     name: {
       [Lang.EN]: "Sawdust Steak",
       [Lang.FR]: "Steak de sciure",
@@ -8216,6 +8456,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHRISTMAS_SUIT_1]: {
     id: ItemId.CHRISTMAS_SUIT_1,
+    numericalId: 226,
     name: {
       [Lang.EN]: "Second-hand Red Coat",
       [Lang.FR]: "Veste rouge usée",
@@ -8240,6 +8481,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHRISTMAS_SUIT_2]: {
     id: ItemId.CHRISTMAS_SUIT_2,
+    numericalId: 227,
     name: {
       [Lang.EN]: "Ripped Red Trousers",
       [Lang.FR]: "Pantalon rouge déchiré",
@@ -8264,6 +8506,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHRISTMAS_SUIT_3]: {
     id: ItemId.CHRISTMAS_SUIT_3,
+    numericalId: 228,
     name: {
       [Lang.EN]: "Foul-smelling Red Hat",
       [Lang.FR]: "Bonnet rouge malodorant",
@@ -8288,6 +8531,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHRISTMAS_SUIT_FULL]: {
     id: ItemId.CHRISTMAS_SUIT_FULL,
+    numericalId: 229,
     name: {
       [Lang.EN]: "Foul-smelling Vintage Suit",
       [Lang.FR]: "Costume malodorant d'une autre époque",
@@ -8312,6 +8556,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.IPHONE]: {
     id: ItemId.IPHONE,
+    numericalId: 230,
     name: {
       [Lang.EN]: "Mobile Phone",
       [Lang.FR]: "Téléphone portable",
@@ -8364,6 +8609,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SMELLY_MEAT]: {
     id: ItemId.SMELLY_MEAT,
+    numericalId: 231,
     name: {
       [Lang.EN]: "Festering Flesh",
       [Lang.FR]: "Pelures de peau",
@@ -8387,6 +8633,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MAGLITE_OFF]: {
     id: ItemId.MAGLITE_OFF,
+    numericalId: 232,
     name: {
       [Lang.EN]: "Novelty Torch (off)",
       [Lang.FR]: "Maglite Pif'Gadget (éteinte)",
@@ -8419,6 +8666,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MAGLITE_1]: {
     id: ItemId.MAGLITE_1,
+    numericalId: 233,
     name: {
       [Lang.EN]: "Novelty Torch (1 charge)",
       [Lang.FR]: "Maglite Pif'Gadget (1 charge)",
@@ -8451,6 +8699,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MAGLITE_2]: {
     id: ItemId.MAGLITE_2,
+    numericalId: 234,
     name: {
       [Lang.EN]: "Novelty Torch (2 charges)",
       [Lang.FR]: "Maglite Pif'Gadget (2 charges)",
@@ -8474,6 +8723,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CADAVER]: {
     id: ItemId.CADAVER,
+    numericalId: 235,
     name: {
       [Lang.EN]: "Traveller's Corpse",
       [Lang.FR]: "Cadavre d'un voyageur",
@@ -8544,6 +8794,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CADAVER_REMAINS]: {
     id: ItemId.CADAVER_REMAINS,
+    numericalId: 236,
     name: {
       [Lang.EN]: "Gnawed Corpse",
       [Lang.FR]: "Cadavre rongé",
@@ -8567,6 +8818,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SMOKE_BOMB]: {
     id: ItemId.SMOKE_BOMB,
+    numericalId: 237,
     name: {
       [Lang.EN]: "« Pine Fresh » Smoke Bomb",
       [Lang.FR]: "Fumigène « Senteur Sapin »",
@@ -8590,6 +8842,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SAND_BALL]: {
     id: ItemId.SAND_BALL,
+    numericalId: 238,
     name: {
       [Lang.EN]: "Sand Ball",
       [Lang.FR]: "Boule de sable",
@@ -8614,6 +8867,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BPLAN_C]: {
     id: ItemId.BPLAN_C,
+    numericalId: 239,
     name: {
       [Lang.EN]: "Construction Blueprint (common)",
       [Lang.FR]: "Plan de chantier (commun)",
@@ -8806,6 +9060,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BPLAN_U]: {
     id: ItemId.BPLAN_U,
+    numericalId: 240,
     name: {
       [Lang.EN]: "Construction Blueprint (uncommon)",
       [Lang.FR]: "Plan de chantier (inhabituel)",
@@ -8906,6 +9161,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BPLAN_R]: {
     id: ItemId.BPLAN_R,
+    numericalId: 241,
     name: {
       [Lang.EN]: "Construction Blueprint (rare)",
       [Lang.FR]: "Plan de chantier (rare)",
@@ -9074,6 +9330,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BPLAN_E]: {
     id: ItemId.BPLAN_E,
+    numericalId: 242,
     name: {
       [Lang.EN]: "Construction Blueprint (very rare!)",
       [Lang.FR]: "Plan de chantier (très rare !)",
@@ -9154,6 +9411,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BPLAN_BOX]: {
     id: ItemId.BPLAN_BOX,
+    numericalId: 243,
     name: {
       [Lang.EN]: "Architect's Chest",
       [Lang.FR]: "Coffre d'architecte",
@@ -9187,6 +9445,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BPLAN_BOX_E]: {
     id: ItemId.BPLAN_BOX_E,
+    numericalId: 244,
     name: {
       [Lang.EN]: "Sealed Architect's Chest",
       [Lang.FR]: "Coffre d'architecte scellé",
@@ -9229,6 +9488,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.EGG]: {
     id: ItemId.EGG,
+    numericalId: 245,
     name: {
       [Lang.EN]: "Egg",
       [Lang.FR]: "Œuf",
@@ -9261,6 +9521,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.APPLE]: {
     id: ItemId.APPLE,
+    numericalId: 246,
     name: {
       [Lang.EN]: "Apple",
       [Lang.FR]: "Pomme",
@@ -9293,6 +9554,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BOOMFRUIT]: {
     id: ItemId.BOOMFRUIT,
+    numericalId: 247,
     name: {
       [Lang.EN]: "Exploding Grapefruit",
       [Lang.FR]: "Pamplemousse explosif",
@@ -9325,6 +9587,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BPLAN_DROP]: {
     id: ItemId.BPLAN_DROP,
+    numericalId: 248,
     name: {
       [Lang.EN]: "Worn Leather Bag",
       [Lang.FR]: "Sacoche usée",
@@ -9373,6 +9636,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MAGNETICKEY]: {
     id: ItemId.MAGNETICKEY,
+    numericalId: 249,
     name: {
       [Lang.EN]: "Magnetic Key",
       [Lang.FR]: "Clé magnétique",
@@ -9396,6 +9660,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BUMPKEY]: {
     id: ItemId.BUMPKEY,
+    numericalId: 250,
     name: {
       [Lang.EN]: "Bump Key",
       [Lang.FR]: "Clé à percussion",
@@ -9419,6 +9684,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CLASSICKEY]: {
     id: ItemId.CLASSICKEY,
+    numericalId: 251,
     name: {
       [Lang.EN]: "Bottle Opener",
       [Lang.FR]: "Décapsuleur",
@@ -9442,6 +9708,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PRINTS]: {
     id: ItemId.PRINTS,
+    numericalId: 252,
     name: {
       [Lang.EN]: "Magnetic Key Blank",
       [Lang.FR]: "Empreinte de clé magnétique",
@@ -9465,6 +9732,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PRINTS_01]: {
     id: ItemId.PRINTS_01,
+    numericalId: 253,
     name: {
       [Lang.EN]: "Bump Key Blank",
       [Lang.FR]: "Empreinte de clé à percussion",
@@ -9488,6 +9756,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PRINTS_02]: {
     id: ItemId.PRINTS_02,
+    numericalId: 254,
     name: {
       [Lang.EN]: "Bottle Opener Blank",
       [Lang.FR]: "Empreinte de décapsuleur",
@@ -9511,6 +9780,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.VAGOUL]: {
     id: ItemId.VAGOUL,
+    numericalId: 255,
     name: {
       [Lang.EN]: "Ghoul Vaccine",
       [Lang.FR]: "Sérum pour Goule",
@@ -9542,6 +9812,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.HBPLAN_U]: {
     id: ItemId.HBPLAN_U,
+    numericalId: 256,
     name: {
       [Lang.EN]: "Hotel Blueprint (uncommon)",
       [Lang.FR]: "Plan de chantier (inhabituel)",
@@ -9602,6 +9873,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.HBPLAN_R]: {
     id: ItemId.HBPLAN_R,
+    numericalId: 257,
     name: {
       [Lang.EN]: "Hotel Blueprint (rare)",
       [Lang.FR]: "Plan de chantier (rare)",
@@ -9666,6 +9938,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.HBPLAN_E]: {
     id: ItemId.HBPLAN_E,
+    numericalId: 258,
     name: {
       [Lang.EN]: "Hotel Blueprint (very rare!)",
       [Lang.FR]: "Plan de chantier (très rare !)",
@@ -9714,6 +9987,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BBPLAN_U]: {
     id: ItemId.BBPLAN_U,
+    numericalId: 259,
     name: {
       [Lang.EN]: "Bunker Blueprint (uncommon)",
       [Lang.FR]: "Plan de chantier (inhabituel)",
@@ -9770,6 +10044,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BBPLAN_R]: {
     id: ItemId.BBPLAN_R,
+    numericalId: 260,
     name: {
       [Lang.EN]: "Bunker Blueprint (rare)",
       [Lang.FR]: "Plan de chantier (rare)",
@@ -9834,6 +10109,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BBPLAN_E]: {
     id: ItemId.BBPLAN_E,
+    numericalId: 261,
     name: {
       [Lang.EN]: "Bunker Blueprint (very rare!)",
       [Lang.FR]: "Plan de chantier (très rare !)",
@@ -9882,6 +10158,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MBPLAN_U]: {
     id: ItemId.MBPLAN_U,
+    numericalId: 262,
     name: {
       [Lang.EN]: "Hospital Blueprint (uncommon)",
       [Lang.FR]: "Plan de chantier (inhabituel)",
@@ -9926,6 +10203,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MBPLAN_R]: {
     id: ItemId.MBPLAN_R,
+    numericalId: 263,
     name: {
       [Lang.EN]: "Hospital Blueprint (rare)",
       [Lang.FR]: "Plan de chantier (rare)",
@@ -9990,6 +10268,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MBPLAN_E]: {
     id: ItemId.MBPLAN_E,
+    numericalId: 264,
     name: {
       [Lang.EN]: "Hospital Blueprint (very rare!)",
       [Lang.FR]: "Plan de chantier (très rare !)",
@@ -10038,6 +10317,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SOUL_BLUE]: {
     id: ItemId.SOUL_BLUE,
+    numericalId: 265,
     name: {
       [Lang.EN]: "Lost Soul",
       [Lang.FR]: "Âme errante",
@@ -10078,6 +10358,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SOUL_RED]: {
     id: ItemId.SOUL_RED,
+    numericalId: 266,
     name: {
       [Lang.EN]: "Tortured Soul",
       [Lang.FR]: "Âme torturée",
@@ -10118,6 +10399,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SOUL_BLUE_01]: {
     id: ItemId.SOUL_BLUE_01,
+    numericalId: 267,
     name: {
       [Lang.EN]: "Weak Soul",
       [Lang.FR]: "Âme faible",
@@ -10158,6 +10440,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FEST]: {
     id: ItemId.FEST,
+    numericalId: 268,
     name: {
       [Lang.EN]: "Mug of lukewarm liquid",
       [Lang.FR]: "Chope de liquide tiédasse",
@@ -10198,6 +10481,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BRETZ]: {
     id: ItemId.BRETZ,
+    numericalId: 269,
     name: {
       [Lang.EN]: "Sandy Pretzel",
       [Lang.FR]: "Bretzel sableux",
@@ -10230,6 +10514,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.TEKEL]: {
     id: ItemId.TEKEL,
+    numericalId: 270,
     name: {
       [Lang.EN]: "Mangy Dachshund",
       [Lang.FR]: "Teckel galeux",
@@ -10276,6 +10561,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RLAUNC]: {
     id: ItemId.RLAUNC,
+    numericalId: 271,
     name: {
       [Lang.EN]: "Stake Launcher",
       [Lang.FR]: "Lance-pieu",
@@ -10299,6 +10585,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.KALACH]: {
     id: ItemId.KALACH,
+    numericalId: 272,
     name: {
       [Lang.EN]: "Kalashni-Splash",
       [Lang.FR]: "Kalachnik'eau",
@@ -10335,6 +10622,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BUREAU]: {
     id: ItemId.BUREAU,
+    numericalId: 273,
     name: {
       [Lang.EN]: "Hastily-built Desk",
       [Lang.FR]: "Bureau monté à la rache",
@@ -10358,6 +10646,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DISTRI]: {
     id: ItemId.DISTRI,
+    numericalId: 274,
     name: {
       [Lang.EN]: "Empty Vending Machine",
       [Lang.FR]: "Distributeur vide",
@@ -10381,6 +10670,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RENNE]: {
     id: ItemId.RENNE,
+    numericalId: 275,
     name: {
       [Lang.EN]: "Santa's Reindeer",
       [Lang.FR]: "Renne du papa noyel",
@@ -10405,6 +10695,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PAQUES]: {
     id: ItemId.PAQUES,
+    numericalId: 276,
     name: {
       [Lang.EN]: "Easter Egg",
       [Lang.FR]: "Oeuf de Pâques",
@@ -10429,6 +10720,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BADGE]: {
     id: ItemId.BADGE,
+    numericalId: 277,
     name: {
       [Lang.EN]: "Collector Pins",
       [Lang.FR]: "Pins de collectionneur",
@@ -10452,6 +10744,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.KALACH_01]: {
     id: ItemId.KALACH_01,
+    numericalId: 278,
     name: {
       [Lang.EN]: "Kalashni-Splash (empty)",
       [Lang.FR]: "Kalachnik'eau (vide)",
@@ -10484,6 +10777,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WIRE]: {
     id: ItemId.WIRE,
+    numericalId: 279,
     name: {
       [Lang.EN]: "Wire Reel",
       [Lang.FR]: "Bobine de fil de fer",
@@ -10507,6 +10801,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.OILCAN]: {
     id: ItemId.OILCAN,
+    numericalId: 280,
     name: {
       [Lang.EN]: "Empty Oil Can",
       [Lang.FR]: "Bidon d'huile vide",
@@ -10530,6 +10825,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.LENS]: {
     id: ItemId.LENS,
+    numericalId: 281,
     name: {
       [Lang.EN]: "Convex Lens",
       [Lang.FR]: "Lentille convexe",
@@ -10553,6 +10849,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.ANGRYC]: {
     id: ItemId.ANGRYC,
+    numericalId: 282,
     name: {
       [Lang.EN]: "Furious Kitten (partially digested)",
       [Lang.FR]: "Petit chaton furieux (partiellement digéré)",
@@ -10605,6 +10902,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CLAYMO]: {
     id: ItemId.CLAYMO,
+    numericalId: 283,
     name: {
       [Lang.EN]: "Claymore Mine",
       [Lang.FR]: "Mine Antipersonnelle",
@@ -10628,6 +10926,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DIODE]: {
     id: ItemId.DIODE,
+    numericalId: 284,
     name: {
       [Lang.EN]: "Laser Diode",
       [Lang.FR]: "Diode laser",
@@ -10651,6 +10950,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.GUITAR]: {
     id: ItemId.GUITAR,
+    numericalId: 285,
     name: {
       [Lang.EN]: "Makeshift Guitar",
       [Lang.FR]: "Guitare artisanale",
@@ -10674,6 +10974,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.LSD]: {
     id: ItemId.LSD,
+    numericalId: 286,
     name: {
       [Lang.EN]: "LSD",
       [Lang.FR]: "LSD",
@@ -10726,6 +11027,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.LPOINT4]: {
     id: ItemId.LPOINT4,
+    numericalId: 287,
     name: {
       [Lang.EN]: "Burning Laser Pointer (4 charges)",
       [Lang.FR]: "Pointeur laser brûlant (4 charges)",
@@ -10762,6 +11064,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.LPOINT3]: {
     id: ItemId.LPOINT3,
+    numericalId: 288,
     name: {
       [Lang.EN]: "Burning Laser Pointer (3 charges)",
       [Lang.FR]: "Pointeur laser brûlant (3 charges)",
@@ -10798,6 +11101,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.LPOINT2]: {
     id: ItemId.LPOINT2,
+    numericalId: 289,
     name: {
       [Lang.EN]: "Burning Laser Pointer (2 charges)",
       [Lang.FR]: "Pointeur laser brûlant (2 charges)",
@@ -10834,6 +11138,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.LPOINT1]: {
     id: ItemId.LPOINT1,
+    numericalId: 290,
     name: {
       [Lang.EN]: "Burning Laser Pointer (1 charge)",
       [Lang.FR]: "Pointeur laser brûlant (1 charge)",
@@ -10870,6 +11175,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.LPOINT]: {
     id: ItemId.LPOINT,
+    numericalId: 291,
     name: {
       [Lang.EN]: "Burning Laser Pointer (Empty)",
       [Lang.FR]: "Pointeur laser brûlant déchargé",
@@ -10893,6 +11199,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SCOPE]: {
     id: ItemId.SCOPE,
+    numericalId: 292,
     name: {
       [Lang.EN]: "Telescope",
       [Lang.FR]: "Téléscope",
@@ -10916,6 +11223,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.TRAPMA]: {
     id: ItemId.TRAPMA,
+    numericalId: 293,
     name: {
       [Lang.EN]: "Impersonal Exploding Doormat",
       [Lang.FR]: "Paillasson piégé",
@@ -10939,6 +11247,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHUDOL]: {
     id: ItemId.CHUDOL,
+    numericalId: 294,
     name: {
       [Lang.EN]: "Chuck Figurine",
       [Lang.FR]: "Figurine de Chuck",
@@ -10962,6 +11271,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.LILBOO]: {
     id: ItemId.LILBOO,
+    numericalId: 295,
     name: {
       [Lang.EN]: "Little Book of Calm",
       [Lang.FR]: "Livre zen miniature",
@@ -10994,6 +11304,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RYEBAG]: {
     id: ItemId.RYEBAG,
+    numericalId: 296,
     name: {
       [Lang.EN]: "Bag of Damp Grass",
       [Lang.FR]: "Sac d'herbe fraîche",
@@ -11017,6 +11328,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FUNGUS]: {
     id: ItemId.FUNGUS,
+    numericalId: 297,
     name: {
       [Lang.EN]: "Ergot Fungus",
       [Lang.FR]: "Claviceps Purpurea",
@@ -11040,6 +11352,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.HMBREW]: {
     id: ItemId.HMBREW,
+    numericalId: 298,
     name: {
       [Lang.EN]: "Ergot Homebrew",
       [Lang.FR]: "Cidre Claviceps Artisanal",
@@ -11080,6 +11393,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.HIFIEV]: {
     id: ItemId.HIFIEV,
+    numericalId: 299,
     name: {
       [Lang.EN]: "Cursed HiFi",
       [Lang.FR]: "Chaine Hifi maudite",
@@ -11103,6 +11417,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CDPHIL]: {
     id: ItemId.CDPHIL,
+    numericalId: 300,
     name: {
       [Lang.EN]: "Phil Collins CD",
       [Lang.FR]: "CD de Phil Collins",
@@ -11126,6 +11441,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BQUIES]: {
     id: ItemId.BQUIES,
+    numericalId: 301,
     name: {
       [Lang.EN]: "Earplugs",
       [Lang.FR]: "Boules Quies",
@@ -11149,6 +11465,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.STAFF_01]: {
     id: ItemId.STAFF_01,
+    numericalId: 302,
     name: {
       [Lang.EN]: "Broken Staff",
       [Lang.FR]: "Bâton cassé",
@@ -11172,6 +11489,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CDBRIT]: {
     id: ItemId.CDBRIT,
+    numericalId: 303,
     name: {
       [Lang.EN]: "Britney Spears CD",
       [Lang.FR]: "CD de Britney Spears",
@@ -11195,6 +11513,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CDELVI]: {
     id: ItemId.CDELVI,
+    numericalId: 304,
     name: {
       [Lang.EN]: "Best of The King CD",
       [Lang.FR]: "Compilation du King",
@@ -11218,6 +11537,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DFHIFI]: {
     id: ItemId.DFHIFI,
+    numericalId: 305,
     name: {
       [Lang.EN]: "Rock n Roll HiFi",
       [Lang.FR]: "Chaîne HI-FI Rock n'Roll",
@@ -11241,6 +11561,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.DFHIFI_01]: {
     id: ItemId.DFHIFI_01,
+    numericalId: 306,
     name: {
       [Lang.EN]: "Anti-personnel HiFi",
       [Lang.FR]: "Chaîne Hi-Fi défensive",
@@ -11264,6 +11585,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CATBOX]: {
     id: ItemId.CATBOX,
+    numericalId: 307,
     name: {
       [Lang.EN]: "Schrödinger's Box",
       [Lang.FR]: "Boîte de Schrödinger",
@@ -11353,6 +11675,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHKSPK]: {
     id: ItemId.CHKSPK,
+    numericalId: 308,
     name: {
       [Lang.EN]: "Psychadelic Spiritual Counsel",
       [Lang.FR]: "Discours rassurant multicoloré",
@@ -11376,6 +11699,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PET_SNAKE2]: {
     id: ItemId.PET_SNAKE2,
+    numericalId: 309,
     name: {
       [Lang.EN]: "Fat Serpent",
       [Lang.FR]: "Serpent agonisant",
@@ -11399,6 +11723,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHEST_CHRISTMAS_3]: {
     id: ItemId.CHEST_CHRISTMAS_3,
+    numericalId: 310,
     name: {
       [Lang.EN]: "Christmas Present (3)",
       [Lang.FR]: "Caisse surprise (3)",
@@ -11437,6 +11762,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHEST_CHRISTMAS_2]: {
     id: ItemId.CHEST_CHRISTMAS_2,
+    numericalId: 311,
     name: {
       [Lang.EN]: "Christmas Present (2)",
       [Lang.FR]: "Caisse surprise (2)",
@@ -11475,6 +11801,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHEST_CHRISTMAS_1]: {
     id: ItemId.CHEST_CHRISTMAS_1,
+    numericalId: 312,
     name: {
       [Lang.EN]: "Christmas Present (1)",
       [Lang.FR]: "Caisse surprise (1)",
@@ -11509,6 +11836,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.OMG_THIS_WILL_KILL_YOU]: {
     id: ItemId.OMG_THIS_WILL_KILL_YOU,
+    numericalId: 313,
     name: {
       [Lang.EN]: "Suspicious looking plum juice",
       [Lang.FR]: "Jus de mirabelle suspect",
@@ -11533,6 +11861,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.RP_SCROLL_01]: {
     id: ItemId.RP_SCROLL_01,
+    numericalId: 314,
     name: {
       [Lang.EN]: "Label",
       [Lang.FR]: "Une étiquette",
@@ -11565,6 +11894,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BASIC_SUIT]: {
     id: ItemId.BASIC_SUIT,
+    numericalId: 315,
     name: {
       [Lang.EN]: "Town Uniform",
       [Lang.FR]: "Uniforme de citoyen",
@@ -11588,6 +11918,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BASIC_SUIT_DIRT]: {
     id: ItemId.BASIC_SUIT_DIRT,
+    numericalId: 316,
     name: {
       [Lang.EN]: "Dirty Uniform",
       [Lang.FR]: "Uniforme de citoyen sale",
@@ -11620,6 +11951,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.VEST_ON]: {
     id: ItemId.VEST_ON,
+    numericalId: 317,
     name: {
       [Lang.EN]: "Camouflage Vest",
       [Lang.FR]: "Tenue de camouflage",
@@ -11643,6 +11975,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.VEST_OFF]: {
     id: ItemId.VEST_OFF,
+    numericalId: 318,
     name: {
       [Lang.EN]: "Camouflage Vest (not equipped!)",
       [Lang.FR]: "Camouflage (inactif !)",
@@ -11675,6 +12008,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PELLE]: {
     id: ItemId.PELLE,
+    numericalId: 319,
     name: {
       [Lang.EN]: "Small Spade",
       [Lang.FR]: "Petite Pelle",
@@ -11698,6 +12032,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.TAMED_PET]: {
     id: ItemId.TAMED_PET,
+    numericalId: 320,
     name: {
       [Lang.EN]: "Three-legged Labradoodle",
       [Lang.FR]: "Bichon maltais à 3 pattes",
@@ -11730,6 +12065,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.TAMED_PET_DRUG]: {
     id: ItemId.TAMED_PET_DRUG,
+    numericalId: 321,
     name: {
       [Lang.EN]: "Well fed Labradoodle",
       [Lang.FR]: "Bichon maltais bien nourri",
@@ -11753,6 +12089,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.TAMED_PET_OFF]: {
     id: ItemId.TAMED_PET_OFF,
+    numericalId: 322,
     name: {
       [Lang.EN]: "Tired Labradoodle",
       [Lang.FR]: "Bichon maltais fatigué",
@@ -11776,6 +12113,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SURV_BOOK]: {
     id: ItemId.SURV_BOOK,
+    numericalId: 323,
     name: {
       [Lang.EN]: "Survival Book",
       [Lang.FR]: "Livre de survie",
@@ -11882,6 +12220,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.KEYMOL]: {
     id: ItemId.KEYMOL,
+    numericalId: 324,
     name: {
       [Lang.EN]: "Handyman's Toolbelt",
       [Lang.FR]: "Clé à molette de compet'",
@@ -11905,6 +12244,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SHIELD]: {
     id: ItemId.SHIELD,
+    numericalId: 325,
     name: {
       [Lang.EN]: "Riot Shield",
       [Lang.FR]: "Bouclier Anti-émeutes",
@@ -11928,6 +12268,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SHAMAN]: {
     id: ItemId.SHAMAN,
+    numericalId: 326,
     name: {
       [Lang.EN]: "Voodoo Mask",
       [Lang.FR]: "Masque Voodoo",
@@ -11951,6 +12292,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FIREWORK_POWDER]: {
     id: ItemId.FIREWORK_POWDER,
+    numericalId: 327,
     name: {
       [Lang.EN]: "Super-Fuzz Powder",
       [Lang.FR]: "Poudre Super-Fuzz",
@@ -11974,6 +12316,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FIREWORK_TUBE]: {
     id: ItemId.FIREWORK_TUBE,
+    numericalId: 328,
     name: {
       [Lang.EN]: "Firework Launch Tube",
       [Lang.FR]: "Tube de lancement Floush",
@@ -11997,6 +12340,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FIREWORK_BOX]: {
     id: ItemId.FIREWORK_BOX,
+    numericalId: 329,
     name: {
       [Lang.EN]: "Box of Fireworks",
       [Lang.FR]: "Caisse de feux d'artifice",
@@ -12020,6 +12364,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PUMPKIN_OFF]: {
     id: ItemId.PUMPKIN_OFF,
+    numericalId: 330,
     name: {
       [Lang.EN]: "Carved Soft Pumpkin",
       [Lang.FR]: "Citrouille molle sculptée",
@@ -12044,6 +12389,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PUMPKIN_ON]: {
     id: ItemId.PUMPKIN_ON,
+    numericalId: 331,
     name: {
       [Lang.EN]: "Lit Pumpkin",
       [Lang.FR]: "Citrouille allumée",
@@ -12068,6 +12414,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.XMAS_GIFT]: {
     id: ItemId.XMAS_GIFT,
+    numericalId: 332,
     name: {
       [Lang.EN]: "Crow garland",
       [Lang.FR]: "Guirlande de Corbeaux",
@@ -12092,6 +12439,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.STAFF2]: {
     id: ItemId.STAFF2,
+    numericalId: 333,
     name: {
       [Lang.EN]: "Broken Staff",
       [Lang.FR]: "Bâton cassé",
@@ -12115,6 +12463,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.VODKA]: {
     id: ItemId.VODKA,
+    numericalId: 336,
     name: {
       [Lang.EN]: "Vodka Marinostov",
       [Lang.FR]: "Vodka Marinostov",
@@ -12155,6 +12504,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.POTION]: {
     id: ItemId.POTION,
+    numericalId: 337,
     name: {
       [Lang.EN]: "Mystic Potion",
       [Lang.FR]: "Potion chamanique",
@@ -12211,6 +12561,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PHOTO_3]: {
     id: ItemId.PHOTO_3,
+    numericalId: 338,
     name: {
       [Lang.EN]: "Pre-war camera",
       [Lang.FR]: "Appareil photo d'avant-guerre",
@@ -12248,6 +12599,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PHOTO_2]: {
     id: ItemId.PHOTO_2,
+    numericalId: 339,
     name: {
       [Lang.EN]: "Pre-war camera",
       [Lang.FR]: "Appareil photo d'avant-guerre",
@@ -12285,6 +12637,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PHOTO_1]: {
     id: ItemId.PHOTO_1,
+    numericalId: 340,
     name: {
       [Lang.EN]: "Pre-war camera",
       [Lang.FR]: "Appareil photo d'avant-guerre",
@@ -12322,6 +12675,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PHOTO_OFF]: {
     id: ItemId.PHOTO_OFF,
+    numericalId: 341,
     name: {
       [Lang.EN]: "Pre-war camera",
       [Lang.FR]: "Appareil photo d'avant-guerre",
@@ -12345,6 +12699,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SOUL_YELLOW]: {
     id: ItemId.SOUL_YELLOW,
+    numericalId: 342,
     name: {
       [Lang.EN]: "Powerful Soul",
       [Lang.FR]: "Âme forte",
@@ -12357,7 +12712,7 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Starke Seele. Wurde von einem Schamanen aus einer Schwachen Seele hergestellt.",
       [Lang.ES]: "¡Aprovecha la muerte de tus amigos! El alma de este habitante se ha vuelto útil para las construcciones, úsala para aumentar las defensas de tu pueblo."
     },
-    categories: [ItemCategory.Miscellaneous],
+    categories: [ItemCategory.Miscellaneous, ItemCategory.PrivateTown],
     icon: "item_soul_yellow",
     decoration: 0,
     heavy: false,
@@ -12368,6 +12723,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FOOD_XMAS]: {
     id: ItemId.FOOD_XMAS,
+    numericalId: 343,
     name: {
       [Lang.EN]: "Crow elf",
       [Lang.FR]: "Corbeau lutin",
@@ -12392,6 +12748,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.WOOD_XMAS]: {
     id: ItemId.WOOD_XMAS,
+    numericalId: 344,
     name: {
       [Lang.EN]: "Chocolate log",
       [Lang.FR]: "Bûche de Noël",
@@ -12425,6 +12782,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.LEPRECHAUN_SUIT]: {
     id: ItemId.LEPRECHAUN_SUIT,
+    numericalId: 345,
     name: {
       [Lang.EN]: "Green Imp Suit",
       [Lang.FR]: "Costume de Lutin Vert",
@@ -12437,6 +12795,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "In dieser Aufmachung bist du so auffällig, dass dich niemand bemerkt oder zumindest glaubt, sich das nur eingebildet zu haben! Das würdest du doch nicht missbrauchen, oder?",
       [Lang.ES]: "¡En este traje, eres tan llamativo que los que te miran piensan que te han imaginado! No abusarías de ello, ¿verdad?"
     },
+    info: {
+      [Lang.EN]: "Allows you to anonymously steal from other players' houses.",
+      [Lang.FR]: "Vous permet de voler anonymement dans les maisons d'autres joueurs.",
+      [Lang.DE]: "Erlaubt es Ihnen, anonym in die Häuser anderer Spieler zu stehlen.",
+      [Lang.ES]: "Te permite robar anónimamente en las casas de otros jugadores."
+    },
     categories: [ItemCategory.Miscellaneous, ItemCategory.Event],
     icon: "item_leprechaun_suit",
     decoration: 0,
@@ -12444,11 +12808,21 @@ export const items: Record<ItemId, Item> = {
     watchPoints: 0,
     event: GameEvent.StPatrick,
     actions: [
-      
+      {
+        type: ItemActionType.Steal,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_lepre_#00"
+          }
+        ]
+      }
     ]
   },
   [ItemId.BROKEN]: {
     id: ItemId.BROKEN,
+    numericalId: 346,
     name: {
       [Lang.EN]: "Unrecognisable Remains",
       [Lang.FR]: "Débris méconnaissables",
@@ -12472,6 +12846,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BULLETS]: {
     id: ItemId.BULLETS,
+    numericalId: 347,
     name: {
       [Lang.EN]: "Handful of Bullets",
       [Lang.FR]: "Poignée de cartouches",
@@ -12495,6 +12870,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.POSTAL_BOX_01]: {
     id: ItemId.POSTAL_BOX_01,
+    numericalId: 348,
     name: {
       [Lang.EN]: "Gift Parcel",
       [Lang.FR]: "Colis de Noël",
@@ -12543,6 +12919,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.POSTAL_BOX_XL]: {
     id: ItemId.POSTAL_BOX_XL,
+    numericalId: 349,
     name: {
       [Lang.EN]: "Large Gift Parcel",
       [Lang.FR]: "Gros colis postal",
@@ -12591,6 +12968,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CHRISTMAS_CANDY]: {
     id: ItemId.CHRISTMAS_CANDY,
+    numericalId: 350,
     name: {
       [Lang.EN]: "Christmas candy",
       [Lang.FR]: "Bonbon de Noël",
@@ -12651,6 +13029,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.ALARM_OFF]: {
     id: ItemId.ALARM_OFF,
+    numericalId: 351,
     name: {
       [Lang.EN]: "Screaming Alarm Clock (incomplete)",
       [Lang.FR]: "Réveil-Hurleur (éteint)",
@@ -12683,6 +13062,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.ALARM_ON]: {
     id: ItemId.ALARM_ON,
+    numericalId: 352,
     name: {
       [Lang.EN]: "Screaming Alarm Clock (ready)",
       [Lang.FR]: "Réveil-Hurleur (allumé)",
@@ -12707,6 +13087,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PUMPKIN_RAW]: {
     id: ItemId.PUMPKIN_RAW,
+    numericalId: 353,
     name: {
       [Lang.EN]: "Soft Pumpkin",
       [Lang.FR]: "Citrouille molle",
@@ -12731,6 +13112,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.HURLING_STICK]: {
     id: ItemId.HURLING_STICK,
+    numericalId: 354,
     name: {
       [Lang.EN]: "Primitive Hurling Stick",
       [Lang.FR]: "Bâton de hurling primitif",
@@ -12770,6 +13152,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.GUINESS]: {
     id: ItemId.GUINESS,
+    numericalId: 355,
     name: {
       [Lang.EN]: "Sticky Pint",
       [Lang.FR]: "Pinte collante",
@@ -12811,6 +13194,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.APRIL_DRUG]: {
     id: ItemId.APRIL_DRUG,
+    numericalId: 356,
     name: {
       [Lang.EN]: "Black Neck Ooze",
       [Lang.FR]: "Suintement cervical noir",
@@ -12862,6 +13246,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.INFECT_POISON]: {
     id: ItemId.INFECT_POISON,
+    numericalId: 357,
     name: {
       [Lang.EN]: "Toxin",
       [Lang.FR]: "Toxine",
@@ -12885,6 +13270,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PUMPKIN_TASTY]: {
     id: ItemId.PUMPKIN_TASTY,
+    numericalId: 358,
     name: {
       [Lang.EN]: "Impressive Pumpkin",
       [Lang.FR]: "Citrouille impressionnante",
@@ -12923,6 +13309,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.MEDIC]: {
     id: ItemId.MEDIC,
+    numericalId: 359,
     name: {
       [Lang.EN]: "First Aid Kit",
       [Lang.FR]: "Boîte à pharmacie",
@@ -12946,6 +13333,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.XMAS_GIFT_01]: {
     id: ItemId.XMAS_GIFT_01,
+    numericalId: 360,
     name: {
       [Lang.EN]: "Hanging Crow garland",
       [Lang.FR]: "Guirlande de Corbeaux suspendue",
@@ -12979,6 +13367,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.TAMED_PET_GONE]: {
     id: ItemId.TAMED_PET_GONE,
+    numericalId: 361,
     name: {
       [Lang.EN]: "No labradoodle",
       [Lang.FR]: "Bichon maltais absent",
@@ -13002,6 +13391,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.ALARM_1]: {
     id: ItemId.ALARM_1,
+    numericalId: 362,
     name: {
       [Lang.EN]: "Screaming Alarm Clock (1 charge)",
       [Lang.FR]: "Réveil-Hurleur (1 charge)",
@@ -13044,6 +13434,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.ALARM_2]: {
     id: ItemId.ALARM_2,
+    numericalId: 363,
     name: {
       [Lang.EN]: "Screaming Alarm Clock (2 charges)",
       [Lang.FR]: "Réveil-Hurleur (2 charges)",
@@ -13086,6 +13477,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.ALARM_3]: {
     id: ItemId.ALARM_3,
+    numericalId: 364,
     name: {
       [Lang.EN]: "Screaming Alarm Clock (3 charges)",
       [Lang.FR]: "Réveil-Hurleur (3 charges)",
@@ -13128,6 +13520,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.NOODLE_PRINTS]: {
     id: ItemId.NOODLE_PRINTS,
+    numericalId: 365,
     name: {
       [Lang.EN]: "Magnetic Key Instant Blank",
       [Lang.FR]: "Empreinte instantanée de clé magnétique",
@@ -13160,6 +13553,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.NOODLE_PRINTS_01]: {
     id: ItemId.NOODLE_PRINTS_01,
+    numericalId: 366,
     name: {
       [Lang.EN]: "Bump Key Instant Blank",
       [Lang.FR]: "Empreinte instantanée de clé à percussion",
@@ -13192,6 +13586,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.NOODLE_PRINTS_02]: {
     id: ItemId.NOODLE_PRINTS_02,
+    numericalId: 367,
     name: {
       [Lang.EN]: "Bottle Opener Instant Blank",
       [Lang.FR]: "Empreinte instantanée de décapsuleur",
@@ -13224,6 +13619,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SHOE]: {
     id: ItemId.SHOE,
+    numericalId: 368,
     name: {
       [Lang.EN]: "Worn-out sports shoes",
       [Lang.FR]: "Chaussures de sport usées",
@@ -13262,6 +13658,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BIKE_PART]: {
     id: ItemId.BIKE_PART,
+    numericalId: 369,
     name: {
       [Lang.EN]: "Bicycle without handlebars",
       [Lang.FR]: "VTT sans guidon",
@@ -13285,6 +13682,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.BIKE]: {
     id: ItemId.BIKE,
+    numericalId: 370,
     name: {
       [Lang.EN]: "Mountain bike",
       [Lang.FR]: "VTT",
@@ -13323,6 +13721,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.FLAG]: {
     id: ItemId.FLAG,
+    numericalId: 371,
     name: {
       [Lang.EN]: "Flag",
       [Lang.FR]: "Drapeau",
@@ -13352,6 +13751,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SOCCER]: {
     id: ItemId.SOCCER,
+    numericalId: 372,
     name: {
       [Lang.EN]: "Soccer ball",
       [Lang.FR]: "Ballon de foot",
@@ -13396,6 +13796,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.SOCCER_PART]: {
     id: ItemId.SOCCER_PART,
+    numericalId: 373,
     name: {
       [Lang.EN]: "Burst Soccer ball",
       [Lang.FR]: "Ballon crevé",
@@ -13419,6 +13820,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.QUANTUM]: {
     id: ItemId.QUANTUM,
+    numericalId: 374,
     name: {
       [Lang.EN]: "Quantum Energy",
       [Lang.FR]: "Quantum Energy",
@@ -13479,6 +13881,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.PHOTO_4]: {
     id: ItemId.PHOTO_4,
+    numericalId: 375,
     name: {
       [Lang.EN]: "Pre-war camera",
       [Lang.FR]: "Appareil photo d'avant-guerre",
@@ -13526,6 +13929,7 @@ export const items: Record<ItemId, Item> = {
   },
   [ItemId.CELLO_BOX]: {
     id: ItemId.CELLO_BOX,
+    numericalId: 376,
     name: {
       [Lang.EN]: "Cello case",
       [Lang.FR]: "Étui pour violoncelle",

@@ -13,6 +13,7 @@ const T: Translations = {
     [`action-type.${ItemActionType.Open}`]: "Open",
     [`action-type.${ItemActionType.Use}`]: "Use",
     [`action-type.${ItemActionType.Death}`]: "Death",
+    [`action-type.${ItemActionType.Steal}`]: "Steal",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Assemble",
     [`recipe-type.${RecipeType.ManualInside}`]: "Assemble (inside)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Assemble (outside)",
@@ -31,8 +32,10 @@ const T: Translations = {
     [`condition.${ItemActionCondition.OnARuin}`]: "On a ruin",
     [`condition.${ItemActionCondition.Thirsty}`]: "Thirsty",
     [`condition.${ItemActionCondition.Dehydrated}`]: "Dehydrated",
+    [`condition.${ItemActionCondition.Shaman}`]: "Shaman",
     foundIn: "Found in",
     unavailable: "Not available anymore",
+    privateTownOnly: "Can only be found in private towns",
   },
   fr: {
     [`action-type.${ItemActionType.Eat}`]: "Manger",
@@ -40,6 +43,7 @@ const T: Translations = {
     [`action-type.${ItemActionType.Open}`]: "Ouvrir",
     [`action-type.${ItemActionType.Use}`]: "Utiliser",
     [`action-type.${ItemActionType.Death}`]: "Mort",
+    [`action-type.${ItemActionType.Steal}`]: "Voler",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Assembler",
     [`recipe-type.${RecipeType.ManualInside}`]: "Assembler (intérieur)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Assembler (extérieur)",
@@ -58,8 +62,10 @@ const T: Translations = {
     [`condition.${ItemActionCondition.OnARuin}`]: "Sur un bâtiment",
     [`condition.${ItemActionCondition.Thirsty}`]: "Assoiffé",
     [`condition.${ItemActionCondition.Dehydrated}`]: "Déshydraté",
+    [`condition.${ItemActionCondition.Shaman}`]: "Chaman",
     foundIn: "Trouvé dans",
     unavailable: "N'est plus disponible",
+    privateTownOnly: "Peut uniquement être trouvé dans les villes privées",
   },
   es: {
     [`action-type.${ItemActionType.Eat}`]: "Comer",
@@ -67,6 +73,7 @@ const T: Translations = {
     [`action-type.${ItemActionType.Open}`]: "Abrir",
     [`action-type.${ItemActionType.Use}`]: "Usar",
     [`action-type.${ItemActionType.Death}`]: "Muerte",
+    [`action-type.${ItemActionType.Steal}`]: "Robar",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Ensamblar",
     [`recipe-type.${RecipeType.ManualInside}`]: "Ensamblar (interior)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Ensamblar (exterior)",
@@ -85,8 +92,10 @@ const T: Translations = {
     [`condition.${ItemActionCondition.OnARuin}`]: "En un edificio",
     [`condition.${ItemActionCondition.Thirsty}`]: "Sediento",
     [`condition.${ItemActionCondition.Dehydrated}`]: "Deshidratado",
+    [`condition.${ItemActionCondition.Shaman}`]: "Chaman",
     foundIn: "Encontrado en",
     unavailable: "Ya no disponible",
+    privateTownOnly: "Solo se puede encontrar en ciudades privadas",
   },
   de: {
     [`action-type.${ItemActionType.Eat}`]: "Essen",
@@ -94,6 +103,7 @@ const T: Translations = {
     [`action-type.${ItemActionType.Open}`]: "Öffnen",
     [`action-type.${ItemActionType.Use}`]: "Benutzen",
     [`action-type.${ItemActionType.Death}`]: "Tod",
+    [`action-type.${ItemActionType.Steal}`]: "Stehlen",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Zusammenbauen",
     [`recipe-type.${RecipeType.ManualInside}`]: "Zusammenbauen (innen)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Zusammenbauen (außen)",
@@ -112,19 +122,23 @@ const T: Translations = {
     [`condition.${ItemActionCondition.OnARuin}`]: "Auf einem Gebäude",
     [`condition.${ItemActionCondition.Thirsty}`]: "Durstig",
     [`condition.${ItemActionCondition.Dehydrated}`]: "Dehydriert",
+    [`condition.${ItemActionCondition.Shaman}`]: "Schamane",
     foundIn: "Gefunden in",
     unavailable: "Nicht mehr verfügbar",
+    privateTownOnly: "Kann nur in privaten Städten gefunden werden",
   },
 };
 
 const getStatusIcon = (status: string) => {
   switch (status) {
     case "tg_meta_wound":
-      return "wound1";
+      return "status/status_wound1.gif";
     case "tg_april_ooze":
-      return "infection";
+      return "status/status_infection.gif";
+    case "tg_shaman_immune":
+      return "icons/item/item_soul_red.gif";
     default:
-      return status;
+      return `status/status_${status}.gif`;
   }
 };
 
@@ -229,6 +243,8 @@ const getActionTypeIcon = (action: ItemAction) => {
       return "icons/death.gif";
     case ItemActionType.Use:
       return "icons/small_next.gif";
+    case ItemActionType.Steal:
+      return "emotes/thief.gif";
     default:
       return "icons/item/item_broken.gif";
   }
@@ -240,6 +256,7 @@ type DisplayedIcon = {
   amount?: number | string;
   text?: string;
   crossed?: boolean;
+  checked?: boolean;
   infected?: boolean;
   title?: string;
   classList?: string[];
@@ -266,7 +283,7 @@ const convertEffectToDisplayedItem = (effect: ItemActionEffect) => {
       break;
     }
     case ItemActionEffectType.MP: {
-      displayedIcon.icon = `icons/sp_small${
+      displayedIcon.icon = `icons/pm_small${
         store["hordes-lang"] !== Lang.DE ? `_${store["hordes-lang"]}` : ""
       }.gif`;
       displayedIcon.amount = effect.value?.toString();
@@ -361,14 +378,17 @@ const convertEffectToDisplayedItem = (effect: ItemActionEffect) => {
       break;
     }
     case ItemActionEffectType.RemoveStatus: {
-      displayedIcon.icon = `status/status_${effect.value}.gif`;
+      displayedIcon.icon = getStatusIcon(effect.value?.toString() ?? "");
       displayedIcon.crossed = true;
       break;
     }
     case ItemActionEffectType.AddStatus: {
-      displayedIcon.icon = `status/status_${getStatusIcon(
-        effect.value?.toString() ?? ""
-      )}.gif`;
+      displayedIcon.icon = getStatusIcon(effect.value?.toString() ?? "");
+
+      // Add checked icon for shaman immunity
+      if (effect.value === "tg_shaman_immune") {
+        displayedIcon.checked = true;
+      }
 
       if (effect.count) {
         displayedIcon.amount = effect.count.toString().split("-")[0];
@@ -451,6 +471,9 @@ const createLine = (
               displayedIcon.id = ItemId.PILE;
               displayedIcon.title = undefined;
               break;
+            case ItemActionCondition.Shaman:
+              displayedIcon.icon = "roles/shaman.gif";
+              break;
           }
 
           return displayedIcon;
@@ -470,9 +493,7 @@ const createLine = (
     inputImg.src = `${ASSETS}/${inputIcon.icon}`;
     inputImg.title =
       inputIcon.title ??
-      (inputIcon.id
-        ? items[inputIcon.id].name[store["hordes-lang"]]
-        : '');
+      (inputIcon.id ? items[inputIcon.id].name[store["hordes-lang"]] : "");
     if (inputIcon.id) {
       inputImg.setAttribute("data-type", "item");
       inputImg.setAttribute("data-id", inputIcon.id);
@@ -497,6 +518,10 @@ const createLine = (
 
     if (inputIcon.crossed) {
       wrapper.classList.add("crossed");
+    }
+
+    if (inputIcon.checked) {
+      wrapper.classList.add("checked");
     }
 
     if (inputIcon.infected) {
@@ -549,6 +574,20 @@ const createLine = (
         : undefined,
       infected: outItem.infected,
     }));
+
+    // Add recipe pictos
+    if (data.pictos?.length) {
+      outputIcons.push(
+        ...data.pictos.map((picto) => {
+          const pictoItem = pictos[picto];
+          return {
+            icon: `pictos/${pictoItem.icon}.gif`,
+            classList: ["picto"],
+            title: pictoItem.name[store["hordes-lang"]],
+          };
+        })
+      );
+    }
   } else {
     // Item action
     outputIcons = data.effects.map((effect) =>
@@ -563,9 +602,7 @@ const createLine = (
     output.src = `${ASSETS}/${outputIcon.icon}`;
     output.title =
       outputIcon.title ??
-      (outputIcon.id
-        ? items[outputIcon.id].name[store["hordes-lang"]]
-        : '');
+      (outputIcon.id ? items[outputIcon.id].name[store["hordes-lang"]] : "");
     if (outputIcon.id) {
       output.setAttribute("data-type", "item");
       output.setAttribute("data-id", outputIcon.id);
@@ -590,6 +627,10 @@ const createLine = (
 
     if (outputIcon.crossed) {
       wrapper.classList.add("crossed");
+    }
+
+    if (outputIcon.checked) {
+      wrapper.classList.add("checked");
     }
 
     if (outputIcon.infected) {
@@ -690,6 +731,15 @@ export const insertBetterTooltips = (node: HTMLElement) => {
       const tag = document.createElement("div");
       tag.classList.add("item-tag", "item-tag-info");
       tag.textContent = t(T, "unavailable");
+      node.append(tag);
+    }
+
+    // Private town only
+    if (item.categories.includes(ItemCategory.PrivateTown)) {
+      // Create an info tag
+      const tag = document.createElement("div");
+      tag.classList.add("item-tag", "item-tag-private");
+      tag.textContent = t(T, "privateTownOnly");
       node.append(tag);
     }
 

@@ -3024,7 +3024,7 @@ export const ruins: Record<RuinId, Ruin> = {
       {
         item: ItemId.POSTAL_BOX_01,
         odds: 3,
-          event: GameEvent.Christmas
+        event: GameEvent.Christmas
       }
     ]
   },
@@ -4481,7 +4481,7 @@ export const ruins: Record<RuinId, Ruin> = {
       {
         item: ItemId.INFECT_POISON_PART,
         odds: 10,
-          event: GameEvent.Infective
+        event: GameEvent.Infective
       }
     ]
   },
@@ -4640,7 +4640,7 @@ export const ruins: Record<RuinId, Ruin> = {
       {
         item: ItemId.INFECT_POISON_PART,
         odds: 5000,
-          event: GameEvent.Infective
+        event: GameEvent.Infective
       }
     ]
   },
@@ -4771,7 +4771,7 @@ export const ruins: Record<RuinId, Ruin> = {
       {
         item: ItemId.INFECT_POISON_PART,
         odds: 15,
-          event: GameEvent.Infective
+        event: GameEvent.Infective
       }
     ]
   },

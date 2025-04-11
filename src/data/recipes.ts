@@ -1,4 +1,5 @@
 import { ItemId } from './items';
+import { PictoId } from './pictos';
 
 export type RecipeItem = {
   item: ItemId;
@@ -11,6 +12,7 @@ export type Recipe = {
   type: RecipeType;
   in: RecipeItem[];
   out: RecipeItem[];
+  pictos?: PictoId[];
 };
 
 export const recipes: Recipe[] = [
@@ -21,7 +23,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.REPAIR_KIT }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -30,7 +32,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.CAN_OPEN }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -39,7 +41,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.PLATE }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -48,7 +50,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.WOOD2 }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -57,7 +59,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.WOOD2 }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -66,7 +68,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.WOOD_BEAM }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -75,7 +77,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.WOOD2 }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -84,7 +86,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.METAL }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -93,7 +95,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.METAL_BEAM }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -102,7 +104,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.METAL }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -116,7 +118,7 @@ export const recipes: Recipe[] = [
       { item: ItemId.MECA_PARTS, odds: 18 },
       { item: ItemId.TAGGER, odds: 14 },
       { item: ItemId.DETO, odds: 14 }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -128,7 +130,7 @@ export const recipes: Recipe[] = [
       { item: ItemId.TUBE, odds: 9 },
       { item: ItemId.METAL_BAD, odds: 8 },
       { item: ItemId.MECA_PARTS, odds: 32 }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -143,7 +145,7 @@ export const recipes: Recipe[] = [
       { item: ItemId.LIGHTS, odds: 4 },
       { item: ItemId.DRUG_HERO, odds: 16 },
       { item: ItemId.RHUM, odds: 8 }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -159,7 +161,7 @@ export const recipes: Recipe[] = [
       { item: ItemId.MIXERGUN_PART, odds: 19 },
       { item: ItemId.BIG_PGUN_PART, odds: 7 },
       { item: ItemId.LAWN_PART, odds: 12 }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -173,7 +175,7 @@ export const recipes: Recipe[] = [
       { item: ItemId.TUBE, odds: 13 },
       { item: ItemId.PHARMA, odds: 25 },
       { item: ItemId.EXPLO, odds: 19 }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -186,7 +188,7 @@ export const recipes: Recipe[] = [
       { item: ItemId.MEAT, odds: 7 },
       { item: ItemId.HMEAT, odds: 13 },
       { item: ItemId.VEGETABLE, odds: 8 }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -199,7 +201,7 @@ export const recipes: Recipe[] = [
       { item: ItemId.TRESTLE, odds: 35 },
       { item: ItemId.TABLE, odds: 35 },
       { item: ItemId.CHAIR, odds: 46 }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -210,7 +212,7 @@ export const recipes: Recipe[] = [
       { item: ItemId.POISON_PART },
       { item: ItemId.PET_CAT },
       { item: ItemId.ANGRYC }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -219,7 +221,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.MAGNETICKEY }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -228,7 +230,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.BUMPKEY }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -237,7 +239,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.CLASSICKEY }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -246,7 +248,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.WOOD_XMAS }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -255,7 +257,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.MAGNETICKEY }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -264,7 +266,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.BUMPKEY }
-    ]
+    ],
   },
   {
     type: RecipeType.Workshop,
@@ -273,7 +275,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.CLASSICKEY }
-    ]
+    ],
   },
   {
     type: RecipeType.WorkshopShaman,
@@ -282,7 +284,8 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.SOUL_YELLOW }
-    ]
+    ],
+    pictos: [PictoId.MYSTIC2],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -297,7 +300,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.COFFEE_MACHINE }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -308,7 +311,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.MUSIC }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -319,7 +322,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.GUITAR }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -331,7 +334,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.CAR_DOOR }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -341,7 +344,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.TORCH }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -351,7 +354,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.WOOD_PLATE }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -361,7 +364,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.CONCRETE_WALL }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -371,7 +374,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.CHAMA_TASTY }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -382,7 +385,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.FOOD_NOODLES_HOT }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -395,7 +398,7 @@ export const recipes: Recipe[] = [
     out: [
       { item: ItemId.COFFEE_MACHINE },
       { item: ItemId.COFFEE }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -408,7 +411,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.WATERGUN_OPT_EMPTY }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -421,7 +424,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.PILEGUN_UP_EMPTY }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -433,7 +436,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.MIXERGUN_EMPTY }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -444,7 +447,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.JERRYGUN }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -457,7 +460,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.CHAINSAW_EMPTY }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -469,7 +472,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.BGRENADE_EMPTY }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -481,7 +484,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.LAWN }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -492,7 +495,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.FLASH }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -503,7 +506,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.BIG_PGUN_EMPTY }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -515,7 +518,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.CART }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -526,7 +529,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.POISON }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -536,7 +539,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.FLESH }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -547,7 +550,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.SAW_TOOL }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -561,7 +564,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.ENGINE }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -573,7 +576,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.REPAIR_KIT }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -583,7 +586,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.FRUIT_PART }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -598,7 +601,7 @@ export const recipes: Recipe[] = [
       { item: ItemId.DRUG_WATER, odds: 46 },
       { item: ItemId.WATER_CLEANER, odds: 43 },
       { item: ItemId.DRUG_HERO, odds: 49 }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -613,7 +616,7 @@ export const recipes: Recipe[] = [
       { item: ItemId.DRUG_WATER, odds: 2 },
       { item: ItemId.WATER_CLEANER, odds: 1 },
       { item: ItemId.PHARMA, odds: 7 }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -623,7 +626,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.TRAPMA }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -635,7 +638,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.CLAYMO }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -645,7 +648,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.SCOPE }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -655,7 +658,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.FUNGUS }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -665,7 +668,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.LSD }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -675,7 +678,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.CHKSPK }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -685,7 +688,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.FRUIT }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -695,7 +698,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.DFHIFI }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -705,7 +708,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.HIFIEV }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -715,7 +718,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.HIFIEV }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -725,7 +728,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.DFHIFI_01 }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -738,7 +741,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.LPOINT4 }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -749,7 +752,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.HMBREW }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -759,7 +762,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.WOOD_XMAS }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -769,7 +772,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.GUN }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -779,7 +782,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.MACHINE_GUN }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -790,7 +793,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.CHRISTMAS_SUIT_FULL }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -801,7 +804,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.CHRISTMAS_SUIT_FULL }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -812,7 +815,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.CHRISTMAS_SUIT_FULL }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -823,7 +826,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.PUMPKIN_ON }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -833,7 +836,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.ANGRYC }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -843,7 +846,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.PUMPKIN_OFF }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -856,7 +859,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.INFECT_POISON }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -868,7 +871,7 @@ export const recipes: Recipe[] = [
       { item: ItemId.LPOINT2, odds: 1 },
       { item: ItemId.LPOINT3, odds: 1 },
       { item: ItemId.LPOINT4, odds: 1 }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -881,7 +884,7 @@ export const recipes: Recipe[] = [
       { item: ItemId.KNIFE, odds: 1 },
       { item: ItemId.MONEY, odds: 1 },
       { item: ItemId.PET_CAT, odds: 1 }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -891,7 +894,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.SOCCER }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -903,7 +906,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.BIKE }
-    ]
+    ],
   },
   {
     type: RecipeType.ExplorableRuinDoor,
@@ -913,7 +916,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.NOODLE_PRINTS }
-    ]
+    ],
   },
   {
     type: RecipeType.ExplorableRuinDoor,
@@ -923,7 +926,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.NOODLE_PRINTS_01 }
-    ]
+    ],
   },
   {
     type: RecipeType.ExplorableRuinDoor,
@@ -933,7 +936,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.NOODLE_PRINTS_02 }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualInside,
@@ -942,7 +945,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.XMAS_GIFT_01 }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -959,7 +962,7 @@ export const recipes: Recipe[] = [
       { item: ItemId.CYANURE, odds: 2 },
       { item: ItemId.DRUG, odds: 1 },
       { item: ItemId.BANDAGE, odds: 1 }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -969,7 +972,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.WATER, infected: true }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -979,7 +982,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.CAN_OPEN, infected: true }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -989,7 +992,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.DRUG, infected: true }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -999,7 +1002,7 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.VEGETABLE, infected: true }
-    ]
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -1009,6 +1012,6 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.FRUIT, infected: true }
-    ]
+    ],
   }
 ];

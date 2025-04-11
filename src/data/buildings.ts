@@ -1,3 +1,5 @@
+import { ItemId } from './items';
+
 export enum BuildingId {
   SMALL_WATERHOLE = "small_waterhole_#00",
   SMALL_GATHER = "small_gather_#00",
@@ -168,6 +170,7 @@ export enum BuildingId {
 
 export type Building = {
   id: BuildingId;
+  numericalId: number;
   name: Record<Lang, string>;
   description: Record<Lang, string>;
   icon: string;
@@ -178,9 +181,9 @@ export type Building = {
   hasUpgrade: boolean;
   rarity: number;
   temporary: boolean;
-  parentId: number;
+  parent?: BuildingId;
   resources: {
-    id: number;
+    id: ItemId;
     amount: number;
   }[];
 };
@@ -188,6 +191,7 @@ export type Building = {
 export const buildings: Record<BuildingId, Building> = {
   [BuildingId.SMALL_WATERHOLE]: {
     id: BuildingId.SMALL_WATERHOLE,
+    numericalId: 1,
     name: {
       [Lang.EN]: "Great Moat",
       [Lang.FR]: "Douves",
@@ -208,16 +212,17 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 2,
+    parent: BuildingId.SMALL_GATHER,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 20
       }
     ]
   },
   [BuildingId.SMALL_GATHER]: {
     id: BuildingId.SMALL_GATHER,
+    numericalId: 2,
     name: {
       [Lang.EN]: "Great Pit",
       [Lang.FR]: "Grand fossé",
@@ -238,13 +243,14 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 0,
     temporary: false,
-    parentId: 28,
+    parent: BuildingId.SMALL_WALLIMPROVE,
     resources: [
       
     ]
   },
   [BuildingId.ITEM_PLATE]: {
     id: BuildingId.ITEM_PLATE,
+    numericalId: 3,
     name: {
       [Lang.EN]: "Shredder Wall",
       [Lang.FR]: "Muraille rasoir",
@@ -265,20 +271,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 24,
+    parent: BuildingId.SMALL_WALLIMPROVE_03,
     resources: [
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 15
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_SPEARS]: {
     id: BuildingId.SMALL_SPEARS,
+    numericalId: 4,
     name: {
       [Lang.EN]: "Spiked pit",
       [Lang.FR]: "Fosse à pieux",
@@ -299,20 +306,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 2,
+    parent: BuildingId.SMALL_GATHER,
     resources: [
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 2
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 8
       }
     ]
   },
   [BuildingId.SMALL_MEATBARBED]: {
     id: BuildingId.SMALL_MEATBARBED,
+    numericalId: 5,
     name: {
       [Lang.EN]: "Bait",
       [Lang.FR]: "Appâts",
@@ -333,16 +341,17 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: true,
-    parentId: 6,
+    parent: BuildingId.SMALL_BARBED,
     resources: [
       {
-        id: 134,
+        id: ItemId.BONE_MEAT,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_BARBED]: {
     id: BuildingId.SMALL_BARBED,
+    numericalId: 6,
     name: {
       [Lang.EN]: "Barbed Wire",
       [Lang.FR]: "Barbelés",
@@ -363,20 +372,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 28,
+    parent: BuildingId.SMALL_WALLIMPROVE,
     resources: [
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 1
       },
       {
-        id: 279,
+        id: ItemId.WIRE,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_WALLIMPROVE_01]: {
     id: BuildingId.SMALL_WALLIMPROVE_01,
+    numericalId: 7,
     name: {
       [Lang.EN]: "Wall Upgrade v2",
       [Lang.FR]: "Remparts avancés",
@@ -397,24 +407,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 28,
+    parent: BuildingId.SMALL_WALLIMPROVE,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 2
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 5
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       }
     ]
   },
   [BuildingId.ITEM_PLATE_03]: {
     id: BuildingId.ITEM_PLATE_03,
+    numericalId: 8,
     name: {
       [Lang.EN]: "Überwall",
       [Lang.FR]: "Grogro mur",
@@ -435,32 +446,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 7,
+    parent: BuildingId.SMALL_WALLIMPROVE_01,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 10
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 10
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 2
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 10
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 10
       }
     ]
   },
   [BuildingId.ITEM_PLATE_02]: {
     id: BuildingId.ITEM_PLATE_02,
+    numericalId: 9,
     name: {
       [Lang.EN]: "Spiked Wall",
       [Lang.FR]: "Muraille à pointes",
@@ -481,24 +493,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 7,
+    parent: BuildingId.SMALL_WALLIMPROVE_01,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 2
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 1
       }
     ]
   },
   [BuildingId.ITEM_PLATE_05]: {
     id: BuildingId.ITEM_PLATE_05,
+    numericalId: 10,
     name: {
       [Lang.EN]: "Third Wall",
       [Lang.FR]: "Troisième couche",
@@ -519,24 +532,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 11,
+    parent: BuildingId.ITEM_PLATE_04,
     resources: [
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 35
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 3
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       }
     ]
   },
   [BuildingId.ITEM_PLATE_04]: {
     id: BuildingId.ITEM_PLATE_04,
+    numericalId: 11,
     name: {
       [Lang.EN]: "Inner Wall",
       [Lang.FR]: "Seconde couche",
@@ -557,20 +571,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parentId: 7,
+    parent: BuildingId.SMALL_WALLIMPROVE_01,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 35
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       }
     ]
   },
   [BuildingId.SMALL_WALLIMPROVE_02]: {
     id: BuildingId.SMALL_WALLIMPROVE_02,
+    numericalId: 12,
     name: {
       [Lang.EN]: "Concrete Reinforcement",
       [Lang.FR]: "Bétonnade",
@@ -591,24 +606,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parentId: 22,
+    parent: BuildingId.ITEM_PLATE_09,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 5
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 10
       }
     ]
   },
   [BuildingId.ITEM_HOME_DEF]: {
     id: BuildingId.ITEM_HOME_DEF,
+    numericalId: 13,
     name: {
       [Lang.EN]: "Evolutive Wall",
       [Lang.FR]: "Muraille évolutive",
@@ -629,24 +645,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 3,
     temporary: false,
-    parentId: 7,
+    parent: BuildingId.SMALL_WALLIMPROVE_01,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 15
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 2
       }
     ]
   },
   [BuildingId.ITEM_PLATE_01]: {
     id: BuildingId.ITEM_PLATE_01,
+    numericalId: 14,
     name: {
       [Lang.EN]: "Metal Patches",
       [Lang.FR]: "Poutres renfort",
@@ -667,20 +684,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 7,
+    parent: BuildingId.SMALL_WALLIMPROVE_01,
     resources: [
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 5
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 3
       }
     ]
   },
   [BuildingId.SMALL_GRATER]: {
     id: BuildingId.SMALL_GRATER,
+    numericalId: 15,
     name: {
       [Lang.EN]: "Zombie-shredder",
       [Lang.FR]: "Râpe à zombies",
@@ -701,32 +719,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 24,
+    parent: BuildingId.SMALL_WALLIMPROVE_03,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 3
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 15
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 1
       },
       {
-        id: 279,
+        id: ItemId.WIRE,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_GATHER_01]: {
     id: BuildingId.SMALL_GATHER_01,
+    numericalId: 16,
     name: {
       [Lang.EN]: "Old-school traps",
       [Lang.FR]: "Oubliettes",
@@ -747,20 +766,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 2,
+    parent: BuildingId.SMALL_GATHER,
     resources: [
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 1
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_FENCE]: {
     id: BuildingId.SMALL_FENCE,
+    numericalId: 17,
     name: {
       [Lang.EN]: "Wooden Fencing",
       [Lang.FR]: "Barrières",
@@ -781,20 +801,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 28,
+    parent: BuildingId.SMALL_WALLIMPROVE,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 15
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 5
       }
     ]
   },
   [BuildingId.SMALL_FENCE_01]: {
     id: BuildingId.SMALL_FENCE_01,
+    numericalId: 18,
     name: {
       [Lang.EN]: "Small Fence",
       [Lang.FR]: "Palissade",
@@ -815,28 +836,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 17,
+    parent: BuildingId.SMALL_FENCE,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 10
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 8
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 2
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 1
       }
     ]
   },
   [BuildingId.ITEM_PLATE_06]: {
     id: BuildingId.ITEM_PLATE_06,
+    numericalId: 19,
     name: {
       [Lang.EN]: "Armour Plating",
       [Lang.FR]: "Cloison en bois",
@@ -857,16 +879,17 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 28,
+    parent: BuildingId.SMALL_WALLIMPROVE,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 10
       }
     ]
   },
   [BuildingId.ITEM_PLATE_07]: {
     id: BuildingId.ITEM_PLATE_07,
+    numericalId: 20,
     name: {
       [Lang.EN]: "Armour Plating v2",
       [Lang.FR]: "Cloison métallique",
@@ -887,16 +910,17 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 28,
+    parent: BuildingId.SMALL_WALLIMPROVE,
     resources: [
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 10
       }
     ]
   },
   [BuildingId.ITEM_PLATE_08]: {
     id: BuildingId.ITEM_PLATE_08,
+    numericalId: 21,
     name: {
       [Lang.EN]: "Armour Plating v3",
       [Lang.FR]: "Cloison épaisse",
@@ -917,20 +941,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 28,
+    parent: BuildingId.SMALL_WALLIMPROVE,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 8
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 8
       }
     ]
   },
   [BuildingId.ITEM_PLATE_09]: {
     id: BuildingId.ITEM_PLATE_09,
+    numericalId: 22,
     name: {
       [Lang.EN]: "Plywood",
       [Lang.FR]: "Contreplaqué",
@@ -951,20 +976,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 28,
+    parent: BuildingId.SMALL_WALLIMPROVE,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 2
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 2
       }
     ]
   },
   [BuildingId.ITEM_PLATE_10]: {
     id: BuildingId.ITEM_PLATE_10,
+    numericalId: 23,
     name: {
       [Lang.EN]: "Extrawall",
       [Lang.FR]: "Bastion",
@@ -985,20 +1011,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 28,
+    parent: BuildingId.SMALL_WALLIMPROVE,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 15
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 15
       }
     ]
   },
   [BuildingId.SMALL_WALLIMPROVE_03]: {
     id: BuildingId.SMALL_WALLIMPROVE_03,
+    numericalId: 24,
     name: {
       [Lang.EN]: "Slip 'n' Slide",
       [Lang.FR]: "Mur savonné",
@@ -1019,32 +1046,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 28,
+    parent: BuildingId.SMALL_WALLIMPROVE,
     resources: [
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 10
       },
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 10
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 1
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 2
       },
       {
-        id: 76,
+        id: ItemId.PHARMA,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_GAZSPRAY]: {
     id: BuildingId.SMALL_GAZSPRAY,
+    numericalId: 25,
     name: {
       [Lang.EN]: "Gas Gun",
       [Lang.FR]: "Neurotoxine",
@@ -1065,36 +1093,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 27,
+    parent: BuildingId.SMALL_WATERSPRAY,
     resources: [
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       },
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 5
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 1
       },
       {
-        id: 76,
+        id: ItemId.PHARMA,
         amount: 2
       },
       {
-        id: 195,
+        id: ItemId.POISON_PART,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_ACIDSPRAY]: {
     id: BuildingId.SMALL_ACIDSPRAY,
+    numericalId: 26,
     name: {
       [Lang.EN]: "Acid Spray",
       [Lang.FR]: "Projection acide",
@@ -1115,20 +1144,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: true,
-    parentId: 27,
+    parent: BuildingId.SMALL_WATERSPRAY,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 3
       },
       {
-        id: 76,
+        id: ItemId.PHARMA,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_WATERSPRAY]: {
     id: BuildingId.SMALL_WATERSPRAY,
+    numericalId: 27,
     name: {
       [Lang.EN]: "Vaporiser",
       [Lang.FR]: "Pulvérisateur",
@@ -1149,36 +1179,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 50,
+    parent: BuildingId.SMALL_WATER,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 2
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 8
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 2
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 2
       },
       {
-        id: 279,
+        id: ItemId.WIRE,
         amount: 2
       },
       {
-        id: 111,
+        id: ItemId.DETO,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_WALLIMPROVE]: {
     id: BuildingId.SMALL_WALLIMPROVE,
+    numericalId: 28,
     name: {
       [Lang.EN]: "Defensive Wall",
       [Lang.FR]: "Muraille",
@@ -1199,20 +1230,20 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 0,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 8
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 4
       }
     ]
   },
   [BuildingId.ITEM_BGRENADE]: {
     id: BuildingId.ITEM_BGRENADE,
+    numericalId: 29,
     name: {
       [Lang.EN]: "Mines",
       [Lang.FR]: "Champs de mines à eau",
@@ -1233,28 +1264,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: true,
-    parentId: 34,
+    parent: BuildingId.ITEM_VEGETABLE_TASTY,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 10
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 3
       },
       {
-        id: 58,
+        id: ItemId.EXPLO,
         amount: 1
       },
       {
-        id: 111,
+        id: ItemId.DETO,
         amount: 1
       }
     ]
   },
   [BuildingId.ITEM_JERRYCAN_01]: {
     id: BuildingId.ITEM_JERRYCAN_01,
+    numericalId: 30,
     name: {
       [Lang.EN]: "Water Filter",
       [Lang.FR]: "Filtre",
@@ -1275,32 +1307,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 31,
+    parent: BuildingId.ITEM_JERRYCAN,
     resources: [
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 10
       },
       {
-        id: 82,
+        id: ItemId.ELECTRO,
         amount: 2
       },
       {
-        id: 279,
+        id: ItemId.WIRE,
         amount: 1
       },
       {
-        id: 280,
+        id: ItemId.OILCAN,
         amount: 1
       },
       {
-        id: 178,
+        id: ItemId.FENCE,
         amount: 1
       }
     ]
   },
   [BuildingId.ITEM_JERRYCAN]: {
     id: BuildingId.ITEM_JERRYCAN,
+    numericalId: 31,
     name: {
       [Lang.EN]: "Water Purifier",
       [Lang.FR]: "Purificateur",
@@ -1321,32 +1354,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 50,
+    parent: BuildingId.SMALL_WATER,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 5
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 2
       },
       {
-        id: 280,
+        id: ItemId.OILCAN,
         amount: 2
       }
     ]
   },
   [BuildingId.ITEM_DIGGER]: {
     id: BuildingId.ITEM_DIGGER,
+    numericalId: 32,
     name: {
       [Lang.EN]: "Fertilizer",
       [Lang.FR]: "Fertilisation sauvage",
@@ -1367,32 +1401,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 34,
+    parent: BuildingId.ITEM_VEGETABLE_TASTY,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 10
       },
       {
-        id: 43,
+        id: ItemId.DRUG,
         amount: 2
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 5
       },
       {
-        id: 76,
+        id: ItemId.PHARMA,
         amount: 8
       },
       {
-        id: 296,
+        id: ItemId.RYEBAG,
         amount: 3
       }
     ]
   },
   [BuildingId.ITEM_BGRENADE_01]: {
     id: BuildingId.ITEM_BGRENADE_01,
+    numericalId: 33,
     name: {
       [Lang.EN]: "Grapeboom",
       [Lang.FR]: "Pamplemousses explosifs",
@@ -1413,28 +1448,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parentId: 34,
+    parent: BuildingId.ITEM_VEGETABLE_TASTY,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 10
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 58,
+        id: ItemId.EXPLO,
         amount: 5
       },
       {
-        id: 280,
+        id: ItemId.OILCAN,
         amount: 1
       }
     ]
   },
   [BuildingId.ITEM_VEGETABLE_TASTY]: {
     id: BuildingId.ITEM_VEGETABLE_TASTY,
+    numericalId: 34,
     name: {
       [Lang.EN]: "Vegetable Plot",
       [Lang.FR]: "Potager",
@@ -1455,24 +1491,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 0,
     temporary: false,
-    parentId: 50,
+    parent: BuildingId.SMALL_WATER,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 10
       },
       {
-        id: 76,
+        id: ItemId.PHARMA,
         amount: 1
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 10
       }
     ]
   },
   [BuildingId.SMALL_EDEN]: {
     id: BuildingId.SMALL_EDEN,
+    numericalId: 35,
     name: {
       [Lang.EN]: "Eden Project",
       [Lang.FR]: "Projet Éden",
@@ -1493,28 +1530,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parentId: 50,
+    parent: BuildingId.SMALL_WATER,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 10
       },
       {
-        id: 58,
+        id: ItemId.EXPLO,
         amount: 2
       },
       {
-        id: 111,
+        id: ItemId.DETO,
         amount: 1
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       }
     ]
   },
   [BuildingId.SMALL_WATER_01]: {
     id: BuildingId.SMALL_WATER_01,
+    numericalId: 36,
     name: {
       [Lang.EN]: "Drilling Rig",
       [Lang.FR]: "Foreuse puits",
@@ -1535,20 +1573,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 50,
+    parent: BuildingId.SMALL_WATER,
     resources: [
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 7
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_WATERSPRAY_01]: {
     id: BuildingId.SMALL_WATERSPRAY_01,
+    numericalId: 37,
     name: {
       [Lang.EN]: "Boiling Fog",
       [Lang.FR]: "Vaporisateur",
@@ -1569,32 +1608,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 27,
+    parent: BuildingId.SMALL_WATERSPRAY,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 10
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 1
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 10
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       },
       {
-        id: 280,
+        id: ItemId.OILCAN,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_GRINDER]: {
     id: BuildingId.SMALL_GRINDER,
+    numericalId: 38,
     name: {
       [Lang.EN]: "Saniflow Macerator",
       [Lang.FR]: "Sanibroyeur",
@@ -1615,28 +1655,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 142,
+    parent: BuildingId.SMALL_DOOR_CLOSED,
     resources: [
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 2
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 2
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 4
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 10
       }
     ]
   },
   [BuildingId.SMALL_SPRINKLER]: {
     id: BuildingId.SMALL_SPRINKLER,
+    numericalId: 39,
     name: {
       [Lang.EN]: "Sprinkler System",
       [Lang.FR]: "Arroseurs auto",
@@ -1657,32 +1698,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 27,
+    parent: BuildingId.SMALL_WATERSPRAY,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 20
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 1
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 7
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 15
       },
       {
-        id: 284,
+        id: ItemId.DIODE,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_SHOWER]: {
     id: BuildingId.SMALL_SHOWER,
+    numericalId: 40,
     name: {
       [Lang.EN]: "Shower",
       [Lang.FR]: "Douches",
@@ -1703,32 +1745,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 41,
+    parent: BuildingId.ITEM_FIREWORK_TUBE,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 5
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 4
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 1
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 1
       },
       {
-        id: 280,
+        id: ItemId.OILCAN,
         amount: 1
       }
     ]
   },
   [BuildingId.ITEM_FIREWORK_TUBE]: {
     id: BuildingId.ITEM_FIREWORK_TUBE,
+    numericalId: 41,
     name: {
       [Lang.EN]: "Hydraulic Network",
       [Lang.FR]: "Réseau hydraulique",
@@ -1749,32 +1792,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 50,
+    parent: BuildingId.SMALL_WATER,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 2
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 5
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 2
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       },
       {
-        id: 65,
+        id: ItemId.RUSTINE,
         amount: 1
       }
     ]
   },
   [BuildingId.ITEM_TUBE]: {
     id: BuildingId.ITEM_TUBE,
+    numericalId: 42,
     name: {
       [Lang.EN]: "Water Turrets",
       [Lang.FR]: "Aqua-tourelles",
@@ -1795,24 +1839,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 3,
     temporary: false,
-    parentId: 50,
+    parent: BuildingId.SMALL_WATER,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 25
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 6
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 10
       }
     ]
   },
   [BuildingId.ITEM_TUBE_01]: {
     id: BuildingId.ITEM_TUBE_01,
+    numericalId: 43,
     name: {
       [Lang.EN]: "Water Catcher",
       [Lang.FR]: "Percée",
@@ -1833,16 +1878,17 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: true,
-    parentId: 50,
+    parent: BuildingId.SMALL_WATER,
     resources: [
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_WATERCANON]: {
     id: BuildingId.SMALL_WATERCANON,
+    numericalId: 44,
     name: {
       [Lang.EN]: "Mist Spray",
       [Lang.FR]: "Pluvio-canons",
@@ -1863,28 +1909,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parentId: 27,
+    parent: BuildingId.SMALL_WATERSPRAY,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 15
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 5
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       }
     ]
   },
   [BuildingId.SMALL_SHOWER_01]: {
     id: BuildingId.SMALL_SHOWER_01,
+    numericalId: 45,
     name: {
       [Lang.EN]: "Sluice",
       [Lang.FR]: "Caniveaux",
@@ -1905,24 +1952,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 41,
+    parent: BuildingId.ITEM_FIREWORK_TUBE,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 15
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 8
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_SHOWER_02]: {
     id: BuildingId.SMALL_SHOWER_02,
+    numericalId: 46,
     name: {
       [Lang.EN]: "Decon Shower",
       [Lang.FR]: "Rid’eau",
@@ -1943,16 +1991,17 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 41,
+    parent: BuildingId.ITEM_FIREWORK_TUBE,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 10
       }
     ]
   },
   [BuildingId.SMALL_ROCKETPERF]: {
     id: BuildingId.SMALL_ROCKETPERF,
+    numericalId: 47,
     name: {
       [Lang.EN]: "Divining Rocket",
       [Lang.FR]: "Roquette foreuse",
@@ -1973,36 +2022,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parentId: 36,
+    parent: BuildingId.SMALL_WATER_01,
     resources: [
       {
-        id: 58,
+        id: ItemId.EXPLO,
         amount: 1
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 1
       },
       {
-        id: 111,
+        id: ItemId.DETO,
         amount: 1
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 5
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       }
     ]
   },
   [BuildingId.SMALL_WATERDETECT]: {
     id: BuildingId.SMALL_WATERDETECT,
+    numericalId: 48,
     name: {
       [Lang.EN]: "Divining Rods",
       [Lang.FR]: "Détecteur à eau",
@@ -2023,32 +2073,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 4,
     temporary: false,
-    parentId: 50,
+    parent: BuildingId.SMALL_WATER,
     resources: [
       {
-        id: 82,
+        id: ItemId.ELECTRO,
         amount: 5
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 10
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 10
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 1
       },
       {
-        id: 284,
+        id: ItemId.DIODE,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_APPLETREE]: {
     id: BuildingId.SMALL_APPLETREE,
+    numericalId: 49,
     name: {
       [Lang.EN]: "Apple Tree",
       [Lang.FR]: "Pommier de l’Outre-Monde",
@@ -2069,28 +2120,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 34,
+    parent: BuildingId.ITEM_VEGETABLE_TASTY,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 10
       },
       {
-        id: 59,
+        id: ItemId.HMEAT,
         amount: 2
       },
       {
-        id: 76,
+        id: ItemId.PHARMA,
         amount: 3
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_WATER]: {
     id: BuildingId.SMALL_WATER,
+    numericalId: 50,
     name: {
       [Lang.EN]: "Pump",
       [Lang.FR]: "Pompe",
@@ -2111,20 +2163,20 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 0,
     temporary: false,
-    parentId: 0,
     resources: [
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 8
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 1
       }
     ]
   },
   [BuildingId.ITEM_HMEAT]: {
     id: BuildingId.ITEM_HMEAT,
+    numericalId: 51,
     name: {
       [Lang.EN]: "Cremato-Cue",
       [Lang.FR]: "Crémato-Cue",
@@ -2145,20 +2197,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parentId: 52,
+    parent: BuildingId.ITEM_MEAT,
     resources: [
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 6
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 1
       }
     ]
   },
   [BuildingId.ITEM_MEAT]: {
     id: BuildingId.ITEM_MEAT,
+    numericalId: 52,
     name: {
       [Lang.EN]: "Butcher",
       [Lang.FR]: "Boucherie",
@@ -2179,20 +2232,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 76,
+    parent: BuildingId.SMALL_REFINE,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 9
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 4
       }
     ]
   },
   [BuildingId.ITEM_MECA_PARTS]: {
     id: BuildingId.ITEM_MECA_PARTS,
+    numericalId: 53,
     name: {
       [Lang.EN]: "Defensive Focus",
       [Lang.FR]: "Fixations de défenses",
@@ -2213,24 +2267,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 0,
     temporary: false,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 3
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 8
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 8
       }
     ]
   },
   [BuildingId.SMALL_CANON]: {
     id: BuildingId.SMALL_CANON,
+    numericalId: 54,
     name: {
       [Lang.EN]: "Rock Cannon",
       [Lang.FR]: "Canon à briques",
@@ -2251,32 +2306,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 58,
+    parent: BuildingId.SMALL_DIG,
     resources: [
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 1
       },
       {
-        id: 82,
+        id: ItemId.ELECTRO,
         amount: 1
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 3
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 3
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       }
     ]
   },
   [BuildingId.SMALL_CANON_01]: {
     id: BuildingId.SMALL_CANON_01,
+    numericalId: 55,
     name: {
       [Lang.EN]: "Railgun",
       [Lang.FR]: "Perforeuse",
@@ -2297,32 +2353,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parentId: 58,
+    parent: BuildingId.SMALL_DIG,
     resources: [
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 2
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 10
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 2
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 1
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_CANON_02]: {
     id: BuildingId.SMALL_CANON_02,
+    numericalId: 56,
     name: {
       [Lang.EN]: "Plate Gun",
       [Lang.FR]: "Lance-grenailles",
@@ -2343,32 +2400,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 58,
+    parent: BuildingId.SMALL_DIG,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 2
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 3
       },
       {
-        id: 58,
+        id: ItemId.EXPLO,
         amount: 2
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 5
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_CANON_03]: {
     id: BuildingId.SMALL_CANON_03,
+    numericalId: 57,
     name: {
       [Lang.EN]: "Brutal Cannon",
       [Lang.FR]: "Canon brutal",
@@ -2389,20 +2447,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: true,
-    parentId: 58,
+    parent: BuildingId.SMALL_DIG,
     resources: [
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 1
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_DIG]: {
     id: BuildingId.SMALL_DIG,
+    numericalId: 58,
     name: {
       [Lang.EN]: "Cannon Mounds",
       [Lang.FR]: "Monticules canons",
@@ -2423,28 +2482,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 103,
+    parent: BuildingId.ITEM_TAGGER,
     resources: [
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 1
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 8
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 1
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       }
     ]
   },
   [BuildingId.ITEM_WOOD_BEAM]: {
     id: BuildingId.ITEM_WOOD_BEAM,
+    numericalId: 59,
     name: {
       [Lang.EN]: "War Mill",
       [Lang.FR]: "Tourniquet",
@@ -2465,20 +2525,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 142,
+    parent: BuildingId.SMALL_DOOR_CLOSED,
     resources: [
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 4
       },
       {
-        id: 65,
+        id: ItemId.RUSTINE,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_FACTORY]: {
     id: BuildingId.SMALL_FACTORY,
+    numericalId: 60,
     name: {
       [Lang.EN]: "Factory",
       [Lang.FR]: "Manufacture",
@@ -2499,24 +2560,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 76,
+    parent: BuildingId.SMALL_REFINE,
     resources: [
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 5
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       },
       {
-        id: 147,
+        id: ItemId.TABLE,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_SAW]: {
     id: BuildingId.SMALL_SAW,
+    numericalId: 61,
     name: {
       [Lang.EN]: "Screaming Saws",
       [Lang.FR]: "Scies hurlantes",
@@ -2537,36 +2599,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parentId: 24,
+    parent: BuildingId.SMALL_WALLIMPROVE_03,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 10
       },
       {
-        id: 65,
+        id: ItemId.RUSTINE,
         amount: 2
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 2
       },
       {
-        id: 279,
+        id: ItemId.WIRE,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_REFINE_01]: {
     id: BuildingId.SMALL_REFINE_01,
+    numericalId: 62,
     name: {
       [Lang.EN]: "Architect’s Study",
       [Lang.FR]: "Architectoire",
@@ -2587,28 +2650,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 156,
+    parent: BuildingId.SMALL_SPA4SOULS_01,
     resources: [
       {
-        id: 43,
+        id: ItemId.DRUG,
         amount: 1
       },
       {
-        id: 336,
+        id: ItemId.VODKA,
         amount: 1
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 5
       },
       {
-        id: 296,
+        id: ItemId.RYEBAG,
         amount: 2
       }
     ]
   },
   [BuildingId.ITEM_RP_BOOK2]: {
     id: BuildingId.ITEM_RP_BOOK2,
+    numericalId: 63,
     name: {
       [Lang.EN]: "Building Registry",
       [Lang.FR]: "Registre de chantier",
@@ -2629,20 +2693,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 76,
+    parent: BuildingId.SMALL_REFINE,
     resources: [
       {
-        id: 147,
+        id: ItemId.TABLE,
         amount: 1
       },
       {
-        id: 108,
+        id: ItemId.CHAIR_BASIC,
         amount: 1
       }
     ]
   },
   [BuildingId.R_DHANG]: {
     id: BuildingId.R_DHANG,
+    numericalId: 64,
     name: {
       [Lang.EN]: "Gallows",
       [Lang.FR]: "Potence",
@@ -2663,20 +2728,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 76,
+    parent: BuildingId.SMALL_REFINE,
     resources: [
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 1
       },
       {
-        id: 170,
+        id: ItemId.CHAIN,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_CAFET]: {
     id: BuildingId.SMALL_CAFET,
+    numericalId: 65,
     name: {
       [Lang.EN]: "Small Café",
       [Lang.FR]: "Cantine à bois",
@@ -2697,20 +2763,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: true,
-    parentId: 76,
+    parent: BuildingId.SMALL_REFINE,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 1
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 3
       }
     ]
   },
   [BuildingId.SMALL_COFFIN]: {
     id: BuildingId.SMALL_COFFIN,
+    numericalId: 66,
     name: {
       [Lang.EN]: "Coffin Catapult",
       [Lang.FR]: "Cercueils sur ressorts",
@@ -2731,36 +2798,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 67,
+    parent: BuildingId.SMALL_CEMETERY,
     resources: [
       {
-        id: 34,
+        id: ItemId.COURROIE,
         amount: 1
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 2
       },
       {
-        id: 279,
+        id: ItemId.WIRE,
         amount: 2
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 3
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 15
       }
     ]
   },
   [BuildingId.SMALL_CEMETERY]: {
     id: BuildingId.SMALL_CEMETERY,
+    numericalId: 67,
     name: {
       [Lang.EN]: "Small Cemetary",
       [Lang.FR]: "Cimetière cadenassé",
@@ -2781,20 +2849,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parentId: 156,
+    parent: BuildingId.SMALL_SPA4SOULS_01,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 10
       }
     ]
   },
   [BuildingId.SMALL_CHICKEN]: {
     id: BuildingId.SMALL_CHICKEN,
+    numericalId: 68,
     name: {
       [Lang.EN]: "Henhouse",
       [Lang.FR]: "Poulailler",
@@ -2815,32 +2884,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parentId: 76,
+    parent: BuildingId.SMALL_REFINE,
     resources: [
       {
-        id: 36,
+        id: ItemId.PET_CHICK,
         amount: 2
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 5
       },
       {
-        id: 178,
+        id: ItemId.FENCE,
         amount: 2
       },
       {
-        id: 296,
+        id: ItemId.RYEBAG,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_SLAUGHTERHOUSE]: {
     id: BuildingId.SMALL_SLAUGHTERHOUSE,
+    numericalId: 69,
     name: {
       [Lang.EN]: "Abbatoir",
       [Lang.FR]: "Abattoir",
@@ -2861,28 +2931,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 52,
+    parent: BuildingId.ITEM_MEAT,
     resources: [
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 1
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 2
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 8
       },
       {
-        id: 59,
+        id: ItemId.HMEAT,
         amount: 1
       }
     ]
   },
   [BuildingId.ITEM_SHIELD]: {
     id: BuildingId.ITEM_SHIELD,
+    numericalId: 70,
     name: {
       [Lang.EN]: "Defensive Adjustment",
       [Lang.FR]: "Ajustement défensif",
@@ -2903,28 +2974,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 2,
     temporary: false,
-    parentId: 63,
+    parent: BuildingId.ITEM_RP_BOOK2,
     resources: [
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 5
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 10
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 2
       },
       {
-        id: 279,
+        id: ItemId.WIRE,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_CAFET_01]: {
     id: BuildingId.SMALL_CAFET_01,
+    numericalId: 71,
     name: {
       [Lang.EN]: "Central Cafeteria",
       [Lang.FR]: "Cantine centrale",
@@ -2945,36 +3017,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 76,
+    parent: BuildingId.SMALL_REFINE,
     resources: [
       {
-        id: 76,
+        id: ItemId.PHARMA,
         amount: 1
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 5
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 1
       },
       {
-        id: 147,
+        id: ItemId.TABLE,
         amount: 1
       },
       {
-        id: 296,
+        id: ItemId.RYEBAG,
         amount: 1
       },
       {
-        id: 162,
+        id: ItemId.MACHINE_2,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_STRATEGY]: {
     id: BuildingId.SMALL_STRATEGY,
+    numericalId: 72,
     name: {
       [Lang.EN]: "Community Involvement",
       [Lang.FR]: "Quartiers circulaires",
@@ -2995,24 +3068,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 111,
+    parent: BuildingId.SMALL_CITY_UP,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 3
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 15
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 15
       }
     ]
   },
   [BuildingId.SMALL_STRATEGY_01]: {
     id: BuildingId.SMALL_STRATEGY_01,
+    numericalId: 73,
     name: {
       [Lang.EN]: "Builder’s Merchant",
       [Lang.FR]: "Stratégies citoyennes",
@@ -3033,52 +3107,53 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 1,
     temporary: false,
-    parentId: 62,
+    parent: BuildingId.SMALL_REFINE_01,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 10
       },
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 5
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 8
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 2
       },
       {
-        id: 70,
+        id: ItemId.DRUG_HERO,
         amount: 1
       },
       {
-        id: 336,
+        id: ItemId.VODKA,
         amount: 1
       },
       {
-        id: 147,
+        id: ItemId.TABLE,
         amount: 1
       },
       {
-        id: 184,
+        id: ItemId.CIGS,
         amount: 1
       },
       {
-        id: 146,
+        id: ItemId.TRESTLE,
         amount: 2
       },
       {
-        id: 108,
+        id: ItemId.CHAIR_BASIC,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_INFIRMARY]: {
     id: BuildingId.SMALL_INFIRMARY,
+    numericalId: 74,
     name: {
       [Lang.EN]: "Infirmary",
       [Lang.FR]: "Infirmerie",
@@ -3099,28 +3174,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 156,
+    parent: BuildingId.SMALL_SPA4SOULS_01,
     resources: [
       {
-        id: 76,
+        id: ItemId.PHARMA,
         amount: 6
       },
       {
-        id: 115,
+        id: ItemId.DISINFECT,
         amount: 1
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 5
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       }
     ]
   },
   [BuildingId.ITEM_ACID]: {
     id: BuildingId.ITEM_ACID,
+    numericalId: 75,
     name: {
       [Lang.EN]: "Central Laboratory",
       [Lang.FR]: "Laboratoire central",
@@ -3141,40 +3217,41 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 76,
+    parent: BuildingId.SMALL_REFINE,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 76,
+        id: ItemId.PHARMA,
         amount: 4
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 5
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       },
       {
-        id: 296,
+        id: ItemId.RYEBAG,
         amount: 2
       },
       {
-        id: 281,
+        id: ItemId.LENS,
         amount: 1
       },
       {
-        id: 161,
+        id: ItemId.MACHINE_1,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_REFINE]: {
     id: BuildingId.SMALL_REFINE,
+    numericalId: 76,
     name: {
       [Lang.EN]: "Workshop",
       [Lang.FR]: "Atelier",
@@ -3195,20 +3272,20 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 0,
     temporary: false,
-    parentId: 0,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 10
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 8
       }
     ]
   },
   [BuildingId.ITEM_TAGGER_01]: {
     id: BuildingId.ITEM_TAGGER_01,
+    numericalId: 77,
     name: {
       [Lang.EN]: "Scanner",
       [Lang.FR]: "Scanner",
@@ -3229,32 +3306,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 153,
+    parent: BuildingId.ITEM_SCOPE,
     resources: [
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 5
       },
       {
-        id: 2,
+        id: ItemId.PILE,
         amount: 2
       },
       {
-        id: 284,
+        id: ItemId.DIODE,
         amount: 1
       },
       {
-        id: 82,
+        id: ItemId.ELECTRO,
         amount: 1
       },
       {
-        id: 86,
+        id: ItemId.RADIO_ON,
         amount: 2
       }
     ]
   },
   [BuildingId.ITEM_ELECTRO]: {
     id: BuildingId.ITEM_ELECTRO,
+    numericalId: 78,
     name: {
       [Lang.EN]: "Upgraded Map",
       [Lang.FR]: "Carte améliorée",
@@ -3275,32 +3353,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 153,
+    parent: BuildingId.ITEM_SCOPE,
     resources: [
       {
-        id: 2,
+        id: ItemId.PILE,
         amount: 2
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 5
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 1
       },
       {
-        id: 284,
+        id: ItemId.DIODE,
         amount: 1
       },
       {
-        id: 86,
+        id: ItemId.RADIO_ON,
         amount: 2
       }
     ]
   },
   [BuildingId.ITEM_TAGGER_02]: {
     id: BuildingId.ITEM_TAGGER_02,
+    numericalId: 79,
     name: {
       [Lang.EN]: "Predictor",
       [Lang.FR]: "Planificateur",
@@ -3321,20 +3400,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 103,
+    parent: BuildingId.ITEM_TAGGER,
     resources: [
       {
-        id: 65,
+        id: ItemId.RUSTINE,
         amount: 1
       },
       {
-        id: 82,
+        id: ItemId.ELECTRO,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_GATHER_02]: {
     id: BuildingId.SMALL_GATHER_02,
+    numericalId: 80,
     name: {
       [Lang.EN]: "Searchtower",
       [Lang.FR]: "Scrutateur",
@@ -3355,36 +3435,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 0,
     temporary: false,
-    parentId: 103,
+    parent: BuildingId.ITEM_TAGGER,
     resources: [
       {
-        id: 82,
+        id: ItemId.ELECTRO,
         amount: 1
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 3
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 1
       },
       {
-        id: 147,
+        id: ItemId.TABLE,
         amount: 1
       },
       {
-        id: 292,
+        id: ItemId.SCOPE,
         amount: 1
       },
       {
-        id: 284,
+        id: ItemId.DIODE,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_TRAP]: {
     id: BuildingId.SMALL_TRAP,
+    numericalId: 81,
     name: {
       [Lang.EN]: "Spikes",
       [Lang.FR]: "Champs piégés",
@@ -3405,16 +3486,17 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: true,
-    parentId: 85,
+    parent: BuildingId.SMALL_DIG_01,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       }
     ]
   },
   [BuildingId.ITEM_WOOD_PLATE]: {
     id: BuildingId.ITEM_WOOD_PLATE,
+    numericalId: 82,
     name: {
       [Lang.EN]: "Wood Plating",
       [Lang.FR]: "Renforts d’urgence",
@@ -3435,16 +3517,17 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: true,
-    parentId: 94,
+    parent: BuildingId.STATUS_TERROR,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 6
       }
     ]
   },
   [BuildingId.SMALL_TRAP_01]: {
     id: BuildingId.SMALL_TRAP_01,
+    numericalId: 83,
     name: {
       [Lang.EN]: "Guerilla Traps",
       [Lang.FR]: "Guérilla",
@@ -3465,32 +3548,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: true,
-    parentId: 94,
+    parent: BuildingId.STATUS_TERROR,
     resources: [
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 3
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 3
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 5
       },
       {
-        id: 65,
+        id: ItemId.RUSTINE,
         amount: 1
       },
       {
-        id: 279,
+        id: ItemId.WIRE,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_DIG_02]: {
     id: BuildingId.SMALL_DIG_02,
+    numericalId: 84,
     name: {
       [Lang.EN]: "Mount Killaman-Jaro",
       [Lang.FR]: "Mont pointu",
@@ -3511,16 +3595,17 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: true,
-    parentId: 85,
+    parent: BuildingId.SMALL_DIG_01,
     resources: [
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_DIG_01]: {
     id: BuildingId.SMALL_DIG_01,
+    numericalId: 85,
     name: {
       [Lang.EN]: "Rubbish Heap",
       [Lang.FR]: "Tas de détritus",
@@ -3541,20 +3626,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: true,
-    parentId: 94,
+    parent: BuildingId.STATUS_TERROR,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 2
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_TRAP_02]: {
     id: BuildingId.SMALL_TRAP_02,
+    numericalId: 86,
     name: {
       [Lang.EN]: "Pits",
       [Lang.FR]: "Pièges à loups",
@@ -3575,20 +3661,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: true,
-    parentId: 85,
+    parent: BuildingId.SMALL_DIG_01,
     resources: [
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 5
       },
       {
-        id: 59,
+        id: ItemId.HMEAT,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_TNT]: {
     id: BuildingId.SMALL_TNT,
+    numericalId: 87,
     name: {
       [Lang.EN]: "Bomb Factory",
       [Lang.FR]: "Dynamitage",
@@ -3609,16 +3696,17 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: true,
-    parentId: 94,
+    parent: BuildingId.STATUS_TERROR,
     resources: [
       {
-        id: 58,
+        id: ItemId.EXPLO,
         amount: 2
       }
     ]
   },
   [BuildingId.STATUS_TERROR_01]: {
     id: BuildingId.STATUS_TERROR_01,
+    numericalId: 88,
     name: {
       [Lang.EN]: "Abject Panic",
       [Lang.FR]: "Panique",
@@ -3639,28 +3727,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: true,
-    parentId: 94,
+    parent: BuildingId.STATUS_TERROR,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 2
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 5
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_BAMBA]: {
     id: BuildingId.SMALL_BAMBA,
+    numericalId: 89,
     name: {
       [Lang.EN]: "Frat House",
       [Lang.FR]: "La Bamba",
@@ -3681,28 +3770,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: true,
-    parentId: 94,
+    parent: BuildingId.STATUS_TERROR,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 3
       },
       {
-        id: 284,
+        id: ItemId.DIODE,
         amount: 1
       },
       {
-        id: 86,
+        id: ItemId.RADIO_ON,
         amount: 3
       },
       {
-        id: 285,
+        id: ItemId.GUITAR,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_HOLYRAIN]: {
     id: BuildingId.SMALL_HOLYRAIN,
+    numericalId: 90,
     name: {
       [Lang.EN]: "Holy Raincloud",
       [Lang.FR]: "Pluie bénite",
@@ -3723,28 +3813,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: true,
-    parentId: 156,
+    parent: BuildingId.SMALL_SPA4SOULS_01,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 5
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 9
       },
       {
-        id: 342,
+        id: ItemId.SOUL_YELLOW,
         amount: 4
       }
     ]
   },
   [BuildingId.SMALL_VAUDOUDOLL]: {
     id: BuildingId.SMALL_VAUDOUDOLL,
+    numericalId: 91,
     name: {
       [Lang.EN]: "XXL Voodoo Doll",
       [Lang.FR]: "Poupée vaudou XXL",
@@ -3765,32 +3856,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 156,
+    parent: BuildingId.SMALL_SPA4SOULS_01,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 2
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 3
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 2
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 2
       },
       {
-        id: 342,
+        id: ItemId.SOUL_YELLOW,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_SPIRITMIRAGE]: {
     id: BuildingId.SMALL_SPIRITMIRAGE,
+    numericalId: 92,
     name: {
       [Lang.EN]: "Spirit Mirage",
       [Lang.FR]: "Mirage spirituel",
@@ -3811,28 +3903,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 156,
+    parent: BuildingId.SMALL_SPA4SOULS_01,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 6
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 2
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 6
       },
       {
-        id: 342,
+        id: ItemId.SOUL_YELLOW,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_BOKORSWORD]: {
     id: BuildingId.SMALL_BOKORSWORD,
+    numericalId: 93,
     name: {
       [Lang.EN]: "Sword of Bokor",
       [Lang.FR]: "Guillotine à Bokor",
@@ -3853,28 +3946,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 156,
+    parent: BuildingId.SMALL_SPA4SOULS_01,
     resources: [
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 3
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 8
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       },
       {
-        id: 342,
+        id: ItemId.SOUL_YELLOW,
         amount: 3
       }
     ]
   },
   [BuildingId.STATUS_TERROR]: {
     id: BuildingId.STATUS_TERROR,
+    numericalId: 94,
     name: {
       [Lang.EN]: "Emergency Supplies",
       [Lang.FR]: "Dispositifs d’urgence",
@@ -3895,20 +3989,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 28,
+    parent: BuildingId.SMALL_WALLIMPROVE,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 5
       }
     ]
   },
   [BuildingId.ITEM_COURROIE_01]: {
     id: BuildingId.ITEM_COURROIE_01,
+    numericalId: 95,
     name: {
       [Lang.EN]: "Upgraded Catapult",
       [Lang.FR]: "Catapulte calibrée",
@@ -3929,36 +4024,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 96,
+    parent: BuildingId.ITEM_COURROIE,
     resources: [
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 1
       },
       {
-        id: 34,
+        id: ItemId.COURROIE,
         amount: 1
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 2
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 2
       },
       {
-        id: 82,
+        id: ItemId.ELECTRO,
         amount: 1
       },
       {
-        id: 281,
+        id: ItemId.LENS,
         amount: 1
       }
     ]
   },
   [BuildingId.ITEM_COURROIE]: {
     id: BuildingId.ITEM_COURROIE,
+    numericalId: 96,
     name: {
       [Lang.EN]: "Catapult",
       [Lang.FR]: "Catapulte primitive",
@@ -3979,28 +4075,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 103,
+    parent: BuildingId.ITEM_TAGGER,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 2
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 1
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 1
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_ARMOR]: {
     id: BuildingId.SMALL_ARMOR,
+    numericalId: 97,
     name: {
       [Lang.EN]: "Miniature Armory",
       [Lang.FR]: "Armurerie",
@@ -4021,32 +4118,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 143,
+    parent: BuildingId.SMALL_ROUND_PATH,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 10
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 8
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 2
       },
       {
-        id: 65,
+        id: ItemId.RUSTINE,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_IKEA]: {
     id: BuildingId.SMALL_IKEA,
+    numericalId: 98,
     name: {
       [Lang.EN]: "Swedish Workshop",
       [Lang.FR]: "Magasin suédois",
@@ -4067,40 +4165,41 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 97,
+    parent: BuildingId.SMALL_ARMOR,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 2
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 10
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 10
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 2
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 3
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 5
       },
       {
-        id: 86,
+        id: ItemId.RADIO_ON,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_TOURELLO]: {
     id: BuildingId.SMALL_TOURELLO,
+    numericalId: 99,
     name: {
       [Lang.EN]: "Shooting Gallery",
       [Lang.FR]: "Tourelle lance-eau",
@@ -4121,40 +4220,41 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 50,
+    parent: BuildingId.SMALL_WATER,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 20
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 1
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 2
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 2
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 65,
+        id: ItemId.RUSTINE,
         amount: 2
       },
       {
-        id: 111,
+        id: ItemId.DETO,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_CATAPULT3]: {
     id: BuildingId.SMALL_CATAPULT3,
+    numericalId: 100,
     name: {
       [Lang.EN]: "Small Trebuchet",
       [Lang.FR]: "Lance-bêtes",
@@ -4175,32 +4275,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parentId: 96,
+    parent: BuildingId.ITEM_COURROIE,
     resources: [
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 2
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 3
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 296,
+        id: ItemId.RYEBAG,
         amount: 1
       },
       {
-        id: 37,
+        id: ItemId.PET_PIG,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_WATCHMEN]: {
     id: BuildingId.SMALL_WATCHMEN,
+    numericalId: 101,
     name: {
       [Lang.EN]: "Guard Tower",
       [Lang.FR]: "Tour des Gardiens",
@@ -4221,28 +4322,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 143,
+    parent: BuildingId.SMALL_ROUND_PATH,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 1
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 10
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_WATCHMEN_01]: {
     id: BuildingId.SMALL_WATCHMEN_01,
+    numericalId: 102,
     name: {
       [Lang.EN]: "Scouts Lair",
       [Lang.FR]: "Repaire des Éclaireurs",
@@ -4263,40 +4365,41 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 153,
+    parent: BuildingId.ITEM_SCOPE,
     resources: [
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 1
       },
       {
-        id: 292,
+        id: ItemId.SCOPE,
         amount: 1
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 3
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 2
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 1
       },
       {
-        id: 105,
+        id: ItemId.TAGGER,
         amount: 2
       },
       {
-        id: 2,
+        id: ItemId.PILE,
         amount: 1
       }
     ]
   },
   [BuildingId.ITEM_TAGGER]: {
     id: BuildingId.ITEM_TAGGER,
+    numericalId: 103,
     name: {
       [Lang.EN]: "Watchtower",
       [Lang.FR]: "Tour de guet",
@@ -4317,24 +4420,24 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 0,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 3
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 1
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_DERRICK]: {
     id: BuildingId.SMALL_DERRICK,
+    numericalId: 104,
     name: {
       [Lang.EN]: "Mechanical Pump",
       [Lang.FR]: "Derrick",
@@ -4355,28 +4458,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 35,
+    parent: BuildingId.SMALL_EDEN,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 10
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 15
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_FALSECITY]: {
     id: BuildingId.SMALL_FALSECITY,
+    numericalId: 105,
     name: {
       [Lang.EN]: "False Town",
       [Lang.FR]: "Fausse ville",
@@ -4397,32 +4501,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 15
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 20
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 20
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 20
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 20
       }
     ]
   },
   [BuildingId.SMALL_VALVE]: {
     id: BuildingId.SMALL_VALVE,
+    numericalId: 106,
     name: {
       [Lang.EN]: "Faucet",
       [Lang.FR]: "Robinetterie",
@@ -4443,36 +4548,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 41,
+    parent: BuildingId.ITEM_FIREWORK_TUBE,
     resources: [
       {
-        id: 33,
+        id: ItemId.ENGINE,
         amount: 1
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 4
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 10
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 6
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 3
       },
       {
-        id: 280,
+        id: ItemId.OILCAN,
         amount: 3
       }
     ]
   },
   [BuildingId.SMALL_MOVING]: {
     id: BuildingId.SMALL_MOVING,
+    numericalId: 107,
     name: {
       [Lang.EN]: "The Big Rebuild",
       [Lang.FR]: "Grand déménagement",
@@ -4493,32 +4599,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 20
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 20
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 5
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 10
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 10
       }
     ]
   },
   [BuildingId.SMALL_SCARECROW]: {
     id: BuildingId.SMALL_SCARECROW,
+    numericalId: 108,
     name: {
       [Lang.EN]: "Scarecrows",
       [Lang.FR]: "Champs d’épouvantails",
@@ -4539,24 +4646,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 151,
+    parent: BuildingId.ITEM_PUMPKIN_RAW,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 3
       },
       {
-        id: 65,
+        id: ItemId.RUSTINE,
         amount: 3
       }
     ]
   },
   [BuildingId.SMALL_FLESHCAGE]: {
     id: BuildingId.SMALL_FLESHCAGE,
+    numericalId: 109,
     name: {
       [Lang.EN]: "Meat Locker",
       [Lang.FR]: "Cage à viande",
@@ -4577,28 +4685,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 76,
+    parent: BuildingId.SMALL_REFINE,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 2
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 8
       },
       {
-        id: 108,
+        id: ItemId.CHAIR_BASIC,
         amount: 1
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_COURT]: {
     id: BuildingId.SMALL_COURT,
+    numericalId: 110,
     name: {
       [Lang.EN]: "People’s Court",
       [Lang.FR]: "Dictature des héros",
@@ -4619,32 +4728,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 63,
+    parent: BuildingId.ITEM_RP_BOOK2,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 10
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 10
       },
       {
-        id: 147,
+        id: ItemId.TABLE,
         amount: 1
       },
       {
-        id: 279,
+        id: ItemId.WIRE,
         amount: 1
       },
       {
-        id: 86,
+        id: ItemId.RADIO_ON,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_CITY_UP]: {
     id: BuildingId.SMALL_CITY_UP,
+    numericalId: 111,
     name: {
       [Lang.EN]: "Fortifications",
       [Lang.FR]: "Habitations fortifiées",
@@ -4665,28 +4775,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 2
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 15
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 10
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 5
       }
     ]
   },
   [BuildingId.SMALL_TRASH_01]: {
     id: BuildingId.SMALL_TRASH_01,
+    numericalId: 112,
     name: {
       [Lang.EN]: "Wood Dump",
       [Lang.FR]: "Déchardes de bois",
@@ -4707,24 +4818,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 6,
     temporary: false,
-    parentId: 120,
+    parent: BuildingId.SMALL_TRASH,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 5
       }
     ]
   },
   [BuildingId.SMALL_TRASH_02]: {
     id: BuildingId.SMALL_TRASH_02,
+    numericalId: 113,
     name: {
       [Lang.EN]: "Metal Dump",
       [Lang.FR]: "Ferraillerie",
@@ -4745,20 +4857,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 6,
     temporary: false,
-    parentId: 120,
+    parent: BuildingId.SMALL_TRASH,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 5
       }
     ]
   },
   [BuildingId.SMALL_HOWLINGBAIT]: {
     id: BuildingId.SMALL_HOWLINGBAIT,
+    numericalId: 114,
     name: {
       [Lang.EN]: "Animal Dump",
       [Lang.FR]: "Enclos",
@@ -4779,16 +4892,17 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 6,
     temporary: false,
-    parentId: 120,
+    parent: BuildingId.SMALL_TRASH,
     resources: [
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 10
       }
     ]
   },
   [BuildingId.SMALL_TRASHCLEAN]: {
     id: BuildingId.SMALL_TRASHCLEAN,
+    numericalId: 115,
     name: {
       [Lang.EN]: "Organized Dump",
       [Lang.FR]: "Décharge organisée",
@@ -4809,32 +4923,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 120,
+    parent: BuildingId.SMALL_TRASH,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 2
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 1
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 10
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       },
       {
-        id: 146,
+        id: ItemId.TRESTLE,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_TRASH_03]: {
     id: BuildingId.SMALL_TRASH_03,
+    numericalId: 116,
     name: {
       [Lang.EN]: "Weapons Dump",
       [Lang.FR]: "Décharge piégée",
@@ -4855,20 +4970,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 6,
     temporary: false,
-    parentId: 120,
+    parent: BuildingId.SMALL_TRASH,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 8
       }
     ]
   },
   [BuildingId.SMALL_TRASH_04]: {
     id: BuildingId.SMALL_TRASH_04,
+    numericalId: 117,
     name: {
       [Lang.EN]: "Food Dump",
       [Lang.FR]: "Appâts odorants",
@@ -4889,16 +5005,17 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 6,
     temporary: false,
-    parentId: 120,
+    parent: BuildingId.SMALL_TRASH,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 15
       }
     ]
   },
   [BuildingId.SMALL_TRASH_05]: {
     id: BuildingId.SMALL_TRASH_05,
+    numericalId: 118,
     name: {
       [Lang.EN]: "Defence Dump",
       [Lang.FR]: "Décharge blindée",
@@ -4919,20 +5036,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 6,
     temporary: false,
-    parentId: 120,
+    parent: BuildingId.SMALL_TRASH,
     resources: [
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 3
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 5
       }
     ]
   },
   [BuildingId.SMALL_TRASH_06]: {
     id: BuildingId.SMALL_TRASH_06,
+    numericalId: 119,
     name: {
       [Lang.EN]: "Dump Upgrade",
       [Lang.FR]: "Décharge humidifiée",
@@ -4953,36 +5071,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 4,
     temporary: false,
-    parentId: 120,
+    parent: BuildingId.SMALL_TRASH,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 20
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 15
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 15
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 5
       },
       {
-        id: 195,
+        id: ItemId.POISON_PART,
         amount: 1
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_TRASH]: {
     id: BuildingId.SMALL_TRASH,
+    numericalId: 120,
     name: {
       [Lang.EN]: "Garbage Dump",
       [Lang.FR]: "Décharge publique",
@@ -5003,36 +5122,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 1,
     temporary: false,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 15
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 10
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 15
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 3
       }
     ]
   },
   [BuildingId.SMALL_LIGHTHOUSE]: {
     id: BuildingId.SMALL_LIGHTHOUSE,
+    numericalId: 121,
     name: {
       [Lang.EN]: "Lighthouse",
       [Lang.FR]: "Phare",
@@ -5053,32 +5173,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 103,
+    parent: BuildingId.ITEM_TAGGER,
     resources: [
       {
-        id: 82,
+        id: ItemId.ELECTRO,
         amount: 2
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 5
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       },
       {
-        id: 2,
+        id: ItemId.PILE,
         amount: 1
       },
       {
-        id: 284,
+        id: ItemId.DIODE,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_REDEMPTION]: {
     id: BuildingId.SMALL_REDEMPTION,
+    numericalId: 122,
     name: {
       [Lang.EN]: "Altar",
       [Lang.FR]: "Autel de la rédemption",
@@ -5099,24 +5220,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 63,
+    parent: BuildingId.ITEM_RP_BOOK2,
     resources: [
       {
-        id: 37,
+        id: ItemId.PET_PIG,
         amount: 1
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 3
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_CASTLE]: {
     id: BuildingId.SMALL_CASTLE,
+    numericalId: 123,
     name: {
       [Lang.EN]: "Giant Sandcastle",
       [Lang.FR]: "Château de sable",
@@ -5137,24 +5259,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 4,
     temporary: false,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 30
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 15
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 10
       }
     ]
   },
   [BuildingId.SMALL_SCORE]: {
     id: BuildingId.SMALL_SCORE,
+    numericalId: 124,
     name: {
       [Lang.EN]: "Bonfire",
       [Lang.FR]: "Feu de joie",
@@ -5175,20 +5298,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: true,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 22,
+        id: ItemId.LIGHTS,
         amount: 1
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       }
     ]
   },
   [BuildingId.SMALL_SLAVE]: {
     id: BuildingId.SMALL_SLAVE,
+    numericalId: 125,
     name: {
       [Lang.EN]: "Ministry of Slavery",
       [Lang.FR]: "Bureau des esclavagistes",
@@ -5209,28 +5333,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 4,
     temporary: false,
-    parentId: 63,
+    parent: BuildingId.ITEM_RP_BOOK2,
     resources: [
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 10
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       },
       {
-        id: 170,
+        id: ItemId.CHAIN,
         amount: 2
       },
       {
-        id: 147,
+        id: ItemId.TABLE,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_ARMA]: {
     id: BuildingId.SMALL_ARMA,
+    numericalId: 126,
     name: {
       [Lang.EN]: "Reactor",
       [Lang.FR]: "Réacteur soviétique",
@@ -5251,32 +5376,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 4,
     temporary: false,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 2,
+        id: ItemId.PILE,
         amount: 10
       },
       {
-        id: 33,
+        id: ItemId.ENGINE,
         amount: 1
       },
       {
-        id: 82,
+        id: ItemId.ELECTRO,
         amount: 4
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 2
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 15
       }
     ]
   },
   [BuildingId.SMALL_LABYRINTH]: {
     id: BuildingId.SMALL_LABYRINTH,
+    numericalId: 127,
     name: {
       [Lang.EN]: "Labyrinth",
       [Lang.FR]: "Labyrinthe",
@@ -5297,28 +5423,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 2
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 20
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 10
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 4
       }
     ]
   },
   [BuildingId.SMALL_LASTCHANCE]: {
     id: BuildingId.SMALL_LASTCHANCE,
+    numericalId: 128,
     name: {
       [Lang.EN]: "All or Nothing",
       [Lang.FR]: "Dernière chance",
@@ -5339,24 +5466,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 10
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 15
       }
     ]
   },
   [BuildingId.SMALL_PMVBIG]: {
     id: BuildingId.SMALL_PMVBIG,
+    numericalId: 129,
     name: {
       [Lang.EN]: "Giant BRD",
       [Lang.FR]: "PMV géant",
@@ -5377,20 +5505,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 4,
     temporary: false,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 2
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 30
       }
     ]
   },
   [BuildingId.SMALL_WHEEL]: {
     id: BuildingId.SMALL_WHEEL,
+    numericalId: 130,
     name: {
       [Lang.EN]: "Buzzard's Wonder Wheel",
       [Lang.FR]: "Grande roue de Grostas",
@@ -5411,28 +5540,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 4,
     temporary: false,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 20
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 5
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 3
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       }
     ]
   },
   [BuildingId.SMALL_FIREWORKS]: {
     id: BuildingId.SMALL_FIREWORKS,
+    numericalId: 131,
     name: {
       [Lang.EN]: "Firework Foray",
       [Lang.FR]: "Feux d’artifice",
@@ -5453,24 +5583,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 327,
+        id: ItemId.FIREWORK_POWDER,
         amount: 1
       },
       {
-        id: 328,
+        id: ItemId.FIREWORK_TUBE,
         amount: 1
       },
       {
-        id: 329,
+        id: ItemId.FIREWORK_BOX,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_CROW]: {
     id: BuildingId.SMALL_CROW,
+    numericalId: 132,
     name: {
       [Lang.EN]: "Crow Statue",
       [Lang.FR]: "Statue du Corbeau",
@@ -5491,20 +5622,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 4,
     temporary: false,
-    parentId: 156,
+    parent: BuildingId.SMALL_SPA4SOULS_01,
     resources: [
       {
-        id: 59,
+        id: ItemId.HMEAT,
         amount: 3
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 35
       }
     ]
   },
   [BuildingId.SMALL_CINEMA]: {
     id: BuildingId.SMALL_CINEMA,
+    numericalId: 133,
     name: {
       [Lang.EN]: "Cinema",
       [Lang.FR]: "Cinéma",
@@ -5525,32 +5657,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 4,
     temporary: false,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 82,
+        id: ItemId.ELECTRO,
         amount: 3
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 10
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       },
       {
-        id: 281,
+        id: ItemId.LENS,
         amount: 1
       },
       {
-        id: 57,
+        id: ItemId.CINEMA,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_ROCKET]: {
     id: BuildingId.SMALL_ROCKET,
+    numericalId: 134,
     name: {
       [Lang.EN]: "Air Strike",
       [Lang.FR]: "Roquettes",
@@ -5571,36 +5704,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: true,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 10
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 284,
+        id: ItemId.DIODE,
         amount: 1
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 5
       },
       {
-        id: 58,
+        id: ItemId.EXPLO,
         amount: 1
       },
       {
-        id: 111,
+        id: ItemId.DETO,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_BALLOON]: {
     id: BuildingId.SMALL_BALLOON,
+    numericalId: 135,
     name: {
       [Lang.EN]: "Hot Air Balloon",
       [Lang.FR]: "Montgolfière",
@@ -5621,36 +5755,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 4,
     temporary: false,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 2
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 22,
+        id: ItemId.LIGHTS,
         amount: 1
       },
       {
-        id: 46,
+        id: ItemId.SHEET,
         amount: 2
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 5
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       }
     ]
   },
   [BuildingId.SMALL_DERRICK_01]: {
     id: BuildingId.SMALL_DERRICK_01,
+    numericalId: 136,
     name: {
       [Lang.EN]: "No Holes Barred",
       [Lang.FR]: "Foreuse améliorée",
@@ -5671,28 +5806,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 4,
     temporary: false,
-    parentId: 36,
+    parent: BuildingId.SMALL_WATER_01,
     resources: [
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 2
       },
       {
-        id: 280,
+        id: ItemId.OILCAN,
         amount: 2
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 15
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 15
       }
     ]
   },
   [BuildingId.SMALL_BUILDING]: {
     id: BuildingId.SMALL_BUILDING,
+    numericalId: 137,
     name: {
       [Lang.EN]: "Foundations",
       [Lang.FR]: "Fondations",
@@ -5713,24 +5849,24 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 0,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 8
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 8
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 2
       }
     ]
   },
   [BuildingId.ITEM_PLATE_11]: {
     id: BuildingId.ITEM_PLATE_11,
+    numericalId: 138,
     name: {
       [Lang.EN]: "Reinforced Gates",
       [Lang.FR]: "Blindage d’entrée",
@@ -5751,16 +5887,17 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 142,
+    parent: BuildingId.SMALL_DOOR_CLOSED,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 3
       }
     ]
   },
   [BuildingId.SMALL_DOOR_CLOSED_02]: {
     id: BuildingId.SMALL_DOOR_CLOSED_02,
+    numericalId: 139,
     name: {
       [Lang.EN]: "Last-Minute Lock",
       [Lang.FR]: "Piston calibré",
@@ -5781,16 +5918,17 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 140,
+    parent: BuildingId.SMALL_DOOR_CLOSED_01,
     resources: [
       {
-        id: 284,
+        id: ItemId.DIODE,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_DOOR_CLOSED_01]: {
     id: BuildingId.SMALL_DOOR_CLOSED_01,
+    numericalId: 140,
     name: {
       [Lang.EN]: "Automatic Piston Lock",
       [Lang.FR]: "Piston-verrou",
@@ -5811,32 +5949,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 142,
+    parent: BuildingId.SMALL_DOOR_CLOSED,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 10
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 2
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 2
       },
       {
-        id: 284,
+        id: ItemId.DIODE,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_VENTILATION]: {
     id: BuildingId.SMALL_VENTILATION,
+    numericalId: 141,
     name: {
       [Lang.EN]: "Ventilation System",
       [Lang.FR]: "Conduit d’aération",
@@ -5857,24 +5996,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 1,
     temporary: false,
-    parentId: 142,
+    parent: BuildingId.SMALL_DOOR_CLOSED,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 2
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 2
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 10
       }
     ]
   },
   [BuildingId.SMALL_DOOR_CLOSED]: {
     id: BuildingId.SMALL_DOOR_CLOSED,
+    numericalId: 142,
     name: {
       [Lang.EN]: "Portal Lock",
       [Lang.FR]: "Portail",
@@ -5895,16 +6035,17 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 0,
     temporary: false,
-    parentId: 28,
+    parent: BuildingId.SMALL_WALLIMPROVE,
     resources: [
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_ROUND_PATH]: {
     id: BuildingId.SMALL_ROUND_PATH,
+    numericalId: 143,
     name: {
       [Lang.EN]: "Battlements",
       [Lang.FR]: "Chemin de ronde",
@@ -5925,28 +6066,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 0,
     temporary: false,
-    parentId: 103,
+    parent: BuildingId.ITEM_TAGGER,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 6
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 2
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 2
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_SPA4SOULS]: {
     id: BuildingId.SMALL_SPA4SOULS,
+    numericalId: 144,
     name: {
       [Lang.EN]: "Hammam",
       [Lang.FR]: "Hamâme",
@@ -5967,20 +6109,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parentId: 157,
+    parent: BuildingId.ITEM_SOUL_BLUE_STATIC,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 2
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_EASTERCROSS]: {
     id: BuildingId.SMALL_EASTERCROSS,
+    numericalId: 145,
     name: {
       [Lang.EN]: "Chocolate Cross",
       [Lang.FR]: "Croix en chocolat",
@@ -6001,20 +6144,21 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 5,
     temporary: false,
-    parentId: 76,
+    parent: BuildingId.SMALL_REFINE,
     resources: [
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 1
       },
       {
-        id: 170,
+        id: ItemId.CHAIN,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_NOVLAMPS]: {
     id: BuildingId.SMALL_NOVLAMPS,
+    numericalId: 146,
     name: {
       [Lang.EN]: "Public lights",
       [Lang.FR]: "Éclairage public",
@@ -6035,40 +6179,41 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 1,
     temporary: false,
-    parentId: 103,
+    parent: BuildingId.ITEM_TAGGER,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 111,
+        id: ItemId.DETO,
         amount: 1
       },
       {
-        id: 281,
+        id: ItemId.LENS,
         amount: 2
       },
       {
-        id: 284,
+        id: ItemId.DIODE,
         amount: 2
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 8
       },
       {
-        id: 279,
+        id: ItemId.WIRE,
         amount: 1
       },
       {
-        id: 2,
+        id: ItemId.PILE,
         amount: 4
       }
     ]
   },
   [BuildingId.SMALL_GALLERY]: {
     id: BuildingId.SMALL_GALLERY,
+    numericalId: 147,
     name: {
       [Lang.EN]: "Scavenger's Gallery",
       [Lang.FR]: "Galeries des Fouineurs",
@@ -6089,24 +6234,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 2,
+    parent: BuildingId.SMALL_GATHER,
     resources: [
       {
-        id: 58,
+        id: ItemId.EXPLO,
         amount: 1
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 3
       },
       {
-        id: 111,
+        id: ItemId.DETO,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_SURVAREA]: {
     id: BuildingId.SMALL_SURVAREA,
+    numericalId: 148,
     name: {
       [Lang.EN]: "Nature area of the Survivalists",
       [Lang.FR]: "Espace nature des Ermites",
@@ -6127,28 +6273,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 41,
+    parent: BuildingId.ITEM_FIREWORK_TUBE,
     resources: [
       {
-        id: 296,
+        id: ItemId.RYEBAG,
         amount: 2
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 86,
+        id: ItemId.RADIO_ON,
         amount: 1
       },
       {
-        id: 280,
+        id: ItemId.OILCAN,
         amount: 2
       }
     ]
   },
   [BuildingId.ITEM_BOOMFRUIT]: {
     id: BuildingId.ITEM_BOOMFRUIT,
+    numericalId: 149,
     name: {
       [Lang.EN]: "Grenade Launcher",
       [Lang.FR]: "Lance-grenades",
@@ -6169,40 +6316,41 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 3,
     temporary: false,
-    parentId: 33,
+    parent: BuildingId.ITEM_BGRENADE_01,
     resources: [
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 7
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 2
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 2
       },
       {
-        id: 65,
+        id: ItemId.RUSTINE,
         amount: 2
       },
       {
-        id: 279,
+        id: ItemId.WIRE,
         amount: 2
       },
       {
-        id: 281,
+        id: ItemId.LENS,
         amount: 1
       },
       {
-        id: 247,
+        id: ItemId.BOOMFRUIT,
         amount: 4
       }
     ]
   },
   [BuildingId.ITEM_BOOMFRUIT_01]: {
     id: BuildingId.ITEM_BOOMFRUIT_01,
+    numericalId: 150,
     name: {
       [Lang.EN]: "Vita-Mines",
       [Lang.FR]: "Vita-Mines",
@@ -6223,28 +6371,29 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: true,
-    parentId: 33,
+    parent: BuildingId.ITEM_BGRENADE_01,
     resources: [
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 2
       },
       {
-        id: 279,
+        id: ItemId.WIRE,
         amount: 1
       },
       {
-        id: 111,
+        id: ItemId.DETO,
         amount: 1
       },
       {
-        id: 247,
+        id: ItemId.BOOMFRUIT,
         amount: 5
       }
     ]
   },
   [BuildingId.ITEM_PUMPKIN_RAW]: {
     id: BuildingId.ITEM_PUMPKIN_RAW,
+    numericalId: 151,
     name: {
       [Lang.EN]: "Ravaged pumpkins",
       [Lang.FR]: "Citrouilles ravagées",
@@ -6265,32 +6414,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parentId: 34,
+    parent: BuildingId.ITEM_VEGETABLE_TASTY,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 15
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 2
       },
       {
-        id: 296,
+        id: ItemId.RYEBAG,
         amount: 3
       },
       {
-        id: 43,
+        id: ItemId.DRUG,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_TECHTABLE]: {
     id: BuildingId.SMALL_TECHTABLE,
+    numericalId: 152,
     name: {
       [Lang.EN]: "Technicians Workbench",
       [Lang.FR]: "Établi des Techniciens",
@@ -6311,40 +6461,41 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 63,
+    parent: BuildingId.ITEM_RP_BOOK2,
     resources: [
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 5
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 10
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 1
       },
       {
-        id: 279,
+        id: ItemId.WIRE,
         amount: 2
       },
       {
-        id: 296,
+        id: ItemId.RYEBAG,
         amount: 1
       },
       {
-        id: 281,
+        id: ItemId.LENS,
         amount: 1
       },
       {
-        id: 80,
+        id: ItemId.COFFEE_MACHINE,
         amount: 1
       }
     ]
   },
   [BuildingId.ITEM_SCOPE]: {
     id: BuildingId.ITEM_SCOPE,
+    numericalId: 153,
     name: {
       [Lang.EN]: "Observation platform",
       [Lang.FR]: "Plateforme d'observation",
@@ -6365,24 +6516,25 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 0,
     temporary: false,
-    parentId: 103,
+    parent: BuildingId.ITEM_TAGGER,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 292,
+        id: ItemId.SCOPE,
         amount: 1
       },
       {
-        id: 281,
+        id: ItemId.LENS,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_UNDERGROUND]: {
     id: BuildingId.SMALL_UNDERGROUND,
+    numericalId: 154,
     name: {
       [Lang.EN]: "Underground city",
       [Lang.FR]: "Ville souterraine",
@@ -6403,32 +6555,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 137,
+    parent: BuildingId.SMALL_BUILDING,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 3
       },
       {
-        id: 58,
+        id: ItemId.EXPLO,
         amount: 5
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 10
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 20
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 20
       }
     ]
   },
   [BuildingId.SMALL_URBAN]: {
     id: BuildingId.SMALL_URBAN,
+    numericalId: 155,
     name: {
       [Lang.EN]: "Urban plan",
       [Lang.FR]: "Plan d'urbanisme",
@@ -6449,36 +6602,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parentId: 111,
+    parent: BuildingId.SMALL_CITY_UP,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 1
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 65,
+        id: ItemId.RUSTINE,
         amount: 3
       },
       {
-        id: 279,
+        id: ItemId.WIRE,
         amount: 5
       },
       {
-        id: 284,
+        id: ItemId.DIODE,
         amount: 4
       }
     ]
   },
   [BuildingId.SMALL_SPA4SOULS_01]: {
     id: BuildingId.SMALL_SPA4SOULS_01,
+    numericalId: 156,
     name: {
       [Lang.EN]: "Sanctuary",
       [Lang.FR]: "Sanctuaire",
@@ -6499,24 +6653,24 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parentId: 0,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 2
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 3
       },
       {
-        id: 296,
+        id: ItemId.RYEBAG,
         amount: 1
       }
     ]
   },
   [BuildingId.ITEM_SOUL_BLUE_STATIC]: {
     id: BuildingId.ITEM_SOUL_BLUE_STATIC,
+    numericalId: 157,
     name: {
       [Lang.EN]: "Soul Purifying Source",
       [Lang.FR]: "Source Purificatrice d'Âme",
@@ -6537,32 +6691,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: true,
     rarity: 0,
     temporary: false,
-    parentId: 156,
+    parent: BuildingId.SMALL_SPA4SOULS_01,
     resources: [
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 1
       },
       {
-        id: 65,
+        id: ItemId.RUSTINE,
         amount: 1
       },
       {
-        id: 296,
+        id: ItemId.RYEBAG,
         amount: 2
       },
       {
-        id: 281,
+        id: ItemId.LENS,
         amount: 1
       },
       {
-        id: 280,
+        id: ItemId.OILCAN,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_POOL]: {
     id: BuildingId.SMALL_POOL,
+    numericalId: 158,
     name: {
       [Lang.EN]: "Pool",
       [Lang.FR]: "Bassin",
@@ -6583,40 +6738,41 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 4,
     temporary: false,
-    parentId: 156,
+    parent: BuildingId.SMALL_SPA4SOULS_01,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 18
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 2
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 1
       },
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 20
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 2
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 1
       },
       {
-        id: 296,
+        id: ItemId.RYEBAG,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_THERMAL]: {
     id: BuildingId.SMALL_THERMAL,
+    numericalId: 159,
     name: {
       [Lang.EN]: "Blue Gold Thermal baths",
       [Lang.FR]: "Thermes de l'Or bleu",
@@ -6637,40 +6793,41 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 4,
     temporary: false,
-    parentId: 156,
+    parent: BuildingId.SMALL_SPA4SOULS_01,
     resources: [
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 100
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 8
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 6
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 6
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 2
       },
       {
-        id: 178,
+        id: ItemId.FENCE,
         amount: 1
       },
       {
-        id: 148,
+        id: ItemId.WATER_CLEANER,
         amount: 4
       }
     ]
   },
   [BuildingId.ITEM_PET_PIG]: {
     id: BuildingId.ITEM_PET_PIG,
+    numericalId: 160,
     name: {
       [Lang.EN]: "Pigsty",
       [Lang.FR]: "Porcherie",
@@ -6691,32 +6848,33 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 52,
+    parent: BuildingId.ITEM_MEAT,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 8
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 4
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 296,
+        id: ItemId.RYEBAG,
         amount: 3
       },
       {
-        id: 37,
+        id: ItemId.PET_PIG,
         amount: 3
       }
     ]
   },
   [BuildingId.SMALL_WATCHMEN_02]: {
     id: BuildingId.SMALL_WATCHMEN_02,
+    numericalId: 161,
     name: {
       [Lang.EN]: "Guardroom",
       [Lang.FR]: "Salle de garde",
@@ -6737,52 +6895,53 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 143,
+    parent: BuildingId.SMALL_ROUND_PATH,
     resources: [
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 6
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 10
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 2
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       },
       {
-        id: 296,
+        id: ItemId.RYEBAG,
         amount: 2
       },
       {
-        id: 22,
+        id: ItemId.LIGHTS,
         amount: 1
       },
       {
-        id: 80,
+        id: ItemId.COFFEE_MACHINE,
         amount: 1
       },
       {
-        id: 184,
+        id: ItemId.CIGS,
         amount: 1
       },
       {
-        id: 146,
+        id: ItemId.TRESTLE,
         amount: 1
       },
       {
-        id: 108,
+        id: ItemId.CHAIR_BASIC,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_GRINDER2]: {
     id: BuildingId.SMALL_GRINDER2,
+    numericalId: 162,
     name: {
       [Lang.EN]: "Manual grinder",
       [Lang.FR]: "Meuleuse manuelle",
@@ -6803,36 +6962,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 97,
+    parent: BuildingId.SMALL_ARMOR,
     resources: [
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 3
       },
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 10
       },
       {
-        id: 50,
+        id: ItemId.METAL,
         amount: 10
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 5
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 2
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 2
       }
     ]
   },
   [BuildingId.SMALL_ANIMFENCE]: {
     id: BuildingId.SMALL_ANIMFENCE,
+    numericalId: 163,
     name: {
       [Lang.EN]: "Pet Shop",
       [Lang.FR]: "Animalerie",
@@ -6853,36 +7013,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 97,
+    parent: BuildingId.SMALL_ARMOR,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 5
       },
       {
-        id: 136,
+        id: ItemId.WOOD_BEAM,
         amount: 4
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 2
       },
       {
-        id: 296,
+        id: ItemId.RYEBAG,
         amount: 2
       },
       {
-        id: 280,
+        id: ItemId.OILCAN,
         amount: 1
       },
       {
-        id: 178,
+        id: ItemId.FENCE,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_SEWERS]: {
     id: BuildingId.SMALL_SEWERS,
+    numericalId: 164,
     name: {
       [Lang.EN]: "Filtering gutters",
       [Lang.FR]: "Gouttières filtrantes",
@@ -6903,36 +7064,37 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 97,
+    parent: BuildingId.SMALL_ARMOR,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 10
       },
       {
-        id: 137,
+        id: ItemId.METAL_BEAM,
         amount: 3
       },
       {
-        id: 67,
+        id: ItemId.TUBE,
         amount: 3
       },
       {
-        id: 113,
+        id: ItemId.CONCRETE_WALL,
         amount: 1
       },
       {
-        id: 52,
+        id: ItemId.PLATE,
         amount: 1
       },
       {
-        id: 280,
+        id: ItemId.OILCAN,
         amount: 1
       }
     ]
   },
   [BuildingId.SMALL_PET]: {
     id: BuildingId.SMALL_PET,
+    numericalId: 165,
     name: {
       [Lang.EN]: "Tamer Experiment Center",
       [Lang.FR]: "Centre d'essai des Apprivoiseurs",
@@ -6953,22 +7115,22 @@ export const buildings: Record<BuildingId, Building> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parentId: 143,
+    parent: BuildingId.SMALL_ROUND_PATH,
     resources: [
       {
-        id: 49,
+        id: ItemId.WOOD2,
         amount: 4
       },
       {
-        id: 1,
+        id: ItemId.WATER,
         amount: 10
       },
       {
-        id: 35,
+        id: ItemId.MECA_PARTS,
         amount: 1
       },
       {
-        id: 43,
+        id: ItemId.DRUG,
         amount: 1
       }
     ]

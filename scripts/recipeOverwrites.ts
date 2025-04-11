@@ -101,4 +101,16 @@ export const overwriteRecipeData = (
         out: [{ item: item.id, infected: true }],
       }))
   );
+
+  // Add picto to SOUL_YELLOW recipe
+  const soulYellowRecipe = recipes.find(
+    (recipe) =>
+      recipe.type === RecipeType.WorkshopShaman &&
+      recipe.in[0]?.item === "soul_blue_#00" &&
+      recipe.out[0]?.item === "soul_yellow_#00"
+  );
+
+  if (soulYellowRecipe) {
+    soulYellowRecipe.pictos = ["r_mystic2_#00"];
+  }
 };

@@ -48,6 +48,7 @@ declare global {
     Event,
     Breakable,
     Poisonable,
+    PrivateTown,
   }
 
   // Item actions
@@ -57,6 +58,7 @@ declare global {
     Open,
     Use,
     Death,
+    Steal,
   }
 
   const enum ItemActionCondition {
@@ -68,6 +70,7 @@ declare global {
     Thirsty,
     Dehydrated,
     HaveBattery,
+    Shaman,
   }
 
   const enum ItemActionEffectType {
