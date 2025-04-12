@@ -45,7 +45,9 @@ export enum ItemActionCondition {
   HaveBattery,
   HaveSteak,
   HaveWater,
+  HaveMicropur,
   Shaman,
+  Inside,
 }
 
 export enum ItemActionEffectType {
@@ -298,6 +300,15 @@ const generateItems = async () => {
     }
     if (action?.meta.includes("have_water")) {
       conditions.push(ItemActionCondition.HaveWater);
+    }
+    if (action?.meta.includes("must_be_inside_bp")) {
+      conditions.push(ItemActionCondition.Inside);
+    }
+    if (
+      action?.meta.includes("must_have_micropur") ||
+      action?.meta.includes("must_have_micropur_in")
+    ) {
+      conditions.push(ItemActionCondition.HaveMicropur);
     }
     // Well fed labradoodle exclusive
     if (action?.meta.includes("must_have_drug")) {
@@ -607,7 +618,10 @@ const generateItems = async () => {
         case "ghoul": {
           effects.push({
             type: ItemActionEffectType.Ghoulify,
-            odds: (effectsData[effectName].data as number[])[0],
+            odds:
+              (((effectsData[effectName].data as number[])[0] ?? 100) *
+                (_odds ?? 100)) /
+              100,
           });
           break;
         }
@@ -826,6 +840,7 @@ const generateItems = async () => {
         case "drug_hyd_1":
         case "drug_hyd_2":
         case "open_catbox_t1":
+        case "watercup_3":
           return;
       }
 
@@ -1547,7 +1562,16 @@ const generateRecipes = (items: Record<number, Item>) => {
     fs.readFileSync(path.join(__dirname, "data", "recipes.json"), "utf-8")
   ) as ExportedRecipeData;
 
-  Object.values(recipesData).forEach((recipeData) => {
+  Object.entries(recipesData).forEach(([recipeId, recipeData]) => {
+    // Ignore some recipes
+    switch (recipeId) {
+      case "com046":
+      case "com047":
+        return;
+      default:
+        break;
+    }
+
     const ingredients: RecipeItem[] = [];
 
     (Array.isArray(recipeData.in) ? recipeData.in : [recipeData.in]).forEach(

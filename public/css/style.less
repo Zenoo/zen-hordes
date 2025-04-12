@@ -440,6 +440,23 @@ body.zen-map-preview-enabled {
       background-image: url(https://zenoo.github.io/zen-hordes/tags/tag_1.gif);
     }
   }
+
+
+  // Private town tag
+  .item-tag-poison {
+    height: unset !important;
+    font-size: 10px;
+    text-align: left;
+
+    &::after {
+      background-position-x: 50%;
+      background-position-y: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(https://zenoo.github.io/zen-hordes/icons/item/item_poison.gif);
+    }
+  }
+
   // Private town tag
   .item-tag-private {
     height: unset !important;
@@ -589,8 +606,23 @@ body.zen-map-preview-enabled {
               background-size: 100%;
               background-repeat: no-repeat;
               position: absolute;
-              width: 8px;
-              height: 8px;
+              width: 10px;
+              height: 10px;
+              top: 0;
+              right: 0;
+              z-index: 1;
+            }
+          }
+
+          &.poisoned {
+            &::after {
+              content: '';
+              background-image: url(https://zenoo.github.io/zen-hordes/icons/death.gif);
+              background-size: 100%;
+              background-repeat: no-repeat;
+              position: absolute;
+              width: 10px;
+              height: 10px;
               top: 0;
               right: 0;
               z-index: 1;
@@ -657,7 +689,7 @@ body.zen-map-preview-enabled {
     // X position based on end
     @x: (@end - @start - 1) * -12px;
     // Y position based on start, offset by 20 rows (140px)
-    @y: -140px + (@start - 1) * -7px;
+    @y: -140px+(@start - 1) * -7px;
 
     &[data-zen-amount="@{range}"]::before {
       background-position: @x @y;
@@ -831,7 +863,9 @@ body.zen-map-preview-enabled {
 
         .input,
         .output {
-          img[data-type="item"], [data-type="building"] {
+
+          img[data-type="item"],
+          [data-type="building"] {
             cursor: pointer;
           }
         }

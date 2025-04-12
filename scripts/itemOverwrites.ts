@@ -623,6 +623,97 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         };
         break;
       }
+      case "bplan_box_#00": {
+        // info
+        item.info = {
+          en: "Five of them are scattered in random zones 6-15km away from the town.",
+          fr: "Cinq d'entre eux sont éparpillés dans des zones aléatoires à 6-15 km de la ville.",
+          de: "Fünf davon sind in zufälligen Zonen 6–15 km von der Stadt entfernt verstreut.",
+          es: "Cinco de ellos están esparcidos en zonas aleatorias a 6-15 km de la ciudad.",
+        };
+        break;
+      }
+      case "sand_ball_#00": {
+        // Use
+        item.actions.push({
+          type: ItemActionType.Use,
+          conditions: [],
+          effects: [
+            {
+              type: ItemActionEffectType.GetPicto,
+              value: "r_sandb_#00",
+            },
+          ],
+        });
+
+        // info
+        item.info = {
+          en: "Can be thrown every 30 minutes outside of the town. If there are multiple players in the same zone, the target will be chosen randomly. Can injure the target in hardcore towns.",
+          fr: "Peut être lancée toutes les 30 minutes hors de la ville. Si plusieurs joueurs se trouvent dans la même zone, la cible sera choisie aléatoirement. Peut blesser la cible en Pandémonium.",
+          de: "Kann alle 30 Minuten außerhalb der Stadt geworfen werden. Wenn mehrere Spieler in derselben Zone sind, wird das Ziel zufällig ausgewählt. Kann das Ziel in Hardcore-Städten verletzen.",
+          es: "Se puede lanzar cada 30 minutos fuera del pueblo. Si hay varios jugadores en la misma zona, el objetivo se elegirá aleatoriamente. Puede herir al objetivo en pueblos difíciles.",
+        };
+        break;
+      }
+      case "maglite_off_#00":
+      case "maglite_1_#00":
+      case "maglite_2_#00": {
+        // info
+        item.info = {
+          en: "Decreases the night time penalty from -10% to -2.5% while scavenging if on the ground in a zone.",
+          fr: "Diminue la pénalité de nuit de -10% à -2,5% lors de la fouille si elle est au sol dans une zone.",
+          de: "Verringert die Nachtzeitstrafe von -10 % auf -2,5 %, während Sie in einer Zone nach Schätzen suchen.",
+          es: "Disminuye la penalización nocturna del -10% al -2.5% mientras se busca si está en el suelo en una zona.",
+        };
+        break;
+      }
+      case "smelly_meat_#00": {
+        // info
+        item.info = {
+          en: "Increases the chances of survival while camping by 5%. Stackable.",
+          fr: "Augmente les chances de survie lors du camping de 5%. Empilable.",
+          de: "Erhöht die Überlebenschancen beim Campen um 5 %. Stapelbar.",
+          es: "Aumenta las posibilidades de supervivencia mientras acampa en un 5%. Apilable.",
+        };
+        break;
+      }
+      case "christmas_suit_full_#00": {
+        // Use
+        item.actions.push({
+          type: ItemActionType.Steal,
+          conditions: [],
+          effects: [
+            {
+              type: ItemActionEffectType.GetPicto,
+              value: "r_santac_#00",
+            },
+          ],
+        });
+
+        // info
+        item.info = {
+          en: "Allows you to anonymously steal from other players' houses.",
+          fr: "Vous permet de voler anonymement dans les maisons d'autres joueurs.",
+          de: "Erlaubt es Ihnen, anonym in die Häuser anderer Spieler zu stehlen.",
+          es: "Te permite robar anónimamente en las casas de otros jugadores.",
+        };
+        break;
+      }
+      case "infect_poison_part_#00": {
+        // Private town only
+        item.categories.push("PrivateTown");
+        break;
+      }
+      case "banned_note_#00": {
+        // info
+        item.info = {
+          en: "Can contain the x,y coordinates of the shunned citizen's buried stash.",
+          fr: "Peut contenir les coordonnées x,y de la cachette enterrée du citoyen banni.",
+          de: "Kann die x,y-Koordinaten des vergrabenen Verstecks des verbannten Bürgers enthalten.",
+          es: "Puede contener las coordenadas x,y del escondite enterrado del ciudadano desterrado.",
+        };
+        break;
+      }
     }
   }
 };

@@ -798,28 +798,6 @@ export const recipes: Recipe[] = [
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.CHRISTMAS_SUIT_1 },
-      { item: ItemId.CHRISTMAS_SUIT_2 },
-      { item: ItemId.CHRISTMAS_SUIT_3 }
-    ],
-    out: [
-      { item: ItemId.CHRISTMAS_SUIT_FULL }
-    ],
-  },
-  {
-    type: RecipeType.ManualAnywhere,
-    in: [
-      { item: ItemId.CHRISTMAS_SUIT_1 },
-      { item: ItemId.CHRISTMAS_SUIT_2 },
-      { item: ItemId.CHRISTMAS_SUIT_3 }
-    ],
-    out: [
-      { item: ItemId.CHRISTMAS_SUIT_FULL }
-    ],
-  },
-  {
-    type: RecipeType.ManualAnywhere,
-    in: [
       { item: ItemId.PUMPKIN_OFF },
       { item: ItemId.LIGHTS },
       { item: ItemId.PHARMA }
@@ -1039,6 +1017,56 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.PRINTS_02 }
+    ],
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.WATER },
+      { item: ItemId.POISON }
+    ],
+    out: [
+      { item: ItemId.WATER, poisoned: true }
+    ],
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.CAN_OPEN },
+      { item: ItemId.POISON }
+    ],
+    out: [
+      { item: ItemId.CAN_OPEN, poisoned: true }
+    ],
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.DRUG },
+      { item: ItemId.POISON }
+    ],
+    out: [
+      { item: ItemId.DRUG, poisoned: true }
+    ],
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.VEGETABLE },
+      { item: ItemId.POISON }
+    ],
+    out: [
+      { item: ItemId.VEGETABLE, poisoned: true }
+    ],
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.FRUIT },
+      { item: ItemId.POISON }
+    ],
+    out: [
+      { item: ItemId.FRUIT, poisoned: true }
     ],
   }
 ];

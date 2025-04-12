@@ -73,7 +73,9 @@ declare global {
     HaveBattery,
     HaveSteak,
     HaveWater,
+    HaveMicropur,
     Shaman,
+    Inside,
   }
 
   const enum ItemActionEffectType {

@@ -35,9 +35,11 @@ const T: Translations = {
     [`condition.${ItemActionCondition.Thirsty}`]: "Thirsty",
     [`condition.${ItemActionCondition.Dehydrated}`]: "Dehydrated",
     [`condition.${ItemActionCondition.Shaman}`]: "Shaman",
+    [`condition.${ItemActionCondition.Inside}`]: "Inside",
     foundIn: "Found in",
     unavailable: "Not available anymore",
     privateTownOnly: "Can only be found in private towns",
+    poisonable: "Can be poisoned",
   },
   fr: {
     [`action-type.${ItemActionType.Eat}`]: "Manger",
@@ -66,9 +68,11 @@ const T: Translations = {
     [`condition.${ItemActionCondition.Thirsty}`]: "Assoiffé",
     [`condition.${ItemActionCondition.Dehydrated}`]: "Déshydraté",
     [`condition.${ItemActionCondition.Shaman}`]: "Chaman",
+    [`condition.${ItemActionCondition.Inside}`]: "À l'intérieur",
     foundIn: "Trouvé dans",
     unavailable: "N'est plus disponible",
     privateTownOnly: "Peut uniquement être trouvé dans les villes privées",
+    poisonable: "Peut être empoisonné",
   },
   es: {
     [`action-type.${ItemActionType.Eat}`]: "Comer",
@@ -97,9 +101,11 @@ const T: Translations = {
     [`condition.${ItemActionCondition.Thirsty}`]: "Sediento",
     [`condition.${ItemActionCondition.Dehydrated}`]: "Deshidratado",
     [`condition.${ItemActionCondition.Shaman}`]: "Chaman",
+    [`condition.${ItemActionCondition.Inside}`]: "Dentro",
     foundIn: "Encontrado en",
     unavailable: "Ya no disponible",
     privateTownOnly: "Solo se puede encontrar en ciudades privadas",
+    poisonable: "Puede ser envenenado",
   },
   de: {
     [`action-type.${ItemActionType.Eat}`]: "Essen",
@@ -128,9 +134,11 @@ const T: Translations = {
     [`condition.${ItemActionCondition.Thirsty}`]: "Durstig",
     [`condition.${ItemActionCondition.Dehydrated}`]: "Dehydriert",
     [`condition.${ItemActionCondition.Shaman}`]: "Schamane",
+    [`condition.${ItemActionCondition.Inside}`]: "Drinnen",
     foundIn: "Gefunden in",
     unavailable: "Nicht mehr verfügbar",
     privateTownOnly: "Kann nur in privaten Städten gefunden werden",
+    poisonable: "Kann vergiftet werden",
   },
 };
 
@@ -266,6 +274,7 @@ type DisplayedIcon = {
   crossed?: boolean;
   checked?: boolean;
   infected?: boolean;
+  poisoned?: boolean;
   title?: string;
   classList?: string[];
 };
@@ -461,6 +470,7 @@ const createLine = (
       icon: `icons/item/${items[inItem.item].icon}.gif`,
       text: inItem.odds?.toString(),
       infected: inItem.infected,
+      poisoned: inItem.poisoned,
     }));
   } else {
     // Item action
@@ -507,8 +517,17 @@ const createLine = (
               displayedIcon.type = "item";
               displayedIcon.title = undefined;
               break;
+            case ItemActionCondition.HaveMicropur:
+              displayedIcon.icon = "icons/item/item_water_cleaner.gif";
+              displayedIcon.id = ItemId.WATER_CLEANER;
+              displayedIcon.type = "item";
+              displayedIcon.title = undefined;
+              break;
             case ItemActionCondition.Shaman:
               displayedIcon.icon = "roles/shaman.gif";
+              break;
+            case ItemActionCondition.Inside:
+              displayedIcon.icon = "icons/small_home.gif";
               break;
           }
 
@@ -567,6 +586,10 @@ const createLine = (
       wrapper.classList.add("infected");
     }
 
+    if (inputIcon.poisoned) {
+      wrapper.classList.add("poisoned");
+    }
+
     wrapper.append(inputImg);
   });
 
@@ -613,6 +636,7 @@ const createLine = (
         ? `${Math.round((outItem.odds / total) * 100)}%`
         : undefined,
       infected: outItem.infected,
+      poisoned: outItem.poisoned,
     }));
 
     // Add recipe pictos
@@ -684,6 +708,10 @@ const createLine = (
 
     if (outputIcon.infected) {
       wrapper.classList.add("infected");
+    }
+
+    if (outputIcon.poisoned) {
+      wrapper.classList.add("poisoned");
     }
 
     wrapper.classList.add(...(outputIcon.classList ?? []));
@@ -786,6 +814,15 @@ export const insertBetterTooltips = (node: HTMLElement) => {
       const tag = document.createElement("div");
       tag.classList.add("item-tag", "item-tag-info");
       tag.textContent = t(T, "unavailable");
+      node.append(tag);
+    }
+
+    // Poisonable
+    if (item.categories.includes(ItemCategory.Poisonable)) {
+      // Create an info tag
+      const tag = document.createElement("div");
+      tag.classList.add("item-tag", "item-tag-poison");
+      tag.textContent = t(T, "poisonable");
       node.append(tag);
     }
 

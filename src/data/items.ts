@@ -2165,7 +2165,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveMicropur],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -2191,7 +2191,13 @@ export const items: Record<ItemId, Item> = {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
             odds: 50
-          },
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
           {
             type: ItemActionEffectType.AddWaterToWell,
             value: "1-3"
@@ -5332,7 +5338,7 @@ export const items: Record<ItemId, Item> = {
           },
           {
             type: ItemActionEffectType.Ghoulify,
-            odds: 100
+            odds: 3
           }
         ]
       },
@@ -8339,7 +8345,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveMicropur],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -8354,10 +8360,6 @@ export const items: Record<ItemId, Item> = {
             type: ItemActionEffectType.CreateItem,
             value: "water_cup_#00",
             odds: 100
-          },
-          {
-            type: ItemActionEffectType.AddWaterToWell,
-            value: "2-2"
           }
         ]
       }
@@ -8425,6 +8427,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Notizzettel gehörte einem <em>Verbannten</em>. Mal sehen, was er geschrieben hat...",
       [Lang.ES]: "Esta nota pertenecía a un Desterrado. ¿Qué pudo haber escrito?"
     },
+    info: {
+      [Lang.EN]: "Can contain the x,y coordinates of the shunned citizen's buried stash.",
+      [Lang.FR]: "Peut contenir les coordonnées x,y de la cachette enterrée du citoyen banni.",
+      [Lang.DE]: "Kann die x,y-Koordinaten des vergrabenen Verstecks des verbannten Bürgers enthalten.",
+      [Lang.ES]: "Puede contener las coordenadas x,y del escondite enterrado del ciudadano desterrado."
+    },
     categories: [ItemCategory.Miscellaneous, ItemCategory.ShunnedItem],
     icon: "item_banned_note",
     decoration: 0,
@@ -8449,7 +8457,7 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser blutdurchtränkte Verband wurde vormals von einem infizierten Bürger getragen...",
       [Lang.ES]: "Esta tirita ensangrentada fue previamente usada en la gangrena de un habitante infectado..."
     },
-    categories: [ItemCategory.Pharmacy],
+    categories: [ItemCategory.Pharmacy, ItemCategory.PrivateTown],
     icon: "item_infect_poison_part",
     decoration: 0,
     heavy: false,
@@ -8614,6 +8622,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Als du diesen Anzug anziehst, verspürst du den Drang, deinen Nachbarn eine Freude zu machen und seltsame Eintrittswege zu wählen. Nutze die Chance und bestehle deine Nachbarn nach Herzenslust.",
       [Lang.ES]: "Este atuendo te queda hasta el suelo (algunos dicen que incluso huele a ti). De repente sientes que deberías alegrar a tus vecinos deslizandote discretamente por sus chimeneas con los brazos llenos de regalos. Puedes usar esto como una táctica para robar, saquear y birlar tu camino hacia la felicidad a tus vecinos. Ah, la magia de la Navidad..."
     },
+    info: {
+      [Lang.EN]: "Allows you to anonymously steal from other players' houses.",
+      [Lang.FR]: "Vous permet de voler anonymement dans les maisons d'autres joueurs.",
+      [Lang.DE]: "Erlaubt es Ihnen, anonym in die Häuser anderer Spieler zu stehlen.",
+      [Lang.ES]: "Te permite robar anónimamente en las casas de otros jugadores."
+    },
     categories: [ItemCategory.Miscellaneous, ItemCategory.Event],
     icon: "item_christmas_suit_full",
     decoration: 0,
@@ -8621,7 +8635,16 @@ export const items: Record<ItemId, Item> = {
     watchPoints: 0,
     event: GameEvent.Christmas,
     actions: [
-      
+      {
+        type: ItemActionType.Steal,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_santac_#00"
+          }
+        ]
+      }
     ]
   },
   [ItemId.IPHONE]: {
@@ -8692,6 +8715,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser übelriechende Hautfetzen gehörte früher mal einem deiner Mitbürger. Jetzt gehört er den Maden... Mit seinem unerträglichen Gestank kannst du deinen eigenen Körpergeruch überdecken, so dass dich die Untoten nicht mehr so gut riechen können. Benutze diesen Gegenstand, um deine Überlebenschancen beim Campen zu verbessern (Dazu musst du den Hautfetzen bei Dir tragen).",
       [Lang.ES]: "Esta horripilante bolsa de piel fue arrancada a algún pobre hombre. Su mal olor te servirá para camuflar tu aroma a carne fresca. Aumenta las probabilidades de sobrevivir al acampar. Debes llevarlo puesto para recibir el bonus."
     },
+    info: {
+      [Lang.EN]: "Increases the chances of survival while camping by 5%. Stackable.",
+      [Lang.FR]: "Augmente les chances de survie lors du camping de 5%. Empilable.",
+      [Lang.DE]: "Erhöht die Überlebenschancen beim Campen um 5 %. Stapelbar.",
+      [Lang.ES]: "Aumenta las posibilidades de supervivencia mientras acampa en un 5%. Apilable."
+    },
     categories: [ItemCategory.Miscellaneous, ItemCategory.CampingBoost],
     icon: "item_smelly_meat",
     decoration: 0,
@@ -8715,6 +8744,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.FR]: "Cette grosse lampe de poche au design douteux pourrait bien vous être utile pour vos fouilles dans le désert. Pour l'allumer, il suffit d'appuyer sur le nez du gros chien jaune, sur la poignée.",
       [Lang.DE]: "Diese große Taschenlampe ist wirklich nützlich für die Suche in der Wüste, vor allem Nachts. Möglicherweise kan man noch eine andere Verwendung für sie finden, wenn sie angehen würde....",
       [Lang.ES]: "Esta gran linterna de forma rara puede serte útil en tus búsquedas en el desierto. Si solo tuvieras una pila..."
+    },
+    info: {
+      [Lang.EN]: "Decreases the night time penalty from -10% to -2.5% while scavenging if on the ground in a zone.",
+      [Lang.FR]: "Diminue la pénalité de nuit de -10% à -2,5% lors de la fouille si elle est au sol dans une zone.",
+      [Lang.DE]: "Verringert die Nachtzeitstrafe von -10 % auf -2,5 %, während Sie in einer Zone nach Schätzen suchen.",
+      [Lang.ES]: "Disminuye la penalización nocturna del -10% al -2.5% mientras se busca si está en el suelo en una zona."
     },
     categories: [ItemCategory.Furniture, ItemCategory.Decoration],
     icon: "item_maglite_off",
@@ -8749,6 +8784,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Diese große Taschenlampe ist wirklich nützlich für die Suche in der Wüste, vor allem Nachts. Möglicherweise kann man noch eine andere Verwendung für sie finden.",
       [Lang.ES]: "Esta gran linterna de forma rara puede serte útil en tus búsquedas en el desierto."
     },
+    info: {
+      [Lang.EN]: "Decreases the night time penalty from -10% to -2.5% while scavenging if on the ground in a zone.",
+      [Lang.FR]: "Diminue la pénalité de nuit de -10% à -2,5% lors de la fouille si elle est au sol dans une zone.",
+      [Lang.DE]: "Verringert die Nachtzeitstrafe von -10 % auf -2,5 %, während Sie in einer Zone nach Schätzen suchen.",
+      [Lang.ES]: "Disminuye la penalización nocturna del -10% al -2.5% mientras se busca si está en el suelo en una zona."
+    },
     categories: [ItemCategory.Furniture, ItemCategory.Decoration],
     icon: "item_maglite_1",
     decoration: 5,
@@ -8781,6 +8822,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.FR]: "Cette grosse lampe de poche au design douteux pourrait bien vous être utile pour vos fouilles dans le désert. Pour l'allumer, il suffit d'appuyer sur le nez du gros chien jaune, sur la poignée. Vous notez que la lampe fait maintenant \"ouh ouh ouh\" quand vous la secouez.",
       [Lang.DE]: "Diese große Taschenlampe ist wirklich nützlich für die Suche in der Wüste, vor allem Nachts. Möglicherweise kann man noch eine andere Verwendung für sie finden.",
       [Lang.ES]: "Esta gran linterna de forma rara puede serte útil en tus búsquedas en el desierto."
+    },
+    info: {
+      [Lang.EN]: "Decreases the night time penalty from -10% to -2.5% while scavenging if on the ground in a zone.",
+      [Lang.FR]: "Diminue la pénalité de nuit de -10% à -2,5% lors de la fouille si elle est au sol dans une zone.",
+      [Lang.DE]: "Verringert die Nachtzeitstrafe von -10 % auf -2,5 %, während Sie in einer Zone nach Schätzen suchen.",
+      [Lang.ES]: "Disminuye la penalización nocturna del -10% al -2.5% mientras se busca si está en el suelo en una zona."
     },
     categories: [ItemCategory.Furniture, ItemCategory.Decoration],
     icon: "item_maglite_2",
@@ -8834,7 +8881,7 @@ export const items: Record<ItemId, Item> = {
           },
           {
             type: ItemActionEffectType.Ghoulify,
-            odds: 100
+            odds: 90
           }
         ]
       },
@@ -8925,6 +8972,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Du hältst eine schlichte Sandkugel in der Hand, die du vorher mit ein paar fiesen Kieselsteinchen angereicherst hast. HeHe! Irgendwie verspürst du gerade eine unglaubliche Lust diesen Ball jemanden ins Gesicht zu werfen. Wenn schon kein Schnee, dann wenigstens 'ne Sandballschlacht!",
       [Lang.ES]: "Una bola de arena inofensiva (con un poco de grava por si acaso) que estás deseando lanzar a la cara de otro. No tienes idea de dónde vino este extraño deseo."
     },
+    info: {
+      [Lang.EN]: "Can be thrown every 30 minutes outside of the town. If there are multiple players in the same zone, the target will be chosen randomly. Can injure the target in hardcore towns.",
+      [Lang.FR]: "Peut être lancée toutes les 30 minutes hors de la ville. Si plusieurs joueurs se trouvent dans la même zone, la cible sera choisie aléatoirement. Peut blesser la cible en Pandémonium.",
+      [Lang.DE]: "Kann alle 30 Minuten außerhalb der Stadt geworfen werden. Wenn mehrere Spieler in derselben Zone sind, wird das Ziel zufällig ausgewählt. Kann das Ziel in Hardcore-Städten verletzen.",
+      [Lang.ES]: "Se puede lanzar cada 30 minutos fuera del pueblo. Si hay varios jugadores en la misma zona, el objetivo se elegirá aleatoriamente. Puede herir al objetivo en pueblos difíciles."
+    },
     categories: [ItemCategory.Miscellaneous, ItemCategory.Event],
     icon: "item_sand_ball",
     decoration: 0,
@@ -8932,7 +8985,16 @@ export const items: Record<ItemId, Item> = {
     watchPoints: 0,
     event: GameEvent.Christmas,
     actions: [
-      
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_sandb_#00"
+          }
+        ]
+      }
     ]
   },
   [ItemId.BPLAN_C]: {
@@ -8958,7 +9020,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.Inside],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -9151,7 +9213,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.Inside],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -9252,7 +9314,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.Inside],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -9421,7 +9483,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.Inside],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -9493,6 +9555,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.FR]: "Ce coffre contient nombre de documents obscurs et d'ustensiles désuets (crayons, compas, règles en plastique...). Rien qui ne vous servira à survivre dans le désert... À première vue.",
       [Lang.DE]: "Dieser Koffer enthält mehrere Dokumente und obskure Gegenstände (Bleistift, Kompass, Plastiklineale,...). Nichts was dir irgendwie helfen würde, in der Wüste zu überleben. ...zumindest auf den ersten Blick.",
       [Lang.ES]: "Contiene documentos y artículos de escritorio (lápices, compás, reglas...). Nada útil para sobrevivir en el desierto... O eso parece."
+    },
+    info: {
+      [Lang.EN]: "Five of them are scattered in random zones 6-15km away from the town.",
+      [Lang.FR]: "Cinq d'entre eux sont éparpillés dans des zones aléatoires à 6-15 km de la ville.",
+      [Lang.DE]: "Fünf davon sind in zufälligen Zonen 6–15 km von der Stadt entfernt verstreut.",
+      [Lang.ES]: "Cinco de ellos están esparcidos en zonas aleatorias a 6-15 km de la ciudad."
     },
     categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
     icon: "item_bplan_box",
@@ -9915,7 +9983,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.Inside],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -9976,7 +10044,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.Inside],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10041,7 +10109,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.Inside],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10090,7 +10158,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.Inside],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10147,7 +10215,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.Inside],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10212,7 +10280,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.Inside],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10261,7 +10329,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.Inside],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10306,7 +10374,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.Inside],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10371,7 +10439,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.Inside],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,

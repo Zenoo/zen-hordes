@@ -130,4 +130,15 @@ export const overwriteRecipeData = (
     in: [{ item: "keymol_#00" }],
     out: [{ item: "prints_#02" }],
   });
+
+  // Poison recipes
+  recipes.push(
+    ...Object.values(items)
+      .filter((item) => item.categories.includes("Poisonable"))
+      .map((item) => ({
+        type: RecipeType.ManualAnywhere,
+        in: [{ item: item.id }, { item: "poison_#00" }],
+        out: [{ item: item.id, poisoned: true }],
+      }))
+  );
 };
