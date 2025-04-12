@@ -49,6 +49,14 @@ export const overwriteItemData = (items: Record<string, Item>) => {
             })),
           },
         ];
+
+        // info
+        item.info = {
+          en: "The book success chances go from 100% on day 1 to 50% on day 20.",
+          fr: "Les chances de succès du livre vont de 100% au jour 1 à 50% au jour 20.",
+          de: "Die Erfolgschancen des Buches liegen am Tag 1 bei 100 % und am Tag 20 bei 50 %.",
+          es: "Las posibilidades de éxito del libro van del 100% en el día 1 al 50% en el día 20.",
+        };
         break;
       }
       case "photo_4_#00": {
@@ -361,35 +369,35 @@ export const overwriteItemData = (items: Record<string, Item>) => {
           eatAction.effects = [
             {
               type: ItemActionEffectType.GetPicto,
-              value: "r_cobaye_#00"
+              value: "r_cobaye_#00",
             },
             {
               type: ItemActionEffectType.EP,
-              value: 3
+              value: 3,
             },
             {
               type: ItemActionEffectType.AP,
-              value: 8
+              value: 8,
             },
             {
               type: ItemActionEffectType.AddStatus,
               value: "terror",
-              odds: 41
+              odds: 41,
             },
             {
               type: ItemActionEffectType.AddStatus,
               value: "infection",
-              odds: 25
+              odds: 25,
             },
             {
               type: ItemActionEffectType.AddStatus,
               value: "addict",
-              odds: 15
+              odds: 15,
             },
             {
               type: ItemActionEffectType.Death,
-              odds: 2
-            }
+              odds: 2,
+            },
           ];
         }
         break;
@@ -437,6 +445,83 @@ export const overwriteItemData = (items: Record<string, Item>) => {
             },
           ],
         });
+        break;
+      }
+      case "xmas_gift_#00": {
+        // info
+        item.info = {
+          en: "After installing one or more garlands, you will regain 5{{AP}} instead of 6{{AP}} after the following attack.",
+          fr: "Après avoir installé une ou plusieurs guirlandes, vous récupérerez 5{{AP}} au lieu de 6{{AP}} après l'attaque suivante.",
+          de: "Nach der Installation einer oder mehrerer Girlanden erhalten Sie nach dem folgenden Angriff 5{{AP}} anstelle von 6{{AP}}.",
+          es: "Después de instalar una o más guirnaldas, recuperarás 5{{AP}} en lugar de 6{{AP}} después del siguiente ataque.",
+        };
+        break;
+      }
+      case "firework_box_#00": {
+        // info
+        item.info = {
+          en: "Two of them are scattered in random zones outside up to 15km from the town.",
+          fr: "Deux d'entre elles sont éparpillés dans des zones aléatoires à l'extérieur jusqu'à 15 km de la ville.",
+          de: "Zwei von ihnen sind in zufälligen Zonen außerhalb der Stadt bis zu 15 km verstreut.",
+          es: "Dos de ellos están esparcidos en zonas aleatorias fuera de la ciudad hasta 15 km.",
+        };
+        break;
+      }
+      case "firework_powder_#00":
+      case "firework_tube_#00": {
+        // info
+        item.info = {
+          en: "One is scattered in a random zone outside up to 15km from the town.",
+          fr: "Un est éparpillé dans une zone aléatoire à l'extérieur jusqu'à 15 km de la ville.",
+          de: "Einer ist in einer zufälligen Zone außerhalb der Stadt bis zu 15 km verstreut.",
+          es: "Uno está esparcido en una zona aleatoria fuera de la ciudad hasta 15 km.",
+        };
+        break;
+      }
+      case "basic_suit_dirt_#00": {
+        // Use
+        item.actions
+          .find((action) => action.type === ItemActionType.Use)
+          ?.effects.push({
+            type: ItemActionEffectType.AddStatus,
+            value: "terror",
+            odds: -3,
+          });
+        break;
+      }
+      case "chkspk_#00": {
+        // info
+        item.info = {
+          en: "If in one of the watchmen's rucksack it adds +15 defence points for every citizen on watch.",
+          fr: "S'il est dans le sac à dos d'un des veilleurs, il ajoute +15 points de défense pour chaque citoyen en veille.",
+          de: "Wenn es im Rucksack eines der Wächter ist, fügt es +15 Verteidigungspunkte für jeden Bürger im Wachmodus hinzu.",
+          es: "Si está en la mochila de uno de los vigilantes, añade +15 puntos de defensa por cada ciudadano en vigilancia.",
+        };
+        break;
+      }
+      case "dfhifi_#01": {
+        // info
+        item.info = {
+          en: "Prevents other players from stealing from your house.",
+          fr: "Empêche les autres joueurs de voler dans votre maison.",
+          de: "Verhindert, dass andere Spieler in Ihr Haus stehlen.",
+          es: "Evita que otros jugadores roben en tu casa.",
+        };
+        break;
+      }
+      case "staff_#01": {
+        // Unavailable
+        item.available = false;
+        break;
+      }
+      case "hmbrew_#00": {
+        // info
+        item.info = {
+          en: "It can be used when hungover or already drunk, unlike other alcohols.",
+          fr: "Il peut être utilisé en cas de gueule de bois ou déjà ivre, contrairement aux autres alcools.",
+          es: "Se puede usar cuando tienes resaca o ya estás borracho, a diferencia de otros alcoholes.",
+          de: "Im Gegensatz zu anderen Alkoholen kann es bei einem Kater oder bereits betrunkenem Zustand konsumiert werden.",
+        };
         break;
       }
     }

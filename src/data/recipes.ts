@@ -112,10 +112,10 @@ export const recipes: Recipe[] = [
       { item: ItemId.ELECTRO_BOX }
     ],
     out: [
-      { item: ItemId.PILE, odds: 15 },
-      { item: ItemId.PILEGUN_EMPTY, odds: 16 },
       { item: ItemId.ELECTRO, odds: 23 },
       { item: ItemId.MECA_PARTS, odds: 18 },
+      { item: ItemId.PILEGUN_EMPTY, odds: 16 },
+      { item: ItemId.PILE, odds: 15 },
       { item: ItemId.TAGGER, odds: 14 },
       { item: ItemId.DETO, odds: 14 }
     ],
@@ -127,9 +127,9 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.METAL, odds: 51 },
+      { item: ItemId.MECA_PARTS, odds: 32 },
       { item: ItemId.TUBE, odds: 9 },
-      { item: ItemId.METAL_BAD, odds: 8 },
-      { item: ItemId.MECA_PARTS, odds: 32 }
+      { item: ItemId.METAL_BAD, odds: 8 }
     ],
   },
   {
@@ -138,13 +138,13 @@ export const recipes: Recipe[] = [
       { item: ItemId.CHEST }
     ],
     out: [
-      { item: ItemId.DRUG, odds: 16 },
       { item: ItemId.BANDAGE, odds: 28 },
       { item: ItemId.VODKA, odds: 20 },
-      { item: ItemId.EXPLO, odds: 8 },
-      { item: ItemId.LIGHTS, odds: 4 },
+      { item: ItemId.DRUG, odds: 16 },
       { item: ItemId.DRUG_HERO, odds: 16 },
-      { item: ItemId.RHUM, odds: 8 }
+      { item: ItemId.EXPLO, odds: 8 },
+      { item: ItemId.RHUM, odds: 8 },
+      { item: ItemId.LIGHTS, odds: 4 }
     ],
   },
   {
@@ -154,13 +154,13 @@ export const recipes: Recipe[] = [
     ],
     out: [
       { item: ItemId.WATERGUN_OPT_PART, odds: 19 },
-      { item: ItemId.PILEGUN_UPKIT, odds: 10 },
-      { item: ItemId.POCKET_BELT, odds: 12 },
-      { item: ItemId.CUTCUT, odds: 10 },
-      { item: ItemId.CHAINSAW_PART, odds: 12 },
       { item: ItemId.MIXERGUN_PART, odds: 19 },
-      { item: ItemId.BIG_PGUN_PART, odds: 7 },
-      { item: ItemId.LAWN_PART, odds: 12 }
+      { item: ItemId.POCKET_BELT, odds: 12 },
+      { item: ItemId.CHAINSAW_PART, odds: 12 },
+      { item: ItemId.LAWN_PART, odds: 12 },
+      { item: ItemId.PILEGUN_UPKIT, odds: 10 },
+      { item: ItemId.CUTCUT, odds: 10 },
+      { item: ItemId.BIG_PGUN_PART, odds: 7 }
     ],
   },
   {
@@ -169,12 +169,12 @@ export const recipes: Recipe[] = [
       { item: ItemId.CHEST_TOOLS }
     ],
     out: [
-      { item: ItemId.PILE, odds: 12 },
+      { item: ItemId.PHARMA, odds: 25 },
+      { item: ItemId.EXPLO, odds: 19 },
       { item: ItemId.MECA_PARTS, odds: 17 },
       { item: ItemId.RUSTINE, odds: 13 },
       { item: ItemId.TUBE, odds: 13 },
-      { item: ItemId.PHARMA, odds: 25 },
-      { item: ItemId.EXPLO, odds: 19 }
+      { item: ItemId.PILE, odds: 12 }
     ],
   },
   {
@@ -183,11 +183,11 @@ export const recipes: Recipe[] = [
       { item: ItemId.CHEST_FOOD }
     ],
     out: [
-      { item: ItemId.FOOD_BAG, odds: 8 },
-      { item: ItemId.CAN, odds: 11 },
-      { item: ItemId.MEAT, odds: 7 },
       { item: ItemId.HMEAT, odds: 13 },
-      { item: ItemId.VEGETABLE, odds: 8 }
+      { item: ItemId.CAN, odds: 11 },
+      { item: ItemId.FOOD_BAG, odds: 8 },
+      { item: ItemId.VEGETABLE, odds: 8 },
+      { item: ItemId.MEAT, odds: 7 }
     ],
   },
   {
@@ -196,11 +196,11 @@ export const recipes: Recipe[] = [
       { item: ItemId.DECO_BOX }
     ],
     out: [
-      { item: ItemId.DOOR, odds: 44 },
       { item: ItemId.CHAIR_BASIC, odds: 60 },
+      { item: ItemId.CHAIR, odds: 46 },
+      { item: ItemId.DOOR, odds: 44 },
       { item: ItemId.TRESTLE, odds: 35 },
-      { item: ItemId.TABLE, odds: 35 },
-      { item: ItemId.CHAIR, odds: 46 }
+      { item: ItemId.TABLE, odds: 35 }
     ],
   },
   {
@@ -595,12 +595,12 @@ export const recipes: Recipe[] = [
       { item: ItemId.PHARMA }
     ],
     out: [
-      { item: ItemId.DRUG, odds: 42 },
-      { item: ItemId.XANAX, odds: 40 },
+      { item: ItemId.DRUG_HERO, odds: 49 },
       { item: ItemId.DRUG_RANDOM, odds: 46 },
       { item: ItemId.DRUG_WATER, odds: 46 },
       { item: ItemId.WATER_CLEANER, odds: 43 },
-      { item: ItemId.DRUG_HERO, odds: 49 }
+      { item: ItemId.DRUG, odds: 42 },
+      { item: ItemId.XANAX, odds: 40 }
     ],
   },
   {
@@ -610,12 +610,12 @@ export const recipes: Recipe[] = [
       { item: ItemId.PHARMA_PART }
     ],
     out: [
-      { item: ItemId.DRUG, odds: 1 },
-      { item: ItemId.XANAX, odds: 1 },
+      { item: ItemId.PHARMA, odds: 7 },
       { item: ItemId.DRUG_RANDOM, odds: 2 },
       { item: ItemId.DRUG_WATER, odds: 2 },
-      { item: ItemId.WATER_CLEANER, odds: 1 },
-      { item: ItemId.PHARMA, odds: 7 }
+      { item: ItemId.DRUG, odds: 1 },
+      { item: ItemId.XANAX, odds: 1 },
+      { item: ItemId.WATER_CLEANER, odds: 1 }
     ],
   },
   {

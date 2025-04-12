@@ -70,6 +70,7 @@ declare global {
     Thirsty,
     Dehydrated,
     HaveBattery,
+    HaveSteak,
     Shaman,
   }
 

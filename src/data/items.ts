@@ -594,12 +594,12 @@ export const items: Record<ItemId, Item> = {
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
-            value: "pile_broken_#00",
-            odds: 100
+            value: "pilegun_empty_#00"
           },
           {
             type: ItemActionEffectType.CreateItem,
-            value: "pilegun_empty_#00"
+            value: "pile_broken_#00",
+            odds: 100
           },
           {
             type: ItemActionEffectType.Kill,
@@ -2834,37 +2834,37 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "bandage_#00",
-            odds: 37
+            odds: 28
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "vodka_#00",
-            odds: 26
+            odds: 20
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "drug_hero_#00",
-            odds: 11
+            odds: 16
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "drug_#00",
-            odds: 11
+            odds: 16
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "explo_#00",
-            odds: 5
+            odds: 8
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "rhum_#00",
-            odds: 5
+            odds: 8
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "lights_#00",
-            odds: 5
+            odds: 4
           }
         ]
       },
@@ -2879,37 +2879,37 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "bandage_#00",
-            odds: 37
+            odds: 28
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "vodka_#00",
-            odds: 26
+            odds: 20
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "drug_hero_#00",
-            odds: 11
+            odds: 16
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "drug_#00",
-            odds: 11
+            odds: 16
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "explo_#00",
-            odds: 5
+            odds: 8
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "rhum_#00",
-            odds: 5
+            odds: 8
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "lights_#00",
-            odds: 5
+            odds: 4
           }
         ]
       }
@@ -2943,27 +2943,27 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "mixergun_part_#00",
-            odds: 20
+            odds: 19
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "watergun_opt_part_#00",
-            odds: 20
+            odds: 19
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pocket_belt_#00",
-            odds: 8
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "chainsaw_part_#00",
-            odds: 8
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "lawn_part_#00",
-            odds: 8
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -2978,7 +2978,7 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "big_pgun_part_#00",
-            odds: 15
+            odds: 7
           }
         ]
       },
@@ -2989,27 +2989,27 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "mixergun_part_#00",
-            odds: 20
+            odds: 19
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "watergun_opt_part_#00",
-            odds: 20
+            odds: 19
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pocket_belt_#00",
-            odds: 8
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "chainsaw_part_#00",
-            odds: 8
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "lawn_part_#00",
-            odds: 8
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -3024,7 +3024,7 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "big_pgun_part_#00",
-            odds: 15
+            odds: 7
           }
         ]
       },
@@ -3039,27 +3039,27 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "mixergun_part_#00",
-            odds: 20
+            odds: 19
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "watergun_opt_part_#00",
-            odds: 20
+            odds: 19
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pocket_belt_#00",
-            odds: 8
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "chainsaw_part_#00",
-            odds: 8
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "lawn_part_#00",
-            odds: 8
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -3074,7 +3074,7 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "big_pgun_part_#00",
-            odds: 15
+            odds: 7
           }
         ]
       }
@@ -4613,27 +4613,27 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "hmeat_#00",
-            odds: 33
+            odds: 13
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "can_#00",
-            odds: 28
+            odds: 11
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_bag_#00",
-            odds: 10
+            odds: 8
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "vegetable_#00",
-            odds: 10
+            odds: 8
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "meat_#00",
-            odds: 18
+            odds: 7
           }
         ]
       },
@@ -4644,27 +4644,27 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "hmeat_#00",
-            odds: 33
+            odds: 13
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "can_#00",
-            odds: 28
+            odds: 11
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_bag_#00",
-            odds: 10
+            odds: 8
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "vegetable_#00",
-            odds: 10
+            odds: 8
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "meat_#00",
-            odds: 18
+            odds: 7
           },
           {
             type: ItemActionEffectType.CP,
@@ -4702,42 +4702,42 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_bar2_#00",
-            odds: 15
+            odds: 222
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_chick_#00",
-            odds: 13
+            odds: 194
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_biscuit_#00",
-            odds: 13
+            odds: 188
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_pims_#00",
-            odds: 13
+            odds: 186
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_bar3_#00",
-            odds: 12
+            odds: 181
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_tarte_#00",
-            odds: 12
+            odds: 174
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_bar1_#00",
-            odds: 11
+            odds: 168
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_sandw_#00",
-            odds: 11
+            odds: 162
           }
         ]
       }
@@ -6885,13 +6885,13 @@ export const items: Record<ItemId, Item> = {
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
-            value: "lights_#00",
-            odds: 33
+            value: "cigs_#00",
+            odds: 67
           },
           {
             type: ItemActionEffectType.CreateItem,
-            value: "cigs_#00",
-            odds: 67
+            value: "lights_#00",
+            odds: 33
           },
           {
             type: ItemActionEffectType.RemoveStatus,
@@ -7057,6 +7057,10 @@ export const items: Record<ItemId, Item> = {
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
+            value: "rsc_pack_2_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
             value: "wood2_#00",
             odds: 50
           },
@@ -7064,10 +7068,6 @@ export const items: Record<ItemId, Item> = {
             type: ItemActionEffectType.CreateItem,
             value: "metal_#00",
             odds: 50
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "rsc_pack_2_#00"
           }
         ]
       }
@@ -7100,6 +7100,10 @@ export const items: Record<ItemId, Item> = {
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
+            value: "rsc_pack_1_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
             value: "wood2_#00",
             odds: 50
           },
@@ -7107,10 +7111,6 @@ export const items: Record<ItemId, Item> = {
             type: ItemActionEffectType.CreateItem,
             value: "metal_#00",
             odds: 50
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "rsc_pack_1_#00"
           }
         ]
       }
@@ -7677,52 +7677,52 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "pocket_belt_#00",
-            odds: 50
+            odds: 15
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "watergun_opt_part_#00",
-            odds: 5
+            odds: 10
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "lawn_part_#00",
-            odds: 5
+            odds: 10
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "chainsaw_part_#00",
-            odds: 5
+            odds: 10
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "mixergun_part_#00",
-            odds: 5
+            odds: 10
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "cutcut_#00",
-            odds: 5
+            odds: 10
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pilegun_upkit_#00",
-            odds: 5
+            odds: 10
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "meca_parts_#00",
-            odds: 5
+            odds: 10
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "big_pgun_part_#00",
-            odds: 8
+            odds: 5
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "book_gen_letter_#00",
-            odds: 8
+            odds: 5
           }
         ]
       }
@@ -9474,13 +9474,13 @@ export const items: Record<ItemId, Item> = {
           },
           {
             type: ItemActionEffectType.CreateItem,
-            value: "bplan_box_e_#00",
-            odds: 95
+            value: "bplan_e_#00",
+            odds: 100
           },
           {
             type: ItemActionEffectType.CreateItem,
-            value: "bplan_e_#00",
-            odds: 100
+            value: "bplan_box_e_#00",
+            odds: 95
           }
         ]
       }
@@ -11365,6 +11365,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Gesöff der Krieger, Trank der Könige, Cocktail der Götter! Zweifelst Du an der Stärke dieses Getränkes, dann lass ruhig erst einmal Deine Nachbarn probieren.",
       [Lang.ES]: "\"Saltapatrás\", \"7 pecados\", \"Nos vemos en el suelo\"... Un licor exótico más, si quieres comprobar sus efectos, invítale un trago a un vecino."
     },
+    info: {
+      [Lang.EN]: "It can be used when hungover or already drunk, unlike other alcohols.",
+      [Lang.FR]: "Il peut être utilisé en cas de gueule de bois ou déjà ivre, contrairement aux autres alcools.",
+      [Lang.DE]: "Im Gegensatz zu anderen Alkoholen kann es bei einem Kater oder bereits betrunkenem Zustand konsumiert werden.",
+      [Lang.ES]: "Se puede usar cuando tienes resaca o ya estás borracho, a diferencia de otros alcoholes."
+    },
     categories: [ItemCategory.Food, ItemCategory.APSource, ItemCategory.Alcohol],
     icon: "item_hmbrew",
     decoration: 0,
@@ -11483,6 +11489,7 @@ export const items: Record<ItemId, Item> = {
     decoration: 0,
     heavy: false,
     watchPoints: 0,
+    available: false,
     actions: [
       
     ]
@@ -11574,6 +11581,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Mit der richtigen CD und ein paar guten Ohrstöpseln wird diese HiFi zu einer gefährlichen Waffe, die dich und deine Mitbürger sicher schlafen lässt (zumindest in einiger Distanz)",
       [Lang.ES]: "El CD adecuado y unos buenos protectores auditivos forman esta poderosa arma que te permite descansar tranquilamente mientras otros se mantienen a una distancia segura."
     },
+    info: {
+      [Lang.EN]: "Prevents other players from stealing from your house.",
+      [Lang.FR]: "Empêche les autres joueurs de voler dans votre maison.",
+      [Lang.DE]: "Verhindert, dass andere Spieler in Ihr Haus stehlen.",
+      [Lang.ES]: "Evita que otros jugadores roben en tu casa."
+    },
     categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
     icon: "item_dfhifi",
     decoration: 10,
@@ -11607,27 +11620,6 @@ export const items: Record<ItemId, Item> = {
       {
         type: ItemActionType.Open,
         conditions: [ItemActionCondition.BoxOpener],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "poison_part_#00",
-            odds: 33
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "pet_cat_#00",
-            odds: 33
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "angryc_#00",
-            odds: 33
-          }
-        ]
-      },
-      {
-        type: ItemActionType.Open,
-        conditions: [ItemActionCondition.Technician, ItemActionCondition.BoxOpener],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -11687,6 +11679,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.FR]: "On ne sait pas si c'est l'effet du LSD ou le fait que Chuck Norris est le mec le plus badass au monde, mais ce discours enflammé a son effet sur les troupes des veilleurs !",
       [Lang.DE]: "Keine Ahnung, ob es am LSD liegt oder daran, dass Chuck Norris so hart ist, er trinkt Napalm gegen Sodbrennen - aber diese Rede hat definitiv einen positiven Einfluss auf unsere Nachtwächter!",
       [Lang.ES]: "No sabemos si es por el efecto del LSD o de Chuck Norris, ¡pero este discurso motiva mucho a los centinelas!"
+    },
+    info: {
+      [Lang.EN]: "If in one of the watchmen's rucksack it adds +15 defence points for every citizen on watch.",
+      [Lang.FR]: "S'il est dans le sac à dos d'un des veilleurs, il ajoute +15 points de défense pour chaque citoyen en veille.",
+      [Lang.DE]: "Wenn es im Rucksack eines der Wächter ist, fügt es +15 Verteidigungspunkte für jeden Bürger im Wachmodus hinzu.",
+      [Lang.ES]: "Si está en la mochila de uno de los vigilantes, añade +15 puntos de defensa por cada ciudadano en vigilancia."
     },
     categories: [ItemCategory.Miscellaneous],
     icon: "item_chkspk",
@@ -11749,12 +11747,12 @@ export const items: Record<ItemId, Item> = {
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
-            value: "omg_this_will_kill_you_#00",
-            odds: 100
+            value: "chest_christmas_2_#00"
           },
           {
             type: ItemActionEffectType.CreateItem,
-            value: "chest_christmas_2_#00"
+            value: "omg_this_will_kill_you_#00",
+            odds: 100
           }
         ]
       }
@@ -11788,12 +11786,12 @@ export const items: Record<ItemId, Item> = {
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
-            value: "christmas_candy_#00",
-            odds: 100
+            value: "chest_christmas_1_#00"
           },
           {
             type: ItemActionEffectType.CreateItem,
-            value: "chest_christmas_1_#00"
+            value: "christmas_candy_#00",
+            odds: 100
           }
         ]
       }
@@ -11944,6 +11942,11 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "basic_suit_#00"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "terror",
+            odds: -3
           }
         ]
       }
@@ -12053,7 +12056,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveSteak],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -12125,6 +12128,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.FR]: "Votre précieux guide, intitulé \"le manuel des castors juniors\". Même s'il ressemble à une édition pour enfants, il contient une foule d'informations utiles pour qui veut se débrouiller seul dans la nature. Il vous permettra de trouver à manger ou à boire facilement.",
       [Lang.DE]: "Auch wenn der Titel anderes vermuten lässt: \"Tick, Trick und Tracks Schlaues Buch\" ist von unschätzbarem Wert. Es enthält zahlreiche Tipps und Tricks, wie man in der Natur am besten überleben und Nahrung finden kann.",
       [Lang.ES]: "Tu valiosa guía titulada \"El Manual de los Castores\". Hasta parece una edición para niños. Contiene una serie de consejos e instrucciones para ayudar sobrevivir en la naturaleza. Te ayudará a encontrar comida y agua fácilmente."
+    },
+    info: {
+      [Lang.EN]: "The book success chances go from 100% on day 1 to 50% on day 20.",
+      [Lang.FR]: "Les chances de succès du livre vont de 100% au jour 1 à 50% au jour 20.",
+      [Lang.DE]: "Die Erfolgschancen des Buches liegen am Tag 1 bei 100 % und am Tag 20 bei 50 %.",
+      [Lang.ES]: "Las posibilidades de éxito del libro van del 100% en el día 1 al 50% en el día 20."
     },
     categories: [ItemCategory.Miscellaneous],
     icon: "item_surv_book",
@@ -12305,6 +12314,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Je nach Epoche wurde dieses Pulver nacheinander als Zünder für verschiedene Artilleriegeschütze, dann als billige Droge für bedürftige Bürger und schließlich als Hauptbestandteil von Feuerwerkskörpern verwendet. In allen drei Fällen haben viele Menschen nicht überlebt.",
       [Lang.ES]: "Dependiendo de la era, este polvo fue usado esencialmente como detonador para varias piezas de artillería, luego como una droga barata para los habitantes necesitados y, finalmente como el principal componente de los fuegos artificiales. En los tres casos, muchas personas no han sobrevivido."
     },
+    info: {
+      [Lang.EN]: "One is scattered in a random zone outside up to 15km from the town.",
+      [Lang.FR]: "Un est éparpillé dans une zone aléatoire à l'extérieur jusqu'à 15 km de la ville.",
+      [Lang.DE]: "Einer ist in einer zufälligen Zone außerhalb der Stadt bis zu 15 km verstreut.",
+      [Lang.ES]: "Uno está esparcido en una zona aleatoria fuera de la ciudad hasta 15 km."
+    },
     categories: [ItemCategory.Furniture, ItemCategory.Decoration],
     icon: "item_firework_powder",
     decoration: 5,
@@ -12329,6 +12344,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Mehrere lange Plastikschläuche ohne großes Interesse.",
       [Lang.ES]: "Varios largos tubos de plástico poco interesantes."
     },
+    info: {
+      [Lang.EN]: "One is scattered in a random zone outside up to 15km from the town.",
+      [Lang.FR]: "Un est éparpillé dans une zone aléatoire à l'extérieur jusqu'à 15 km de la ville.",
+      [Lang.DE]: "Einer ist in einer zufälligen Zone außerhalb der Stadt bis zu 15 km verstreut.",
+      [Lang.ES]: "Uno está esparcido en una zona aleatoria fuera de la ciudad hasta 15 km."
+    },
     categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
     icon: "item_firework_tube",
     decoration: 2,
@@ -12352,6 +12373,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.FR]: "Cette boite contient tout un attirail de produits chimiques hautement toxiques aux noms évocateurs, tels que : Sodium-Fuzz, Carbopotassium Bling Bling ou Rainbow Lithium Cyanurisé.",
       [Lang.DE]: "Diese Schachtel enthält eine ganze Reihe von hochgiftigen Chemikalien mit aufrüttelnden Namen wie: Natrium-Fuzz, Carbopotassium Bling Bling oder Rainbow Lithium Cyanurized.",
       [Lang.ES]: "Ésta caja contiene muchos químicos altamente tóxicos con nombres destacables como: Sodio Fuzz, Carbo-Potasio Bling Bling o Litio Arcoíris Cianurizado."
+    },
+    info: {
+      [Lang.EN]: "Two of them are scattered in random zones outside up to 15km from the town.",
+      [Lang.FR]: "Deux d'entre elles sont éparpillés dans des zones aléatoires à l'extérieur jusqu'à 15 km de la ville.",
+      [Lang.DE]: "Zwei von ihnen sind in zufälligen Zonen außerhalb der Stadt bis zu 15 km verstreut.",
+      [Lang.ES]: "Dos de ellos están esparcidos en zonas aleatorias fuera de la ciudad hasta 15 km."
     },
     categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
     icon: "item_firework_box",
@@ -12409,7 +12436,16 @@ export const items: Record<ItemId, Item> = {
     watchPoints: 0,
     event: GameEvent.Halloween,
     actions: [
-      
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pumpkin_off_#00"
+          }
+        ]
+      }
     ]
   },
   [ItemId.XMAS_GIFT]: {
@@ -12426,6 +12462,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.FR]: "Une guirlande de ce qui semblait être une ancienne tradition. Il est recommandé de l'accrocher chez soi en guise de décoration, ce pourrait faire du bien au moral de la ville.",
       [Lang.DE]: "Eine Girlande einer scheinbar uralten Tradition. Es wird empfohlen, es zu Hause als Dekoration aufzuhängen, es könnte gut für die Moral der Stadt sein.",
       [Lang.ES]: "Una guirnalda de una tradición aparentemente antigua. Se recomienda colgarla en casa como decoración, podría ser bueno para la moral del pueblo."
+    },
+    info: {
+      [Lang.EN]: "After installing one or more garlands, you will regain 5{{AP}} instead of 6{{AP}} after the following attack.",
+      [Lang.FR]: "Après avoir installé une ou plusieurs guirlandes, vous récupérerez 5{{AP}} au lieu de 6{{AP}} après l'attaque suivante.",
+      [Lang.DE]: "Nach der Installation einer oder mehrerer Girlanden erhalten Sie nach dem folgenden Angriff 5{{AP}} anstelle von 6{{AP}}.",
+      [Lang.ES]: "Después de instalar una o más guirnaldas, recuperarás 5{{AP}} en lugar de 6{{AP}} después del siguiente ataque."
     },
     categories: [ItemCategory.Furniture, ItemCategory.Decoration, ItemCategory.Event],
     icon: "item_xmas_gift",

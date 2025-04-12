@@ -42,6 +42,7 @@ export enum ItemActionCondition {
   Thirsty,
   Dehydrated,
   HaveBattery,
+  HaveSteak,
   Shaman,
 }
 
@@ -290,6 +291,11 @@ const generateItems = async () => {
     if (action?.meta.includes("have_battery")) {
       conditions.push(ItemActionCondition.HaveBattery);
     }
+    // Well fed labradoodle exclusive
+    if (action?.meta.includes("must_have_drug")) {
+      conditions.push(ItemActionCondition.HaveSteak);
+    }
+
     if (
       [
         "have_can_opener_hd",
@@ -621,11 +627,6 @@ const generateItems = async () => {
           if (Array.isArray(data)) {
             // If { items: string[], odds?: number, count?: number }
             if (data[0]?.items) {
-              const totalOdds = data.reduce(
-                (acc, innerData) => acc + (innerData.odds ?? 888),
-                0
-              );
-
               const grouped = data.reduce<[string, number, number][]>(
                 (acc, innerData) => {
                   if (Array.isArray(innerData.items)) {
@@ -635,18 +636,15 @@ const generateItems = async () => {
                       count?: number;
                     };
                     const count = currentInnerData.count ?? 1;
-                    const odds = currentInnerData.odds ?? 888;
+                    const odds = currentInnerData.odds ?? (100 / currentInnerData.items.length);
 
                     currentInnerData.items.forEach((item) => {
                       const existingItem = acc.find((i) => i[0] === item);
-                      const innerOdds =
-                        (odds / currentInnerData.items.length / totalOdds) *
-                        100;
 
                       if (existingItem) {
-                        existingItem[2] += innerOdds;
+                        existingItem[2] += odds;
                       } else {
-                        acc.push([item, count, innerOdds]);
+                        acc.push([item, count, odds]);
                       }
                     });
                     return acc;
@@ -808,11 +806,11 @@ const generateItems = async () => {
     actionIds?.forEach((actionId) => {
       // Actions to ignore
       switch (actionId) {
-        case "pumpkin":
         case "open_metalbox_t1":
         case "open_toolbox_t1":
         case "drug_hyd_1":
         case "drug_hyd_2":
+        case "open_catbox_t1":
           return;
       }
 
@@ -1077,6 +1075,27 @@ const generateItems = async () => {
     ) {
       item.categories.push("Poisonable");
     }
+
+    // Order item action effects
+    item.actions.forEach((action) => {
+      action.effects.sort((a, b) => {
+        if (a.type === ItemActionEffectType.CreateItem && b.type === ItemActionEffectType.CreateItem) {
+          // Order by odds
+          if (a.odds && b.odds) {
+            return b.odds - a.odds;
+          }
+          if (a.odds) {
+            return 1;
+          }
+          if (b.odds) {
+            return -1;
+          }
+        }
+
+        // Change nothing
+        return 0;
+      });
+    });
   });
 
   overwriteItemData(items);
@@ -1164,7 +1183,7 @@ const generateItems = async () => {
             .map(
               (effect) => `{
             type: ItemActionEffectType.${ItemActionEffectType[effect.type]}${
-                effect.value
+                (typeof effect.value !== "undefined")
                   ? `,\n            value: ${
                       typeof effect.value === "string"
                         ? `"${effect.value}"`
@@ -1533,6 +1552,22 @@ const generateRecipes = (items: Record<number, Item>) => {
       type: recipeData.type,
       in: ingredients,
       out: outputs,
+    });
+  });
+
+  // Order recipe outputs by odds
+  recipes.forEach((recipe) => {
+    recipe.out.sort((a, b) => {
+      if (a.odds && b.odds) {
+        return b.odds - a.odds;
+      }
+      if (a.odds) {
+        return 1;
+      }
+      if (b.odds) {
+        return -1;
+      }
+      return 0;
     });
   });
 

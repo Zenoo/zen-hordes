@@ -471,6 +471,11 @@ const createLine = (
               displayedIcon.id = ItemId.PILE;
               displayedIcon.title = undefined;
               break;
+            case ItemActionCondition.HaveSteak:
+              displayedIcon.icon = "icons/item/item_meat.gif";
+              displayedIcon.id = ItemId.MEAT;
+              displayedIcon.title = undefined;
+              break;
             case ItemActionCondition.Shaman:
               displayedIcon.icon = "roles/shaman.gif";
               break;
@@ -808,7 +813,7 @@ export const insertBetterTooltips = (node: HTMLElement) => {
 
             span.textContent = `${
               ruin.name[store["hordes-lang"]]
-            } (${Math.round((odds / total) * 100)}%)`;
+            } (${+((odds / total) * 100).toFixed(1)}%)`;
           }
 
           ruinDropTag.append(span);
