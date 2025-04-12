@@ -672,7 +672,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveWater],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -1242,12 +1242,12 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
-            type: ItemActionEffectType.AddStatus,
-            value: "drugged"
-          },
-          {
             type: ItemActionEffectType.GetPicto,
             value: "r_drug_#00"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged"
           },
           {
             type: ItemActionEffectType.RemoveStatus,
@@ -1594,7 +1594,7 @@ export const items: Record<ItemId, Item> = {
     watchPoints: 8,
     actions: [
       {
-        type: ItemActionType.Use,
+        type: ItemActionType.Butcher,
         conditions: [],
         effects: [
           {
@@ -1610,6 +1610,16 @@ export const items: Record<ItemId, Item> = {
             type: ItemActionEffectType.CreateItem,
             value: "undef_#00",
             odds: 100
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_animal_#00"
           },
           {
             type: ItemActionEffectType.Kill,
@@ -1641,7 +1651,7 @@ export const items: Record<ItemId, Item> = {
     watchPoints: 25,
     actions: [
       {
-        type: ItemActionType.Use,
+        type: ItemActionType.Butcher,
         conditions: [],
         effects: [
           {
@@ -1667,6 +1677,16 @@ export const items: Record<ItemId, Item> = {
             type: ItemActionEffectType.CreateItem,
             value: "undef_#00",
             odds: 100
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_animal_#00"
           },
           {
             type: ItemActionEffectType.Kill,
@@ -1698,7 +1718,7 @@ export const items: Record<ItemId, Item> = {
     watchPoints: 12,
     actions: [
       {
-        type: ItemActionType.Use,
+        type: ItemActionType.Butcher,
         conditions: [],
         effects: [
           {
@@ -1714,6 +1734,16 @@ export const items: Record<ItemId, Item> = {
             type: ItemActionEffectType.CreateItem,
             value: "undef_#00",
             odds: 100
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_animal_#00"
           },
           {
             type: ItemActionEffectType.Kill,
@@ -1745,7 +1775,7 @@ export const items: Record<ItemId, Item> = {
     watchPoints: 25,
     actions: [
       {
-        type: ItemActionType.Use,
+        type: ItemActionType.Butcher,
         conditions: [],
         effects: [
           {
@@ -1761,6 +1791,22 @@ export const items: Record<ItemId, Item> = {
             type: ItemActionEffectType.CreateItem,
             value: "meat_#00",
             odds: 100
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_animal_#00",
+            odds: 10
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pet_dog_#00",
+            odds: 90
           },
           {
             type: ItemActionEffectType.Kill,
@@ -1792,7 +1838,7 @@ export const items: Record<ItemId, Item> = {
     watchPoints: 12,
     actions: [
       {
-        type: ItemActionType.Use,
+        type: ItemActionType.Butcher,
         conditions: [],
         effects: [
           {
@@ -1808,6 +1854,22 @@ export const items: Record<ItemId, Item> = {
             type: ItemActionEffectType.CreateItem,
             value: "meat_#00",
             odds: 100
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_animal_#00",
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pet_cat_#00",
+            odds: 80
           },
           {
             type: ItemActionEffectType.Kill,
@@ -1839,7 +1901,7 @@ export const items: Record<ItemId, Item> = {
     watchPoints: 25,
     actions: [
       {
-        type: ItemActionType.Use,
+        type: ItemActionType.Butcher,
         conditions: [],
         effects: [
           {
@@ -1865,6 +1927,16 @@ export const items: Record<ItemId, Item> = {
             type: ItemActionEffectType.CreateItem,
             value: "meat_#00",
             odds: 100
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_animal_#00"
           },
           {
             type: ItemActionEffectType.Kill,
@@ -1900,12 +1972,12 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
-            type: ItemActionEffectType.RemoveStatus,
-            value: "terror"
-          },
-          {
             type: ItemActionEffectType.GetPicto,
             value: "r_maso_#00"
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "terror"
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -1941,12 +2013,12 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
-            type: ItemActionEffectType.AddStatus,
-            value: "drugged"
-          },
-          {
             type: ItemActionEffectType.GetPicto,
             value: "r_drug_#00"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged"
           },
           {
             type: ItemActionEffectType.AP,
@@ -2098,27 +2170,27 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
-            odds: 100
+            odds: 50
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
-            odds: 100
+            odds: 50
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
-            odds: 100
+            odds: 50
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
-            odds: 100
+            odds: 50
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
-            odds: 100
+            odds: 50
           },
           {
             type: ItemActionEffectType.AddWaterToWell,
@@ -2329,16 +2401,16 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_alcool_#00"
+          },
+          {
             type: ItemActionEffectType.AP,
             value: 6
           },
           {
             type: ItemActionEffectType.AddStatus,
             value: "drunk"
-          },
-          {
-            type: ItemActionEffectType.GetPicto,
-            value: "r_alcool_#00"
           }
         ]
       }
@@ -2465,12 +2537,12 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
-            type: ItemActionEffectType.AP,
-            value: 6
-          },
-          {
             type: ItemActionEffectType.GetPicto,
             value: "r_cannib_#00"
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
           },
           {
             type: ItemActionEffectType.Ghoulify,
@@ -2483,12 +2555,12 @@ export const items: Record<ItemId, Item> = {
         conditions: [ItemActionCondition.Ghoul],
         effects: [
           {
-            type: ItemActionEffectType.AP,
-            value: 6
-          },
-          {
             type: ItemActionEffectType.GetPicto,
             value: "r_cannib_#00"
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
           },
           {
             type: ItemActionEffectType.ReduceGhoulHunger,
@@ -2521,7 +2593,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveWater],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -2587,7 +2659,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveWater],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -2791,12 +2863,12 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
-            type: ItemActionEffectType.AddStatus,
-            value: "drugged"
-          },
-          {
             type: ItemActionEffectType.GetPicto,
             value: "r_drug_#00"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged"
           },
           {
             type: ItemActionEffectType.AP,
@@ -3301,16 +3373,16 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_alcool_#00"
+          },
+          {
             type: ItemActionEffectType.AP,
             value: 6
           },
           {
             type: ItemActionEffectType.AddStatus,
             value: "drunk"
-          },
-          {
-            type: ItemActionEffectType.GetPicto,
-            value: "r_alcool_#00"
           }
         ]
       }
@@ -3496,12 +3568,12 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
-            type: ItemActionEffectType.AddStatus,
-            value: "drugged"
-          },
-          {
             type: ItemActionEffectType.GetPicto,
             value: "r_drug_#00"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged"
           },
           {
             type: ItemActionEffectType.RemoveStatus,
@@ -3716,12 +3788,12 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
-            type: ItemActionEffectType.AP,
-            value: -1
-          },
-          {
             type: ItemActionEffectType.GetPicto,
             value: "r_repair_#00"
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: -1
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -3754,7 +3826,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveWater],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -4066,16 +4138,16 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_maso_#00"
+          },
+          {
             type: ItemActionEffectType.AP,
             value: 6
           },
           {
             type: ItemActionEffectType.AddStatus,
             value: "tg_meta_wound"
-          },
-          {
-            type: ItemActionEffectType.GetPicto,
-            value: "r_maso_#00"
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -4145,18 +4217,18 @@ export const items: Record<ItemId, Item> = {
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
-            value: "pile_broken_#00",
-            odds: 100
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
             value: "big_pgun_empty_#00",
             odds: 100
           },
           {
             type: ItemActionEffectType.CreateItem,
+            value: "pile_broken_#00",
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
             value: "pile_#00",
-            odds: 100
+            odds: 50
           },
           {
             type: ItemActionEffectType.Kill,
@@ -4479,13 +4551,13 @@ export const items: Record<ItemId, Item> = {
             value: "r_cobaye_#00"
           },
           {
-            type: ItemActionEffectType.AddStatus,
-            value: "drugged",
+            type: ItemActionEffectType.GetPicto,
+            value: "r_drug_#00",
             odds: 80
           },
           {
-            type: ItemActionEffectType.GetPicto,
-            value: "r_drug_#00",
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged",
             odds: 80
           },
           {
@@ -4533,12 +4605,12 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
-            type: ItemActionEffectType.AddStatus,
-            value: "drugged"
-          },
-          {
             type: ItemActionEffectType.GetPicto,
             value: "r_drug_#00"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged"
           },
           {
             type: ItemActionEffectType.AddStatus,
@@ -4613,27 +4685,27 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "hmeat_#00",
-            odds: 13
+            odds: 28
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "can_#00",
-            odds: 11
+            odds: 23
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_bag_#00",
-            odds: 8
+            odds: 17
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "vegetable_#00",
-            odds: 8
+            odds: 17
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "meat_#00",
-            odds: 7
+            odds: 15
           }
         ]
       },
@@ -4644,27 +4716,27 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "hmeat_#00",
-            odds: 13
+            odds: 28
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "can_#00",
-            odds: 11
+            odds: 23
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_bag_#00",
-            odds: 8
+            odds: 17
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "vegetable_#00",
-            odds: 8
+            odds: 17
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "meat_#00",
-            odds: 7
+            odds: 15
           },
           {
             type: ItemActionEffectType.CP,
@@ -4702,42 +4774,42 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_bar2_#00",
-            odds: 222
+            odds: 15
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_chick_#00",
-            odds: 194
+            odds: 13
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_biscuit_#00",
-            odds: 188
+            odds: 13
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_pims_#00",
-            odds: 186
+            odds: 13
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_bar3_#00",
-            odds: 181
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_tarte_#00",
-            odds: 174
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_bar1_#00",
-            odds: 168
+            odds: 11
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_sandw_#00",
-            odds: 162
+            odds: 11
           }
         ]
       }
@@ -5243,12 +5315,12 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
-            type: ItemActionEffectType.AP,
-            value: 6
-          },
-          {
             type: ItemActionEffectType.GetPicto,
             value: "r_cannib_#00"
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -5269,12 +5341,12 @@ export const items: Record<ItemId, Item> = {
         conditions: [ItemActionCondition.Ghoul],
         effects: [
           {
-            type: ItemActionEffectType.AP,
-            value: 6
-          },
-          {
             type: ItemActionEffectType.GetPicto,
             value: "r_cannib_#00"
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -5978,12 +6050,12 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
-            type: ItemActionEffectType.AP,
-            value: -1
-          },
-          {
             type: ItemActionEffectType.GetPicto,
             value: "r_repair_#00"
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: -1
           }
         ]
       }
@@ -6985,18 +7057,18 @@ export const items: Record<ItemId, Item> = {
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
-            value: "pile_#00",
-            odds: 100
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
             value: "pilegun_up_empty_#00",
             odds: 100
           },
           {
             type: ItemActionEffectType.CreateItem,
+            value: "pile_#00",
+            odds: 80
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
             value: "pile_broken_#00",
-            odds: 100
+            odds: 20
           },
           {
             type: ItemActionEffectType.Kill,
@@ -7671,58 +7743,56 @@ export const items: Record<ItemId, Item> = {
           },
           {
             type: ItemActionEffectType.CreateItem,
+            value: "big_pgun_part_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "book_gen_letter_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
             value: "safe_#00",
             odds: 95
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pocket_belt_#00",
-            odds: 15
+            odds: 1
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "watergun_opt_part_#00",
-            odds: 10
+            odds: 1
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "lawn_part_#00",
-            odds: 10
+            odds: 1
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "chainsaw_part_#00",
-            odds: 10
+            odds: 1
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "mixergun_part_#00",
-            odds: 10
+            odds: 1
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "cutcut_#00",
-            odds: 10
+            odds: 1
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pilegun_upkit_#00",
-            odds: 10
+            odds: 1
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "meca_parts_#00",
-            odds: 10
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "big_pgun_part_#00",
-            odds: 5
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "book_gen_letter_#00",
-            odds: 5
+            odds: 1
           }
         ]
       }
@@ -7784,7 +7854,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveWater],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -7817,7 +7887,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveWater],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -7882,7 +7952,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveWater],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -8009,13 +8079,13 @@ export const items: Record<ItemId, Item> = {
             value: "r_cobaye_#00"
           },
           {
-            type: ItemActionEffectType.AddStatus,
-            value: "drugged",
+            type: ItemActionEffectType.GetPicto,
+            value: "r_drug_#00",
             odds: 80
           },
           {
-            type: ItemActionEffectType.GetPicto,
-            value: "r_drug_#00",
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged",
             odds: 80
           },
           {
@@ -8747,12 +8817,12 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
-            type: ItemActionEffectType.AP,
-            value: 6
-          },
-          {
             type: ItemActionEffectType.GetPicto,
             value: "r_cannib_#00"
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -8773,12 +8843,12 @@ export const items: Record<ItemId, Item> = {
         conditions: [ItemActionCondition.Ghoul],
         effects: [
           {
-            type: ItemActionEffectType.AP,
-            value: 6
-          },
-          {
             type: ItemActionEffectType.GetPicto,
             value: "r_cannib_#00"
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -9458,6 +9528,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Dieser Koffer enthält höchstwahrscheinlich ein sehr seltenes und kostbares Dokument...",
       [Lang.ES]: "Contiene seguramente un documento importante y raro..."
     },
+    info: {
+      [Lang.EN]: "Two of them are scattered in random zones 9-21km away from the town.",
+      [Lang.FR]: "Deux d'entre eux sont éparpillés dans des zones aléatoires à 9-21 km de la ville.",
+      [Lang.DE]: "Zwei davon sind in zufälligen Zonen 9–21 km von der Stadt entfernt verstreut.",
+      [Lang.ES]: "Dos de ellos están esparcidos en zonas aleatorias a 9-21 km de la ciudad."
+    },
     categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
     icon: "item_bplan_box_e",
     decoration: 0,
@@ -9474,13 +9550,13 @@ export const items: Record<ItemId, Item> = {
           },
           {
             type: ItemActionEffectType.CreateItem,
-            value: "bplan_e_#00",
-            odds: 100
+            value: "bplan_box_e_#00",
+            odds: 95
           },
           {
             type: ItemActionEffectType.CreateItem,
-            value: "bplan_box_e_#00",
-            odds: 95
+            value: "bplan_e_#00",
+            odds: 5
           }
         ]
       }
@@ -9599,6 +9675,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.FR]: "Cette petite sacoche en cuir semble contenir des documents. Vous priez très fort pour que cela soit un magazine adulte ou le plan d'un nouveau chantier surpuissant, et pas un quelconque relevé comptable...",
       [Lang.DE]: "Diese kleine Ledertasche scheint Unterlagen zu enthalten. Du betest inständig, dass es sich dabei um ein Männermagazin handelt, oder den Bauplan für ein neues, mächiges Gebäude. ...und nicht um die verblichenen Kopien einer Umsatzschätzung der Buchhaltung.",
       [Lang.ES]: "Parece que tiene documentos. Rezas por que tenga una revista para adultos o los planos de algo poderoso. Por favor, todo menos dinero..."
+    },
+    info: {
+      [Lang.EN]: "A maximum of 3 can be found townwide per day",
+      [Lang.FR]: "Un maximum de 3 peut être trouvé dans toute la ville par jour",
+      [Lang.DE]: "Maximal 3 können pro Tag in der Stadt gefunden werden",
+      [Lang.ES]: "Se puede encontrar un máximo de 3 en toda la ciudad por día"
     },
     categories: [ItemCategory.Miscellaneous],
     icon: "item_bplan_drop",
@@ -10330,6 +10412,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Schwache Seele. Einmal in der Bank abgelegt, kann ein Schamane sie nehmen und in eine starke Seele umwandeln. Sie kann einen Schamanen noch in vielen anderen Situationen nützen.",
       [Lang.ES]: "Encuentras una forma vaporosa que parece lamentarse en su sitio. Quizás podrías recogerla y encontrarle alguna utilidad."
     },
+    info: {
+      [Lang.EN]: "If not purified, it will turn into a {{item:soul_red}} Tortured Soul after X nights (no matter where it is).",
+      [Lang.FR]: "Si elle n'est pas purifiée, elle se transformera en une {{item:soul_red}} Âme torturée après X nuits (peu importe où elle se trouve).",
+      [Lang.DE]: "Wenn sie nicht gereinigt wird, verwandelt sie sich nach X Nächten (egal wo sie sich befindet) in eine {{item:soul_red}} Gequälte Seele.",
+      [Lang.ES]: "Si no se purifica, se convertirá en un {{item:soul_red}} Alma Torturada después de X noches (sin importar dónde esté)."
+    },
     categories: [ItemCategory.Miscellaneous],
     icon: "item_soul_blue",
     decoration: 0,
@@ -10351,6 +10439,42 @@ export const items: Record<ItemId, Item> = {
           {
             type: ItemActionEffectType.Defense,
             value: 5
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "soul_red_#00",
+            count: 1,
+            odds: 10
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "soul_red_#00",
+            count: 2,
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "soul_red_#00",
+            count: 3,
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "soul_red_#00",
+            count: 4,
+            odds: 75
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "soul_red_#00",
+            count: 5,
+            odds: 100
           }
         ]
       }
@@ -10412,7 +10536,7 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Eine Schwache Seele. Einmal in der Bank abgelegt, kann ein Schamane sie nehmen und in eine starke Seele umwandeln. Sie kann einen Schamanen noch in vielen anderen Situationen nützen.",
       [Lang.ES]: "Encuentras una forma vaporosa que parece lamentarse en su sitio. Quizás podrías recogerla y encontrarle alguna utilidad."
     },
-    categories: [ItemCategory.Miscellaneous],
+    categories: [ItemCategory.Miscellaneous, ItemCategory.PrivateTown],
     icon: "item_soul_blue",
     decoration: 0,
     heavy: false,
@@ -10464,16 +10588,16 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_alcool_#00"
+          },
+          {
             type: ItemActionEffectType.AP,
             value: 6
           },
           {
             type: ItemActionEffectType.AddStatus,
             value: "drunk"
-          },
-          {
-            type: ItemActionEffectType.GetPicto,
-            value: "r_alcool_#00"
           }
         ]
       }
@@ -10534,7 +10658,7 @@ export const items: Record<ItemId, Item> = {
     watchPoints: 18,
     actions: [
       {
-        type: ItemActionType.Use,
+        type: ItemActionType.Butcher,
         conditions: [],
         effects: [
           {
@@ -10550,6 +10674,22 @@ export const items: Record<ItemId, Item> = {
             type: ItemActionEffectType.CreateItem,
             value: "meat_#00",
             odds: 100
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_animal_#00",
+            odds: 15
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "tekel_#00",
+            odds: 85
           },
           {
             type: ItemActionEffectType.Kill,
@@ -10765,7 +10905,7 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [ItemActionCondition.HaveWater],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -10869,7 +11009,7 @@ export const items: Record<ItemId, Item> = {
     watchPoints: 18,
     actions: [
       {
-        type: ItemActionType.Use,
+        type: ItemActionType.Butcher,
         conditions: [],
         effects: [
           {
@@ -10885,6 +11025,16 @@ export const items: Record<ItemId, Item> = {
             type: ItemActionEffectType.CreateItem,
             value: "flesh_#00",
             odds: 100
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_animal_#00"
           },
           {
             type: ItemActionEffectType.AddStatus,
@@ -10893,7 +11043,7 @@ export const items: Record<ItemId, Item> = {
           },
           {
             type: ItemActionEffectType.Kill,
-            value: "999999",
+            value: "99",
             odds: 50
           }
         ]
@@ -10963,6 +11113,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Früher konnte man damit die Damenwelt beeindrucken... Diese Zeiten sind vorbei, doch beliebt ist die Gitarre immer noch. Sie kommt zwar nicht an eine echte Les Paul '58 heran, aber die Stadt kann ein wenig Auflockerung gebrauchen. Wer hätte denn keinen Spaß an ein bisschen Musik?",
       [Lang.ES]: "Todo indica que perteneció al trío de \"Los Panchos\". Sus cuerdas están intactas, te servirá para cantar tus desgracias en alegres melodías."
     },
+    info: {
+      [Lang.EN]: "Using it gives every citizen in town 1{{AP}} (2{{AP}} if drunk or drugged).",
+      [Lang.FR]: "L'utiliser donne à chaque citoyen de la ville 1{{AP}} (2{{AP}} si ivre ou drogué).",
+      [Lang.DE]: "Die Verwendung gibt jedem Bürger in der Stadt 1{{AP}} (2{{AP}} wenn betrunken oder unter Drogen).",
+      [Lang.ES]: "Usarlo le da a cada ciudadano de la ciudad 1{{AP}} (2{{AP}} si está borracho o drogado)."
+    },
     categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration],
     icon: "item_guitar",
     decoration: 6,
@@ -11002,13 +11158,13 @@ export const items: Record<ItemId, Item> = {
             value: "r_cobaye_#00"
           },
           {
-            type: ItemActionEffectType.AddStatus,
-            value: "drugged",
+            type: ItemActionEffectType.GetPicto,
+            value: "r_drug_#00",
             odds: 100
           },
           {
-            type: ItemActionEffectType.GetPicto,
-            value: "r_drug_#00",
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged",
             odds: 100
           },
           {
@@ -11212,6 +11368,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.DE]: "Vor langer Zeit hat man mit diesem Werkzeug die Sterne beobachtet. Heute beobachten wir Zombies. Damit braucht die Angriffsabschätzung nur noch halb so viele Bürger.",
       [Lang.ES]: "En el pasado, este objeto servía para contar estrellas en el cielo. Hoy, remplazamos las estrellas por zombies. Al tenerlo en El almacén, se reduce a la mitad la cantidad de personas necesarias para hacer un pronóstico del ataque."
     },
+    info: {
+      [Lang.EN]: "Halves the number of citizens required to estimate the attack. This effect does not stack.",
+      [Lang.FR]: "Divise par deux le nombre de citoyens nécessaires pour estimer l'attaque. Cet effet ne s'accumule pas.",
+      [Lang.DE]: "Halbiert die Anzahl der Bürger, die erforderlich sind, um den Angriff zu schätzen. Dieser Effekt ist nicht stapelbar.",
+      [Lang.ES]: "Reduce a la mitad el número de ciudadanos necesarios para estimar el ataque. Este efecto no se acumula."
+    },
     categories: [ItemCategory.Resources],
     icon: "item_scope",
     decoration: 0,
@@ -11235,6 +11397,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.FR]: "Une bien belle manière d'inviter les invités comme les non invités chez soi, une bombe sous le paillasson, pourquoi n'y avons-nous pas pensé plus tôt !",
       [Lang.DE]: "Nichts sagt \"Willkommen zuhause\" mehr als eine spontane Fußamputation.",
       [Lang.ES]: "Una excelente manera de hacer que alguien se sienta realmente mal acogido, ¡Una bomba debajo del felpudo! ¿Por qué no pensamos en esto antes?"
+    },
+    info: {
+      [Lang.EN]: "At home, injures or kills an already injured thief.",
+      [Lang.FR]: "À la maison, blesse ou tue un voleur déjà blessé.",
+      [Lang.DE]: "Zu Hause verletzt oder tötet einen bereits verletzten Dieb.",
+      [Lang.ES]: "En casa, hiere o mata a un ladrón ya herido."
     },
     categories: [ItemCategory.Furniture, ItemCategory.Decoration],
     icon: "item_trapma",
@@ -11283,6 +11451,12 @@ export const items: Record<ItemId, Item> = {
       [Lang.FR]: "Ce livre, édité dans de nombreuses langues, vous permet d’appréhender plus calmement votre condition. Il y a une vie après la mort ! Prévient le statut terrorisé si utilisé.",
       [Lang.DE]: "Dieses Buch wurde in vielen Sprachen veröffentlicht. Es bietet Rat für aussichtslose Situationen und schützt so vor Angststarren.",
       [Lang.ES]: "Este librito fue un best-seller. Te ayuda a asimilar tranquilamente tu triste vida. Previene el estado aterrorizado si está en tu mochila."
+    },
+    info: {
+      [Lang.EN]: "Prevents you from becoming {{terror}} terrorised while using items.",
+      [Lang.FR]: "Vous empêche d'être {{terror}} terrorisé en utilisant des objets.",
+      [Lang.DE]: "Verhindert, dass Sie {{terror}} terrorisiert werden, während Sie Gegenstände verwenden.",
+      [Lang.ES]: "Evita que te {{terror}} aterroricen mientras usas objetos."
     },
     categories: [ItemCategory.Pharmacy, ItemCategory.RP],
     icon: "item_lilboo",
@@ -11382,16 +11556,16 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_alcool_#00"
+          },
+          {
             type: ItemActionEffectType.AP,
             value: 6
           },
           {
             type: ItemActionEffectType.AddStatus,
             value: "drunk"
-          },
-          {
-            type: ItemActionEffectType.GetPicto,
-            value: "r_alcool_#00"
           }
         ]
       }
@@ -12529,16 +12703,16 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_alcool_#00"
+          },
+          {
             type: ItemActionEffectType.AP,
             value: 6
           },
           {
             type: ItemActionEffectType.AddStatus,
             value: "drunk"
-          },
-          {
-            type: ItemActionEffectType.GetPicto,
-            value: "r_alcool_#00"
           }
         ]
       }
@@ -13219,16 +13393,16 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_alcool_#00"
+          },
+          {
             type: ItemActionEffectType.AP,
             value: 6
           },
           {
             type: ItemActionEffectType.AddStatus,
             value: "drunk"
-          },
-          {
-            type: ItemActionEffectType.GetPicto,
-            value: "r_alcool_#00"
           }
         ]
       }
@@ -13267,12 +13441,12 @@ export const items: Record<ItemId, Item> = {
         conditions: [],
         effects: [
           {
-            type: ItemActionEffectType.AddStatus,
-            value: "drugged"
-          },
-          {
             type: ItemActionEffectType.GetPicto,
             value: "r_drug_#00"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged"
           },
           {
             type: ItemActionEffectType.AP,

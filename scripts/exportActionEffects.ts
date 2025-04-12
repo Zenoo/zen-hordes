@@ -120,9 +120,15 @@ export const exportActionEffects = async () => {
     home_kitchen_success: { type: "spawn", data: "dish_tasty_#00" },
     home_kitchen_failure: { type: "spawn", data: "dish_#00" },
     // Clones
-    drug_addict_no_msg: effectsList["drug_addict"] ? { ...effectsList["drug_addict"] } : undefined,
-    infect: effectsList["infect_no_msg"] ? { ...effectsList["infect_no_msg"] } : undefined,
-    kill_1_zombie: effectsList["kill_1_zombie_s"] ? { ...effectsList["kill_1_zombie_s"] } : undefined,
+    drug_addict_no_msg: effectsList["drug_addict"]
+      ? { ...effectsList["drug_addict"] }
+      : undefined,
+    infect: effectsList["infect_no_msg"]
+      ? { ...effectsList["infect_no_msg"] }
+      : undefined,
+    kill_1_zombie: effectsList["kill_1_zombie_s"]
+      ? { ...effectsList["kill_1_zombie_s"] }
+      : undefined,
   };
 
   // Spawn effects
@@ -336,7 +342,12 @@ export const exportActionEffects = async () => {
       type: "spawn",
       data: [
         {
-          items: ["deto_#00", "metal_bad_#00", "pile_broken_#00", "electro_#00"],
+          items: [
+            "deto_#00",
+            "metal_bad_#00",
+            "pile_broken_#00",
+            "electro_#00",
+          ],
           odds: null,
         },
       ],
@@ -345,7 +356,12 @@ export const exportActionEffects = async () => {
       type: "spawn",
       data: [
         {
-          items: ["deto_#00", "metal_bad_#00", "pile_broken_#00", "electro_#00"],
+          items: [
+            "deto_#00",
+            "metal_bad_#00",
+            "pile_broken_#00",
+            "electro_#00",
+          ],
           odds: null,
         },
       ],
@@ -423,14 +439,24 @@ export const exportActionEffects = async () => {
     },
   };
 
-  const effects: Partial<Record<string, {
-    type: string;
-    data: unknown;
-  }>> = {
+  const effects: Partial<
+    Record<
+      string,
+      {
+        type: string;
+        data: unknown;
+      }
+    >
+  > = {
     ...effectsList,
     ...additionalEffects,
     ...spawnEffets,
   };
+
+  // Overwrite some effects
+  if (effects["kill_all_zombie"]) {
+    effects["kill_all_zombie"].data = 99;
+  }
 
   // Save items to a file
   fs.writeFileSync(

@@ -1013,5 +1013,32 @@ export const recipes: Recipe[] = [
     out: [
       { item: ItemId.FRUIT, infected: true }
     ],
+  },
+  {
+    type: RecipeType.ExplorableRuinDoor,
+    in: [
+      { item: ItemId.KEYMOL }
+    ],
+    out: [
+      { item: ItemId.PRINTS }
+    ],
+  },
+  {
+    type: RecipeType.ExplorableRuinDoor,
+    in: [
+      { item: ItemId.KEYMOL }
+    ],
+    out: [
+      { item: ItemId.PRINTS_01 }
+    ],
+  },
+  {
+    type: RecipeType.ExplorableRuinDoor,
+    in: [
+      { item: ItemId.KEYMOL }
+    ],
+    out: [
+      { item: ItemId.PRINTS_02 }
+    ],
   }
 ];

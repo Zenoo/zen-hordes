@@ -888,7 +888,7 @@
   },
   "kill_all_zombie": {
     "type": "kills",
-    "data": 999999
+    "data": 99
   },
   "zone_kill_punch": {
     "type": "kills",

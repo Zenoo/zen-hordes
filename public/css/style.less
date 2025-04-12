@@ -620,7 +620,7 @@ body.zen-map-preview-enabled {
     right: 0;
     width: 12px;
     height: 7px;
-    background-image: url(https://zenoo.github.io/zen-hordes/icons/count-green.png);
+    background-image: url(https://zenoo.github.io/zen-hordes/icons/count.png);
     display: inline-block;
     vertical-align: middle;
     overflow: hidden;
@@ -654,9 +654,10 @@ body.zen-map-preview-enabled {
   // Mixin to generate background positions for range numbers
   .generate-range-numbers(@start, @end) when (@start < @end) {
     @range: "@{start}-@{end}"; // Create the range string
-    @index: (@start - 1) * 9+(@end - @start) - 1; // Calculate the index of the range
-    @x: mod(@index, 10) * -12px; // X position based on column (modulo 10)
-    @y: floor((@index / 10)) * -7px - 140px; // Y position based on row, offset by 20 rows (140px)
+    // X position based on end
+    @x: (@end - @start - 1) * -12px;
+    // Y position based on start, offset by 20 rows (140px)
+    @y: -140px + (@start - 1) * -7px;
 
     &[data-zen-amount="@{range}"]::before {
       background-position: @x @y;
@@ -830,7 +831,7 @@ body.zen-map-preview-enabled {
 
         .input,
         .output {
-          img[data-type="item"] {
+          img[data-type="item"], [data-type="building"] {
             cursor: pointer;
           }
         }

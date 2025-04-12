@@ -1,3 +1,4 @@
+import { BuildingId, buildings } from "../data/buildings";
 import { Item, ItemId, items } from "../data/items";
 import { PictoId, pictos } from "../data/pictos";
 import { Recipe, recipes } from "../data/recipes";
@@ -14,6 +15,7 @@ const T: Translations = {
     [`action-type.${ItemActionType.Use}`]: "Use",
     [`action-type.${ItemActionType.Death}`]: "Death",
     [`action-type.${ItemActionType.Steal}`]: "Steal",
+    [`action-type.${ItemActionType.Butcher}`]: "Butcher",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Assemble",
     [`recipe-type.${RecipeType.ManualInside}`]: "Assemble (inside)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Assemble (outside)",
@@ -44,6 +46,7 @@ const T: Translations = {
     [`action-type.${ItemActionType.Use}`]: "Utiliser",
     [`action-type.${ItemActionType.Death}`]: "Mort",
     [`action-type.${ItemActionType.Steal}`]: "Voler",
+    [`action-type.${ItemActionType.Butcher}`]: "Découper",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Assembler",
     [`recipe-type.${RecipeType.ManualInside}`]: "Assembler (intérieur)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Assembler (extérieur)",
@@ -74,6 +77,7 @@ const T: Translations = {
     [`action-type.${ItemActionType.Use}`]: "Usar",
     [`action-type.${ItemActionType.Death}`]: "Muerte",
     [`action-type.${ItemActionType.Steal}`]: "Robar",
+    [`action-type.${ItemActionType.Butcher}`]: "Desollar",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Ensamblar",
     [`recipe-type.${RecipeType.ManualInside}`]: "Ensamblar (interior)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Ensamblar (exterior)",
@@ -104,6 +108,7 @@ const T: Translations = {
     [`action-type.${ItemActionType.Use}`]: "Benutzen",
     [`action-type.${ItemActionType.Death}`]: "Tod",
     [`action-type.${ItemActionType.Steal}`]: "Stehlen",
+    [`action-type.${ItemActionType.Butcher}`]: "Zerlegen",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Zusammenbauen",
     [`recipe-type.${RecipeType.ManualInside}`]: "Zusammenbauen (innen)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Zusammenbauen (außen)",
@@ -245,13 +250,16 @@ const getActionTypeIcon = (action: ItemAction) => {
       return "icons/small_next.gif";
     case ItemActionType.Steal:
       return "emotes/thief.gif";
+    case ItemActionType.Butcher:
+      return "pictos/r_animal.gif";
     default:
       return "icons/item/item_broken.gif";
   }
 };
 
 type DisplayedIcon = {
-  id?: ItemId;
+  id?: ItemId | BuildingId;
+  type?: string;
   icon: string;
   amount?: number | string;
   text?: string;
@@ -297,11 +305,11 @@ const convertEffectToDisplayedItem = (effect: ItemActionEffect) => {
       break;
     }
     case ItemActionEffectType.Ghoulify: {
-      displayedIcon.icon = "role/ghoul.gif";
+      displayedIcon.icon = "roles/ghoul.gif";
       break;
     }
     case ItemActionEffectType.UnGhoulify: {
-      displayedIcon.icon = "role/ghoul.gif";
+      displayedIcon.icon = "roles/ghoul.gif";
       displayedIcon.crossed = true;
       break;
     }
@@ -320,11 +328,16 @@ const convertEffectToDisplayedItem = (effect: ItemActionEffect) => {
       }
 
       displayedIcon.id = item.id;
+      displayedIcon.type = "item";
       displayedIcon.icon = `icons/item/${item.icon}.gif`;
+
+      if (effect.count) {
+        displayedIcon.amount = effect.count.toString().split("-")[0];
+      }
       break;
     }
     case ItemActionEffectType.ReduceGhoulHunger: {
-      displayedIcon.icon = "role/ghoul.gif";
+      displayedIcon.icon = "roles/ghoul.gif";
       displayedIcon.amount = effect.value;
       break;
     }
@@ -350,7 +363,16 @@ const convertEffectToDisplayedItem = (effect: ItemActionEffect) => {
       break;
     }
     case ItemActionEffectType.UnlockBuilding: {
-      displayedIcon.icon = `building/${effect.value}.gif`;
+      const building = buildings[effect.value as BuildingId];
+
+      if (!building) {
+        throw new Error(`Building not found: ${effect.value}`);
+      }
+
+      displayedIcon.icon = `building/${building.icon}.gif`;
+      displayedIcon.title = building.name[store["hordes-lang"]];
+      displayedIcon.id = building.id;
+      displayedIcon.type = "building";
       break;
     }
     case ItemActionEffectType.RemoveRuinDebris: {
@@ -435,6 +457,7 @@ const createLine = (
     // Recipe
     inputIcons = data.in.map((inItem) => ({
       id: items[inItem.item].id,
+      type: "item",
       icon: `icons/item/${items[inItem.item].icon}.gif`,
       text: inItem.odds?.toString(),
       infected: inItem.infected,
@@ -469,11 +492,19 @@ const createLine = (
             case ItemActionCondition.HaveBattery:
               displayedIcon.icon = "icons/item/item_pile.gif";
               displayedIcon.id = ItemId.PILE;
+              displayedIcon.type = "item";
               displayedIcon.title = undefined;
               break;
             case ItemActionCondition.HaveSteak:
               displayedIcon.icon = "icons/item/item_meat.gif";
               displayedIcon.id = ItemId.MEAT;
+              displayedIcon.type = "item";
+              displayedIcon.title = undefined;
+              break;
+            case ItemActionCondition.HaveWater:
+              displayedIcon.icon = "icons/item/item_water.gif";
+              displayedIcon.id = ItemId.WATER;
+              displayedIcon.type = "item";
               displayedIcon.title = undefined;
               break;
             case ItemActionCondition.Shaman:
@@ -487,6 +518,7 @@ const createLine = (
 
     inputIcons.push({
       id: items[item.id].id,
+      type: "item",
       icon: `icons/item/${items[item.id].icon}.gif`,
     });
   }
@@ -496,16 +528,18 @@ const createLine = (
     inputCell.append(wrapper);
     const inputImg = document.createElement("img");
     inputImg.src = `${ASSETS}/${inputIcon.icon}`;
-    inputImg.title =
-      inputIcon.title ??
-      (inputIcon.id ? items[inputIcon.id].name[store["hordes-lang"]] : "");
+    inputImg.title = inputIcon.title ?? "";
+
     if (inputIcon.id) {
-      inputImg.setAttribute("data-type", "item");
+      inputImg.setAttribute("data-type", inputIcon.type ?? "item");
       inputImg.setAttribute("data-id", inputIcon.id);
-      inputImg.setAttribute(
-        "title",
-        items[inputIcon.id].name[store["hordes-lang"]]
-      );
+      if (inputIcon.type === "building") {
+        inputImg.title =
+          buildings[inputIcon.id as BuildingId].name[store["hordes-lang"]];
+      } else if (inputIcon.type === "item") {
+        inputImg.title =
+          items[inputIcon.id as ItemId].name[store["hordes-lang"]];
+      }
     }
 
     // Highlight the item if it's the current item
@@ -573,6 +607,7 @@ const createLine = (
 
     outputIcons = data.out.map((outItem) => ({
       id: items[outItem.item].id,
+      type: "item",
       icon: `icons/item/${items[outItem.item].icon}.gif`,
       text: outItem.odds
         ? `${Math.round((outItem.odds / total) * 100)}%`
@@ -605,16 +640,18 @@ const createLine = (
     outputCell.append(wrapper);
     const output = document.createElement("img");
     output.src = `${ASSETS}/${outputIcon.icon}`;
-    output.title =
-      outputIcon.title ??
-      (outputIcon.id ? items[outputIcon.id].name[store["hordes-lang"]] : "");
+    output.title = outputIcon.title ?? "";
+
     if (outputIcon.id) {
-      output.setAttribute("data-type", "item");
+      output.setAttribute("data-type", outputIcon.type ?? "item");
       output.setAttribute("data-id", outputIcon.id);
-      output.setAttribute(
-        "title",
-        items[outputIcon.id].name[store["hordes-lang"]]
-      );
+      if (outputIcon.type === "building") {
+        output.title =
+          buildings[outputIcon.id as BuildingId].name[store["hordes-lang"]];
+      } else if (outputIcon.type === "item") {
+        output.title =
+          items[outputIcon.id as ItemId].name[store["hordes-lang"]];
+      }
     }
 
     // Highlight the ingredient if it's the current item
@@ -623,7 +660,14 @@ const createLine = (
     }
 
     if (outputIcon.text) {
-      wrapper.setAttribute("data-text", outputIcon.text);
+      // Ignore 100% except for SURV_BOOK and SOUL_BLUE
+      if (
+        outputIcon.text !== "100%" ||
+        item.id === ItemId.SURV_BOOK ||
+        item.id === ItemId.SOUL_BLUE
+      ) {
+        wrapper.setAttribute("data-text", outputIcon.text);
+      }
     }
 
     if (outputIcon.amount) {
@@ -654,6 +698,10 @@ const createLine = (
 };
 
 const getIconSource = (icon: string) => {
+  if (icon.startsWith("item:")) {
+    return `icons/item/item_${icon.slice(5)}.gif`;
+  }
+
   switch (icon) {
     case "EP":
       return `icons/ep_small${
@@ -675,6 +723,8 @@ const getIconSource = (icon: string) => {
       return `icons/sp_small${
         store["hordes-lang"] !== Lang.DE ? `_${store["hordes-lang"]}` : ""
       }.gif`;
+    case "terror":
+      return "status/status_terror.gif";
   }
 
   return icon;
@@ -811,9 +861,10 @@ export const insertBetterTooltips = (node: HTMLElement) => {
           } else {
             const total = ruin.drops.reduce((acc, drop) => acc + drop.odds, 0);
 
-            span.textContent = `${
-              ruin.name[store["hordes-lang"]]
-            } (${+((odds / total) * 100).toFixed(1)}%)`;
+            span.textContent = `${ruin.name[store["hordes-lang"]]} (${+(
+              (odds / total) *
+              100
+            ).toFixed(1)}%)`;
           }
 
           ruinDropTag.append(span);

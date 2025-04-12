@@ -516,6 +516,39 @@ export const insertWiki = () => {
         behavior: "smooth",
       });
     }
+
+    // Click on building
+    if (
+      target.tagName === "IMG" &&
+      target.getAttribute("data-type") === "building"
+    ) {
+      updateWiki(
+        {
+          search: "",
+          tab: "buildings",
+        },
+        true
+      );
+
+      // Scroll to the item
+      const scrollable = target.closest(".zen-wiki") as HTMLElement | null;
+      const item = scrollable?.querySelector(
+        `.zen-wiki-item[data-type="building"][data-id="${target.getAttribute(
+          "data-id"
+        )}"]`
+      ) as HTMLElement | null;
+      if (!item) {
+        console.error("Building not found in wiki", target.getAttribute("data-id"));
+        return;
+      }
+
+      item.classList.add("clicked");
+
+      scrollable?.scrollTo({
+        top: item.offsetTop - scrollable.offsetTop,
+        behavior: "smooth",
+      });
+    }
   });
 
   // Close button

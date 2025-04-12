@@ -59,6 +59,7 @@ declare global {
     Use,
     Death,
     Steal,
+    Butcher,
   }
 
   const enum ItemActionCondition {
@@ -71,6 +72,7 @@ declare global {
     Dehydrated,
     HaveBattery,
     HaveSteak,
+    HaveWater,
     Shaman,
   }
 

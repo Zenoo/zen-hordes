@@ -17,6 +17,18 @@ const survivalistBookChances = [
   { period: "20-99", odds: 50 },
 ];
 
+const blueSoulTurnChances = [
+  { nights: 1, odds: 10 },
+  { nights: 2, odds: 25 },
+  { nights: 3, odds: 50 },
+  { nights: 4, odds: 75 },
+  { nights: 5, odds: 100 },
+];
+
+/**
+ * Overwrite item data with custom values
+ * Each case is a specific item id
+ */
 export const overwriteItemData = (items: Record<string, Item>) => {
   for (const item of Object.values(items)) {
     switch (item.id) {
@@ -521,6 +533,93 @@ export const overwriteItemData = (items: Record<string, Item>) => {
           fr: "Il peut être utilisé en cas de gueule de bois ou déjà ivre, contrairement aux autres alcools.",
           es: "Se puede usar cuando tienes resaca o ya estás borracho, a diferencia de otros alcoholes.",
           de: "Im Gegensatz zu anderen Alkoholen kann es bei einem Kater oder bereits betrunkenem Zustand konsumiert werden.",
+        };
+        break;
+      }
+      case "lilboo_#00": {
+        // info
+        item.info = {
+          en: "Prevents you from becoming {{terror}} terrorised while using items.",
+          fr: "Vous empêche d'être {{terror}} terrorisé en utilisant des objets.",
+          de: "Verhindert, dass Sie {{terror}} terrorisiert werden, während Sie Gegenstände verwenden.",
+          es: "Evita que te {{terror}} aterroricen mientras usas objetos.",
+        };
+        break;
+      }
+      case "trapma_#00": {
+        // info
+        item.info = {
+          en: "At home, injures or kills an already injured thief.",
+          fr: "À la maison, blesse ou tue un voleur déjà blessé.",
+          de: "Zu Hause verletzt oder tötet einen bereits verletzten Dieb.",
+          es: "En casa, hiere o mata a un ladrón ya herido.",
+        };
+        break;
+      }
+      case "scope_#00": {
+        // info
+        item.info = {
+          en: "Halves the number of citizens required to estimate the attack. This effect does not stack.",
+          fr: "Divise par deux le nombre de citoyens nécessaires pour estimer l'attaque. Cet effet ne s'accumule pas.",
+          de: "Halbiert die Anzahl der Bürger, die erforderlich sind, um den Angriff zu schätzen. Dieser Effekt ist nicht stapelbar.",
+          es: "Reduce a la mitad el número de ciudadanos necesarios para estimar el ataque. Este efecto no se acumula.",
+        };
+        break;
+      }
+      case "guitar_#00": {
+        // info
+        item.info = {
+          en: "Using it gives every citizen in town 1{{AP}} (2{{AP}} if drunk or drugged).",
+          fr: "L'utiliser donne à chaque citoyen de la ville 1{{AP}} (2{{AP}} si ivre ou drogué).",
+          de: "Die Verwendung gibt jedem Bürger in der Stadt 1{{AP}} (2{{AP}} wenn betrunken oder unter Drogen).",
+          es: "Usarlo le da a cada ciudadano de la ciudad 1{{AP}} (2{{AP}} si está borracho o drogado).",
+        };
+        break;
+      }
+      case "soul_blue_#01": {
+        // Private town only
+        item.categories.push("PrivateTown");
+        break;
+      }
+      case "soul_blue_#00": {
+        // Use
+        item.actions.push({
+          type: ItemActionType.Use,
+          conditions: [],
+          effects: blueSoulTurnChances.map((data) => ({
+            type: ItemActionEffectType.CreateItem,
+            value: "soul_red_#00",
+            odds: data.odds,
+            count: data.nights,
+          })),
+        });
+
+        // info
+        item.info = {
+          en: "If not purified, it will turn into a {{item:soul_red}} Tortured Soul after X nights (no matter where it is).",
+          fr: "Si elle n'est pas purifiée, elle se transformera en une {{item:soul_red}} Âme torturée après X nuits (peu importe où elle se trouve).",
+          de: "Wenn sie nicht gereinigt wird, verwandelt sie sich nach X Nächten (egal wo sie sich befindet) in eine {{item:soul_red}} Gequälte Seele.",
+          es: "Si no se purifica, se convertirá en un {{item:soul_red}} Alma Torturada después de X noches (sin importar dónde esté).",
+        };
+        break;
+      }
+      case "bplan_drop_#00": {
+        // info
+        item.info = {
+          en: "A maximum of 3 can be found townwide per day",
+          fr: "Un maximum de 3 peut être trouvé dans toute la ville par jour",
+          de: "Maximal 3 können pro Tag in der Stadt gefunden werden",
+          es: "Se puede encontrar un máximo de 3 en toda la ciudad por día",
+        };
+        break;
+      }
+      case "bplan_box_e_#00": {
+        // info
+        item.info = {
+          en: "Two of them are scattered in random zones 9-21km away from the town.",
+          fr: "Deux d'entre eux sont éparpillés dans des zones aléatoires à 9-21 km de la ville.",
+          de: "Zwei davon sind in zufälligen Zonen 9–21 km von der Stadt entfernt verstreut.",
+          es: "Dos de ellos están esparcidos en zonas aleatorias a 9-21 km de la ciudad.",
         };
         break;
       }

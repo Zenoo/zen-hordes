@@ -31,6 +31,7 @@ export enum ItemActionType {
   Use,
   Death,
   Steal,
+  Butcher,
 }
 
 export enum ItemActionCondition {
@@ -43,6 +44,7 @@ export enum ItemActionCondition {
   Dehydrated,
   HaveBattery,
   HaveSteak,
+  HaveWater,
   Shaman,
 }
 
@@ -272,6 +274,9 @@ const generateItems = async () => {
     if (actionId.startsWith("open_")) {
       return ItemActionType.Open;
     }
+    if (action?.meta.includes("must_have_slaughter")) {
+      return ItemActionType.Butcher;
+    }
 
     return ItemActionType.Use;
   };
@@ -290,6 +295,9 @@ const generateItems = async () => {
     }
     if (action?.meta.includes("have_battery")) {
       conditions.push(ItemActionCondition.HaveBattery);
+    }
+    if (action?.meta.includes("have_water")) {
+      conditions.push(ItemActionCondition.HaveWater);
     }
     // Well fed labradoodle exclusive
     if (action?.meta.includes("must_have_drug")) {
@@ -627,6 +635,7 @@ const generateItems = async () => {
           if (Array.isArray(data)) {
             // If { items: string[], odds?: number, count?: number }
             if (data[0]?.items) {
+              let totalOdds = 0;
               const grouped = data.reduce<[string, number, number][]>(
                 (acc, innerData) => {
                   if (Array.isArray(innerData.items)) {
@@ -636,15 +645,19 @@ const generateItems = async () => {
                       count?: number;
                     };
                     const count = currentInnerData.count ?? 1;
-                    const odds = currentInnerData.odds ?? (100 / currentInnerData.items.length);
+                    const innerOdds =
+                      currentInnerData.odds ??
+                      100 / currentInnerData.items.length;
 
                     currentInnerData.items.forEach((item) => {
                       const existingItem = acc.find((i) => i[0] === item);
 
+                      totalOdds += innerOdds;
+
                       if (existingItem) {
-                        existingItem[2] += odds;
+                        existingItem[2] += innerOdds;
                       } else {
-                        acc.push([item, count, odds]);
+                        acc.push([item, count, innerOdds]);
                       }
                     });
                     return acc;
@@ -655,14 +668,16 @@ const generateItems = async () => {
                 []
               );
 
-              grouped.forEach(([item, count, odds]) => {
+              grouped.forEach(([item, count, innerOdds]) => {
                 effects.push(
                   ...Array(count)
                     .fill(0)
                     .map(() => ({
                       type: ItemActionEffectType.CreateItem,
                       value: item,
-                      odds: Math.round(odds),
+                      odds: _odds
+                        ? Math.round((innerOdds / totalOdds) * _odds)
+                        : Math.round((innerOdds / totalOdds) * 100),
                     }))
                 );
               });
@@ -1079,8 +1094,26 @@ const generateItems = async () => {
     // Order item action effects
     item.actions.forEach((action) => {
       action.effects.sort((a, b) => {
-        if (a.type === ItemActionEffectType.CreateItem && b.type === ItemActionEffectType.CreateItem) {
-          // Order by odds
+        // Pictos first
+        if (
+          a.type === ItemActionEffectType.GetPicto &&
+          b.type !== ItemActionEffectType.GetPicto
+        ) {
+          return -1;
+        }
+
+        if (
+          a.type !== ItemActionEffectType.GetPicto &&
+          b.type === ItemActionEffectType.GetPicto
+        ) {
+          return 1;
+        }
+
+        // Order by item odds
+        if (
+          a.type === ItemActionEffectType.CreateItem &&
+          b.type === ItemActionEffectType.CreateItem
+        ) {
           if (a.odds && b.odds) {
             return b.odds - a.odds;
           }
@@ -1183,7 +1216,7 @@ const generateItems = async () => {
             .map(
               (effect) => `{
             type: ItemActionEffectType.${ItemActionEffectType[effect.type]}${
-                (typeof effect.value !== "undefined")
+                typeof effect.value !== "undefined"
                   ? `,\n            value: ${
                       typeof effect.value === "string"
                         ? `"${effect.value}"`

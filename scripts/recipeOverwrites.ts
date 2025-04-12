@@ -113,4 +113,21 @@ export const overwriteRecipeData = (
   if (soulYellowRecipe) {
     soulYellowRecipe.pictos = ["r_mystic2_#00"];
   }
+
+  // Prints recipe
+  recipes.push({
+    type: RecipeType.ExplorableRuinDoor,
+    in: [{ item: "keymol_#00" }],
+    out: [{ item: "prints_#00" }],
+  });
+  recipes.push({
+    type: RecipeType.ExplorableRuinDoor,
+    in: [{ item: "keymol_#00" }],
+    out: [{ item: "prints_#01" }],
+  });
+  recipes.push({
+    type: RecipeType.ExplorableRuinDoor,
+    in: [{ item: "keymol_#00" }],
+    out: [{ item: "prints_#02" }],
+  });
 };
