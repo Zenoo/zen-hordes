@@ -12032,7 +12032,7 @@ export const items: Record<ItemId, Item> = {
           },
           {
             type: ItemActionEffectType.CreateItem,
-            value: "christmas_candy_#00",
+            value: "rp_letter_#00",
             odds: 100
           }
         ]
@@ -12067,7 +12067,7 @@ export const items: Record<ItemId, Item> = {
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
-            value: "xmas_gift_#00",
+            value: "watergun_opt_5_#00",
             odds: 100
           }
         ]

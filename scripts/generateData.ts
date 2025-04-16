@@ -12,6 +12,7 @@ import { exportActionEffects } from "./exportActionEffects";
 import { overwriteItemData } from "./itemOverwrites";
 import { overwriteRecipeData } from "./recipeOverwrites";
 import { overwriteRuinData } from "./ruinOverwrites";
+import { exportRuinDataFromWiki } from "./exportRuinDataFromWiki";
 
 const CONFIG = {
   callApi: false,
@@ -1290,7 +1291,10 @@ export type Ruin = {
   name: Record<Lang, string>;
   description: Record<Lang, string>;
   icon: string;
-  campingModifier: number;
+  camping: {
+    baseValue: number;
+    spots: number;
+  };
   spawnChance: number;
   emptyChance: number;
   km: {
@@ -1328,7 +1332,7 @@ const sanitizeRuinId = (building: Ruin) => {
     .toUpperCase();
 };
 
-const generateRuins = (items: Record<number, Item>) => {
+const generateRuins = async (items: Record<number, Item>) => {
   const ruins: Record<number, Ruin> = {};
 
   languages.forEach((lang) => {
@@ -1348,7 +1352,10 @@ const generateRuins = (items: Record<number, Item>) => {
           name: {} as Record<Lang, string>,
           description: {} as Record<Lang, string>,
           icon: "",
-          campingModifier: 0,
+          camping: {
+            baseValue: 0,
+            spots: 0,
+          },
           spawnChance: 0,
           emptyChance: 0,
           km: {
@@ -1366,6 +1373,11 @@ const generateRuins = (items: Record<number, Item>) => {
       }
       building.name[lang] = ruinData.name.replace(/"/g, '\\"');
       building.description[lang] = ruinData.desc.replace(/"/g, '\\"');
+
+      // Fix typo
+      if (lang === Lang.EN && ruinData.id === 42) {
+        building.name.en = "Smugglers' Cache";
+      }
     });
   });
 
@@ -1395,7 +1407,7 @@ const generateRuins = (items: Record<number, Item>) => {
     }
 
     ruin.icon = ruinData.icon;
-    ruin.campingModifier = ruinData.camping;
+    ruin.camping.baseValue = ruinData.camping;
     ruin.spawnChance = ruinData.chance;
     ruin.emptyChance = ruinData.empty;
     ruin.drops = Object.entries(ruinData.drops).map(([itemId, dropData]) => {
@@ -1426,6 +1438,40 @@ const generateRuins = (items: Record<number, Item>) => {
     }
   });
 
+  // Export ruin data from the wiki
+  const wikiRuinsData = await exportRuinDataFromWiki();
+
+  // Update with wiki data
+  Object.values(wikiRuinsData).forEach((ruinData) => {
+    const ruin = Object.values(ruins).find(
+      (b) => b.name.en.toLowerCase() === ruinData.name?.toLowerCase()
+    );
+    if (!ruin) {
+      throw new Error(`Ruin with name ${ruinData.name} not found`);
+    }
+
+    if (ruinData.km.min !== ruin.km.min) {
+      console.log(
+        `Updated km.min for ${ruin.name.en} from ${ruin.km.min} to ${ruinData.km.min}`
+      );
+      ruin.km.min = ruinData.km.min;
+    }
+    if (ruinData.km.max !== ruin.km.max) {
+      console.log(
+        `Updated km.max for ${ruin.name.en} from ${ruin.km.max} to ${ruinData.km.max}`
+      );
+      ruin.km.max = ruinData.km.max;
+    }
+    if (ruinData.camping.baseValue !== ruin.camping.baseValue) {
+      console.log(
+        `Updated camping.baseValue for ${ruin.name.en} from ${ruin.camping.baseValue} to ${ruinData.camping.baseValue}`
+      );
+      ruin.camping.baseValue = ruinData.camping.baseValue;
+    }
+
+    ruin.camping.spots = ruinData.camping.slots;
+  });
+
   overwriteRuinData(ruins);
 
   const ruinIdEnum = `export enum RuinId {
@@ -1443,7 +1489,10 @@ export type Ruin = {
   name: Record<Lang, string>;
   description: Record<Lang, string>;
   icon: string;
-  campingModifier: number,
+  camping: {
+    baseValue: number;
+    spots: number;
+  };
   spawnChance: number,
   emptyChance: number,
   km: {
@@ -1477,7 +1526,10 @@ export type Ruin = {
         .join(",\n      ")}
     },
     icon: "${building.icon}",
-    campingModifier: ${building.campingModifier},
+    camping: {
+      baseValue: ${building.camping.baseValue},
+      spots: ${building.camping.spots}
+    },
     spawnChance: ${building.spawnChance},
     emptyChance: ${building.emptyChance},
     km: {
@@ -2039,9 +2091,9 @@ ${pictosObject}`;
   }
 
   const items = await generateItems();
-  generateRuins(items);
+  await generateRuins(items);
   generateRecipes(items);
-  generateBuildings(items);
+  await generateBuildings(items);
   generatePictos();
 
   console.log("Data generation completed.");

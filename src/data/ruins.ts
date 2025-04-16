@@ -73,7 +73,10 @@ export type Ruin = {
   name: Record<Lang, string>;
   description: Record<Lang, string>;
   icon: string;
-  campingModifier: number,
+  camping: {
+    baseValue: number;
+    spots: number;
+  };
   spawnChance: number,
   emptyChance: number,
   km: {
@@ -104,7 +107,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Aquí vivió un habitante que se instaló en el desierto, pensando empezar una nueva vida, lejos de la traición y de las intrigas de sus compañeros. <strong>La mitad de su cuerpo aún está tirado en un rincón</strong>."
     },
     icon: "home",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 686,
     emptyChance: 0.25,
     km: {
@@ -162,7 +168,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Ahí se encuentran muchos productos de limpieza. Los más desfavorecidos encontrarán algo de comer..."
     },
     icon: "albi",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 3
+    },
     spawnChance: 686,
     emptyChance: 0.05,
     km: {
@@ -224,7 +233,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "El típico caso de un hombre que se mete en una cueva huyendo de una turba de zombies. Todo bien hasta allí, hasta que el hombre recuerda que tenía 2 zombies abrazados a su espalda. El pobre gritó de todo menos «Por favor»."
     },
     icon: "cave",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 184,
     emptyChance: 0.1,
     km: {
@@ -302,7 +314,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Esta bomba hidráulica está bastante corroída y tiene aún la capacidad de extraer agua en el desierto... Si llegas a hacerla funcionar, el agua <strong>no será potable</strong> y deberá ser <strong>purificada en el pueblo</strong> con los productos necesarios."
     },
     icon: "pump",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 1
+    },
     spawnChance: 401,
     emptyChance: 0.1,
     km: {
@@ -352,7 +367,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Un antiguo taller de reparación de bicicletas repleta de herramientas y chatarra de todo tipo."
     },
     icon: "bike",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 159,
     emptyChance: 0.25,
     km: {
@@ -402,7 +420,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Esta plataforma ferroviaria se dedicaba a la distribución de mercancías. Ya que estás aquí, ¿por qué no echarle un vistazo?"
     },
     icon: "freight",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 3
+    },
     spawnChance: 464,
     emptyChance: 0.1,
     km: {
@@ -460,7 +481,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Entre los cuerpos regados en los pasillos de este hospital improvisado se encuentran pacientes, enfermeras y víctimas del ataque... Es difícil saber cuántos hay. ¿Tal vez contando la cantidad de brazos y dividiéndolas entre dos?"
     },
     icon: "hospital",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 4
+    },
     spawnChance: 205,
     emptyChance: 0.1,
     km: {
@@ -530,7 +554,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Lo único que vuela en este lugar son las moscas. Tal vez hurgando en el depósito encuentres algo útil. Algo como un Boeing 747 que funcione."
     },
     icon: "aerodrome",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 5
+    },
     spawnChance: 129,
     emptyChance: 0.1,
     km: {
@@ -608,7 +635,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Este impresionante edificio se extiende por varios cientos de metros. Posee numerosas habitaciones, la mayoría de las cuales se han derrumbado casi por completo. La gran cantidad de agujeros de bala en las paredes y las barricadas improvisadas sugieren que el edificio fue escenario de feroces combates hace ya un tiempo."
     },
     icon: "police",
-    campingModifier: 30,
+    camping: {
+      baseValue: 30,
+      spots: 4
+    },
     spawnChance: 640,
     emptyChance: 0.1,
     km: {
@@ -714,7 +744,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "El número en la puerta no se distingue bien... Pero se puede notar que se trata del <strong>Refugio 14</strong>. Viendo el estado de los cadáveres en su interior, todo indica que el sistema de cierre del Portal <strong>no funcionó correctamente</strong>. Suele pasar..."
     },
     icon: "bunker",
-    campingModifier: 50,
+    camping: {
+      baseValue: 50,
+      spots: 5
+    },
     spawnChance: 499,
     emptyChance: 0.1,
     km: {
@@ -808,7 +841,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "El lugar de moda en el desierto, famoso por la Toro-Cola, la especialidad de la casa preparada con hormonas animales."
     },
     icon: "cafe",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 3
+    },
     spawnChance: 320,
     emptyChance: 0.1,
     km: {
@@ -874,7 +910,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "En una época, fue una parada obligatoria en la A-667. Apreciado por su variedad de carnes, a pesar de su olor a orina y las ratas muertas en los rincones. Es una pena que ya no haya restaurantes así..."
     },
     icon: "autobahn",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 460,
     emptyChance: 0.33,
     km: {
@@ -952,7 +991,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Un modelo común de <strong>automóvil familiar</strong> empotrado en otro modelo común de <strong>furgoneta</strong>... Este choque debió provocar un <strong>accidente</strong> de gran envergadura a juzgar por la cadena de coches semi-destruidos que se encuentran alrededor."
     },
     icon: "cars",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 304,
     emptyChance: 0.1,
     km: {
@@ -1026,7 +1068,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Este extraño bar se encuentra detrás de una colina y nadie se había dado cuenta de su existencia. El interior está decorado con muchísimas fotos en blanco y negro, en todas ellas hay un hombre vestido con un traje a rayas junto a diversas personas."
     },
     icon: "bar2",
-    campingModifier: 20,
+    camping: {
+      baseValue: 10,
+      spots: 3
+    },
     spawnChance: 41,
     emptyChance: 0.1,
     km: {
@@ -1084,7 +1129,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Un paraíso para los amantes de las tuercas y destornilladores... Su eslogan sigue siendo vigente: « Más barato, imposible »"
     },
     icon: "obi",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 409,
     emptyChance: 0.1,
     km: {
@@ -1194,7 +1242,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Un gran container de metal en medio del desierto. Aquí debió haber gente tabajando, pero hoy no queda nada más que esta \"cabaña\"."
     },
     icon: "container",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 1
+    },
     spawnChance: 475,
     emptyChance: 0.05,
     km: {
@@ -1288,7 +1339,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "¿Tienes ganas de comer algo rico? ¡Ni se te ocurra venir aquí! o será el propio cocinero quien saldrá a devorarte!"
     },
     icon: "doner",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 181,
     emptyChance: 0.1,
     km: {
@@ -1362,7 +1416,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "El hogar de un tal Duke R. Cooke, y si puedes creer en la placa en la puerta... un hogar para héroes... ¡Este lugar es mucho más grande que una mansión, es una fortaleza completamente equipada!"
     },
     icon: "duke",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 3
+    },
     spawnChance: 148,
     emptyChance: 0.1,
     km: {
@@ -1436,7 +1493,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Los restos <strong>carbonizados</strong> de un bosque. Antes debió ser un lugar agradable... Hoy, sería una pesadilla perderse en él."
     },
     icon: "woods",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 70,
     emptyChance: 0,
     km: {
@@ -1502,7 +1562,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Una antigua mina destruida seguramente por la avaricia de sus trabajadores. ¿Pero qué interés tendrían de excavar tan profundo? Sobre todo cuando escarbando en el suelo se encuentran deliciosas cucarachas. \"Por cierto, ya es hora de la merienda\" te dices..."
     },
     icon: "mine",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 341,
     emptyChance: 0.1,
     km: {
@@ -1552,7 +1615,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Una <strong>zona de extracción de minerales</strong> que lleva las marcas de un <strong>terrible accidente</strong>: toda una ladera se <strong>derrumbó</strong> sobre la gente, las máquinas y los edificios."
     },
     icon: "quarry",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 71,
     emptyChance: 0.3,
     km: {
@@ -1610,7 +1676,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Parece un enorme disco metálico de lo que pudo haber sido una trilladora acgrícola..."
     },
     icon: "ufo",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 1
+    },
     spawnChance: 15,
     emptyChance: 0.1,
     km: {
@@ -1656,7 +1725,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Estas enormes tiendas solían estar en todos los pueblos (siempre a las afueras, en el peor lugar posible). Se especializaron en la fabricación y venta de muebles baratos, que en su mayoría carecían de tornillos. Se dice que la mala calidad de sus productos fue una de las razones del declive de la sociedad..."
     },
     icon: "ekea",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 3
+    },
     spawnChance: 242,
     emptyChance: 0.1,
     km: {
@@ -1730,7 +1802,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Una <strong>cripta familiar</strong> decadente. Apenas se distingue la entrada detrás de la <strong>vegetación descompuesta</strong>. Los <strong>cadáveres</strong> salieron temprano..."
     },
     icon: "tomb",
-    campingModifier: -15,
+    camping: {
+      baseValue: -15,
+      spots: 1
+    },
     spawnChance: 68,
     emptyChance: 0.1,
     km: {
@@ -1776,7 +1851,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Un olor atroz a cadáver sale de este edificio. La carne guardada se ha transformado en <strong>montículos de podredumbre blanca</strong> que comenzó a gelatinizarse..."
     },
     icon: "mczombie",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 710,
     emptyChance: 0.1,
     km: {
@@ -1842,7 +1920,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Este avión comercial se estrelló en medio del desierto... Es difícil saber lo que transportaba, la arena ha cubierto casi todo. La presencia de asientos hace pensar que habían pasajeros, pero no hay rastro de cuerpos..."
     },
     icon: "plane",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 155,
     emptyChance: 0.1,
     km: {
@@ -1956,7 +2037,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "En medio de lo que fue un parque encuentras una pequeña cabaña. La puerta se abre fácilmente, revelando estantes con herramientas de todo tipo."
     },
     icon: "shed",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 1
+    },
     spawnChance: 624,
     emptyChance: 0.05,
     km: {
@@ -2046,7 +2130,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Este gran terreno de escombros fue seguramente un enorme centro comercial, de esos que tenían gente circulando como hormigas. Hoy no queda más que eso: insectos y otros bichos... Debe contener más de un tesoro."
     },
     icon: "supermarket",
-    campingModifier: 0,
+    camping: {
+      baseValue: 0,
+      spots: 4
+    },
     spawnChance: 466,
     emptyChance: 0.1,
     km: {
@@ -2168,7 +2255,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Una especie de <strong>gruta</strong> que debió servir como sepulcro o refugio... Su interior presenta una <strong>oscuridad total</strong>, el aire es <strong>glacial</strong> y huele a <strong>carroña</strong>."
     },
     icon: "cave2",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 1
+    },
     spawnChance: 73,
     emptyChance: 0.1,
     km: {
@@ -2222,7 +2312,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Un antiguo cementerio cubierto de arena y mala hierba. Es un lugar reconfortante, comparándolo con el pueblo..."
     },
     icon: "cemetary",
-    campingModifier: -50,
+    camping: {
+      baseValue: -50,
+      spots: 0
+    },
     spawnChance: 181,
     emptyChance: 0.2,
     km: {
@@ -2272,7 +2365,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Este lugar es una bendición... Aquí podrás encontrar lo necesario para equiparte con juguetes de plástico y otras cosas indispensables."
     },
     icon: "fair",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 215,
     emptyChance: 0.1,
     km: {
@@ -2354,7 +2450,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Una vieja casa abandonada que se tambalea con el viento. Está llena de arena. A veces puedes oir <strong>algo que se mueve</strong> en lo que sería el sótano..."
     },
     icon: "house",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 1
+    },
     spawnChance: 381,
     emptyChance: 0.1,
     km: {
@@ -2440,7 +2539,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Esta central extrae el agua de las capas freáticas y la deposita en un reservorio de concreto. El <strong>sistema de filtrado parece no funcionar</strong>, pero se debe poder recuperar el agua contaminada que se encuentra almacenada aquí."
     },
     icon: "water",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 472,
     emptyChance: 0.1,
     km: {
@@ -2486,7 +2588,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Este frío edificio sirvió alguna vez para elaborar cosméticos y probarlos en animales. Los cadáveres de las ratas tienen la piel llena de brotes asquerosos. Esperas no haber usado nunca una de esas cremas..."
     },
     icon: "lab",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 180,
     emptyChance: 0.1,
     km: {
@@ -2568,7 +2673,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Una ambulancia detenida en medio de la vía. Ya no tiene ruedas ni motor... No hay huellas de pelea, ni de accidente. Tampoco encuentras cuerpos..."
     },
     icon: "ambulance",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 1
+    },
     spawnChance: 183,
     emptyChance: 0.1,
     km: {
@@ -2622,7 +2730,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "El depósito de una gran tienda que quebró hace mucho tiempo. Es lo que hace pensar la cantidad de cuerpos colgados en el hangar número 2. Supones que fue un suicidio colectivo de los miembros del consejo de dirección, pero el hecho de que tengan las manos atadas te deja perplejo."
     },
     icon: "warehouse",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 5
+    },
     spawnChance: 219,
     emptyChance: 0.1,
     km: {
@@ -2684,7 +2795,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Un estacionamiento subterráneo cubierto de arena. Ideal para <strong>morir en la oscuridad</strong>, sin que nadie te escuche..."
     },
     icon: "carpark",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 335,
     emptyChance: 0.1,
     km: {
@@ -2758,7 +2872,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Metafóricamente sería: <strong>Una lata de sardinas</strong> en manos de una centena de zombies hambrientos. Y de la sardina no quedó nada..."
     },
     icon: "tank",
-    campingModifier: 20,
+    camping: {
+      baseValue: 20,
+      spots: 1
+    },
     spawnChance: 83,
     emptyChance: 0.1,
     km: {
@@ -2840,7 +2957,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Te preguntas a quién se le podría ocurrir venir a alojarse en un hostal tan lejano y miserable... Mirando el registro de huéspedes, sí hay alguien: Un tal Valedres, en la habitación 215. Tal vez valga la pena explorar..."
     },
     icon: "motel",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 5
+    },
     spawnChance: 292,
     emptyChance: 0.1,
     km: {
@@ -2910,7 +3030,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Soldados armados hasta los dientes, entrenamientos diarios, provisiones y perímetro de seguridad de 150m. Todo estaba bien preparado, solo que no contaban con que el general los devorase a todos una noche de abril..."
     },
     icon: "army",
-    campingModifier: 20,
+    camping: {
+      baseValue: 20,
+      spots: 5
+    },
     spawnChance: 212,
     emptyChance: 0.1,
     km: {
@@ -2976,7 +3099,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "El edificio resistió bien el paso del tiempo. Además de reliquias del servicio postal, no crees encontrar nada interesante, a menos que te guste leer..."
     },
     icon: "post",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 177,
     emptyChance: 0.15,
     km: {
@@ -3031,7 +3157,7 @@ export const ruins: Record<RuinId, Ruin> = {
   [RuinId.SMUGGLERS_CACHE]: {
     id: RuinId.SMUGGLERS_CACHE,
     name: {
-      [Lang.EN]: "Once-inhabited Cave",
+      [Lang.EN]: "Smugglers' Cache",
       [Lang.FR]: "Cache de contrebandiers",
       [Lang.DE]: "Räuberhöhle",
       [Lang.ES]: "Escondite de contrabandistas"
@@ -3043,7 +3169,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Un hoyo <strong>se esconde</strong> en el suelo detrás de tablas y arena. Lleva a una caverna húmeda llena de <strong>cachivaches</strong> acumulados probablemente con los <strong>robos a un pueblo vecino</strong>. Quién sabe si <strong>tu pueblo</strong> se construyó con base en objetos robados. Puede ser que los <strong>primeros habitantes</strong> hayan sido los autores de todo esto..."
     },
     icon: "cave3",
-    campingModifier: 15,
+    camping: {
+      baseValue: 15,
+      spots: 2
+    },
     spawnChance: 196,
     emptyChance: 0.25,
     km: {
@@ -3097,7 +3226,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Los numerosos <strong>cráteres</strong> y <strong>manchas de sangre seca</strong> hacen pensar que una <strong>gran batalla</strong> tuvo lugar aquí. La mayoría de las trincheras fueron saqueadas, pero quedan aún <strong>algunas que pueden contener algo interesante</strong>."
     },
     icon: "trench",
-    campingModifier: 20,
+    camping: {
+      baseValue: 20,
+      spots: 2
+    },
     spawnChance: 216,
     emptyChance: 0.1,
     km: {
@@ -3139,7 +3271,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Un pequeño edificio que servía de biblioteca para los vecinos. Hoy la mayoría de libros están quemados o rotos, el piso está lleno de hojas arrancadas y estanterías caídas."
     },
     icon: "dll",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 204,
     emptyChance: 0.05,
     km: {
@@ -3209,7 +3344,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Esta tienda vendía todo tipo de productos de consumo diario: comida, bebidas, productos de limpieza... Abierto las 24 horas, los 7 días de la semana, según lo que dice en la entrada. La puerta destrozada le da la razón."
     },
     icon: "emma",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 1
+    },
     spawnChance: 913,
     emptyChance: 0.05,
     km: {
@@ -3291,7 +3429,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Un buen día los pobladores salieron a hacer una excursión por el desierto en este bus cantando alegremente: «Vamo' pa' la playa, pa' curarte el alma», pero cuando cantaron la famosa canción de The Cranberries: «...in your head...zombie, zombie... » Una turba de muertos vivientes se unió al coro... dejando 40 muertos."
     },
     icon: "mayor",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 1
+    },
     spawnChance: 81,
     emptyChance: 0.1,
     km: {
@@ -3341,7 +3482,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Un camión de la empresa rusa <strong>Transtwina</strong>. La cabina del conductor está totalmente <strong>encastrada en un árbol</strong>, pero los <strong>arañazos</strong> profundos en el asiento y la <strong>sangre</strong> en las paredes hacen pensar que no fue un accidente..."
     },
     icon: "lkw",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 1
+    },
     spawnChance: 177,
     emptyChance: 0,
     km: {
@@ -3415,7 +3559,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Era una escuela de niños muy pequeños, los dibujos en las paredes lo indican. El contraste con los restos de cuerpos humanos en el suelo es desolador. Por momentos te parece oir <strong>ecos de risas</strong> entre los escombros."
     },
     icon: "school",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 3
+    },
     spawnChance: 165,
     emptyChance: 0.1,
     km: {
@@ -3477,7 +3624,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "El edificio de una gran empresa donde la gente venía a trabajar, con compañeros anónimos y con un solo objetivo: sobrevivir. Vaya, las cosas no han cambiado mucho..."
     },
     icon: "office",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 4
+    },
     spawnChance: 519,
     emptyChance: 0.1,
     km: {
@@ -3567,7 +3717,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Alguien vivió aquí hace mucho tiempo. ¿Habrá tenido una familia que le amaba y un hogar feliz? Hoy no queda nada, solo polvo y una desolación total. De vez en cuando, un cadáver tiembla rechinando los dientes."
     },
     icon: "villa",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 3
+    },
     spawnChance: 338,
     emptyChance: 0.1,
     km: {
@@ -3681,7 +3834,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Te cuesta imaginar lo que se quiso construir aquí. ¿Una escuela, una prisión?... Solo las estructuras metálicas fueron testigos de ese <strong>misterioso proyecto</strong>."
     },
     icon: "construction",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 3
+    },
     spawnChance: 481,
     emptyChance: 0.1,
     km: {
@@ -3771,7 +3927,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "¡Gracias Frocoa! <strong>Un pozo</strong> totalmente perdido en medio del desierto y que además se ve muy bien. Nadie con un Registro en mano que te diga «oye, ¿A dónde vás, qué llevas? no tomes mucha agua...». Pero, shhhh, no se lo digas a nadie."
     },
     icon: "well",
-    campingModifier: -20,
+    camping: {
+      baseValue: -20,
+      spots: 1
+    },
     spawnChance: 221,
     emptyChance: 0.33,
     km: {
@@ -3809,7 +3968,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Este lugar debió servir para almacenar los granos. Pero con el tiempo, los depósitos se llenaron con agua de lluvia. Aquí podrías abastecerte."
     },
     icon: "silo",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 3
+    },
     spawnChance: 482,
     emptyChance: 0.08,
     km: {
@@ -3843,7 +4005,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Lo que sucedió aquí es <strong>incomprensible</strong>: una enorme <strong>roca</strong> cayó en medio del camino, como <strong>caída del cielo</strong>..."
     },
     icon: "street",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 1
+    },
     spawnChance: 42,
     emptyChance: 0.2,
     km: {
@@ -3905,7 +4070,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Un lugar de paz y serenidad... siempre y cuando estés armado para sobrevivir. La vegetación es <strong>siniestra</strong> y <strong>huele a muerte</strong>, <strong>criaturas</strong> indescriptibles se mueven entre las sombras... Sientes constantemente que algo horrible va a <strong>lanzarse sobre ti</strong> desde la maleza."
     },
     icon: "park",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 3
+    },
     spawnChance: 102,
     emptyChance: 0.2,
     km: {
@@ -3983,7 +4151,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Como un niño en una tienda de juguetes. Así se sienten los aficionados a los balazos en este lugar. Los agujeros en las paredes dicen mucho sobre el <strong>ambiente</strong> que se vivía aquí..."
     },
     icon: "guns",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 3
+    },
     spawnChance: 121,
     emptyChance: 0.25,
     km: {
@@ -4049,7 +4220,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Servía para almacenar los productos de un antiguo supermercado y <strong>su puerta resistió a los saqueos</strong>. Debe contener <strong>algunas cosillas</strong> interesantes..."
     },
     icon: "warehouse2",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 4
+    },
     spawnChance: 181,
     emptyChance: 0.2,
     km: {
@@ -4087,7 +4261,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Un buen escondite. El tipo que construyó esto sabía esconder muy bien su trasero de los zombies: Camuflaje natural, buena visibilidad de los alrededores desde el interior, varias posibilidades de escape y de esconderse bajo la tierra si fuese necesario. El nombre «Shenji» está bordado en la tela."
     },
     icon: "tent",
-    campingModifier: 30,
+    camping: {
+      baseValue: 30,
+      spots: 1
+    },
     spawnChance: 202,
     emptyChance: 0.05,
     km: {
@@ -4193,7 +4370,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Una pequeña farmacia de barrio perdida en medio del desierto. Los <strong>olores innombrables</strong> hacen pensar que aquí no solo habían medicamentos."
     },
     icon: "pharma",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 458,
     emptyChance: 0.1,
     km: {
@@ -4259,7 +4439,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Lo único que indica que se trata de un bar es el panel con el logo de una cerveza y la gran cantidad de <strong>botellas rotas</strong>. Algo interesante podrías encontrar aquí..."
     },
     icon: "bar",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 432,
     emptyChance: 0.2,
     km: {
@@ -4321,12 +4504,15 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Los bunkers son refugios antiguos construidos por los militares para contener la pandemia. Si los soldados en ese momento todavía fueran humanos, seguramente habrían aconsejado a sus oficiales que no trataran de \"educar\" a los primeros portadores del virus."
     },
     icon: "deserted_bunker",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 4
+    },
     spawnChance: 0,
     emptyChance: 1,
     km: {
       min: 5,
-      max: 28
+      max: 99
     },
     explorable: true,
     drops: [
@@ -4500,12 +4686,15 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Antiguos hoteles de lujo que acogieron a los ricos en alguna época, no mucho después el edificio fue atacado por las hordas de indigentes zombies infectados en las calles."
     },
     icon: "deserted_hotel",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 4
+    },
     spawnChance: 0,
     emptyChance: 1,
     km: {
       min: 5,
-      max: 28
+      max: 99
     },
     explorable: true,
     drops: [
@@ -4659,12 +4848,15 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Este edificio en ruinas parece haber sido un hospital. Descubres una entrada al edificio, te golpea un olor a humedad. Haces una mueca, pero es casi seguro que encontrarás algo útil aquí..."
     },
     icon: "deserted_hospital",
-    campingModifier: 10,
+    camping: {
+      baseValue: 10,
+      spots: 4
+    },
     spawnChance: 0,
     emptyChance: 1,
     km: {
       min: 5,
-      max: 28
+      max: 99
     },
     explorable: true,
     drops: [
@@ -4790,12 +4982,15 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "La tumba de ex-deportistas..."
     },
     icon: "sports_crow",
-    campingModifier: 0,
+    camping: {
+      baseValue: 10,
+      spots: 2
+    },
     spawnChance: 0,
     emptyChance: 0,
     km: {
-      min: 10,
-      max: 12
+      min: 8,
+      max: 13
     },
     explorable: false,
     drops: [
@@ -4876,7 +5071,10 @@ export const ruins: Record<RuinId, Ruin> = {
       [Lang.ES]: "Toda la zona está cubierta por una <strong>vegetación putrefacta</strong>, con <strong>arena</strong> y <strong>chatarra</strong> de todo tipo. Estás seguro de que algo se esconde aquí, pero habría que despejar todo el terreno para empezar una verdadera búsqueda..."
     },
     icon: "",
-    campingModifier: 0,
+    camping: {
+      baseValue: 0,
+      spots: 0
+    },
     spawnChance: 0,
     emptyChance: 0,
     km: {

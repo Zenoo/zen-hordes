@@ -1,0 +1,706 @@
+[
+  {
+    "name": "Abandoned Bunker",
+    "km": {
+      "min": 5,
+      "max": 99
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 4
+    }
+  },
+  {
+    "name": "Abandoned Construction Site",
+    "km": {
+      "min": 4,
+      "max": 7
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 3
+    }
+  },
+  {
+    "name": "Abandoned Hospital",
+    "km": {
+      "min": 5,
+      "max": 99
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 4
+    }
+  },
+  {
+    "name": "Abandoned Hotel",
+    "km": {
+      "min": 5,
+      "max": 99
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 4
+    }
+  },
+  {
+    "name": "Abandoned Park",
+    "km": {
+      "min": 4,
+      "max": 7
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 3
+    }
+  },
+  {
+    "name": "Abandoned Well",
+    "km": {
+      "min": 17,
+      "max": 20
+    },
+    "camping": {
+      "baseValue": -20,
+      "slots": 1
+    }
+  },
+  {
+    "name": "Ambulance",
+    "km": {
+      "min": 2,
+      "max": 5
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 1
+    }
+  },
+  {
+    "name": "Army Outpost",
+    "km": {
+      "min": 16,
+      "max": 19
+    },
+    "camping": {
+      "baseValue": 20,
+      "slots": 5
+    }
+  },
+  {
+    "name": "Blocked Road",
+    "km": {
+      "min": 4,
+      "max": 7
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 1
+    }
+  },
+  {
+    "name": "Broken-down Tank",
+    "km": {
+      "min": 21,
+      "max": 28
+    },
+    "camping": {
+      "baseValue": 20,
+      "slots": 1
+    }
+  },
+  {
+    "name": "Burnt School",
+    "km": {
+      "min": 3,
+      "max": 6
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 3
+    }
+  },
+  {
+    "name": "Cave",
+    "km": {
+      "min": 3,
+      "max": 6
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 1
+    }
+  },
+  {
+    "name": "Citizen's Home",
+    "km": {
+      "min": 1,
+      "max": 4
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Citizen's Tent",
+    "km": {
+      "min": 12,
+      "max": 15
+    },
+    "camping": {
+      "baseValue": 30,
+      "slots": 1
+    }
+  },
+  {
+    "name": "Collapsed Mineshaft",
+    "km": {
+      "min": 12,
+      "max": 15
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Collapsed Quarry",
+    "km": {
+      "min": 3,
+      "max": 6
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Construction Site Shelter",
+    "km": {
+      "min": 6,
+      "max": 9
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 1
+    }
+  },
+  {
+    "name": "Cosmetics Lab",
+    "km": {
+      "min": 2,
+      "max": 5
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Crows'fit Gym",
+    "km": {
+      "min": 8,
+      "max": 13
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Dark Woods",
+    "km": {
+      "min": 2,
+      "max": 5
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Derelict Villa",
+    "km": {
+      "min": 3,
+      "max": 6
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 3
+    }
+  },
+  {
+    "name": "Deserted Freight Yard",
+    "km": {
+      "min": 10,
+      "max": 13
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 3
+    }
+  },
+  {
+    "name": "Destroyed Pharmacy",
+    "km": {
+      "min": 4,
+      "max": 7
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Dilapidated Building",
+    "km": {
+      "min": 10,
+      "max": 13
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 4
+    }
+  },
+  {
+    "name": "Disused Car Park",
+    "km": {
+      "min": 3,
+      "max": 6
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Disused Silos",
+    "km": {
+      "min": 8,
+      "max": 11
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 3
+    }
+  },
+  {
+    "name": "Disused Warehouse",
+    "km": {
+      "min": 2,
+      "max": 5
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 4
+    }
+  },
+  {
+    "name": "Duke's Villa",
+    "km": {
+      "min": 12,
+      "max": 15
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 3
+    }
+  },
+  {
+    "name": "Equipped Trench",
+    "km": {
+      "min": 5,
+      "max": 8
+    },
+    "camping": {
+      "baseValue": 20,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Fairground Stall",
+    "km": {
+      "min": 5,
+      "max": 8
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Family Tomb",
+    "km": {
+      "min": 3,
+      "max": 6
+    },
+    "camping": {
+      "baseValue": -15,
+      "slots": 1
+    }
+  },
+  {
+    "name": "Fast Food Restaurant",
+    "km": {
+      "min": 6,
+      "max": 9
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Fraser D's Kebab-ish",
+    "km": {
+      "min": 3,
+      "max": 6
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Garden Shed",
+    "km": {
+      "min": 6,
+      "max": 9
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 1
+    }
+  },
+  {
+    "name": "Guns 'n' Zombies Armoury",
+    "km": {
+      "min": 5,
+      "max": 8
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 3
+    }
+  },
+  {
+    "name": "Home Depot",
+    "km": {
+      "min": 5,
+      "max": 8
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Indian Burial Ground",
+    "km": {
+      "min": 3,
+      "max": 6
+    },
+    "camping": {
+      "baseValue": -50,
+      "slots": 0
+    }
+  },
+  {
+    "name": "Looted Supermarket",
+    "km": {
+      "min": 4,
+      "max": 7
+    },
+    "camping": {
+      "baseValue": 0,
+      "slots": 4
+    }
+  },
+  {
+    "name": "Mac's Atomic Cafe",
+    "km": {
+      "min": 6,
+      "max": 9
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 3
+    }
+  },
+  {
+    "name": "Mini-Market",
+    "km": {
+      "min": 8,
+      "max": 11
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 1
+    }
+  },
+  {
+    "name": "Motel 666 Dusk",
+    "km": {
+      "min": 12,
+      "max": 15
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 5
+    }
+  },
+  {
+    "name": "Motorway Services",
+    "km": {
+      "min": 8,
+      "max": 11
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Nuclear Bunker",
+    "km": {
+      "min": 10,
+      "max": 13
+    },
+    "camping": {
+      "baseValue": 50,
+      "slots": 5
+    }
+  },
+  {
+    "name": "Old Aerodrome",
+    "km": {
+      "min": 12,
+      "max": 15
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 5
+    }
+  },
+  {
+    "name": "Old Bicycle Hire Shop",
+    "km": {
+      "min": 4,
+      "max": 7
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Old Field Hospital",
+    "km": {
+      "min": 16,
+      "max": 19
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 4
+    }
+  },
+  {
+    "name": "Old Hydraulic Pump",
+    "km": {
+      "min": 3,
+      "max": 6
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 1
+    }
+  },
+  {
+    "name": "Old Police Station",
+    "km": {
+      "min": 6,
+      "max": 9
+    },
+    "camping": {
+      "baseValue": 30,
+      "slots": 4
+    }
+  },
+  {
+    "name": "Once-inhabited Cave",
+    "km": {
+      "min": 16,
+      "max": 19
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "PI-KEYA Furniture",
+    "km": {
+      "min": 4,
+      "max": 7
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 3
+    }
+  },
+  {
+    "name": "Plane Crash Site",
+    "km": {
+      "min": 4,
+      "max": 7
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Post Office",
+    "km": {
+      "min": 8,
+      "max": 11
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Scottish Smith's Superstore",
+    "km": {
+      "min": 6,
+      "max": 9
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 3
+    }
+  },
+  {
+    "name": "Shady Bar",
+    "km": {
+      "min": 5,
+      "max": 8
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Small House",
+    "km": {
+      "min": 2,
+      "max": 5
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 1
+    }
+  },
+  {
+    "name": "Smugglers' Cache",
+    "km": {
+      "min": 2,
+      "max": 5
+    },
+    "camping": {
+      "baseValue": 15,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Strange Circular Device",
+    "km": {
+      "min": 21,
+      "max": 28
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 1
+    }
+  },
+  {
+    "name": "The 'Mayor-Mobile'",
+    "km": {
+      "min": 16,
+      "max": 19
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 1
+    }
+  },
+  {
+    "name": "The 'Shattered Illusions' Bar",
+    "km": {
+      "min": 21,
+      "max": 28
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 3
+    }
+  },
+  {
+    "name": "Town Library",
+    "km": {
+      "min": 6,
+      "max": 9
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Warehouse",
+    "km": {
+      "min": 15,
+      "max": 18
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 5
+    }
+  },
+  {
+    "name": "Water Processing Plant",
+    "km": {
+      "min": 5,
+      "max": 8
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Wrecked Cars",
+    "km": {
+      "min": 3,
+      "max": 6
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 2
+    }
+  },
+  {
+    "name": "Wrecked Transporter",
+    "km": {
+      "min": 2,
+      "max": 5
+    },
+    "camping": {
+      "baseValue": 10,
+      "slots": 1
+    }
+  }
+]

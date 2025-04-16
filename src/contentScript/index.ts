@@ -15,6 +15,7 @@ import { insertWiki, openItemInWiki } from "./wiki";
 
 // Initialize the store
 await initStore();
+// TODO: Read drop data from ItemGroupDataService.php and display it in items tooltips
 // TODO: Implement rotating items in tooltips (repairable items, etc)
 // TODO: Add better tooltips toggle to settings
 // TODO: Reset first water ration on death page display

@@ -280,11 +280,11 @@ export const exportActionEffects = async () => {
     },
     spawn_xmas_2: {
       type: "spawn",
-      data: [{ items: ["christmas_candy_#00"], odds: null }],
+      data: [{ items: ["rp_letter_#00"], odds: null }],
     },
     spawn_xmas_1: {
       type: "spawn",
-      data: [{ items: ["xmas_gift_#00"], odds: null }],
+      data: [{ items: ["watergun_opt_5_#00"], odds: null }],
     },
     spawn_matbox: {
       type: "spawn",

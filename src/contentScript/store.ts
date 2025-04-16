@@ -21,6 +21,7 @@ export const store = {
   "better-tooltips": true,
   "shaman-souls-button": true,
   "wiki": true,
+  "camping-calculator": true,
   // Bank blocker state
   "bank-items-taken": 0,
   "last-bank-item-taken": Date.now(),
