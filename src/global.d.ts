@@ -1,3 +1,5 @@
+import { ItemId } from "./data/items";
+
 declare global {
   // Extension types
   const enum Action {
@@ -62,7 +64,7 @@ declare global {
     Butcher,
   }
 
-  const enum ItemActionCondition {
+  const enum ItemActionConditionEnum {
     Ghoul,
     BrokenItem,
     Technician,
@@ -70,13 +72,13 @@ declare global {
     OnARuin,
     Thirsty,
     Dehydrated,
-    HaveBattery,
-    HaveSteak,
-    HaveWater,
-    HaveMicropur,
     Shaman,
     Inside,
   }
+
+  type ItemActionCondition = ItemActionConditionEnum | {
+    item: ItemId;
+  };
 
   const enum ItemActionEffectType {
     AP,

@@ -3,7 +3,7 @@
 
 import {
   Item,
-  ItemActionCondition,
+  ItemActionConditionEnum,
   ItemActionEffectType,
   ItemActionType,
 } from "./generateData";
@@ -92,7 +92,7 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         // Use on a ruin
         item.actions.push({
           type: ItemActionType.Use,
-          conditions: [ItemActionCondition.OnARuin],
+          conditions: [ItemActionConditionEnum.OnARuin],
           effects: [
             {
               type: ItemActionEffectType.CreateItem,
@@ -122,7 +122,7 @@ export const overwriteItemData = (items: Record<string, Item>) => {
             },
             {
               type: ItemActionType.Use,
-              conditions: [ItemActionCondition.Thirsty],
+              conditions: [ItemActionConditionEnum.Thirsty],
               effects: [
                 {
                   type: ItemActionEffectType.EP,
@@ -136,7 +136,7 @@ export const overwriteItemData = (items: Record<string, Item>) => {
             },
             {
               type: ItemActionType.Use,
-              conditions: [ItemActionCondition.Dehydrated],
+              conditions: [ItemActionConditionEnum.Dehydrated],
               effects: [
                 {
                   type: ItemActionEffectType.EP,
@@ -445,7 +445,7 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         // WATER -> POTION
         item.actions.push({
           type: ItemActionType.Use,
-          conditions: [ItemActionCondition.Shaman],
+          conditions: [ItemActionConditionEnum.Shaman],
           effects: [
             {
               type: ItemActionEffectType.MP,

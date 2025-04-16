@@ -29,13 +29,13 @@ const T: Translations = {
     [`event.${GameEvent.Halloween}`]: "Halloween",
     [`event.${GameEvent.Christmas}`]: "Christmas",
     [`event.${GameEvent.NewYear}`]: "New Year",
-    [`condition.${ItemActionCondition.Ghoul}`]: "Ghoul",
-    [`condition.${ItemActionCondition.Technician}`]: "Technician",
-    [`condition.${ItemActionCondition.OnARuin}`]: "On a ruin",
-    [`condition.${ItemActionCondition.Thirsty}`]: "Thirsty",
-    [`condition.${ItemActionCondition.Dehydrated}`]: "Dehydrated",
-    [`condition.${ItemActionCondition.Shaman}`]: "Shaman",
-    [`condition.${ItemActionCondition.Inside}`]: "Inside",
+    [`condition.${ItemActionConditionEnum.Ghoul}`]: "Ghoul",
+    [`condition.${ItemActionConditionEnum.Technician}`]: "Technician",
+    [`condition.${ItemActionConditionEnum.OnARuin}`]: "On a ruin",
+    [`condition.${ItemActionConditionEnum.Thirsty}`]: "Thirsty",
+    [`condition.${ItemActionConditionEnum.Dehydrated}`]: "Dehydrated",
+    [`condition.${ItemActionConditionEnum.Shaman}`]: "Shaman",
+    [`condition.${ItemActionConditionEnum.Inside}`]: "Inside",
     foundIn: "Found in",
     unavailable: "Not available anymore",
     privateTownOnly: "Can only be found in private towns",
@@ -62,13 +62,13 @@ const T: Translations = {
     [`event.${GameEvent.Halloween}`]: "Halloween",
     [`event.${GameEvent.Christmas}`]: "Noël",
     [`event.${GameEvent.NewYear}`]: "Nouvel An",
-    [`condition.${ItemActionCondition.Ghoul}`]: "Ghoul",
-    [`condition.${ItemActionCondition.Technician}`]: "Technicien",
-    [`condition.${ItemActionCondition.OnARuin}`]: "Sur un bâtiment",
-    [`condition.${ItemActionCondition.Thirsty}`]: "Assoiffé",
-    [`condition.${ItemActionCondition.Dehydrated}`]: "Déshydraté",
-    [`condition.${ItemActionCondition.Shaman}`]: "Chaman",
-    [`condition.${ItemActionCondition.Inside}`]: "À l'intérieur",
+    [`condition.${ItemActionConditionEnum.Ghoul}`]: "Ghoul",
+    [`condition.${ItemActionConditionEnum.Technician}`]: "Technicien",
+    [`condition.${ItemActionConditionEnum.OnARuin}`]: "Sur un bâtiment",
+    [`condition.${ItemActionConditionEnum.Thirsty}`]: "Assoiffé",
+    [`condition.${ItemActionConditionEnum.Dehydrated}`]: "Déshydraté",
+    [`condition.${ItemActionConditionEnum.Shaman}`]: "Chaman",
+    [`condition.${ItemActionConditionEnum.Inside}`]: "À l'intérieur",
     foundIn: "Trouvé dans",
     unavailable: "N'est plus disponible",
     privateTownOnly: "Peut uniquement être trouvé dans les villes privées",
@@ -95,13 +95,13 @@ const T: Translations = {
     [`event.${GameEvent.Halloween}`]: "Halloween",
     [`event.${GameEvent.Christmas}`]: "Navidad",
     [`event.${GameEvent.NewYear}`]: "Año Nuevo",
-    [`condition.${ItemActionCondition.Ghoul}`]: "Ghoul",
-    [`condition.${ItemActionCondition.Technician}`]: "Técnico",
-    [`condition.${ItemActionCondition.OnARuin}`]: "En un edificio",
-    [`condition.${ItemActionCondition.Thirsty}`]: "Sediento",
-    [`condition.${ItemActionCondition.Dehydrated}`]: "Deshidratado",
-    [`condition.${ItemActionCondition.Shaman}`]: "Chaman",
-    [`condition.${ItemActionCondition.Inside}`]: "Dentro",
+    [`condition.${ItemActionConditionEnum.Ghoul}`]: "Ghoul",
+    [`condition.${ItemActionConditionEnum.Technician}`]: "Técnico",
+    [`condition.${ItemActionConditionEnum.OnARuin}`]: "En un edificio",
+    [`condition.${ItemActionConditionEnum.Thirsty}`]: "Sediento",
+    [`condition.${ItemActionConditionEnum.Dehydrated}`]: "Deshidratado",
+    [`condition.${ItemActionConditionEnum.Shaman}`]: "Chaman",
+    [`condition.${ItemActionConditionEnum.Inside}`]: "Dentro",
     foundIn: "Encontrado en",
     unavailable: "Ya no disponible",
     privateTownOnly: "Solo se puede encontrar en ciudades privadas",
@@ -128,13 +128,13 @@ const T: Translations = {
     [`event.${GameEvent.Halloween}`]: "Halloween",
     [`event.${GameEvent.Christmas}`]: "Weihnachten",
     [`event.${GameEvent.NewYear}`]: "Neujahr",
-    [`condition.${ItemActionCondition.Ghoul}`]: "Ghoul",
-    [`condition.${ItemActionCondition.Technician}`]: "Techniker",
-    [`condition.${ItemActionCondition.OnARuin}`]: "Auf einem Gebäude",
-    [`condition.${ItemActionCondition.Thirsty}`]: "Durstig",
-    [`condition.${ItemActionCondition.Dehydrated}`]: "Dehydriert",
-    [`condition.${ItemActionCondition.Shaman}`]: "Schamane",
-    [`condition.${ItemActionCondition.Inside}`]: "Drinnen",
+    [`condition.${ItemActionConditionEnum.Ghoul}`]: "Ghoul",
+    [`condition.${ItemActionConditionEnum.Technician}`]: "Techniker",
+    [`condition.${ItemActionConditionEnum.OnARuin}`]: "Auf einem Gebäude",
+    [`condition.${ItemActionConditionEnum.Thirsty}`]: "Durstig",
+    [`condition.${ItemActionConditionEnum.Dehydrated}`]: "Dehydriert",
+    [`condition.${ItemActionConditionEnum.Shaman}`]: "Schamane",
+    [`condition.${ItemActionConditionEnum.Inside}`]: "Drinnen",
     foundIn: "Gefunden in",
     unavailable: "Nicht mehr verfügbar",
     privateTownOnly: "Kann nur in privaten Städten gefunden werden",
@@ -165,18 +165,55 @@ const findItem = (node: HTMLElement) => {
   }
 
   return Object.values(items).find((item) => {
-    return (
-      item.name[store["hordes-lang"]] ===
-        node.querySelector("h1")?.textContent?.trim() &&
-      (/item\/(.+)\..+\.gif/.exec(
-        (node.querySelector("h1 img") as HTMLImageElement | undefined)?.src ??
-          ""
-      )?.[1] ?? "") === item.icon
-    );
+    // Remove and store .broken span from h1
+    const broken = node.querySelector("h1 span.broken");
+    if (broken) {
+      broken.remove();
+    }
+
+    // Check if the item name matches the h1 text
+    const itemName = item.name[store["hordes-lang"]];
+    const h1Text = node.querySelector("h1")?.textContent?.trim() ?? "";
+
+    if (itemName !== h1Text) {
+      // Restore the .broken span
+      if (broken) {
+        node.querySelector("h1 img")?.before(broken);
+      }
+
+      return false;
+    }
+
+    // Check if the item icon matches the h1 img src
+    const imgSrc = (
+      node.querySelector("h1 img") as HTMLImageElement | undefined
+    )?.src;
+    const iconMatch = imgSrc
+      ? /item\/(.+)\..+\.gif/.exec(imgSrc)?.[1] ?? ""
+      : "";
+
+    if (iconMatch !== item.icon) {
+      // Restore the .broken span
+      if (broken) {
+        node.querySelector("h1 img")?.before(broken);
+      }
+
+      return false;
+    }
+
+    // Restore the .broken span
+    if (broken) {
+      node.querySelector("h1 img")?.before(broken);
+    }
+
+    return true;
   });
 };
 
-const findRecipes = (item: Item) => {
+const findRecipes = (item: Item, broken: boolean) => {
+  // No recipes for broken items
+  if (broken) return [];
+
   return recipes.filter((recipe) => {
     return (
       recipe.in.some((inItem) => inItem.item === item.id) ||
@@ -185,7 +222,10 @@ const findRecipes = (item: Item) => {
   });
 };
 
-const findItemsWithRelatedActions = (item: Item) => {
+const findItemsWithRelatedActions = (item: Item, broken: boolean) => {
+  // No actions for broken items
+  if (broken) return [];
+
   return Object.values(items)
     .filter((otherItem) => {
       // Ignore the current item
@@ -248,7 +288,7 @@ const getActionTypeIcon = (action: ItemAction) => {
     case ItemActionType.Drink:
       return "icons/actions/drink.gif";
     case ItemActionType.Open:
-      if (action.conditions.includes(ItemActionCondition.BoxOpener)) {
+      if (action.conditions.includes(ItemActionConditionEnum.BoxOpener)) {
         return "icons/item/item_can_opener.gif";
       }
       return "icons/small_next.gif";
@@ -275,6 +315,7 @@ type DisplayedIcon = {
   checked?: boolean;
   infected?: boolean;
   poisoned?: boolean;
+  broken?: boolean;
   title?: string;
   classList?: string[];
 };
@@ -452,7 +493,8 @@ const convertEffectToDisplayedItem = (effect: ItemActionEffect) => {
 const createLine = (
   currentItemId: ItemId,
   item: Item,
-  data: Recipe | ItemAction
+  data: Recipe | ItemAction,
+  broken?: boolean,
 ) => {
   const line = document.createElement("tr");
 
@@ -476,59 +518,54 @@ const createLine = (
     // Item action
     inputIcons.push(
       ...data.conditions
-        .filter((condition) => condition !== ItemActionCondition.BoxOpener)
+        .filter((condition) => condition !== ItemActionConditionEnum.BoxOpener)
         .map((condition) => {
           const displayedIcon: DisplayedIcon = {
             icon: "icons/item/item_broken.gif",
-            title: t(T, `condition.${condition}`),
+            title:
+              typeof condition === "object"
+                ? undefined
+                : t(T, `condition.${condition}`),
           };
 
           switch (condition) {
-            case ItemActionCondition.Technician:
+            case ItemActionConditionEnum.Technician:
               displayedIcon.icon = "professions/tech.gif";
               break;
-            case ItemActionCondition.Ghoul:
+            case ItemActionConditionEnum.Ghoul:
               displayedIcon.icon = "roles/ghoul.gif";
               break;
-            case ItemActionCondition.OnARuin:
+            case ItemActionConditionEnum.OnARuin:
               displayedIcon.icon = "emotes/ruin.gif";
               break;
-            case ItemActionCondition.Thirsty:
+            case ItemActionConditionEnum.Thirsty:
               displayedIcon.icon = "status/status_thirst1.gif";
               break;
-            case ItemActionCondition.Dehydrated:
+            case ItemActionConditionEnum.Dehydrated:
               displayedIcon.icon = "status/status_thirst2.gif";
               break;
-            case ItemActionCondition.HaveBattery:
-              displayedIcon.icon = "icons/item/item_pile.gif";
-              displayedIcon.id = ItemId.PILE;
-              displayedIcon.type = "item";
-              displayedIcon.title = undefined;
-              break;
-            case ItemActionCondition.HaveSteak:
-              displayedIcon.icon = "icons/item/item_meat.gif";
-              displayedIcon.id = ItemId.MEAT;
-              displayedIcon.type = "item";
-              displayedIcon.title = undefined;
-              break;
-            case ItemActionCondition.HaveWater:
-              displayedIcon.icon = "icons/item/item_water.gif";
-              displayedIcon.id = ItemId.WATER;
-              displayedIcon.type = "item";
-              displayedIcon.title = undefined;
-              break;
-            case ItemActionCondition.HaveMicropur:
-              displayedIcon.icon = "icons/item/item_water_cleaner.gif";
-              displayedIcon.id = ItemId.WATER_CLEANER;
-              displayedIcon.type = "item";
-              displayedIcon.title = undefined;
-              break;
-            case ItemActionCondition.Shaman:
+            case ItemActionConditionEnum.Shaman:
               displayedIcon.icon = "roles/shaman.gif";
               break;
-            case ItemActionCondition.Inside:
+            case ItemActionConditionEnum.Inside:
               displayedIcon.icon = "icons/small_home.gif";
               break;
+            default:
+              if (typeof condition !== "object") {
+                console.log("Unknown condition:", condition);
+              }
+              break;
+          }
+
+          // Items
+          if (typeof condition === "object") {
+            const conditionItem = items[condition.item];
+            if (conditionItem) {
+              displayedIcon.id = conditionItem.id;
+              displayedIcon.type = "item";
+              displayedIcon.icon = `icons/item/${conditionItem.icon}.gif`;
+              displayedIcon.title = undefined;
+            }
           }
 
           return displayedIcon;
@@ -539,6 +576,7 @@ const createLine = (
       id: items[item.id].id,
       type: "item",
       icon: `icons/item/${items[item.id].icon}.gif`,
+      broken,
     });
   }
 
@@ -588,6 +626,10 @@ const createLine = (
 
     if (inputIcon.poisoned) {
       wrapper.classList.add("poisoned");
+    }
+
+    if (inputIcon.broken) {
+      wrapper.classList.add("broken");
     }
 
     wrapper.append(inputImg);
@@ -679,7 +721,7 @@ const createLine = (
     }
 
     // Highlight the ingredient if it's the current item
-    if (outputIcon.id === currentItemId) {
+    if (outputIcon.id === currentItemId && !broken) {
       output.classList.add("highlight");
     }
 
@@ -915,8 +957,9 @@ export const insertBetterTooltips = (node: HTMLElement) => {
     }
 
     // Recipes/Actions
-    const itemRecipes = findRecipes(item);
-    const relatedItems = findItemsWithRelatedActions(item);
+    const isBroken = !!node.querySelector("h1 span.broken");
+    const itemRecipes = findRecipes(item, isBroken);
+    const relatedItems = findItemsWithRelatedActions(item, isBroken);
     if (!itemRecipes.length && !item.actions.length && !relatedItems.length) {
       return;
     }
@@ -930,9 +973,43 @@ export const insertBetterTooltips = (node: HTMLElement) => {
       tbody.append(createLine(item.id, item, recipe));
     });
 
+    // Special actions for broken items
+    const itemActions: ItemAction[] = isBroken
+      ? [
+          {
+            type: ItemActionType.Use,
+            conditions: [{ item: ItemId.REPAIR_ONE }],
+            effects: [
+              { type: ItemActionEffectType.AP, value: -1 },
+              { type: ItemActionEffectType.CreateItem, value: item.id },
+            ],
+          },
+          {
+            type: ItemActionType.Use,
+            conditions: [{ item: ItemId.REPAIR_KIT }],
+            effects: [
+              { type: ItemActionEffectType.AP, value: -1 },
+              {
+                type: ItemActionEffectType.CreateItem,
+                value: ItemId.REPAIR_KIT_PART,
+              },
+              { type: ItemActionEffectType.CreateItem, value: item.id },
+            ],
+          },
+          {
+            type: ItemActionType.Use,
+            conditions: [ItemActionConditionEnum.Technician],
+            effects: [
+              { type: ItemActionEffectType.CP, value: -3 },
+              { type: ItemActionEffectType.CreateItem, value: item.id },
+            ],
+          },
+        ]
+      : item.actions;
+
     // Add a row for each action
-    item.actions.forEach((action) => {
-      tbody.append(createLine(item.id, item, action));
+    itemActions.forEach((action) => {
+      tbody.append(createLine(item.id, item, action, isBroken || undefined));
     });
 
     // Add a row for each related action

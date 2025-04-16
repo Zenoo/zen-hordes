@@ -1,5 +1,6 @@
 import { blockBank } from "./bankBlocker";
 import { insertBetterTooltips } from "./betterTooltips";
+import { displayCampingCalculator } from "./campingCalculator";
 import { displayExternalCityLinks } from "./externalCityLink";
 import { displayUpdateButton } from "./externalSiteUpdater";
 import { offHover } from "./hooks/offHover";
@@ -38,6 +39,7 @@ onMount((node) => {
   displayUpdateButton(node);
   insertBetterTooltips(node);
   displayShamanSoulsButton(node);
+  displayCampingCalculator(node);
 });
 
 // Actions that need to be performed on hover

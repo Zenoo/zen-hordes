@@ -35,7 +35,7 @@ export enum ItemActionType {
   Butcher,
 }
 
-export enum ItemActionCondition {
+export enum ItemActionConditionEnum {
   Ghoul,
   BrokenItem,
   Technician,
@@ -43,13 +43,15 @@ export enum ItemActionCondition {
   OnARuin,
   Thirsty,
   Dehydrated,
-  HaveBattery,
-  HaveSteak,
-  HaveWater,
-  HaveMicropur,
   Shaman,
   Inside,
 }
+
+export type ItemActionCondition =
+  | ItemActionConditionEnum
+  | {
+      item: string;
+    };
 
 export enum ItemActionEffectType {
   AP,
@@ -291,29 +293,29 @@ const generateItems = async () => {
     const conditions: ItemActionCondition[] = [];
 
     if (action?.meta.includes("profession_tech")) {
-      conditions.push(ItemActionCondition.Technician);
+      conditions.push(ItemActionConditionEnum.Technician);
     }
     if (action?.meta.includes("role_ghoul")) {
-      conditions.push(ItemActionCondition.Ghoul);
+      conditions.push(ItemActionConditionEnum.Ghoul);
     }
     if (action?.meta.includes("have_battery")) {
-      conditions.push(ItemActionCondition.HaveBattery);
+      conditions.push({ item: "PILE" });
     }
     if (action?.meta.includes("have_water")) {
-      conditions.push(ItemActionCondition.HaveWater);
+      conditions.push({ item: "WATER" });
     }
     if (action?.meta.includes("must_be_inside_bp")) {
-      conditions.push(ItemActionCondition.Inside);
+      conditions.push(ItemActionConditionEnum.Inside);
     }
     if (
       action?.meta.includes("must_have_micropur") ||
       action?.meta.includes("must_have_micropur_in")
     ) {
-      conditions.push(ItemActionCondition.HaveMicropur);
+      conditions.push({ item: "WATER_CLEANER" });
     }
     // Well fed labradoodle exclusive
     if (action?.meta.includes("must_have_drug")) {
-      conditions.push(ItemActionCondition.HaveSteak);
+      conditions.push({ item: "MEAT" });
     }
 
     if (
@@ -324,7 +326,7 @@ const generateItems = async () => {
         "have_box_opener",
       ].some((condition) => action?.meta.includes(condition))
     ) {
-      conditions.push(ItemActionCondition.BoxOpener);
+      conditions.push(ItemActionConditionEnum.BoxOpener);
     }
 
     return conditions;
@@ -1224,9 +1226,15 @@ const generateItems = async () => {
         .map(
           (action) => `{
         type: ItemActionType.${ItemActionType[action.type]},
-        conditions: [${action.conditions
-          .map((c) => `ItemActionCondition.${ItemActionCondition[c]}`)
-          .join(", ")}],
+        conditions: [
+          ${action.conditions
+            .map((condition) =>
+              typeof condition === "object"
+                ? `{ item: ItemId.${condition.item} }`
+                : `ItemActionConditionEnum.${ItemActionConditionEnum[condition]}`
+            )
+            .join(",\n          ")}
+        ],
         effects: [
           ${action.effects
             .map(

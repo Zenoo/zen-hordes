@@ -415,7 +415,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Drink,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -429,7 +431,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Drink,
-        conditions: [ItemActionCondition.Ghoul],
+        conditions: [
+          ItemActionConditionEnum.Ghoul
+        ],
         effects: [
           {
             type: ItemActionEffectType.AddStatus,
@@ -439,7 +443,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Shaman],
+        conditions: [
+          ItemActionConditionEnum.Shaman
+        ],
         effects: [
           {
             type: ItemActionEffectType.MP,
@@ -500,7 +506,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.BoxOpener],
+        conditions: [
+          ItemActionConditionEnum.BoxOpener
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -510,7 +518,10 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Technician, ItemActionCondition.BoxOpener],
+        conditions: [
+          ItemActionConditionEnum.Technician,
+          ItemActionConditionEnum.BoxOpener
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -520,7 +531,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Technician],
+        conditions: [
+          ItemActionConditionEnum.Technician
+        ],
         effects: [
           {
             type: ItemActionEffectType.CP,
@@ -557,7 +570,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -590,7 +605,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -633,7 +650,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.Kill,
@@ -672,7 +691,21 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveWater],
+        conditions: [
+          { item: ItemId.WATER }
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "watergun_opt_5_#00"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          { item: ItemId.WATER }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -705,7 +738,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -743,7 +778,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -781,7 +818,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -819,7 +858,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -858,7 +899,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -897,7 +940,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -936,7 +981,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -974,7 +1021,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1012,7 +1061,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1051,7 +1102,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1090,7 +1143,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1153,7 +1208,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1239,7 +1296,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1304,7 +1363,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1337,7 +1398,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -1370,7 +1433,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveBattery],
+        conditions: [
+          { item: ItemId.PILE }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -1595,7 +1660,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Butcher,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1615,7 +1682,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1652,7 +1721,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Butcher,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1682,7 +1753,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1719,7 +1792,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Butcher,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1739,7 +1814,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1776,7 +1853,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Butcher,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1796,7 +1875,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1839,7 +1920,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Butcher,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1859,7 +1942,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1902,7 +1987,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Butcher,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1932,7 +2019,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -1969,7 +2058,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -2010,7 +2101,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -2051,7 +2144,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -2084,7 +2179,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -2165,7 +2262,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveMicropur],
+        conditions: [
+          { item: ItemId.WATER_CLEANER }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -2196,7 +2295,42 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          { item: ItemId.WATER_CLEANER }
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_#00",
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_#00",
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_#00",
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_#00",
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_#00",
+            odds: 50
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AddWaterToWell,
@@ -2277,7 +2411,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.Kill,
@@ -2310,7 +2446,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -2367,7 +2505,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.RemoveStatus,
@@ -2404,7 +2544,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -2445,7 +2587,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -2478,7 +2622,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -2540,7 +2686,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -2558,7 +2706,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Eat,
-        conditions: [ItemActionCondition.Ghoul],
+        conditions: [
+          ItemActionConditionEnum.Ghoul
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -2599,7 +2749,21 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveWater],
+        conditions: [
+          { item: ItemId.WATER }
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "grenade_#00"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          { item: ItemId.WATER }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -2632,7 +2796,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.Kill,
@@ -2665,7 +2831,21 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveWater],
+        conditions: [
+          { item: ItemId.WATER }
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "bgrenade_#00"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          { item: ItemId.WATER }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -2866,7 +3046,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -2907,7 +3089,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [ItemActionCondition.BoxOpener],
+        conditions: [
+          ItemActionConditionEnum.BoxOpener
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -2948,7 +3132,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Open,
-        conditions: [ItemActionCondition.Technician],
+        conditions: [
+          ItemActionConditionEnum.Technician
+        ],
         effects: [
           {
             type: ItemActionEffectType.CP,
@@ -3016,7 +3202,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [ItemActionCondition.BoxOpener],
+        conditions: [
+          ItemActionConditionEnum.BoxOpener
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -3062,7 +3250,10 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Open,
-        conditions: [ItemActionCondition.Technician, ItemActionCondition.BoxOpener],
+        conditions: [
+          ItemActionConditionEnum.Technician,
+          ItemActionConditionEnum.BoxOpener
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -3108,7 +3299,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Open,
-        conditions: [ItemActionCondition.Technician],
+        conditions: [
+          ItemActionConditionEnum.Technician
+        ],
         effects: [
           {
             type: ItemActionEffectType.CP,
@@ -3181,7 +3374,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [ItemActionCondition.BoxOpener],
+        conditions: [
+          ItemActionConditionEnum.BoxOpener
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -3217,7 +3412,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Open,
-        conditions: [ItemActionCondition.Technician],
+        conditions: [
+          ItemActionConditionEnum.Technician
+        ],
         effects: [
           {
             type: ItemActionEffectType.CP,
@@ -3376,7 +3573,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -3417,7 +3616,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -3522,7 +3723,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -3571,7 +3774,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Drink,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -3612,7 +3817,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveBattery],
+        conditions: [
+          { item: ItemId.PILE }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -3669,7 +3876,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.Death
@@ -3701,7 +3910,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -3734,7 +3945,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -3791,7 +4004,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -3832,7 +4047,21 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveWater],
+        conditions: [
+          { item: ItemId.WATER }
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "watergun_3_#00"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          { item: ItemId.WATER }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -3865,7 +4094,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -3902,7 +4133,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -3939,7 +4172,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -3976,7 +4211,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveBattery],
+        conditions: [
+          { item: ItemId.PILE }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -4009,7 +4246,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveBattery],
+        conditions: [
+          { item: ItemId.PILE }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -4042,7 +4281,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveBattery],
+        conditions: [
+          { item: ItemId.PILE }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -4075,7 +4316,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveBattery],
+        conditions: [
+          { item: ItemId.PILE }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -4108,7 +4351,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveBattery],
+        conditions: [
+          { item: ItemId.PILE }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -4141,7 +4386,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -4186,7 +4433,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveBattery],
+        conditions: [
+          { item: ItemId.PILE }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -4219,7 +4468,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -4339,7 +4590,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.Kill,
@@ -4377,7 +4630,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -4512,7 +4767,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -4550,7 +4807,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -4608,7 +4867,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -4653,7 +4914,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.RemoveRuinDebris,
@@ -4686,7 +4949,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -4717,7 +4982,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Open,
-        conditions: [ItemActionCondition.Technician],
+        conditions: [
+          ItemActionConditionEnum.Technician
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -4775,7 +5042,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -4844,7 +5113,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -4877,7 +5148,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -4910,7 +5183,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -4943,7 +5218,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -4976,7 +5253,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -5009,7 +5288,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -5042,7 +5323,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -5075,7 +5358,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -5108,7 +5393,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -5165,7 +5452,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -5222,7 +5511,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -5285,7 +5576,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveBattery],
+        conditions: [
+          { item: ItemId.PILE }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -5318,7 +5611,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -5344,7 +5639,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Eat,
-        conditions: [ItemActionCondition.Ghoul],
+        conditions: [
+          ItemActionConditionEnum.Ghoul
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -5389,7 +5686,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -5667,7 +5966,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -5700,7 +6001,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -5757,7 +6060,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -5814,7 +6119,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetEscapeTime,
@@ -5847,7 +6154,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.RemoveStatus,
@@ -5905,7 +6214,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -5986,7 +6297,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveBattery],
+        conditions: [
+          { item: ItemId.PILE }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -6019,7 +6332,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -6053,7 +6368,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -6114,7 +6431,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -6152,7 +6471,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -6190,7 +6511,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -6228,7 +6551,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -6261,7 +6586,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -6294,7 +6621,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -6327,7 +6656,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -6360,7 +6691,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -6393,7 +6726,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -6426,7 +6761,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -6465,7 +6802,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -6498,7 +6837,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -6531,7 +6872,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -6568,7 +6911,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -6605,7 +6950,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -6642,7 +6989,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -6701,7 +7050,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -6774,7 +7125,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -6811,7 +7164,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -6848,7 +7203,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -6885,7 +7242,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -6922,7 +7281,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -6959,7 +7320,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -7026,7 +7389,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveBattery],
+        conditions: [
+          { item: ItemId.PILE }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -7059,7 +7424,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -7131,7 +7498,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -7174,7 +7543,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -7217,7 +7588,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -7352,7 +7725,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -7406,7 +7781,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -7455,7 +7832,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -7504,7 +7883,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -7537,7 +7918,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -7570,7 +7953,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -7607,7 +7992,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -7670,7 +8057,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -7703,7 +8092,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -7741,7 +8132,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -7827,7 +8220,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -7860,7 +8255,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveWater],
+        conditions: [
+          { item: ItemId.WATER }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -7893,7 +8290,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveWater],
+        conditions: [
+          { item: ItemId.WATER }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -7903,7 +8302,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Drink,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -7921,7 +8322,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Drink,
-        conditions: [ItemActionCondition.Ghoul],
+        conditions: [
+          ItemActionConditionEnum.Ghoul
+        ],
         effects: [
           {
             type: ItemActionEffectType.AddStatus,
@@ -7958,7 +8361,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveWater],
+        conditions: [
+          { item: ItemId.WATER }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -7968,7 +8373,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Drink,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -7986,7 +8393,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Drink,
-        conditions: [ItemActionCondition.Ghoul],
+        conditions: [
+          ItemActionConditionEnum.Ghoul
+        ],
         effects: [
           {
             type: ItemActionEffectType.AddStatus,
@@ -8023,7 +8432,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Drink,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -8041,7 +8452,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Drink,
-        conditions: [ItemActionCondition.Ghoul],
+        conditions: [
+          ItemActionConditionEnum.Ghoul
+        ],
         effects: [
           {
             type: ItemActionEffectType.AddStatus,
@@ -8078,7 +8491,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -8136,7 +8551,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -8241,7 +8658,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetEscapeTime,
@@ -8298,7 +8717,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -8312,7 +8733,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Eat,
-        conditions: [ItemActionCondition.Ghoul],
+        conditions: [
+          ItemActionConditionEnum.Ghoul
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -8345,7 +8768,53 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveMicropur],
+        conditions: [
+          { item: ItemId.WATER_CLEANER }
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_solban_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_cup_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_cup_#00",
+            odds: 100
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          { item: ItemId.WATER_CLEANER }
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_solban_#00"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_cup_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_cup_#00",
+            odds: 100
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          { item: ItemId.WATER_CLEANER }
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -8388,7 +8857,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Drink,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -8402,7 +8873,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Drink,
-        conditions: [ItemActionCondition.Ghoul],
+        conditions: [
+          ItemActionConditionEnum.Ghoul
+        ],
         effects: [
           {
             type: ItemActionEffectType.AddStatus,
@@ -8489,7 +8962,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AddStatus,
@@ -8522,7 +8997,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -8637,7 +9114,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Steal,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -8670,7 +9149,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -8759,7 +9240,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveBattery],
+        conditions: [
+          { item: ItemId.PILE }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -8798,7 +9281,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveBattery],
+        conditions: [
+          { item: ItemId.PILE }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -8861,7 +9346,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -8887,7 +9374,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Eat,
-        conditions: [ItemActionCondition.Ghoul],
+        conditions: [
+          ItemActionConditionEnum.Ghoul
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -8987,7 +9476,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -9020,7 +9511,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Inside],
+        conditions: [
+          ItemActionConditionEnum.Inside
+        ],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -9213,7 +9706,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Inside],
+        conditions: [
+          ItemActionConditionEnum.Inside
+        ],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -9314,7 +9809,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Inside],
+        conditions: [
+          ItemActionConditionEnum.Inside
+        ],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -9483,7 +9980,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Inside],
+        conditions: [
+          ItemActionConditionEnum.Inside
+        ],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -9570,7 +10069,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -9610,7 +10111,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -9653,7 +10156,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -9686,7 +10191,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -9719,7 +10226,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.Kill,
@@ -9758,7 +10267,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -9951,7 +10462,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.UnGhoulify
@@ -9983,7 +10496,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Inside],
+        conditions: [
+          ItemActionConditionEnum.Inside
+        ],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10044,7 +10559,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Inside],
+        conditions: [
+          ItemActionConditionEnum.Inside
+        ],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10109,7 +10626,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Inside],
+        conditions: [
+          ItemActionConditionEnum.Inside
+        ],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10158,7 +10677,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Inside],
+        conditions: [
+          ItemActionConditionEnum.Inside
+        ],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10215,7 +10736,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Inside],
+        conditions: [
+          ItemActionConditionEnum.Inside
+        ],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10280,7 +10803,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Inside],
+        conditions: [
+          ItemActionConditionEnum.Inside
+        ],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10329,7 +10854,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Inside],
+        conditions: [
+          ItemActionConditionEnum.Inside
+        ],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10374,7 +10901,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Inside],
+        conditions: [
+          ItemActionConditionEnum.Inside
+        ],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10439,7 +10968,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Inside],
+        conditions: [
+          ItemActionConditionEnum.Inside
+        ],
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10494,7 +11025,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -10512,7 +11045,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -10571,7 +11106,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -10612,7 +11149,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -10653,7 +11192,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -10694,7 +11235,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -10727,7 +11270,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Butcher,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -10747,7 +11292,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -10814,7 +11361,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -10973,7 +11522,21 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveWater],
+        conditions: [
+          { item: ItemId.WATER }
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "kalach_#00"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          { item: ItemId.WATER }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -11078,7 +11641,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Butcher,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -11098,7 +11663,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -11219,7 +11786,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -11272,7 +11841,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -11309,7 +11880,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -11346,7 +11919,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -11383,7 +11958,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -11534,7 +12111,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -11621,7 +12200,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -11861,7 +12442,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [ItemActionCondition.BoxOpener],
+        conditions: [
+          ItemActionConditionEnum.BoxOpener
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -11882,7 +12465,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Open,
-        conditions: [ItemActionCondition.Technician],
+        conditions: [
+          ItemActionConditionEnum.Technician
+        ],
         effects: [
           {
             type: ItemActionEffectType.CP,
@@ -11985,7 +12570,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -12024,7 +12611,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -12063,7 +12652,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -12122,7 +12713,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -12179,7 +12772,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -12241,7 +12836,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -12298,7 +12895,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveSteak],
+        conditions: [
+          { item: ItemId.MEAT }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -12385,7 +12984,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Drink,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AddStatus,
@@ -12427,7 +13028,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AddStatus,
@@ -12680,7 +13283,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -12768,7 +13373,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -12809,7 +13416,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Drink,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -12828,7 +13437,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Drink,
-        conditions: [ItemActionCondition.Ghoul],
+        conditions: [
+          ItemActionConditionEnum.Ghoul
+        ],
         effects: [
           {
             type: ItemActionEffectType.AddStatus,
@@ -12866,7 +13477,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -12904,7 +13517,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -12942,7 +13557,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -13054,7 +13671,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -13094,7 +13713,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Steal,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -13175,7 +13796,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -13224,7 +13847,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Open,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -13274,7 +13899,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -13334,7 +13961,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.HaveBattery],
+        conditions: [
+          { item: ItemId.PILE }
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -13418,7 +14047,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -13458,7 +14089,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -13506,7 +14139,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -13581,7 +14216,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -13639,7 +14276,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Death,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.GetPicto,
@@ -13702,7 +14341,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -13745,7 +14386,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -13788,7 +14431,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -13825,7 +14470,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -13858,7 +14505,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -13891,7 +14540,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Eat,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -13930,7 +14581,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.EP,
@@ -13993,7 +14646,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.EP,
@@ -14062,7 +14717,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.AP,
@@ -14125,7 +14782,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.EP,
@@ -14139,7 +14798,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Thirsty],
+        conditions: [
+          ItemActionConditionEnum.Thirsty
+        ],
         effects: [
           {
             type: ItemActionEffectType.EP,
@@ -14153,7 +14814,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.Dehydrated],
+        conditions: [
+          ItemActionConditionEnum.Dehydrated
+        ],
         effects: [
           {
             type: ItemActionEffectType.EP,
@@ -14186,7 +14849,9 @@ export const items: Record<ItemId, Item> = {
     actions: [
       {
         type: ItemActionType.Use,
-        conditions: [],
+        conditions: [
+          
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
@@ -14201,7 +14866,9 @@ export const items: Record<ItemId, Item> = {
       },
       {
         type: ItemActionType.Use,
-        conditions: [ItemActionCondition.OnARuin],
+        conditions: [
+          ItemActionConditionEnum.OnARuin
+        ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,

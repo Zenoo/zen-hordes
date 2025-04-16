@@ -1,11 +1,20 @@
 import { Ruin } from "../data/ruins";
 import { store } from "./store";
+import { t } from "./translate";
 
 const T: Translations = {
-  en: {},
-  fr: {},
-  de: {},
-  es: {},
+  en: {
+    campingCalculator: "Camping Calculator",
+  },
+  fr: {
+    campingCalculator: "Calculateur de camping",
+  },
+  de: {
+    campingCalculator: "Camping Rechner",
+  },
+  es: {
+    campingCalculator: "Calculadora de Camping",
+  },
 };
 
 enum Job {
@@ -288,7 +297,14 @@ export const displayCampingCalculator = (node: HTMLElement) => {
     if (existing) return;
 
     const calculator = document.createElement("div");
-    calculator.className = "zen-camping-calculator";
+    calculator.classList.add("zen-camping-calculator");
+
+    // Title
+    const title = document.createElement("h3");
+    title.innerText = t(T, "campingCalculator");
+    title.classList.add("emphasis");
+    calculator.appendChild(title);
+
     node.after(calculator);
   }
 };
