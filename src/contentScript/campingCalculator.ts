@@ -1,19 +1,36 @@
-import { Ruin } from "../data/ruins";
+import { Ruin, ruins } from "../data/ruins";
+import { ASSETS } from "../utils/constants";
 import { store } from "./store";
 import { t } from "./translate";
 
 const T: Translations = {
   en: {
     campingCalculator: "Camping Calculator",
+    more: "More",
+    less: "Less",
+    noRuin: "No ruin",
+    alreadyHiddenCitizens: "Already hidden citizens",
   },
   fr: {
     campingCalculator: "Calculateur de camping",
+    more: "Plus",
+    less: "Moins",
+    noRuin: "Aucun bâtiment",
+    alreadyHiddenCitizens: "Citoyens déjà cachés",
   },
   de: {
     campingCalculator: "Camping Rechner",
+    more: "Mehr",
+    less: "Weniger",
+    noRuin: "Keine Ruine",
+    alreadyHiddenCitizens: "Bereits versteckte Bürger",
   },
   es: {
     campingCalculator: "Calculadora de Camping",
+    more: "Más",
+    less: "Menos",
+    noRuin: "No hay ruina",
+    alreadyHiddenCitizens: "Ciudadanos ya ocultos",
   },
 };
 
@@ -82,7 +99,7 @@ const getCampingChances = ({
   job,
 }: CampingParams): CampingResult => {
   let total = 0;
-  const result: Omit<CampingResult, 'total'> = {
+  const result: Omit<CampingResult, "total"> = {
     unlimitedTotal: 0,
     ruin: 0,
     alreadyHiddenCitizens: 0,
@@ -289,6 +306,86 @@ const getCampingChances = ({
   };
 };
 
+const getCurrentCampingParams = () => {
+  const params: CampingParams = {
+    ruin: undefined,
+    alreadyHiddenCitizens: 0,
+    defenseObjects: 0,
+    manualImprovements: 0,
+    kmDistance: 0,
+    zombies: 0,
+    camouflaged: false,
+    night: false,
+    lighthouseBuilt: false,
+    devastatedTown: false,
+    reclusiveLevel: 0,
+    pandemonium: false,
+    previousCampings: 0,
+    campingItems: 0,
+    tomb: false,
+    job: Job.Resident, // Default job
+  };
+
+  // Ruin
+  const ruin = document.querySelector(
+    ".ambiant-zone-desc .ruin-info .ruin-name b"
+  );
+  if (ruin) {
+    const ruinName = ruin.textContent?.trim();
+    const ruinData = Object.values(ruins).find(
+      (r) => r.name[store["hordes-lang"]] === ruinName
+    );
+
+    if (ruinData) {
+      params.ruin = ruinData;
+    } else {
+      console.error(`Ruin "${ruinName}" not found in ruins data.`);
+    }
+  }
+  return params;
+};
+
+type NumericKeys<T> = Exclude<
+  {
+    [K in keyof T]: T[K] extends number ? K : never;
+  }[keyof T],
+  undefined
+>;
+
+type AddButtonProps = {
+  params: CampingParams;
+  type: "more" | "less";
+  key: NumericKeys<CampingParams>;
+  min?: number;
+  max?: number;
+  target: HTMLElement;
+};
+
+const addButton = ({ params, type, key, min, max, target }: AddButtonProps) => {
+  const icon = document.createElement("img");
+  icon.src = `${ASSETS}/icons/small_${type}.gif`;
+  icon.classList.add(type);
+
+  const label = t(T, type);
+  icon.title = label;
+  icon.alt = label;
+  icon.setAttribute("aria-label", label);
+
+  icon.addEventListener("click", () => {
+    if (type === "more" && (typeof max === "undefined" || params[key] < max)) {
+      params[key]++;
+      target.setAttribute("data-zen-amount", params[key].toString());
+    }
+
+    if (type === "less" && (typeof min === "undefined" || params[key] > min)) {
+      params[key]--;
+      target.setAttribute("data-zen-amount", params[key].toString());
+    }
+  });
+
+  return icon;
+};
+
 export const displayCampingCalculator = (node: HTMLElement) => {
   if (!store["camping-calculator"]) return;
 
@@ -304,6 +401,70 @@ export const displayCampingCalculator = (node: HTMLElement) => {
     title.innerText = t(T, "campingCalculator");
     title.classList.add("emphasis");
     calculator.appendChild(title);
+
+    // Params
+    const list = document.createElement("ul");
+    let params = getCurrentCampingParams();
+
+    // Ruin
+    const ruin = document.createElement("li");
+    ruin.setAttribute("data-param", "ruin");
+    const ruinIconWrapper = document.createElement("span");
+    const ruinIcon = document.createElement("img");
+    let ruinTitle = t(T, "noRuin");
+    if (params.ruin) {
+      ruinIcon.src = `${ASSETS}/ruin/${params.ruin.icon}.gif`;
+      ruinTitle = params.ruin.name[store["hordes-lang"]];
+    } else {
+      ruinIcon.src = `${ASSETS}/emotes/ruin.gif`;
+      ruinIconWrapper.classList.add("zen-utils", "crossed");
+    }
+    ruinIconWrapper.title = ruinTitle;
+    ruinIcon.alt = ruinTitle;
+    ruinIcon.setAttribute("aria-label", ruinTitle);
+
+    ruinIconWrapper.appendChild(ruinIcon);
+    ruin.appendChild(ruinIconWrapper);
+    list.appendChild(ruin);
+
+    // Already hidden citizens
+    const alreadyHiddenCitizens = document.createElement("li");
+    alreadyHiddenCitizens.setAttribute("data-param", "alreadyHiddenCitizens");
+
+    const citizenIconWrapper = document.createElement("span");
+    citizenIconWrapper.setAttribute(
+      "data-zen-amount",
+      params.alreadyHiddenCitizens.toString()
+    );
+    const citizenIcon = document.createElement("img");
+    citizenIcon.src = `${ASSETS}/emotes/human.gif`;
+    const citizenTitle = t(T, "alreadyHiddenCitizens");
+    citizenIconWrapper.title = citizenTitle;
+    citizenIcon.alt = citizenTitle;
+    citizenIcon.setAttribute("aria-label", citizenTitle);
+    citizenIconWrapper.appendChild(citizenIcon);
+
+    alreadyHiddenCitizens.appendChild(
+      addButton({
+        params,
+        type: "less",
+        key: "alreadyHiddenCitizens",
+        min: 0,
+        target: citizenIconWrapper,
+      })
+    );
+    alreadyHiddenCitizens.appendChild(citizenIconWrapper);
+    alreadyHiddenCitizens.appendChild(
+      addButton({
+        params,
+        type: "more",
+        key: "alreadyHiddenCitizens",
+        target: citizenIconWrapper,
+      })
+    );
+    list.appendChild(alreadyHiddenCitizens);
+
+    calculator.appendChild(list);
 
     node.after(calculator);
   }

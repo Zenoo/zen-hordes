@@ -13,6 +13,75 @@
   }
 }
 
+.zen-utils() {
+  position: relative;
+
+  &.crossed {
+    &::before {
+      content: url(https://zenoo.github.io/zen-hordes/icons/error.png);
+      position: absolute;
+      bottom: -4px;
+      right: 0;
+      z-index: 1;
+    }
+  }
+
+  &.checked {
+    &::before {
+      content: url(https://zenoo.github.io/zen-hordes/icons/success.png);
+      position: absolute;
+      bottom: -4px;
+      right: 0;
+      z-index: 1;
+    }
+  }
+
+  &.infected {
+    &::after {
+      content: '';
+      background-image: url(https://zenoo.github.io/zen-hordes/status/status_infection.gif);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+
+  &.poisoned {
+    &::after {
+      content: '';
+      background-image: url(https://zenoo.github.io/zen-hordes/icons/death.gif);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+
+  &.broken img {
+    border: 1px dotted red;
+  }
+
+  &.picto {
+    background-image: url(https://zenoo.github.io/zen-hordes/pictos/rewardBg_rare.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 2px;
+  }
+}
+
+.zen-utils {
+  .zen-utils();
+}
+
 // UI enhancements
 body.zen-enhanced {
 
@@ -549,8 +618,8 @@ body.zen-map-preview-enabled {
       &.input,
       &.output {
         div {
-          position: relative;
           display: inline-block;
+          .zen-utils();
 
           img {
             position: relative;
@@ -577,67 +646,6 @@ body.zen-map-preview-enabled {
               white-space: nowrap;
               z-index: 1;
             }
-          }
-
-          &.crossed {
-            &::before {
-              content: url(https://zenoo.github.io/zen-hordes/icons/error.png);
-              position: absolute;
-              bottom: -4px;
-              right: 0;
-              z-index: 1;
-            }
-          }
-
-          &.checked {
-            &::before {
-              content: url(https://zenoo.github.io/zen-hordes/icons/success.png);
-              position: absolute;
-              bottom: -4px;
-              right: 0;
-              z-index: 1;
-            }
-          }
-
-          &.infected {
-            &::after {
-              content: '';
-              background-image: url(https://zenoo.github.io/zen-hordes/status/status_infection.gif);
-              background-size: 100%;
-              background-repeat: no-repeat;
-              position: absolute;
-              width: 10px;
-              height: 10px;
-              top: 0;
-              right: 0;
-              z-index: 1;
-            }
-          }
-
-          &.poisoned {
-            &::after {
-              content: '';
-              background-image: url(https://zenoo.github.io/zen-hordes/icons/death.gif);
-              background-size: 100%;
-              background-repeat: no-repeat;
-              position: absolute;
-              width: 10px;
-              height: 10px;
-              top: 0;
-              right: 0;
-              z-index: 1;
-            }
-          }
-
-          &.broken img {
-            border: 1px dotted red;
-          }
-
-          &.picto {
-            background-image: url(https://zenoo.github.io/zen-hordes/pictos/rewardBg_rare.gif);
-            background-size: 100%;
-            background-repeat: no-repeat;
-            padding: 2px;
           }
         }
       }
@@ -717,6 +725,11 @@ body.zen-map-preview-enabled {
   .generate-range-numbers(6, 9);
   .generate-range-numbers(7, 9);
   .generate-range-numbers(8, 9);
+
+  // 0 in bottom right corner
+  &[data-zen-amount="0"]::before {
+    background-position: -108px -189px;
+  }
 }
 
 // Wiki
@@ -897,5 +910,9 @@ body.zen-map-preview-enabled {
   h3 {
     text-align: center;
     margin: 0;
+  }
+
+  .more, .less {
+    cursor: pointer;
   }
 }

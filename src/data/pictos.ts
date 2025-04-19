@@ -125,7 +125,7 @@ export type Picto = {
   rare: boolean;
 };
 
-export const pictos: Record<PictoId, Picto> = {
+export const pictos: Readonly<Record<PictoId, Picto>> = {
   [PictoId.HEROAC]: {
     id: PictoId.HEROAC,
     numericalId: 1,

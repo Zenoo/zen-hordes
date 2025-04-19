@@ -429,6 +429,7 @@ export const insertWiki = () => {
     target: button,
     content: t(T, "wiki"),
     position: "topLeft",
+    id: "zen-wiki-button-tooltip",
   });
 
   button.addEventListener("click", () => {

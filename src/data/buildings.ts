@@ -188,7 +188,7 @@ export type Building = {
   }[];
 };
 
-export const buildings: Record<BuildingId, Building> = {
+export const buildings: Readonly<Record<BuildingId, Building>> = {
   [BuildingId.SMALL_WATERHOLE]: {
     id: BuildingId.SMALL_WATERHOLE,
     numericalId: 1,

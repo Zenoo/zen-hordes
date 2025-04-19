@@ -2,17 +2,24 @@ export type TooltipOptions = {
   target: HTMLElement;
   content: string;
   position?: "topLeft" | "topRight" | "bottomLeft" | "bottomRight";
-  classList?: string[];
+  id: string
 };
 
 export const tooltip = ({
   target,
   content,
   position = "bottomRight",
-  classList = [],
+  id,
 }: TooltipOptions) => {
+  // Check if the tooltip already exists
+  const existingTooltip = document.getElementById(id);
+  if (existingTooltip) {
+    existingTooltip.remove();
+  }
+
   const tooltip = document.createElement("div");
-  tooltip.classList.add("tooltip", "zen-tooltip", ...classList);
+  tooltip.id = id;
+  tooltip.classList.add("tooltip", "zen-tooltip");
   tooltip.textContent = content;
 
   document.body.appendChild(tooltip);

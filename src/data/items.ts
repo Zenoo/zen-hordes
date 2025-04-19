@@ -391,7 +391,7 @@ export type Item = {
   actions: ItemAction[];
 };
 
-export const items: Record<ItemId, Item> = {
+export const items: Readonly<Record<ItemId, Item>> = {
   [ItemId.WATER]: {
     id: ItemId.WATER,
     numericalId: 1,

@@ -1173,7 +1173,7 @@ const generateItems = async () => {
   actions: ItemAction[];
 };`;
 
-  const itemsObject = `export const items: Record<ItemId, Item> = {
+  const itemsObject = `export const items: Readonly<Record<ItemId, Item>> = {
   ${Object.values(items)
     .map(
       (item) => `[ItemId.${sanitizeItemId(item)}]: {
@@ -1515,7 +1515,7 @@ export type Ruin = {
   }[];
 };`;
 
-  const ruinsObject = `export const ruins: Record<RuinId, Ruin> = {
+  const ruinsObject = `export const ruins: Readonly<Record<RuinId, Ruin>> = {
   ${Object.values(ruins)
     .map(
       (building) => `[RuinId.${sanitizeRuinId(building)}]: {
@@ -1707,7 +1707,7 @@ export type Recipe = {
   pictos?: PictoId[];
 };`;
 
-  const recipesArray = `export const recipes: Recipe[] = [
+  const recipesArray = `export const recipes: Readonly<Recipe>[] = [
   ${recipes
     .map(
       (recipe) => `{
@@ -1874,7 +1874,7 @@ const generateBuildings = async (items: Record<number, Item>) => {
   }[];
 };`;
 
-  const buildingsObject = `export const buildings: Record<BuildingId, Building> = {
+  const buildingsObject = `export const buildings: Readonly<Record<BuildingId, Building>> = {
   ${Object.values(buildings)
     .map(
       (building) => `[BuildingId.${sanitizeBuildingId(building)}]: {
@@ -2008,7 +2008,7 @@ const generatePictos = async () => {
   rare: boolean;
 };`;
 
-  const pictosObject = `export const pictos: Record<PictoId, Picto> = {
+  const pictosObject = `export const pictos: Readonly<Record<PictoId, Picto>> = {
   ${Object.values(pictos)
     .map(
       (picto) => `[PictoId.${sanitizePictoId(picto)}]: {

@@ -15,7 +15,7 @@ export type Recipe = {
   pictos?: PictoId[];
 };
 
-export const recipes: Recipe[] = [
+export const recipes: Readonly<Recipe>[] = [
   {
     type: RecipeType.Workshop,
     in: [

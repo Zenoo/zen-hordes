@@ -91,7 +91,7 @@ export type Ruin = {
   }[];
 };
 
-export const ruins: Record<RuinId, Ruin> = {
+export const ruins: Readonly<Record<RuinId, Ruin>> = {
   [RuinId.CITIZEN_S_HOME]: {
     id: RuinId.CITIZEN_S_HOME,
     name: {

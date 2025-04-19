@@ -16,6 +16,8 @@ import { insertWiki, openItemInWiki } from "./wiki";
 
 // Initialize the store
 await initStore();
+// TODO: Add a target update type to AddButtonProps (data-text / textContent)
+// TODO: Add ruin drops in ruin map tooltips
 // TODO: Read drop data from ItemGroupDataService.php and display it in items tooltips
 // TODO: Implement rotating items in tooltips (repairable items, etc)
 // TODO: Add better tooltips toggle to settings
