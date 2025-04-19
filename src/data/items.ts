@@ -2372,23 +2372,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
             value: -1
           }
         ]
-      },
-      {
-        type: ItemActionType.Use,
-        conditions: [
-          { item: ItemId.WATER_CLEANER }
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "water_#00",
-            odds: 100
-          },
-          {
-            type: ItemActionEffectType.AP,
-            value: -1
-          }
-        ]
       }
     ]
   },

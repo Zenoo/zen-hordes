@@ -4616,9 +4616,7 @@
             "meta": [
                 "min_1_ap",
                 "must_be_outside",
-                "must_have_micropur_in",
-                "must_not_have_purifier",
-                "must_not_be_banished"
+                "must_have_micropur_in"
             ],
             "result": [
                 "consume_micropur",
@@ -4664,22 +4662,6 @@
                         ]
                     ]
                 }
-            ],
-            "message_key": "item_clean"
-        },
-        "jerrycan_4b": {
-            "label": "Reinigen (Wasser)",
-            "meta": [
-                "min_1_ap",
-                "must_be_outside",
-                "must_have_micropur_in",
-                "must_be_banished"
-            ],
-            "result": [
-                "consume_micropur",
-                "consume_item",
-                "spawn_1_water",
-                "minus_1ap"
             ],
             "message_key": "item_clean"
         },
@@ -8141,8 +8123,7 @@
             "jerrycan_1b",
             "jerrycan_2",
             "jerrycan_3",
-            "jerrycan_4",
-            "jerrycan_4b"
+            "jerrycan_4"
         ],
         "water_cup_part_#00": [
             "watercup_1",

@@ -9805,7 +9805,7 @@
         }
       },
       {
-        "amount": 150,
+        "amount": 30,
         "rsc": {
           "id": 50,
           "uid": "metal",

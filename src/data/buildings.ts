@@ -5513,7 +5513,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       },
       {
         id: ItemId.METAL,
-        amount: 150
+        amount: 30
       }
     ]
   },
