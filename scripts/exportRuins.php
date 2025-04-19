@@ -21,10 +21,14 @@ $fileContents = preg_replace('/implements\s+\w+\s*/', '', $fileContents);
 // Add DropMod class after the namespace declaration
 $dropModClass = <<<'CLASS'
 
-class DropMod {
-  const EventStPatrick = 0;
-  const Infective = 1;
-  const EventChristmas = 2;
+enum DropMod: int {
+    case Infective = 51;
+    case EventEaster = 101;
+    case EventChristmas = 102;
+    case EventChristmasAlt1 = 1021;
+    case EventChristmasAlt2 = 1022;
+    case EventStPatrick = 103;
+    case EventHalloween = 104;
 }
 
 CLASS;
@@ -53,7 +57,7 @@ $ruinDataService->process($data);
 $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
 // Define the output file path
-$outputFilePath = __DIR__ . '/data/zoneBuildings.json';
+$outputFilePath = __DIR__ . '/data/mainRepoRuins.json';
 
 // Write the JSON to a file
 file_put_contents($outputFilePath, $json);

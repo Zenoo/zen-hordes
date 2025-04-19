@@ -278,6 +278,17 @@ export const recipes: Readonly<Recipe>[] = [
     ],
   },
   {
+    type: RecipeType.Workshop,
+    in: [
+      { item: ItemId.WOOD_LOG },
+      { item: ItemId.KNIFE },
+      { item: ItemId.RUSTINE }
+    ],
+    out: [
+      { item: ItemId.SAW_TOOL_TEMP }
+    ],
+  },
+  {
     type: RecipeType.WorkshopShaman,
     in: [
       { item: ItemId.SOUL_BLUE }
@@ -286,6 +297,41 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.SOUL_YELLOW }
     ],
     pictos: [PictoId.MYSTIC2],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.MECA_PARTS },
+      { item: ItemId.PLATE },
+      { item: ItemId.PLATE }
+    ],
+    out: [
+      { item: ItemId.CAR_DOOR }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.PET_SNAKE2 },
+      { item: ItemId.PET_SNAKE2 },
+      { item: ItemId.CUTTER },
+      { item: ItemId.WOOD2 },
+      { item: ItemId.WIRE }
+    ],
+    out: [
+      { item: ItemId.SHEET }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.BONE_MEAT },
+      { item: ItemId.POISON_PART }
+    ],
+    out: [
+      { item: ItemId.BONE },
+      { item: ItemId.SMELLY_MEAT }
+    ],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -842,26 +888,13 @@ export const recipes: Readonly<Recipe>[] = [
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.LPOINT },
-      { item: ItemId.PILE }
+      { item: ItemId.BIKE_PART },
+      { item: ItemId.RUSTINE },
+      { item: ItemId.METAL },
+      { item: ItemId.CHAIN }
     ],
     out: [
-      { item: ItemId.LPOINT2, odds: 1 },
-      { item: ItemId.LPOINT3, odds: 1 },
-      { item: ItemId.LPOINT4, odds: 1 }
-    ],
-  },
-  {
-    type: RecipeType.ManualAnywhere,
-    in: [
-      { item: ItemId.CELLO_BOX }
-    ],
-    out: [
-      { item: ItemId.GUN, odds: 1 },
-      { item: ItemId.MACHINE_GUN, odds: 1 },
-      { item: ItemId.KNIFE, odds: 1 },
-      { item: ItemId.MONEY, odds: 1 },
-      { item: ItemId.PET_CAT, odds: 1 }
+      { item: ItemId.BIKE }
     ],
   },
   {
@@ -877,13 +910,355 @@ export const recipes: Readonly<Recipe>[] = [
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.RUSTINE },
-      { item: ItemId.CHAIN },
-      { item: ItemId.METAL },
-      { item: ItemId.BIKE_PART }
+      { item: ItemId.MOLDY_FOOD_SUBPART },
+      { item: ItemId.MOLDY_FOOD_SUBPART }
     ],
     out: [
-      { item: ItemId.BIKE }
+      { item: ItemId.MOLDY_FOOD_PART }
+    ],
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.MOLDY_FOOD_PART },
+      { item: ItemId.MOLDY_FOOD_SUBPART }
+    ],
+    out: [
+      { item: ItemId.MOLDY_FOOD }
+    ],
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.MOLDY_FOOD_SUBPART },
+      { item: ItemId.SPICES }
+    ],
+    out: [
+      { item: ItemId.MOLDY_FOOD_SPICY }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.ELECTRO_BOX }
+    ],
+    out: [
+      { item: ItemId.PILE }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.ELECTRO_BOX }
+    ],
+    out: [
+      { item: ItemId.PILEGUN_EMPTY }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.ELECTRO_BOX }
+    ],
+    out: [
+      { item: ItemId.ELECTRO }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.ELECTRO_BOX }
+    ],
+    out: [
+      { item: ItemId.MECA_PARTS }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.ELECTRO_BOX }
+    ],
+    out: [
+      { item: ItemId.TAGGER }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.ELECTRO_BOX }
+    ],
+    out: [
+      { item: ItemId.DETO }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.MECANISM }
+    ],
+    out: [
+      { item: ItemId.METAL }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.MECANISM }
+    ],
+    out: [
+      { item: ItemId.TUBE }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.MECANISM }
+    ],
+    out: [
+      { item: ItemId.METAL_BAD }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.MECANISM }
+    ],
+    out: [
+      { item: ItemId.MECA_PARTS }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST }
+    ],
+    out: [
+      { item: ItemId.DRUG }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST }
+    ],
+    out: [
+      { item: ItemId.BANDAGE }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST }
+    ],
+    out: [
+      { item: ItemId.VODKA }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST }
+    ],
+    out: [
+      { item: ItemId.EXPLO }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST }
+    ],
+    out: [
+      { item: ItemId.LIGHTS }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST }
+    ],
+    out: [
+      { item: ItemId.DRUG_HERO }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST }
+    ],
+    out: [
+      { item: ItemId.RHUM }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST_TOOLS }
+    ],
+    out: [
+      { item: ItemId.PILE }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST_TOOLS }
+    ],
+    out: [
+      { item: ItemId.MECA_PARTS }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST_TOOLS }
+    ],
+    out: [
+      { item: ItemId.RUSTINE }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST_TOOLS }
+    ],
+    out: [
+      { item: ItemId.TUBE }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST_TOOLS }
+    ],
+    out: [
+      { item: ItemId.PHARMA }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST_TOOLS }
+    ],
+    out: [
+      { item: ItemId.EXPLO }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST_FOOD }
+    ],
+    out: [
+      { item: ItemId.FOOD_BAG }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST_FOOD }
+    ],
+    out: [
+      { item: ItemId.CAN }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST_FOOD }
+    ],
+    out: [
+      { item: ItemId.MEAT }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST_FOOD }
+    ],
+    out: [
+      { item: ItemId.HMEAT }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CHEST_FOOD }
+    ],
+    out: [
+      { item: ItemId.VEGETABLE }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.DECO_BOX }
+    ],
+    out: [
+      { item: ItemId.DOOR }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.DECO_BOX }
+    ],
+    out: [
+      { item: ItemId.CHAIR_BASIC }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.DECO_BOX }
+    ],
+    out: [
+      { item: ItemId.TRESTLE }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.DECO_BOX }
+    ],
+    out: [
+      { item: ItemId.TABLE }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.DECO_BOX }
+    ],
+    out: [
+      { item: ItemId.CHAIR }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CATBOX }
+    ],
+    out: [
+      { item: ItemId.POISON_PART }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CATBOX }
+    ],
+    out: [
+      { item: ItemId.PET_CAT }
+    ],
+  },
+  {
+    type: RecipeType.WorkshopTech,
+    in: [
+      { item: ItemId.CATBOX }
+    ],
+    out: [
+      { item: ItemId.ANGRYC }
     ],
   },
   {
@@ -923,23 +1298,6 @@ export const recipes: Readonly<Recipe>[] = [
     ],
     out: [
       { item: ItemId.XMAS_GIFT_01 }
-    ],
-  },
-  {
-    type: RecipeType.ManualAnywhere,
-    in: [
-      { item: ItemId.MEDIC }
-    ],
-    out: [
-      { item: ItemId.XANAX, odds: 37 },
-      { item: ItemId.DRUG_WATER, odds: 37 },
-      { item: ItemId.WATER_CLEANER, odds: 37 },
-      { item: ItemId.RYEBAG, odds: 37 },
-      { item: ItemId.DISINFECT, odds: 28 },
-      { item: ItemId.PHARMA, odds: 20 },
-      { item: ItemId.CYANURE, odds: 2 },
-      { item: ItemId.DRUG, odds: 1 },
-      { item: ItemId.BANDAGE, odds: 1 }
     ],
   },
   {

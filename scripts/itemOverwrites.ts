@@ -32,11 +32,6 @@ const blueSoulTurnChances = [
 export const overwriteItemData = (items: Record<string, Item>) => {
   for (const item of Object.values(items)) {
     switch (item.id) {
-      case "lpoint_#00": {
-        // The action to fill it up is added as a recipe instead
-        item.actions = [];
-        break;
-      }
       case "surv_book_#00": {
         // Book success chances
         item.actions = [
@@ -71,55 +66,10 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         };
         break;
       }
-      case "photo_4_#00": {
-        // Use
-        item.actions.push({
-          type: ItemActionType.Use,
-          conditions: [],
-          effects: [
-            {
-              type: ItemActionEffectType.CreateItem,
-              value: "photo_3_#00",
-            },
-            {
-              type: ItemActionEffectType.GetEscapeTime,
-              value: 180,
-              odds: 99,
-            },
-          ],
-        });
-
-        // Use on a ruin
-        item.actions.push({
-          type: ItemActionType.Use,
-          conditions: [ItemActionConditionEnum.OnARuin],
-          effects: [
-            {
-              type: ItemActionEffectType.CreateItem,
-              value: "bplan_c_#00",
-            },
-          ],
-        });
-        break;
-      }
       case "quantum_#00": {
         // Use
         item.actions.push(
           ...[
-            {
-              type: ItemActionType.Use,
-              conditions: [],
-              effects: [
-                {
-                  type: ItemActionEffectType.EP,
-                  value: 8,
-                },
-                {
-                  type: ItemActionEffectType.AddStatus,
-                  value: "thirst1",
-                },
-              ],
-            },
             {
               type: ItemActionType.Use,
               conditions: [ItemActionConditionEnum.Thirsty],
@@ -149,23 +99,6 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         break;
       }
       case "soccer_#00": {
-        // Use
-        item.actions.push({
-          type: ItemActionType.Use,
-          conditions: [],
-          effects: [
-            {
-              type: ItemActionEffectType.AP,
-              value: 1,
-              odds: 17,
-            },
-            {
-              type: ItemActionEffectType.CreateItem,
-              value: "soccer_part_#00",
-              odds: 7,
-            },
-          ],
-        });
         // info
         item.info = {
           en: "Usable once a day. Not usable if exhausted.",
@@ -186,18 +119,6 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         break;
       }
       case "bike_#00": {
-        // Use
-        item.actions.push({
-          type: ItemActionType.Use,
-          conditions: [],
-          effects: [
-            {
-              type: ItemActionEffectType.EP,
-              value: 2,
-            },
-          ],
-        });
-
         // info
         item.info = {
           en: "Daily {{EP}} gain increased by 2. Items giving at least 4{{AP}} give 2 additional {{EP}}.",
@@ -208,18 +129,6 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         break;
       }
       case "shoe_#00": {
-        // Use
-        item.actions.push({
-          type: ItemActionType.Use,
-          conditions: [],
-          effects: [
-            {
-              type: ItemActionEffectType.EP,
-              value: 1,
-            },
-          ],
-        });
-
         // info
         item.info = {
           en: "Daily {{EP}} gain increased by 1. Items giving at least 4{{AP}} give 1 additional {{EP}}.",
@@ -227,19 +136,6 @@ export const overwriteItemData = (items: Record<string, Item>) => {
           de: "Täglicher {{EP}}-Gewinn um 1 erhöht. Gegenstände, die mindestens 4{{AP}} geben, geben zusätzlich 1 {{EP}}.",
           es: "Aumento diario de {{EP}} en 1. Los objetos que dan al menos 4{{AP}} dan 1 {{EP}} adicional.",
         };
-        break;
-      }
-      case "noodle_prints_#00":
-      case "noodle_prints_#01":
-      case "noodle_prints_#02": {
-        // Eating instant blanks gives 6 AP
-        const eatEffect = item.actions
-          .find((action) => action.type === ItemActionType.Eat)
-          ?.effects.find((effect) => effect.type === ItemActionEffectType.AP);
-
-        if (eatEffect) {
-          eatEffect.value = 6;
-        }
         break;
       }
       case "alarm_1_#00": {
@@ -335,18 +231,6 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         break;
       }
       case "pumpkin_tasty_#00": {
-        // Use
-        item.actions.push({
-          type: ItemActionType.Eat,
-          conditions: [],
-          effects: [
-            {
-              type: ItemActionEffectType.AP,
-              value: 7,
-            },
-          ],
-        });
-
         // info
         item.info = {
           en: "Increase a watchman's safety by 1%.",
@@ -369,49 +253,6 @@ export const overwriteItemData = (items: Record<string, Item>) => {
       case "alarm_on_#00": {
         // Unavailable
         item.available = false;
-        break;
-      }
-      case "christmas_candy_#00": {
-        // Eating effects
-        const eatAction = item.actions.find(
-          (action) => action.type === ItemActionType.Eat
-        );
-
-        if (eatAction) {
-          eatAction.effects = [
-            {
-              type: ItemActionEffectType.GetPicto,
-              value: "r_cobaye_#00",
-            },
-            {
-              type: ItemActionEffectType.EP,
-              value: 3,
-            },
-            {
-              type: ItemActionEffectType.AP,
-              value: 8,
-            },
-            {
-              type: ItemActionEffectType.AddStatus,
-              value: "terror",
-              odds: 41,
-            },
-            {
-              type: ItemActionEffectType.AddStatus,
-              value: "infection",
-              odds: 25,
-            },
-            {
-              type: ItemActionEffectType.AddStatus,
-              value: "addict",
-              odds: 15,
-            },
-            {
-              type: ItemActionEffectType.Death,
-              odds: 2,
-            },
-          ];
-        }
         break;
       }
       case "leprechaun_suit_#00": {
@@ -439,24 +280,6 @@ export const overwriteItemData = (items: Record<string, Item>) => {
       case "soul_yellow_#00": {
         // Private town only
         item.categories.push("PrivateTown");
-        break;
-      }
-      case "water_#00": {
-        // WATER -> POTION
-        item.actions.push({
-          type: ItemActionType.Use,
-          conditions: [ItemActionConditionEnum.Shaman],
-          effects: [
-            {
-              type: ItemActionEffectType.MP,
-              value: -1,
-            },
-            {
-              type: ItemActionEffectType.CreateItem,
-              value: "potion_#00",
-            },
-          ],
-        });
         break;
       }
       case "xmas_gift_#00": {

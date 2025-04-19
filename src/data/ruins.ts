@@ -64,8 +64,7 @@ export enum RuinId {
   ABANDONED_BUNKER = 61,
   ABANDONED_HOTEL = 62,
   ABANDONED_HOSPITAL = 63,
-  CROWS_FIT_GYM = 64,
-  BURIED_BUILDING = -1
+  CROWS_FIT_GYM = 64
 }
 
 export type Ruin = {
@@ -125,7 +124,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.CAN,
-        odds: 100,
+        odds: 95,
       },
       {
         item: ItemId.LOCK,
@@ -145,11 +144,11 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.SHOE,
-        odds: 0,
+        odds: 4,
       },
       {
         item: ItemId.BIKE_PART,
-        odds: 0,
+        odds: 1,
       }
     ]
   },
@@ -163,7 +162,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "One of the many Smith's Superstores that proliferated around the year 2010 then disappeared... specialising in making things as cheap as possible, you should be able to find whatever you need here. Whether you're potless or just being tighter than two coats of paint, shop at Smiths!",
-      [Lang.FR]: "Une enseigne de la chaîne de magasins Brian Fargo. On y trouve généralement tout ce qu'il faut pour nettoyer et entretenir sa maison. Les plus démunis y trouveront de quoi manger...",
+      [Lang.FR]: "Une enseigne de la chaîne de magasins Brian Fargo. On y trouve généralement tout ce qu’il faut pour nettoyer et entretenir sa maison. Les plus démunis y trouveront de quoi manger…",
       [Lang.DE]: "Einer der vielen Albi Supermarkt, die um das Jahr 2010 herum aus dem Boden schossen und später dann verschwanden... spezialisiert darauf, Dinge so billig wie möglich zu verscherbeln. Hier findest du alles finden, was du brauchst - egal ob du einfach pleite bist oder eisern auf ein neues Stück Seife sparst, kaufe bei ALBI ein!",
       [Lang.ES]: "Ahí se encuentran muchos productos de limpieza. Los más desfavorecidos encontrarán algo de comer..."
     },
@@ -228,7 +227,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "Some actions cannot be forgiven. Take, for example, the case of the cavern: your group are being followed and you stupidly rush into a cave to hide. For how long can you cry while you wait for your pursuers to catch up ? The guy lagging behind, who is half-blind, didn't have to cry for long...",
-      [Lang.FR]: "Il y a des réflexes qui ne pardonnent pas. Prenez par exemple le coup de la caverne : vous êtes poursuivi(e) et vous vous engouffrez bêtement dans une caverne pour vous mettre à l'abri. Le problème qui se pose alors : maintenant que vous êtes dans une impasse, combien de temps allez-vous pouvoir hurler en attendant que vos poursuivants vous rattrapent ? Le type au fond, à qui il manque la moitié du visage, n'a pas dû crier bien longtemps.",
+      [Lang.FR]: "Il y a des réflexes qui ne pardonnent pas. Prenez par exemple le coup de la caverne : vous êtes poursuivi(e) et vous vous engouffrez bêtement dans une caverne pour vous mettre à l’abri. Le problème qui se pose alors : maintenant que vous êtes dans une impasse, combien de temps allez-vous pouvoir hurler en attendant que vos poursuivants vous rattrapent ? Le type au fond, à qui il manque la moitié du visage, n’a pas dû crier bien longtemps.",
       [Lang.DE]: "Manche Fehler enden zwangsläufig tödlich. Nehmt als Beispiel diese Höhle. Stellt euch vor, ihr werdet von einer Zombiemeute verfolgt und eilt überstürzt in eine Höhle, um Schutz zu suchen. Ihr werdet dann folgendes Problem haben: Wie kommt ihr heil wieder raus, wenn die Biester euch gefolgt sind? Der zerfledderte Typ an der Wand dort hinten scheint dies nicht bedacht zu haben...",
       [Lang.ES]: "El típico caso de un hombre que se mete en una cueva huyendo de una turba de zombies. Todo bien hasta allí, hasta que el hombre recuerda que tenía 2 zombies abrazados a su espalda. El pobre gritó de todo menos «Por favor»."
     },
@@ -247,7 +246,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     drops: [
       {
         item: ItemId.MONEY,
-        odds: 50,
+        odds: 48,
       },
       {
         item: ItemId.FLASH,
@@ -296,6 +295,10 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       {
         item: ItemId.REPAIR_KIT_PART_RAW,
         odds: 1,
+      },
+      {
+        item: ItemId.SHOE,
+        odds: 2,
       }
     ]
   },
@@ -309,7 +312,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "An old pump which is rusting away, but is nonetheless capable of drawing water in the desert... The only problem is that even if you manage to get it working, the water will generally be undrinkable and will need to be purified in town with the appropriate equipment...",
-      [Lang.FR]: "Une antique pompe rongée par la rouille, capable de puiser de l'eau dans le désert... Le seul problème c'est que même si vous arrivez à la faire fonctionner, cette eau sera généralement <strong>non-potable</strong> et devra être <strong>purifiée en ville</strong> avec les produits adéquats.",
+      [Lang.FR]: "Une antique pompe rongée par la rouille, capable de puiser de l’eau dans le désert… Le seul problème c’est que même si vous arrivez à la faire fonctionner, cette eau sera généralement <strong>non-potable</strong> et devra être <strong>purifiée en ville</strong> avec les produits adéquats.",
       [Lang.DE]: "Eine alte Pumpe, die zwar vor sich hin rostet, aber dennoch in der Lage ist, in der Wüste Wasser zu schöpfen... Das einzige Problem ist, dass das Wasser, selbst wenn Sie es zum Funktionieren bringen, im Grunde genommen ungenießbar ist und in der Stadt mit den entsprechenden Geräten gereinigt werden muss.",
       [Lang.ES]: "Esta bomba hidráulica está bastante corroída y tiene aún la capacidad de extraer agua en el desierto... Si llegas a hacerla funcionar, el agua <strong>no será potable</strong> y deberá ser <strong>purificada en el pueblo</strong> con los productos necesarios."
     },
@@ -362,7 +365,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "An old bicycle hire warehouse, littered with pieces of metal, tools and all kinds of debris.",
-      [Lang.FR]: "Une ancienne gare à vélo jonchée de pièces de ferrailles, d'outils et de débris en tous genres.",
+      [Lang.FR]: "Une ancienne gare à vélos jonchée de pièces de ferraille, d’outils et de débris en tout genre.",
       [Lang.DE]: "Ein altes Fahrradverleihlager, das mit Metallstücken, Werkzeugen und allen Arten von Schutt übersät ist.",
       [Lang.ES]: "Un antiguo taller de reparación de bicicletas repleta de herramientas y chatarra de todo tipo."
     },
@@ -381,27 +384,27 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     drops: [
       {
         item: ItemId.MECA_PARTS,
-        odds: 2,
+        odds: 6,
       },
       {
         item: ItemId.TUBE,
-        odds: 10,
+        odds: 23,
       },
       {
         item: ItemId.COURROIE,
-        odds: 10,
+        odds: 24,
       },
       {
         item: ItemId.POCKET_BELT,
-        odds: 10,
+        odds: 28,
       },
       {
         item: ItemId.RADIO_OFF,
-        odds: 5,
+        odds: 11,
       },
       {
         item: ItemId.BIKE_PART,
-        odds: 0,
+        odds: 11,
       }
     ]
   },
@@ -415,7 +418,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "The turntable in the middle of this rail depot constantly dispatched and received merchandise from all over the world, 24 hours a day. Today, all that remains is a 150 metre long section, maybe a bit more if you include the remaining rails.",
-      [Lang.FR]: "Cette plaque tournante centrale du réseau ferroviaire du pays dispatchait et aiguillait les marchandises venues de tous les horizons, sans interruption, 24h/24. Aujourd'hui, le 'vaste réseau' en question mesure environ 150 mètres de long, si on compte les vestiges de rails, un peu plus loin.",
+      [Lang.FR]: "Cette plaque tournante centrale du réseau ferroviaire du pays dispatchait et aiguillait les marchandises venues de tous les horizons, sans interruption, 24h/24. Aujourd’hui, le « vaste réseau » en question mesure environ 150 mètres de long, si on compte les vestiges de rails, un peu plus loin.",
       [Lang.DE]: "Dieser Rangierbahnhof war einmal das zentrale Drehkreuz des Landes. Waren aus aller Herren Länder wurden hier rund um die Uhr umgeladen und in alle Himmelsrichtungen versendet. Das 'weitverzweigte Netzt' ist heute noch ungefähr 150 Meter lang, vorausgesetzt man zählt die Gleisüberbleibsel da hinten noch mit.",
       [Lang.ES]: "Esta plataforma ferroviaria se dedicaba a la distribución de mercancías. Ya que estás aquí, ¿por qué no echarle un vistazo?"
     },
@@ -476,7 +479,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "The remains which litter the corridors of this improvised hospital must be what is left of the patients. It's difficult to say how many must have died here on the night of the attack... Maybe if you count the number of arms on the ground and divide by two ?",
-      [Lang.FR]: "Les restes qui jonchent les allées de cet hôpital improvisé devaient être des patients. Difficile de savoir combien ils avaient pu être à mourir ici, le soir de l'attaque… Peut-être qu'en comptant le nombre de bras et en divisant par deux ?",
+      [Lang.FR]: "Les restes qui jonchent les allées de cet hôpital improvisé devaient être des patients. Difficile de savoir combien ils ont pu être à mourir ici, le soir de l’attaque… Peut-être qu’en comptant le nombre de bras et en divisant par deux ?",
       [Lang.DE]: "Die menschlichen Überreste, die in der Auffahrt liegen gehören den ehemaligen Patienten dieses improvisierten Krankenhauses. Schwer zu sagen, wie viele Menschen hier beim abendlichen Angriff gestorben sind... Wenn du die Anzahl der Arme durch zwei teilst, vielleicht bekommst du dann eine grobe Schätzung?",
       [Lang.ES]: "Entre los cuerpos regados en los pasillos de este hospital improvisado se encuentran pacientes, enfermeras y víctimas del ataque... Es difícil saber cuántos hay. ¿Tal vez contando la cantidad de brazos y dividiéndolas entre dos?"
     },
@@ -536,6 +539,10 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       {
         item: ItemId.FUNGUS,
         odds: 5,
+      },
+      {
+        item: ItemId.QUANTUM,
+        odds: 3,
       }
     ]
   },
@@ -549,7 +556,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "The only things taking off or landing at this crumbling aerodrome are the flies. Maybe if you forage around in the warehouses you will find something useful. Like, say, an A380 in working order.",
-      [Lang.FR]: "Tout ce qui décolle de cet aérodrome pourrissant, ce sont les mouches. Peut-être qu'en fouinant dans les entrepôts, vous parviendrez à mettre la main sur un truc utile. Genre, un A360 en état de marche.",
+      [Lang.FR]: "Tout ce qui décolle de cet aérodrome pourrissant, ce sont les mouches. Peut-être qu’en fouinant dans les entrepôts, vous parviendrez à mettre la main sur un truc utile. Genre, un A360 en état de marche.",
       [Lang.DE]: "Das Einzige, was auf diesem bröckelnden Flugplatz startet oder landet, sind die Fliegen. Vielleicht finden Sie etwas Nützliches, wenn Sie in den Lagerhallen herumstöbern. Zum Beispiel einen A380 in funktionstüchtigem Zustand.",
       [Lang.ES]: "Lo único que vuela en este lugar son las moscas. Tal vez hurgando en el depósito encuentres algo útil. Algo como un Boeing 747 que funcione."
     },
@@ -568,7 +575,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     drops: [
       {
         item: ItemId.METAL_BEAM,
-        odds: 30,
+        odds: 28,
       },
       {
         item: ItemId.REPAIR_ONE,
@@ -617,6 +624,10 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       {
         item: ItemId.OILCAN,
         odds: 4,
+      },
+      {
+        item: ItemId.FLAG,
+        odds: 2,
       }
     ]
   },
@@ -630,7 +641,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "This imposing building stretches over several hundred metres. It is split into numerous rooms but many of them collapsed a long time ago. If you look at the number of bullet holes and improvised barricades, it seems that this police station was the scene of some particularly violent confrontations.",
-      [Lang.FR]: "L'imposant bâtiment s'étend sur plusieurs centaines de mètres. Il est divisé en nombreuses salles mais beaucoup se sont effondrées il y a bien longtemps. Si on en croit les nombreux impacts de balles et les barricades improvisées, <strong>ce commissariat a été le théâtre d'affrontements particulièrement violents</strong>.",
+      [Lang.FR]: "L’imposant bâtiment s’étend sur plusieurs centaines de mètres. Il est divisé en de nombreuses salles, mais beaucoup se sont effondrées il y a bien longtemps. Si l’on en croit les nombreux impacts de balles et les barricades improvisées, <strong>ce commissariat a été le théâtre d’affrontements particulièrement violents</strong>.",
       [Lang.DE]: "Dieses beeindruckende Gebäude erstreckt sich auf mehrere Hundert Meter. Es enthält zahlreiche Räume, die größtenteils eingestürzt sind. Die große Anzahl an Einschusslöchern in den Wänden und die improvisierten Barrikaden lassen vermuten, dass das Gebäude vor einiger Zeit Schauplatz heftiger Gefechte gewesen ist.",
       [Lang.ES]: "Este impresionante edificio se extiende por varios cientos de metros. Posee numerosas habitaciones, la mayoría de las cuales se han derrumbado casi por completo. La gran cantidad de agujeros de bala en las paredes y las barricadas improvisadas sugieren que el edificio fue escenario de feroces combates hace ya un tiempo."
     },
@@ -739,7 +750,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "The number has been partially worn away, but this was in all likelihood shelter number 14. Judging by the crumbling bodies inside, the airlock system couldn't have worked as expected. Shit happens.",
-      [Lang.FR]: "Le numéro est à moitié effacé, mais il s'agissait vraisemblablement de l'<strong>abri 14</strong>. Si on en juge par les corps décrépis à l'intérieur, le système de fermeture du sas <strong>n'a pas dû fonctionner comme prévu</strong>. Ça arrive.",
+      [Lang.FR]: "Le numéro est à moitié effacé, mais il s’agissait vraisemblablement de l’<strong>abri 14</strong>. Si l’on en juge par les corps décrépis à l’intérieur, le système de fermeture du sas <strong>n’a pas dû fonctionner comme prévu</strong>. Ça arrive.",
       [Lang.DE]: "Die Farbe der am Bunkereingang gepinselten Zahl ist fast vollständig abgeblättert, aber es handelt sich wahrscheinlich um den Bunker 14. Im Inneren liegen überall verweste Leichen herum. Scheint so, als ob der Schließmechanismus versagt hätte. Das kommt vor.",
       [Lang.ES]: "El número en la puerta no se distingue bien... Pero se puede notar que se trata del <strong>Refugio 14</strong>. Viendo el estado de los cadáveres en su interior, todo indica que el sistema de cierre del Portal <strong>no funcionó correctamente</strong>. Suele pasar..."
     },
@@ -836,7 +847,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "The Atomic Cafe is (or was) the place to be: A faded poster invites you to come to the summer party on 2 May 2010: Hawaiian Theme, Prize for Best Dressed (Half Naked Girls + Guys) DJ Dave from 1pm, Free BBQ, Improved Look Beer Garden, Party Games, Live Football, Cocktails, £2 Bottled Beer, £2 Alcopop, £1 Tequila... Get Involved!",
-      [Lang.FR]: "Le rendez-vous branché du désert : venez goûter notre Nuka-Cola, spécialité de la maison, aux vrais extraits d'hormones animales.",
+      [Lang.FR]: "Le rendez-vous branché du désert : venez goûter notre Nuka-Cola, spécialité de la maison, aux vrais extraits d’hormones animales.",
       [Lang.DE]: "Das Atomic Cafe ist (oder war) der Ort, an dem man sein sollte: Ein verblichenes Plakat lädt Sie zum Sommerfest am 2. Mai 2010 ein: Hawaiianisches Thema, Preis für den bestangezogenen (halbnackten Mädchen + Jungs) DJ Dave ab 13.00 Uhr, kostenloses BBQ, Biergarten mit verbessertem Look, Partyspiele, Live-Fußball, Cocktails, £2 Flaschenbier, £2 Alcopop, £1 Tequila... Beteiligen Sie sich!",
       [Lang.ES]: "El lugar de moda en el desierto, famoso por la Toro-Cola, la especialidad de la casa preparada con hormonas animales."
     },
@@ -891,7 +902,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.QUANTUM,
-        odds: 0,
+        odds: 2,
       }
     ]
   },
@@ -905,7 +916,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "At one time, this would certainly have been one of the most trendy joints on the M25, with watered-down drinks, the aroma of stale piss and dead rats on the bar. You must be the first person to set foot in here in years.",
-      [Lang.FR]: "À une certaine époque, c'était sûrement le coin le plus branché de toute l'autoroute A217, avec ses bières frelatées, son odeur d'urine et ses rats morts sur le comptoir. Personne avant vous ne semble s'y être arrêté depuis des lustres.",
+      [Lang.FR]: "À une certaine époque, c’était sûrement le coin le plus branché de toute l’autoroute A217, avec ses bières frelatées, son odeur d’urine et ses rats morts sur le comptoir. Personne avant vous ne semble s’y être arrêté depuis des lustres.",
       [Lang.DE]: "Früher wäre dies sicherlich einer der trendigsten Joints auf der M25 gewesen, mit verwässerten Getränken, dem Aroma von abgestandener Pisse und toten Ratten auf der Bar. Sie müssen seit Jahren der erste Mensch sein, der hier einen Fuß hinein gesetzt hat.",
       [Lang.ES]: "En una época, fue una parada obligatoria en la A-667. Apreciado por su variedad de carnes, a pesar de su olor a orina y las ratas muertas en los rincones. Es una pena que ya no haya restaurantes así..."
     },
@@ -986,7 +997,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "Looks like an altercation between a small van and a station wagon... This minor accident seems to have caused a substantial pile-up judging by the number of burnt corpses lying around.",
-      [Lang.FR]: "Un modèle plutôt commun de <strong>break familial</strong> encastré dans un modèle tout aussi commun de <strong>fourgonnette</strong>... Ce petit accident semble avoir provoqué un <strong>carambolage</strong> de grande envergure si on en juge par l'amas de carcasses calcinées tout autour.",
+      [Lang.FR]: "Un modèle plutôt commun de <strong>break familial</strong> encastré dans un modèle tout aussi commun de <strong>fourgonnette</strong>… Ce petit accident semble avoir provoqué un <strong>carambolage</strong> de grande envergure si l’on en juge par l’amas de carcasses calcinées tout autour.",
       [Lang.DE]: "Ein Kombi, der sich in einen Kleintransporter verkeilt hat. Der großen Anzahl an verkohlten Leichen nach zu urteilen, hat hier ein Unfall eine richtig große Karambolage verursacht.",
       [Lang.ES]: "Un modelo común de <strong>automóvil familiar</strong> empotrado en otro modelo común de <strong>furgoneta</strong>... Este choque debió provocar un <strong>accidente</strong> de gran envergadura a juzgar por la cadena de coches semi-destruidos que se encuentran alrededor."
     },
@@ -1063,13 +1074,13 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "This bar is hidden behind a small hill in such a location that you could easily have walked straight past it without realising. The interior is decorated with countless black and white portraits and photos. There is often a guy in the pictures wearing some striped pyjama-type outfit standing next to various other people.",
-      [Lang.FR]: "Ce bar étrange se trouve caché derrière une petite colline et vous auriez tout aussi bien pu passer à côté sans le remarquer. L'intérieur est décoré d'innombrables portraits et photos en noir et blanc. On y retrouve souvent un type habillé dans une sorte de pyjama rayé sur les bords, debout aux côtés de diverses personnes.",
+      [Lang.FR]: "Ce bar étrange se trouve caché derrière une petite colline et vous auriez tout aussi bien pu passer à côté sans le remarquer. L’intérieur est décoré d’innombrables portraits et photos en noir et blanc. On y retrouve souvent un type habillé dans une sorte de pyjama rayé sur les bords, debout aux côtés de diverses personnes.",
       [Lang.DE]: "Diese Bar ist hinter einem kleinen Hügel an einer solchen Stelle versteckt, dass man leicht direkt daran vorbeigehen könnte, ohne es zu merken. Der Innenraum ist mit unzähligen Schwarzweiß-Portraits und Fotos geschmückt. Auf den Bildern ist oft ein Typ in gestreifter Pyjama-Kleidung zu sehen, der neben verschiedenen anderen Personen steht.",
       [Lang.ES]: "Este extraño bar se encuentra detrás de una colina y nadie se había dado cuenta de su existencia. El interior está decorado con muchísimas fotos en blanco y negro, en todas ellas hay un hombre vestido con un traje a rayas junto a diversas personas."
     },
     icon: "bar2",
     camping: {
-      baseValue: 10,
+      baseValue: 20,
       spots: 3
     },
     spawnChance: 41,
@@ -1124,7 +1135,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "A veritable Mecca for the DIY enthusiast. A paradise full of invaluable treasures for a world like ours... Their advertising slogan is even more appropriate nowadays: Pillage our store before someone else beats you to it!",
-      [Lang.FR]: "Le relais des <strong>bricoleurs</strong>. Véritable petit paradis rempli de trésors inestimables pour un monde comme le nôtre... Leur slogan est tout à fait d'actualité : « Pillez-nous avant que d'autres ne s'en chargent pour vous ! »",
+      [Lang.FR]: "Le relais des <strong>bricoleurs</strong>. Véritable petit paradis rempli de trésors inestimables pour un monde comme le nôtre… Leur slogan est tout à fait d’actualité : « Pillez-nous avant que d’autres ne s’en chargent pour vous ! »",
       [Lang.DE]: "Der Baumarkt ist das zweite Zuhause eines jeden Handwerkers. In dieser Welt avanciert er jedoch zu einem wahren Paradies! Gegenstände von unschätzbarem Wert warten nur darauf von dir entdeckt zu werden... Der Werbespruch auf dem Dach hat zudem nichts von seiner Aktualität eingebüßt: 'Plündern Sie uns bevor es andere tun!'",
       [Lang.ES]: "Un paraíso para los amantes de las tuercas y destornilladores... Su eslogan sigue siendo vigente: « Más barato, imposible »"
     },
@@ -1182,10 +1193,6 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
         odds: 8,
       },
       {
-        item: ItemId.PILE,
-        odds: 5,
-      },
-      {
         item: ItemId.CHEST_TOOLS,
         odds: 20,
       },
@@ -1224,6 +1231,10 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       {
         item: ItemId.WIRE,
         odds: 7,
+      },
+      {
+        item: ItemId.LENS,
+        odds: 5,
       }
     ]
   },
@@ -1237,7 +1248,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "A huge metal box-like creation stuck in the middle of nowhere. It would usually be found beside a building site, and once upon a time it probably was, but there is no sign of it today. Well, except this 'cabin'...",
-      [Lang.FR]: "Un très grand container métallique posé au milieu de nulle part. Il devait se trouver à côté d'un chantier, à une époque, mais il n'en reste rien aujourd'hui. À part cette 'cabane'.",
+      [Lang.FR]: "Un très grand container métallique posé au milieu de nulle part. Il devait se trouver à côté d’un chantier, à une époque, mais il n’en reste rien aujourd'hui. À part cette « cabane ».",
       [Lang.DE]: "Dieser riesige gelbe Metallcontainer macht einen verlorenen Eindruck. Weit und breit keine Baustelle. Der Gemeinschaftsraum im Inneren ist mit leeren Bierflaschen übersät",
       [Lang.ES]: "Un gran container de metal en medio del desierto. Aquí debió haber gente tabajando, pero hoy no queda nada más que esta \"cabaña\"."
     },
@@ -1264,11 +1275,11 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.REPAIR_KIT_PART_RAW,
-        odds: 5,
+        odds: 4,
       },
       {
         item: ItemId.JERRYCAN,
-        odds: 10,
+        odds: 8,
       },
       {
         item: ItemId.CHAIN,
@@ -1280,7 +1291,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.RSC_PACK_2,
-        odds: 10,
+        odds: 8,
       },
       {
         item: ItemId.RSC_PACK_3,
@@ -1321,6 +1332,10 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       {
         item: ItemId.OILCAN,
         odds: 2,
+      },
+      {
+        item: ItemId.LENS,
+        odds: 5,
       }
     ]
   },
@@ -1334,7 +1349,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "If you're a bit peckish, esurient or just plain hungry, whatever you do, don't stop here! Here it's the chef that wants to eat... you... after he cuts off your head with a circular saw.",
-      [Lang.FR]: "Si vous avez un petit creux, ne vous arrêtez surtout pas ici ! Ou c'est le cuistot lui même qui viendra vous dévorer, après vous avoir découpé à la scie circulaire.",
+      [Lang.FR]: "Si vous avez un petit creux, ne vous arrêtez surtout pas ici ! Ou c’est le cuistot lui-même qui viendra vous dévorer, après vous avoir découpé à la scie circulaire.",
       [Lang.DE]: "Von wegen Döner macht schöner. Scheint so als hätte der Besitzer dieser Bude das mit den Dönern und den Spießen missverstanden. Wer hier reingeht kommt garantiert nicht mehr raus.",
       [Lang.ES]: "¿Tienes ganas de comer algo rico? ¡Ni se te ocurra venir aquí! o será el propio cocinero quien saldrá a devorarte!"
     },
@@ -1398,6 +1413,10 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       {
         item: ItemId.CHEST_FOOD,
         odds: 10,
+      },
+      {
+        item: ItemId.QUANTUM,
+        odds: 3,
       }
     ]
   },
@@ -1411,7 +1430,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "The home of a certain Duke R. Cooke, and if one is to believe the plaque on the door... a home for Heroes... this place is much bigger than a villa, it's a fully equipped fortress!",
-      [Lang.FR]: "La maison d'un certain « Duke » si on en croit la plaque d'entrée calcinée, ancien « Héros Pour Toujours » ... Plus qu'une villa, l'endroit semble être une vaste <strong>forteresse aménagée</strong>.",
+      [Lang.FR]: "La maison d’un certain « Duke » si on en croit la plaque d’entrée calcinée, ancien « Héros Pour Toujours »… Plus qu’une villa, l’endroit semble être une vaste <strong>forteresse aménagée</strong>.",
       [Lang.DE]: "Das Heim eines gewissen Duke R. Cooke, und wenn man der Gedenktafel an der Tür glauben darf... ein Heim für Helden... dieser Ort ist viel größer als eine Villa, es ist eine voll ausgestattete Festung !",
       [Lang.ES]: "El hogar de un tal Duke R. Cooke, y si puedes creer en la placa en la puerta... un hogar para héroes... ¡Este lugar es mucho más grande que una mansión, es una fortaleza completamente equipada!"
     },
@@ -1430,19 +1449,19 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     drops: [
       {
         item: ItemId.VIBR_EMPTY,
-        odds: 10,
+        odds: 9,
       },
       {
         item: ItemId.DRUG_HERO,
-        odds: 20,
+        odds: 17,
       },
       {
         item: ItemId.VODKA,
-        odds: 10,
+        odds: 9,
       },
       {
         item: ItemId.RHUM,
-        odds: 10,
+        odds: 9,
       },
       {
         item: ItemId.SPORT_ELEC_EMPTY,
@@ -1454,7 +1473,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.RADIUS_MK2_PART,
-        odds: 5,
+        odds: 4,
       },
       {
         item: ItemId.PILE,
@@ -1474,7 +1493,11 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.BIKE_PART,
-        odds: 0,
+        odds: 7,
+      },
+      {
+        item: ItemId.QUANTUM,
+        odds: 2,
       }
     ]
   },
@@ -1488,7 +1511,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "The burnt remains of a small forest. It was probably a nice area beforehand... Now you're just hoping you won't have to spend the night here.",
-      [Lang.FR]: "Les restes <strong>calcinés</strong> d'une forêt. C'était probablement un endroit agréable avant... Aujourd'hui, on prie juste pour ne jamais s'y perdre la nuit.",
+      [Lang.FR]: "Les restes <strong>calcinés</strong> d’une forêt. C’était probablement un endroit agréable avant… Aujourd’hui, on prie juste pour ne jamais s’y perdre la nuit.",
       [Lang.DE]: "Die verbrannten Überreste eines kleinen Waldes. Es war wahrscheinlich vorher eine schöne Gegend... Jetzt hoffen Sie nur noch, dass Sie hier nicht übernachten müssen.",
       [Lang.ES]: "Los restos <strong>carbonizados</strong> de un bosque. Antes debió ser un lugar agradable... Hoy, sería una pesadilla perderse en él."
     },
@@ -1557,7 +1580,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "An old mine which has not resisted the ravages of time well. God knows what caprice could have led people to look so deep underground to find something useful. Especially when you only just have to scratch the surface to find some delicious cockroaches to crunch on! You start to feel hungry just thinking about it...",
-      [Lang.FR]: "Une ancienne mine qui n'a pas résisté aux outrages du temps. Dieu sait quel genre de lubie pouvait pousser les gens de l'époque à creuser si profond pour trouver quelque chose d'utile. Surtout quand il suffit d'à peine gratter le sol pour dégoter un délicieux cafard à manger. « Tiens, j'ai faim », pensez-vous.",
+      [Lang.FR]: "Une ancienne mine qui n’a pas résisté aux outrages du temps. Dieu sait quel genre de lubie pouvait pousser les gens de l’époque à creuser si profond pour trouver quelque chose d’utile. Surtout quand il suffit d’à peine gratter le sol pour dégoter un délicieux cafard à manger. « Tiens, j’ai faim », pensez-vous.",
       [Lang.DE]: "Diese alte Mine hat es nicht vermocht den Wetterwidrigkeiten Stand zu halten. Nur Gott weiß, was die Menschen damals angetrieben hat, so tief zu graben, um der Erde nützliche Rohstoffe zu entreißen. Dabei reicht es mit den Füßen leicht am Boden zu kratzen und schon kommt eine leckere Kakerlake vorbeigehuscht. Du denkst dir: 'Lecker, die esse ich doch mal gleich'",
       [Lang.ES]: "Una antigua mina destruida seguramente por la avaricia de sus trabajadores. ¿Pero qué interés tendrían de excavar tan profundo? Sobre todo cuando escarbando en el suelo se encuentran deliciosas cucarachas. \"Por cierto, ya es hora de la merienda\" te dices..."
     },
@@ -1610,7 +1633,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "This mineral extraction zone bears all the hallmarks of a terrible accident: the hillside seems to have collapsed onto the workers, machines and buildings below.",
-      [Lang.FR]: "Une <strong>zone d'extraction de minéraux</strong> qui porte les stigmates d'un <strong>terrible accident</strong> : tout un flanc semble s'être <strong>effondré</strong> sur les hommes, les machines et les bâtiments.",
+      [Lang.FR]: "Une <strong>zone d’extraction de minéraux</strong> qui porte les stigmates d’un <strong>terrible accident</strong> : tout un flanc semble s’être <strong>effondré</strong> sur les hommes, les machines et les bâtiments.",
       [Lang.DE]: "Diese Mineralienabbauzone trägt alle Merkmale eines schrecklichen Unglücks : der Hang scheint auf die Arbeiter, Maschinen und Gebäude darunter eingestürzt zu sein.",
       [Lang.ES]: "Una <strong>zona de extracción de minerales</strong> que lleva las marcas de un <strong>terrible accidente</strong>: toda una ladera se <strong>derrumbó</strong> sobre la gente, las máquinas y los edificios."
     },
@@ -1671,9 +1694,9 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "It looks like a large metal disk with what appears to be some kind of cockpit mounted on top. It could also be some type of high-tech combine harvester.",
-      [Lang.FR]: "Ça ressemble à un large disque métallique surmonté de ce qui devait être un poste de pilotage. Cela pourrait tout aussi bien être un genre de moissonneuse batteuse un peu high-tech.",
+      [Lang.FR]: "Ça ressemble à un large disque métallique surmonté de ce qui devait être un poste de pilotage. Cela pourrait tout aussi bien être un genre de moissonneuse-batteuse un peu high-tech.",
       [Lang.DE]: "Das Ganze sieht wie eine komische runde Metallscheibe aus, die mal zu einen Flugzeugcockpit gehörte. Aber du bist dir nicht ganz sicher, denn es könnte sich auch um ein Mähdrescherteil handeln...",
-      [Lang.ES]: "Parece un enorme disco metálico de lo que pudo haber sido una trilladora acgrícola..."
+      [Lang.ES]: "Parece un enorme disco metálico de lo que pudo haber sido una trilladora agrícola..."
     },
     icon: "ufo",
     camping: {
@@ -1720,7 +1743,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "PI-KEYA: These enormous stores used to be in every city (always rather annoyingly situated on the outskirts). They specialised in the manufacture and sale of cheap furniture, usually with one bolt / screw / fastener missing. It is said that the poor quality of their products was one of the reasons for society going to ruin...",
-      [Lang.FR]: "La chaîne de magasins Kiela était autrefois spécialisée dans la fabrication et la vente de meubles bons marchés. On dit que la piètre qualité de leurs produits serait l'une des raisons qui a poussé le monde à sa perte...",
+      [Lang.FR]: "La chaîne de magasins Kiela était autrefois spécialisée dans la fabrication et la vente de meubles bon marché. On dit que la piètre qualité de leurs produits serait l’une des raisons qui a poussé le monde à sa perte…",
       [Lang.DE]: "E-KEA: Diese riesigen Geschäfte gab es früher in jeder Stadt (immer ziemlich ärgerlich am Stadtrand gelegen). Sie spezialisierten sich auf die Herstellung und den Verkauf von Billigmöbeln, denen meist ein Bolzen / Schraube / Verbindungselement fehlte. Es wird gesagt, dass die schlechte Qualität ihrer Produkte einer der Gründe für den Niedergang der Gesellschaft war...",
       [Lang.ES]: "Estas enormes tiendas solían estar en todos los pueblos (siempre a las afueras, en el peor lugar posible). Se especializaron en la fabricación y venta de muebles baratos, que en su mayoría carecían de tornillos. Se dice que la mala calidad de sus productos fue una de las razones del declive de la sociedad..."
     },
@@ -1797,7 +1820,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "A dilapidated family crypt. You can only just make out the entrance, as it's almost completely obscured by decaying vegetation. Apparently the bodies got up and left some time ago...",
-      [Lang.FR]: "Un <strong>caveau familial</strong> décrépi. C'est à peine si on distingue encore l'entrée, presque entièrement dissimulée sous la <strong>végétation pourrissante</strong>. Les <strong>cadavres</strong>, quant à eux, se sont levés et sont sortis depuis bien longtemps...",
+      [Lang.FR]: "Un <strong>caveau familial</strong> décrépi. C’est à peine si l’on distingue encore l’entrée, presque entièrement dissimulée sous la <strong>végétation pourrissante</strong>. Les <strong>cadavres</strong>, quant à eux, se sont levés et sont sortis depuis bien longtemps…",
       [Lang.DE]: "Eine verfallene Familiengruft. Man kann den Eingang gerade noch erkennen, da er fast vollständig von verrottender Vegetation verdeckt ist. Anscheinend sind die Leichen vor einiger Zeit aufgestanden und gegangen...",
       [Lang.ES]: "Una <strong>cripta familiar</strong> decadente. Apenas se distingue la entrada detrás de la <strong>vegetación descompuesta</strong>. Los <strong>cadáveres</strong> salieron temprano..."
     },
@@ -1846,7 +1869,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "There is a horrendous stench of decaying bodies coming from this building: The stocks of meat have transformed into disgusting mounds of mouldy white flesh which are leaking a thick pungent liquid which now covers the floor and has even started to run out the door...",
-      [Lang.FR]: "Une odeur atroce de cadavre faisandé émane de ce bâtiment : les réserves de viande se sont transformées en répugnants <strong>monticules de moisissure blanche</strong> qui ont commencé à \"s'écouler\" par les portes...",
+      [Lang.FR]: "Une odeur atroce de cadavre faisandé émane de ce bâtiment : les réserves de viande se sont transformées en répugnants <strong>monticules de moisissure blanche</strong> qui ont commencé à « s’écouler » par les portes…",
       [Lang.DE]: "Aus diesem Gebäude strömt ein entsetzlicher Gestank von verwesenden Leichen : Die Fleischvorräte haben sich in ekelerregende Hügel aus schimmeligem, weißem Fleisch verwandelt, aus denen eine dicke, scharfe Flüssigkeit austritt, die nun den Boden bedeckt und sogar begonnen hat, aus der Tür zu laufen...",
       [Lang.ES]: "Un olor atroz a cadáver sale de este edificio. La carne guardada se ha transformado en <strong>montículos de podredumbre blanca</strong> que comenzó a gelatinizarse..."
     },
@@ -1915,7 +1938,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "This long-haul aircraft has crashed in the middle of nowhere... It's difficult to know what it was carrying, the desert sand has almost entirely eroded the fuselage. The presence of some seats suggests there were at least some passengers on board. There is no trace of the bodies though...",
-      [Lang.FR]: "Un <strong>long courrier</strong> s'est écrasé au milieu de nulle part... Difficile de savoir ce qu'il transportait, le sable du désert l'a presque totalement rongé. La présence de quelques sièges suggère toutefois qu'il avait à son bord des passagers, entre autres. Aucune trace des corps...",
+      [Lang.FR]: "Un <strong>long courrier</strong> s’est écrasé au milieu de nulle part… Difficile de savoir ce qu’il transportait, le sable du désert l’a presque totalement rongé. La présence de quelques sièges suggère toutefois qu’il avait à son bord des passagers, entre autres. Aucune trace des corps…",
       [Lang.DE]: "Dieser Langstreckenflieger ist mitten im nirgendwo abgestürzt... Da der Wüstensand das Wrack fast vollkommen eingegraben hat und sich der Zahn der Zeit in das Material gefressen hat, lässt sich nicht mehr sagen, was das Flugzeug transportierte. Du lässt deinen Blick schweifen, es sind jedoch weit und breit keine Leichen erkennbar...",
       [Lang.ES]: "Este avión comercial se estrelló en medio del desierto... Es difícil saber lo que transportaba, la arena ha cubierto casi todo. La presencia de asientos hace pensar que habían pasajeros, pero no hay rastro de cuerpos..."
     },
@@ -1942,15 +1965,15 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.METAL_BEAM,
-        odds: 30,
+        odds: 22,
       },
       {
         item: ItemId.METAL,
-        odds: 10,
+        odds: 6,
       },
       {
         item: ItemId.PLATE_RAW,
-        odds: 30,
+        odds: 26,
       },
       {
         item: ItemId.SCREW,
@@ -2014,11 +2037,11 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.SOCCER,
-        odds: 0,
+        odds: 10,
       },
       {
         item: ItemId.SHOE,
-        odds: 0,
+        odds: 6,
       }
     ]
   },
@@ -2032,7 +2055,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "In the middle of a completely derelict square, you find a sizeable garden shed. The door gives way easily, revealing a vast space full of shelf units and all kinds of tools.",
-      [Lang.FR]: "Au milieu d'un petit square totalement décrépi, vous trouvez un vaste abri de jardin. La porte cède facilement, révélant une vaste pièce remplie d'étagères et d'outillages en tous genres.",
+      [Lang.FR]: "Au milieu d’un petit square totalement décrépi, vous trouvez un vaste abri de jardin. La porte cède facilement, révélant une vaste pièce remplie d’étagères et d’outillages en tout genre.",
       [Lang.DE]: "Mitten auf einem völlig verfallenen Platz befindet sich ein großer Gartenschuppen. Die Tür gibt leicht nach und gibt den Blick frei auf einen riesigen Raum voller Regale und allerlei Werkzeug.",
       [Lang.ES]: "En medio de lo que fue un parque encuentras una pequeña cabaña. La puerta se abre fácilmente, revelando estantes con herramientas de todo tipo."
     },
@@ -2063,7 +2086,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.LIGHTS,
-        odds: 5,
+        odds: 3,
       },
       {
         item: ItemId.JERRYGUN_PART,
@@ -2091,7 +2114,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.ELECTRO_BOX,
-        odds: 10,
+        odds: 8,
       },
       {
         item: ItemId.JERRYCAN,
@@ -2111,7 +2134,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.SOCCER,
-        odds: 0,
+        odds: 4,
       }
     ]
   },
@@ -2125,7 +2148,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "This hulking mass of metal and brisk was probably a large shopping centre, swarming with activity and illuminated by a thousand lights. Today nothing swarms except the vermin and other crawling filth... There's no doubt though that it contains lots of goodies...",
-      [Lang.FR]: "Ce gigantesque amas de brique et de métal était probablement autrefois un grand centre commercial grouillant d'activité et illuminé de mille feux. Aujourd'hui il n'y grouille que de la vermine et autres immondices rampants… Nul doute toutefois qu'il recèle aussi bon nombre de richesses.",
+      [Lang.FR]: "Ce gigantesque amas de brique et de métal était probablement autrefois un grand centre commercial, grouillant d’activité et illuminé de mille feux. Aujourd’hui, il n’y grouille que de la vermine et autres immondices rampantes… Nul doute, toutefois, qu’il recèle aussi bon nombre de richesses.",
       [Lang.DE]: "Dieser riesige Haufen aus Schutt und Metall war früher mal ein hell erleuchtetes Einkaufszentrum, das vor Menschen nur so wimmelte. Das Einzige, was hier noch herumwimmelt, sind Würmer und anderes Gekreuch und Gefleuch... Du bist jedoch zuversichtlich, hier allerhand nützliche Gegenstände zu finden.",
       [Lang.ES]: "Este gran terreno de escombros fue seguramente un enorme centro comercial, de esos que tenían gente circulando como hormigas. Hoy no queda más que eso: insectos y otros bichos... Debe contener más de un tesoro."
     },
@@ -2236,7 +2259,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.QUANTUM,
-        odds: 0,
+        odds: 3,
       }
     ]
   },
@@ -2250,7 +2273,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "Some kind of stone cavern which must previously have served as a burial place or shelter... Go and take a look. Inside, it is absolutely pitch black, the air is icy and there is a strong smell of rotting flesh...",
-      [Lang.FR]: "Une sorte de <strong>tumulus</strong> qui devait autrefois servir de sépulture ou d'abri... Allez savoir. L'intérieur est plongé dans <strong>le noir le plus total</strong>, l'air y est <strong>glacial</strong> et une odeur insupportable de <strong>charogne</strong> en émane...",
+      [Lang.FR]: "Une sorte de <strong>tumulus</strong> qui devait autrefois servir de sépulture ou d’abri… Allez savoir. L’intérieur est plongé dans <strong>le noir le plus total</strong>, l’air y est <strong>glacial</strong> et une odeur insupportable de <strong>charogne</strong> en émane…",
       [Lang.DE]: "Eine Art Steinhöhle, die früher als Grabstätte oder Unterschlupf gedient haben muss... Schauen Sie sich das an. Im Inneren ist es absolut stockfinster, die Luft ist eisig und es riecht stark nach verfaulendem Fleisch...",
       [Lang.ES]: "Una especie de <strong>gruta</strong> que debió servir como sepulcro o refugio... Su interior presenta una <strong>oscuridad total</strong>, el aire es <strong>glacial</strong> y huele a <strong>carroña</strong>."
     },
@@ -2307,14 +2330,14 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "An ancient Indian burial ground which is almost entirely covered in sand and decaying vegetation. In comparison with the rest of the world, you feel strangely at ease here...",
-      [Lang.FR]: "Un ancien cimetière presque entièrement recouvert de sable et de végétation pourrissante. C'est finalement un endroit plutôt rassurant en comparaison du reste du monde...",
+      [Lang.FR]: "Un ancien cimetière presque entièrement recouvert de sable et de végétation pourrissante. C’est finalement un endroit plutôt rassurant en comparaison du reste du monde…",
       [Lang.DE]: "Ein altes indianisches Gräberfeld, das fast vollständig mit Sand und verrottender Vegetation bedeckt ist. Im Vergleich zum Rest der Welt fühlt man sich hier seltsam wohl...",
       [Lang.ES]: "Un antiguo cementerio cubierto de arena y mala hierba. Es un lugar reconfortante, comparándolo con el pueblo..."
     },
     icon: "cemetary",
     camping: {
       baseValue: -50,
-      spots: 0
+      spots: -1
     },
     spawnChance: 181,
     emptyChance: 0.2,
@@ -2379,15 +2402,19 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     drops: [
       {
         item: ItemId.GRENADE_EMPTY,
-        odds: 30,
+        odds: 32,
       },
       {
         item: ItemId.WATERGUN_EMPTY,
-        odds: 10,
+        odds: 11,
       },
       {
         item: ItemId.PILE,
-        odds: 7,
+        odds: 8,
+      },
+      {
+        item: ItemId.CHAMA,
+        odds: 8,
       },
       {
         item: ItemId.VIBR_EMPTY,
@@ -2414,11 +2441,11 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
         odds: 5,
       },
       {
-        item: ItemId.CHAMA,
-        odds: 7,
+        item: ItemId.FOOD_CANDIES,
+        odds: 5,
       },
       {
-        item: ItemId.FOOD_CANDIES,
+        item: ItemId.SOCCER,
         odds: 5,
       },
       {
@@ -2428,10 +2455,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       {
         item: ItemId.HURLING_STICK,
         odds: 2,
-      },
-      {
-        item: ItemId.SOCCER,
-        odds: 0,
+        event: GameEvent.StPatrick
       }
     ]
   },
@@ -2445,7 +2469,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "An old shack which has been uninhabited for years. Almost completely buried in sand, but you can still hear some unsettling groaning noises coming from what must be the cellar...",
-      [Lang.FR]: "Une vieille bicoque laissée à l'abandon depuis des années. Presque entièrement ensevelie sous le sable. Parfois, vous pouvez entendre des <strong>grattements inquiétants</strong> venant de ce qui doit être la cave...",
+      [Lang.FR]: "Une vieille bicoque laissée à l’abandon depuis des années. Presque entièrement ensevelie sous le sable. Parfois, vous pouvez entendre des <strong>grattements inquiétants</strong> venant de ce qui doit être la cave…",
       [Lang.DE]: "Eine alte Hütte, die seit Jahren unbewohnt ist. Fast vollständig im Sand begraben, aber man hört immer noch einige beunruhigende Stöhngeräusche aus dem, was der Keller sein muss...",
       [Lang.ES]: "Una vieja casa abandonada que se tambalea con el viento. Está llena de arena. A veces puedes oir <strong>algo que se mueve</strong> en lo que sería el sótano..."
     },
@@ -2488,7 +2512,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.RUSTINE,
-        odds: 10,
+        odds: 8,
       },
       {
         item: ItemId.LAMP,
@@ -2521,6 +2545,14 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       {
         item: ItemId.BED,
         odds: 3,
+      },
+      {
+        item: ItemId.SHOE,
+        odds: 1,
+      },
+      {
+        item: ItemId.BIKE_PART,
+        odds: 1,
       }
     ]
   },
@@ -2534,7 +2566,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "This plant collects groundwater from the surrounding area and transfers it into enormous concrete reservoirs. The filtration system seems to be broken, but you should be able to recover the contaminated water that is stored here...",
-      [Lang.FR]: "Cette centrale capte les eaux des nappes phréatiques environnantes et les transvase dans de gigantesques réservoirs en béton. Le <strong>système de filtrage semble en panne</strong>, mais on doit pouvoir récupérer l'eau contaminée stockée ici.",
+      [Lang.FR]: "Cette centrale capte les eaux des nappes phréatiques environnantes et les transvase dans de gigantesques réservoirs en béton. Le <strong>système de filtrage semble en panne</strong>, mais on doit pouvoir récupérer l’eau contaminée stockée ici.",
       [Lang.DE]: "Das Kraftwerk sammelt das benachbarte Grundwasser in einem Stauraum. Die Energie der Bewegung des fließenden Wassers wird auf eine Turbine übertragen, wodurch dieses in Drehbewegung mit hohem Drehmoment versetzt wird. Das Filtersystem scheint kaputt zu sein, aber das schmutzige Wasser kann trotzdem eingesammelt werden.",
       [Lang.ES]: "Esta central extrae el agua de las capas freáticas y la deposita en un reservorio de concreto. El <strong>sistema de filtrado parece no funcionar</strong>, pero se debe poder recuperar el agua contaminada que se encuentra almacenada aquí."
     },
@@ -2583,7 +2615,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "This depressing building once served as an animal testing facility (rabbits doing mid-terms etc...). It smells of camphor, ether and rotting carcasses. And you've not even gone inside yet...",
-      [Lang.FR]: "Ce bâtiment lugubre a servi autrefois pour divers tests de produits sur des animaux. Ça sent le camphre, l'ether et la charogne. Et ce n'est que l'entrée...",
+      [Lang.FR]: "Ce bâtiment lugubre a servi autrefois pour divers tests de produits sur des animaux. Ça sent le camphre, l’éther et la charogne. Et ce n’est que l’entrée…",
       [Lang.DE]: "Dieses bedrückende Gebäude diente einst als Einrichtung für Tierversuche (Kaninchen in Zwischenprüfungen etc...). Es riecht nach Kampfer, Äther und verrottenden Kadavern. Und Sie sind noch nicht einmal hineingegangen...",
       [Lang.ES]: "Este frío edificio sirvió alguna vez para elaborar cosméticos y probarlos en animales. Los cadáveres de las ratas tienen la piel llena de brotes asquerosos. Esperas no haber usado nunca una de esas cremas..."
     },
@@ -2618,7 +2650,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.MEAT,
-        odds: 20,
+        odds: 19,
       },
       {
         item: ItemId.SPORT_ELEC_EMPTY,
@@ -2638,7 +2670,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.PET_RAT,
-        odds: 20,
+        odds: 19,
       },
       {
         item: ItemId.PET_PIG,
@@ -2646,7 +2678,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.PET_CAT,
-        odds: 5,
+        odds: 4,
       },
       {
         item: ItemId.XANAX,
@@ -2654,7 +2686,11 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.ANGRYC,
-        odds: 4,
+        odds: 3,
+      },
+      {
+        item: ItemId.LENS,
+        odds: 16,
       }
     ]
   },
@@ -2668,7 +2704,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "This ambulance has been abandoned in the middle of the road. The wheels are gone, as is the engine... There are no signs of a struggle, and no signs of an accident. There are no bodies either come to that...",
-      [Lang.FR]: "Une ambulance arrêtée au milieu de la route. Elle ne comporte plus de roue, ni de moteur... Aucune trace de lutte, ni d'accident. Pourtant vous ne trouvez aucun corps non plus...",
+      [Lang.FR]: "Une ambulance arrêtée au milieu de la route. Elle ne comporte plus de roue, ni de moteur… Aucune trace de lutte, ni d’accident. Pourtant vous ne trouvez aucun corps non plus…",
       [Lang.DE]: "Dieser Krankenwagen ist mitten auf der Straße stehen geblieben. Er hat keine Reifen mehr und auch der Motor fehlt... Außerdem finden sich keinerlei Anzeichen für einen Kampf oder Unfall... Höchst seltsam...",
       [Lang.ES]: "Una ambulancia detenida en medio de la vía. Ya no tiene ruedas ni motor... No hay huellas de pelea, ni de accidente. Tampoco encuentras cuerpos..."
     },
@@ -2725,7 +2761,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "This was the storage unit for a department store which went to the wall some time ago. So this would lead you to think that the thirty corpses hanging in stockroom 2 were the board of directors. Now you just need to work out if it was a mass suicide (the fact that they all have their hands tied together confuses you though...).",
-      [Lang.FR]: "Le dépôt d'un grand magasin qui a certainement déposé son bilan il y a bien longtemps. Enfin, c'est ce que laisse supposer la présence d'une trentaine de corps pendus dans le hangar numéro 2. Vous supposez qu'il s'agit du conseil d'administration ; reste à savoir s'il s'agit d'un suicide collectif (le fait qu'ils aient les mains attachées vous laisse perplexe).",
+      [Lang.FR]: "Le dépôt d’un grand magasin qui a certainement déposé son bilan il y a bien longtemps. Enfin, c’est ce que laisse supposer la présence d’une trentaine de corps pendus dans le hangar numéro 2. Vous supposez qu’il s’agit du conseil d'administration ; reste à savoir s’il s’agit d’un suicide collectif (le fait qu’ils aient les mains attachées vous laisse perplexe).",
       [Lang.DE]: "Die letzte Inventur hat hier schon vor einiger Zeit stattgefunden... Die 30 Leichen, die in Halle 2 hängen, lassen darauf vermuten, dass mit den Bilanzen etwas nicht stimmte. Dem Umfang ihrer Bäuche nach zu urteilen, handelt es sich wahrscheinlich um den Verwaltungsrat. War es ein kollektiver Selbstmord? Ihr gefesselten Hände sprechen nicht dafür.",
       [Lang.ES]: "El depósito de una gran tienda que quebró hace mucho tiempo. Es lo que hace pensar la cantidad de cuerpos colgados en el hangar número 2. Supones que fue un suicidio colectivo de los miembros del consejo de dirección, pero el hecho de que tengan las manos atadas te deja perplejo."
     },
@@ -2790,14 +2826,14 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "An almost completely buried underground parking lot. An ideal venue to 'go quietly into the night' as long as nobody hears you...",
-      [Lang.FR]: "Un parking souterrain presque entièrement enseveli. Idéal pour <strong>mourir dans le noir</strong>, sans que personne ne vous entende...",
+      [Lang.FR]: "Un parking souterrain presque entièrement enseveli. Idéal pour <strong>mourir dans le noir</strong>, sans que personne ne vous entende…",
       [Lang.DE]: "Ein unterirdisches Parkhaus, das fast vollständig vom Sand begraben wurde - der ideale Ort, um alleine zu sterben. Niemand wird dich hören...",
       [Lang.ES]: "Un estacionamiento subterráneo cubierto de arena. Ideal para <strong>morir en la oscuridad</strong>, sin que nadie te escuche..."
     },
     icon: "carpark",
     camping: {
       baseValue: 10,
-      spots: 2
+      spots: 3
     },
     spawnChance: 335,
     emptyChance: 0.1,
@@ -2867,7 +2903,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "This military vehicle is like the metaphorical food can. The soldier is inside, playing the role of a sardine, and a hundred zombies outside are playing the hungry citizen. The citizen wins...",
-      [Lang.FR]: "Ce char militaire est un peu une métaphore de la <strong>boîte de conserve</strong>, avec le soldat dans le rôle de la sardine et la centaine de zombies dans le rôle du citoyen affamé. C'est le citoyen qui a gagné.",
+      [Lang.FR]: "Ce char militaire est un peu une métaphore de la <strong>boîte de conserve</strong>, avec le soldat dans le rôle de la sardine et la centaine de zombies dans le rôle du citoyen affamé. C’est le citoyen qui a gagné.",
       [Lang.DE]: "Dieses militärische Vehikel ist wie die metaphorische Konservendose. Der Soldat ist drinnen und spielt die Rolle einer Sardine, und hundert Zombies draußen spielen den hungrigen Bürger. Der Bürger gewinnt...",
       [Lang.ES]: "Metafóricamente sería: <strong>Una lata de sardinas</strong> en manos de una centena de zombies hambrientos. Y de la sardina no quedó nada..."
     },
@@ -2894,7 +2930,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.POWDER,
-        odds: 10,
+        odds: 9,
       },
       {
         item: ItemId.MECANISM,
@@ -2914,7 +2950,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.HOME_DEF,
-        odds: 10,
+        odds: 9,
       },
       {
         item: ItemId.HOME_BOX_XL,
@@ -2939,6 +2975,10 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       {
         item: ItemId.PILEGUN_UPKIT,
         odds: 1,
+      },
+      {
+        item: ItemId.FLAG,
+        odds: 2,
       }
     ]
   },
@@ -3044,15 +3084,15 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     drops: [
       {
         item: ItemId.GUN,
-        odds: 10,
+        odds: 8,
       },
       {
         item: ItemId.MACHINE_GUN,
-        odds: 10,
+        odds: 8,
       },
       {
         item: ItemId.CHEST_FOOD,
-        odds: 10,
+        odds: 8,
       },
       {
         item: ItemId.FENCE,
@@ -3060,7 +3100,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.COFFEE,
-        odds: 10,
+        odds: 8,
       },
       {
         item: ItemId.RSC_PACK_3,
@@ -3076,11 +3116,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.SHOE,
-        odds: 0,
-      },
-      {
-        item: ItemId.SOCCER,
-        odds: 0,
+        odds: 5,
       }
     ]
   },
@@ -3094,7 +3130,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "This building seems to have resisted the ravages of time, a vestige of the postal service of years ago. It's unlikely that you'll find anything of great interest here, unless you like reading...",
-      [Lang.FR]: "Un bâtiment qui semble avoir résisté aux affres du temps, vestige d'un antique service postal. Peu de chances que vous y trouviez quoi que ce soit de grand intérêt, sauf si vous aimez la lecture...",
+      [Lang.FR]: "Un bâtiment qui semble avoir résisté aux affres du temps, vestige d’un antique service postal. Peu de chances que vous y trouviez quoi que ce soit de grand intérêt, sauf si vous aimez la lecture…",
       [Lang.DE]: "Dieses Gebäude scheint von den turbulenten Ereignissen der Vergangenheit verschont worden zu sein. Es ist noch vollkommen intakt und erinnert an ein klassisches Postbüro mit doppelten Schalterfenstern und durchsiebtem Sprechfenster. Hier wirst du kaum etwas Nützliches finden außer etwas zum Lesen...",
       [Lang.ES]: "El edificio resistió bien el paso del tiempo. Además de reliquias del servicio postal, no crees encontrar nada interesante, a menos que te guste leer..."
     },
@@ -3164,7 +3200,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "A hole in the ground that has been somewhat concealed by some planks and some sand. It opens out into a large humid cavern filled with all kinds of debris, no doubt the result of pillaging by a neighbouring town. Who could say that your town wasn't built using ill-gotten gains from such pillaging ? Perhaps the first citizens were responsible for these attacks...",
-      [Lang.FR]: "Un trou dans le sol vaguement <strong>dissimulé</strong> par quelques planches et du sable. Il débouche sur une large caverne humide remplie de <strong>débris en tous genres</strong>, résultats de <strong>pillages dans une ville voisine</strong>, probablement. Qui sait si <strong>votre ville</strong> ne s'est pas construite sur ces pillages ? Peut-être que les <strong>premiers citoyens</strong> ont participé à ces attaques...",
+      [Lang.FR]: "Un trou dans le sol vaguement <strong>dissimulé</strong> par quelques planches et du sable. Il débouche sur une large caverne humide remplie de <strong>débris en tout genre</strong>, résultats de <strong>pillages dans une ville voisine</strong>, probablement. Qui sait si <strong>votre ville</strong> ne s’est pas construite sur ces pillages ? Peut-être que les <strong>premiers citoyens</strong> ont participé à ces attaques…",
       [Lang.DE]: "Der Zugang zu dieser Höhle ist ein notdürftig abgedecktes Loch in der Erde. Er führt in eine übergroße feuchte Grotte, die mit allerlei Trümmern und Gerümpel gefüllt ist. Höchstwahrscheinlich handelt es sich um Beutegut, das bei der Plünderung einer benachbarten Stadt eingesackt wurde. Vielleicht wurde deine Stadt mit diesem Raubgut errichtet? Und wer weiß: Womöglich haben die ersten Einwohner deiner Stadt an diesen Raubzügen teilgenommen...",
       [Lang.ES]: "Un hoyo <strong>se esconde</strong> en el suelo detrás de tablas y arena. Lleva a una caverna húmeda llena de <strong>cachivaches</strong> acumulados probablemente con los <strong>robos a un pueblo vecino</strong>. Quién sabe si <strong>tu pueblo</strong> se construyó con base en objetos robados. Puede ser que los <strong>primeros habitantes</strong> hayan sido los autores de todo esto..."
     },
@@ -3221,7 +3257,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "Numerous craters and splashes of dried blood lead you to think that a large - scale battle took place here. Most of the trenches are buried, but there are still some that are worth exploring...",
-      [Lang.FR]: "Les nombreux <strong>cratères</strong> et autres <strong>taches de sang séché</strong> laissent à penser qu'une <strong>bataille de grande envergure</strong> s'est déroulée ici. La plupart des tranchées se sont effondrées, mais il reste <strong>quelques trous à fouiller</strong>.",
+      [Lang.FR]: "Les nombreux <strong>cratères</strong> et autres <strong>taches de sang séché</strong> laissent à penser qu’une <strong>bataille de grande envergure</strong> s’est déroulée ici. La plupart des tranchées se sont effondrées, mais il reste <strong>quelques trous à fouiller</strong>.",
       [Lang.DE]: "Dieser von Einschusskratern und schwarzen getrockneten Blutlachen übersäte Schützengraben lässt erahnen, was sich hier abgespielt hat. Der größte Teil des Grabens ist in sich zusammengestürzt, doch hier und dort erblickst du noch ein paar begehbare Stellen, die sich nach nutzbaren Gegenständen absuchen lassen.",
       [Lang.ES]: "Los numerosos <strong>cráteres</strong> y <strong>manchas de sangre seca</strong> hacen pensar que una <strong>gran batalla</strong> tuvo lugar aquí. La mayoría de las trincheras fueron saqueadas, pero quedan aún <strong>algunas que pueden contener algo interesante</strong>."
     },
@@ -3339,7 +3375,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "This small convenience store sold pretty much all the day-to-day necessities: Food, drinks, cleaning products... Open 24/7 365 days a year if you believe the printing on the window. The gaping hole in said window makes this statement 100% correct!",
-      [Lang.FR]: "Ce petit magasin proposait toutes sortes de produits de consommation courants : nourriture, boissons, produits d'entretien… Ouvert 24h/24 et 7j/7 si on en croit ce qui est imprimé sur la vitrine. Le trou béant dans la façade lui donne raison.",
+      [Lang.FR]: "Ce petit magasin proposait toutes sortes de produits de consommation courants : nourriture, boissons, produits d’entretien… Ouvert 24h/24 et 7j/7 si l’on en croit ce qui est imprimé sur la vitrine. Le trou béant dans la façade lui donne raison.",
       [Lang.DE]: "In diesem Geschäft konnte man früher allerlei Produkte des täglichen Bedarfs kaufen: Lebensmittel, Getränke, Reinigungsmittel... An der Tür steht: Rund um die Uhr geöffnet (auch am Wochenende). In der Tat, das klaffenden Loch in der Mauer bestätigt dies.",
       [Lang.ES]: "Esta tienda vendía todo tipo de productos de consumo diario: comida, bebidas, productos de limpieza... Abierto las 24 horas, los 7 días de la semana, según lo que dice en la entrada. La puerta destrozada le da la razón."
     },
@@ -3424,7 +3460,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "Your representative on your doorstep. The zombies thoroughly approved of this concept if you notice the claw marks on the upholstery in the cab and the human remains sprayed everywhere.",
-      [Lang.FR]: "« Vos démarches citoyennes juste en bas de chez vous ». Pas de doute, les zombies ont complètement adhéré au concept si on croit les traces de griffe un peu partout à l'intérieur du camion et les restes humains soigneusement éparpillés dans les rayonnages.",
+      [Lang.FR]: "« Vos démarches citoyennes juste en bas de chez vous ». Pas de doute, les zombies ont complètement adhéré au concept, si l’on en croit les traces de griffes un peu partout à l’intérieur du camion et les restes humains soigneusement éparpillés dans les rayonnages.",
       [Lang.DE]: "Ihr Vertreter vor Ihrer Haustür. Die Zombies stimmten diesem Konzept voll und ganz zu, wenn man die Krallenspuren auf den Polstern der Kabine und die überall versprühten menschlichen Überreste bemerkt.",
       [Lang.ES]: "Un buen día los pobladores salieron a hacer una excursión por el desierto en este bus cantando alegremente: «Vamo' pa' la playa, pa' curarte el alma», pero cuando cantaron la famosa canción de The Cranberries: «...in your head...zombie, zombie... » Una turba de muertos vivientes se unió al coro... dejando 40 muertos."
     },
@@ -3477,7 +3513,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "A soviet transporter from the 'Trastwin' corporation. The driver's cab is wrapped round a tree, but the slashes in the seat and the blood-soaked interior would suggest that the crash was not the cause of death...",
-      [Lang.FR]: "Un camion de transport du groupe soviétique <strong>Transtwinä</strong>. La cabine du conducteur est totalement <strong>encastrée dans un arbre</strong>, mais les <strong>entailles</strong> profondes dans le siège et le <strong>sang</strong> qui tapisse toutes les parois laissent supposer que l'accident n'est pas la cause de la mort...",
+      [Lang.FR]: "Un camion de transport du groupe soviétique <strong>Transtwinä</strong>. La cabine du conducteur est totalement <strong>encastrée dans un arbre</strong>, mais les <strong>entailles</strong> profondes dans le siège et le <strong>sang</strong> qui tapisse toutes les parois laissent supposer que l’accident n'est pas la cause de la mort…",
       [Lang.DE]: "Es handelt sich um einen Transportlaster der sowjetischen Firma Transtwinï. Die Fahrerkabine hat sich komplett in einem Baum verkeilt. Der aufgeschlitzte Fahrersitz, sowie die großflächigen Blutspuren an den Wänden, lassen darauf schließen, dass der Unfall nicht die Todesursache war...",
       [Lang.ES]: "Un camión de la empresa rusa <strong>Transtwina</strong>. La cabina del conductor está totalmente <strong>encastrada en un árbol</strong>, pero los <strong>arañazos</strong> profundos en el asiento y la <strong>sangre</strong> en las paredes hacen pensar que no fue un accidente..."
     },
@@ -3554,7 +3590,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "The childish drawings painted on the charred walls provide a stark contrast to the vaguely human remains strewn here and there. At times, you believe you can hear sinister laughter coming from beneath the rubble.",
-      [Lang.FR]: "Les dessins enfantins peints sur les parois calcinées contrastent effroyablement avec les restes vaguement humains dispersés çà et là. Par moment, on croirait même entendre des <strong>rires lugubres</strong> sous les décombres.",
+      [Lang.FR]: "Les dessins enfantins peints sur les parois calcinées contrastent effroyablement avec les restes vaguement humains dispersés çà et là. Par moments, on croirait même entendre des <strong>rires lugubres</strong> sous les décombres.",
       [Lang.DE]: "Die fröhlichen Kinderzeichnungen an den Wänden stehen im starken Kontrast zu den nicht identifizierbaren menschlichen Überresten am Boden. Du hast das Gefühl, ein dunkles Kichern aus dem Bauschutt zu hören.",
       [Lang.ES]: "Era una escuela de niños muy pequeños, los dibujos en las paredes lo indican. El contraste con los restos de cuerpos humanos en el suelo es desolador. Por momentos te parece oir <strong>ecos de risas</strong> entre los escombros."
     },
@@ -3619,7 +3655,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "A nice office building where people used to get on with their work, starting early in the morning, surrounded by anonymous colleagues, trying to finish who knows what project but with one clear goal: their own survival. You think to yourself that maybe things haven't really changed all that much...",
-      [Lang.FR]: "Un bel immeuble de bureau où il devait faire bon venir travailler au petit matin, entouré de ses collègues anonymes pour accomplir on ne sait trop quel but global et avec pour seule préoccupation : sa propre survie. Vous vous dites que les choses n'ont peut-être finalement pas tant changé que ça...",
+      [Lang.FR]: "Un bel immeuble de bureaux où il devait faire bon venir travailler au petit matin, entouré de ses collègues anonymes, pour accomplir on ne sait trop quel but global, et avec pour seule préoccupation : sa propre survie. Vous vous dites que les choses n’ont peut-être finalement pas tant changé que ça…",
       [Lang.DE]: "In dieses schöne Gebäude gingen die Menschen früher zur Arbeit. Pünktlichkeit und Dresscode waren Pflicht. Die tägliche Routine bestand darin, mit einer Gruppe unbekannter Kollegen Zielvorgaben zu erreichen und um sein eigenes Überleben zu kämpfen... Hhmmm, wenn du so drüber nachdenkst: So viel hat sich gar nicht geändert - bis auf den Dresscode vielleicht.",
       [Lang.ES]: "El edificio de una gran empresa donde la gente venía a trabajar, con compañeros anónimos y con un solo objetivo: sobrevivir. Vaya, las cosas no han cambiado mucho..."
     },
@@ -3712,7 +3748,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "Someone lived here a LONG time ago. Perhaps someone who was surrounded by a family who loved them and with whom they spent many happy hours together ? Today, all that remains is a little dust and utter desolation... and the occasional corpse who trudges towards you, gnashing its teeth.",
-      [Lang.FR]: "Quelqu'un a vécu ici, il y a très longtemps. Peut-être même que cette personne était entourée d'une famille qui l'aimait et qu'ils y ont coulé des jours heureux tous ensemble ? Aujourd'hui il n'en reste rien ; un peu de poussière et la désolation la plus totale. Et parfois même un cadavre qui marche vers vous en grinçant des dents.",
+      [Lang.FR]: "Quelqu’un a vécu ici, il y a très longtemps. Peut-être même que cette personne était entourée d’une famille qui l’aimait et qu’ils y ont coulé des jours heureux tous ensemble ? Aujourd’hui il n’en reste rien ; un peu de poussière et la désolation la plus totale. Et parfois même un cadavre qui marche vers vous en grinçant des dents.",
       [Lang.DE]: "Jemand hat hier vor langer Zeit gelebt. Vielleicht jemand, der von einer Familie umgeben war, die ihn liebte und mit der er viele glückliche Stunden zusammen verbrachte ? Heute ist alles, was bleibt, ein wenig Staub und völlige Verwüstung... und gelegentlich eine Leiche, die mit den Zähnen knirschend auf einen zustürmt.",
       [Lang.ES]: "Alguien vivió aquí hace mucho tiempo. ¿Habrá tenido una familia que le amaba y un hogar feliz? Hoy no queda nada, solo polvo y una desolación total. De vez en cuando, un cadáver tiembla rechinando los dientes."
     },
@@ -3816,6 +3852,10 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       {
         item: ItemId.CDELVI,
         odds: 1,
+      },
+      {
+        item: ItemId.QUANTUM,
+        odds: 1,
       }
     ]
   },
@@ -3829,7 +3869,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "It's impossible to guess what they were wanting to build here. It could have been a school, a car park, a department store... The rusting metal supports are the only remaining evidence of whatever mysterious project was underway here.",
-      [Lang.FR]: "Il est impossible de déterminer ce qu'ils voulaient bâtir ici. Une école, un parking, un grand magasin... Seules les structures métalliques rouillées témoignent encore du <strong>mystérieux projet</strong> qui se tramait ici.",
+      [Lang.FR]: "Il est impossible de déterminer ce qu’ils voulaient bâtir ici. Une école, un parking, un grand magasin… Seules les structures métalliques rouillées témoignent encore du <strong>mystérieux projet</strong> qui se tramait ici.",
       [Lang.DE]: "Soll das eine Schule, ein Parkhaus oder vielleicht ein Kaufhaus sein? Du kannst es nicht erkennen... Das einzige, was von diesem geheimnisvollen Projekt noch übrig ist, sind ein paar verrostete Metallstrukturen.",
       [Lang.ES]: "Te cuesta imaginar lo que se quiso construir aquí. ¿Una escuela, una prisión?... Solo las estructuras metálicas fueron testigos de ese <strong>misterioso proyecto</strong>."
     },
@@ -3922,7 +3962,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "Wow - this is a bloody godsend! A well which still works! Completely lost in the middle of nowhere there is nobody here with their rulebook to tell you 'Don't do this, don't do that, don't take too much water, blah blah blah...' Go on, take a drink, it'll be our little secret...",
-      [Lang.FR]: "En voilà, une sacré aubaine ! <strong>Un puits encore en état de marche</strong>, complètement perdu au milieu de nulle part. Et personne avec son Registre à la main pour vous dire « fais pas ci, fais pas ça, prends pas trop d'eau, gnagnagna... ». Allez, une petite rasade, ça sera notre petit secret.",
+      [Lang.FR]: "En voilà, une sacrée aubaine ! <strong>Un puits encore en état de marche</strong>, complètement perdu au milieu de nulle part. Et personne avec son Registre à la main pour vous dire « fais pas ci, fais pas ça, prends pas trop d’eau, gnagnagna… ». Allez, une petite rasade, ça sera notre petit secret.",
       [Lang.DE]: "Wow - das ist ein verdammtes Geschenk des Himmels! Ein Brunnen, der immer noch funktioniert ! Völlig verloren in der Mitte von Nirgendwo gibt es hier niemanden mit seinem Regelwerk, der Ihnen sagt: 'Tun Sie dies nicht, tun Sie das nicht, nehmen Sie nicht zu viel Wasser, bla bla bla bla...'. Na los, nimm einen Drink, es wird unser kleines Geheimnis sein...",
       [Lang.ES]: "¡Gracias Frocoa! <strong>Un pozo</strong> totalmente perdido en medio del desierto y que además se ve muy bien. Nadie con un Registro en mano que te diga «oye, ¿A dónde vás, qué llevas? no tomes mucha agua...». Pero, shhhh, no se lo digas a nadie."
     },
@@ -3963,7 +4003,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     },
     description: {
       [Lang.EN]: "Originally constructed for storing grain, but as time passed and the grain ran out, the tanks filled with rainwater (and a dead rat). You'll need the right kit to make use of it though...",
-      [Lang.FR]: "Cet endroit devait servir de stockage pour le grain, mais avec le temps, les cuves ont fini par se remplir d'eau de pluie (c'était il y a bien longtemps...). Il doit il y avoir de quoi s'approvisionner par ici..",
+      [Lang.FR]: "Cet endroit devait servir de stockage pour le grain, mais avec le temps, les cuves ont fini par se remplir d’eau de pluie (c’était il y a bien longtemps…). Il doit y avoir de quoi s’approvisionner par ici…",
       [Lang.DE]: "Ursprünglich zur Lagerung von Getreide konstruiert, aber als die Zeit verging und das Getreide knapp wurde, füllten sich die Tanks mit Regenwasser (und einer toten Ratte). Sie brauchen allerdings den richtigen Bausatz, um sie zu benutzen...",
       [Lang.ES]: "Este lugar debió servir para almacenar los granos. Pero con el tiempo, los depósitos se llenaron con agua de lluvia. Aquí podrías abastecerte."
     },
@@ -4291,7 +4331,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.LAMP,
-        odds: 15,
+        odds: 9,
       },
       {
         item: ItemId.LIGHTS,
@@ -4351,7 +4391,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.SHOE,
-        odds: 0,
+        odds: 6,
       }
     ]
   },
@@ -4384,7 +4424,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     drops: [
       {
         item: ItemId.PHARMA,
-        odds: 100,
+        odds: 91,
       },
       {
         item: ItemId.DRUG,
@@ -4421,6 +4461,10 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       {
         item: ItemId.LSD,
         odds: 1,
+      },
+      {
+        item: ItemId.LENS,
+        odds: 9,
       }
     ]
   },
@@ -4486,6 +4530,10 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       {
         item: ItemId.CAN_OPENER,
         odds: 4,
+      },
+      {
+        item: ItemId.QUANTUM,
+        odds: 1,
       }
     ]
   },
@@ -4512,7 +4560,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     emptyChance: 1,
     km: {
       min: 5,
-      max: 99
+      max: 100
     },
     explorable: true,
     drops: [
@@ -4694,7 +4742,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     emptyChance: 1,
     km: {
       min: 5,
-      max: 99
+      max: 100
     },
     explorable: true,
     drops: [
@@ -4856,7 +4904,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     emptyChance: 1,
     km: {
       min: 5,
-      max: 99
+      max: 100
     },
     explorable: true,
     drops: [
@@ -4958,7 +5006,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       },
       {
         item: ItemId.VAGOUL,
-        odds: 3,
+        odds: 1,
       },
       {
         item: ItemId.INFECT_POISON_PART,
@@ -4979,15 +5027,15 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       [Lang.EN]: "The grave of former athletes...",
       [Lang.FR]: "La tombe des anciens sportifs...",
       [Lang.DE]: "Das Grab der ehemaligen Sportler...",
-      [Lang.ES]: "La tumba de ex-deportistas..."
+      [Lang.ES]: "Un antiguo polideportivo yace ante ti. La arena reina en las antiguas canchas de baloncesto y únicamente encuentras grietas, polvo y arena en los campos de fútbol. Te preguntas, ¿que habrá sido de los grandes deportistas que tanto practicaban aquí a diario?..."
     },
     icon: "sports_crow",
     camping: {
       baseValue: 10,
       spots: 2
     },
-    spawnChance: 0,
-    emptyChance: 0,
+    spawnChance: 666,
+    emptyChance: 0.2,
     km: {
       min: 8,
       max: 13
@@ -4995,95 +5043,69 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
     explorable: false,
     drops: [
       {
-        item: ItemId.DRUG,
-        odds: 16.7,
-      },
-      {
-        item: ItemId.WATER,
-        odds: 15.2,
+        item: ItemId.FLAG,
+        odds: 6,
       },
       {
         item: ItemId.SHOE,
-        odds: 12.1,
-      },
-      {
-        item: ItemId.METAL_BAD,
-        odds: 9.1,
-      },
-      {
-        item: ItemId.FOOD_BAG,
-        odds: 5.7,
-      },
-      {
-        item: ItemId.FLAG,
-        odds: 5.7,
-      },
-      {
-        item: ItemId.QUANTUM,
-        odds: 5.7,
-      },
-      {
-        item: ItemId.SPORT_ELEC,
-        odds: 4.6,
-      },
-      {
-        item: ItemId.PHARMA,
-        odds: 4.6,
-      },
-      {
-        item: ItemId.TASER,
-        odds: 4.6,
+        odds: 9,
       },
       {
         item: ItemId.BIKE_PART,
-        odds: 3,
-      },
-      {
-        item: ItemId.DRUG_HERO,
-        odds: 3,
-      },
-      {
-        item: ItemId.COFFEE,
-        odds: 1.5,
-      },
-      {
-        item: ItemId.METAL_BEAM,
-        odds: 1.5,
+        odds: 2,
       },
       {
         item: ItemId.POCKET_BELT,
-        odds: 1.5,
+        odds: 2,
+      },
+      {
+        item: ItemId.DRUG,
+        odds: 22,
+      },
+      {
+        item: ItemId.DRUG_HERO,
+        odds: 2,
+      },
+      {
+        item: ItemId.PHARMA,
+        odds: 10,
+      },
+      {
+        item: ItemId.WATER,
+        odds: 15,
+      },
+      {
+        item: ItemId.XANAX,
+        odds: 2,
+      },
+      {
+        item: ItemId.METAL_BAD,
+        odds: 5,
+      },
+      {
+        item: ItemId.SPORT_ELEC,
+        odds: 2,
+      },
+      {
+        item: ItemId.FOOD_BAG,
+        odds: 8,
+      },
+      {
+        item: ItemId.METAL_BEAM,
+        odds: 5,
+      },
+      {
+        item: ItemId.TASER,
+        odds: 5,
+      },
+      {
+        item: ItemId.COFFEE,
+        odds: 5,
+      },
+      {
+        item: ItemId.QUANTUM,
+        odds: 5,
       }
-    ]
-  },
-  [RuinId.BURIED_BUILDING]: {
-    id: RuinId.BURIED_BUILDING,
-    name: {
-      [Lang.EN]: "Buried building",
-      [Lang.FR]: "Bâtiment non déterré",
-      [Lang.DE]: "Verschüttete Ruine",
-      [Lang.ES]: "Sector inexplotable"
-    },
-    description: {
-      [Lang.EN]: "The zone is completely covered with <strong>rotting vegetation</strong>, <strong>sand</strong> and all manner of <strong>debris</strong>. You are certain that there is something hidden here, but the whole sector needs to be cleared before it can be searched properly...",
-      [Lang.FR]: "Toute la zone est envahie par une <strong>végétation pourrissante</strong>, du <strong>sable</strong> et des <strong>débris</strong> de toutes sortes. Vous êtes sûr(e) que quelque chose se cache ici, mais il faudrait déblayer tout le secteur pour commencer les fouilles à proprement parler...",
-      [Lang.DE]: "Die gesamte Zone ist von einer <strong>stinkenden Vegetation</strong>, <strong>Sand</strong> und <strong>Trümmern</strong> verschiedenster Art bedeckt. Du bist dir hunderprozentig sicher, dass hier etwas zu finden ist, allerdings muss du zuerst den gesamten Sektor aufräumen, bevor du mit dem Graben anfangen kannst...",
-      [Lang.ES]: "Toda la zona está cubierta por una <strong>vegetación putrefacta</strong>, con <strong>arena</strong> y <strong>chatarra</strong> de todo tipo. Estás seguro de que algo se esconde aquí, pero habría que despejar todo el terreno para empezar una verdadera búsqueda..."
-    },
-    icon: "",
-    camping: {
-      baseValue: 0,
-      spots: 0
-    },
-    spawnChance: 0,
-    emptyChance: 0,
-    km: {
-      min: 1,
-      max: 28
-    },
-    explorable: false,
-    drops: [
-      
     ]
   }
 };

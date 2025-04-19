@@ -324,12 +324,61 @@
         "out": "classicKey_#00",
         "action": "Wandeln"
     },
+    "ws030": {
+        "type": 1,
+        "provoking": "wood_log_#00",
+        "in": [
+            "wood_log_#00",
+            "knife_#00",
+            "rustine_#00"
+        ],
+        "out": "saw_tool_temp_#00",
+        "action": "Wandeln"
+    },
     "ws022": {
         "type": 2,
         "in": "soul_blue_#00",
         "out": "soul_yellow_#00",
         "action": "Wandeln",
         "picto": "r_mystic2_#00"
+    },
+    "ws027": {
+        "type": 3,
+        "provoking": "meca_parts_#00",
+        "in": [
+            "meca_parts_#00",
+            "plate_#00",
+            "plate_#00"
+        ],
+        "out": "car_door_#00",
+        "action": "Wandeln"
+    },
+    "ws028": {
+        "type": 3,
+        "provoking": "cutter_#00",
+        "in": [
+            "pet_snake2_#00",
+            "pet_snake2_#00",
+            "cutter_#00",
+            "wood2_#00",
+            "wire_#00"
+        ],
+        "out": "sheet_#00",
+        "action": "Wandeln"
+    },
+    "ws029": {
+        "type": 3,
+        "provoking": "bone_meat_#00",
+        "in": [
+            "bone_meat_#00",
+            "poison_part_#00"
+        ],
+        "out": [
+            "bone_#00",
+            "smelly_meat_#00"
+        ],
+        "multi_out": true,
+        "action": "Wandeln"
     },
     "com001": {
         "type": 13,
@@ -419,7 +468,7 @@
     "com009": {
         "type": 13,
         "out": "food_noodles_hot_#00",
-        "provoking": "spices_#00",
+        "provoking": "food_noodles_#00",
         "in": [
             "food_noodles_#00",
             "spices_#00",
@@ -480,7 +529,8 @@
             "jerrygun_part_#00",
             "jerrycan_#00",
             "rustine_#00"
-        ]
+        ],
+        "picto": "r_watgun_#00"
     },
     "com015": {
         "type": 13,
@@ -909,5 +959,268 @@
             "water_#00",
             "drug_water_#00"
         ]
+    },
+    "com052": {
+        "type": 13,
+        "out": "bike_#00",
+        "provoking": "bike_part_#00",
+        "in": [
+            "bike_part_#00",
+            "rustine_#00",
+            "metal_#00",
+            "chain_#00"
+        ]
+    },
+    "com053": {
+        "type": 13,
+        "out": "soccer_#00",
+        "provoking": "soccer_part_#00",
+        "in": [
+            "soccer_part_#00",
+            "rustine_#00"
+        ]
+    },
+    "com054": {
+        "type": 13,
+        "out": "moldy_food_part_#00",
+        "provoking": "moldy_food_subpart_#00",
+        "in": [
+            "moldy_food_subpart_#00",
+            "moldy_food_subpart_#00"
+        ]
+    },
+    "com055": {
+        "type": 13,
+        "out": "moldy_food_#00",
+        "provoking": "moldy_food_part_#00",
+        "in": [
+            "moldy_food_part_#00",
+            "moldy_food_subpart_#00"
+        ]
+    },
+    "com056": {
+        "type": 13,
+        "out": "moldy_food_spicy_#00",
+        "provoking": "spices_#00",
+        "in": [
+            "moldy_food_subpart_#00",
+            "spices_#00"
+        ]
+    },
+    "ws011_ta_0": {
+        "type": 3,
+        "in": "electro_box_#00",
+        "out": "pile_#00",
+        "action": "Zerlegen"
+    },
+    "ws011_ta_1": {
+        "type": 3,
+        "in": "electro_box_#00",
+        "out": "pilegun_empty_#00",
+        "action": "Zerlegen"
+    },
+    "ws011_ta_2": {
+        "type": 3,
+        "in": "electro_box_#00",
+        "out": "electro_#00",
+        "action": "Zerlegen"
+    },
+    "ws011_ta_3": {
+        "type": 3,
+        "in": "electro_box_#00",
+        "out": "meca_parts_#00",
+        "action": "Zerlegen"
+    },
+    "ws011_ta_4": {
+        "type": 3,
+        "in": "electro_box_#00",
+        "out": "tagger_#00",
+        "action": "Zerlegen"
+    },
+    "ws011_ta_5": {
+        "type": 3,
+        "in": "electro_box_#00",
+        "out": "deto_#00",
+        "action": "Zerlegen"
+    },
+    "ws012_ta_0": {
+        "type": 3,
+        "in": "mecanism_#00",
+        "out": "metal_#00",
+        "action": "Zerlegen"
+    },
+    "ws012_ta_1": {
+        "type": 3,
+        "in": "mecanism_#00",
+        "out": "tube_#00",
+        "action": "Zerlegen"
+    },
+    "ws012_ta_2": {
+        "type": 3,
+        "in": "mecanism_#00",
+        "out": "metal_bad_#00",
+        "action": "Zerlegen"
+    },
+    "ws012_ta_3": {
+        "type": 3,
+        "in": "mecanism_#00",
+        "out": "meca_parts_#00",
+        "action": "Zerlegen"
+    },
+    "ws013_ta_0": {
+        "type": 3,
+        "in": "chest_#00",
+        "out": "drug_#00",
+        "action": "Öffnen"
+    },
+    "ws013_ta_1": {
+        "type": 3,
+        "in": "chest_#00",
+        "out": "bandage_#00",
+        "action": "Öffnen"
+    },
+    "ws013_ta_2": {
+        "type": 3,
+        "in": "chest_#00",
+        "out": "vodka_#00",
+        "action": "Öffnen"
+    },
+    "ws013_ta_3": {
+        "type": 3,
+        "in": "chest_#00",
+        "out": "explo_#00",
+        "action": "Öffnen"
+    },
+    "ws013_ta_4": {
+        "type": 3,
+        "in": "chest_#00",
+        "out": "lights_#00",
+        "action": "Öffnen"
+    },
+    "ws013_ta_5": {
+        "type": 3,
+        "in": "chest_#00",
+        "out": "drug_hero_#00",
+        "action": "Öffnen"
+    },
+    "ws013_ta_6": {
+        "type": 3,
+        "in": "chest_#00",
+        "out": "rhum_#00",
+        "action": "Öffnen"
+    },
+    "ws015_ta_0": {
+        "type": 3,
+        "in": "chest_tools_#00",
+        "out": "pile_#00",
+        "action": "Öffnen"
+    },
+    "ws015_ta_1": {
+        "type": 3,
+        "in": "chest_tools_#00",
+        "out": "meca_parts_#00",
+        "action": "Öffnen"
+    },
+    "ws015_ta_2": {
+        "type": 3,
+        "in": "chest_tools_#00",
+        "out": "rustine_#00",
+        "action": "Öffnen"
+    },
+    "ws015_ta_3": {
+        "type": 3,
+        "in": "chest_tools_#00",
+        "out": "tube_#00",
+        "action": "Öffnen"
+    },
+    "ws015_ta_4": {
+        "type": 3,
+        "in": "chest_tools_#00",
+        "out": "pharma_#00",
+        "action": "Öffnen"
+    },
+    "ws015_ta_5": {
+        "type": 3,
+        "in": "chest_tools_#00",
+        "out": "explo_#00",
+        "action": "Öffnen"
+    },
+    "ws016_ta_0": {
+        "type": 3,
+        "in": "chest_food_#00",
+        "out": "food_bag_#00",
+        "action": "Öffnen"
+    },
+    "ws016_ta_1": {
+        "type": 3,
+        "in": "chest_food_#00",
+        "out": "can_#00",
+        "action": "Öffnen"
+    },
+    "ws016_ta_2": {
+        "type": 3,
+        "in": "chest_food_#00",
+        "out": "meat_#00",
+        "action": "Öffnen"
+    },
+    "ws016_ta_3": {
+        "type": 3,
+        "in": "chest_food_#00",
+        "out": "hmeat_#00",
+        "action": "Öffnen"
+    },
+    "ws016_ta_4": {
+        "type": 3,
+        "in": "chest_food_#00",
+        "out": "vegetable_#00",
+        "action": "Öffnen"
+    },
+    "ws017_ta_0": {
+        "type": 3,
+        "in": "deco_box_#00",
+        "out": "door_#00",
+        "action": "Wandeln"
+    },
+    "ws017_ta_1": {
+        "type": 3,
+        "in": "deco_box_#00",
+        "out": "chair_basic_#00",
+        "action": "Wandeln"
+    },
+    "ws017_ta_2": {
+        "type": 3,
+        "in": "deco_box_#00",
+        "out": "trestle_#00",
+        "action": "Wandeln"
+    },
+    "ws017_ta_3": {
+        "type": 3,
+        "in": "deco_box_#00",
+        "out": "table_#00",
+        "action": "Wandeln"
+    },
+    "ws017_ta_4": {
+        "type": 3,
+        "in": "deco_box_#00",
+        "out": "chair_#00",
+        "action": "Wandeln"
+    },
+    "ws018_ta_0": {
+        "type": 3,
+        "in": "catbox_#00",
+        "out": "poison_part_#00",
+        "action": "Öffnen"
+    },
+    "ws018_ta_1": {
+        "type": 3,
+        "in": "catbox_#00",
+        "out": "pet_cat_#00",
+        "action": "Öffnen"
+    },
+    "ws018_ta_2": {
+        "type": 3,
+        "in": "catbox_#00",
+        "out": "angryc_#00",
+        "action": "Öffnen"
     }
 }

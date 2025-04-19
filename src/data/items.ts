@@ -372,7 +372,13 @@ export enum ItemId {
   SOCCER_PART = "soccer_part_#00",
   QUANTUM = "quantum_#00",
   PHOTO_4 = "photo_4_#00",
-  CELLO_BOX = "cello_box_#00"
+  CELLO_BOX = "cello_box_#00",
+  APPLE_BLUE = "apple_blue_#00",
+  SAW_TOOL_TEMP = "saw_tool_temp_#00",
+  MOLDY_FOOD_SUBPART = "moldy_food_subpart_#00",
+  MOLDY_FOOD_SPICY = "moldy_food_spicy_#00",
+  MOLDY_FOOD_PART = "moldy_food_part_#00",
+  MOLDY_FOOD = "moldy_food_#00"
 }
 
 export type Item = {
@@ -453,7 +459,8 @@ export const items: Readonly<Record<ItemId, Item>> = {
           },
           {
             type: ItemActionEffectType.CreateItem,
-            value: "potion_#00"
+            value: "potion_#00",
+            odds: 100
           }
         ]
       }
@@ -2269,27 +2276,27 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
-            odds: 50
+            odds: 75
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
-            odds: 50
+            odds: 75
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
-            odds: 50
+            odds: 25
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
-            odds: 50
+            odds: 25
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
-            odds: 50
+            odds: 25
           }
         ]
       },
@@ -2302,27 +2309,27 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
-            odds: 50
+            odds: 75
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
-            odds: 50
+            odds: 75
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
-            odds: 50
+            odds: 25
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
-            odds: 50
+            odds: 25
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
-            odds: 50
+            odds: 25
           }
         ]
       },
@@ -2334,7 +2341,52 @@ export const items: Readonly<Record<ItemId, Item>> = {
         effects: [
           {
             type: ItemActionEffectType.AddWaterToWell,
-            value: "1-3"
+            value: "2-2",
+            odds: 40
+          },
+          {
+            type: ItemActionEffectType.AddWaterToWell,
+            value: "3-3",
+            odds: 35
+          },
+          {
+            type: ItemActionEffectType.AddWaterToWell,
+            value: "4-4",
+            odds: 25
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          { item: ItemId.WATER_CLEANER }
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: -1
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          { item: ItemId.WATER_CLEANER }
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_#00",
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: -1
           }
         ]
       }
@@ -2525,10 +2577,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     id: ItemId.VODKA_DE,
     numericalId: 55,
     name: {
-      [Lang.EN]: "Stale Beer",
-      [Lang.FR]: "1774 éventée",
-      [Lang.DE]: "Abgestandenes Bier",
-      [Lang.ES]: "Tres Equis agria"
+      [Lang.EN]: "Green Beer Bottle",
+      [Lang.FR]: "Bière",
+      [Lang.DE]: "Grüne Bierflasche",
+      [Lang.ES]: "Vodka Rosquetoff"
     },
     description: {
       [Lang.EN]: "After spending forever under the sun, this bottle is completely discolored. You have the intuition that it must have been green in the past. Ah, here's the label!... okay, just a pale lager. \"Keep away from light and all sources of heat\", well, let's try... (You take a huge sip and release a giant burp shortly after!) - \"Cheers, Pap Finn!\"",
@@ -2610,7 +2662,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "This faulty projector can no longer be used for anything. However, the lens still seems relatively intact... unfortunately you have nothing to take it apart with...",
-      [Lang.FR]: "Ce vidéoprojecteur défectueux ne peut plus être utilisé pour rien. Cependant, l'objectif semble encore relativement intact... malheureusement vous n'avez rien pour le démonter...",
+      [Lang.FR]: "Ce rétroprojecteur défectueux ne peut plus être utilisé pour rien. Cependant, l'objectif semble encore relativement intact... Malheureusement vous n'avez rien pour le démonter...",
       [Lang.DE]: "Dieser defekte Videoprojektor ist zu nichts mehr zu gebrauchen. Die Linse sieht allerdings noch halbwegs intakt aus....nur hast du nichts, um sie zu entfernen...",
       [Lang.ES]: "Este proyector defectuoso ya no se puede utilizar para nada. Sin embargo, la lente todavía parece relativamente intacta... Desafortunadamente no tienes nada para desarmarla..."
     },
@@ -4821,6 +4873,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
             odds: 80
           },
           {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_drug_#00",
+            odds: 20
+          },
+          {
             type: ItemActionEffectType.AddStatus,
             value: "drugged",
             odds: 80
@@ -4833,6 +4890,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.AddStatus,
             value: "terror",
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "addict",
             odds: 20
           },
           {
@@ -5828,7 +5890,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 141,
     name: {
       [Lang.EN]: "Quality Log",
-      [Lang.FR]: "Buche en bon état",
+      [Lang.FR]: "Bûche en bon état",
       [Lang.DE]: "Gut erhaltener Holzscheit",
       [Lang.ES]: "Leña en buen estado"
     },
@@ -8483,7 +8545,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Die Wirkung dieser Tablette ist höchst zweifelhaft... Auf der Schachtel steht: \"Für BETA-Tester unter 18 Jahren nicht geeignet\". Seltsam...",
       [Lang.ES]: "Tiene un efecto misterioso... En la caja dice: \"No recomendado para beta-testers menores de 18 años\". Extraño."
     },
-    categories: [ItemCategory.Pharmacy, ItemCategory.APSource, ItemCategory.Drug],
+    categories: [ItemCategory.Pharmacy, ItemCategory.APSource, ItemCategory.Drug, ItemCategory.Alcohol],
     icon: "item_beta_drug_bad",
     decoration: 0,
     heavy: false,
@@ -8502,27 +8564,37 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.GetPicto,
             value: "r_drug_#00",
-            odds: 80
+            odds: 100
+          },
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_alcool_#00",
+            odds: 25
           },
           {
             type: ItemActionEffectType.AddStatus,
             value: "drugged",
-            odds: 80
+            odds: 100
           },
           {
             type: ItemActionEffectType.AP,
             value: 6,
-            odds: 40
+            odds: 25
           },
           {
-            type: ItemActionEffectType.AddStatus,
+            type: ItemActionEffectType.RemoveStatus,
             value: "terror",
-            odds: 20
+            odds: 25
           },
           {
             type: ItemActionEffectType.AP,
-            value: 7,
-            odds: 20
+            value: 4,
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drunk",
+            odds: 25
           }
         ]
       }
@@ -8780,11 +8852,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
             type: ItemActionEffectType.CreateItem,
             value: "water_cup_#00",
             odds: 100
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "water_cup_#00",
-            odds: 100
           }
         ]
       },
@@ -8802,11 +8869,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
             type: ItemActionEffectType.CreateItem,
             value: "water_cup_#00",
             odds: 100
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "water_cup_#00",
-            odds: 100
           }
         ]
       },
@@ -8819,11 +8881,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.GetPicto,
             value: "r_solban_#00"
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "water_cup_#00",
-            odds: 100
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -10172,16 +10229,16 @@ export const items: Readonly<Record<ItemId, Item>> = {
     id: ItemId.APPLE,
     numericalId: 246,
     name: {
-      [Lang.EN]: "Apple",
-      [Lang.FR]: "Pomme",
-      [Lang.DE]: "Apfel",
-      [Lang.ES]: "Manzana"
+      [Lang.EN]: "Overly tempting apple",
+      [Lang.FR]: "Pomme trop tentante",
+      [Lang.DE]: "Übermäßig verführerischer Apfel",
+      [Lang.ES]: "Manzana demasiado tentadora"
     },
     description: {
-      [Lang.EN]: "When one of these landed on Sir Newton's head, surely the first thing to cross his mind wasn't the first Universal Law of Gravity... having said that, there should be a few vitamins in there for the munching.",
-      [Lang.FR]: "Si Newton avait reçu une pomme comme celle-ci sur la tête, il aurait surement pensé à autre chose qu'à la loi de la Gravitation Universelle... Cela étant dit, il doit bien y avoir quelques vitamines là-dedans.",
-      [Lang.DE]: "Als einer davon auf Sir Newton's Kopf fiel dachte er mit Sicherheit nicht zuerst an das erste universelle Gesetz der Schwerkraft... aber es sollten immerhin ein paar Vitamine enthalten sein.",
-      [Lang.ES]: "Si haces que te caiga en la cabeza, tal vez te vengan ideas como a Newton... En todo caso, debe tener algunas vitaminas."
+      [Lang.EN]: "It's round, it's red, it's shiny, and you feel an almost irresistible temptation to sink your teeth into it. Uh, is that really just an apple? That's what the old hag of the town claims...",
+      [Lang.FR]: "C'est rond, c'est rouge, c'est brillant, et on ressent une irrésistible tentation d'y croquer. Euh, est-ce vraiment une pomme ? C'est ce que prétend la vieille du coin…",
+      [Lang.DE]: "Er ist rund, er ist rot, er glänzt, und du fühlst eine fast unwiderstehliche Versuchung, deine Zähne in ihn zu schlagen. Äh, ist das wirklich nur ein normaler Apfel? Das behauptet jedenfalls die alte Vettel in der Stadt...",
+      [Lang.ES]: "Es redondo, es rojo, es brillante y sientes una irresistible tentación de morderlo. Uh, ¿eso es realmente una manzana? Eso es lo que dice la anciana de la calle..."
     },
     categories: [ItemCategory.Food, ItemCategory.APSource],
     icon: "item_apple",
@@ -10197,7 +10254,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
         effects: [
           {
             type: ItemActionEffectType.AP,
-            value: 7
+            value: 8
+          },
+          {
+            type: ItemActionEffectType.Infect,
+            odds: 15
           }
         ]
       }
@@ -10426,7 +10487,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Some of the rooms here are a tight squeeze to say the least, so this would appear to be the perfect tool with which to gain access and get down to some serious rummaging. Thanks to this blank, you'll be able to obtain one!",
-      [Lang.FR]: "Certaines pièces sont de vraies boîtes de conserve, rien de mieux qu’un outil approprié pour aller à la pêche aux objets utiles ; et grâce à cette empreinte, vous pourrez l’obtenir !",
+      [Lang.FR]: "Certaines pièces sont de vraies boîtes de conserve, rien de mieux qu’un outil approprié pour aller à la pêche aux objets utiles ; et grâce à cette empreinte, vous pourrez l’obtenir !",
       [Lang.DE]: "Einige der Zimmer sind wahre Flaschenhälse. Darum ist das das perfekte Werkzeug, um sich Zutritt zu verschaffen und den einen oder anderen nützlichen Gegenstand herauszuholen! Dank dieses Abdrucks kannst du einen solchen Schlüssel herstellen.",
       [Lang.ES]: "Como no tienes cervezas que abrir, mejor te pones a abrir puertas en busca de objetos útiles. Debido a su mal estado, solo puedes abrir una puerta con él."
     },
@@ -10502,35 +10563,23 @@ export const items: Readonly<Record<ItemId, Item>> = {
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_bamba_#00"
+            value: "item_pumpkin_raw_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_catapult3_#00"
+            value: "small_urban_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_howlingbait_#00"
+            value: "item_shield_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_trash_#01"
+            value: "small_canon_#01"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_trash_#02"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "small_trash_#04"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "small_court_#00"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "item_plate_#03"
+            value: "small_wallimprove_#02"
           }
         ]
       }
@@ -10565,39 +10614,43 @@ export const items: Readonly<Record<ItemId, Item>> = {
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_sprinkler_#00"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "item_digger_#00"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "item_shield_#00"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "small_city_up_#00"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "small_falsecity_#00"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "small_lastchance_#00"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "small_lighthouse_#00"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "small_strategy_#00"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
             value: "small_valve_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_appletree_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_scarecrow_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_ikea_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_moving_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_labyrinth_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_pet_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_plate_#05"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_court_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_coffin_#00"
           }
         ]
       }
@@ -10632,23 +10685,23 @@ export const items: Readonly<Record<ItemId, Item>> = {
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
+            value: "small_waterdetect_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_thermal_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_wheel_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
             value: "small_cinema_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_derrick_#01"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "small_trash_#06"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "small_castle_#00"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "small_coffin_#00"
+            value: "small_pool_#00"
           }
         ]
       }
@@ -10683,19 +10736,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "item_bgrenade_#00"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "item_bgrenade_#01"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "small_trash_#03"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "small_trash_#05"
+            value: "small_rocketperf_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10703,11 +10744,19 @@ export const items: Readonly<Record<ItemId, Item>> = {
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_tourello_#00"
+            value: "item_bgrenade_#01"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_armor_#00"
+            value: "small_catapult3_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "item_hmeat_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_city_up_#00"
           }
         ]
       }
@@ -10742,19 +10791,27 @@ export const items: Readonly<Record<ItemId, Item>> = {
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "item_home_def_#00"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
             value: "item_tube_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_labyrinth_#00"
+            value: "item_boomfruit_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_eden_#00"
+            value: "item_pet_pig_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_watchmen_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_grinder2_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_underground_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10762,19 +10819,15 @@ export const items: Readonly<Record<ItemId, Item>> = {
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_rocketperf_#00"
+            value: "small_techtable_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_trashclean_#00"
+            value: "item_home_def_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_valve_#00"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "item_jerrycan_#01"
+            value: "small_coffin_#00"
           }
         ]
       }
@@ -10809,7 +10862,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_waterdetect_#00"
+            value: "small_pool_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_castle_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10821,11 +10878,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_trash_#06"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "small_wheel_#00"
+            value: "small_pmvbig_#00"
           }
         ]
       }
@@ -10860,19 +10913,27 @@ export const items: Readonly<Record<ItemId, Item>> = {
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_ikea_#00"
+            value: "item_plate_#04"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "item_hmeat_#00"
+            value: "small_eden_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_tourello_#00"
+            value: "small_chicken_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_watchmen_#00"
+            value: "small_cemetery_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_spa4souls_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_saw_#00"
           }
         ]
       }
@@ -10911,23 +10972,19 @@ export const items: Readonly<Record<ItemId, Item>> = {
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "item_jerrycan_#01"
+            value: "item_boomfruit_#01"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "item_shield_#00"
+            value: "small_watchmen_#01"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_appletree_#00"
+            value: "small_sewers_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_chicken_#00"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "small_infirmary_#00"
+            value: "small_falsecity_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10935,11 +10992,19 @@ export const items: Readonly<Record<ItemId, Item>> = {
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_lighthouse_#00"
+            value: "small_infirmary_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_rocketperf_#00"
+            value: "small_survarea_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_sprinkler_#00"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_coffin_#00"
           }
         ]
       }
@@ -10974,11 +11039,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         effects: [
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_strategy_#01"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "small_balloon_#00"
+            value: "small_derrick_#01"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10986,11 +11047,15 @@ export const items: Readonly<Record<ItemId, Item>> = {
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_derrick_#01"
+            value: "small_pmvbig_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_pmvbig_#00"
+            value: "small_trash_#06"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_balloon_#00"
           }
         ]
       }
@@ -11995,7 +12060,29 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: false,
     watchPoints: 0,
     actions: [
-      
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          { item: ItemId.PILE }
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lpoint4_#00",
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lpoint3_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lpoint2_#00",
+            odds: 25
+          }
+        ]
+      }
     ]
   },
   [ItemId.SCOPE]: {
@@ -12896,12 +12983,16 @@ export const items: Readonly<Record<ItemId, Item>> = {
       {
         type: ItemActionType.Use,
         conditions: [
-          { item: ItemId.MEAT }
+          
         ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
             value: "tamed_pet_drug_#00"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tamer_guard_1"
           }
         ]
       }
@@ -12920,7 +13011,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.EN]: "Now that you’ve given your Labradoodle a tasty treat to boost his strength, he can carry even the heaviest and bulkiest objects. You can’t help but notice the incessant drooling, and he seems poised to jump at you at any moment...",
       [Lang.FR]: "Maintenant que vous avez suffisamment renforcé votre bichon avec une friandise, il peut transporter seul des objets lourds et encombrants. Vous remarquez qu'il bave constamment. On dirait qu'il vous sauter dessus à tout moment.",
       [Lang.DE]: "Nun, da du dein Hündchen mit einem Leckerli ausreichend gestärkt hast, kann es selbst schwere und sperrige Gegenstände schleppen. Dir fällt auf, dass es ohne Ende sabbert. Es sieht aus, als würde es dich jeden Augenblick anspringen.",
-      [Lang.ES]: "Ahora que ha vigorizado suficientemente a su perro con una golosina, puede cargar incluso objetos pesados y voluminosos. Eso sí, te das cuenta de que no para de babear... parece que va a saltarte encima en cualquier momento."
+      [Lang.ES]: "Ahora que has sobornado a tu perro con una golosina, puede cargar incluso objetos pesados y voluminosos. Eso sí, te das cuenta de que no para de babear... parece que va a saltarte encima en cualquier momento si te despistas..."
     },
     categories: [ItemCategory.Miscellaneous],
     icon: "item_tamed_pet_food",
@@ -12928,7 +13019,22 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: false,
     watchPoints: 0,
     actions: [
-      
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "tamed_pet_off_#00"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_tomb"
+          }
+        ]
+      }
     ]
   },
   [ItemId.TAMED_PET_OFF]: {
@@ -13093,7 +13199,22 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: false,
     watchPoints: 0,
     actions: [
-      
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_repair_#00"
+          },
+          {
+            type: ItemActionEffectType.CP,
+            value: -3
+          }
+        ]
+      }
     ]
   },
   [ItemId.SHIELD]: {
@@ -13323,7 +13444,19 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     event: GameEvent.Christmas,
     actions: [
-      
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "xmas_gift_#01",
+            odds: 100
+          }
+        ]
+      }
     ]
   },
   [ItemId.STAFF2]: {
@@ -13908,27 +14041,29 @@ export const items: Readonly<Record<ItemId, Item>> = {
             value: "r_cobaye_#00"
           },
           {
-            type: ItemActionEffectType.EP,
-            value: 3
+            type: ItemActionEffectType.GetPicto,
+            value: "r_drug_#00",
+            odds: 18
           },
           {
             type: ItemActionEffectType.AP,
-            value: 8
-          },
-          {
-            type: ItemActionEffectType.AddStatus,
-            value: "terror",
-            odds: 41
-          },
-          {
-            type: ItemActionEffectType.AddStatus,
-            value: "infection",
-            odds: 25
+            value: 8,
+            odds: 98
           },
           {
             type: ItemActionEffectType.AddStatus,
             value: "addict",
-            odds: 15
+            odds: 18
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "terror",
+            odds: 50
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "infection",
+            odds: 30
           },
           {
             type: ItemActionEffectType.Death,
@@ -14208,7 +14343,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Erhöht die Sicherheit eines Wächters um 1%.",
       [Lang.ES]: "Aumenta la seguridad de un vigilante en un 1%."
     },
-    categories: [ItemCategory.Food, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    categories: [ItemCategory.Food, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.APSource],
     icon: "item_pumpkin_tasty",
     decoration: 0,
     heavy: true,
@@ -14249,7 +14384,59 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: false,
     watchPoints: 0,
     actions: [
-      
+      {
+        type: ItemActionType.Open,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_cleaner_#00",
+            odds: 22
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "drug_water_#00",
+            odds: 22
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "ryebag_#00",
+            odds: 17
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "xanax_#00",
+            odds: 14
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pharma_#00",
+            odds: 11
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "disinfect_#00",
+            odds: 11
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "cyanure_#00",
+            odds: 1
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "drug_#00",
+            odds: 1
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "bandage_#00",
+            odds: 1
+          }
+        ]
+      }
     ]
   },
   [ItemId.XMAS_GIFT_01]: {
@@ -14274,6 +14461,18 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     event: GameEvent.Christmas,
     actions: [
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "xmas_gift_#00"
+          }
+        ]
+      },
       {
         type: ItemActionType.Death,
         conditions: [
@@ -14476,7 +14675,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         effects: [
           {
             type: ItemActionEffectType.AP,
-            value: 6
+            value: 4
           }
         ]
       }
@@ -14511,7 +14710,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         effects: [
           {
             type: ItemActionEffectType.AP,
-            value: 6
+            value: 4
           }
         ]
       }
@@ -14546,7 +14745,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         effects: [
           {
             type: ItemActionEffectType.AP,
-            value: 6
+            value: 4
           }
         ]
       }
@@ -14559,13 +14758,13 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.EN]: "Worn-out sports shoes",
       [Lang.FR]: "Chaussures de sport usées",
       [Lang.DE]: "Ausgetretene Sportschuhe",
-      [Lang.ES]: "Zapatillas deportivas gastadas"
+      [Lang.ES]: "Zapatillas deportivas desgastadas"
     },
     description: {
       [Lang.EN]: "They are no longer in brand new condition and smell a bit strong... Nevertheless, they can help you move more easily through the rough terrain of the World-Beyond.",
       [Lang.FR]: "Elles ne sont plus neuves et sentent un peu fort... Néanmoins, elles vous facilitent les déplacements sur les terrains accidentés de l'Outre-Monde.",
       [Lang.DE]: "Sie sind nicht mehr ganz neuwertig und riechen etwas streng... Trotzdem kannst du dich mit ihnen leichter durch das unwegsame Gelände in der Außenwelt bewegen.",
-      [Lang.ES]: "Ya no son nuevos y huelen un poco fuerte... Sin embargo, te facilitan viajar por el terreno accidentado del Ultramundo."
+      [Lang.ES]: "No son nuevas y huelen un poco fuerte... Sin embargo, te facilitan viajar por el terreno accidentado del Ultramundo."
     },
     info: {
       [Lang.EN]: "Daily {{EP}} gain increased by 1. Items giving at least 4{{AP}} give 1 additional {{EP}}.",
@@ -14629,7 +14828,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     description: {
       [Lang.EN]: "A tailor-made mountain bike with which you can go everywhere, wherever you want.",
       [Lang.FR]: "Un VTT sur mesure avec lequel vous pourrez aller partout, où vous voulez.",
-      [Lang.DE]: "Das Fahrrad alle maßgeschneiderten Landes, mit denen Sie überall hin gehen können, wo immer Sie wollen.",
+      [Lang.DE]: "Ein Fahrrad für jeden Untergrund - damit kannst du überall dorthin kommen, wo du gerne sein möchtest.",
       [Lang.ES]: "Una bicicleta de montaña hecha a medida con la que podrás ir a todas partes, donde quieras."
     },
     info: {
@@ -14685,7 +14884,18 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: false,
     watchPoints: 0,
     actions: [
-      
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_flag"
+          }
+        ]
+      }
     ]
   },
   [ItemId.SOCCER]: {
@@ -14709,7 +14919,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Einmal täglich verwendbar. Nicht verwendbar, wenn erschöpft.",
       [Lang.ES]: "Utilizable una vez al día. No utilizable si está agotado."
     },
-    categories: [ItemCategory.Miscellaneous],
+    categories: [ItemCategory.Miscellaneous, ItemCategory.APSource],
     icon: "item_soccer",
     decoration: 0,
     heavy: false,
@@ -14724,12 +14934,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.AP,
             value: 1,
-            odds: 17
+            odds: 33
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "soccer_part_#00",
-            odds: 7
+            odds: 33
           }
         ]
       }
@@ -14859,8 +15069,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           },
           {
             type: ItemActionEffectType.GetEscapeTime,
-            value: 180,
-            odds: 99
+            value: 120
           }
         ]
       },
@@ -14872,7 +15081,16 @@ export const items: Readonly<Record<ItemId, Item>> = {
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
-            value: "bplan_c_#00"
+            value: "photo_3_#00"
+          },
+          {
+            type: ItemActionEffectType.GetEscapeTime,
+            value: 120
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "bplan_c_#00",
+            odds: 100
           }
         ]
       }
@@ -14900,6 +15118,194 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
+    ]
+  },
+  [ItemId.APPLE_BLUE]: {
+    id: ItemId.APPLE_BLUE,
+    numericalId: 377,
+    name: {
+      [Lang.EN]: "Apple",
+      [Lang.FR]: "Pomme",
+      [Lang.DE]: "Apfel",
+      [Lang.ES]: "Manzana"
+    },
+    description: {
+      [Lang.EN]: "When one of these landed on Sir Newton's head, surely the first thing to cross his mind wasn't the first Universal Law of Gravity... having said that, there should be a few vitamins in there for the munching.",
+      [Lang.FR]: "Si Newton avait reçu une pomme comme celle-ci sur la tête, il aurait surement pensé à autre chose qu'à la loi de la Gravitation Universelle... Cela étant dit, il doit bien y avoir quelques vitamines là-dedans.",
+      [Lang.DE]: "Als einer davon auf Sir Newton's Kopf fiel dachte er mit Sicherheit nicht zuerst an das erste universelle Gesetz der Schwerkraft... aber es sollten immerhin ein paar Vitamine enthalten sein.",
+      [Lang.ES]: "Si haces que te caiga en la cabeza, tal vez te vengan ideas como a Newton... En todo caso, debe tener algunas vitaminas."
+    },
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_apple_blue",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 7
+          }
+        ]
+      }
+    ]
+  },
+  [ItemId.SAW_TOOL_TEMP]: {
+    id: ItemId.SAW_TOOL_TEMP,
+    numericalId: 378,
+    name: {
+      [Lang.EN]: "Improvised Hacksaw",
+      [Lang.FR]: "Scie improvisée",
+      [Lang.DE]: "Improvisierte Säge",
+      [Lang.ES]: "Sierra improvisada"
+    },
+    description: {
+      [Lang.EN]: "The \"Do It Yourself\" craze is good, but when it comes to the tools themselves...? You don't know how long that homemade saw will last (the saw reduces the number of action points needed for any task at the workshop by 1 point. The saw must be carried in your backpack).",
+      [Lang.FR]: "La mode du « Do It Yourself » a du bon, mais pour les outils en eux-mêmes..? Vous ne savez pas combien de temps va tenir cette scie artisanale (la scie réduit de 1 PA le coût des transformations à l'atelier, vous devez la placer dans votre Sac à Dos).",
+      [Lang.DE]: "Der „Do It Yourself“-Wahn ist sicherlich gut, aber wenn es um die Werkzeuge selbst geht...? Niemand kann sagen, wie lange diese selbstgebaute Säge hält (Die Säge verringert die Verarbeitungskosten in der Werkstatt um 1 AP. Dafür musst du sie in deinem Rucksack haben).",
+      [Lang.ES]: "La tendencia “Hazlo tú mismo” tiene sus puntos buenos, pero ¿qué pasa con las herramientas en sí? No sabes cuanto tiempo durará esta sierra casera (la sierra reduce el coste de transformaciones en el taller en 1 PA, debes colocarla en tu Mochila)."
+    },
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_saw_tool_temp",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
+  },
+  [ItemId.MOLDY_FOOD_SUBPART]: {
+    id: ItemId.MOLDY_FOOD_SUBPART,
+    numericalId: 379,
+    name: {
+      [Lang.EN]: "Fistful of insects",
+      [Lang.FR]: "Poignée d'insectes",
+      [Lang.DE]: "Handvoll Insekten",
+      [Lang.ES]: "Puñado de insectos"
+    },
+    description: {
+      [Lang.EN]: "A little slimy, but appetizing.",
+      [Lang.FR]: "Un peu gluant, mais appétissant.",
+      [Lang.DE]: "Ziemlich schleimig, aber genießbar.",
+      [Lang.ES]: "Un poco viscoso, pero apetitoso."
+    },
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_moldy_food_subpart",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 4
+          }
+        ]
+      }
+    ]
+  },
+  [ItemId.MOLDY_FOOD_SPICY]: {
+    id: ItemId.MOLDY_FOOD_SPICY,
+    numericalId: 380,
+    name: {
+      [Lang.EN]: "Seasonned fistful of insects",
+      [Lang.FR]: "Poignée d'insectes assaisonnée",
+      [Lang.DE]: "Handvoll gewürzte Insekten",
+      [Lang.ES]: "Puñado de insectos sazonados"
+    },
+    description: {
+      [Lang.EN]: "A little slimy, but appetizing. The added hint of spice subtly enhances the overall effect.",
+      [Lang.FR]: "Un peu gluant, mais appétissant. La pointe d'épice qui y a été ajoutée relève subtilement l'ensemble.",
+      [Lang.DE]: "Ein wenig schleimig, aber appetitlich. Der Hauch von Gewürz verstärkt die Gesamtwirkung auf subtile Weise.",
+      [Lang.ES]: "Un poco viscoso, pero apetitoso. El toque de especias añadido sutilmente realza el conjunto."
+    },
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_moldy_food_spicy",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
+          }
+        ]
+      }
+    ]
+  },
+  [ItemId.MOLDY_FOOD_PART]: {
+    id: ItemId.MOLDY_FOOD_PART,
+    numericalId: 381,
+    name: {
+      [Lang.EN]: "Larvae Jam",
+      [Lang.FR]: "Marmelarve",
+      [Lang.DE]: "Larven-Marmelade",
+      [Lang.ES]: "Mermelada de larvas"
+    },
+    description: {
+      [Lang.EN]: "A delicious insect porridge, utterly nourishing. It's crunchy and truly succulent!",
+      [Lang.FR]: "Une délicieuse bouillie d'insectes, tout ce qu'il y a de plus nourrissante. Ça croque sous la dent, c'est vraiment succulent !",
+      [Lang.DE]: "Ein köstlicher Insektenbrei, der sehr nahrhaft ist. Er ist knusprig und gleichzeitig wirklich saftig!",
+      [Lang.ES]: "Una deliciosa papilla de insectos, muy nutritiva. ¡Es crujiente bajo los dientes y es realmente suculento!"
+    },
+    categories: [ItemCategory.Food],
+    icon: "item_moldy_food_part",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ]
+  },
+  [ItemId.MOLDY_FOOD]: {
+    id: ItemId.MOLDY_FOOD,
+    numericalId: 382,
+    name: {
+      [Lang.EN]: "Crawling crumble",
+      [Lang.FR]: "Crumble rampant",
+      [Lang.DE]: "Krabbelnde Krümel",
+      [Lang.ES]: "Crumble rastrero"
+    },
+    description: {
+      [Lang.EN]: "A delicious protein dessert! Apparently, it's better when it's moving...",
+      [Lang.FR]: "Un succulent dessert protéiné ! Il parait que c'est meilleur quand ça bouge...",
+      [Lang.DE]: "Ein köstliches Protein-Dessert! Anscheinend ist es besser, wenn es sich noch bewegt...",
+      [Lang.ES]: "¡Un delicioso postre proteico! Al parecer es mejor cuando se mueve..."
+    },
+    categories: [ItemCategory.Food, ItemCategory.APSource],
+    icon: "item_moldy_food",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      {
+        type: ItemActionType.Eat,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 7
+          }
+        ]
+      }
     ]
   }
 };

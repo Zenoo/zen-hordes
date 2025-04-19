@@ -30,7 +30,7 @@ export const exportActionEffects = async () => {
 
       // Exceptions handled elsewhere
       if (
-        /plus_(\d+)ap(?:_\d+)?|plus_ap(\d+)(?:_\d+)?|just_ap(\d+)|eat_ap(\d+)(?:_\w+)?|minus_(\d+)ap|minus_(\d+)mp|minus_(\d+)cp/.test(
+        /plus_(\d+)ap(?:_\d+)?|plus_ap(\d+)(?:_\d+)?|just_ap(\d+)|eat_ap(\d+)(?:_\w+)?|minus_(\d+)ap|minus_(\d+)mp|minus_(\d+)cp|plus_(\d+)sp_e/.test(
           effectName
         )
       ) {
@@ -120,8 +120,8 @@ export const exportActionEffects = async () => {
     home_kitchen_success: { type: "spawn", data: "dish_tasty_#00" },
     home_kitchen_failure: { type: "spawn", data: "dish_#00" },
     // Clones
-    drug_addict_no_msg: effectsList["drug_addict"]
-      ? { ...effectsList["drug_addict"] }
+    drug_addict: effectsList["drug_addict_no_msg"]
+      ? { ...effectsList["drug_addict_no_msg"] }
       : undefined,
     infect: effectsList["infect_no_msg"]
       ? { ...effectsList["infect_no_msg"] }
@@ -129,6 +129,10 @@ export const exportActionEffects = async () => {
     kill_1_zombie: effectsList["kill_1_zombie_s"]
       ? { ...effectsList["kill_1_zombie_s"] }
       : undefined,
+    give_ruin_bp: {
+      type: "spawn",
+      data: [{ items: ["bplan_c_#00"], odds: null }],
+    },
   };
 
   // Spawn effects
@@ -425,9 +429,17 @@ export const exportActionEffects = async () => {
       type: "spawn",
       data: [{ items: ["potion_#00"], odds: null }],
     },
+    spawn_1_watercup: {
+      type: "spawn",
+      data: [{ items: ["water_cup_#00"], odds: null }],
+    },
     spawn_2_watercup: {
       type: "spawn",
       data: [{ items: ["water_cup_#00"], count: 2 }],
+    },
+    spawn_1_water: {
+      type: "spawn",
+      data: [{ items: ["water_#00"], odds: null }],
     },
     spawn_2_water: {
       type: "spawn",
@@ -436,6 +448,39 @@ export const exportActionEffects = async () => {
     spawn_3_water: {
       type: "spawn",
       data: [{ items: ["water_#00"], count: 3 }],
+    },
+    spawn_xmas_gift_1: {
+      type: "spawn",
+      data: [{ items: ["xmas_gift_#01"], odds: null }],
+    },
+    spawn_cello_box: {
+      type: "spawn",
+      data: [
+        { items: ["cutcut_#00"], odds: 25 },
+        { items: ["big_pgun_empty_#00"], odds: 25 },
+        { items: ["maglite_off_#00"], odds: 1 },
+        { items: ["pet_cat_#00"], odds: 1 },
+      ],
+    },
+    spawn_cello_box_extra: {
+      type: "spawn",
+      data: [
+        { items: ["money_#00"], odds: 40 },
+        { items: ["lamp_#00"], odds: 30 },
+        { items: ["gun_#00"], odds: 20 },
+        { items: ["machine_gun_#00"], odds: 10 },
+      ],
+    },
+    spawn_drugkit: {
+      type: "spawn",
+      data: [
+        { items: ["water_cleaner_#00", "drug_water_#00"], odds: 200 },
+        { items: ["ryebag_#00"], odds: 150 },
+        { items: ["xanax_#00"], odds: 130 },
+        { items: ["pharma_#00", "disinfect_#00"], odds: 100 },
+        { items: ["cyanure_#00"], odds: 10 },
+        { items: ["drug_#00", "bandage_#00"], odds: 5 },
+      ],
     },
   };
 

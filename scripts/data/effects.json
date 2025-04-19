@@ -38,6 +38,34 @@
     "type": "well",
     "data": 2
   },
+  "town_well_3": {
+    "type": "well",
+    "data": 3
+  },
+  "town_well_4": {
+    "type": "well",
+    "data": 4
+  },
+  "town_well_5": {
+    "type": "well",
+    "data": 5
+  },
+  "town_well_6": {
+    "type": "well",
+    "data": 6
+  },
+  "town_well_7": {
+    "type": "well",
+    "data": 7
+  },
+  "town_well_8": {
+    "type": "well",
+    "data": 8
+  },
+  "town_well_9": {
+    "type": "well",
+    "data": 9
+  },
   "town_well_1_3": {
     "type": "well",
     "data": [
@@ -75,107 +103,108 @@
   "town_bp_hotel_lv2": {
     "type": "unlockBlueprint",
     "data": [
-      "small_bamba_#00",
-      "small_catapult3_#00",
-      "small_howlingbait_#00",
-      "small_trash_#01",
-      "small_trash_#02",
-      "small_trash_#04",
-      "small_court_#00",
-      "item_plate_#03"
+      "item_pumpkin_raw_#00",
+      "small_urban_#00",
+      "item_shield_#00",
+      "small_canon_#01",
+      "small_wallimprove_#02"
     ]
   },
   "town_bp_hotel_lv3": {
     "type": "unlockBlueprint",
     "data": [
-      "small_sprinkler_#00",
-      "item_digger_#00",
-      "item_shield_#00",
-      "small_city_up_#00",
-      "small_falsecity_#00",
-      "small_lastchance_#00",
-      "small_lighthouse_#00",
-      "small_strategy_#00",
-      "small_valve_#00"
+      "small_valve_#00",
+      "small_appletree_#00",
+      "small_scarecrow_#00",
+      "small_ikea_#00",
+      "small_moving_#00",
+      "small_labyrinth_#00",
+      "small_pet_#00",
+      "item_plate_#05",
+      "small_court_#00",
+      "small_coffin_#00"
     ]
   },
   "town_bp_hotel_lv4": {
     "type": "unlockBlueprint",
     "data": [
+      "small_waterdetect_#00",
+      "small_thermal_#00",
+      "small_wheel_#00",
       "small_cinema_#00",
-      "small_derrick_#01",
-      "small_trash_#06",
-      "small_castle_#00",
-      "small_coffin_#00"
+      "small_pool_#00"
     ]
   },
   "town_bp_bunker_lv2": {
     "type": "unlockBlueprint",
     "data": [
-      "item_bgrenade_#00",
-      "item_bgrenade_#01",
-      "small_trash_#03",
-      "small_trash_#05",
+      "small_rocketperf_#00",
       "small_watercanon_#00",
-      "small_tourello_#00",
-      "small_armor_#00"
+      "item_bgrenade_#01",
+      "small_catapult3_#00",
+      "item_hmeat_#00",
+      "small_city_up_#00"
     ]
   },
   "town_bp_bunker_lv3": {
     "type": "unlockBlueprint",
     "data": [
-      "item_home_def_#00",
       "item_tube_#00",
-      "small_labyrinth_#00",
-      "small_eden_#00",
+      "item_boomfruit_#00",
+      "item_pet_pig_#00",
+      "small_watchmen_#00",
+      "small_grinder2_#00",
+      "small_underground_#00",
       "small_rocket_#00",
-      "small_rocketperf_#00",
-      "small_trashclean_#00",
-      "small_valve_#00",
-      "item_jerrycan_#01"
+      "small_techtable_#00",
+      "item_home_def_#00",
+      "small_coffin_#00"
     ]
   },
   "town_bp_bunker_lv4": {
     "type": "unlockBlueprint",
     "data": [
-      "small_waterdetect_#00",
+      "small_pool_#00",
+      "small_castle_#00",
       "small_arma_#00",
       "small_slave_#00",
-      "small_trash_#06",
-      "small_wheel_#00"
+      "small_pmvbig_#00"
     ]
   },
   "town_bp_hospital_lv2": {
     "type": "unlockBlueprint",
     "data": [
-      "small_ikea_#00",
-      "item_hmeat_#00",
-      "small_tourello_#00",
-      "small_watchmen_#00"
+      "item_plate_#04",
+      "small_eden_#00",
+      "small_chicken_#00",
+      "small_cemetery_#00",
+      "small_spa4souls_#00",
+      "small_saw_#00"
     ]
   },
   "town_bp_hospital_lv3": {
     "type": "unlockBlueprint",
     "data": [
       "item_digger_#00",
-      "item_jerrycan_#01",
-      "item_shield_#00",
-      "small_appletree_#00",
-      "small_chicken_#00",
-      "small_infirmary_#00",
+      "item_boomfruit_#01",
+      "small_watchmen_#01",
+      "small_sewers_#00",
+      "small_falsecity_#00",
       "small_trashclean_#00",
-      "small_lighthouse_#00",
-      "small_rocketperf_#00"
+      "small_infirmary_#00",
+      "small_survarea_#00",
+      "small_sprinkler_#00",
+      "small_coffin_#00"
     ]
   },
   "town_bp_hospital_lv4": {
     "type": "unlockBlueprint",
     "data": [
-      "small_strategy_#01",
-      "small_balloon_#00",
-      "small_crow_#00",
       "small_derrick_#01",
-      "small_pmvbig_#00"
+      "small_crow_#00",
+      "small_pmvbig_#00",
+      "small_trash_#06",
+      "small_balloon_#00"
     ]
   },
   "nessquick": {
@@ -257,6 +286,13 @@
   "home_store_2": {
     "type": "storage",
     "data": 2
+  },
+  "hero_tamer_8": {
+    "type": "setsTag",
+    "data": [
+      null,
+      null
+    ]
   },
   "equip_item": {
     "type": "morphSource",
@@ -592,6 +628,46 @@
     "type": "morphSource",
     "data": "'alarm_3_#00'"
   },
+  "morph_lens": {
+    "type": "morphSource",
+    "data": "'lens_#00'"
+  },
+  "morph_lamp": {
+    "type": "morphSource",
+    "data": "'lamp_#00'"
+  },
+  "morph_music_part": {
+    "type": "morphSource",
+    "data": "'music_part_#00'"
+  },
+  "morph_radio_off": {
+    "type": "morphSource",
+    "data": "'radio_off_#00'"
+  },
+  "morph_xmas_gift": {
+    "type": "morphSource",
+    "data": "'xmas_gift_#00'"
+  },
+  "morph_soccer_part": {
+    "type": "morphSource",
+    "data": "'soccer_part_#00'"
+  },
+  "consume_steak": {
+    "type": "consume",
+    "data": "'meat_#00'"
+  },
+  "hero_tamer_use": {
+    "type": "morphSource",
+    "data": "'tamed_pet_off_#00'"
+  },
+  "hero_tamer_gone": {
+    "type": "morphSource",
+    "data": "'tamed_pet_gone_#00'"
+  },
+  "morph_photo_3": {
+    "type": "morphSource",
+    "data": "'photo_3_#00'"
+  },
   "drink_ap_1": {
     "type": "point",
     "data": [
@@ -649,11 +725,11 @@
   },
   "increase_lab_counter": {
     "type": "count",
-    "data": "ActionCounter::ActionTypeHomeLab"
+    "data": "ActionCounterType::HomeLab"
   },
   "increase_kitchen_counter": {
     "type": "count",
-    "data": "ActionCounter::ActionTypeHomeKitchen"
+    "data": "ActionCounterType::HomeKitchen"
   },
   "heal_ghoul": {
     "type": "role",
@@ -692,7 +768,10 @@
   },
   "hero_immune": {
     "type": "addsStatus",
-    "data": "'hsurvive'"
+    "data": [
+      "'hsurvive2'",
+      "CitizenProperties::HeroImmuneHeals"
+    ]
   },
   "camp_hide": {
     "type": "addsStatus",
@@ -736,15 +815,15 @@
   },
   "status_clothes": {
     "type": "count",
-    "data": "ActionCounter::ActionTypeClothes"
+    "data": "ActionCounterType::Clothes"
   },
   "status_home_clean": {
     "type": "count",
-    "data": "ActionCounter::ActionTypeHomeCleanup"
+    "data": "ActionCounterType::HomeCleanup"
   },
   "status_home_shower": {
     "type": "count",
-    "data": "ActionCounter::ActionTypeShower"
+    "data": "ActionCounterType::Shower"
   },
   "cyanide": {
     "type": "kill",
@@ -753,6 +832,93 @@
   "death_poison": {
     "type": "kill",
     "data": " CauseOfDeath::Poison"
+  },
+  "status_count_scavenger": {
+    "type": "count",
+    "data": "ActionCounterType::SpecialDigScavenger"
+  },
+  "status_count_surv": {
+    "type": "count",
+    "data": "ActionCounterType::SpecialActionSurv"
+  },
+  "status_count_hunter": {
+    "type": "count",
+    "data": "ActionCounterType::SpecialActionHunter"
+  },
+  "status_count_ap_loan": {
+    "type": "count",
+    "data": "ActionCounterType::SpecialActionAPLoan"
+  },
+  "status_start_sp": {
+    "type": "addsStatus",
+    "data": "'tg_start_sp'"
+  },
+  "status_tag_shoe_now": {
+    "type": "addsStatus",
+    "data": "'tg_has_shoe'"
+  },
+  "status_tag_no_shoe_now": {
+    "type": "removesStatus",
+    "data": "'tg_has_shoe'"
+  },
+  "status_tag_shoe_first": {
+    "type": "addsStatus",
+    "data": "'tg_shoe_first'"
+  },
+  "status_tag_no_shoe_first": {
+    "type": "removesStatus",
+    "data": "'tg_shoe_first'"
+  },
+  "status_tag_shoe_today": {
+    "type": "addsStatus",
+    "data": "'tg_had_shoe'"
+  },
+  "status_tag_bike_now": {
+    "type": "addsStatus",
+    "data": "'tg_has_bike'"
+  },
+  "status_tag_no_bike_now": {
+    "type": "removesStatus",
+    "data": "'tg_has_bike'"
+  },
+  "status_tag_bike_first": {
+    "type": "addsStatus",
+    "data": "'tg_bike_first'"
+  },
+  "status_tag_no_bike_first": {
+    "type": "removesStatus",
+    "data": "'tg_bike_first'"
+  },
+  "status_tag_bike_today": {
+    "type": "addsStatus",
+    "data": "'tg_had_bike'"
+  },
+  "status_soccer_today": {
+    "type": "addsStatus",
+    "data": "'tg_soccer'"
+  },
+  "get_thristy": {
+    "type": "addsStatus",
+    "data": "'thirst1'"
+  },
+  "get_dehydrated": {
+    "type": "morphsStatus",
+    "data": [
+      null,
+      null
+    ]
+  },
+  "status_flag_today": {
+    "type": "addsStatus",
+    "data": "'tg_flag'"
+  },
+  "hero_tamer_4": {
+    "type": "addsStatus",
+    "data": "'tamer_guard_1'"
+  },
+  "hero_tamer_7": {
+    "type": "addsStatus",
+    "data": "'tamer_watch_1'"
   },
   "casino_dice": {
     "type": "effectIndex",
@@ -824,11 +990,15 @@
   },
   "vote_role_shaman": {
     "type": "effectIndex",
-    "data": 18
+    "data": 5001
   },
   "vote_role_guide": {
     "type": "effectIndex",
-    "data": 19
+    "data": 5002
+  },
+  "vote_role_cata": {
+    "type": "effectIndex",
+    "data": 5003
   },
   "sandball": {
     "type": "effectIndex",
@@ -845,6 +1015,37 @@
   "hero_bia": {
     "type": "effectIndex",
     "data": 70
+  },
+  "hero_sxp": {
+    "type": "effectIndex",
+    "data": 71
+  },
+  "building_shaman": {
+    "type": "effectIndex",
+    "data": 11001
+  },
+  "building_scavenger": {
+    "type": "effectIndex",
+    "data": 10101
+  },
+  "building_guard": {
+    "type": "effectIndex",
+    "data": 10201
+  },
+  "tamer_fetch": {
+    "type": "effectIndex",
+    "data": 10501
+  },
+  "give_ruin_bp": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "bplan_c_#00"
+        ],
+        "odds": null
+      }
+    ]
   },
   "break_item": {
     "type": "picto",
@@ -864,6 +1065,13 @@
     "type": "addsStatus",
     "data": [
       "'drugged'",
+      "'r_drug_#00'"
+    ]
+  },
+  "drug_addict_no_msg": {
+    "type": "addsStatus",
+    "data": [
+      "'addict'",
       "'r_drug_#00'"
     ]
   },
@@ -947,6 +1155,13 @@
   "home_kitchen_failure": {
     "type": "spawn",
     "data": "dish_#00"
+  },
+  "drug_addict": {
+    "type": "addsStatus",
+    "data": [
+      "'addict'",
+      "'r_drug_#00'"
+    ]
   },
   "infect": {
     "type": "addsStatus",
@@ -1554,6 +1769,17 @@
       }
     ]
   },
+  "spawn_1_watercup": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "water_cup_#00"
+        ],
+        "odds": null
+      }
+    ]
+  },
   "spawn_2_watercup": {
     "type": "spawn",
     "data": [
@@ -1562,6 +1788,17 @@
           "water_cup_#00"
         ],
         "count": 2
+      }
+    ]
+  },
+  "spawn_1_water": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "water_#00"
+        ],
+        "odds": null
       }
     ]
   },
@@ -1584,6 +1821,119 @@
           "water_#00"
         ],
         "count": 3
+      }
+    ]
+  },
+  "spawn_xmas_gift_1": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "xmas_gift_#01"
+        ],
+        "odds": null
+      }
+    ]
+  },
+  "spawn_cello_box": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "cutcut_#00"
+        ],
+        "odds": 25
+      },
+      {
+        "items": [
+          "big_pgun_empty_#00"
+        ],
+        "odds": 25
+      },
+      {
+        "items": [
+          "maglite_off_#00"
+        ],
+        "odds": 1
+      },
+      {
+        "items": [
+          "pet_cat_#00"
+        ],
+        "odds": 1
+      }
+    ]
+  },
+  "spawn_cello_box_extra": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "money_#00"
+        ],
+        "odds": 40
+      },
+      {
+        "items": [
+          "lamp_#00"
+        ],
+        "odds": 30
+      },
+      {
+        "items": [
+          "gun_#00"
+        ],
+        "odds": 20
+      },
+      {
+        "items": [
+          "machine_gun_#00"
+        ],
+        "odds": 10
+      }
+    ]
+  },
+  "spawn_drugkit": {
+    "type": "spawn",
+    "data": [
+      {
+        "items": [
+          "water_cleaner_#00",
+          "drug_water_#00"
+        ],
+        "odds": 200
+      },
+      {
+        "items": [
+          "ryebag_#00"
+        ],
+        "odds": 150
+      },
+      {
+        "items": [
+          "xanax_#00"
+        ],
+        "odds": 130
+      },
+      {
+        "items": [
+          "pharma_#00",
+          "disinfect_#00"
+        ],
+        "odds": 100
+      },
+      {
+        "items": [
+          "cyanure_#00"
+        ],
+        "odds": 10
+      },
+      {
+        "items": [
+          "drug_#00",
+          "bandage_#00"
+        ],
+        "odds": 5
       }
     ]
   }

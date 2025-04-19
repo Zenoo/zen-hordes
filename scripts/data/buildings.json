@@ -2979,6 +2979,20 @@
       {
         "amount": 2,
         "rsc": {
+          "id": 49,
+          "uid": "wood2",
+          "img": "item/item_wood2.6518ead2.gif",
+          "name": {
+            "fr": "Planche tordue",
+            "en": "Twisted Plank",
+            "de": "Krummes Holzbrett",
+            "es": "Tabla torcida"
+          }
+        }
+      },
+      {
+        "amount": 2,
+        "rsc": {
           "id": 50,
           "uid": "metal",
           "img": "item/item_metal.003369df.gif",
@@ -3390,7 +3404,7 @@
   },
   "small_appletree_#00": {
     "id": 49,
-    "img": "building/small_appletree.a5fdb678.gif",
+    "img": "building/small_appletree.69a90e1b.gif",
     "name": {
       "fr": "Pommier de l’Outre-Monde",
       "en": "Apple Tree",
@@ -7638,7 +7652,7 @@
       "es": "Los exploradores siempre te han fascinado y nunca han revelado lo que esconden bajo sus capuchas... Pero tal vez sea mejor dejarlos solos. Gracias a este escondite especial, por fin pueden planear su ruta sin tener que salir del pueblo."
     },
     "pa": 25,
-    "maxLife": 36,
+    "maxLife": 25,
     "breakable": true,
     "def": 0,
     "hasUpgrade": false,
@@ -8741,7 +8755,7 @@
         }
       },
       {
-        "amount": 10,
+        "amount": 5,
         "rsc": {
           "id": 136,
           "uid": "wood_beam",
@@ -8755,7 +8769,7 @@
         }
       },
       {
-        "amount": 5,
+        "amount": 10,
         "rsc": {
           "id": 137,
           "uid": "metal_beam",
@@ -8995,20 +9009,6 @@
             "en": "Metal Support",
             "de": "Metallstruktur",
             "es": "Estructuras metálicas"
-          }
-        }
-      },
-      {
-        "amount": 5,
-        "rsc": {
-          "id": 113,
-          "uid": "concrete_wall",
-          "img": "item/item_concrete_wall.9cae6481.gif",
-          "name": {
-            "fr": "Pavés de béton informes",
-            "en": "Unshaped Concrete Blocks",
-            "de": "Unförmige Zementblöcke",
-            "es": "Adoquín de hormigón"
           }
         }
       },
@@ -9805,7 +9805,7 @@
         }
       },
       {
-        "amount": 30,
+        "amount": 150,
         "rsc": {
           "id": 50,
           "uid": "metal",
@@ -10756,7 +10756,7 @@
     "hasUpgrade": true,
     "rarity": 0,
     "temporary": false,
-    "parent": 28,
+    "parent": 0,
     "resources": [
       {
         "amount": 2,
@@ -10787,7 +10787,7 @@
       "fr": "Si des citoyens passent la nuit à s'agiter en haut de la tour de guet, cela devrait attirer l'attention d'une partie des zombies. Souhaitons quand même bon courage aux volontaires.",
       "en": "If citizens spend the night moving around at the top of the watchtower, this should attract the attention of some of the zombies. We still wish the volunteers good luck.",
       "de": "Wenn die Bürger die Nacht auf der Spitze des Wachturms tanzen, sollte dies die Aufmerksamkeit einiger Zombies auf sich ziehen. Wir wünschen den Freiwilligen viel Glück.",
-      "es": "Si los ciudadanos pasan la noche moviéndose en lo alto de la torre de vigilancia, esto debería atraer la atención de algunos de los zombis. Todavía deseamos buena suerte a los voluntarios."
+      "es": "Si los habitantes pasan la noche moviéndose en lo alto de la torre de vigilancia, esto debería atraer la atención de algunos de los zombies. Todavía deseamos buena suerte a los voluntarios."
     },
     "pa": 25,
     "maxLife": 25,
@@ -11166,13 +11166,13 @@
       "es": "Área Silvestre de los Ermitaños"
     },
     "desc": {
-      "fr": "Pour éviter de dépayser les Ermites coincés entre tous ces chantiers, vous leur avez construit un petit coin de paradis rien que pour eux ! L'avantage, c'est qu'ils peuvent y employer leurs talents pour se procurer un liquide potable. Par les temps qui courent est-ce vraiment important de savoir ce que c'est ?",
-      "en": "To avoid disorienting the Survivalists stuck between all these construction sites, you have built a little corner of paradise just for them! The advantage is that they can use their talents to obtain a drinkable liquid. These days, does it really matter what it is?",
-      "de": "Um die Einsiedler nicht zu verwirren, die zwischen all diesen Baustellen festsitzen, haben wir ein kleines Paradies für sie gebaut! Der Vorteil ist, dass sie ihre Talente nutzen können, um eine trinkbare Flüssigkeit zu gewinnen. Ist es heutzutage wirklich noch wichtig, was es ist?",
-      "es": "Para no desorientar a los Ermitaños atrapados entre todas estas obras, ¡has construido un pequeño rincón del paraíso solo para ellos! La ventaja es que pueden utilizar sus talentos para obtener un líquido potable. Hoy en día, ¿realmente importa lo que sea?"
+      "fr": "Un petit coin de paradis perdu alliant quelques brins d'herbes à l'ombre des toits et des bidons coupés en deux et dressés verticalement vers le ciel selon une mystérieuse théorie tirée du manuel de survie des ermites. Apparemment, cela devrait \"piéger la brise\" selon ces derniers... un mystère. Mais bon, le fait est que cela permet de récolter un peu d'eau !",
+      "en": "A little corner of paradise combining a few blades of grass in the shade of roofs and cans cut in half and vertically raised to the sky according to a mysterious theory taken from the Survivalists's survival manual. Apparently, this should “trap the breeze” according to them... a mystery. But the point is, it does allow you to collect a little water!",
+      "de": "Ein kleines Stück Paradies, das aus ein paar Grashalmen im Schatten von Dächern und halbierten Dosen besteht, die senkrecht in den Himmel gehoben werden, so eine geheimnisvolle Theorie aus dem Survival-Handbuch der Einsiedler. Angeblich soll dies „die Brise einfangen“ ... ein Rätsel. Aber der Punkt ist, dass man dadurch ein wenig Wasser sammeln kann!",
+      "es": "Un pequeño rincón de paraíso perdido que combina algunas briznas de hierba a la sombra de los tejados y latas cortadas por la mitad y elevadas verticalmente hacia el cielo según una misteriosa teoría extraída del manual de supervivencia de los ermitaños. Al parecer, esto se supone que hace que \"se atrape la brisa\", según ellos... un misterio. Pero oye, ¡el caso es que te permite recoger un poco de agua!"
     },
-    "pa": 30,
-    "maxLife": 30,
+    "pa": 60,
+    "maxLife": 60,
     "breakable": true,
     "def": 0,
     "hasUpgrade": false,
@@ -11542,7 +11542,7 @@
   },
   "small_techtable_#00": {
     "id": 152,
-    "img": "building/small_techtable.543f023e.gif",
+    "img": "building/small_techtable.e941c0a5.gif",
     "name": {
       "fr": "Établi des Techniciens",
       "en": "Technicians Workbench",
@@ -11649,16 +11649,30 @@
         }
       },
       {
+        "amount": 2,
+        "rsc": {
+          "id": 35,
+          "uid": "meca_parts",
+          "img": "item/item_meca_parts.db36bd1c.gif",
+          "name": {
+            "fr": "Poignée de vis et écrous",
+            "en": "Handful of nuts and bolts",
+            "de": "Handvoll Schrauben und Muttern",
+            "es": "Puñado de tornillos y tuercas"
+          }
+        }
+      },
+      {
         "amount": 1,
         "rsc": {
-          "id": 80,
-          "uid": "coffee_machine",
-          "img": "item/item_coffee_machine.c3006fe7.gif",
+          "id": 70,
+          "uid": "drug_hero",
+          "img": "item/item_drug_hero.32d52a1b.gif",
           "name": {
-            "fr": "Cafetière",
-            "en": "Cafetière",
-            "de": "Kaffeekocher",
-            "es": "Cafetera"
+            "fr": "Twinoïde 500mg",
+            "en": "Twinoid 500mg",
+            "de": "Twinoid 500mg",
+            "es": "Twinoid 500mg"
           }
         }
       }
@@ -12619,7 +12633,7 @@
       "fr": "Meuleuse manuelle",
       "en": "Manual grinder",
       "de": "Handschleifer",
-      "es": "Amoladora manual"
+      "es": "Afiladora manual"
     },
     "desc": {
       "fr": "En aiguisant chaque lame consciencieusement avant la nuit, la veille ne pourra qu'être plus efficace. Chaque arme tranchante a un bonus de 20% en veille.",
@@ -12845,7 +12859,7 @@
       "fr": "Un ingénieux système pour récupérer les éclaboussures d'eau pure inévitables lors de la veille. Il filtre aussi les éclaboussures de cervelle. Les armes à eau sont 30% plus efficaces en veille.",
       "en": "An ingenious system to recover the inevitable splashes of pure water during the watch. It also filters brain splatter. Water weapons are 30% more effective during the watch.",
       "de": "Ein ausgeklügeltes System zur Rückgewinnung der unvermeidlichen Spritzer reinen Wassers während der Wacht. Es filtert auch Gehirnspritzer. Wasserwaffen sind während der Wacht 30% effektiver.",
-      "es": "Un ingenioso sistema para recuperar las inevitables salpicaduras de agua pura durante la vigilia. También filtra las salpicaduras de cerebro. Las armas de agua son un 30% más efectivas cuando están usado."
+      "es": "Un ingenioso sistema para recuperar las inevitables salpicaduras de agua pura durante la vigilia. También filtra las salpicaduras de cerebro. Las armas de agua son un 30% más efectivas cuando se están usando."
     },
     "pa": 35,
     "maxLife": 35,
@@ -12944,7 +12958,7 @@
   },
   "small_pet_#00": {
     "id": 165,
-    "img": "building/small_pet.4c9e080c.gif",
+    "img": "building/caged_animal.b0134360.gif",
     "name": {
       "fr": "Centre d'essai des Apprivoiseurs",
       "en": "Tamer Experiment Center",
@@ -12955,7 +12969,7 @@
       "fr": "Certains l'appellent innocemment « clinique vétérinaire ». Mais chaque nuit, les cris des animaux réveillent tout le quartier sud. En tout cas, ça marche : nos animaux sont joueurs, propres, joyeux et, grâce à leur dressage, ils peuvent attaquer des zombies qui pèsent trente fois leur poids.",
       "en": "Some innocently call it a 'veterinary clinic'. But every night the animals' cries wake up the entire South Quarter. In any case, it works: our pets are playful, clean, happy, and, thanks to their training, they can attack zombies that weigh thirty times their weight.",
       "de": "Manche nennen es unschuldig eine \"Tierklinik\". Aber jeden Abend wecken die Schreie der Tiere das gesamte Südviertel auf. Auf jeden Fall funktioniert es: Unsere Haustiere sind verspielt, sauber, fröhlich und stürzen sich durch ihr Training routiniert auf Zombies, die dreißigmal so schwer sind wie sie.",
-      "es": "Algunos la llaman inocentemente « clínica veterinaria ». Pero cada noche, los gritos de los animales despiertan a todo el barrio sur. En todo caso, funciona: nuestros animales son juguetones, limpios, felices y, gracias a su adiestramiento, pueden atacar zombies que pesan treinta veces su peso."
+      "es": "Algunos lo llaman inocentemente «clínica veterinaria». Pero cada noche, los gritos de los animales despiertan a todo el barrio sur. En todo caso, funciona. Nuestras mascotas son más juguetonas, limpias, felices y, gracias a su adiestramiento, pueden atacar a zombies que pesan treinta veces su peso."
     },
     "pa": 40,
     "maxLife": 40,
@@ -12964,7 +12978,7 @@
     "hasUpgrade": false,
     "rarity": 3,
     "temporary": false,
-    "parent": 143,
+    "parent": 52,
     "resources": [
       {
         "amount": 4,

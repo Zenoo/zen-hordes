@@ -7,13 +7,16 @@
         "max_dist": 4,
         "chance": 686,
         "empty": 0.25,
+        "capacity": 2,
         "drops": {
             "chest_citizen_#00": 50,
-            "can_#00": 100,
+            "can_#00": 95,
             "lock_#00": 2,
             "electro_box_#00": 8,
             "chair_basic_#00": 5,
-            "cdelvi_#00": 1
+            "cdelvi_#00": 1,
+            "shoe_#00": 4,
+            "bike_part_#00": 1
         },
         "desc": "Hier wohnte ein Bürger, der  sich außerhalb der Stadt niedergelassen hat, weil er den Streitigkeiten und dem Verrat, die das Stadtleben mit sich bringt, entfliehen wollte. Die Hälfte seiner Leiche liegt immer noch im Wohnzimmer."
     },
@@ -25,6 +28,7 @@
         "max_dist": 9,
         "chance": 686,
         "empty": 0.05,
+        "capacity": 3,
         "drops": {
             "drug_hero_#00": 20,
             "meat_#00": 20,
@@ -46,8 +50,9 @@
         "max_dist": 19,
         "chance": 184,
         "empty": 0.1,
+        "capacity": 2,
         "drops": {
-            "money_#00": 50,
+            "money_#00": 48,
             "flash_#00": 10,
             "coffee_#00": 10,
             "chair_basic_#00": 10,
@@ -59,7 +64,8 @@
             "rp_letter_#00": 2,
             "rp_sheets_#00": 2,
             "radius_mk2_part_#00": 1,
-            "repair_kit_part_raw_#00": 1
+            "repair_kit_part_raw_#00": 1,
+            "shoe_#00": 2
         },
         "desc": "Manche Fehler enden zwangsläufig tödlich. Nehmt als Beispiel diese Höhle. Stellt euch vor, ihr werdet von einer Zombiemeute verfolgt und eilt überstürzt in eine Höhle, um Schutz zu suchen. Ihr werdet dann folgendes Problem haben: Wie kommt ihr heil wieder raus, wenn die Biester euch gefolgt sind? Der zerfledderte Typ an der Wand dort hinten scheint dies nicht bedacht zu haben..."
     },
@@ -71,6 +77,7 @@
         "max_dist": 6,
         "chance": 401,
         "empty": 0.1,
+        "capacity": 1,
         "drops": {
             "jerrycan_#00": 60,
             "tube_#00": 4,
@@ -89,12 +96,14 @@
         "max_dist": 7,
         "chance": 159,
         "empty": 0.25,
+        "capacity": 2,
         "drops": {
-            "meca_parts_#00": 2,
-            "tube_#00": 10,
-            "courroie_#00": 10,
-            "pocket_belt_#00": 10,
-            "radio_off_#00": 5
+            "meca_parts_#00": 6,
+            "tube_#00": 23,
+            "courroie_#00": 24,
+            "pocket_belt_#00": 28,
+            "radio_off_#00": 11,
+            "bike_part_#00": 11
         },
         "desc": "Ein altes Fahrradverleihlager, das mit Metallstücken, Werkzeugen und allen Arten von Schutt übersät ist."
     },
@@ -106,6 +115,7 @@
         "max_dist": 13,
         "chance": 464,
         "empty": 0.1,
+        "capacity": 3,
         "drops": {
             "metal_beam_#00": 3,
             "wood_beam_#00": 3,
@@ -126,6 +136,7 @@
         "max_dist": 19,
         "chance": 205,
         "empty": 0.1,
+        "capacity": 4,
         "drops": {
             "pharma_#00": 20,
             "drug_random_#00": 30,
@@ -137,7 +148,8 @@
             "drug_hero_#00": 5,
             "disinfect_#00": 10,
             "cyanure_#00": 10,
-            "fungus_#00": 5
+            "fungus_#00": 5,
+            "quantum_#00": 3
         },
         "desc": "Die menschlichen Überreste, die in der Auffahrt liegen gehören den ehemaligen Patienten dieses improvisierten Krankenhauses. Schwer zu sagen, wie viele Menschen hier beim abendlichen Angriff gestorben sind... Wenn du die Anzahl der Arme durch zwei teilst, vielleicht bekommst du dann eine grobe Schätzung?"
     },
@@ -149,8 +161,9 @@
         "max_dist": 15,
         "chance": 129,
         "empty": 0.1,
+        "capacity": 5,
         "drops": {
-            "metal_beam_#00": 30,
+            "metal_beam_#00": 28,
             "repair_one_#00": 10,
             "electro_box_#00": 15,
             "meca_parts_#00": 10,
@@ -162,7 +175,8 @@
             "fence_#00": 1,
             "jerrycan_#00": 1,
             "wire_#00": 3,
-            "oilcan_#00": 4
+            "oilcan_#00": 4,
+            "flag_#00": 2
         },
         "desc": "Das Einzige, was auf diesem bröckelnden Flugplatz startet oder landet, sind die Fliegen. Vielleicht finden Sie etwas Nützliches, wenn Sie in den Lagerhallen herumstöbern. Zum Beispiel einen A380 in funktionstüchtigem Zustand."
     },
@@ -174,6 +188,7 @@
         "max_dist": 9,
         "chance": 640,
         "empty": 0.1,
+        "capacity": 4,
         "drops": {
             "gun_#00": 5,
             "machine_gun_#00": 2,
@@ -206,6 +221,7 @@
         "max_dist": 13,
         "chance": 499,
         "empty": 0.1,
+        "capacity": 5,
         "drops": {
             "plate_raw_#00": 5,
             "machine_gun_#00": 4,
@@ -235,6 +251,7 @@
         "max_dist": 9,
         "chance": 320,
         "empty": 0.1,
+        "capacity": 3,
         "drops": {
             "coffee_#00": 20,
             "drug_#00": 5,
@@ -244,7 +261,8 @@
             "vodka_#00": 10,
             "pet_rat_#00": 10,
             "coffee_machine_part_#00": 1,
-            "cdelvi_#00": 1
+            "cdelvi_#00": 1,
+            "quantum_#00": 2
         },
         "desc": "Das Atomic Cafe ist (oder war) der Ort, an dem man sein sollte: Ein verblichenes Plakat lädt Sie zum Sommerfest am 2. Mai 2010 ein: Hawaiianisches Thema, Preis für den bestangezogenen (halbnackten Mädchen + Jungs) DJ Dave ab 13.00 Uhr, kostenloses BBQ, Biergarten mit verbessertem Look, Partyspiele, Live-Fußball, Cocktails, £2 Flaschenbier, £2 Alcopop, £1 Tequila... Beteiligen Sie sich!"
     },
@@ -256,6 +274,7 @@
         "max_dist": 11,
         "chance": 460,
         "empty": 0.33,
+        "capacity": 2,
         "drops": {
             "food_bar1_#00": 10,
             "food_bar2_#00": 10,
@@ -281,6 +300,7 @@
         "max_dist": 6,
         "chance": 304,
         "empty": 0.1,
+        "capacity": 2,
         "drops": {
             "metal_#00": 50,
             "meca_parts_#00": 5,
@@ -305,6 +325,7 @@
         "max_dist": 28,
         "chance": 41,
         "empty": 0.1,
+        "capacity": 3,
         "drops": {
             "rp_sheets_#00": 5,
             "rp_manual_#00": 5,
@@ -325,6 +346,7 @@
         "max_dist": 8,
         "chance": 409,
         "empty": 0.1,
+        "capacity": 2,
         "drops": {
             "meca_parts_#00": 5,
             "plate_raw_#00": 15,
@@ -336,7 +358,6 @@
             "lock_#00": 5,
             "chest_xl_#00": 1,
             "trestle_#00": 8,
-            "pile_#00": 5,
             "chest_tools_#00": 20,
             "tube_#00": 3,
             "pocket_belt_#00": 1,
@@ -346,7 +367,8 @@
             "digger_#00": 10,
             "lights_#00": 5,
             "oilcan_#00": 5,
-            "wire_#00": 7
+            "wire_#00": 7,
+            "lens_#00": 5
         },
         "desc": "Der Baumarkt ist das zweite Zuhause eines jeden Handwerkers. In dieser Welt avanciert er jedoch zu einem wahren Paradies! Gegenstände von unschätzbarem Wert warten nur darauf von dir entdeckt zu werden... Der Werbespruch auf dem Dach hat zudem nichts von seiner Aktualität eingebüßt: 'Plündern Sie uns bevor es andere tun!'"
     },
@@ -358,14 +380,15 @@
         "max_dist": 9,
         "chance": 475,
         "empty": 0.05,
+        "capacity": 1,
         "drops": {
             "concrete_#00": 7,
             "metal_beam_#00": 10,
-            "repair_kit_part_raw_#00": 5,
-            "jerrycan_#00": 10,
+            "repair_kit_part_raw_#00": 4,
+            "jerrycan_#00": 8,
             "chain_#00": 10,
             "home_box_#00": 8,
-            "rsc_pack_2_#00": 10,
+            "rsc_pack_2_#00": 8,
             "rsc_pack_3_#00": 2,
             "home_def_#00": 7,
             "trestle_#00": 10,
@@ -375,7 +398,8 @@
             "screw_#00": 8,
             "wrench_#00": 8,
             "mecanism_#00": 8,
-            "oilcan_#00": 2
+            "oilcan_#00": 2,
+            "lens_#00": 5
         },
         "desc": "Dieser riesige gelbe Metallcontainer macht einen verlorenen Eindruck. Weit und breit keine Baustelle. Der Gemeinschaftsraum im Inneren ist mit leeren Bierflaschen übersät"
     },
@@ -387,6 +411,7 @@
         "max_dist": 6,
         "chance": 181,
         "empty": 0.1,
+        "capacity": 2,
         "drops": {
             "meat_#00": 100,
             "vegetable_#00": 80,
@@ -399,7 +424,8 @@
             "pet_pig_#00": 1,
             "cyanure_#00": 1,
             "coffee_machine_part_#00": 1,
-            "chest_food_#00": 10
+            "chest_food_#00": 10,
+            "quantum_#00": 3
         },
         "desc": "Von wegen Döner macht schöner. Scheint so als hätte der Besitzer dieser Bude das mit den Dönern und den Spießen missverstanden. Wer hier reingeht kommt garantiert nicht mehr raus."
     },
@@ -411,18 +437,21 @@
         "max_dist": 15,
         "chance": 148,
         "empty": 0.1,
+        "capacity": 3,
         "drops": {
-            "vibr_empty_#00": 10,
-            "drug_hero_#00": 20,
-            "vodka_#00": 10,
-            "rhum_#00": 10,
+            "vibr_empty_#00": 9,
+            "drug_hero_#00": 17,
+            "vodka_#00": 9,
+            "rhum_#00": 9,
             "sport_elec_empty_#00": 7,
             "big_pgun_part_#00": 5,
-            "radius_mk2_part_#00": 5,
+            "radius_mk2_part_#00": 4,
             "pile_#00": 10,
             "chest_xl_#00": 1,
             "bgrenade_empty_#00": 8,
-            "lpoint1_#00": 1
+            "lpoint1_#00": 1,
+            "bike_part_#00": 7,
+            "quantum_#00": 2
         },
         "desc": "Das Heim eines gewissen Duke R. Cooke, und wenn man der Gedenktafel an der Tür glauben darf... ein Heim für Helden... dieser Ort ist viel größer als eine Villa, es ist eine voll ausgestattete Festung !"
     },
@@ -434,6 +463,7 @@
         "max_dist": 5,
         "chance": 70,
         "empty": 0,
+        "capacity": 2,
         "drops": {
             "wood_bad_#00": 100,
             "hmeat_#00": 10,
@@ -456,6 +486,7 @@
         "max_dist": 15,
         "chance": 341,
         "empty": 0.1,
+        "capacity": 2,
         "drops": {
             "powder_#00": 30,
             "concrete_wall_#00": 2,
@@ -474,6 +505,7 @@
         "max_dist": 6,
         "chance": 71,
         "empty": 0.3,
+        "capacity": 2,
         "drops": {
             "concrete_#00": 35,
             "metal_beam_#00": 10,
@@ -494,6 +526,7 @@
         "max_dist": 28,
         "chance": 15,
         "empty": 0.1,
+        "capacity": 1,
         "drops": {
             "metal_bad_#00": 40,
             "plate_raw_#00": 10,
@@ -511,6 +544,7 @@
         "max_dist": 7,
         "chance": 242,
         "empty": 0.1,
+        "capacity": 3,
         "drops": {
             "wood_plate_part_#00": 20,
             "deco_box_#00": 40,
@@ -535,6 +569,7 @@
         "max_dist": 6,
         "chance": 68,
         "empty": 0.1,
+        "capacity": 1,
         "drops": {
             "hmeat_#00": 40,
             "pet_rat_#00": 5,
@@ -552,6 +587,7 @@
         "max_dist": 9,
         "chance": 710,
         "empty": 0.1,
+        "capacity": 2,
         "drops": {
             "can_#00": 10,
             "vegetable_#00": 10,
@@ -574,12 +610,13 @@
         "max_dist": 7,
         "chance": 155,
         "empty": 0.1,
+        "capacity": 2,
         "drops": {
             "electro_box_#00": 10,
             "meca_parts_#00": 10,
-            "metal_beam_#00": 30,
-            "metal_#00": 10,
-            "plate_raw_#00": 30,
+            "metal_beam_#00": 22,
+            "metal_#00": 6,
+            "plate_raw_#00": 26,
             "screw_#00": 10,
             "tube_#00": 20,
             "courroie_#00": 10,
@@ -594,7 +631,9 @@
             "pet_snake_#00": 2,
             "wire_#00": 5,
             "chudol_#00": 2,
-            "catbox_#00": 1
+            "catbox_#00": 1,
+            "soccer_#00": 10,
+            "shoe_#00": 6
         },
         "desc": "Dieser Langstreckenflieger ist mitten im nirgendwo abgestürzt... Da der Wüstensand das Wrack fast vollkommen eingegraben hat und sich der Zahn der Zeit in das Material gefressen hat, lässt sich nicht mehr sagen, was das Flugzeug transportierte. Du lässt deinen Blick schweifen, es sind jedoch weit und breit keine Leichen erkennbar..."
     },
@@ -606,22 +645,24 @@
         "max_dist": 9,
         "chance": 624,
         "empty": 0.05,
+        "capacity": 1,
         "drops": {
             "digger_#00": 30,
             "lawn_part_#00": 5,
             "staff2_#00": 1,
-            "lights_#00": 5,
+            "lights_#00": 3,
             "jerrygun_part_#00": 2,
             "chainsaw_part_#00": 1,
             "chest_tools_#00": 10,
             "vegetable_tasty_#00": 10,
             "concrete_#00": 3,
             "wood_log_#00": 4,
-            "electro_box_#00": 10,
+            "electro_box_#00": 8,
             "jerrycan_#00": 10,
             "rsc_pack_3_#00": 3,
             "ryebag_#00": 4,
-            "angryc_#00": 2
+            "angryc_#00": 2,
+            "soccer_#00": 4
         },
         "desc": "Mitten auf einem völlig verfallenen Platz befindet sich ein großer Gartenschuppen. Die Tür gibt leicht nach und gibt den Blick frei auf einen riesigen Raum voller Regale und allerlei Werkzeug."
     },
@@ -633,6 +674,7 @@
         "max_dist": 7,
         "chance": 466,
         "empty": 0.1,
+        "capacity": 4,
         "drops": {
             "rustine_#00": 10,
             "electro_box_#00": 5,
@@ -656,7 +698,8 @@
             "mixergun_part_#00": 3,
             "digger_#00": 4,
             "money_#00": 7,
-            "chama_#00": 5
+            "chama_#00": 5,
+            "quantum_#00": 3
         },
         "desc": "Dieser riesige Haufen aus Schutt und Metall war früher mal ein hell erleuchtetes Einkaufszentrum, das vor Menschen nur so wimmelte. Das Einzige, was hier noch herumwimmelt, sind Würmer und anderes Gekreuch und Gefleuch... Du bist jedoch zuversichtlich, hier allerhand nützliche Gegenstände zu finden."
     },
@@ -668,6 +711,7 @@
         "max_dist": 6,
         "chance": 73,
         "empty": 0.1,
+        "capacity": 1,
         "drops": {
             "hmeat_#00": 20,
             "chest_citizen_#00": 15,
@@ -687,6 +731,7 @@
         "max_dist": 6,
         "chance": 181,
         "empty": 0.2,
+        "capacity": -1,
         "drops": {
             "bone_#00": 100,
             "hmeat_#00": 10,
@@ -705,22 +750,24 @@
         "max_dist": 8,
         "chance": 215,
         "empty": 0.1,
+        "capacity": 2,
         "drops": {
-            "grenade_empty_#00": 30,
-            "watergun_empty_#00": 10,
-            "pile_#00": 7,
+            "grenade_empty_#00": 32,
+            "watergun_empty_#00": 11,
+            "pile_#00": 8,
+            "chama_#00": 8,
             "vibr_empty_#00": 5,
             "pilegun_empty_#00": 5,
             "big_pgun_part_#00": 5,
             "music_part_#00": 5,
             "game_box_#00": 5,
             "watergun_opt_part_#00": 5,
-            "chama_#00": 7,
             "food_candies_#00": 5,
+            "soccer_#00": 5,
             "chudol_#00": 2,
             "hurling_stick_#00": [
                 2,
-                0
+                103
             ]
         },
         "desc": "Orte wie dieser sind heutzutage ein Geschenk des Himmels... Hier gibt es garantiert alles an Plastikspielzeug, was man sich wünschen kann... und vielleicht noch ein paar andere nützliche Gadgets."
@@ -733,6 +780,7 @@
         "max_dist": 5,
         "chance": 381,
         "empty": 0.1,
+        "capacity": 1,
         "drops": {
             "food_bag_#00": 10,
             "chair_basic_#00": 5,
@@ -740,7 +788,7 @@
             "pet_rat_#00": 6,
             "jerrycan_#00": 6,
             "pharma_#00": 12,
-            "rustine_#00": 10,
+            "rustine_#00": 8,
             "lamp_#00": 2,
             "water_#00": 10,
             "chair_#00": 2,
@@ -748,7 +796,9 @@
             "carpet_#00": 5,
             "table_#00": 8,
             "vegetable_#00": 4,
-            "bed_#00": 3
+            "bed_#00": 3,
+            "shoe_#00": 1,
+            "bike_part_#00": 1
         },
         "desc": "Eine alte Hütte, die seit Jahren unbewohnt ist. Fast vollständig im Sand begraben, aber man hört immer noch einige beunruhigende Stöhngeräusche aus dem, was der Keller sein muss..."
     },
@@ -760,6 +810,7 @@
         "max_dist": 8,
         "chance": 472,
         "empty": 0.1,
+        "capacity": 2,
         "drops": {
             "jerrycan_#00": 85,
             "water_#00": 5,
@@ -777,21 +828,23 @@
         "max_dist": 5,
         "chance": 180,
         "empty": 0.1,
+        "capacity": 2,
         "drops": {
             "pharma_#00": 40,
             "drug_hero_#00": 5,
             "drug_random_#00": 4,
             "disinfect_#00": 5,
-            "meat_#00": 20,
+            "meat_#00": 19,
             "sport_elec_empty_#00": 8,
             "pet_dog_#00": 3,
             "pet_chick_#00": 3,
             "pet_snake_#00": 5,
-            "pet_rat_#00": 20,
+            "pet_rat_#00": 19,
             "pet_pig_#00": 10,
-            "pet_cat_#00": 5,
+            "pet_cat_#00": 4,
             "xanax_#00": 8,
-            "angryc_#00": 4
+            "angryc_#00": 3,
+            "lens_#00": 16
         },
         "desc": "Dieses bedrückende Gebäude diente einst als Einrichtung für Tierversuche (Kaninchen in Zwischenprüfungen etc...). Es riecht nach Kampfer, Äther und verrottenden Kadavern. Und Sie sind noch nicht einmal hineingegangen..."
     },
@@ -803,6 +856,7 @@
         "max_dist": 5,
         "chance": 183,
         "empty": 0.1,
+        "capacity": 1,
         "drops": {
             "drug_random_#00": 50,
             "bandage_#00": 7,
@@ -822,6 +876,7 @@
         "max_dist": 18,
         "chance": 219,
         "empty": 0.1,
+        "capacity": 5,
         "drops": {
             "chest_tools_#00": 15,
             "chest_food_#00": 15,
@@ -843,6 +898,7 @@
         "max_dist": 6,
         "chance": 335,
         "empty": 0.1,
+        "capacity": 3,
         "drops": {
             "metal_beam_#00": 40,
             "meca_parts_#00": 5,
@@ -867,21 +923,23 @@
         "max_dist": 28,
         "chance": 83,
         "empty": 0.1,
+        "capacity": 1,
         "drops": {
             "gun_#00": 5,
             "machine_gun_#00": 1,
-            "powder_#00": 10,
+            "powder_#00": 9,
             "mecanism_#00": 10,
             "electro_box_#00": 10,
             "chain_#00": 10,
             "coffee_machine_part_#00": 1,
-            "home_def_#00": 10,
+            "home_def_#00": 9,
             "home_box_xl_#00": 1,
             "repair_kit_part_raw_#00": 1,
             "deto_#00": 1,
             "explo_#00": 3,
             "tagger_#00": 5,
-            "pilegun_upkit_#00": 1
+            "pilegun_upkit_#00": 1,
+            "flag_#00": 2
         },
         "desc": "Dieses militärische Vehikel ist wie die metaphorische Konservendose. Der Soldat ist drinnen und spielt die Rolle einer Sardine, und hundert Zombies draußen spielen den hungrigen Bürger. Der Bürger gewinnt..."
     },
@@ -893,6 +951,7 @@
         "max_dist": 15,
         "chance": 292,
         "empty": 0.1,
+        "capacity": 5,
         "drops": {
             "chest_food_#00": 10,
             "mecanism_#00": 10,
@@ -916,14 +975,17 @@
         "max_dist": 19,
         "chance": 212,
         "empty": 0.1,
+        "capacity": 5,
         "drops": {
-            "gun_#00": 10,
-            "machine_gun_#00": 10,
-            "chest_food_#00": 10,
+            "gun_#00": 8,
+            "machine_gun_#00": 8,
+            "chest_food_#00": 8,
             "fence_#00": 10,
-            "coffee_#00": 10,
+            "coffee_#00": 8,
             "rsc_pack_3_#00": 2,
-            "wire_#00": 4
+            "wire_#00": 4,
+            "flag_#00": 3,
+            "shoe_#00": 5
         },
         "desc": "Die hier stationierten Soldaten waren auf alles vorbereitet: Waffen, Vorräte und eine 150 m lange Sicherheitszone. Auf alles, außer darauf, dass ihr Leutnant sie während der Nacht verspeiste. Spaß beiseite, mit einer soliden Mauer und einer gesunden Diktatur gibt es (unter dem Gesichtspunkt des Überlebens) nichts Vergleichbares !"
     },
@@ -935,6 +997,7 @@
         "max_dist": 11,
         "chance": 177,
         "empty": 0.15,
+        "capacity": 2,
         "drops": {
             "book_gen_letter_#00": 20,
             "book_gen_box_#00": 20,
@@ -947,8 +1010,18 @@
             "table_#00": 3,
             "postal_box_#01": [
                 3,
-                2
-            ]
+                102
+            ],
+            "postal_box_#01_xmas_alt_1": {
+                "item": "postal_box_#01",
+                "count": 3,
+                "mod": 1021
+            },
+            "postal_box_xl_#00_xmas_alt_2": {
+                "item": "postal_box_xl_#00",
+                "count": 3,
+                "mod": 1022
+            }
         },
         "desc": "Dieses Gebäude scheint von den turbulenten Ereignissen der Vergangenheit verschont worden zu sein. Es ist noch vollkommen intakt und erinnert an ein klassisches Postbüro mit doppelten Schalterfenstern und durchsiebtem Sprechfenster. Hier wirst du kaum etwas Nützliches finden außer etwas zum Lesen..."
     },
@@ -960,6 +1033,7 @@
         "max_dist": 5,
         "chance": 196,
         "empty": 0.25,
+        "capacity": 2,
         "drops": {
             "chest_#00": 10,
             "chest_tools_#00": 40,
@@ -979,6 +1053,7 @@
         "max_dist": 8,
         "chance": 216,
         "empty": 0.1,
+        "capacity": 2,
         "drops": {
             "concrete_#00": 40,
             "bgrenade_empty_#00": 10,
@@ -995,6 +1070,7 @@
         "max_dist": 9,
         "chance": 204,
         "empty": 0.05,
+        "capacity": 2,
         "drops": {
             "rp_sheets_#00": 10,
             "rp_manual_#00": 10,
@@ -1018,6 +1094,7 @@
         "max_dist": 11,
         "chance": 913,
         "empty": 0.05,
+        "capacity": 1,
         "drops": {
             "can_#00": 10,
             "lights_#00": 10,
@@ -1044,6 +1121,7 @@
         "max_dist": 19,
         "chance": 81,
         "empty": 0.1,
+        "capacity": 1,
         "drops": {
             "book_gen_letter_#00": 10,
             "rp_manual_#00": 10,
@@ -1062,6 +1140,7 @@
         "max_dist": 5,
         "chance": 177,
         "empty": 0,
+        "capacity": 1,
         "drops": {
             "chest_food_#00": 60,
             "chest_tools_#00": 20,
@@ -1086,6 +1165,7 @@
         "max_dist": 6,
         "chance": 165,
         "empty": 0.1,
+        "capacity": 3,
         "drops": {
             "hmeat_#00": 80,
             "bandage_#00": 5,
@@ -1107,6 +1187,7 @@
         "max_dist": 13,
         "chance": 519,
         "empty": 0.1,
+        "capacity": 4,
         "drops": {
             "door_#00": 8,
             "chair_basic_#00": 15,
@@ -1135,6 +1216,7 @@
         "max_dist": 6,
         "chance": 338,
         "empty": 0.1,
+        "capacity": 3,
         "drops": {
             "can_#00": 40,
             "lock_#00": 7,
@@ -1157,7 +1239,8 @@
             "mixergun_part_#00": 1,
             "sport_elec_empty_#00": 4,
             "bquies_#00": 1,
-            "cdelvi_#00": 1
+            "cdelvi_#00": 1,
+            "quantum_#00": 1
         },
         "desc": "Jemand hat hier vor langer Zeit gelebt. Vielleicht jemand, der von einer Familie umgeben war, die ihn liebte und mit der er viele glückliche Stunden zusammen verbrachte ? Heute ist alles, was bleibt, ein wenig Staub und völlige Verwüstung... und gelegentlich eine Leiche, die mit den Zähnen knirschend auf einen zustürmt."
     },
@@ -1169,6 +1252,7 @@
         "max_dist": 7,
         "chance": 481,
         "empty": 0.1,
+        "capacity": 3,
         "drops": {
             "meca_parts_#00": 2,
             "saw_tool_part_#00": 1,
@@ -1197,6 +1281,7 @@
         "max_dist": 20,
         "chance": 221,
         "empty": 0.33,
+        "capacity": 1,
         "drops": {
             "jerrycan_#00": 2,
             "water_#00": 30,
@@ -1212,6 +1297,7 @@
         "max_dist": 11,
         "chance": 482,
         "empty": 0.08,
+        "capacity": 3,
         "drops": {
             "jerrycan_#00": 20,
             "meca_parts_#00": 1
@@ -1226,6 +1312,7 @@
         "max_dist": 7,
         "chance": 42,
         "empty": 0.2,
+        "capacity": 1,
         "drops": {
             "concrete_wall_#00": 40,
             "meca_parts_#00": 5,
@@ -1247,6 +1334,7 @@
         "max_dist": 7,
         "chance": 102,
         "empty": 0.2,
+        "capacity": 3,
         "drops": {
             "vegetable_#00": 35,
             "pet_snake_#00": 10,
@@ -1272,6 +1360,7 @@
         "max_dist": 8,
         "chance": 121,
         "empty": 0.25,
+        "capacity": 3,
         "drops": {
             "gun_#00": 30,
             "machine_gun_#00": 10,
@@ -1294,6 +1383,7 @@
         "max_dist": 5,
         "chance": 181,
         "empty": 0.2,
+        "capacity": 4,
         "drops": {
             "chest_tools_#00": 40,
             "chest_citizen_#00": 60,
@@ -1309,12 +1399,13 @@
         "max_dist": 15,
         "chance": 202,
         "empty": 0.05,
+        "capacity": 1,
         "drops": {
             "chest_citizen_#00": 3,
             "chest_hero_#00": 30,
             "vodka_#00": 7,
             "rhum_#00": 7,
-            "lamp_#00": 15,
+            "lamp_#00": 9,
             "lights_#00": 7,
             "bandage_#00": 3,
             "chest_#00": 5,
@@ -1328,7 +1419,8 @@
             "door_carpet_#00": 1,
             "banned_note_#00": 10,
             "bagxl_#00": 1,
-            "lsd_#00": 1
+            "lsd_#00": 1,
+            "shoe_#00": 6
         },
         "desc": "Dieses Zelt macht einen wirklich soliden Eindruck und war bestimmt mal ein gutes Versteck. Derjenige, der es aufgestellt hat, wusste wie man sich vor Zombies schützt. Das Zelt verfügt über ein farblich abgestimmtes Tarnnetz, mehrere Ein- und Ausgänge, sowie über ein unterirdisches Notversteck für brenzlige Situation. Bei näherem Hinsehen entdeckst du auf der Zeltplane einen eingestickten Namen: 'Shenji'"
     },
@@ -1340,8 +1432,9 @@
         "max_dist": 7,
         "chance": 458,
         "empty": 0.1,
+        "capacity": 2,
         "drops": {
-            "pharma_#00": 100,
+            "pharma_#00": 91,
             "drug_#00": 10,
             "cyanure_#00": 10,
             "drug_hero_#00": 4,
@@ -1350,7 +1443,8 @@
             "drug_random_#00": 3,
             "digger_#00": 5,
             "bquies_#00": 2,
-            "lsd_#00": 1
+            "lsd_#00": 1,
+            "lens_#00": 9
         },
         "desc": "Mitten in der Wüste entdeckst du eine kleine Stadtviertelapotheke – grotesk! Ein unbeschreibbarer Gestank liegt in der Luft und es riecht nach allem möglichen, außer nach Gesundheit."
     },
@@ -1362,6 +1456,7 @@
         "max_dist": 8,
         "chance": 432,
         "empty": 0.2,
+        "capacity": 2,
         "drops": {
             "vodka_#00": 12,
             "rhum_#00": 15,
@@ -1371,9 +1466,39 @@
             "jerrycan_#00": 3,
             "chair_basic_#00": 4,
             "food_bag_#00": 5,
-            "can_opener_#00": 4
+            "can_opener_#00": 4,
+            "quantum_#00": 1
         },
         "desc": "Es sieht eigentlich nicht mehr wie eine Bar aus, aber das halb im Sand vergrabene Schild und das Vorhandensein einiger zerbrochener Optiken lassen keinen großen Zweifel aufkommen. Die meisten Flaschen sind zerbrochen, aber Sie können hier mit ziemlicher Sicherheit etwas Nützliches finden..."
+    },
+    "sports_crow": {
+        "label": "Die Sportkrähe",
+        "icon": "sports_crow",
+        "camping": 10,
+        "min_dist": 8,
+        "max_dist": 13,
+        "chance": 666,
+        "empty": 0.2,
+        "capacity": 2,
+        "drops": {
+            "flag_#00": 6,
+            "shoe_#00": 9,
+            "bike_part_#00": 2,
+            "pocket_belt_#00": 2,
+            "drug_#00": 22,
+            "drug_hero_#00": 2,
+            "pharma_#00": 10,
+            "water_#00": 15,
+            "xanax_#00": 2,
+            "metal_bad_#00": 5,
+            "sport_elec_#00": 2,
+            "food_bag_#00": 8,
+            "metal_beam_#00": 5,
+            "taser_#00": 5,
+            "coffee_#00": 5,
+            "quantum_#00": 5
+        },
+        "desc": "Das Grab der ehemaligen Sportler..."
     },
     "deserted_bunker": {
         "label": "Verlassener Bunker",
@@ -1386,6 +1511,7 @@
         "explorable_skin": "bunker",
         "explorable_desc": null,
         "empty": 1,
+        "capacity": 4,
         "drops": {
             "bbplan_u_#00": 14,
             "bbplan_r_#00": 8,
@@ -1426,7 +1552,7 @@
             "alarm_off_#00": 3,
             "infect_poison_part_#00": [
                 10,
-                1
+                51
             ]
         },
         "desc": "Diese heruntergekommene Gebäude scheint einmal ein Bunker gewesen zu sein. Du entdeckst einen Einstieg ins Gebäude, modriger Gestank schlägt dir entgegen. Du verziehst das Gesicht, aber hier könntest du mit ziemlicher Sicherheit etwas Nützliches finden..."
@@ -1442,6 +1568,7 @@
         "explorable_skin": "hotel",
         "explorable_desc": null,
         "empty": 1,
+        "capacity": 4,
         "drops": {
             "hbplan_u_#00": 6900,
             "hbplan_r_#00": 4600,
@@ -1477,7 +1604,7 @@
             "game_box_#00": 2000,
             "infect_poison_part_#00": [
                 5000,
-                1
+                51
             ]
         },
         "desc": "Diese heruntergekommene Gebäude scheint einmal ein Hotel gewesen zu sein. Du entdeckst einen Einstieg ins Gebäude, modriger Gestank schlägt dir entgegen. Du verziehst das Gesicht, aber hier könntest du mit ziemlicher Sicherheit etwas Nützliches finden..."
@@ -1493,6 +1620,7 @@
         "explorable_skin": "hospital",
         "explorable_desc": null,
         "empty": 1,
+        "capacity": 4,
         "drops": {
             "mbplan_u_#00": 20,
             "mbplan_r_#00": 12,
@@ -1518,10 +1646,10 @@
             "water_can_1_#00": 3,
             "bed_#00": 2,
             "bumpKey_#00": 3,
-            "vagoul_#00": 3,
+            "vagoul_#00": 1,
             "infect_poison_part_#00": [
                 15,
-                1
+                51
             ]
         },
         "desc": "Diese heruntergekommene Gebäude scheint einmal ein Hospital gewesen zu sein. Du entdeckst einen Einstieg ins Gebäude, modriger Gestank schlägt dir entgegen. Du verziehst das Gesicht, aber hier könntest du mit ziemlicher Sicherheit etwas Nützliches finden..."

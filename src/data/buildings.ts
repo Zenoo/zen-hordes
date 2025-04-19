@@ -1881,6 +1881,10 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     parent: BuildingId.SMALL_WATER,
     resources: [
       {
+        id: ItemId.WOOD2,
+        amount: 2
+      },
+      {
         id: ItemId.METAL,
         amount: 2
       }
@@ -4359,7 +4363,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     icon: "small_lair",
     apNeeded: 25,
-    hp: 36,
+    hp: 25,
     breakable: true,
     defense: 0,
     hasUpgrade: false,
@@ -4935,11 +4939,11 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       },
       {
         id: ItemId.WOOD_BEAM,
-        amount: 10
+        amount: 5
       },
       {
         id: ItemId.METAL_BEAM,
-        amount: 5
+        amount: 10
       },
       {
         id: ItemId.TRESTLE,
@@ -5084,10 +5088,6 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       {
         id: ItemId.METAL_BEAM,
         amount: 15
-      },
-      {
-        id: ItemId.CONCRETE_WALL,
-        amount: 5
       },
       {
         id: ItemId.POISON_PART,
@@ -5513,7 +5513,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       },
       {
         id: ItemId.METAL,
-        amount: 30
+        amount: 150
       }
     ]
   },
@@ -6035,7 +6035,6 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: true,
     rarity: 0,
     temporary: false,
-    parent: BuildingId.SMALL_WALLIMPROVE,
     resources: [
       {
         id: ItemId.METAL,
@@ -6056,7 +6055,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.EN]: "If citizens spend the night moving around at the top of the watchtower, this should attract the attention of some of the zombies. We still wish the volunteers good luck.",
       [Lang.FR]: "Si des citoyens passent la nuit à s'agiter en haut de la tour de guet, cela devrait attirer l'attention d'une partie des zombies. Souhaitons quand même bon courage aux volontaires.",
       [Lang.DE]: "Wenn die Bürger die Nacht auf der Spitze des Wachturms tanzen, sollte dies die Aufmerksamkeit einiger Zombies auf sich ziehen. Wir wünschen den Freiwilligen viel Glück.",
-      [Lang.ES]: "Si los ciudadanos pasan la noche moviéndose en lo alto de la torre de vigilancia, esto debería atraer la atención de algunos de los zombis. Todavía deseamos buena suerte a los voluntarios."
+      [Lang.ES]: "Si los habitantes pasan la noche moviéndose en lo alto de la torre de vigilancia, esto debería atraer la atención de algunos de los zombies. Todavía deseamos buena suerte a los voluntarios."
     },
     icon: "small_round_path",
     apNeeded: 25,
@@ -6260,14 +6259,14 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Área Silvestre de los Ermitaños"
     },
     description: {
-      [Lang.EN]: "To avoid disorienting the Survivalists stuck between all these construction sites, you have built a little corner of paradise just for them! The advantage is that they can use their talents to obtain a drinkable liquid. These days, does it really matter what it is?",
-      [Lang.FR]: "Pour éviter de dépayser les Ermites coincés entre tous ces chantiers, vous leur avez construit un petit coin de paradis rien que pour eux ! L'avantage, c'est qu'ils peuvent y employer leurs talents pour se procurer un liquide potable. Par les temps qui courent est-ce vraiment important de savoir ce que c'est ?",
-      [Lang.DE]: "Um die Einsiedler nicht zu verwirren, die zwischen all diesen Baustellen festsitzen, haben wir ein kleines Paradies für sie gebaut! Der Vorteil ist, dass sie ihre Talente nutzen können, um eine trinkbare Flüssigkeit zu gewinnen. Ist es heutzutage wirklich noch wichtig, was es ist?",
-      [Lang.ES]: "Para no desorientar a los Ermitaños atrapados entre todas estas obras, ¡has construido un pequeño rincón del paraíso solo para ellos! La ventaja es que pueden utilizar sus talentos para obtener un líquido potable. Hoy en día, ¿realmente importa lo que sea?"
+      [Lang.EN]: "A little corner of paradise combining a few blades of grass in the shade of roofs and cans cut in half and vertically raised to the sky according to a mysterious theory taken from the Survivalists's survival manual. Apparently, this should “trap the breeze” according to them... a mystery. But the point is, it does allow you to collect a little water!",
+      [Lang.FR]: "Un petit coin de paradis perdu alliant quelques brins d'herbes à l'ombre des toits et des bidons coupés en deux et dressés verticalement vers le ciel selon une mystérieuse théorie tirée du manuel de survie des ermites. Apparemment, cela devrait \"piéger la brise\" selon ces derniers... un mystère. Mais bon, le fait est que cela permet de récolter un peu d'eau !",
+      [Lang.DE]: "Ein kleines Stück Paradies, das aus ein paar Grashalmen im Schatten von Dächern und halbierten Dosen besteht, die senkrecht in den Himmel gehoben werden, so eine geheimnisvolle Theorie aus dem Survival-Handbuch der Einsiedler. Angeblich soll dies „die Brise einfangen“ ... ein Rätsel. Aber der Punkt ist, dass man dadurch ein wenig Wasser sammeln kann!",
+      [Lang.ES]: "Un pequeño rincón de paraíso perdido que combina algunas briznas de hierba a la sombra de los tejados y latas cortadas por la mitad y elevadas verticalmente hacia el cielo según una misteriosa teoría extraída del manual de supervivencia de los ermitaños. Al parecer, esto se supone que hace que \"se atrape la brisa\", según ellos... un misterio. Pero oye, ¡el caso es que te permite recoger un poco de agua!"
     },
     icon: "small_survarea",
-    apNeeded: 30,
-    hp: 30,
+    apNeeded: 60,
+    hp: 60,
     breakable: true,
     defense: 0,
     hasUpgrade: false,
@@ -6488,7 +6487,11 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
         amount: 1
       },
       {
-        id: ItemId.COFFEE_MACHINE,
+        id: ItemId.MECA_PARTS,
+        amount: 2
+      },
+      {
+        id: ItemId.DRUG_HERO,
         amount: 1
       }
     ]
@@ -6946,7 +6949,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.EN]: "Manual grinder",
       [Lang.FR]: "Meuleuse manuelle",
       [Lang.DE]: "Handschleifer",
-      [Lang.ES]: "Amoladora manual"
+      [Lang.ES]: "Afiladora manual"
     },
     description: {
       [Lang.EN]: "By sharpening each blade conscientiously before nightfall, the day before can only be more effective. Each edged weapon has a 20% Watch bonus.",
@@ -7054,7 +7057,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.EN]: "An ingenious system to recover the inevitable splashes of pure water during the watch. It also filters brain splatter. Water weapons are 30% more effective during the watch.",
       [Lang.FR]: "Un ingénieux système pour récupérer les éclaboussures d'eau pure inévitables lors de la veille. Il filtre aussi les éclaboussures de cervelle. Les armes à eau sont 30% plus efficaces en veille.",
       [Lang.DE]: "Ein ausgeklügeltes System zur Rückgewinnung der unvermeidlichen Spritzer reinen Wassers während der Wacht. Es filtert auch Gehirnspritzer. Wasserwaffen sind während der Wacht 30% effektiver.",
-      [Lang.ES]: "Un ingenioso sistema para recuperar las inevitables salpicaduras de agua pura durante la vigilia. También filtra las salpicaduras de cerebro. Las armas de agua son un 30% más efectivas cuando están usado."
+      [Lang.ES]: "Un ingenioso sistema para recuperar las inevitables salpicaduras de agua pura durante la vigilia. También filtra las salpicaduras de cerebro. Las armas de agua son un 30% más efectivas cuando se están usando."
     },
     icon: "small_sewers",
     apNeeded: 35,
@@ -7105,9 +7108,9 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.EN]: "Some innocently call it a 'veterinary clinic'. But every night the animals' cries wake up the entire South Quarter. In any case, it works: our pets are playful, clean, happy, and, thanks to their training, they can attack zombies that weigh thirty times their weight.",
       [Lang.FR]: "Certains l'appellent innocemment « clinique vétérinaire ». Mais chaque nuit, les cris des animaux réveillent tout le quartier sud. En tout cas, ça marche : nos animaux sont joueurs, propres, joyeux et, grâce à leur dressage, ils peuvent attaquer des zombies qui pèsent trente fois leur poids.",
       [Lang.DE]: "Manche nennen es unschuldig eine \"Tierklinik\". Aber jeden Abend wecken die Schreie der Tiere das gesamte Südviertel auf. Auf jeden Fall funktioniert es: Unsere Haustiere sind verspielt, sauber, fröhlich und stürzen sich durch ihr Training routiniert auf Zombies, die dreißigmal so schwer sind wie sie.",
-      [Lang.ES]: "Algunos la llaman inocentemente « clínica veterinaria ». Pero cada noche, los gritos de los animales despiertan a todo el barrio sur. En todo caso, funciona: nuestros animales son juguetones, limpios, felices y, gracias a su adiestramiento, pueden atacar zombies que pesan treinta veces su peso."
+      [Lang.ES]: "Algunos lo llaman inocentemente «clínica veterinaria». Pero cada noche, los gritos de los animales despiertan a todo el barrio sur. En todo caso, funciona. Nuestras mascotas son más juguetonas, limpias, felices y, gracias a su adiestramiento, pueden atacar a zombies que pesan treinta veces su peso."
     },
-    icon: "small_pet",
+    icon: "caged_animal",
     apNeeded: 40,
     hp: 40,
     breakable: true,
@@ -7115,7 +7118,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parent: BuildingId.SMALL_ROUND_PATH,
+    parent: BuildingId.ITEM_MEAT,
     resources: [
       {
         id: ItemId.WOOD2,

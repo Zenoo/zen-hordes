@@ -76,9 +76,11 @@ declare global {
     Inside,
   }
 
-  type ItemActionCondition = ItemActionConditionEnum | {
-    item: ItemId;
-  };
+  type ItemActionCondition =
+    | ItemActionConditionEnum
+    | {
+        item: ItemId;
+      };
 
   const enum ItemActionEffectType {
     AP,
@@ -120,13 +122,15 @@ declare global {
 
   // Event
   const enum GameEvent {
-    StPatrick,
-    Infective,
-    Christmas,
-    AprilFools,
-    Easter,
-    Halloween,
-    NewYear,
+    Infective = 51,
+    Easter = 101,
+    Christmas = 102,
+    ChristmasAlt1 = 1021,
+    ChristmasAlt2 = 1022,
+    StPatrick = 103,
+    AprilFools = 999,
+    Halloween = 104,
+    NewYear = 998,
   }
 
   // Recipe

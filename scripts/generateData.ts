@@ -12,7 +12,6 @@ import { exportActionEffects } from "./exportActionEffects";
 import { overwriteItemData } from "./itemOverwrites";
 import { overwriteRecipeData } from "./recipeOverwrites";
 import { overwriteRuinData } from "./ruinOverwrites";
-import { exportRuinDataFromWiki } from "./exportRuinDataFromWiki";
 
 const CONFIG = {
   callApi: false,
@@ -105,6 +104,73 @@ export type Item = {
   event?: string;
   available?: boolean;
   actions: ItemAction[];
+};
+
+type ActionResult =
+  | (
+      | string
+      | {
+          group: string | [string[] | string, number][];
+        }
+    )[]
+  | ({
+      chances: {
+        group: string | [string | string[], number][];
+      };
+    } & Record<string, string>);
+
+const getEffectNamesFromResult = (result?: ActionResult) => {
+  if (!result) {
+    return [];
+  }
+
+  if (typeof result === "string") {
+    return [result];
+  }
+
+  if (Array.isArray(result)) {
+    return result.reduce<string[]>((acc, item) => {
+      if (typeof item === "string") {
+        acc.push(item);
+      } else if (typeof item.group === "string") {
+        acc.push(item.group);
+      } else {
+        item.group.forEach((groupItem) => {
+          const groupEffects = groupItem[0];
+          if (!groupEffects) {
+            return acc;
+          }
+          if (typeof groupEffects === "string") {
+            acc.push(groupEffects);
+          } else {
+            acc.push(...groupEffects);
+          }
+        });
+      }
+      return acc;
+    }, []);
+  }
+
+  return Object.values(result).reduce<string[]>((acc, item) => {
+    if (typeof item === "string") {
+      acc.push(item);
+    } else if (typeof item.group === "string") {
+      acc.push(item.group);
+    } else {
+      item.group.forEach((groupItem) => {
+        const groupEffects = groupItem[0];
+        if (!groupEffects) {
+          return acc;
+        }
+        if (typeof groupEffects === "string") {
+          acc.push(groupEffects);
+        } else {
+          acc.push(...groupEffects);
+        }
+      });
+    }
+    return acc;
+  }, []);
 };
 
 const sanitizeItemId = (item?: Item | string) => {
@@ -227,12 +293,7 @@ const generateItems = async () => {
           allow_when_terrorized?: boolean;
           poison?: number;
           meta: string[];
-          result: (
-            | string
-            | {
-                group: string | [string[] | string, number][];
-              }
-          )[];
+          result: ActionResult;
           escort_message_key?: string;
           escort_message?: string;
           message_key?: string;
@@ -265,12 +326,14 @@ const generateItems = async () => {
     actionId: string,
     action: (typeof actionsData.actions)[keyof typeof actionsData.actions]
   ) => {
+    const resultEffects = getEffectNamesFromResult(action?.result);
+
     if (action?.meta.includes("eat_ap")) {
       return ItemActionType.Eat;
     }
     if (
       actionId.startsWith("potion_") ||
-      action?.result.some((result) => String(result).startsWith("drink_")) ||
+      resultEffects.some((result) => result.startsWith("drink_")) ||
       actionId === "water_g" ||
       (actionId.startsWith("watercan") && actionId.endsWith("_g"))
     ) {
@@ -327,6 +390,12 @@ const generateItems = async () => {
       ].some((condition) => action?.meta.includes(condition))
     ) {
       conditions.push(ItemActionConditionEnum.BoxOpener);
+    }
+    if (action?.meta.includes("must_have_ruin_with_bp")) {
+      conditions.push(ItemActionConditionEnum.OnARuin);
+    }
+    if (action?.meta.includes("role_shaman")) {
+      conditions.push(ItemActionConditionEnum.Shaman);
     }
 
     return conditions;
@@ -387,11 +456,11 @@ const generateItems = async () => {
     }
 
     // MP Use
-    const mpUse = /minus_(\d+)mp/.exec(effectName);
+    const mpUse = /minus_(\d+)mp|minus_(\d+)pm/.exec(effectName);
     if (mpUse) {
       effects.push({
         type: ItemActionEffectType.MP,
-        value: -+(mpUse[1] ?? 0),
+        value: -+(mpUse[1] ?? mpUse[2] ?? 0),
         ...odds,
       });
       return;
@@ -403,6 +472,18 @@ const generateItems = async () => {
       effects.push({
         type: ItemActionEffectType.CP,
         value: -+(cpUse[1] ?? 0),
+        ...odds,
+      });
+      return;
+    }
+
+    // EP regen
+    const epRegen = /plus_(\d+)sp_e/.exec(effectName);
+    if (epRegen) {
+      const ep = epRegen[1];
+      effects.push({
+        type: ItemActionEffectType.EP,
+        value: +(ep ?? 0),
         ...odds,
       });
       return;
@@ -456,6 +537,19 @@ const generateItems = async () => {
 
     // Check if the effect is known from the exported data
     if (effectsData[effectName]) {
+      const statusesToIgnore = [
+        "tg_teddy",
+        "tg_betadrug",
+        "tg_sbook",
+        "tg_soccer",
+        "tg_has_bike",
+        "tg_had_bike",
+        "tg_bike_first",
+        "tg_has_shoe",
+        "tg_had_shoe",
+        "tg_shoe_first",
+      ];
+
       switch (effectsData[effectName].type) {
         case "picto": {
           const data =
@@ -565,6 +659,10 @@ const generateItems = async () => {
           break;
         }
         case "removesStatus": {
+          if (statusesToIgnore.includes(String(effectsData[effectName].data).slice(1, -1))) {
+            break;
+          }
+
           effects.push({
             type: ItemActionEffectType.RemoveStatus,
             value: String(effectsData[effectName].data).slice(1, -1),
@@ -592,7 +690,7 @@ const generateItems = async () => {
 
           // Ignore some statuses
           const effectData = String(effectsData[effectName].data).slice(1, -1);
-          if (["tg_teddy", "tg_betadrug", "tg_sbook"].includes(effectData)) {
+          if (statusesToIgnore.includes(effectData)) {
             break;
           }
 
@@ -737,6 +835,7 @@ const generateItems = async () => {
         case "count":
         case "effectIndex":
         case "point":
+        case "setsTag":
           // Nothing to add, or not linked to an item
           break;
         default: {
@@ -755,7 +854,10 @@ const generateItems = async () => {
   ) => {
     const effects: ItemActionEffect[] = [];
 
-    action?.result.forEach((result) => {
+    (typeof action?.result === "object"
+      ? Object.values(action.result)
+      : action?.result ?? []
+    ).forEach((result) => {
       if (typeof result === "object") {
         if (typeof result.group === "string") {
           // Look up the group name from the exported data
@@ -835,6 +937,17 @@ const generateItems = async () => {
   Object.entries(actionsData.items).forEach(([itemId, actionIds]) => {
     const item = getItemByUid(items, itemId);
 
+    // Add some unlinked actions
+    switch (itemId) {
+      case "water_#00": {
+        actionIds?.push("brew_shamanic_potion");
+        break;
+      }
+      default: {
+        break;
+      }
+    }
+
     actionIds?.forEach((actionId) => {
       // Actions to ignore
       switch (actionId) {
@@ -844,6 +957,8 @@ const generateItems = async () => {
         case "drug_hyd_2":
         case "open_catbox_t1":
         case "watercup_3":
+        case "throw_animal_t1":
+        case "throw_animal_t2":
           return;
       }
 
@@ -1285,15 +1400,6 @@ ${itemsObject}`;
   return items;
 };
 
-type ExportedZoneBuildingData = {
-  id: number;
-  name: string;
-  desc: string;
-  km_min: number;
-  km_max: number;
-  explorable: number;
-};
-
 export type Ruin = {
   id: number;
   name: Record<Lang, string>;
@@ -1318,13 +1424,15 @@ export type Ruin = {
 };
 
 enum GameEvent {
-  StPatrick,
-  Infective,
-  Christmas,
-  AprilFools,
-  Easter,
-  Halloween,
-  NewYear,
+  Infective = 51,
+  Easter = 101,
+  Christmas = 102,
+  ChristmasAlt1 = 1021,
+  ChristmasAlt2 = 1022,
+  StPatrick = 103,
+  AprilFools = 999,
+  Halloween = 104,
+  NewYear = 998,
 }
 
 const sanitizeRuinId = (building: Ruin) => {
@@ -1343,65 +1451,72 @@ const sanitizeRuinId = (building: Ruin) => {
 const generateRuins = async (items: Record<number, Item>) => {
   const ruins: Record<number, Ruin> = {};
 
-  languages.forEach((lang) => {
-    const filePath = path.join(
-      __dirname,
-      "data",
-      `zone_buildings-${lang}.json`
-    );
-    const data: Record<string, ExportedZoneBuildingData> = JSON.parse(
-      fs.readFileSync(filePath, "utf-8")
-    ) as Record<string, ExportedZoneBuildingData>;
+  // Parse MH API ruin data
+  const mhRuinsData = JSON.parse(
+    fs.readFileSync(path.join(__dirname, "data", "ruins.json"), "utf-8")
+  ) as Record<string, JSONRuinPrototypeObject>;
 
-    Object.values(data).forEach((ruinData) => {
-      if (!ruins[ruinData.id]) {
-        ruins[ruinData.id] = {
-          id: ruinData.id,
-          name: {} as Record<Lang, string>,
-          description: {} as Record<Lang, string>,
-          icon: "",
-          camping: {
-            baseValue: 0,
-            spots: 0,
-          },
-          spawnChance: 0,
-          emptyChance: 0,
-          km: {
-            min: ruinData.km_min,
-            max: ruinData.km_max,
-          },
-          explorable: ruinData.explorable === 1,
-          drops: [],
-        };
-      }
+  Object.values(mhRuinsData).forEach((ruinData) => {
+    if (!ruinData.id) {
+      console.log("Missing id for ruin", ruinData);
+      throw new Error();
+    }
 
-      const building = ruins[ruinData.id];
-      if (!building) {
-        throw new Error(`Ruin with id ${ruinData.id} not found`);
-      }
-      building.name[lang] = ruinData.name.replace(/"/g, '\\"');
-      building.description[lang] = ruinData.desc.replace(/"/g, '\\"');
+    // Check if translations are available
+    if (
+      typeof ruinData.name !== "object" ||
+      typeof ruinData.desc !== "object"
+    ) {
+      console.log("Missing translations for ruin", ruinData);
+      throw new Error();
+    }
 
-      // Fix typo
-      if (lang === Lang.EN && ruinData.id === 42) {
-        building.name.en = "Smugglers' Cache";
-      }
-    });
+    ruins[ruinData.id] = {
+      id: ruinData.id,
+      name: {
+        en: ruinData.name.en ?? "",
+        fr: ruinData.name.fr ?? "",
+        de: ruinData.name.de ?? "",
+        es: ruinData.name.es ?? "",
+      },
+      description: {
+        en: ruinData.desc.en ?? "",
+        fr: ruinData.desc.fr ?? "",
+        de: ruinData.desc.de ?? "",
+        es: ruinData.desc.es ?? "",
+      },
+      icon: /ruin\/(.+)\..+\.gif/.exec(ruinData.img ?? "")?.[1] ?? "",
+      camping: {
+        baseValue: 0,
+        spots: 0,
+      },
+      spawnChance: 0,
+      emptyChance: 0,
+      km: {
+        min: 0,
+        max: 0,
+      },
+      explorable: ruinData.explorable ?? false,
+      drops: [],
+    };
   });
 
-  // Export ruin data from the main repo
-  execSync("php scripts/exportZoneBuildings.php", { stdio: "inherit" });
+  // Update ruins with data from the main repo
+  execSync("php scripts/exportRuins.php", { stdio: "inherit" });
 
   const ruinsData = JSON.parse(
-    fs.readFileSync(path.join(__dirname, "data", "zoneBuildings.json"), "utf-8")
+    fs.readFileSync(path.join(__dirname, "data", "mainRepoRuins.json"), "utf-8")
   ) as Record<
     string,
     {
       label: string;
       icon: string;
       camping: number;
+      min_dist: number;
+      max_dist: number;
       chance: number;
       empty: number;
+      capacity: number;
       drops: Record<string, number | [number, number]>;
     }
   >;
@@ -1409,75 +1524,39 @@ const generateRuins = async (items: Record<number, Item>) => {
   Object.values(ruinsData).forEach((ruinData) => {
     const germanName = ruinData.label;
 
-    const ruin = Object.values(ruins).find((b) => b.name.de === germanName);
+    const ruin = Object.values(ruins).find(
+      (b) => b.name.de.toLowerCase() === germanName.toLowerCase()
+    );
     if (!ruin) {
       throw new Error(`Ruin with name ${germanName} not found`);
     }
 
     ruin.icon = ruinData.icon;
     ruin.camping.baseValue = ruinData.camping;
+    ruin.camping.spots = ruinData.capacity;
+    ruin.km.min = ruinData.min_dist;
+    ruin.km.max = ruinData.max_dist;
     ruin.spawnChance = ruinData.chance;
     ruin.emptyChance = ruinData.empty;
-    ruin.drops = Object.entries(ruinData.drops).map(([itemId, dropData]) => {
-      const item = getItemByUid(items, itemId);
+    ruin.drops = Object.entries(ruinData.drops)
+      .filter(([itemId]) => {
+        // Ignore some edge case items
+        switch (itemId) {
+          case "postal_box_#01_xmas_alt_1":
+          case "postal_box_xl_#00_xmas_alt_2":
+            return false;
+        }
+        return true;
+      })
+      .map(([itemId, dropData]) => {
+        const item = getItemByUid(items, itemId);
 
-      return {
-        id: item.id,
-        odds: Array.isArray(dropData) ? dropData[0] : dropData,
-        event: Array.isArray(dropData) ? dropData[1] : undefined,
-      };
-    });
-  });
-
-  // Update with MH ruin data
-  const mhRuinsData = JSON.parse(
-    fs.readFileSync(path.join(__dirname, "data", "ruins.json"), "utf-8")
-  ) as Record<string, JSONRuinPrototypeObject>;
-
-  Object.values(mhRuinsData).forEach((ruinData) => {
-    const ruin = ruins[ruinData.id ?? -99];
-    if (!ruin) {
-      throw new Error(`Ruin with id ${ruinData.id} not found`);
-    }
-
-    ruin.icon = /ruin\/(.+)\..+\.gif/.exec(ruinData.img ?? "")?.[1] ?? "";
-    if (typeof ruinData.explorable === "boolean") {
-      ruin.explorable = ruinData.explorable;
-    }
-  });
-
-  // Export ruin data from the wiki
-  const wikiRuinsData = await exportRuinDataFromWiki();
-
-  // Update with wiki data
-  Object.values(wikiRuinsData).forEach((ruinData) => {
-    const ruin = Object.values(ruins).find(
-      (b) => b.name.en.toLowerCase() === ruinData.name?.toLowerCase()
-    );
-    if (!ruin) {
-      throw new Error(`Ruin with name ${ruinData.name} not found`);
-    }
-
-    if (ruinData.km.min !== ruin.km.min) {
-      console.log(
-        `Updated km.min for ${ruin.name.en} from ${ruin.km.min} to ${ruinData.km.min}`
-      );
-      ruin.km.min = ruinData.km.min;
-    }
-    if (ruinData.km.max !== ruin.km.max) {
-      console.log(
-        `Updated km.max for ${ruin.name.en} from ${ruin.km.max} to ${ruinData.km.max}`
-      );
-      ruin.km.max = ruinData.km.max;
-    }
-    if (ruinData.camping.baseValue !== ruin.camping.baseValue) {
-      console.log(
-        `Updated camping.baseValue for ${ruin.name.en} from ${ruin.camping.baseValue} to ${ruinData.camping.baseValue}`
-      );
-      ruin.camping.baseValue = ruinData.camping.baseValue;
-    }
-
-    ruin.camping.spots = ruinData.camping.slots;
+        return {
+          id: item.id,
+          odds: Array.isArray(dropData) ? dropData[0] : dropData,
+          event: Array.isArray(dropData) ? dropData[1] : undefined,
+        };
+      });
   });
 
   overwriteRuinData(ruins);
@@ -1529,7 +1608,9 @@ export type Ruin = {
       ${languages
         .map(
           (lang) =>
-            `[Lang.${lang.toUpperCase()}]: "${building.description[lang]}"`
+            `[Lang.${lang.toUpperCase()}]: "${building.description[
+              lang
+            ].replace(/"/g, '\\"')}"` // Escape double quotes
         )
         .join(",\n      ")}
     },
@@ -2070,6 +2151,7 @@ ${pictosObject}`;
       userkey: process.env.API_USERKEY,
     });
 
+    // Fetch items
     const itemsResponse = await api.json.itemsList({
       fields: "id,uid,img,heavy,deco,guard,name,desc,cat",
     });
@@ -2083,6 +2165,7 @@ ${pictosObject}`;
       "utf-8"
     );
 
+    // Fetch buildings
     const buildingsResponse = await api.json.buildingsList({
       fields:
         "id,img,name,desc,pa,maxLife,breakable,def,hasUpgrade,rarity,temporary,parent,resources.rsc.fields(id)",
@@ -2094,6 +2177,33 @@ ${pictosObject}`;
     fs.writeFileSync(
       path.join(__dirname, "data", "buildings.json"),
       JSON.stringify(buildings, null, 2),
+      "utf-8"
+    );
+
+    // Fetch pictos
+    const pictosResponse = await api.json.pictosList({
+      fields: "id,img,name,desc,community,rare",
+    });
+
+    const pictos = pictosResponse.data;
+
+    // Save pictos to a file
+    fs.writeFileSync(
+      path.join(__dirname, "data", "pictos.json"),
+      JSON.stringify(pictos, null, 2),
+      "utf-8"
+    );
+
+    // Fetch ruins
+    const ruinsResponse = await api.json.ruinsList({
+      fields: "id,img,name,desc,explorable",
+    });
+
+    const ruins = ruinsResponse.data;
+
+    fs.writeFileSync(
+      path.join(__dirname, "data", "ruins.json"),
+      JSON.stringify(ruins, null, 2),
       "utf-8"
     );
   }

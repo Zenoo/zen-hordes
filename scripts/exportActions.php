@@ -44,20 +44,22 @@ class ItemAction
 
 class ItemTargetDefinition
 {
-    const ItemSelectionType = 0;
-    const ItemTypeSelectionType = 1;
-    const ItemHeroicRescueType = 2;
-    const ItemCitizenType = 3;
-    const ItemCitizenOnZoneType = 4;
-    const ItemCitizenOnZoneSBType = 5;
-    const ItemSelectionTypePoison = 6;
-    const ItemCitizenVoteType = 7;
-    const ItemFriendshipType = 8;
-    const ItemTypeChestSelectionType = 9;
+    const int ItemSelectionType = 0;
+    const int ItemTypeSelectionType = 1;
+    const int ItemHeroicRescueType = 2;
+    const int ItemCitizenType = 3;
+    const int ItemCitizenOnZoneType = 4;
+    const int ItemCitizenOnZoneSBType = 5;
+    const int ItemSelectionTypePoison = 6;
+    const int ItemCitizenVoteType = 7;
+    const int ItemFriendshipType = 8;
+    const int ItemTypeChestSelectionType = 9;
+    const int ItemFriendshipXPType = 10;
 }
 
 enum CitizenProperties: string
 {
+    //<editor-fold desc="Enabled Features">
     case Section_Features = '--section--/Features';
     case EnableBlackboard = 'features.blackboard';
     case EnableGroupMessages = 'features.group_messages';
@@ -67,6 +69,10 @@ enum CitizenProperties: string
     case EnableAdvancedTheft = 'features.advanced_theft';
     case EnableClairvoyance = 'features.clairvoyance.base';
     case EnableOmniscience = 'features.clairvoyance.expanded';
+
+    //</editor-fold>
+
+    //<editor-fold desc="Property Values">
     case Section_Properties = '--section--/Properties';
     case TownDefense = 'props.town_defense';
     case WatchDefense = 'props.watch_defense';
@@ -95,13 +101,19 @@ enum CitizenProperties: string
     case CampingChanceCap = 'props.limit.camping.cap';
     case TrashSearchLimit = 'props.limit.trash.count';
     case ChestHiddenStashLimit = 'props.limit.chest.hidden.count';
+    //</editor-fold>
+
+    //<editor-fold desc="Config Values">
     case Section_Config = '--section--/Config';
     case RevengeItems = 'config.revenge_items';
     case StatusOverrideMap = 'config.status_override_map';
+    //</editor-fold>
+
+    case ActiveSkillIDs = 'skills.list';
 
     public function translationKey(): string
     {
-        return $this->value;
+        return "cfg_ctp_" . str_replace(".", "_", $this->value);
     }
 }
 

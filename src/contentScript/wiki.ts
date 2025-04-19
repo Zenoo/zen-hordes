@@ -1,6 +1,6 @@
 import { Building, buildings } from "../data/buildings";
 import { Item, items } from "../data/items";
-import { Ruin, RuinId, ruins } from "../data/ruins";
+import { Ruin, ruins } from "../data/ruins";
 import { ASSETS } from "../utils/constants";
 import { tooltip } from "../utils/tooltip";
 import { insertBetterTooltips } from "./betterTooltips";
@@ -539,7 +539,10 @@ export const insertWiki = () => {
         )}"]`
       ) as HTMLElement | null;
       if (!item) {
-        console.error("Building not found in wiki", target.getAttribute("data-id"));
+        console.error(
+          "Building not found in wiki",
+          target.getAttribute("data-id")
+        );
         return;
       }
 
@@ -871,13 +874,10 @@ export const insertWiki = () => {
             const title = document.createElement("h4");
             li.appendChild(title);
 
-            // No icon for buried building
-            if (ruin.id !== RuinId.BURIED_BUILDING) {
-              const icon = document.createElement("img");
-              icon.src = `${ASSETS}/ruin/${ruin.icon}.gif`;
-              icon.alt = ruin.name[store["hordes-lang"]];
-              title.appendChild(icon);
-            }
+            const icon = document.createElement("img");
+            icon.src = `${ASSETS}/ruin/${ruin.icon}.gif`;
+            icon.alt = ruin.name[store["hordes-lang"]];
+            title.appendChild(icon);
 
             const name = document.createElement("span");
             name.textContent = ruin.name[store["hordes-lang"]];
