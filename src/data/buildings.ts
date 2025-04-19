@@ -231,7 +231,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "The Great Pit is a very effective defensive measure: a big hole surrounding the town. Also known as \"the Brad\", it is very practical in the long term, as it can be filled with all sorts of things to make it even more effective!",
-      [Lang.FR]: "Le Grand fossé est une défense efficace : un grand trou entourant la ville. Pratique sur le long terme, on pourra le remplir avec un tas de choses pour le rendre encore plus efficace !",
+      [Lang.FR]: "Le Grand fossé est une défense efficace : un grand trou entourant la ville. Pratique sur le long terme, on pourra le remplir avec un tas de choses pour le rendre encore plus efficace !",
       [Lang.DE]: "Der Große Graben ist eine sehr wirkungsvolle Verteidigungsmaßnahme, die sich insbesondere auf lange Sicht auszahlt. Der Graben lässt sich mit allerhand Dingen füllen.",
       [Lang.ES]: "Una gran zanja alrededor del pueblo. Es muy interesante y eficaz a largo plazo porque podremos llenarla con varias cosas para hacerla más letal."
     },
@@ -259,7 +259,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "Simple concept: sharp pieces of rusty metal fixed all along the tops of the town's walls to make a kind of zombie grater.",
-      [Lang.FR]: "Une recette simple : des morceaux de ferraille rouillés qui dépassent de toute la Muraille de la ville pour en faire une sorte de grande lime à zombies.",
+      [Lang.FR]: "Une recette simple : des morceaux de ferraille rouillés qui dépassent de toute la Muraille de la ville pour en faire une sorte de grande lime à zombies.",
       [Lang.DE]: "Die Rasierklingenmauer folgt einem ganz einfachen Prinzip: Man nehme allerlei Eisenstücke, schärfe und spitze sie an und verteile sie anschließend über die ganze Stadtmauer. Die Mauer verwandelt sich so in eine überdimensionale Zombiefeile.",
       [Lang.ES]: "Un concepto simple: Colocar un montón de chatarra afilada frente a la muralla. Solo queda esperar a que los zombies se peguen a ella como moscas."
     },
@@ -867,7 +867,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "A basic defensive device, but nonetheless one which youll be happy to have when your ex-neighbour Kevo tries to snack on your delicious frontal lobe this evening.",
-      [Lang.FR]: "Un dispositif défensif sommaire, mais que vous serez bien content d’avoir quand Kevo — votre ancien voisin — tentera de manger votre délicieuse cervelle ce soir.",
+      [Lang.FR]: "Un dispositif défensif sommaire, mais que vous serez bien content d’avoir quand Kevo — votre ancien voisin — tentera de manger votre délicieuse cervelle ce soir.",
       [Lang.DE]: "Ein simpler Verteidigungsgegenstand, aber du wirst ihn zu schätzen wissen, wenn dein Ex-Nachbar Kevo versuchen sollte, an deinem Gehirn rumzuknabbern..",
       [Lang.ES]: "Puede parecer muy simple pero estarás contento de tener uno cuando BOSSU, tu antiguo vecino, venga para comerte los sesos."
     },
@@ -1436,7 +1436,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "This is a major scientific breakthrough: by planting sticks of dynamite and watering them carefully, you can grow grenades!",
-      [Lang.FR]: "C’est une découverte scientifique majeure : en plantant des bâtons de dynamite et en les arrosant soigneusement, on peut faire pousser des grenades.",
+      [Lang.FR]: "C’est une découverte scientifique majeure : en plantant des bâtons de dynamite et en les arrosant soigneusement, on peut faire pousser des grenades.",
       [Lang.DE]: "Ein gewaltiger wissenschaftlicher Durchbruch: Durch die Aussaat von Dynamitstangen und gaaanz vorsichtiges Gießen, könnt ihr Granatäpfel anbauen!",
       [Lang.ES]: "La naturaleza nos da sorpresas, a veces explosivas."
     },
@@ -1518,7 +1518,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "This is the last resort when there is no more water: rupture the water table with dynamite to extend the towns reserves.",
-      [Lang.FR]: "La solution de la dernière chance quand on n’a plus d’eau : perforer les nappes phréatiques à la dynamite pour étendre les réserves de la ville.",
+      [Lang.FR]: "La solution de la dernière chance quand on n’a plus d’eau : perforer les nappes phréatiques à la dynamite pour étendre les réserves de la ville.",
       [Lang.DE]: "Eine radikale Lösung, wenn mal das Wasser ausgehen sollte: Mit ein paar gezielten Sprengungen können tiefergelegene Wasserschichten erschlossen und das Wasserreservoir vergrößert werden.",
       [Lang.ES]: "Una solución radical cuando no queda agua: Perforar la capa freática con dinamita para extraer agua del subsuelo."
     },
@@ -1643,7 +1643,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "It is an imaginative and VERY effective system! Two huge slabs around the entrance way and a powerful piston system: when they are activated, they instantly crush anything in the way!",
-      [Lang.FR]: "Deux grosses plaques autour du passage de l’entrée, et un puissant système de pistons : quand on les actionne, ça écrase instantanément tout ce qui se trouve au milieu !",
+      [Lang.FR]: "Deux grosses plaques autour du passage de l’entrée, et un puissant système de pistons : quand on les actionne, ça écrase instantanément tout ce qui se trouve au milieu !",
       [Lang.DE]: "Es handelt sich um ein einfallsreiches und SEHR effektives System! Zwei schnell kreisende und mit geschliffenen Eisenstangen bestückte Drehscheiben, die von einem Kolbenmechanismus angetrieben werden, zerfetzen alles und jeden, der sich im Toreingang befindet!",
       [Lang.ES]: "Dos grandes placas a cada lado de la entrada y un poderoso sistema de pistones. Cuando es accionado, aplasta instantáneamente todo lo que se encuentre entre ellos."
     },
@@ -1733,7 +1733,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "No, really, Im being serious now, that... that... smell is properly unbearable. Take a shower. Now.",
-      [Lang.FR]: "Non, vraiment, cette odeur, c’est vraiment devenu insupportable : prenez une douche.",
+      [Lang.FR]: "Non, vraiment, cette odeur, c’est vraiment devenu insupportable : prenez une douche.",
       [Lang.DE]: "Nein, ganz ehrlich, dieser... dieser... Geruch ist einfach nicht auszuhalten: Nimm eine Dusche. Sofort!",
       [Lang.ES]: "\"¡Hey muchachos, oléis muy mal! ¿Una ducha?\""
     },
@@ -1866,7 +1866,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "When it comes to water, every drop counts. This construction adds +2 rations to the well and can be rebuilt every day.",
-      [Lang.FR]: "Quand il s'agit d’eau, il n’y a pas de petits profits. Ce chantier apporte +2 rations au puits, et peut être reconstruit chaque jour.",
+      [Lang.FR]: "Quand il s'agit d’eau, il n’y a pas de petits profits. Ce chantier apporte +2 rations au puits, et peut être reconstruit chaque jour.",
       [Lang.DE]: "Wenn es um Wasser geht, zählt jeder Tropfen. Dieses Bauwerk fügt dem Brunnen +2 Rationen Wasser hinzu und kann jeden Tag gebaut werden.",
       [Lang.ES]: "Cuando se trata de agua cada gota cuenta. Esta construcción extrae agua de las profundidades y aporta +2 raciones al pozo y puede ser reconstruido cada día."
     },
@@ -1944,7 +1944,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "The towns waste water can still be used: all you need to do is to connect every citizens toilet to a cunning network of pipes and toboggans, and open the sluices at midnight. Just to check, everyone has their tent set up correctly, right?",
-      [Lang.FR]: "Les eaux usées de la ville peuvent encore servir : il suffit de connecter les toilettes de chaque habitant à un astucieux réseau de tuyaux-toboggans, et d’ouvrir les vannes à minuit. Tout le monde a bien construit sa tente, hein ?",
+      [Lang.FR]: "Les eaux usées de la ville peuvent encore servir : il suffit de connecter les toilettes de chaque habitant à un astucieux réseau de tuyaux-toboggans, et d’ouvrir les vannes à minuit. Tout le monde a bien construit sa tente, hein ?",
       [Lang.DE]: "Selbst das Abwasser der Stadt kann noch genutzt werden: Wir müssen bloß alle Toiletten der Stadt über ein ausgeklügeltes System aus Rohren und Schlitten miteinander verbinden und dann um Mitternacht die Schleusen öffnen. Hat auch jeder sein Zelt korrekt aufgebaut?",
       [Lang.ES]: "Las aguas residuales del pueblo pueden servir aún. Basta con conectar los inodoros de cada habitante a un ingenioso sistema de tubos y abrir las válvulas durante el ataque. Por favor, no tirar el papel en el inodoro, puede tapar las canalizaciones y causar una explosión."
     },
@@ -2014,7 +2014,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "A home-made rocket launcher fired into the ground: think about it! As the story goes, the inventor of this construction project was trying to invent the \"rocket-jump\". All he did was to re-invent \"the crater\". Nonetheless, this construction adds +60 water rations to the well.",
-      [Lang.FR]: "Un lance-roquettes artisanal braqué vers le sol : il fallait y penser ! Pour l’anecdote, l’inventeur de ce chantier voulait en réalité inventer le « rocket jump ». Il a seulement redécouvert le « cratère ». Ce chantier rapporte +60 rations d’eau au puits.",
+      [Lang.FR]: "Un lance-roquettes artisanal braqué vers le sol : il fallait y penser ! Pour l’anecdote, l’inventeur de ce chantier voulait en réalité inventer le « rocket jump ». Il a seulement redécouvert le « cratère ». Ce chantier rapporte +60 rations d’eau au puits.",
       [Lang.DE]: "Ein selbstgebauer Raketenwerfer feuert in den Boden: Denk mal drüber nach! Der Legende nach wollte der geistige Vater dieses Bauprojekts eigentlich den \"Rocket Jump\" erfinden. Egal, +60 Rationen Wasser werden so zum Brunnen hinzugefügt.",
       [Lang.ES]: "La innovación: apunta hacia el suelo. Surgió como muchos inventos de un error. Alguien quiso salir del pueblo propulsado por un cohete, la máquina giró hacia abajo y terminó con la cabeza metida en un río subterráneo."
     },
@@ -2065,7 +2065,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "For once, cutting-edge technology does something other than knock off vast quantities of zombies... This construction adds +100 water rations to the well.",
-      [Lang.FR]: "Pour une fois que la haute technologie sert à autre chose qu’à trucider du zombie… Ce chantier rapporte +100 rations d’eau au puits.",
+      [Lang.FR]: "Pour une fois que la haute technologie sert à autre chose qu’à trucider du zombie… Ce chantier rapporte +100 rations d’eau au puits.",
       [Lang.DE]: "Dass \"Hightech\" nicht nur auf die Dezimierung von Zombiehorden beschränkt ist, beweist dieses Gebäude... Es fügt +100 Rationen Wasser zum Brunnen hinzu.",
       [Lang.ES]: "Por primera vez, la tecnología moderna sirve para algo más que simplemente matar zombies... Esta construcción añade +100 raciones de agua al pozo."
     },
@@ -2345,7 +2345,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "A powerful piece of equipment which uses compressed air to fire balls of bent nails and other rusty metal. Perfect for making holes the size of a fist in whatever (or whomever) you like...",
-      [Lang.FR]: "Un puissant mécanisme à air comprimé, qui projette des boules de clous tordus et autres ferrailles rouillées. Parfait pour faire des trous gros comme le poing dans n’importe quoi — ou qui.",
+      [Lang.FR]: "Un puissant mécanisme à air comprimé, qui projette des boules de clous tordus et autres ferrailles rouillées. Parfait pour faire des trous gros comme le poing dans n’importe quoi — ou qui.",
       [Lang.DE]: "Diese improvisierte Railgun funktioniert mit Luftdruck. Sie ist in der Lage, mehrere Ladungen Metallsplitter (verbogene Nägel und rostiges Metall) mit enormer Geschwindigkeit zu verschießen und faustgroße Löcher zu reißen.",
       [Lang.ES]: "Un poderoso mecanismo de aire comprimido que dispara bolas de clavos torcidos y chatarra puntiaguda. Perfecto para perforar cualquier cosa... o a cualquiera."
     },
@@ -2720,7 +2720,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "A cracking gallows for hanging undesirable types when youd rather go a little further than just banishing them from the community... Please note: given the poor standard of construction, the gallows can only be used ONCE, for ONE hanging: they must be rebuilt before they can be used again.",
-      [Lang.FR]: "Une belle potence pour pendre les citoyens indésirables plutôt que de se contenter de les bannir de la communauté… Attention : étant donné la piètre qualité de cette structure, elle ne peut être utilisée qu’UNE fois pour UNE pendaison. Il faudra la reconstruire pour l’utiliser à nouveau.",
+      [Lang.FR]: "Une belle potence pour pendre les citoyens indésirables plutôt que de se contenter de les bannir de la communauté… Attention : étant donné la piètre qualité de cette structure, elle ne peut être utilisée qu’UNE fois pour UNE pendaison. Il faudra la reconstruire pour l’utiliser à nouveau.",
       [Lang.DE]: "An diesem prächtigen Galgen könnt ihr unliebsame (oder lästige) Mitbürger loswerden. Ist mal was \"anderes\" als die klassische Verbannung...",
       [Lang.ES]: "¿Para qué contentarse con desterrar a los habitantes indeseables si podemos darnos el gusto de colgarlos? Dijo alguien por ahí. Fue así que se construyó esta bonita horca. Atención: Dado que la estructura no es muy estable, solo puede ser usada UNA VEZ y para UNA PERSONA. Después habrá que construir otra de nuevo."
     },
@@ -2790,7 +2790,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "Between two corpses, the one thats moving has the best chance of eating you, trick the enemy by catapulting your corpses into the carnivorous crowd of shuffling scum! Each body earns +20 defence points instead of +10.",
-      [Lang.FR]: "Entre deux morts, celui qui bouge a plus de chances de vous bouffer ; trompez l’ennemi en éjectant vos morts dans la masse de zombies ! Chaque mort rapporte +20 points de défense au lieu de +10.",
+      [Lang.FR]: "Entre deux morts, celui qui bouge a plus de chances de vous bouffer ; trompez l’ennemi en éjectant vos morts dans la masse de zombies ! Chaque mort rapporte +20 points de défense au lieu de +10.",
       [Lang.DE]: "Von 2 Toten hat derjenige, der sich bewegt, die besten Chancen, dich zu verspeisen. Trickst eure Feinde aus, indem ihr eure Leichen in die herankommende Zombiehorde schleudert. Jeder Tote bringt +20 anstelle von +10 Verteidigungspunkten.",
       [Lang.ES]: "En una competición entre dos cadáveres, el que se mueve es el que tiene la mejor oportunidad de comerte, ¡engaña al enemigo catapultando vuestros cadáveres hacia la multitud carnívora de escoria putrefacta! Cada cuerpo gana +20 puntos de defensa en lugar de sólo +10."
     },
@@ -2841,7 +2841,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "Bring out your dead! For once, theyre going to be useful. Use them to summarily improve our defences. Each dead citizen brought to the cemetary gives +10 defence points to the town. Note: How and where the victim died makes no nevermind...",
-      [Lang.FR]: "Apportez vos morts ! Pour une fois, ils vont se rendre utiles ; profitez de leur existence pour renforcer sommairement vos défenses. Chaque citoyen mort rapporte +10 points de défense à la ville. Note : le lieu et la raison de la mort du citoyen n’ont aucune importance.",
+      [Lang.FR]: "Apportez vos morts ! Pour une fois, ils vont se rendre utiles ; profitez de leur existence pour renforcer sommairement vos défenses. Chaque citoyen mort rapporte +10 points de défense à la ville. Note : le lieu et la raison de la mort du citoyen n’ont aucune importance.",
       [Lang.DE]: "Bringt eure Toten! Denn diesmal werden sie sich noch als nützlich erweisen. Macht das beste aus ihnen und verbessert damit gemeinsam eure Verteidigung. Jeder zum Friedhof gebrachte tote Mitbürger bringt +10 Verteidigungspunkte für die Gesamtverteidigung der Stadt. Hinweis: Es spielt keine Rolle, wo und woran ein Mitbürger verstarb.",
       [Lang.ES]: "¡Traed aquí todos vuestros muertos! Usad sus cuerpos para reforzar las defensas. Cada cadáver da +10 puntos de defensa al pueblo. ¡Ja! Algunos compañeros son más útiles muertos que vivos."
     },
@@ -3345,7 +3345,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "This simple electronic gadget increases the level of detail visible on the map of the World Beyond: the exact number of zombies in each zone can be clearly seen. Invaluable if you dont want to wander mindlessly into feeding time at the zombie zoo....",
-      [Lang.FR]: "Un bricolage électronique simpliste pour améliorer la lecture de la carte de l’Outre-Monde : le nombre exact de zombies dans chaque zone devient lisible clairement. Indispensable pour ne plus se faire avoir bêtement…",
+      [Lang.FR]: "Un bricolage électronique simpliste pour améliorer la lecture de la carte de l’Outre-Monde : le nombre exact de zombies dans chaque zone devient lisible clairement. Indispensable pour ne plus se faire avoir bêtement…",
       [Lang.DE]: "Diese simple elektronische Konstruktion erleichtert das Lesen der Außenweltkarte. Konkret: Du erfährst die genaue Zombieanzahl jeder Zone und musst somit nicht mehr planlos in der Wüste rumlaufen...",
       [Lang.ES]: "Estos ajustes electrónicos mejoran la lectura del mapa del Ultramundo. La cantidad exacta de zombies en cada zona es visible más claramente. Indispensable para no hacerse atrapar tontamente."
     },
@@ -3427,7 +3427,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "Each day, the search tower allows objects to be found in zones which were previously deemed \"depleted\". It detects unusual meteorological phenomena occurring outside and notes which area has been affected in the Chronicle.",
-      [Lang.FR]: "Chaque jour, le Scrutateur permet de trouver à nouveau des objets dans certaines zones auparavant considérées comme « épuisées ». En effet, il détecte les phénomènes météorologiques anormaux qui surviennent dehors, pendant la nuit, et indique dans la gazette quelle région du désert a été affectée.",
+      [Lang.FR]: "Chaque jour, le Scrutateur permet de trouver à nouveau des objets dans certaines zones auparavant considérées comme « épuisées ». En effet, il détecte les phénomènes météorologiques anormaux qui surviennent dehors, pendant la nuit, et indique dans la gazette quelle région du désert a été affectée.",
       [Lang.DE]: "Mit dem Forschungsturm können in bereits \"abgesuchten\" Wüstenzonen jeden Tag neue Gegenstände gefunden werden! Der Forschungsturm versetzt dich in die Lage, jene anormalen meteorologischen Phänomene aufzuzeichnen und auszuwerten, die sich nachts in der Wüste abspielen. Die entsprechenden Fundstellen werden anschließend in der Zeitung veröffentlicht.",
       [Lang.ES]: "Detecta los fenómenos meteorológicos anormales que sacuden el desierto y en la noche indica en el boletín la región del desierto afectada. Así, te ayudará cada día a encontrar objetos en zonas consideradas como \"agotadas\"."
     },
@@ -3938,7 +3938,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "Using this wicked looking guillotine and crudely constructed mannequin, the shaman can cut off the head of a pack-leader zombie at a distance, causing those who follow it to turn and wander back into the desert.",
-      [Lang.FR]: "Grâce à cette guillotine maudite et à un mannequin maladroitement conçu, le chaman peut couper à distance la tête d’un meneur zombie ; ceux qui le suivaient, sans trop savoir pourquoi, retourneront tranquillement vagabonder dans le désert.",
+      [Lang.FR]: "Grâce à cette guillotine maudite et à un mannequin maladroitement conçu, le chaman peut couper à distance la tête d’un meneur zombie ; ceux qui le suivaient, sans trop savoir pourquoi, retourneront tranquillement vagabonder dans le désert.",
       [Lang.DE]: "Mit Hilfe einer teuflischen Guillotine und einer provisorischen Schaufensterpuppe, kann der Schamane aus der Entfernung den Kopf eines Zombierudel-Führers abschlagen. Die Zombies die ihm folgen, werden daraufhin abdrehen und wieder in die Wüste wandern.",
       [Lang.ES]: "Con la ayuda de una Guillotina diabólica y un maniquí provisional, el Chamán puede cortar la cabeza del líder de la horda de los zombis a distancia. Todos los zombies que lo siguen no sabrán continuar el camino y se quedarán vagando por el desierto."
     },
@@ -4067,7 +4067,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "The catapult is a special machine which allows you fire all kinds of things into the World Beyond: very useful for preparing the ground for faraway expeditions!",
-      [Lang.FR]: "La catapulte est une machine spéciale qui va vous permettre de jeter tout un tas de choses au beau milieu de l’Outre-Monde : idéale pour ravitailler des expéditions lointaines !",
+      [Lang.FR]: "La catapulte est une machine spéciale qui va vous permettre de jeter tout un tas de choses au beau milieu de l’Outre-Monde : idéale pour ravitailler des expéditions lointaines !",
       [Lang.DE]: "Das Katapult ist ein äußerst mächtiges Werkzeug, mit dem die Stadt jede Art von Gegenstand in die Wüste schießen kann. Das ist sehr nützlich, wenn man weit entfernte Bürger versorgen möchte (Lebensmittel, Wasser, Waffen etc...).",
       [Lang.ES]: "Sirve para lanzar un montón de cosas al Ultramundo. Ideal para abastecer las expediciones en el desierto."
     },
@@ -4767,7 +4767,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "On the rare occasion a construction project benefits citizens directly, we wont complain. All citizens houses will gain +4 defence points.",
-      [Lang.FR]: "Pour une fois qu’un chantier profite directement aux habitants, on ne va pas s’en plaindre. Toutes les maisons de citoyens reçoivent +4 points de défense.",
+      [Lang.FR]: "Pour une fois qu’un chantier profite directement aux habitants, on ne va pas s’en plaindre. Toutes les maisons de citoyens reçoivent +4 points de défense.",
       [Lang.DE]: "Da Bürger normalerweise nicht direkt von Verteidigungsbauten profitieren, wollen wir uns mal nicht beschweren. Alle Bürgerbehausungen erhalten +4 Verteidigung.",
       [Lang.ES]: "¡Por fin! Una construcción que beneficia directamente a los habitantes. Todas las viviendas reciben +4 de defensa."
     },
@@ -5110,7 +5110,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "The cornerstone of every great town: a huge stinking dump all around the town. Admittedly, its not very aesthetically pleasing, but it allows you to convert everyday objects into effective temporary defences (for one night only).",
-      [Lang.FR]: "La clé de voûte de toute bonne ville : une immense décharge puante tout autour de la ville. Ce n’est certes pas très esthétique, mais cela permet de transformer des objets de tous les jours en défenses temporaires efficaces (valables une seule nuit).",
+      [Lang.FR]: "La clé de voûte de toute bonne ville : une immense décharge puante tout autour de la ville. Ce n’est certes pas très esthétique, mais cela permet de transformer des objets de tous les jours en défenses temporaires efficaces (valables une seule nuit).",
       [Lang.DE]: "Der Eckpfeiler einer jeden großen Stadt: eine riesige, stinkende Müllhalde, die die ganze Stadt umgibt. Zugegeben, das ist nicht gerade ästhetisch, aber immerhin könnt ihr so Alltagsgegenstände in eine effektive Verteidigung verwandeln (nur eine Nacht haltbar).",
       [Lang.ES]: "Montañas y montañas de desechos alrededor del pueblo. No será muy agradable para los turistas, pero te permite transformar objetos simples en defensas temporales (válidas por una sola noche)."
     },
@@ -5247,7 +5247,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "If theres one thing were not short of here, its sand. This wonder shines by the light of its uselessness alone: its construction earns a rare distinction for all the citizens still in town.",
-      [Lang.FR]: "S’il y a bien quelque chose dont on ne manque pas ici, c’est du sable. Cette Merveille brille par son inutilité la plus totale : sa construction rapporte une distinction rarissime à tous les citoyens en ville.",
+      [Lang.FR]: "S’il y a bien quelque chose dont on ne manque pas ici, c’est du sable. Cette Merveille brille par son inutilité la plus totale : sa construction rapporte une distinction rarissime à tous les citoyens en ville.",
       [Lang.DE]: "Wenn es eines gibt, woran hier wahrlich kein Mangel herrscht, dann ist es Sand. Dieses Wunderwerk strahlt im Glanze seiner Nutzlosigkeit: Seine Errichtung bringt allen Bürgern der Stadt eine seltene Auszeichnung ein.",
       [Lang.ES]: "Si algo podíamos hacer con tanta arena, lo hicimos. Esta maravilla brilla por su gran inutilidad, pero su construcción otorga una Distinción rarísima a todos los habitantes del pueblo."
     },
@@ -5321,7 +5321,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "The Ministry for Slavers have stated that shunned citizens are allowed to work on construction projects. Furthermore, each AP they invest will contribute an additional 50% bonus to the construction site (eg: 6 AP invested by a shunned citizen, 9 AP are invested in the project).",
-      [Lang.FR]: "Le bureau des esclavagistes permet aux bannis de travailler aux chantiers. D’ailleurs, les PA qu’ils investissent rapportent 50 % de PA supplémentaires aux chantiers (arrondi à l’unité inférieure ; par exemple, pour 6 PA personnels investis, 9 PA sont ajoutés au projet, et pour 5 PA seulement 7 PA sont ajoutés).",
+      [Lang.FR]: "Le bureau des esclavagistes permet aux bannis de travailler aux chantiers. D’ailleurs, les PA qu’ils investissent rapportent 50 % de PA supplémentaires aux chantiers (arrondi à l’unité inférieure ; par exemple, pour 6 PA personnels investis, 9 PA sont ajoutés au projet, et pour 5 PA seulement 7 PA sont ajoutés).",
       [Lang.DE]: "Das Ministerium für Sklaverei hat beschlossen, dass Verbannte auf den Baustellen arbeiten dürfen. Außerdem erhält jeder von ihnen in ein Bauprojekt investierte AP einen 50%-Bonus (z.B. aus 6 AP werden so 9 AP, die in das Bauprojekt fließen).",
       [Lang.ES]: "Desde aquí es posible hacer que los desterrados trabajen en las construcciones. Los PA que ellos invierten hacen ganar +50% de PA adicionales a las obras. Por ejemplo: Por 6 PA invertidos, el proyecto gana 9."
     },
@@ -5364,7 +5364,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "This terrifying building came from a soviet submarine and sends powerful bolts of electricity arcing around the town with a deafening crackle. The only \"hitch\" is that it has to be repaired daily. If it is destroyed, the town and its surroundings are instantly vaporized, wiping everything off the map (where you'll be). The label reads: soviet design, assembled in « вшивый ».",
-      [Lang.FR]: "Ce bâtiment terrifiant est issu d’un sous-marin soviétique et projette de puissants arcs électriques tout autour de la ville dans un crépitement assourdissant. Seul « bémol », il doit être réparé quotidiennement. S’il est détruit, toute la ville et ses alentours sont instantanément pulvérisés, tuant tout le monde sur la carte (où que vous soyez). La notice précise : conception soviétique, assemblé à « вшивый ».",
+      [Lang.FR]: "Ce bâtiment terrifiant est issu d’un sous-marin soviétique et projette de puissants arcs électriques tout autour de la ville dans un crépitement assourdissant. Seul « bémol », il doit être réparé quotidiennement. S’il est détruit, toute la ville et ses alentours sont instantanément pulvérisés, tuant tout le monde sur la carte (où que vous soyez). La notice précise : conception soviétique, assemblé à « вшивый ».",
       [Lang.DE]: "Dieses furchterregende Konstrukt stammt aus einem sowjetischen U-Boot und sendet gleißende Blitze knisternder Elektrizität rund um die Stadt aus. Einziger Haken an der Sache: Es muss jeden Tag repariert werden. Falls es zerstört wird, würde die Stadt mitsamt der gesamten Umgebung augenblicklich ausradiert werden (inklusive euch). Das Schild am Reaktor besagt: sowjetische Bauweise, hergestellt in « вшивый ».",
       [Lang.ES]: "Esta horrenda máquina proviene de un submarino de la Guerra Fría y lanza poderosos rayos eléctricos alrededor del pueblo con un ruido ensordecedor. El único inconveniente es que debe ser reparado diariamente. Si es destruido, todo el pueblo y sus alrededores quedarán hechos polvo, matando a todos estén donde estén. La etiqueta dice: Diseñado en la Unión Soviética, armado en « вшивый »."
     },
@@ -5411,7 +5411,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "It's a well known fact that zombies are a bit simple. So what better than a maze in front of the gates to lose a few of the horde during the attack? Its really effective, but from now on, any citizen wishing to enter the town will need 1 AP to do so..",
-      [Lang.FR]: "Les zombies sont un peu bêtes, c’est bien connu. Alors quoi de mieux qu’un petit labyrinthe devant la porte de la ville pour les perdre pendant l’attaque ? C’est très efficace, mais chaque citoyen souhaitant rentrer en ville devra dépenser 1 PA dorénavant.",
+      [Lang.FR]: "Les zombies sont un peu bêtes, c’est bien connu. Alors quoi de mieux qu’un petit labyrinthe devant la porte de la ville pour les perdre pendant l’attaque ? C’est très efficace, mais chaque citoyen souhaitant rentrer en ville devra dépenser 1 PA dorénavant.",
       [Lang.DE]: "Zombies sind bekanntermaßen einfach gestrickt. Warum ihnen dann nicht einfach ein kleines Labyrinth vor die Nase (das Stadttor) setzen und dabei zusehen, wie ihr Angriff an Schwung verliert. Das Ganze ist äußerst effektiv. Doch jeder Bürger, der die Stadt betreten will, muss dann 1 AP aufbringen.",
       [Lang.ES]: "Los zombies son malos pero también un poco tontos a veces. ¿Qué tal si hacemos un pequeño laberinto en la entrada del pueblo para que se pierdan durante el ataque? Es muy eficaz, pero cada habitante que desee entrar al pueblo deberá gastar 1 PA desde ese momento."
     },
@@ -5493,7 +5493,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "An frighteningly BRD on which the names of all the town residents are engraved. Pointing majestically towards the sky like... euh... A BRD. Nobody knows why, but someone has engraved, \"Propriété de la Nuit Profonde\" on the base. This wonder shines by the light of its uselessness alone: its construction earns a rare distinction for all the citizens still in town..",
-      [Lang.FR]: "Un immense PMV sur lequel sont gravés les noms de tous les habitants de la ville, dressé vers le ciel comme… euh. Un PMV. Personne ne sait pourquoi, mais quelqu’un a apposé la mention suivante à sa base : « Antre de la Nuit Profonde ». Cette Merveille brille par son inutilité la plus totale : sa construction rapporte une distinction rarissime à tous les citoyens en ville.",
+      [Lang.FR]: "Un immense PMV sur lequel sont gravés les noms de tous les habitants de la ville, dressé vers le ciel comme… euh. Un PMV. Personne ne sait pourquoi, mais quelqu’un a apposé la mention suivante à sa base : « Antre de la Nuit Profonde ». Cette Merveille brille par son inutilité la plus totale : sa construction rapporte une distinction rarissime à tous les citoyens en ville.",
       [Lang.DE]: "Ein wirklich riesiger KVF, auf dem die Namen aller Bürger der Stadt eingraviert sind, erhebt sich stolz in den Himmel... äh. Genau, ein KVF. Niemand weiß warum, aber jemand hat am Fuße des Bauwerks \"Eigentum der tiefsinnigen Nacht\" eingraviert. Dieses Wunderwerk strahlt im Glanze seiner Nutzlosigkeit: Seine Errichtung bringt allen Bürgern der Stadt eine seltene Auszeichnung ein.",
       [Lang.ES]: "Una inmensa construcción en la que están grabados todos los nombres de los habitantes del pueblo. Sus iniciales C.O.S.A son un misterio. Tampoco nadie puede explicar la frase que figura en su base: 'Antro de la Noche Profunda'. Esta maravilla brilla por su gran inutilidad, pero su construcción otorga una Distinción rarísima a todos los habitantes del pueblo."
     },
@@ -5610,7 +5610,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "Glory to the Crow! Glory be to their lenience and benevolence! Deliver us from spam and pardon our trolling as we forgive those who have trolled against us. This wonder shines by the light of its uselessness alone: its construction earns a rare distinction for all the citizens still in town.",
-      [Lang.FR]: "Gloire au Corbeau ! Gloire à ta mansuétude et à ton aura bienfaisante ! Délivre-nous du spam et pardonne nos trolls comme nous pardonnons à ceux que nous avons trollés. Cette Merveille brille par son inutilité la plus totale : sa construction rapporte une distinction rarissime à tous les citoyens en ville.",
+      [Lang.FR]: "Gloire au Corbeau ! Gloire à ta mansuétude et à ton aura bienfaisante ! Délivre-nous du spam et pardonne nos trolls comme nous pardonnons à ceux que nous avons trollés. Cette Merveille brille par son inutilité la plus totale : sa construction rapporte une distinction rarissime à tous les citoyens en ville.",
       [Lang.DE]: "Huldigt den Raben! Gelobt sei deine Milde und deine erhabene Austrahlung! Befreie uns vom Spam und vergib uns unsere Trollenbeiträge so wie auch wir vergeben anderen Trollen. Dieses Wunderwerk strahlt im Glanze seiner Nutzlosigkeit: Seine Errichtung bringt allen Bürgern der Stadt eine seltene Auszeichnung ein.",
       [Lang.ES]: "¡Gloria al Cuervo! Gloria a su benevolencia. Líbranos del spam y perdona a los trolls como nosotros perdonamos a quienes nos han trolleado. Esta maravilla brilla por su gran inutilidad, pero su construcción otorga una Distinción rarísima a todos los habitantes del pueblo."
     },
@@ -5743,7 +5743,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "A large, round balloon floating in the sky, but just for as long as it takes for a \"volunteer\" citizen to take a note of everything he sees around the town. This building allows you to reveal everything hidden in the World Beyond..",
-      [Lang.FR]: "Un gros ballon tout rond qui vole dans le ciel, mais juste assez longtemps pour qu’un citoyen « volontaire » répertorie tout ce qu’il voit autour de notre ville. Ce chantier permet de révéler l’intégralité de l’Outre-Monde.",
+      [Lang.FR]: "Un gros ballon tout rond qui vole dans le ciel, mais juste assez longtemps pour qu’un citoyen « volontaire » répertorie tout ce qu’il voit autour de notre ville. Ce chantier permet de révéler l’intégralité de l’Outre-Monde.",
       [Lang.DE]: "Ein großer, runder Ballon steigt hinauf in den Himmel. Aber nur solange, wie der \"Freiwillige\" in der Gondel braucht, um alles rund um die Stadt zu erfassen. Das Bauwerk ermöglicht es Dir, die gesamte Außenwelt zu entdecken.",
       [Lang.ES]: "Un inmenso globo que se eleva hasta el cielo, el tiempo suficiente para que un \"voluntario\" pueda observar y anotar todo lo que hay alrededor del pueblo. Esta construcción permite revelar la totalidad del Ultramundo."
     },
@@ -5837,7 +5837,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "Foundations allow \"Extreme Projects\" to be completed (projects which take a long time to complete, but which have very powerful results).",
-      [Lang.FR]: "Les fondations permettent la réalisation de « Projets Insensés » (des constructions de longue haleine mais aux effets très puissants).",
+      [Lang.FR]: "Les fondations permettent la réalisation de « Projets Insensés » (des constructions de longue haleine mais aux effets très puissants).",
       [Lang.DE]: "Das Fundament ist die Grundvoraussetzung für \"Absurde Projekte\" (das sind langwierige und anstrengende Bauten, die jedoch für die Stadt mehr als nützlich sind).",
       [Lang.ES]: "Los cimientos permiten la construcción de Proyectos Delirantes (aquellos que exigen mucho trabajo pero que resultan ser muy poderosos)."
     },

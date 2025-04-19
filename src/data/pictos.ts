@@ -327,7 +327,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "Number of nights survived after the town has been devastated!",
-      [Lang.FR]: "Nombre de nuits survécues tandis que la ville était dévastée !",
+      [Lang.FR]: "Nombre de nuits survécues tandis que la ville était dévastée !",
       [Lang.DE]: "Anzahl der Nächte, die du draußen überlebt hast als die Stadt schon zerstört war!",
       [Lang.ES]: "Cantidad de noches sobrevividas mientras que el pueblo estaba devastado."
     },

@@ -12,6 +12,7 @@ import { exportActionEffects } from "./exportActionEffects";
 import { overwriteItemData } from "./itemOverwrites";
 import { overwriteRecipeData } from "./recipeOverwrites";
 import { overwriteRuinData } from "./ruinOverwrites";
+import dotenv from 'dotenv';
 
 const CONFIG = {
   callApi: false,
@@ -2138,6 +2139,7 @@ ${pictosObject}`;
 (async () => {
   // Update the API data
   if (CONFIG.callApi) {
+    dotenv.config();
     if (!process.env.API_APPKEY || !process.env.API_USERKEY) {
       throw new Error("API_APPKEY and API_USERKEY env variables are required");
     }
@@ -2215,6 +2217,7 @@ ${pictosObject}`;
   generatePictos();
 
   console.log("Data generation completed.");
+  process.exit(0);
 })().catch((error: unknown) => {
   console.error(error);
   process.exit(1);

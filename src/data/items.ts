@@ -10487,7 +10487,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Some of the rooms here are a tight squeeze to say the least, so this would appear to be the perfect tool with which to gain access and get down to some serious rummaging. Thanks to this blank, you'll be able to obtain one!",
-      [Lang.FR]: "Certaines pièces sont de vraies boîtes de conserve, rien de mieux qu’un outil approprié pour aller à la pêche aux objets utiles ; et grâce à cette empreinte, vous pourrez l’obtenir !",
+      [Lang.FR]: "Certaines pièces sont de vraies boîtes de conserve, rien de mieux qu’un outil approprié pour aller à la pêche aux objets utiles ; et grâce à cette empreinte, vous pourrez l’obtenir !",
       [Lang.DE]: "Einige der Zimmer sind wahre Flaschenhälse. Darum ist das das perfekte Werkzeug, um sich Zutritt zu verschaffen und den einen oder anderen nützlichen Gegenstand herauszuholen! Dank dieses Abdrucks kannst du einen solchen Schlüssel herstellen.",
       [Lang.ES]: "Como no tienes cervezas que abrir, mejor te pones a abrir puertas en busca de objetos útiles. Debido a su mal estado, solo puedes abrir una puerta con él."
     },
