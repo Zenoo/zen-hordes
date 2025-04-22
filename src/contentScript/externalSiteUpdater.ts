@@ -191,37 +191,37 @@ const readExternalAppResponse = async (
       const error = xml.querySelector("error");
       if (!error) {
         displayError(wrapper, `${site}: no error code`);
-        return;
+        return false;
       }
 
       if (error.getAttribute("code") !== "ok") {
         displayError(wrapper, `${site}: ${error.getAttribute("code")}`);
-        return;
+        return false;
       }
-      break;
+      return true;
     }
     case ExternalSiteName.FM: {
       // Nothing to check, the response code is enough
-      break;
+      return true;
     }
     case ExternalSiteName.GH: {
-      const body = await response.json() as Record<string, unknown>;
+      const body = (await response.json()) as Record<string, unknown>;
       if (body.retour !== 1) {
         displayError(wrapper, `${site}: ${body.lib as string}`);
-        return;
+        return false;
       }
-      break;
+      return true;
     }
     case ExternalSiteName.MHO: {
-      const data = await response.json() as Partial<
+      const data = (await response.json()) as Partial<
         Record<string, Partial<Record<string, string>>>
       >;
 
       if (data.mapResponseDto?.mhoApiStatus !== "Ok") {
         displayError(wrapper, `${site}: ${data.mapResponseDto?.mhoApiStatus}`);
-        return;
+        return false;
       }
-      break;
+      return true;
     }
     default: {
       throw new Error("Unknown site");
@@ -235,122 +235,126 @@ const readExternalAppResponse = async (
 export const displayUpdateButton = (node: HTMLElement) => {
   if (!store["external-sites-to-update"].length) return;
 
-  if (node.matches(".inventory.desert")) {
-    const existing = document.querySelector(".zen-update-button");
-    if (existing) return;
+  if (
+    !node.classList.contains("inventory") ||
+    !node.classList.contains("desert")
+  )
+    return;
 
-    // Create update button
-    const button = document.createElement("button");
-    button.classList.add("zen-update-button");
+  const existing = document.querySelector(".zen-update-button");
+  if (existing) return;
 
-    // Add external sites logos
-    for (const site of store["external-sites-to-update"]) {
-      const siteData = ExternalSite[site];
-      if (!siteData.updateUrl) continue;
+  // Create update button
+  const button = document.createElement("button");
+  button.classList.add("zen-update-button");
 
-      const logo = document.querySelector(
-        `.app-external[data-id="${siteData.id}"] img`
-      );
+  // Add external sites logos
+  for (const site of store["external-sites-to-update"]) {
+    const siteData = ExternalSite[site];
+    if (!siteData.updateUrl) continue;
 
-      const siteWrapper = document.createElement("div");
-      siteWrapper.classList.add("site");
-      siteWrapper.setAttribute("data-id", site);
+    const logo = document.querySelector(
+      `.app-external[data-id="${siteData.id}"] img`
+    );
 
-      const siteImage = document.createElement("img");
-      siteImage.src = logo?.getAttribute("src") ?? "";
-      siteImage.alt = site;
+    const siteWrapper = document.createElement("div");
+    siteWrapper.classList.add("site");
+    siteWrapper.setAttribute("data-id", site);
 
-      const statusImage = document.createElement("img");
-      statusImage.classList.add("status");
-      statusImage.src = `${ASSETS}/icons/error.png`;
+    const siteImage = document.createElement("img");
+    siteImage.src = logo?.getAttribute("src") ?? "";
+    siteImage.alt = site;
 
-      siteWrapper.appendChild(siteImage);
-      siteWrapper.appendChild(statusImage);
-      button.appendChild(siteWrapper);
-    }
+    const statusImage = document.createElement("img");
+    statusImage.classList.add("status");
+    statusImage.src = `${ASSETS}/icons/error.png`;
 
-    // Hover tooltip
-    tooltip({
-      target: button,
-      content: t(T, "updateExternalApps"),
-      id: "zen-update-tooltip",
-    });
+    siteWrapper.appendChild(siteImage);
+    siteWrapper.appendChild(statusImage);
+    button.appendChild(siteWrapper);
+  }
 
-    // Click event
-    button.addEventListener("click", () => {
-      // Check if we have a user key
-      if (!store["user-key"]) {
-        const existing = document.querySelector(".zen-update-error");
-        if (existing) {
-          existing.remove();
-        }
+  // Hover tooltip
+  tooltip({
+    target: button,
+    content: t(T, "updateExternalApps"),
+    id: "zen-update-tooltip",
+  });
 
-        // Display error
-        const notice = document.createElement("div");
-        notice.classList.add("zen-update-error", "note", "note-critical");
-
-        const title = document.createElement("span");
-        title.textContent = t(T, "noUserKey");
-        notice.appendChild(title);
-
-        const link = document.createElement("a");
-        link.setAttribute("href", "/jx/soul/settings");
-        link.textContent = t(T, "settings");
-        notice.appendChild(link);
-
-        button.after(notice);
-        return;
-      }
-
-      // Remove error message
+  // Click event
+  button.addEventListener("click", () => {
+    // Check if we have a user key
+    if (!store["user-key"]) {
       const existing = document.querySelector(".zen-update-error");
       if (existing) {
         existing.remove();
       }
 
-      store["external-sites-to-update"].forEach((site) => {
-        const updateUrl = ExternalSite[site].updateUrl;
-        if (!updateUrl) {
-          console.error(`No update URL for ${site}`);
-          return;
-        }
+      // Display error
+      const notice = document.createElement("div");
+      notice.classList.add("zen-update-error", "note", "note-critical");
 
-        const wrapper = document.querySelector(
-          `.zen-update-button div[data-id="${site}"]`
-        );
-        if (!wrapper) return;
+      const title = document.createElement("span");
+      title.textContent = t(T, "noUserKey");
+      notice.appendChild(title);
 
-        // Update status
-        updateAppStatus(wrapper, "loading");
+      const link = document.createElement("a");
+      link.setAttribute("href", "/jx/soul/settings");
+      link.textContent = t(T, "settings");
+      notice.appendChild(link);
 
-        // Get query to update external site
-        fetch(...getExternalAppQuery(site))
-          .then(async (response) => {
-            await readExternalAppResponse(wrapper, site, response);
+      button.after(notice);
+      return;
+    }
 
-            // Not a success response code
-            if (!response.ok) {
+    // Remove error message
+    const existing = document.querySelector(".zen-update-error");
+    if (existing) {
+      existing.remove();
+    }
+
+    store["external-sites-to-update"].forEach((site) => {
+      const updateUrl = ExternalSite[site].updateUrl;
+      if (!updateUrl) {
+        console.error(`No update URL for ${site}`);
+        return;
+      }
+
+      const wrapper = document.querySelector(
+        `.zen-update-button div[data-id="${site}"]`
+      );
+      if (!wrapper) return;
+
+      // Update status
+      updateAppStatus(wrapper, "loading");
+
+      // Get query to update external site
+      fetch(...getExternalAppQuery(site))
+        .then(async (response) => {
+          const ok = await readExternalAppResponse(wrapper, site, response);
+
+          // Not a success response code
+          if (!ok) {
+            if (response.status !== 200) {
               displayError(
                 wrapper,
                 `${site}: ${response.statusText} (${response.status})`
               );
-              return;
             }
+            return;
+          }
 
-            // Update status
-            updateAppStatus(wrapper, "success");
-          })
-          .catch((error: unknown) => {
-            displayError(
-              wrapper,
-              `${site}: ${
-                error instanceof Error ? error.message : String(error)
-              }`
-            );
-          });
-      });
+          // Update status
+          updateAppStatus(wrapper, "success");
+        })
+        .catch((error: unknown) => {
+          displayError(
+            wrapper,
+            `${site}: ${error instanceof Error ? error.message : String(error)}`
+          );
+        });
     });
+  });
 
-    node.after(button);
-  }
+  node.after(button);
 };

@@ -40,6 +40,7 @@ const T: Translations = {
     unavailable: "Not available anymore",
     privateTownOnly: "Can only be found in private towns",
     poisonable: "Can be poisoned",
+    "item.tag.deco": "Home decoration",
   },
   fr: {
     [`action-type.${ItemActionType.Eat}`]: "Manger",
@@ -73,6 +74,7 @@ const T: Translations = {
     unavailable: "N'est plus disponible",
     privateTownOnly: "Peut uniquement être trouvé dans les villes privées",
     poisonable: "Peut être empoisonné",
+    "item.tag.deco": "Aménagement de maison",
   },
   es: {
     [`action-type.${ItemActionType.Eat}`]: "Comer",
@@ -106,6 +108,7 @@ const T: Translations = {
     unavailable: "Ya no disponible",
     privateTownOnly: "Solo se puede encontrar en ciudades privadas",
     poisonable: "Puede ser envenenado",
+    "item.tag.deco": "Hausdekoration",
   },
   de: {
     [`action-type.${ItemActionType.Eat}`]: "Essen",
@@ -139,6 +142,7 @@ const T: Translations = {
     unavailable: "Nicht mehr verfügbar",
     privateTownOnly: "Kann nur in privaten Städten gefunden werden",
     poisonable: "Kann vergiftet werden",
+    "item.tag.deco": "Decoración del hogar",
   },
 };
 
@@ -185,9 +189,7 @@ const findItem = (node: HTMLElement) => {
     }
 
     // Check if the item icon matches the h1 img src
-    const imgSrc = (
-      node.querySelector("h1 img") as HTMLImageElement | undefined
-    )?.src;
+    const imgSrc = node.querySelector<HTMLImageElement>("h1 img")?.src;
     const iconMatch = imgSrc
       ? /item\/(.+)\..+\.gif/.exec(imgSrc)?.[1] ?? ""
       : "";
@@ -494,7 +496,7 @@ const createLine = (
   currentItemId: ItemId,
   item: Item,
   data: Recipe | ItemAction,
-  broken?: boolean,
+  broken?: boolean
 ) => {
   const line = document.createElement("tr");
 
@@ -821,7 +823,7 @@ const setTextWithIcons = (node: HTMLElement, content: string) => {
   });
 };
 
-export const insertBetterTooltips = (node: HTMLElement) => {
+export const insertBetterItemTooltips = (node: HTMLElement) => {
   if (!store["better-tooltips"]) return;
 
   if (
@@ -879,11 +881,15 @@ export const insertBetterTooltips = (node: HTMLElement) => {
 
     // Decoration
     if (item.decoration) {
-      const decorationNode = node.querySelector(".item-tag-deco");
+      let decorationNode = node.querySelector(".item-tag-deco");
 
       if (!decorationNode) {
-        console.error(`Decoration node not found for item: ${item.id}`);
-        return;
+        // Since S18, decoration nodes don't seem to show up every time
+        // So we create a new one if it doesn't exist
+        decorationNode = document.createElement("div");
+        decorationNode.classList.add("item-tag", "item-tag-deco");
+        decorationNode.textContent = t(T, "item.tag.deco");
+        node.appendChild(decorationNode);
       }
 
       const span = document.createElement("span");
@@ -1020,5 +1026,70 @@ export const insertBetterTooltips = (node: HTMLElement) => {
     });
 
     node.append(table);
+  }
+};
+
+export const insertBetterRuinTooltips = (node: HTMLElement) => {
+  if (!store["better-tooltips"]) return;
+
+  if (node.classList.contains("tooltip-map")) {
+    // Check if the tooltip has already been processed
+    const processed = node.querySelector("zen-ruin-drops");
+    if (processed) return;
+
+    // Check if the node is a ruin tooltip
+    const ruinTitle = node.querySelector(".cell.bold");
+    if (!ruinTitle) return;
+
+    // Ignore city tooltip
+    if (node.children[1]?.children[1]?.textContent === "[0 / 0]") return;
+
+    // Find the ruin
+    const ruin = Object.values(ruins).find(
+      (ruin) => ruin.name[store["hordes-lang"]] === ruinTitle.textContent
+    );
+    if (!ruin) {
+      // Probably a buried building
+      return;
+    }
+
+    node.classList.add("zen-better-tooltip");
+
+    // Ruin drops
+    const table = document.createElement("table");
+    table.classList.add("clear", "zen-ruin-drops");
+    const tbody = document.createElement("tbody");
+    table.append(tbody);
+    const line = document.createElement("tr");
+    tbody.append(line);
+    const cell = document.createElement("td");
+    cell.classList.add("output");
+    line.append(cell);
+
+    const target = node.children[0];
+    const totalOdds = ruin.drops.reduce((acc, d) => acc + d.odds, 0);
+
+    ruin.drops
+      .sort((a, b) => b.odds / totalOdds - a.odds / totalOdds)
+      .forEach((drop) => {
+        const wrapper = document.createElement("div");
+
+        // Icon
+        const dropImg = document.createElement("img");
+        dropImg.src = `${ASSETS}/icons/item/${items[drop.item].icon}.gif`;
+        dropImg.title = items[drop.item].name[store["hordes-lang"]];
+        dropImg.setAttribute("data-type", "item");
+        dropImg.setAttribute("data-id", drop.item);
+
+        // Odds
+        wrapper.setAttribute(
+          "data-text",
+          drop.odds ? `${Math.round((drop.odds / totalOdds) * 100)}%` : "?%"
+        );
+
+        wrapper.append(dropImg);
+        cell.append(wrapper);
+      });
+    target?.append(table);
   }
 };

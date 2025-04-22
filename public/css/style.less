@@ -650,6 +650,16 @@ body.zen-map-preview-enabled {
         }
       }
     }
+
+    &.clear {
+      border: none;
+      background: transparent;
+
+      td {
+        border: none;
+        background: transparent;
+      }
+    }
   }
 }
 
@@ -912,7 +922,72 @@ body.zen-map-preview-enabled {
     margin: 0;
   }
 
-  .more, .less {
+  .more,
+  .less {
     cursor: pointer;
+    margin: 0 2px;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 120px);
+    grid-gap: 8px;
+    list-style-type: none;
+    padding-left: 0;
+    justify-content: center;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+
+      &>div {
+        flex-shrink: 0;
+
+        .zen-ruin-icon {
+          margin: 0 20px;
+        }
+
+        .zen-boolean-icon {
+          opacity: 0.5;
+          cursor: pointer;
+          margin: 0 20px;
+
+          &.active {
+            opacity: 1;
+          }
+        }
+      }
+
+      &>p {
+        margin: 0;
+        margin-left: 4px;
+      }
+
+      &[data-param="ruin"] .crossed::before {
+        right: 20px;
+      }
+    }
+  }
+
+  .total{
+    text-align: center;
+    font-weight: bold;
+
+    .total-value {
+      color: #fff;
+    }
+
+    .unlimited-total-value {
+      font-style: italic;
+
+      .hidden {
+        display: none;
+      }
+    }
   }
 }

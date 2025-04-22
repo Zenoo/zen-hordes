@@ -76,49 +76,50 @@ const updateTimer = (timerElement: Element | null, endTime: number) => {
 
 export const blockBank = (node: HTMLElement) => {
   if (!store["bank-blocker"]) return;
+  if (node.id !== "bank-inventory") return;
 
-  if (node.id === "bank-inventory") {
-    const endTime = store["last-bank-item-taken"] + BLOCK_DURATION;
-    const timeRemaining = endTime - Date.now();
+  const endTime = store["last-bank-item-taken"] + BLOCK_DURATION;
+  const timeRemaining = endTime - Date.now();
 
-    // Reset the counter if the time has expired
-    if (timeRemaining <= 0) {
-      cleanupBankBlocker();
-      return;
-    };
+  // Reset the counter if the time has expired
+  if (timeRemaining <= 0) {
+    cleanupBankBlocker();
+    return;
+  }
 
-    const isChaos = !!document.querySelector("body[data-theme-secondary-modifier='chaos']");
-    const maxItems = isChaos ? MAX_ITEMS_TAKEN_CHAOS : MAX_ITEMS_TAKEN;
+  const isChaos = !!document.querySelector(
+    "body[data-theme-secondary-modifier='chaos']"
+  );
+  const maxItems = isChaos ? MAX_ITEMS_TAKEN_CHAOS : MAX_ITEMS_TAKEN;
 
-    // Bank displayed, check if we need to display the blocker
-    if (store["bank-items-taken"] >= maxItems) {
-      // Visual blocker
-      const existingBlocker = document.querySelector(".bank-blocker");
-      if (existingBlocker) return;
+  // Bank displayed, check if we need to display the blocker
+  if (store["bank-items-taken"] >= maxItems) {
+    // Visual blocker
+    const existingBlocker = document.querySelector(".bank-blocker");
+    if (existingBlocker) return;
 
-      const blocker = document.createElement("div");
-      blocker.classList.add("bank-blocker");
-      node.append(blocker);
+    const blocker = document.createElement("div");
+    blocker.classList.add("bank-blocker");
+    node.append(blocker);
 
-      // Notification
-      const formattedTime = formatTime(timeRemaining);
-      const notification = document.createElement("div");
-      notification.id = "bank-blocked-notification";
-      notification.classList.add("note", "note-critical");
+    // Notification
+    const formattedTime = formatTime(timeRemaining);
+    const notification = document.createElement("div");
+    notification.id = "bank-blocked-notification";
+    notification.classList.add("note", "note-critical");
 
-      const title = document.createElement("span");
-      title.textContent = t(T, "limit-reached", { max: maxItems });
-      notification.append(title);
+    const title = document.createElement("span");
+    title.textContent = t(T, "limit-reached", { max: maxItems });
+    notification.append(title);
 
-      const timer = document.createElement("p");
-      timer.classList.add("time-remaining");
-      timer.textContent = formattedTime;
-      notification.append(timer);
+    const timer = document.createElement("p");
+    timer.classList.add("time-remaining");
+    timer.textContent = formattedTime;
+    notification.append(timer);
 
-      node.parentElement?.insertBefore(notification, node);
+    node.parentElement?.insertBefore(notification, node);
 
-      const timerElement = notification.querySelector(".time-remaining");
-      updateTimer(timerElement, endTime);
-    }
+    const timerElement = notification.querySelector(".time-remaining");
+    updateTimer(timerElement, endTime);
   }
 };

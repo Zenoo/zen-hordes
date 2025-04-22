@@ -29,8 +29,13 @@ const T: Translations = {
   },
 };
 
-export const displayShamanSoulsButton = (node: HTMLElement) => {
+export const displayShamanSoulsButton = (_node: HTMLElement) => {
   if (!store["shaman-souls-button"]) return;
+
+  if (!_node.classList.contains("tilemap_controls")) return;
+
+  const node = _node.querySelector<HTMLDivElement>(".float-left");
+  if (!node) return;
 
   if (node.matches(".map+.controls .tilemap_controls .float-left")) {
     const existing = node.querySelector(".zen-shaman-souls-button");

@@ -3,7 +3,7 @@ import { Item, items } from "../data/items";
 import { Ruin, ruins } from "../data/ruins";
 import { ASSETS } from "../utils/constants";
 import { tooltip } from "../utils/tooltip";
-import { insertBetterTooltips } from "./betterTooltips";
+import { insertBetterItemTooltips } from "./betterTooltips";
 import { notify, Severity } from "./notify";
 import { store } from "./store";
 import { t } from "./translate";
@@ -770,7 +770,7 @@ export const insertWiki = () => {
               li.appendChild(tag);
             }
 
-            insertBetterTooltips(li);
+            insertBetterItemTooltips(li);
 
             itemList.appendChild(li);
           });
@@ -905,7 +905,6 @@ export const insertWiki = () => {
               .sort((a, b) => b.odds / totalOdds - a.odds / totalOdds)
               .forEach((drop) => {
                 const wrapper = document.createElement("div");
-                cell.append(wrapper);
 
                 // Icon
                 const dropImg = document.createElement("img");

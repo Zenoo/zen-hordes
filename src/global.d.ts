@@ -7,6 +7,7 @@ declare global {
     ToggleFeature,
     Logout,
     SetStorage,
+    RefreshDesert,
   }
 
   const enum Lang {

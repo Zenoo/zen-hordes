@@ -1,6 +1,6 @@
 import { blockBank } from "./bankBlocker";
-import { insertBetterTooltips } from "./betterTooltips";
-import { displayCampingCalculator } from "./campingCalculator";
+import { insertBetterItemTooltips, insertBetterRuinTooltips } from "./betterTooltips";
+import { displayCampingCalculator, updateCampingCalculatorWithCurrentParams } from "./campingCalculator";
 import { displayExternalCityLinks } from "./externalCityLink";
 import { displayUpdateButton } from "./externalSiteUpdater";
 import { offHover } from "./hooks/offHover";
@@ -16,8 +16,14 @@ import { insertWiki, openItemInWiki } from "./wiki";
 
 // Initialize the store
 await initStore();
+// TODO: Add camping calculator toggle to settings
+// TODO: Fix bank blocker after S18
+// TODO: Replace bank blocker with bank tracker
+// (no block overlay + always display timer + items taken above)
+// (Display amount of item in bank at last visit in tooltips)
+// TODO: Add technician to input for WorkshopTechnician recipes
+// TODO: Add shaman to input for WorkshopShaman recipes
 // TODO: Add a target update type to AddButtonProps (data-text / textContent)
-// TODO: Add ruin drops in ruin map tooltips
 // TODO: Read drop data from ItemGroupDataService.php and display it in items tooltips
 // TODO: Implement rotating items in tooltips (repairable items, etc)
 // TODO: Add better tooltips toggle to settings
@@ -39,7 +45,8 @@ onMount((node) => {
   blockBank(node);
   displayExternalCityLinks(node);
   displayUpdateButton(node);
-  insertBetterTooltips(node);
+  insertBetterItemTooltips(node);
+  insertBetterRuinTooltips(node);
   displayShamanSoulsButton(node);
   displayCampingCalculator(node);
 });
@@ -60,6 +67,7 @@ offHover((_event) => {
 // should be handled here
 onClick((node) => {
   openBBHCityPage(node);
+  updateCampingCalculatorWithCurrentParams(node);
 });
 
 // Actions that need to be performed on a key press

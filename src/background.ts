@@ -113,6 +113,13 @@ chrome.webRequest.onCompleted.addListener(
         }).catch(console.error);
       }
     }
+
+    // Desert refresh
+    if (details.url.includes("/jx/beyond/desert/cached") || details.url.includes("/rest/v1/game/inventory/")) {
+      sendMessageToContentScript({
+        action: Action.RefreshDesert,
+      }).catch(console.error);
+    }
   },
   { urls },
   ["responseHeaders"]

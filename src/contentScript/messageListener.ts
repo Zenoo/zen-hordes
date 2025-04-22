@@ -89,13 +89,16 @@ export const listenToBackgroundMessages = () => {
               setStore("shaman-souls-button", !!value.enabled);
 
               if (value.enabled) {
-                const target =
-                  document.querySelector<HTMLElement>(".map+.controls .tilemap_controls .float-left");
+                const target = document.querySelector<HTMLElement>(
+                  ".map+.controls .tilemap_controls .float-left"
+                );
                 if (target) {
                   displayShamanSoulsButton(target);
                 }
               } else {
-                const button = document.querySelector(".zen-shaman-souls-button");
+                const button = document.querySelector(
+                  ".zen-shaman-souls-button"
+                );
                 if (button) {
                   button.remove();
                 }
@@ -125,6 +128,23 @@ export const listenToBackgroundMessages = () => {
             }
           } else {
             console.error("Unknown option:", value.name);
+          }
+          break;
+        }
+        case Action.RefreshDesert: {
+          // Refresh external site updater
+          const existing = document.querySelectorAll(
+            ".zen-update-button, .zen-update-error"
+          );
+
+          existing.forEach((node) => {
+            node.remove();
+          });
+
+          const inventory =
+            document.querySelector<HTMLElement>(".inventory.desert");
+          if (inventory) {
+            displayUpdateButton(inventory);
           }
           break;
         }
