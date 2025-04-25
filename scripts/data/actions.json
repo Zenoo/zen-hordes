@@ -4612,7 +4612,7 @@
             "message_key": "water_to_well"
         },
         "jerrycan_4": {
-            "label": "Reinigen (Wasser)",
+            "label": "Reinigen (1AP) (Wasser)",
             "meta": [
                 "min_1_ap",
                 "must_be_outside",
@@ -4621,7 +4621,7 @@
             "result": [
                 "consume_micropur",
                 "consume_item",
-                "spawn_1_water",
+                "spawn_1_water_inv",
                 "minus_1ap"
             ],
             "message_key": "item_clean"

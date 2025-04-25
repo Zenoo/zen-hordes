@@ -441,6 +441,10 @@ export const exportActionEffects = async () => {
       type: "spawn",
       data: [{ items: ["water_#00"], odds: null }],
     },
+    spawn_1_water_inv: {
+      type: "spawn",
+      data: [{ items: ["water_#00"], odds: null }],
+    },
     spawn_2_water: {
       type: "spawn",
       data: [{ items: ["water_#00"], count: 2 }],
