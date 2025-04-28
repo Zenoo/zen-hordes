@@ -1,5 +1,6 @@
 /* eslint-disable */
 /* tslint:disable */
+// @ts-nocheck
 /*
  * ---------------------------------------------------------------
  * ## THIS FILE WAS GENERATED VIA SWAGGER-TYPESCRIPT-API        ##
@@ -222,7 +223,16 @@ export interface XMLCitizenObject {
    * Job identifier
    * @example "collec"
    */
-  job?: "none" | "basic" | "collec" | "guardian" | "hunter" | "tamer" | "tech" | "shaman" | "survivalist";
+  job?:
+    | "none"
+    | "basic"
+    | "collec"
+    | "guardian"
+    | "hunter"
+    | "tamer"
+    | "tech"
+    | "shaman"
+    | "survivalist";
   /**
    * Is this citizen outside (1) or in town (0)
    * @min 0
@@ -306,7 +316,15 @@ export interface XMLItemObject {
    * Item category
    * @example "Rsc"
    */
-  cat?: "Armor" | "Box" | "Drug" | "Food" | "Furniture" | "Misc" | "Rsc" | "Weapon";
+  cat?:
+    | "Armor"
+    | "Box"
+    | "Drug"
+    | "Food"
+    | "Furniture"
+    | "Misc"
+    | "Rsc"
+    | "Weapon";
   /**
    * Item icon
    * @example "item/item_pile.gif"
@@ -540,7 +558,15 @@ export interface XMLItemPrototypeObject {
    * Item category
    * @example "Rsc"
    */
-  cat?: "Armor" | "Box" | "Drug" | "Food" | "Furniture" | "Misc" | "Rsc" | "Weapon";
+  cat?:
+    | "Armor"
+    | "Box"
+    | "Drug"
+    | "Food"
+    | "Furniture"
+    | "Misc"
+    | "Rsc"
+    | "Weapon";
   /**
    * Item icon
    * @example "item/item_pile.gif"
@@ -890,10 +916,18 @@ export interface JSONServerStatusResponse {
    * @example false
    */
   maintain?: boolean;
+  /**
+   * Current game version
+   * @example "4.0.1"
+   */
+  version?: string;
 }
 
 /** List of item types known to the server. */
-export type JSONPrototypeItemsResponse = Record<string, JSONItemPrototypeObject>;
+export type JSONPrototypeItemsResponse = Record<
+  string,
+  JSONItemPrototypeObject
+>;
 
 /** Localizable string */
 export type JSONLanguageDependantField =
@@ -994,6 +1028,11 @@ export interface JSONBuildingPrototypeObject {
    */
   pa?: number;
   /**
+   * Actual AP requirement with regards to the current town's configuration and building difficulty level.
+   * @example 100
+   */
+  paCurrent?: number;
+  /**
    * HP count
    * @example 100
    */
@@ -1014,10 +1053,20 @@ export interface JSONBuildingPrototypeObject {
    */
   hasUpgrade?: boolean;
   /**
-   * Blueprint level (0 if no blueprint, 5 if not unlockable by blueprint)
+   * Default blueprint level (0 if no blueprint, 5 if not unlockable by blueprint). Field exists for legacy compatibility, consider using rarityCurrent instead.
    * @example 0
    */
   rarity?: number;
+  /**
+   * Actual blueprint level (0 if no blueprint, 5 if not unlockable by blueprint) with regards to the current town's configuration.
+   * @example 0
+   */
+  rarityCurrent?: number;
+  /**
+   * Difficulty level of the current building. Lower means more difficult. Affects the values in resourcesCurrent and paCurrent.
+   * @example 0
+   */
+  difficulty?: number;
   /**
    * Always breaks during the nightly attack.
    * @example true
@@ -1028,7 +1077,14 @@ export interface JSONBuildingPrototypeObject {
    * @example 0
    */
   parent?: number;
+  /**
+   * Ordering of buildings in the MyHordes UI.
+   * @example 0
+   */
+  order?: number;
   resources?: JSONItemResourceObject[];
+  /** Actual required resources with regards to the current town's configuration and building difficulty level. */
+  resourcesCurrent?: JSONItemResourceObject[];
 }
 
 /** Distinction type */
@@ -1890,16 +1946,22 @@ export interface FullRequestParams extends Omit<RequestInit, "body"> {
   cancelToken?: CancelToken;
 }
 
-export type RequestParams = Omit<FullRequestParams, "body" | "method" | "query" | "path">;
+export type RequestParams = Omit<
+  FullRequestParams,
+  "body" | "method" | "query" | "path"
+>;
 
 export interface ApiConfig<SecurityDataType = unknown> {
   baseUrl?: string;
   baseApiParams?: Omit<RequestParams, "baseUrl" | "cancelToken" | "signal">;
-  securityWorker?: (securityData: SecurityDataType | null) => Promise<RequestParams | void> | RequestParams | void;
+  securityWorker?: (
+    securityData: SecurityDataType | null,
+  ) => Promise<RequestParams | void> | RequestParams | void;
   customFetch?: typeof fetch;
 }
 
-export interface HttpResponse<D extends unknown, E extends unknown = unknown> extends Response {
+export interface HttpResponse<D extends unknown, E extends unknown = unknown>
+  extends Response {
   data: D;
   error: E;
 }
@@ -1918,7 +1980,8 @@ export class HttpClient<SecurityDataType = unknown> {
   private securityData: SecurityDataType | null = null;
   private securityWorker?: ApiConfig<SecurityDataType>["securityWorker"];
   private abortControllers = new Map<CancelToken, AbortController>();
-  private customFetch = (...fetchParams: Parameters<typeof fetch>) => fetch(...fetchParams);
+  private customFetch = (...fetchParams: Parameters<typeof fetch>) =>
+    fetch(...fetchParams);
 
   private baseApiParams: RequestParams = {
     credentials: "same-origin",
@@ -1951,9 +2014,15 @@ export class HttpClient<SecurityDataType = unknown> {
 
   protected toQueryString(rawQuery?: QueryParamsType): string {
     const query = rawQuery || {};
-    const keys = Object.keys(query).filter((key) => "undefined" !== typeof query[key]);
+    const keys = Object.keys(query).filter(
+      (key) => "undefined" !== typeof query[key],
+    );
     return keys
-      .map((key) => (Array.isArray(query[key]) ? this.addArrayQueryParam(query, key) : this.addQueryParam(query, key)))
+      .map((key) =>
+        Array.isArray(query[key])
+          ? this.addArrayQueryParam(query, key)
+          : this.addQueryParam(query, key),
+      )
       .join("&");
   }
 
@@ -1964,8 +2033,13 @@ export class HttpClient<SecurityDataType = unknown> {
 
   private contentFormatters: Record<ContentType, (input: any) => any> = {
     [ContentType.Json]: (input: any) =>
-      input !== null && (typeof input === "object" || typeof input === "string") ? JSON.stringify(input) : input,
-    [ContentType.Text]: (input: any) => (input !== null && typeof input !== "string" ? JSON.stringify(input) : input),
+      input !== null && (typeof input === "object" || typeof input === "string")
+        ? JSON.stringify(input)
+        : input,
+    [ContentType.Text]: (input: any) =>
+      input !== null && typeof input !== "string"
+        ? JSON.stringify(input)
+        : input,
     [ContentType.FormData]: (input: any) =>
       Object.keys(input || {}).reduce((formData, key) => {
         const property = input[key];
@@ -1982,7 +2056,10 @@ export class HttpClient<SecurityDataType = unknown> {
     [ContentType.UrlEncoded]: (input: any) => this.toQueryString(input),
   };
 
-  protected mergeRequestParams(params1: RequestParams, params2?: RequestParams): RequestParams {
+  protected mergeRequestParams(
+    params1: RequestParams,
+    params2?: RequestParams,
+  ): RequestParams {
     return {
       ...this.baseApiParams,
       ...params1,
@@ -1995,7 +2072,9 @@ export class HttpClient<SecurityDataType = unknown> {
     };
   }
 
-  protected createAbortSignal = (cancelToken: CancelToken): AbortSignal | undefined => {
+  protected createAbortSignal = (
+    cancelToken: CancelToken,
+  ): AbortSignal | undefined => {
     if (this.abortControllers.has(cancelToken)) {
       const abortController = this.abortControllers.get(cancelToken);
       if (abortController) {
@@ -2045,15 +2124,26 @@ export class HttpClient<SecurityDataType = unknown> {
     const payloadFormatter = this.contentFormatters[type || ContentType.Json];
     const responseFormat = format || requestParams.format;
 
-    return this.customFetch(`${baseUrl || this.baseUrl || ""}${path}${queryString ? `?${queryString}` : ""}`, {
-      ...requestParams,
-      headers: {
-        ...(requestParams.headers || {}),
-        ...(type && type !== ContentType.FormData ? { "Content-Type": type } : {}),
+    return this.customFetch(
+      `${baseUrl || this.baseUrl || ""}${path}${queryString ? `?${queryString}` : ""}`,
+      {
+        ...requestParams,
+        headers: {
+          ...(requestParams.headers || {}),
+          ...(type && type !== ContentType.FormData
+            ? { "Content-Type": type }
+            : {}),
+        },
+        signal:
+          (cancelToken
+            ? this.createAbortSignal(cancelToken)
+            : requestParams.signal) || null,
+        body:
+          typeof body === "undefined" || body === null
+            ? null
+            : payloadFormatter(body),
       },
-      signal: (cancelToken ? this.createAbortSignal(cancelToken) : requestParams.signal) || null,
-      body: typeof body === "undefined" || body === null ? null : payloadFormatter(body),
-    }).then(async (response) => {
+    ).then(async (response) => {
       const r = response.clone() as HttpResponse<T, E>;
       r.data = null as unknown as T;
       r.error = null as unknown as E;
@@ -2086,13 +2176,15 @@ export class HttpClient<SecurityDataType = unknown> {
 
 /**
  * @title MyHordes External API
- * @version 2.1.12
+ * @version 4.0.1
  * @license AGPL3 (https://spdx.org/licenses/AGPL-3.0-or-later.html)
  * @baseUrl /api/x/
  *
  * This documentation describes the MyHordes external API. There are two APIs available to use - JSON and XML. Although it's possible to mix them, this is not recommended.
  */
-export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
+export class Api<
+  SecurityDataType extends unknown,
+> extends HttpClient<SecurityDataType> {
   v2 = {
     /**
      * No description
@@ -2102,6 +2194,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Returns a list of available endpoints
      * @request GET:/v2/xml
      * @secure
+     * @response `200` `XMLEndpointList` List
      */
     getV2: (params: RequestParams = {}) =>
       this.request<XMLEndpointList, any>({
@@ -2119,6 +2212,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary User information.
      * @request GET:/v2/xml/user
      * @secure
+     * @response `200` `XMLUserResponse` List
      */
     xmlUserList: (params: RequestParams = {}) =>
       this.request<XMLUserResponse, any>({
@@ -2136,6 +2230,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Item information.
      * @request GET:/v2/xml/items
      * @secure
+     * @response `200` `XMLItemResponse` List
      */
     xmlItemsList: (params: RequestParams = {}) =>
       this.request<XMLItemResponse, any>({
@@ -2153,6 +2248,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Building information.
      * @request GET:/v2/xml/buildings
      * @secure
+     * @response `200` `XMLBuildingResponse` List
      */
     xmlBuildingsList: (params: RequestParams = {}) =>
       this.request<XMLBuildingResponse, any>({
@@ -2170,6 +2266,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Ruin information.
      * @request GET:/v2/xml/ruins
      * @secure
+     * @response `200` `XMLRuinResponse` List
      */
     xmlRuinsList: (params: RequestParams = {}) =>
       this.request<XMLRuinResponse, any>({
@@ -2187,6 +2284,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Picto information.
      * @request GET:/v2/xml/pictos
      * @secure
+     * @response `200` `XMLPictoResponse` List
      */
     xmlPictosList: (params: RequestParams = {}) =>
       this.request<XMLPictoResponse, any>({
@@ -2204,6 +2302,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Town information.
      * @request GET:/v2/xml/town
      * @secure
+     * @response `200` `XMLTownResponse` List
      */
     xmlTownList: (
       query?: {
@@ -2230,6 +2329,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @name StatusList
      * @summary Server status
      * @request GET:/json/status
+     * @response `200` `JSONServerStatusResponse` List
      */
     statusList: (params: RequestParams = {}) =>
       this.request<JSONServerStatusResponse, any>({
@@ -2247,6 +2347,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Prototypes API (item types)
      * @request GET:/json/items
      * @secure
+     * @response `200` `JSONPrototypeItemsResponse` List
      */
     itemsList: (
       query?: {
@@ -2276,6 +2377,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Prototypes API (buildings)
      * @request GET:/json/buildings
      * @secure
+     * @response `200` `JSONBuildingPrototypeObject` List
      */
     buildingsList: (
       query?: {
@@ -2305,6 +2407,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Prototypes API (distinctions)
      * @request GET:/json/pictos
      * @secure
+     * @response `200` `JSONPictoPrototypeObject` List
      */
     pictosList: (
       query?: {
@@ -2334,6 +2437,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Prototypes API (ruins)
      * @request GET:/json/ruins
      * @secure
+     * @response `200` `JSONRuinPrototypeObject` List
      */
     ruinsList: (
       query?: {
@@ -2363,6 +2467,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Information about the current user.
      * @request GET:/json/me
      * @secure
+     * @response `200` `JSONUserObject` List
      */
     getJson: (
       query?: {
@@ -2390,6 +2495,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Information about the current user.
      * @request GET:/json/user
      * @secure
+     * @response `200` `JSONUserObject` List
      */
     userList: (
       query: {
@@ -2419,6 +2525,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Information about multiple users at once.
      * @request GET:/json/users
      * @secure
+     * @response `200` `(JSONUserObject)[]` List
      */
     usersList: (
       query: {
@@ -2450,6 +2557,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @originalName getJson
      * @duplicate
      * @secure
+     * @response `200` `JSONGameObject` List
      */
     getJson2: (
       query: {
@@ -2472,14 +2580,18 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * No description
-     *
-     * @tags JSON API
-     * @name TownlistList
-     * @summary Get a list of town IDs for a specific season. NOTE: This endpoint is NOT AVAILABLE when using demo keys.
-     * @request GET:/json/townlist
-     * @secure
-     */
+ * No description
+ *
+ * @tags JSON API
+ * @name TownlistList
+ * @summary Get a list of town IDs for a specific season. NOTE: This endpoint is NOT AVAILABLE when using demo keys.
+ * @request GET:/json/townlist
+ * @secure
+ * @response `200` `{
+    towns?: (number)[],
+
+}` List
+ */
     townlistList: (
       query?: {
         /** Season. Defaults to current season. Use 'a' to select the MyHordes alpha Season and 'b' to select the MyHordes beta season, otherwise enter a season number. */
@@ -2511,6 +2623,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Information about multiple towns at once. NOTE: This endpoint is NOT AVAILABLE when using demo keys.
      * @request GET:/json/towns
      * @secure
+     * @response `200` `(JSONTownObject)[]` List
      */
     townsList: (
       query: {

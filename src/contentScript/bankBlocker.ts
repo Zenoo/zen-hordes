@@ -123,3 +123,15 @@ export const blockBank = (node: HTMLElement) => {
     updateTimer(timerElement, endTime);
   }
 };
+
+export const resetOnDeath = (node: HTMLElement) => {
+  if (node.classList.contains('death_header')) {
+    // Only reset for own death, not for history views
+    if (!location.href.includes("/welcomeToNowhere")) return;
+
+    setStore("last-water-ration-taken", new Date(0).getTime());
+    setStore("bank-items-taken", 0);
+    setStore("last-bank-item-taken", Date.now());
+    setStore("town-id", 0);
+  }
+};

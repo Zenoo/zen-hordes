@@ -98,13 +98,28 @@ export const exportActionEffects = async () => {
     return acc;
   }, {});
 
+  // Ghoul effects
+  // https://regex101.com/r/p2Jgao/1
+  const ghoulRegex =
+    /effects_container->add\(\)->identifier\('(ghoul_\d+_\d+)'\).*?->probability\((\d+)\).*?->ghoulHunger\((\d+),\s*true\)/gm;
+  const ghoulEffects = [...text.matchAll(ghoulRegex)].reduce(
+    (acc, [, effectName, probability, ghoulHunger]) => {
+      if (!effectName || !probability || !ghoulHunger) {
+        throw new Error(
+          "Ghoul effect name, probability or ghoulHunger not found"
+        );
+      }
+      acc[effectName] = {
+        type: "ghoul",
+        data: [+probability, +ghoulHunger],
+      };
+      return acc;
+    },
+    {} as Record<string, { type: string; data: number[] }>
+  );
+
   // Additional hard to parse effects
   const additionalEffects = {
-    zone_kill_punch: { type: "kills", data: 2 },
-    ghoul_25_4: { type: "ghoul", data: [4, 25] },
-    ghoul_25_5: { type: "ghoul", data: [5, 25] },
-    ghoul_25_100: { type: "ghoul", data: [100, 25] },
-    ghoul_5_100: { type: "ghoul", data: [100, 25] },
     find_rp: { type: "find_rp", data: 1 },
     home_lab_success: { type: "spawn", data: "drug_hero_#00" },
     home_lab_failure: {
@@ -498,6 +513,7 @@ export const exportActionEffects = async () => {
     >
   > = {
     ...effectsList,
+    ...ghoulEffects,
     ...additionalEffects,
     ...spawnEffets,
   };

@@ -1,4 +1,4 @@
-import { blockBank } from "./bankBlocker";
+import { blockBank, resetOnDeath } from "./bankBlocker";
 import { insertBetterItemTooltips, insertBetterRuinTooltips } from "./betterTooltips";
 import { displayCampingCalculator, updateCampingCalculatorWithCurrentParams } from "./campingCalculator";
 import { displayExternalCityLinks } from "./externalCityLink";
@@ -27,7 +27,6 @@ await initStore();
 // TODO: Read drop data from ItemGroupDataService.php and display it in items tooltips
 // TODO: Implement rotating items in tooltips (repairable items, etc)
 // TODO: Add better tooltips toggle to settings
-// TODO: Reset first water ration on death page display
 // TODO: Add a list of items to bring back, with priorities (1-5)
 // TODO: Add custom tags to players
 
@@ -49,6 +48,7 @@ onMount((node) => {
   insertBetterRuinTooltips(node);
   displayShamanSoulsButton(node);
   displayCampingCalculator(node);
+  resetOnDeath(node);
 });
 
 // Actions that need to be performed on hover

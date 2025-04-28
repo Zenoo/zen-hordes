@@ -12,11 +12,7 @@ import { exportActionEffects } from "./exportActionEffects";
 import { overwriteItemData } from "./itemOverwrites";
 import { overwriteRecipeData } from "./recipeOverwrites";
 import { overwriteRuinData } from "./ruinOverwrites";
-import dotenv from 'dotenv';
-
-const CONFIG = {
-  callApi: false,
-};
+import dotenv from "dotenv";
 
 enum Lang {
   EN = "en",
@@ -660,7 +656,11 @@ const generateItems = async () => {
           break;
         }
         case "removesStatus": {
-          if (statusesToIgnore.includes(String(effectsData[effectName].data).slice(1, -1))) {
+          if (
+            statusesToIgnore.includes(
+              String(effectsData[effectName].data).slice(1, -1)
+            )
+          ) {
             break;
           }
 
@@ -2137,21 +2137,35 @@ ${pictosObject}`;
 };
 
 (async () => {
-  // Update the API data
-  if (CONFIG.callApi) {
-    dotenv.config();
-    if (!process.env.API_APPKEY || !process.env.API_USERKEY) {
-      throw new Error("API_APPKEY and API_USERKEY env variables are required");
-    }
+  // Get last API game version stored in game-version.json
+  const gameVersionFilePath = path.join(__dirname, "game-version.json");
+  const gameVersionFile = fs.readFileSync(gameVersionFilePath, "utf-8");
+  const gameVersion = JSON.parse(gameVersionFile) as {
+    version: string;
+  };
 
-    const api = new Api({
-      baseUrl: "https://myhordes.eu/api/x",
-    });
+  dotenv.config();
+  if (!process.env.API_APPKEY || !process.env.API_USERKEY) {
+    throw new Error("API_APPKEY and API_USERKEY env variables are required");
+  }
 
-    api.setSecurityData({
-      appkey: process.env.API_APPKEY,
-      userkey: process.env.API_USERKEY,
-    });
+  const api = new Api({
+    baseUrl: "https://myhordes.eu/api/x",
+  });
+
+  api.setSecurityData({
+    appkey: process.env.API_APPKEY,
+    userkey: process.env.API_USERKEY,
+  });
+
+  // Fetch APi status
+  const apiStatus = await api.json.statusList();
+
+  // Check if the game version has changed
+  if (apiStatus.data.version !== gameVersion.version) {
+    console.log(
+      `New game version available: ${apiStatus.data.version}. Fetching new data...`
+    );
 
     // Fetch items
     const itemsResponse = await api.json.itemsList({
@@ -2215,6 +2229,19 @@ ${pictosObject}`;
   generateRecipes(items);
   await generateBuildings(items);
   generatePictos();
+
+  // Update game version file
+  fs.writeFileSync(
+    gameVersionFilePath,
+    JSON.stringify(
+      {
+        version: apiStatus.data.version,
+      },
+      null,
+      2
+    ),
+    "utf-8"
+  );
 
   console.log("Data generation completed.");
   process.exit(0);

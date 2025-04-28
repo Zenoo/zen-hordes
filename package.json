@@ -11,7 +11,8 @@
     "clean": "rimraf dist",
     "style": "prettier --write \"src/**/*.{ts,tsx}\"",
     "preinstall": "npx only-allow pnpm",
-    "data:generate": "tsx ./scripts/generateData.ts"
+    "data:generate": "tsx ./scripts/generateData.ts",
+    "mh-api:get-types": "sh ./scripts/getMhApiTypes.sh"
   },
   "author": "",
   "license": "MIT",
