@@ -16,17 +16,12 @@ import { insertWiki, openItemInWiki } from "./wiki";
 
 // Initialize the store
 await initStore();
-// TODO: Add camping calculator toggle to settings
 // TODO: Fix bank blocker after S18
 // TODO: Replace bank blocker with bank tracker
 // (no block overlay + always display timer + items taken above)
 // (Display amount of item in bank at last visit in tooltips)
-// TODO: Add technician to input for WorkshopTechnician recipes
-// TODO: Add shaman to input for WorkshopShaman recipes
-// TODO: Add a target update type to AddButtonProps (data-text / textContent)
 // TODO: Read drop data from ItemGroupDataService.php and display it in items tooltips
 // TODO: Implement rotating items in tooltips (repairable items, etc)
-// TODO: Add better tooltips toggle to settings
 // TODO: Add a list of items to bring back, with priorities (1-5)
 // TODO: Add custom tags to players
 

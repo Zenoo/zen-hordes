@@ -532,11 +532,7 @@ const updateView = () => {
   const list = document.querySelector(".zen-camping-calculator ul");
   if (!list) return;
 
-  console.log(params);
-
   updateCampingResult();
-
-  console.log(result);
 
   // Update param values
   Object.keys(params).forEach((key) => {

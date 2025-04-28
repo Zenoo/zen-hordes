@@ -41,6 +41,7 @@ const T: Translations = {
     privateTownOnly: "Can only be found in private towns",
     poisonable: "Can be poisoned",
     "item.tag.deco": "Home decoration",
+    "clean": "Clean",
   },
   fr: {
     [`action-type.${ItemActionType.Eat}`]: "Manger",
@@ -75,6 +76,7 @@ const T: Translations = {
     privateTownOnly: "Peut uniquement être trouvé dans les villes privées",
     poisonable: "Peut être empoisonné",
     "item.tag.deco": "Aménagement de maison",
+    "clean": "Clair(e)",
   },
   es: {
     [`action-type.${ItemActionType.Eat}`]: "Comer",
@@ -109,6 +111,7 @@ const T: Translations = {
     privateTownOnly: "Solo se puede encontrar en ciudades privadas",
     poisonable: "Puede ser envenenado",
     "item.tag.deco": "Hausdekoration",
+    "clean": "Limpio",
   },
   de: {
     [`action-type.${ItemActionType.Eat}`]: "Essen",
@@ -143,6 +146,7 @@ const T: Translations = {
     privateTownOnly: "Kann nur in privaten Städten gefunden werden",
     poisonable: "Kann vergiftet werden",
     "item.tag.deco": "Decoración del hogar",
+    "clean": "Clean",
   },
 };
 
@@ -516,6 +520,19 @@ const createLine = (
       infected: inItem.infected,
       poisoned: inItem.poisoned,
     }));
+
+    // Add conditions dependig on the recipe type
+    if (data.type === RecipeType.WorkshopTech) {
+      inputIcons.push({
+        icon: "professions/tech.gif",
+        title: t(T, `condition.${ItemActionConditionEnum.Technician}`),
+      });
+    } else if (data.type === RecipeType.WorkshopShaman) {
+      inputIcons.push({
+        icon: "roles/shaman.gif",
+        title: t(T, `condition.${ItemActionConditionEnum.Shaman}`),
+      });
+    }
   } else {
     // Item action
     inputIcons.push(
@@ -823,14 +840,15 @@ const setTextWithIcons = (node: HTMLElement, content: string) => {
   });
 };
 
-export const insertBetterItemTooltips = (node: HTMLElement) => {
-  if (!store["better-tooltips"]) return;
+export const insertBetterItemTooltips = (
+  node: HTMLElement,
+  force?: boolean
+) => {
+  if (!force && !store["better-tooltips"]) return;
 
   if (
     node.classList.contains("zen-wiki-item") ||
-    (node.classList.contains("tooltip") &&
-      node.classList.contains("item") &&
-      node.querySelector("h1 img"))
+    (node.classList.contains("tooltip") && node.classList.contains("item"))
   ) {
     const processed = node.classList.contains("zen-better-tooltip");
     if (processed) return;
@@ -839,6 +857,11 @@ export const insertBetterItemTooltips = (node: HTMLElement) => {
 
     const item = findItem(node);
     if (!item) {
+      // Ignore clean status
+      if (node.querySelector("h1")?.textContent?.trim() === t(T, "clean")) {
+        return;
+      }
+
       console.error("Item not found in tooltip:", node);
       return;
     }
@@ -847,7 +870,7 @@ export const insertBetterItemTooltips = (node: HTMLElement) => {
     if (item.info) {
       // Create an info tag
       const infoTag = document.createElement("div");
-      infoTag.classList.add("item-tag", "item-tag-info");
+      infoTag.classList.add("item-tag", "item-tag-info", "zen-added");
       setTextWithIcons(infoTag, item.info[store["hordes-lang"]]);
       node.append(infoTag);
     }
@@ -856,7 +879,7 @@ export const insertBetterItemTooltips = (node: HTMLElement) => {
     if (item.available === false) {
       // Create an info tag
       const tag = document.createElement("div");
-      tag.classList.add("item-tag", "item-tag-info");
+      tag.classList.add("item-tag", "item-tag-info", "zen-added");
       tag.textContent = t(T, "unavailable");
       node.append(tag);
     }
@@ -865,7 +888,7 @@ export const insertBetterItemTooltips = (node: HTMLElement) => {
     if (item.categories.includes(ItemCategory.Poisonable)) {
       // Create an info tag
       const tag = document.createElement("div");
-      tag.classList.add("item-tag", "item-tag-poison");
+      tag.classList.add("item-tag", "item-tag-poison", "zen-added");
       tag.textContent = t(T, "poisonable");
       node.append(tag);
     }
@@ -874,7 +897,7 @@ export const insertBetterItemTooltips = (node: HTMLElement) => {
     if (item.categories.includes(ItemCategory.PrivateTown)) {
       // Create an info tag
       const tag = document.createElement("div");
-      tag.classList.add("item-tag", "item-tag-private");
+      tag.classList.add("item-tag", "item-tag-private", "zen-added");
       tag.textContent = t(T, "privateTownOnly");
       node.append(tag);
     }
@@ -893,7 +916,7 @@ export const insertBetterItemTooltips = (node: HTMLElement) => {
       }
 
       const span = document.createElement("span");
-      span.classList.add("zen-item-decoration");
+      span.classList.add("zen-item-decoration", "zen-added");
       const startText = document.createTextNode(`(${item.decoration} `);
       const icon = document.createElement("img");
       icon.src = `${ASSETS}/icons/deco.gif`;
@@ -906,7 +929,7 @@ export const insertBetterItemTooltips = (node: HTMLElement) => {
     if (typeof item.event !== "undefined") {
       // Create an event tag
       const eventTag = document.createElement("div");
-      eventTag.classList.add("item-tag", "item-tag-event");
+      eventTag.classList.add("item-tag", "item-tag-event", "zen-added");
       eventTag.setAttribute("data-event", item.event.toString());
       eventTag.textContent = t(T, `event.${item.event}`);
       node.append(eventTag);
@@ -917,7 +940,7 @@ export const insertBetterItemTooltips = (node: HTMLElement) => {
     if (ruinDrops.length) {
       // Create an ruin drop tag
       const ruinDropTag = document.createElement("div");
-      ruinDropTag.classList.add("item-tag", "item-tag-ruin-drop");
+      ruinDropTag.classList.add("item-tag", "item-tag-ruin-drop", "zen-added");
 
       const foundIn = document.createElement("span");
       foundIn.textContent = `${t(T, `foundIn`)}: `;
@@ -971,6 +994,7 @@ export const insertBetterItemTooltips = (node: HTMLElement) => {
     }
 
     const table = document.createElement("table");
+    table.classList.add("zen-added");
     const tbody = document.createElement("tbody");
     table.append(tbody);
 
@@ -1034,7 +1058,7 @@ export const insertBetterRuinTooltips = (node: HTMLElement) => {
 
   if (node.classList.contains("tooltip-map")) {
     // Check if the tooltip has already been processed
-    const processed = node.querySelector("zen-ruin-drops");
+    const processed = node.classList.contains("zen-better-tooltip");
     if (processed) return;
 
     // Check if the node is a ruin tooltip
@@ -1057,7 +1081,7 @@ export const insertBetterRuinTooltips = (node: HTMLElement) => {
 
     // Ruin drops
     const table = document.createElement("table");
-    table.classList.add("clear", "zen-ruin-drops");
+    table.classList.add("clear", "zen-ruin-drops", "zen-added");
     const tbody = document.createElement("tbody");
     table.append(tbody);
     const line = document.createElement("tr");

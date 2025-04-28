@@ -770,7 +770,7 @@ export const insertWiki = () => {
               li.appendChild(tag);
             }
 
-            insertBetterItemTooltips(li);
+            insertBetterItemTooltips(li, true);
 
             itemList.appendChild(li);
           });

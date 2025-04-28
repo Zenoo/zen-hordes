@@ -28,6 +28,8 @@ const T: Translations = {
     "bank-blocker": "Bank Blocker",
     "map-preview": "Available cities map preview",
     "shaman-souls-button": "Souls positions copy button",
+    "better-tooltips": "Better tooltips",
+    "camping-calculator": "Camping calculator",
     "external-city-links": "External city history links",
     "update-sites": "External sites to update",
     "user-key": "User key",
@@ -37,6 +39,8 @@ const T: Translations = {
     "bank-blocker": "Bloqueur de banque",
     "map-preview": "Aperçu de la carte des villes disponibles",
     "shaman-souls-button": "Bouton de copie des positions des âmes",
+    "better-tooltips": "Meilleures infobulles",
+    "camping-calculator": "Calculateur de camping",
     "external-city-links": "Liens externes des historiques des villes",
     "update-sites": "Sites externes à mettre à jour",
     "user-key": "Clé utilisateur",
@@ -46,6 +50,8 @@ const T: Translations = {
     "bank-blocker": "Bank Blocker",
     "map-preview": "Vorschau der verfügbaren Städte auf der Karte",
     "shaman-souls-button": "Schaltfläche zum Kopieren von Seelenpositionen",
+    "better-tooltips": "Bessere Tooltips",
+    "camping-calculator": "Camping-Rechner",
     "external-city-links": "Externe Stadtverlauf-Links",
     "update-sites": "Externe Sites aktualisieren",
     "user-key": "Benutzerschlüssel",
@@ -55,6 +61,8 @@ const T: Translations = {
     "bank-blocker": "Bloqueador de banco",
     "map-preview": "Vista previa del mapa de ciudades disponibles",
     "shaman-souls-button": "Botón de copia de posiciones de almas",
+    "better-tooltips": "Mejores tooltips",
+    "camping-calculator": "Calculadora de camping",
     "external-city-links": "Enlaces externos de historiales de ciudades",
     "update-sites": "Sitios externos para actualizar",
     "user-key": "Clave de usuario",
@@ -104,6 +112,8 @@ const Popup = () => {
   const [bankBlocker, setBankBlocker] = useState(true);
   const [mapPreview, setMapPreview] = useState(true);
   const [shamanSoulsButton, setShamanSoulsButton] = useState(true);
+  const [betterTooltips, setBetterTooltips] = useState(true);
+  const [campingCalculator, setCampingCalculator] = useState(true);
   const [externalSiteLinks, setExternalSiteLinks] = useState([
     ExternalSiteName.BBH,
   ]);
@@ -120,11 +130,17 @@ const Popup = () => {
   useEffect(() => {
     const syncStorage = async () => {
       const data = await chrome.storage.sync.get();
-      setEnhanceCss(data["enhance-css"] ? !!data["enhance-css"] : true);
-      setBankBlocker(data["bank-blocker"] ? !!data["bank-blocker"] : true);
-      setMapPreview(data["map-preview"] ? !!data["map-preview"] : true);
+      setEnhanceCss(typeof data["enhance-css"] === "boolean" ? data["enhance-css"] : true);
+      setBankBlocker(typeof data["bank-blocker"] === "boolean" ? data["bank-blocker"] : true);
+      setMapPreview(typeof data["map-preview"] === "boolean" ? data["map-preview"] : true);
       setShamanSoulsButton(
-        data["shaman-souls-button"] ? !!data["shaman-souls-button"] : true
+        typeof data["shaman-souls-button"] === "boolean" ? data["shaman-souls-button"] : true
+      );
+      setBetterTooltips(
+        typeof data["better-tooltips"] === "boolean" ? data["better-tooltips"] : true
+      );
+      setCampingCalculator(
+        typeof data["camping-calculator"] === "boolean" ? data["camping-calculator"] : true
       );
       setExternalSiteLinks(
         (data["external-city-links"] as ExternalSiteName[] | undefined) ?? [
@@ -132,7 +148,9 @@ const Popup = () => {
         ]
       );
       setExternalSitesToUpdate(
-        (data["external-sites-to-update"] as ExternalSiteName[] | undefined) ?? [
+        (data["external-sites-to-update"] as
+          | ExternalSiteName[]
+          | undefined) ?? [
           ExternalSiteName.BBH,
           ExternalSiteName.FM,
           ExternalSiteName.GH,
@@ -162,7 +180,10 @@ const Popup = () => {
   };
 
   const setFeature = async (feature: string, value: unknown) => {
-    await sendMessage({ action: Action.ToggleFeature, value: { feature, enabled: value } });
+    await sendMessage({
+      action: Action.ToggleFeature,
+      value: { feature, enabled: value },
+    });
   };
 
   const handleEnhanceCssChange = async (
@@ -191,7 +212,21 @@ const Popup = () => {
   ) => {
     setShamanSoulsButton(event.target.checked);
     await setFeature("shaman-souls-button", event.target.checked);
-  }
+  };
+
+  const handleBetterTooltipsChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setBetterTooltips(event.target.checked);
+    await setFeature("better-tooltips", event.target.checked);
+  };
+
+  const handleCampingCalculatorChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setCampingCalculator(event.target.checked);
+    await setFeature("camping-calculator", event.target.checked);
+  };
 
   const handleExternalSiteLinksChange =
     (name: ExternalSiteName) =>
@@ -212,14 +247,20 @@ const Popup = () => {
         : externalSitesToUpdate.filter((site) => site !== name);
 
       setExternalSitesToUpdate(updatedExternalSitesToUpdate);
-      await setFeature("external-sites-to-update", updatedExternalSitesToUpdate);
+      await setFeature(
+        "external-sites-to-update",
+        updatedExternalSitesToUpdate
+      );
     };
 
   const handleUserKeyChange = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setUserKey(event.target.value);
-    await sendMessage({ action: Action.SetStorage, value: { name: "user-key", value: event.target.value } });
+    await sendMessage({
+      action: Action.SetStorage,
+      value: { name: "user-key", value: event.target.value },
+    });
   };
 
   return (
@@ -292,6 +333,36 @@ const Popup = () => {
           label={
             <Typography variant="body2" sx={{ ml: 0.5 }}>
               {t("shaman-souls-button")}
+            </Typography>
+          }
+          sx={{ mx: 1 }}
+        />
+        <FormControlLabel
+          control={
+            <Switch
+              checked={betterTooltips}
+              onChange={handleBetterTooltipsChange}
+              size="small"
+            />
+          }
+          label={
+            <Typography variant="body2" sx={{ ml: 0.5 }}>
+              {t("better-tooltips")}
+            </Typography>
+          }
+          sx={{ mx: 1 }}
+        />
+        <FormControlLabel
+          control={
+            <Switch
+              checked={campingCalculator}
+              onChange={handleCampingCalculatorChange}
+              size="small"
+            />
+          }
+          label={
+            <Typography variant="body2" sx={{ ml: 0.5 }}>
+              {t("camping-calculator")}
             </Typography>
           }
           sx={{ mx: 1 }}

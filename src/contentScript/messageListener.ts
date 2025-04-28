@@ -1,4 +1,12 @@
 import { blockBank, cleanupBankBlocker, handleItemTaken } from "./bankBlocker";
+import {
+  insertBetterItemTooltips,
+  insertBetterRuinTooltips,
+} from "./betterTooltips";
+import {
+  displayCampingCalculator,
+  updateCampingCalculatorWithCurrentParams,
+} from "./campingCalculator";
 import { displayExternalCityLinks } from "./externalCityLink";
 import { ExternalSiteName } from "./externalSites";
 import { displayUpdateButton } from "./externalSiteUpdater";
@@ -102,6 +110,74 @@ export const listenToBackgroundMessages = () => {
                 if (button) {
                   button.remove();
                 }
+              }
+              break;
+            }
+            case "better-tooltips": {
+              setStore("better-tooltips", !!value.enabled);
+
+              if (value.enabled) {
+                // Get all item tooltips
+                document
+                  .querySelectorAll<HTMLElement>(".tooltip.item")
+                  .forEach((target) => {
+                    // Insert better tooltips
+                    insertBetterItemTooltips(target);
+                  });
+
+                // Get all ruin tooltips
+                document
+                  .querySelectorAll<HTMLElement>(".tooltip-map")
+                  .forEach((target) => {
+                    // Insert better tooltips
+                    insertBetterRuinTooltips(target);
+                  });
+              } else {
+                // Get all item tooltips
+                document
+                  .querySelectorAll(".tooltip.item.zen-better-tooltip")
+                  .forEach((node) => {
+                    // Remove better tooltips parts
+                    node.querySelectorAll(".zen-added").forEach((added) => {
+                      added.remove();
+                    });
+
+                    // Remove better tooltips class
+                    node.classList.remove("zen-better-tooltip");
+                  });
+
+                // Get all ruin tooltips
+                document
+                  .querySelectorAll(".tooltip-map.zen-better-tooltip")
+                  .forEach((node) => {
+                    // Remove better tooltips parts
+                    node.querySelectorAll(".zen-added").forEach((added) => {
+                      added.remove();
+                    });
+
+                    // Remove better tooltips class
+                    node.classList.remove("zen-better-tooltip");
+                  });
+              }
+              break;
+            }
+            case "camping-calculator": {
+              setStore("camping-calculator", !!value.enabled);
+
+              if (value.enabled) {
+                const target =
+                  document.querySelector<HTMLElement>(".camping_actions");
+                if (target) {
+                  displayCampingCalculator(target);
+
+                  const clickTarget =
+                    document.querySelector<HTMLElement>("[for='zone-camp']");
+                  if (clickTarget) {
+                    updateCampingCalculatorWithCurrentParams(clickTarget);
+                  }
+                }
+              } else {
+                document.querySelector(".zen-camping-calculator")?.remove();
               }
               break;
             }
