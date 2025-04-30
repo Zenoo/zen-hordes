@@ -1,5 +1,50 @@
 # Changelog
 
+## [1.5.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.4.1...zen-hordes-v1.5.0) (2025-04-30)
+
+
+### Features
+
+* Bank tracker + bank item count ([e58877f](https://github.com/Zenoo/zen-hordes/commit/e58877fa767b186abf747444b914c1efdb618644))
+* Camping calculator ([4c08e04](https://github.com/Zenoo/zen-hordes/commit/4c08e04afaa731a32c7cf4701afe727617111d6a))
+* Camping calculator logic ([27cb6c6](https://github.com/Zenoo/zen-hordes/commit/27cb6c66f9765ab31aac9d79e4e533722aff74db))
+* Import items and buildings data from MH ([1eca796](https://github.com/Zenoo/zen-hordes/commit/1eca796fccaea18808b2ff216c53997f0ed6b2c7))
+* Ingame wiki ([aaabe59](https://github.com/Zenoo/zen-hordes/commit/aaabe59a34319ba1a43e1aeccbfe3cad3c9c749f))
+* Item droprate in ruins ([28a621e](https://github.com/Zenoo/zen-hordes/commit/28a621e10d080aeac0859d220631abae98fb34e7))
+* Item recipes ([fea39a3](https://github.com/Zenoo/zen-hordes/commit/fea39a306dd7ad66efa50e6177199f7a0a7f22bd))
+* Pictos generation ([fa23caf](https://github.com/Zenoo/zen-hordes/commit/fa23caf2bf3c476a51734b87c40740a65de358b7))
+* Ruin drops + Clickable ruin names in item tooltips ([5f1c2e0](https://github.com/Zenoo/zen-hordes/commit/5f1c2e08291ff94a5956b975646b9ee3d1b93c96))
+* Shaman souls location button ([95b8e79](https://github.com/Zenoo/zen-hordes/commit/95b8e7919647f6ed9739e8d9ba52054cd95fedd3))
+* Wiki ([8053b24](https://github.com/Zenoo/zen-hordes/commit/8053b249c8a870de73d4507bd68f4bc73757d9de))
+
+
+### Bug Fixes
+
+* Add missing recipes provoking items ([97df697](https://github.com/Zenoo/zen-hordes/commit/97df6974a84431c18b8f43013facce5cd222d738))
+* All items reviewed until ItemId.BPLAN_BOX_E ([bf9a9c1](https://github.com/Zenoo/zen-hordes/commit/bf9a9c101a6aa8dde822b94d9b4a8a4bfb767140))
+* All items reviewed until ItemId.BROKEN ([dfe8b4b](https://github.com/Zenoo/zen-hordes/commit/dfe8b4b9f8c7451bfe4806fdfdeaa21b36f7b666))
+* All items reviewed until ItemId.FRUIT ([509e6d3](https://github.com/Zenoo/zen-hordes/commit/509e6d3effa7675b8729223a6dd826073ee261ff))
+* All items reviewed until ItemId.FUNGUS ([5e0cbf8](https://github.com/Zenoo/zen-hordes/commit/5e0cbf8938b0ee2c88781da59a6efc8aa2bfe50c))
+* Check game version before fetching data from MH api ([0df8242](https://github.com/Zenoo/zen-hordes/commit/0df824221ed8a1671ac9d0472cd3c273088e5fa7))
+* Documentation ([8460360](https://github.com/Zenoo/zen-hordes/commit/8460360120c93e6c599e993fbd95df38bbb0d5fc))
+* Item review until ItemId.POTION ([233ad5b](https://github.com/Zenoo/zen-hordes/commit/233ad5b52814793ab93cad7fbaa387ca61dbfe2e))
+* items as conditions ([ba0d8d8](https://github.com/Zenoo/zen-hordes/commit/ba0d8d8ebf3e89cb072f39dbca3ac4502e9882f3))
+* Laser charge odds ([fecd1cf](https://github.com/Zenoo/zen-hordes/commit/fecd1cf209bf2bb59d3c32ffbebe5509f24ae744))
+* MH API call with env variables ([30d081f](https://github.com/Zenoo/zen-hordes/commit/30d081fe612039d640c167d365bb89e4a42333b7))
+* MH v4.0.1 data ([231c60f](https://github.com/Zenoo/zen-hordes/commit/231c60f7a663663c554b5922435df61618929d46))
+* MH v4.0.2 data ([ed82a2d](https://github.com/Zenoo/zen-hordes/commit/ed82a2d5d470d776f997aee3f04708398860afcc))
+* MH v4.0.3 data ([ca5601e](https://github.com/Zenoo/zen-hordes/commit/ca5601ef773b2a05999dc4239fc4ba82d67d3f3e))
+* Missing bank blocker max items in translation ([b0dd2bd](https://github.com/Zenoo/zen-hordes/commit/b0dd2bd27564b7ceaaeaba4dd645f3f823c63067))
+* New feature toggles ([136daa7](https://github.com/Zenoo/zen-hordes/commit/136daa7b5be1f5476fb34297d9e0101de00e08dc))
+* Open wiki on "h" press ([8fd0b98](https://github.com/Zenoo/zen-hordes/commit/8fd0b98077a30207d390538fc28d8e276e1b336d))
+* Popup screenshot ([5307bb2](https://github.com/Zenoo/zen-hordes/commit/5307bb2e430287ee49e8c5d63b28022e9eab587a))
+* Port on Firefox Android ([b624ef6](https://github.com/Zenoo/zen-hordes/commit/b624ef6195aa47ef0f257af5a6a69e792a35dea9))
+* Refactor update logic for better readability ([efd6c36](https://github.com/Zenoo/zen-hordes/commit/efd6c36d97e693edccfb615cdd4cc29254875171))
+* S17 item ruin drops ([8a8f597](https://github.com/Zenoo/zen-hordes/commit/8a8f597380cc9c4117133f2642f465bec74a2eab))
+* S17 items ([a2a350a](https://github.com/Zenoo/zen-hordes/commit/a2a350a105f6f562fb13e017b57105d25c2f7912))
+* S18 data ([0dc96aa](https://github.com/Zenoo/zen-hordes/commit/0dc96aa59d9924c1ed8937a260947ac0dfb676ec))
+* typos + item highlights ([7993747](https://github.com/Zenoo/zen-hordes/commit/7993747463ef66c0502e75dbc0593da12c0107bc))
+
 ## [1.4.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.4.0...zen-hordes-v1.4.1) (2025-03-16)
 
 
