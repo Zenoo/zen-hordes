@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.5.0...zen-hordes-v1.5.1) (2025-04-30)
+
+
+### Bug Fixes
+
+* Stop logging requests ([80e84f7](https://github.com/Zenoo/zen-hordes/commit/80e84f759046fbca26a820f0844b8c8ac2310746))
+
 ## [1.5.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.4.1...zen-hordes-v1.5.0) (2025-04-30)
 
 
