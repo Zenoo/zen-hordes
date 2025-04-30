@@ -683,6 +683,11 @@ const createLine = (key: keyof CampingParams) => {
         return;
       }
 
+      // Don't display pandemonium
+      if (key === "pandemonium") {
+        return;
+      }
+
       const icons = document.createElement("div");
       const text = document.createElement("p");
 
@@ -714,7 +719,7 @@ const createLine = (key: keyof CampingParams) => {
       });
 
       // Some params don't need the text
-      if (key !== "reclusiveLevel" && key !== "pandemonium" && key !== "job") {
+      if (key !== "reclusiveLevel" && key !== "job") {
         // Text
         text.textContent = `${result[key]}%`;
       }

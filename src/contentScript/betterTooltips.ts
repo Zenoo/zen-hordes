@@ -892,7 +892,7 @@ export const insertBetterItemTooltips = (
     node.classList.add("zen-better-tooltip");
 
     // Ignore status tooltips
-    if (!node.querySelector("h1 img")) return;
+    if (!node.querySelector("h1 img, h4 img")) return;
 
     const item = findItem(node);
     if (!item) {

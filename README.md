@@ -50,6 +50,7 @@ Zen Hordes offers several UI enhancements to make your experience on the MyHorde
 - Heroic actions popup layout
 - Town dashboard layout
 - Action points layout
+- ... and more!
 
 ### Bank Tracker
 One of the standout features of Zen Hordes is the Bank Tracker. This feature helps you manage your interactions with the game's city bank by notifying you of the number of items you can take within a specified period. A timer and item counter is displayed above the city bank. This helps in managing resources more effectively and prevents accidental overuse.
@@ -72,10 +73,26 @@ The extension includes a button to update external sites with the current city d
 
 ![External Site Updater](.github/media/update-button.jpeg)
 
+### Shaman Souls Button
+
+Zen Hordes provides a button to quickly copy the Shaman Souls locations from below the town map. The locations can then be pasted on the town's forom. Keep in mind the locations given are the south-east corner of the souls, meaning the actual soul location can be in a 2x2 square around the given coordinates.
+
+![Shaman Souls Button](.github/media/shaman-souls.png)
+
+### Wiki
+
+Zen Hordes includes a button in the bottom right corner of the page that allows you to quickly access the MyHordes wiki. This feature provides you with easy access to the game's items, buildings, ruins and much more. The wiki is a valuable resource for players looking to learn more about the game mechanics.
+
+![Wiki](.github/media/wiki.jpeg)
+
+### Camping calculator
+
+Zen Hordes provides a camping calculator that helps you determine the chances of surviving a night in the desert. This feature is particularly useful for players who want to plan their camping strategies and maximize their chances of survival. The calculator takes into account various factors such as the number of players, the time of day, and muche more.
+
 ### Translations
 Zen Hordes supports multiple languages, including English, French, German, and Spanish. The extension automatically detects your preferred language and provides translations for various elements on the MyHordes game website. This ensures that you can navigate and use the site comfortably in your preferred language.
 
 ### Customizable Settings
-The extension allows you to customize various settings according to your preferences. You can enable or disable specific features such as UI enhancements and the Bank Blocker. All settings are stored locally on your device and in your Chrome cloud storage, ensuring that your preferences are preserved across sessions and devices.
+The extension allows you to customize various settings according to your preferences. You can enable or disable specific features such as UI enhancements and the Bank Tracker. All settings are stored locally on your device and in your Chrome cloud storage, ensuring that your preferences are preserved across sessions and devices.
 
 ![Popup](.github/media/popup.jpeg)
