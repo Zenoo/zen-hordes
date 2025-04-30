@@ -1,7 +1,7 @@
 import { websiteUrls } from "./utils/constants";
 
 const CONFIG = {
-  debug: true,
+  debug: false,
 };
 
 const log = (...args: unknown[]) => {
