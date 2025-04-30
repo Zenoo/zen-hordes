@@ -1,4 +1,8 @@
-import { trackBank, cleanupBankNotification, handleItemTaken } from "./bankTracker";
+import {
+  trackBank,
+  cleanupBankNotification,
+  handleItemTaken,
+} from "./bankTracker";
 import {
   insertBetterItemTooltips,
   insertBetterRuinTooltips,
@@ -13,14 +17,11 @@ import { displayUpdateButton } from "./externalSiteUpdater";
 import { displayShamanSoulsButton } from "./shamanSoulsButton";
 import { setStore, Store, store } from "./store";
 
-export const listenToBackgroundMessages = () => {
+export const listenToBackgroundMessages = async () => {
   chrome.runtime.onMessage.addListener(
     (message: Message, _sender, _sendResponse) => {
       switch (message.action) {
         case Action.TakeItem: {
-          // Check if we are in the bank first
-          if (!location.href.endsWith("/jx/town/bank")) return;
-
           handleItemTaken(message.value);
           break;
         }

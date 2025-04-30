@@ -30,7 +30,7 @@ export const cleanupBankNotification = () => {
   setStore("bank-items-taken", 0);
 };
 
-export const handleItemTaken = (data: unknown) => {
+export const handleItemTaken = (data?: unknown) => {
   if (data === "water") {
     // First water ration per day doesn't count towards the bank limit
     const startOfDay = new Date();
@@ -80,6 +80,25 @@ const updateTimer = (timerElement: Element) => {
 export const trackBank = (node: HTMLElement) => {
   if (!store["bank-tracker"]) return;
   if (node.id !== "bank-inventory") return;
+
+  // Listen to item clicks
+  if (node.getAttribute("data-zen-bank-listener") !== "true") {
+    node.setAttribute("data-zen-bank-listener", "true");
+
+    node.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      const bankElem = target.closest(".bank");
+      if (!bankElem) return;
+
+      const item = target.closest(".item");
+      if (!item) return;
+
+      handleItemTaken();
+      trackBank(node);
+    });
+  }
 
   const timeRemaining =
     store["last-bank-item-taken"] + BLOCK_DURATION - Date.now();

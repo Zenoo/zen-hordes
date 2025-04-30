@@ -19,9 +19,10 @@ const urls = [
 ];
 
 // Decode WebRequest request body
-const decodeRequestBody = (
+export const decodeRequestBody = (
   details: chrome.webRequest.WebRequestBodyDetails
 ): unknown => {
+  console.log("decodeRequestBody", details);
   if (details.requestBody?.raw?.[0]?.bytes) {
     const raw = details.requestBody.raw[0].bytes;
     const decodedString = new TextDecoder().decode(raw);
@@ -48,17 +49,10 @@ chrome.webRequest.onBeforeRequest.addListener(
   (details) => {
     log("onBeforeRequest", details.url, details);
 
-    if (details.url.includes("/game/inventory/")) {
-      // Take item from the bank / Put item in the bank
-      const requestBody = decodeRequestBody(details);
-
-      if (requestBody instanceof Object && "d" in requestBody) {
-        // Take item
-        if (requestBody.d === "up") {
-          queue[details.requestId] = { action: Action.TakeItem };
-        }
-      }
-    } else if (details.url.endsWith("/rest/v1/town/facilities/well") && details.method === "GET") {
+    if (
+      details.url.endsWith("/rest/v1/town/facilities/well") &&
+      details.method === "GET"
+    ) {
       // Take ration from the well
       queue[details.requestId] = { action: Action.TakeItem, value: "water" };
     } else if (details.url.endsWith("/logout")) {
