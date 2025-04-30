@@ -78,4 +78,4 @@ Zen Hordes supports multiple languages, including English, French, German, and S
 ### Customizable Settings
 The extension allows you to customize various settings according to your preferences. You can enable or disable specific features such as UI enhancements and the Bank Blocker. All settings are stored locally on your device and in your Chrome cloud storage, ensuring that your preferences are preserved across sessions and devices.
 
-![Popup](.github/media/popup.jpg)
+![Popup](.github/media/popup.jpeg)
