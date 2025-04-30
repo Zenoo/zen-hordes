@@ -1,4 +1,4 @@
-import { blockBank, cleanupBankBlocker, handleItemTaken } from "./bankBlocker";
+import { trackBank, cleanupBankNotification, handleItemTaken } from "./bankTracker";
 import {
   insertBetterItemTooltips,
   insertBetterRuinTooltips,
@@ -18,6 +18,9 @@ export const listenToBackgroundMessages = () => {
     (message: Message, _sender, _sendResponse) => {
       switch (message.action) {
         case Action.TakeItem: {
+          // Check if we are in the bank first
+          if (!location.href.endsWith("/jx/town/bank")) return;
+
           handleItemTaken(message.value);
           break;
         }
@@ -34,15 +37,15 @@ export const listenToBackgroundMessages = () => {
               }
               break;
             }
-            case "bank-blocker": {
-              setStore("bank-blocker", !!value.enabled);
+            case "bank-tracker": {
+              setStore("bank-tracker", !!value.enabled);
 
               if (!value.enabled) {
-                cleanupBankBlocker();
+                cleanupBankNotification();
               } else {
                 const bank = document.getElementById("bank-inventory");
                 if (bank) {
-                  blockBank(bank);
+                  trackBank(bank);
                 }
               }
               break;

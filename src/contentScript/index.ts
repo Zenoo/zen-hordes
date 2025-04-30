@@ -1,5 +1,5 @@
-import { blockBank, resetOnDeath } from "./bankBlocker";
-import { insertBetterItemTooltips, insertBetterRuinTooltips } from "./betterTooltips";
+import { resetOnDeath, trackBank } from "./bankTracker";
+import { insertBetterItemTooltips, insertBetterRuinTooltips, storeBankState } from "./betterTooltips";
 import { displayCampingCalculator, updateCampingCalculatorWithCurrentParams } from "./campingCalculator";
 import { displayExternalCityLinks } from "./externalCityLink";
 import { displayUpdateButton } from "./externalSiteUpdater";
@@ -16,10 +16,6 @@ import { insertWiki, openItemInWiki } from "./wiki";
 
 // Initialize the store
 await initStore();
-// TODO: Fix bank blocker after S18
-// TODO: Replace bank blocker with bank tracker
-// (no block overlay + always display timer + items taken above)
-// (Display amount of item in bank at last visit in tooltips)
 // TODO: Read drop data from ItemGroupDataService.php and display it in items tooltips
 // TODO: Implement rotating items in tooltips (repairable items, etc)
 // TODO: Add a list of items to bring back, with priorities (1-5)
@@ -36,7 +32,7 @@ insertWiki();
 // Actions that need to wait for specific elements
 // to be added to the DOM should be handled here
 onMount((node) => {
-  blockBank(node);
+  trackBank(node);
   displayExternalCityLinks(node);
   displayUpdateButton(node);
   insertBetterItemTooltips(node);
@@ -44,6 +40,7 @@ onMount((node) => {
   displayShamanSoulsButton(node);
   displayCampingCalculator(node);
   resetOnDeath(node);
+  storeBankState(node);
 });
 
 // Actions that need to be performed on hover

@@ -1,5 +1,7 @@
+import { websiteUrls } from "./utils/constants";
+
 const CONFIG = {
-  debug: false,
+  debug: true,
 };
 
 const log = (...args: unknown[]) => {
@@ -30,14 +32,12 @@ const decodeRequestBody = (
 
 // Send message to the content script
 const sendMessageToContentScript = async (message: Message) => {
-  const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
-  const tab = tabs[0];
-
-  if (!tab?.id) {
-    return;
-  }
-
-  chrome.tabs.sendMessage(tab.id, message);
+  const tabs = await chrome.tabs.query({ url: websiteUrls });
+  tabs.forEach((tab) => {
+    if (tab.id) {
+      chrome.tabs.sendMessage(tab.id, message);
+    }
+  });
 };
 
 // Watched requests queue (empties after the request is completed)
@@ -48,17 +48,17 @@ chrome.webRequest.onBeforeRequest.addListener(
   (details) => {
     log("onBeforeRequest", details.url, details);
 
-    if (details.url.endsWith("/api/town/bank/item")) {
+    if (details.url.includes("/game/inventory/")) {
       // Take item from the bank / Put item in the bank
       const requestBody = decodeRequestBody(details);
 
-      if (requestBody instanceof Object && "direction" in requestBody) {
+      if (requestBody instanceof Object && "d" in requestBody) {
         // Take item
-        if (requestBody.direction === "up") {
+        if (requestBody.d === "up") {
           queue[details.requestId] = { action: Action.TakeItem };
         }
       }
-    } else if (details.url.endsWith("/rest/v1/town/facilities/well")) {
+    } else if (details.url.endsWith("/rest/v1/town/facilities/well") && details.method === "GET") {
       // Take ration from the well
       queue[details.requestId] = { action: Action.TakeItem, value: "water" };
     } else if (details.url.endsWith("/logout")) {
@@ -115,7 +115,10 @@ chrome.webRequest.onCompleted.addListener(
     }
 
     // Desert refresh
-    if (details.url.includes("/jx/beyond/desert/cached") || details.url.includes("/rest/v1/game/inventory/")) {
+    if (
+      details.url.includes("/jx/beyond/desert/cached") ||
+      details.url.includes("/rest/v1/game/inventory/")
+    ) {
       sendMessageToContentScript({
         action: Action.RefreshDesert,
       }).catch(console.error);

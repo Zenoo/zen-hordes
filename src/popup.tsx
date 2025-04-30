@@ -21,11 +21,12 @@ import { createRoot } from "react-dom/client";
 import { ExternalSite, ExternalSiteName } from "./contentScript/externalSites";
 import { Version } from "./utils/Version";
 import { theme } from "./utils/theme";
+import { websiteUrls } from "./utils/constants";
 
 const T: Translations = {
   en: {
     "enhance-css": "UI Enhancements",
-    "bank-blocker": "Bank Blocker",
+    "bank-tracker": "Bank Tracker",
     "map-preview": "Available cities map preview",
     "shaman-souls-button": "Souls positions copy button",
     "better-tooltips": "Better tooltips",
@@ -36,7 +37,7 @@ const T: Translations = {
   },
   fr: {
     "enhance-css": "Améliorations de l'interface",
-    "bank-blocker": "Bloqueur de banque",
+    "bank-tracker": "Suivi de la banque",
     "map-preview": "Aperçu de la carte des villes disponibles",
     "shaman-souls-button": "Bouton de copie des positions des âmes",
     "better-tooltips": "Meilleures infobulles",
@@ -47,7 +48,7 @@ const T: Translations = {
   },
   de: {
     "enhance-css": "UI-Verbesserungen",
-    "bank-blocker": "Bank Blocker",
+    "bank-tracker": "Bank-Tracker",
     "map-preview": "Vorschau der verfügbaren Städte auf der Karte",
     "shaman-souls-button": "Schaltfläche zum Kopieren von Seelenpositionen",
     "better-tooltips": "Bessere Tooltips",
@@ -58,7 +59,7 @@ const T: Translations = {
   },
   es: {
     "enhance-css": "Mejoras de la interfaz de usuario",
-    "bank-blocker": "Bloqueador de banco",
+    "bank-tracker": "Rastreador de banco",
     "map-preview": "Vista previa del mapa de ciudades disponibles",
     "shaman-souls-button": "Botón de copia de posiciones de almas",
     "better-tooltips": "Mejores tooltips",
@@ -72,12 +73,7 @@ const T: Translations = {
 const sendMessage = async (message: Message) => {
   try {
     const tabs = await chrome.tabs.query({
-      url: [
-        "https://myhordes.eu/*",
-        "https://myhordes.fr/*",
-        "https://myhordes.de/*",
-        "https://myhord.es/*",
-      ],
+      url: websiteUrls,
     });
 
     tabs.forEach((tab) => {
@@ -109,7 +105,7 @@ const sendMessage = async (message: Message) => {
 
 const Popup = () => {
   const [enhanceCss, setEnhanceCss] = useState(true);
-  const [bankBlocker, setBankBlocker] = useState(true);
+  const [bankTracker, setBankTracker] = useState(true);
   const [mapPreview, setMapPreview] = useState(true);
   const [shamanSoulsButton, setShamanSoulsButton] = useState(true);
   const [betterTooltips, setBetterTooltips] = useState(true);
@@ -131,7 +127,7 @@ const Popup = () => {
     const syncStorage = async () => {
       const data = await chrome.storage.sync.get();
       setEnhanceCss(typeof data["enhance-css"] === "boolean" ? data["enhance-css"] : true);
-      setBankBlocker(typeof data["bank-blocker"] === "boolean" ? data["bank-blocker"] : true);
+      setBankTracker(typeof data["bank-tracker"] === "boolean" ? data["bank-tracker"] : true);
       setMapPreview(typeof data["map-preview"] === "boolean" ? data["map-preview"] : true);
       setShamanSoulsButton(
         typeof data["shaman-souls-button"] === "boolean" ? data["shaman-souls-button"] : true
@@ -193,11 +189,11 @@ const Popup = () => {
     await setFeature("enhance-css", event.target.checked);
   };
 
-  const handleBankBlockerChange = async (
+  const handleBankTrackerChange = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    setBankBlocker(event.target.checked);
-    await setFeature("bank-blocker", event.target.checked);
+    setBankTracker(event.target.checked);
+    await setFeature("bank-tracker", event.target.checked);
   };
 
   const handleMapPreviewChange = async (
@@ -295,14 +291,14 @@ const Popup = () => {
         <FormControlLabel
           control={
             <Switch
-              checked={bankBlocker}
-              onChange={handleBankBlockerChange}
+              checked={bankTracker}
+              onChange={handleBankTrackerChange}
               size="small"
             />
           }
           label={
             <Typography variant="body2" sx={{ ml: 0.5 }}>
-              {t("bank-blocker")}
+              {t("bank-tracker")}
             </Typography>
           }
           sx={{ mx: 1 }}

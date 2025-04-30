@@ -51,10 +51,10 @@ Zen Hordes offers several UI enhancements to make your experience on the MyHorde
 - Town dashboard layout
 - Action points layout
 
-### Bank Blocker
-One of the standout features of Zen Hordes is the Bank Blocker. This feature helps you manage your interactions with the game's city bank by limiting the number of items you can take within a specified period. If you reach the maximum number of items, the extension will block access to the bank for a set duration, preventing you from taking more items until the timer expires. This helps in managing resources more effectively and prevents accidental overuse.
+### Bank Tracker
+One of the standout features of Zen Hordes is the Bank Tracker. This feature helps you manage your interactions with the game's city bank by notifying you of the number of items you can take within a specified period. A timer and item counter is displayed above the city bank. This helps in managing resources more effectively and prevents accidental overuse.
 
-![Bank Blocker](.github/media/bank-blocker.jpg)
+![Bank Tracker](.github/media/bank-tracker.jpeg)
 
 ### Map Preview
 Zen Hordes provides a map preview feature that allows you to see the map of available cities in the game. This feature gives you a visual representation of the cities and their locations, making it easier to plan your strategies and jump more efficiently.

@@ -7,7 +7,7 @@ import { ExternalSiteName } from "./externalSites";
 export const store = {
   // Feature toggles
   "enhance-css": true,
-  "bank-blocker": true,
+  "bank-tracker": true,
   "map-preview": true,
   "external-city-links": [
     ExternalSiteName.BBH,
@@ -22,7 +22,7 @@ export const store = {
   "shaman-souls-button": true,
   "wiki": true,
   "camping-calculator": true,
-  // Bank blocker state
+  // Bank tracker state
   "bank-items-taken": 0,
   "last-bank-item-taken": Date.now(),
   "last-water-ration-taken": new Date(0).getTime(),
@@ -51,7 +51,7 @@ export const setStore = <K extends keyof Store>(
 
 export const initStore = async () => {
   // Clear old storage
-  await chrome.storage.sync.remove("lang");
+  await chrome.storage.sync.remove(["lang", "bank-blocker"]);
 
   // Update lang (don't update if wrong format)
   if (store["hordes-lang"].length === 2) {

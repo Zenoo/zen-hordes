@@ -41,7 +41,7 @@ const T: Translations = {
     privateTownOnly: "Can only be found in private towns",
     poisonable: "Can be poisoned",
     "item.tag.deco": "Home decoration",
-    "clean": "Clean",
+    bankCount: "{{count}} in bank {{time}}",
   },
   fr: {
     [`action-type.${ItemActionType.Eat}`]: "Manger",
@@ -76,7 +76,7 @@ const T: Translations = {
     privateTownOnly: "Peut uniquement être trouvé dans les villes privées",
     poisonable: "Peut être empoisonné",
     "item.tag.deco": "Aménagement de maison",
-    "clean": "Clair(e)",
+    bankCount: "{{count}} en banque {{time}}",
   },
   es: {
     [`action-type.${ItemActionType.Eat}`]: "Comer",
@@ -111,7 +111,7 @@ const T: Translations = {
     privateTownOnly: "Solo se puede encontrar en ciudades privadas",
     poisonable: "Puede ser envenenado",
     "item.tag.deco": "Hausdekoration",
-    "clean": "Limpio",
+    bankCount: "{{count}} en el banco {{time}}",
   },
   de: {
     [`action-type.${ItemActionType.Eat}`]: "Essen",
@@ -145,8 +145,8 @@ const T: Translations = {
     unavailable: "Nicht mehr verfügbar",
     privateTownOnly: "Kann nur in privaten Städten gefunden werden",
     poisonable: "Kann vergiftet werden",
-    "item.tag.deco": "Decoración del hogar",
-    "clean": "Clean",
+    "item.tag.deco": "Hausdekoration",
+    bankCount: "{{count}} in der Bank {{time}}",
   },
 };
 
@@ -172,18 +172,26 @@ const findItem = (node: HTMLElement) => {
     return items[itemId];
   }
 
+  const isTooltip = node.classList.contains("tooltip");
+
   return Object.values(items).find((item) => {
+    let broken;
+
     // Remove and store .broken span from h1
-    const broken = node.querySelector("h1 span.broken");
-    if (broken) {
-      broken.remove();
+    if (isTooltip) {
+      broken = node.querySelector("h1 span.broken");
+      if (broken) {
+        broken.remove();
+      }
     }
 
     // Check if the item name matches the h1 text
     const itemName = item.name[store["hordes-lang"]];
-    const h1Text = node.querySelector("h1")?.textContent?.trim() ?? "";
+    const nodeName = isTooltip
+      ? node.querySelector("h1")?.textContent?.trim() ?? ""
+      : node.querySelector<HTMLImageElement>(".item-icon img")?.alt ?? "";
 
-    if (itemName !== h1Text) {
+    if (itemName !== nodeName) {
       // Restore the .broken span
       if (broken) {
         node.querySelector("h1 img")?.before(broken);
@@ -193,7 +201,9 @@ const findItem = (node: HTMLElement) => {
     }
 
     // Check if the item icon matches the h1 img src
-    const imgSrc = node.querySelector<HTMLImageElement>("h1 img")?.src;
+    const imgSrc = isTooltip
+      ? node.querySelector<HTMLImageElement>("h1 img")?.src
+      : node.querySelector<HTMLImageElement>(".item-icon img")?.src;
     const iconMatch = imgSrc
       ? /item\/(.+)\..+\.gif/.exec(imgSrc)?.[1] ?? ""
       : "";
@@ -840,6 +850,32 @@ const setTextWithIcons = (node: HTMLElement, content: string) => {
   });
 };
 
+const getRelativeTime = (timestamp: number): string => {
+  const now = Date.now();
+  const diffInSeconds = Math.floor((timestamp - now) / 1000);
+
+  const rtf = new Intl.RelativeTimeFormat(store["hordes-lang"], {
+    numeric: "auto",
+  });
+
+  if (Math.abs(diffInSeconds) < 60) {
+    return rtf.format(diffInSeconds, "second");
+  }
+
+  const diffInMinutes = Math.floor(diffInSeconds / 60);
+  if (Math.abs(diffInMinutes) < 60) {
+    return rtf.format(diffInMinutes, "minute");
+  }
+
+  const diffInHours = Math.floor(diffInMinutes / 60);
+  if (Math.abs(diffInHours) < 24) {
+    return rtf.format(diffInHours, "hour");
+  }
+
+  const diffInDays = Math.floor(diffInHours / 24);
+  return rtf.format(diffInDays, "day");
+};
+
 export const insertBetterItemTooltips = (
   node: HTMLElement,
   force?: boolean
@@ -855,15 +891,43 @@ export const insertBetterItemTooltips = (
 
     node.classList.add("zen-better-tooltip");
 
+    // Ignore status tooltips
+    if (!node.querySelector("h1 img")) return;
+
     const item = findItem(node);
     if (!item) {
-      // Ignore clean status
-      if (node.querySelector("h1")?.textContent?.trim() === t(T, "clean")) {
+      console.error("Item not found in tooltip:", node);
+      return;
+    }
+
+    // Bank count
+    const bankStateTimestamp = localStorage.getItem("bankStateTimestamp");
+    if (bankStateTimestamp) {
+      const count = localStorage.getItem(`bankItem_${item.id}`);
+
+      const bankCountTarget = [...node.childNodes].find((child) => {
+        // Description can either be a text node or a <p> element
+        // We need to check for both to avoid breaking the tooltip
+        return (
+          child.nodeType === Node.TEXT_NODE ||
+          (child.nodeType === Node.ELEMENT_NODE &&
+            (child as HTMLElement).tagName === "P")
+        );
+      });
+
+      if (!bankCountTarget) {
+        console.error("Bank count target not found in tooltip:", node);
         return;
       }
 
-      console.error("Item not found in tooltip:", node);
-      return;
+      const bankCount = document.createElement("div");
+      bankCount.classList.add("bank-count", "zen-added");
+      bankCount.textContent = t(T, "bankCount", {
+        count: +(count ?? 0),
+        time: getRelativeTime(+bankStateTimestamp),
+      });
+
+      node.insertBefore(bankCount, bankCountTarget.nextSibling);
     }
 
     // Additional info
@@ -912,7 +976,7 @@ export const insertBetterItemTooltips = (
         decorationNode = document.createElement("div");
         decorationNode.classList.add("item-tag", "item-tag-deco");
         decorationNode.textContent = t(T, "item.tag.deco");
-        node.appendChild(decorationNode);
+        node.append(decorationNode);
       }
 
       const span = document.createElement("span");
@@ -1116,4 +1180,44 @@ export const insertBetterRuinTooltips = (node: HTMLElement) => {
       });
     target?.append(table);
   }
+};
+
+export const resetBankState = () => {
+  // Remove all bank items from local storage
+  Object.keys(localStorage).forEach((key) => {
+    if (key.startsWith("bankItem_")) {
+      localStorage.removeItem(key);
+    }
+  });
+};
+
+export const storeBankState = (node: HTMLElement) => {
+  if (node.id !== "bank-inventory") return;
+
+  // Wait for pending items to load
+  const interval = setInterval(() => {
+    const pendingItems = node.querySelectorAll(".bank .item.pending");
+    if (pendingItems.length === 0) {
+      clearInterval(interval);
+      resetBankState();
+
+      // Get items
+      node.querySelectorAll<HTMLElement>(".bank .item").forEach((itemNode) => {
+        const item = findItem(itemNode);
+
+        if (!item) {
+          console.error("Item not found in bank:", itemNode);
+          return;
+        }
+
+        const count =
+          itemNode.querySelector("span:not(.item-icon)")?.textContent ?? "1";
+
+        // Store the item count in local storage
+        localStorage.setItem(`bankItem_${item.id}`, count);
+      });
+
+      localStorage.setItem("bankStateTimestamp", Date.now().toString());
+    }
+  }, 250);
 };
