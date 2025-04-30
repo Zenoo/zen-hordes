@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.5.1...zen-hordes-v1.5.2) (2025-04-30)
+
+
+### Bug Fixes
+
+* Bank tracker not working due to https://issues.chromium.org/issues/40130515. ([aa5fa80](https://github.com/Zenoo/zen-hordes/commit/aa5fa800267ca8dc3512284c8ac48537a77cfd24))
+
 ## [1.5.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.5.0...zen-hordes-v1.5.1) (2025-04-30)
 
 
