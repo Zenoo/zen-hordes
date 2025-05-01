@@ -3377,42 +3377,42 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "mixergun_part_#00",
-            odds: 19
+            odds: 18.8
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "watergun_opt_part_#00",
-            odds: 19
+            odds: 18.8
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pocket_belt_#00",
-            odds: 12
+            odds: 11.9
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "chainsaw_part_#00",
-            odds: 12
+            odds: 11.9
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "lawn_part_#00",
-            odds: 12
+            odds: 11.9
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pilegun_upkit_#00",
-            odds: 10
+            odds: 9.9
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "cutcut_#00",
-            odds: 10
+            odds: 9.9
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "big_pgun_part_#00",
-            odds: 7
+            odds: 6.9
           }
         ]
       },
@@ -3426,42 +3426,42 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "mixergun_part_#00",
-            odds: 19
+            odds: 18.8
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "watergun_opt_part_#00",
-            odds: 19
+            odds: 18.8
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pocket_belt_#00",
-            odds: 12
+            odds: 11.9
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "chainsaw_part_#00",
-            odds: 12
+            odds: 11.9
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "lawn_part_#00",
-            odds: 12
+            odds: 11.9
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pilegun_upkit_#00",
-            odds: 10
+            odds: 9.9
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "cutcut_#00",
-            odds: 10
+            odds: 9.9
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "big_pgun_part_#00",
-            odds: 7
+            odds: 6.9
           }
         ]
       },
@@ -3478,42 +3478,42 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "mixergun_part_#00",
-            odds: 19
+            odds: 18.8
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "watergun_opt_part_#00",
-            odds: 19
+            odds: 18.8
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pocket_belt_#00",
-            odds: 12
+            odds: 11.9
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "chainsaw_part_#00",
-            odds: 12
+            odds: 11.9
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "lawn_part_#00",
-            odds: 12
+            odds: 11.9
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pilegun_upkit_#00",
-            odds: 10
+            odds: 9.9
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "cutcut_#00",
-            odds: 10
+            odds: 9.9
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "big_pgun_part_#00",
-            odds: 7
+            odds: 6.9
           }
         ]
       }
@@ -3552,32 +3552,32 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "pharma_#00",
-            odds: 25
+            odds: 25.3
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "explo_#00",
-            odds: 19
+            odds: 19.2
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "meca_parts_#00",
-            odds: 17
+            odds: 17.2
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "rustine_#00",
-            odds: 13
+            odds: 13.1
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "tube_#00",
-            odds: 13
+            odds: 13.1
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pile_#00",
-            odds: 12
+            odds: 12.1
           }
         ]
       },
@@ -3594,32 +3594,32 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "pharma_#00",
-            odds: 25
+            odds: 25.3
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "explo_#00",
-            odds: 19
+            odds: 19.2
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "meca_parts_#00",
-            odds: 17
+            odds: 17.2
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "rustine_#00",
-            odds: 13
+            odds: 13.1
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "tube_#00",
-            odds: 13
+            odds: 13.1
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pile_#00",
-            odds: 12
+            odds: 12.1
           }
         ]
       }
@@ -5201,12 +5201,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "hmeat_#00",
-            odds: 28
+            odds: 27.7
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "can_#00",
-            odds: 23
+            odds: 23.4
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -5221,7 +5221,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "meat_#00",
-            odds: 15
+            odds: 14.9
           }
         ]
       },
@@ -5234,12 +5234,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "hmeat_#00",
-            odds: 28
+            odds: 27.7
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "can_#00",
-            odds: 23
+            odds: 23.4
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -5254,7 +5254,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "meat_#00",
-            odds: 15
+            odds: 14.9
           },
           {
             type: ItemActionEffectType.CP,
@@ -5297,37 +5297,37 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_bar2_#00",
-            odds: 15
+            odds: 15.1
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_chick_#00",
-            odds: 13
+            odds: 13.2
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_biscuit_#00",
-            odds: 13
+            odds: 12.7
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_pims_#00",
-            odds: 13
+            odds: 12.6
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_bar3_#00",
-            odds: 12
+            odds: 12.3
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_tarte_#00",
-            odds: 12
+            odds: 11.8
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_bar1_#00",
-            odds: 11
+            odds: 11.4
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -7341,32 +7341,32 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "rp_book2_#00",
-            odds: 17
+            odds: 16.7
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "rp_manual_#00",
-            odds: 17
+            odds: 16.7
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "rp_scroll_#00",
-            odds: 17
+            odds: 16.7
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "rp_scroll_#01",
-            odds: 17
+            odds: 16.7
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "rp_sheets_#00",
-            odds: 17
+            odds: 16.7
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "rp_letter_#00",
-            odds: 17
+            odds: 16.7
           }
         ]
       }
@@ -8530,56 +8530,58 @@ export const items: Readonly<Record<ItemId, Item>> = {
           },
           {
             type: ItemActionEffectType.CreateItem,
-            value: "big_pgun_part_#00"
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "book_gen_letter_#00"
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
             value: "safe_#00",
             odds: 95
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pocket_belt_#00",
-            odds: 1
+            odds: 0.8
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "watergun_opt_part_#00",
-            odds: 1
+            odds: 0.5
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "lawn_part_#00",
-            odds: 1
+            odds: 0.5
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "chainsaw_part_#00",
-            odds: 1
+            odds: 0.5
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "mixergun_part_#00",
-            odds: 1
+            odds: 0.5
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "cutcut_#00",
-            odds: 1
+            odds: 0.5
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pilegun_upkit_#00",
-            odds: 1
+            odds: 0.5
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "meca_parts_#00",
-            odds: 1
+            odds: 0.5
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "big_pgun_part_#00",
+            odds: 0.3
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "book_gen_letter_#00",
+            odds: 0.3
           }
         ]
       }
@@ -12921,17 +12923,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "poison_part_#00",
-            odds: 33
+            odds: 33.3
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pet_cat_#00",
-            odds: 33
+            odds: 33.3
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "angryc_#00",
-            odds: 33
+            odds: 33.3
           }
         ]
       },
@@ -12948,17 +12950,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "poison_part_#00",
-            odds: 33
+            odds: 33.3
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pet_cat_#00",
-            odds: 33
+            odds: 33.3
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "angryc_#00",
-            odds: 33
+            odds: 33.3
           }
         ]
       }
@@ -14814,47 +14816,47 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_cleaner_#00",
-            odds: 22
+            odds: 22.2
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "drug_water_#00",
-            odds: 22
+            odds: 22.2
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "ryebag_#00",
-            odds: 17
+            odds: 16.7
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "xanax_#00",
-            odds: 14
+            odds: 14.4
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pharma_#00",
-            odds: 11
+            odds: 11.1
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "disinfect_#00",
-            odds: 11
+            odds: 11.1
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "cyanure_#00",
-            odds: 1
+            odds: 1.1
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "drug_#00",
-            odds: 1
+            odds: 0.6
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "bandage_#00",
-            odds: 1
+            odds: 0.6
           }
         ]
       }

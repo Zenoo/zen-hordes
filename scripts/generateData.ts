@@ -905,9 +905,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
                     .map(() => ({
                       type: ItemActionEffectType.CreateItem,
                       value: item,
-                      odds: _odds
-                        ? Math.round((innerOdds / totalOdds) * _odds)
-                        : Math.round((innerOdds / totalOdds) * 100),
+                      odds: +((innerOdds / totalOdds) * (_odds ?? 100)).toFixed(1),
                     }))
                 );
               });
@@ -1178,14 +1176,19 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
       if (itemDrop) {
         const totalOdds =
           drops[dropLocation]
-            ?.filter((drop) => typeof drop.event === "undefined" || item.event === drop.event)
+            ?.filter(
+              (drop) =>
+                typeof drop.event === "undefined" || item.event === drop.event
+            )
             .reduce((acc, drop) => acc + drop.odds, 0) ?? 0;
 
         if (!item.drops) {
           item.drops = {};
         }
 
-        item.drops[dropLocation] = +(itemDrop.odds / totalOdds * 100).toFixed(2);
+        item.drops[dropLocation] = +((itemDrop.odds / totalOdds) * 100).toFixed(
+          2
+        );
       }
     });
 
