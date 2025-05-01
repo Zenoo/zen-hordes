@@ -1,10 +1,4 @@
-import { DropLocation, ItemId } from "./items";
-
-export type ItemDrop = {
-id: ItemId;
-odds: number;
-event?: GameEvent;
-};
+import { DropLocation, ItemDrop, ItemId } from "./types";
 
 export const itemDrops: Record<DropLocation, ItemDrop[]> = {
   [DropLocation.DepletedZone]: [

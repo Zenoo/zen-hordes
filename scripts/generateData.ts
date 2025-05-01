@@ -14,6 +14,8 @@ import { overwriteRecipeData } from "./recipeOverwrites";
 import { overwriteRuinData } from "./ruinOverwrites";
 import dotenv from "dotenv";
 
+let types = "";
+
 enum Lang {
   EN = "en",
   FR = "fr",
@@ -47,6 +49,9 @@ export type ItemActionCondition =
   | ItemActionConditionEnum
   | {
       item: string;
+    }
+  | {
+      building: string;
     };
 
 export enum ItemActionEffectType {
@@ -300,11 +305,13 @@ const generateItemDrops = () => {
     Trash: Object.entries(dropsData.trash ?? {}).map(mapDrops),
   };
 
-  const types = `export type ItemDrop = {
+  types += `export type ItemDrop = {
 id: ItemId;
 odds: number;
 event?: GameEvent;
-};`;
+};
+
+`;
 
   const itemDropObject = `export const itemDrops: Record<DropLocation, ItemDrop[]> = {
   ${Object.entries(drops)
@@ -323,9 +330,7 @@ event?: GameEvent;
     .join("\n  ")}
 };`;
 
-  const ouput = `import { DropLocation, ItemId } from "./items";
-
-${types}
+  const ouput = `import { DropLocation, ItemDrop, ItemId } from "./types";
 
 ${itemDropObject}`;
 
@@ -488,8 +493,17 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
     ) {
       conditions.push({ item: "WATER_CLEANER" });
     }
+    if (action?.meta.includes("must_have_micropur_in")) {
+      conditions.push(ItemActionConditionEnum.Inside);
+    }
     if (action?.meta.includes("must_have_steak")) {
       conditions.push({ item: "MEAT" });
+    }
+    if (action?.meta.includes("must_have_purifier")) {
+      conditions.push({ building: "ITEM_JERRYCAN" });
+    }
+    if (action?.meta.includes("must_have_filter")) {
+      conditions.push({ building: "ITEM_JERRYCAN_01" });
     }
 
     if (
@@ -689,7 +703,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
 
           effects.push({
             type: ItemActionEffectType.AddWaterToWell,
-            value: `${min}-${max}`,
+            value: min === max ? min : `${min}-${max}`,
             ...odds,
           });
           break;
@@ -902,11 +916,14 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
                 effects.push(
                   ...Array(count)
                     .fill(0)
-                    .map(() => ({
-                      type: ItemActionEffectType.CreateItem,
-                      value: item,
-                      odds: +((innerOdds / totalOdds) * (_odds ?? 100)).toFixed(1),
-                    }))
+                    .map(() => {
+                      const odds = (innerOdds / totalOdds) * (_odds ?? 100);
+                      return {
+                        type: ItemActionEffectType.CreateItem,
+                        value: item,
+                        odds: odds < 1 ? +odds.toFixed(1) : Math.round(odds),
+                      };
+                    })
                 );
               });
 
@@ -1076,6 +1093,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
         case "throw_animal_t2":
         case "wagging_flag":
         case "fill_ksplash1":
+        case "jerrycan_1b":
           return;
       }
 
@@ -1400,19 +1418,19 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
 
   overwriteItemData(items);
 
-  const itemIdEnum = `export enum ItemId {
+  types += `export enum ItemId {
   ${Object.values(items)
     .map((item) => `${sanitizeItemId(item)} = "${item.id}"`)
     .join(",\n  ")}
-};`;
+};
 
-  const dropLocationEnum = `export enum DropLocation {
+export enum DropLocation {
   DepletedZone,
   Zone,
   Trash,
-};`;
+};
 
-  const itemType = `export type Item = {
+export type Item = {
   id: ItemId;
   numericalId: number;
   name: Record<Lang, string>;
@@ -1427,7 +1445,9 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
   available?: boolean;
   actions: ItemAction[];
   drops?: Partial<Record<DropLocation, number>>;
-};`;
+};
+
+`;
 
   const itemsObject = `export const items: Readonly<Record<ItemId, Item>> = {
   ${Object.values(items)
@@ -1486,7 +1506,9 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
           ${action.conditions
             .map((condition) =>
               typeof condition === "object"
-                ? `{ item: ItemId.${condition.item} }`
+                ? "item" in condition
+                  ? `{ item: ItemId.${condition.item} }`
+                  : `{ building: BuildingId.${condition.building} }`
                 : `ItemActionConditionEnum.${ItemActionConditionEnum[condition]}`
             )
             .join(",\n          ")}
@@ -1534,11 +1556,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
     .join(",\n  ")}
 };`;
 
-  const output = `${itemIdEnum}
-
-${dropLocationEnum}
-
-${itemType}
+  const output = `import { BuildingId, DropLocation, Item, ItemId } from "./types";
 
 ${itemsObject}`;
 
@@ -1713,15 +1731,11 @@ const generateRuins = async (items: Record<number, Item>) => {
 
   overwriteRuinData(ruins);
 
-  const ruinIdEnum = `export enum RuinId {
+  types += `export enum RuinId {
   ${Object.values(ruins)
     .map((ruin) => `${sanitizeRuinId(ruin)} = ${ruin.id}`)
     .join(",\n  ")}
-}`;
-
-  const types = `import { ItemId } from './items';
-
-${ruinIdEnum}
+}
 
 export type Ruin = {
   id: RuinId;
@@ -1744,7 +1758,9 @@ export type Ruin = {
     odds: number;
     event?: GameEvent;
   }[];
-};`;
+};
+
+`;
 
   const ruinsObject = `export const ruins: Readonly<Record<RuinId, Ruin>> = {
   ${Object.values(ruins)
@@ -1799,7 +1815,7 @@ export type Ruin = {
     .join(",\n  ")}
 };`;
 
-  const output = `${types}
+  const output = `import { ItemId, Ruin, RuinId } from './types';
 
 ${ruinsObject}`;
 
@@ -1924,10 +1940,7 @@ const generateRecipes = (items: Record<number, Item>) => {
 
   overwriteRecipeData(recipes, items);
 
-  const types = `import { ItemId } from './items';
-import { PictoId } from './pictos';
-
-export type RecipeItem = {
+  types += `export type RecipeItem = {
   item: ItemId;
   odds?: number;
   infected?: boolean;
@@ -1940,7 +1953,9 @@ export type Recipe = {
   in: RecipeItem[];
   out: RecipeItem[];
   pictos?: PictoId[];
-};`;
+};
+
+`;
 
   const recipesArray = `export const recipes: Readonly<Recipe>[] = [
   ${recipes
@@ -1982,7 +1997,7 @@ export type Recipe = {
     .join(",\n  ")}
 ];`;
 
-  const output = `${types}
+  const output = `import { ItemId, PictoId, Recipe } from './types';
 
 ${recipesArray}`;
 
@@ -2085,13 +2100,13 @@ const generateBuildings = async (items: Record<number, Item>) => {
     };
   });
 
-  const buildingIdEnum = `export enum BuildingId {
+  types += `export enum BuildingId {
   ${Object.values(buildings)
     .map((building) => `${sanitizeBuildingId(building)} = "${building.id}"`)
     .join(",\n  ")}
-}`;
+}
 
-  const buildingType = `export type Building = {
+export type Building = {
   id: BuildingId;
   numericalId: number;
   name: Record<Lang, string>;
@@ -2109,7 +2124,9 @@ const generateBuildings = async (items: Record<number, Item>) => {
     id: ItemId;
     amount: number;
   }[];
-};`;
+};
+
+`;
 
   const buildingsObject = `export const buildings: Readonly<Record<BuildingId, Building>> = {
   ${Object.values(buildings)
@@ -2164,11 +2181,7 @@ const generateBuildings = async (items: Record<number, Item>) => {
     .join(",\n  ")}
 };`;
 
-  const output = `import { ItemId } from './items';
-
-${buildingIdEnum}
-
-${buildingType}
+  const output = `import { Building, BuildingId, ItemId } from './types';
 
 ${buildingsObject}`;
 
@@ -2229,13 +2242,13 @@ const generatePictos = async () => {
     };
   });
 
-  const pictoIdEnum = `export enum PictoId {
+  types += `export enum PictoId {
   ${Object.values(pictos)
     .map((picto) => `${sanitizePictoId(picto)} = "${picto.id}"`)
     .join(",\n  ")}
-}`;
+}
 
-  const pictoType = `export type Picto = {
+export type Picto = {
   id: PictoId;
   numericalId: number;
   name: Record<Lang, string>;
@@ -2277,9 +2290,7 @@ const generatePictos = async () => {
     .join(",\n  ")}
 };`;
 
-  const output = `${pictoIdEnum}
-
-${pictoType}
+  const output = `import { Picto, PictoId } from './types';
 
 ${pictosObject}`;
 
@@ -2289,6 +2300,15 @@ ${pictosObject}`;
     "utf-8"
   );
   console.log("pictos.ts file has been generated.");
+};
+
+const generateTypes = () => {
+  fs.writeFileSync(
+    path.join(__dirname, "..", "src", "data", "types.ts"),
+    types,
+    "utf-8"
+  );
+  console.log("types.ts file has been generated.");
 };
 
 (async () => {
@@ -2385,6 +2405,7 @@ ${pictosObject}`;
   generateRecipes(items);
   await generateBuildings(items);
   generatePictos();
+  generateTypes();
 
   // Update game version file
   fs.writeFileSync(

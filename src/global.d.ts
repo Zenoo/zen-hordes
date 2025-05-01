@@ -1,4 +1,5 @@
-import { ItemId } from "./data/items";
+import { BuildingId } from "./data/types";
+import { ItemId } from "./data/types";
 
 declare global {
   // Extension types
@@ -81,6 +82,9 @@ declare global {
     | ItemActionConditionEnum
     | {
         item: ItemId;
+      }
+    | {
+        building: BuildingId;
       };
 
   const enum ItemActionEffectType {

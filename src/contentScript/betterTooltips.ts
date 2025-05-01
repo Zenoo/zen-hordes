@@ -1,8 +1,9 @@
-import { BuildingId, buildings } from "../data/buildings";
-import { DropLocation, Item, ItemId, items } from "../data/items";
-import { PictoId, pictos } from "../data/pictos";
-import { Recipe, recipes } from "../data/recipes";
+import { buildings } from "../data/buildings";
+import { items } from "../data/items";
+import { pictos } from "../data/pictos";
+import { recipes } from "../data/recipes";
 import { ruins } from "../data/ruins";
+import { BuildingId, DropLocation, Item, ItemId, PictoId, Recipe } from "../data/types";
 import { ASSETS } from "../utils/constants";
 import { store } from "./store";
 import { t } from "./translate";
@@ -266,25 +267,39 @@ const findItemsWithRelatedActions = (item: Item, broken: boolean) => {
       }
 
       return otherItem.actions.some((action) => {
-        return action.effects.some((effect) => {
-          return (
-            effect.type === ItemActionEffectType.CreateItem &&
-            effect.value === item.id
-          );
-        });
+        return (
+          action.effects.some((effect) => {
+            return (
+              effect.type === ItemActionEffectType.CreateItem &&
+              effect.value === item.id
+            );
+          }) ||
+          action.conditions.some(
+            (condition) =>
+              typeof condition === "object" &&
+              "item" in condition &&
+              condition.item === item.id
+          )
+        );
       });
     })
     .map((otherItem) => {
       return {
         ...otherItem,
-        actions: otherItem.actions.filter((action) => {
-          return action.effects.some((effect) => {
-            return (
-              effect.type === ItemActionEffectType.CreateItem &&
-              effect.value === item.id
-            );
-          });
-        }),
+        actions: otherItem.actions.filter(
+          (action) =>
+            action.effects.some(
+              (effect) =>
+                effect.type === ItemActionEffectType.CreateItem &&
+                effect.value === item.id
+            ) ||
+            action.conditions.some(
+              (condition) =>
+                typeof condition === "object" &&
+                "item" in condition &&
+                condition.item === item.id
+            )
+        ),
       };
     });
 };
@@ -603,14 +618,26 @@ const createLine = (
               break;
           }
 
-          // Items
           if (typeof condition === "object") {
-            const conditionItem = items[condition.item];
-            if (conditionItem) {
-              displayedIcon.id = conditionItem.id;
-              displayedIcon.type = "item";
-              displayedIcon.icon = `icons/item/${conditionItem.icon}.gif`;
-              displayedIcon.title = undefined;
+            // Items
+            if ("item" in condition) {
+              const conditionItem = items[condition.item];
+              if (conditionItem) {
+                displayedIcon.id = conditionItem.id;
+                displayedIcon.type = "item";
+                displayedIcon.icon = `icons/item/${conditionItem.icon}.gif`;
+                displayedIcon.title = undefined;
+              }
+            } else if ("building" in condition) {
+              // Buildings
+              const conditionBuilding = buildings[condition.building];
+              if (conditionBuilding) {
+                displayedIcon.id = conditionBuilding.id;
+                displayedIcon.type = "building";
+                displayedIcon.icon = `building/${conditionBuilding.icon}.gif`;
+                displayedIcon.title =
+                  conditionBuilding.name[store["hordes-lang"]];
+              }
             }
           }
 
@@ -1029,8 +1056,11 @@ export const insertBetterItemTooltips = (
       // Create an info tag
       const dropTag = document.createElement("div");
       dropTag.classList.add("item-tag", "item-tag-drop", "zen-added");
-      dropTag.textContent = `${t(T, `foundWhenSearching`)}: ${Object.entries(item.drops)
-        .map(([key, value]) => `${t(T, `dropLocation.${key}`)} (${value}%)`).join(", ")}`;
+      dropTag.textContent = `${t(T, `foundWhenSearching`)}: ${Object.entries(
+        item.drops
+      )
+        .map(([key, value]) => `${t(T, `dropLocation.${key}`)} (${value}%)`)
+        .join(", ")}`;
       node.append(dropTag);
     }
 

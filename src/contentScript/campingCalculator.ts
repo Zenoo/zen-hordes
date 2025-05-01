@@ -1,5 +1,6 @@
-import { ItemId, items } from "../data/items";
-import { Ruin, ruins } from "../data/ruins";
+import { items } from "../data/items";
+import { ruins } from "../data/ruins";
+import { ItemId, Ruin } from "../data/types";
 import { ASSETS } from "../utils/constants";
 import { store } from "./store";
 import { t } from "./translate";

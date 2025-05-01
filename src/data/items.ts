@@ -1,408 +1,4 @@
-export enum ItemId {
-  WATER = "water_#00",
-  PILE = "pile_#00",
-  CAN = "can_#00",
-  CAN_OPEN = "can_open_#00",
-  PILEGUN = "pilegun_#00",
-  TASER = "taser_#00",
-  WATERGUN_OPT_EMPTY = "watergun_opt_empty_#00",
-  MIXERGUN = "mixergun_#00",
-  CHAINSAW = "chainsaw_#00",
-  LAWN = "lawn_#00",
-  WRENCH = "wrench_#00",
-  SCREW = "screw_#00",
-  STAFF = "staff_#00",
-  KNIFE = "knife_#00",
-  CUTCUT = "cutcut_#00",
-  SMALL_KNIFE = "small_knife_#00",
-  SWISS_KNIFE = "swiss_knife_#00",
-  CUTTER = "cutter_#00",
-  CART = "cart_#00",
-  CAN_OPENER = "can_opener_#00",
-  BAG = "bag_#00",
-  LIGHTS = "lights_#00",
-  XANAX = "xanax_#00",
-  CHAIR = "chair_#00",
-  RP_BOOK = "rp_book_#00",
-  BED = "bed_#00",
-  LAMP = "lamp_#00",
-  CARPET = "carpet_#00",
-  MUSIC_PART = "music_part_#00",
-  LOCK = "lock_#00",
-  DOOR_CARPET = "door_carpet_#00",
-  DICE = "dice_#00",
-  ENGINE = "engine_#00",
-  COURROIE = "courroie_#00",
-  MECA_PARTS = "meca_parts_#00",
-  PET_CHICK = "pet_chick_#00",
-  PET_PIG = "pet_pig_#00",
-  PET_RAT = "pet_rat_#00",
-  PET_DOG = "pet_dog_#00",
-  PET_CAT = "pet_cat_#00",
-  PET_SNAKE = "pet_snake_#00",
-  VIBR = "vibr_#00",
-  DRUG = "drug_#00",
-  MEAT = "meat_#00",
-  UNDEF = "undef_#00",
-  SHEET = "sheet_#00",
-  BAGXL = "bagxl_#00",
-  JERRYCAN = "jerrycan_#00",
-  WOOD2 = "wood2_#00",
-  METAL = "metal_#00",
-  GRENADE = "grenade_#00",
-  PLATE = "plate_#00",
-  JERRYGUN_PART = "jerrygun_part_#00",
-  BANDAGE = "bandage_#00",
-  VODKA_DE = "vodka_de_#00",
-  JERRYGUN_OFF = "jerrygun_off_#00",
-  CINEMA = "cinema_#00",
-  EXPLO = "explo_#00",
-  HMEAT = "hmeat_#00",
-  GRENADE_EMPTY = "grenade_empty_#00",
-  BGRENADE = "bgrenade_#00",
-  BGRENADE_EMPTY = "bgrenade_empty_#00",
-  CHAINSAW_PART = "chainsaw_part_#00",
-  MIXERGUN_PART = "mixergun_part_#00",
-  RUSTINE = "rustine_#00",
-  LAWN_PART = "lawn_part_#00",
-  TUBE = "tube_#00",
-  CART_PART = "cart_part_#00",
-  POCKET_BELT = "pocket_belt_#00",
-  DRUG_HERO = "drug_hero_#00",
-  CHEST = "chest_#00",
-  CHEST_XL = "chest_xl_#00",
-  CHEST_TOOLS = "chest_tools_#00",
-  LAMP_ON = "lamp_on_#00",
-  MUSIC = "music_#00",
-  PHARMA = "pharma_#00",
-  PLATE_RAW = "plate_raw_#00",
-  RHUM = "rhum_#00",
-  COFFEE = "coffee_#00",
-  COFFEE_MACHINE = "coffee_machine_#00",
-  COFFEE_MACHINE_PART = "coffee_machine_part_#00",
-  ELECTRO = "electro_#00",
-  CHEST_CITIZEN = "chest_citizen_#00",
-  DRUG_WATER = "drug_water_#00",
-  RADIO_OFF = "radio_off_#00",
-  RADIO_ON = "radio_on_#00",
-  CYANURE = "cyanure_#00",
-  DOOR = "door_#00",
-  VEGETABLE = "vegetable_#00",
-  REPAIR_KIT_PART = "repair_kit_part_#00",
-  REPAIR_KIT = "repair_kit_#00",
-  WATERGUN_EMPTY = "watergun_empty_#00",
-  WATERGUN_OPT_3 = "watergun_opt_3_#00",
-  WATERGUN_OPT_2 = "watergun_opt_2_#00",
-  WATERGUN_OPT_1 = "watergun_opt_1_#00",
-  MIXERGUN_EMPTY = "mixergun_empty_#00",
-  CHAINSAW_EMPTY = "chainsaw_empty_#00",
-  PILEGUN_EMPTY = "pilegun_empty_#00",
-  TASER_EMPTY = "taser_empty_#00",
-  SPORT_ELEC_EMPTY = "sport_elec_empty_#00",
-  SPORT_ELEC = "sport_elec_#00",
-  BIG_PGUN_EMPTY = "big_pgun_empty_#00",
-  BIG_PGUN = "big_pgun_#00",
-  BIG_PGUN_PART = "big_pgun_part_#00",
-  TAGGER = "tagger_#00",
-  FLARE = "flare_#00",
-  JERRYGUN = "jerrygun_#00",
-  CHAIR_BASIC = "chair_basic_#00",
-  GUN = "gun_#00",
-  MACHINE_GUN = "machine_gun_#00",
-  DETO = "deto_#00",
-  CONCRETE = "concrete_#00",
-  CONCRETE_WALL = "concrete_wall_#00",
-  DRUG_RANDOM = "drug_random_#00",
-  DISINFECT = "disinfect_#00",
-  DIGGER = "digger_#00",
-  CHEST_FOOD = "chest_food_#00",
-  FOOD_BAG = "food_bag_#00",
-  FOOD_BAR1 = "food_bar1_#00",
-  FOOD_BAR2 = "food_bar2_#00",
-  FOOD_BAR3 = "food_bar3_#00",
-  FOOD_BISCUIT = "food_biscuit_#00",
-  FOOD_CHICK = "food_chick_#00",
-  FOOD_PIMS = "food_pims_#00",
-  FOOD_TARTE = "food_tarte_#00",
-  FOOD_SANDW = "food_sandw_#00",
-  FOOD_NOODLES = "food_noodles_#00",
-  SPICES = "spices_#00",
-  FOOD_NOODLES_HOT = "food_noodles_hot_#00",
-  CARDS = "cards_#00",
-  GAME_BOX = "game_box_#00",
-  WATERGUN_OPT_PART = "watergun_opt_part_#00",
-  VIBR_EMPTY = "vibr_empty_#00",
-  BONE_MEAT = "bone_meat_#00",
-  BONE = "bone_#00",
-  WOOD_BEAM = "wood_beam_#00",
-  METAL_BEAM = "metal_beam_#00",
-  METAL_BAD = "metal_bad_#00",
-  WOOD_BAD = "wood_bad_#00",
-  SAW_TOOL = "saw_tool_#00",
-  WOOD_LOG = "wood_log_#00",
-  ELECTRO_BOX = "electro_box_#00",
-  DECO_BOX = "deco_box_#00",
-  SAW_TOOL_PART = "saw_tool_part_#00",
-  MECANISM = "mecanism_#00",
-  TRESTLE = "trestle_#00",
-  TABLE = "table_#00",
-  WATER_CLEANER = "water_cleaner_#00",
-  VEGETABLE_TASTY = "vegetable_tasty_#00",
-  POWDER = "powder_#00",
-  FLASH = "flash_#00",
-  TEDDY = "teddy_#00",
-  WOOD_PLATE_PART = "wood_plate_part_#00",
-  WOOD_PLATE = "wood_plate_#00",
-  MONEY = "money_#00",
-  REPAIR_KIT_PART_RAW = "repair_kit_part_raw_#00",
-  RADIUS_MK2_PART = "radius_mk2_part_#00",
-  RADIUS_MK2 = "radius_mk2_#00",
-  REPAIR_ONE = "repair_one_#00",
-  ENGINE_PART = "engine_part_#00",
-  MACHINE_1 = "machine_1_#00",
-  MACHINE_2 = "machine_2_#00",
-  MACHINE_3 = "machine_3_#00",
-  RP_LETTER = "rp_letter_#00",
-  RP_SCROLL = "rp_scroll_#00",
-  RP_MANUAL = "rp_manual_#00",
-  RP_BOOK2 = "rp_book2_#00",
-  RP_BOOK_01 = "rp_book_#01",
-  RP_SHEETS = "rp_sheets_#00",
-  CHAIN = "chain_#00",
-  DISH = "dish_#00",
-  DISH_TASTY = "dish_tasty_#00",
-  HOME_BOX_XL = "home_box_xl_#00",
-  HOME_BOX = "home_box_#00",
-  HOME_DEF = "home_def_#00",
-  BOOK_GEN_LETTER = "book_gen_letter_#00",
-  BOOK_GEN_BOX = "book_gen_box_#00",
-  FENCE = "fence_#00",
-  WATERGUN_3 = "watergun_3_#00",
-  WATERGUN_2 = "watergun_2_#00",
-  WATERGUN_1 = "watergun_1_#00",
-  WATERGUN_OPT_5 = "watergun_opt_5_#00",
-  WATERGUN_OPT_4 = "watergun_opt_4_#00",
-  CIGS = "cigs_#00",
-  PILEGUN_UPKIT = "pilegun_upkit_#00",
-  PILEGUN_UP_EMPTY = "pilegun_up_empty_#00",
-  PILEGUN_UP = "pilegun_up_#00",
-  PILE_BROKEN = "pile_broken_#00",
-  RSC_PACK_3 = "rsc_pack_3_#00",
-  RSC_PACK_2 = "rsc_pack_2_#00",
-  RSC_PACK_1 = "rsc_pack_1_#00",
-  CAR_DOOR = "car_door_#00",
-  CAR_DOOR_PART = "car_door_part_#00",
-  POISON = "poison_#00",
-  POISON_PART = "poison_part_#00",
-  CHEST_HERO = "chest_hero_#00",
-  POSTAL_BOX = "postal_box_#00",
-  FOOD_ARMAG = "food_armag_#00",
-  FOOD_CANDIES = "food_candies_#00",
-  OUT_DEF = "out_def_#00",
-  TORCH = "torch_#00",
-  TORCH_OFF = "torch_off_#00",
-  CHAMA = "chama_#00",
-  CHAMA_TASTY = "chama_tasty_#00",
-  PC = "pc_#00",
-  SAFE = "safe_#00",
-  RP_TWIN = "rp_twin_#00",
-  WATER_CAN_EMPTY = "water_can_empty_#00",
-  WATER_CAN_1 = "water_can_1_#00",
-  WATER_CAN_2 = "water_can_2_#00",
-  WATER_CAN_3 = "water_can_3_#00",
-  BETA_DRUG_BAD = "beta_drug_bad_#00",
-  BETA_DRUG = "beta_drug_#00",
-  FRUIT_SUB_PART = "fruit_sub_part_#00",
-  FRUIT_PART = "fruit_part_#00",
-  FLESH_PART = "flesh_part_#00",
-  FLESH = "flesh_#00",
-  PHARMA_PART = "pharma_part_#00",
-  FRUIT = "fruit_#00",
-  WATER_CUP_PART = "water_cup_part_#00",
-  WATER_CUP = "water_cup_#00",
-  BANNED_NOTE = "banned_note_#00",
-  INFECT_POISON_PART = "infect_poison_part_#00",
-  TEDDY_01 = "teddy_#01",
-  WOODSTEAK = "woodsteak_#00",
-  CHRISTMAS_SUIT_1 = "christmas_suit_1_#00",
-  CHRISTMAS_SUIT_2 = "christmas_suit_2_#00",
-  CHRISTMAS_SUIT_3 = "christmas_suit_3_#00",
-  CHRISTMAS_SUIT_FULL = "christmas_suit_full_#00",
-  IPHONE = "iphone_#00",
-  SMELLY_MEAT = "smelly_meat_#00",
-  MAGLITE_OFF = "maglite_off_#00",
-  MAGLITE_1 = "maglite_1_#00",
-  MAGLITE_2 = "maglite_2_#00",
-  CADAVER = "cadaver_#00",
-  CADAVER_REMAINS = "cadaver_remains_#00",
-  SMOKE_BOMB = "smoke_bomb_#00",
-  SAND_BALL = "sand_ball_#00",
-  BPLAN_C = "bplan_c_#00",
-  BPLAN_U = "bplan_u_#00",
-  BPLAN_R = "bplan_r_#00",
-  BPLAN_E = "bplan_e_#00",
-  BPLAN_BOX = "bplan_box_#00",
-  BPLAN_BOX_E = "bplan_box_e_#00",
-  EGG = "egg_#00",
-  APPLE = "apple_#00",
-  BOOMFRUIT = "boomfruit_#00",
-  BPLAN_DROP = "bplan_drop_#00",
-  MAGNETICKEY = "magneticKey_#00",
-  BUMPKEY = "bumpKey_#00",
-  CLASSICKEY = "classicKey_#00",
-  PRINTS = "prints_#00",
-  PRINTS_01 = "prints_#01",
-  PRINTS_02 = "prints_#02",
-  VAGOUL = "vagoul_#00",
-  HBPLAN_U = "hbplan_u_#00",
-  HBPLAN_R = "hbplan_r_#00",
-  HBPLAN_E = "hbplan_e_#00",
-  BBPLAN_U = "bbplan_u_#00",
-  BBPLAN_R = "bbplan_r_#00",
-  BBPLAN_E = "bbplan_e_#00",
-  MBPLAN_U = "mbplan_u_#00",
-  MBPLAN_R = "mbplan_r_#00",
-  MBPLAN_E = "mbplan_e_#00",
-  SOUL_BLUE = "soul_blue_#00",
-  SOUL_RED = "soul_red_#00",
-  SOUL_BLUE_01 = "soul_blue_#01",
-  FEST = "fest_#00",
-  BRETZ = "bretz_#00",
-  TEKEL = "tekel_#00",
-  RLAUNC = "rlaunc_#00",
-  KALACH = "kalach_#00",
-  BUREAU = "bureau_#00",
-  DISTRI = "distri_#00",
-  RENNE = "renne_#00",
-  PAQUES = "paques_#00",
-  BADGE = "badge_#00",
-  KALACH_01 = "kalach_#01",
-  WIRE = "wire_#00",
-  OILCAN = "oilcan_#00",
-  LENS = "lens_#00",
-  ANGRYC = "angryc_#00",
-  CLAYMO = "claymo_#00",
-  DIODE = "diode_#00",
-  GUITAR = "guitar_#00",
-  LSD = "lsd_#00",
-  LPOINT4 = "lpoint4_#00",
-  LPOINT3 = "lpoint3_#00",
-  LPOINT2 = "lpoint2_#00",
-  LPOINT1 = "lpoint1_#00",
-  LPOINT = "lpoint_#00",
-  SCOPE = "scope_#00",
-  TRAPMA = "trapma_#00",
-  CHUDOL = "chudol_#00",
-  LILBOO = "lilboo_#00",
-  RYEBAG = "ryebag_#00",
-  FUNGUS = "fungus_#00",
-  HMBREW = "hmbrew_#00",
-  HIFIEV = "hifiev_#00",
-  CDPHIL = "cdphil_#00",
-  BQUIES = "bquies_#00",
-  STAFF_01 = "staff_#01",
-  CDBRIT = "cdbrit_#00",
-  CDELVI = "cdelvi_#00",
-  DFHIFI = "dfhifi_#00",
-  DFHIFI_01 = "dfhifi_#01",
-  CATBOX = "catbox_#00",
-  CHKSPK = "chkspk_#00",
-  PET_SNAKE2 = "pet_snake2_#00",
-  CHEST_CHRISTMAS_3 = "chest_christmas_3_#00",
-  CHEST_CHRISTMAS_2 = "chest_christmas_2_#00",
-  CHEST_CHRISTMAS_1 = "chest_christmas_1_#00",
-  OMG_THIS_WILL_KILL_YOU = "omg_this_will_kill_you_#00",
-  RP_SCROLL_01 = "rp_scroll_#01",
-  BASIC_SUIT = "basic_suit_#00",
-  BASIC_SUIT_DIRT = "basic_suit_dirt_#00",
-  VEST_ON = "vest_on_#00",
-  VEST_OFF = "vest_off_#00",
-  PELLE = "pelle_#00",
-  TAMED_PET = "tamed_pet_#00",
-  TAMED_PET_DRUG = "tamed_pet_drug_#00",
-  TAMED_PET_OFF = "tamed_pet_off_#00",
-  SURV_BOOK = "surv_book_#00",
-  KEYMOL = "keymol_#00",
-  SHIELD = "shield_#00",
-  SHAMAN = "shaman_#00",
-  FIREWORK_POWDER = "firework_powder_#00",
-  FIREWORK_TUBE = "firework_tube_#00",
-  FIREWORK_BOX = "firework_box_#00",
-  PUMPKIN_OFF = "pumpkin_off_#00",
-  PUMPKIN_ON = "pumpkin_on_#00",
-  XMAS_GIFT = "xmas_gift_#00",
-  STAFF2 = "staff2_#00",
-  VODKA = "vodka_#00",
-  POTION = "potion_#00",
-  PHOTO_3 = "photo_3_#00",
-  PHOTO_2 = "photo_2_#00",
-  PHOTO_1 = "photo_1_#00",
-  PHOTO_OFF = "photo_off_#00",
-  SOUL_YELLOW = "soul_yellow_#00",
-  FOOD_XMAS = "food_xmas_#00",
-  WOOD_XMAS = "wood_xmas_#00",
-  LEPRECHAUN_SUIT = "leprechaun_suit_#00",
-  BROKEN = "broken_#00",
-  BULLETS = "bullets_#00",
-  POSTAL_BOX_01 = "postal_box_#01",
-  POSTAL_BOX_XL = "postal_box_xl_#00",
-  CHRISTMAS_CANDY = "christmas_candy_#00",
-  ALARM_OFF = "alarm_off_#00",
-  ALARM_ON = "alarm_on_#00",
-  PUMPKIN_RAW = "pumpkin_raw_#00",
-  HURLING_STICK = "hurling_stick_#00",
-  GUINESS = "guiness_#00",
-  APRIL_DRUG = "april_drug_#00",
-  INFECT_POISON = "infect_poison_#00",
-  PUMPKIN_TASTY = "pumpkin_tasty_#00",
-  MEDIC = "medic_#00",
-  XMAS_GIFT_01 = "xmas_gift_#01",
-  TAMED_PET_GONE = "tamed_pet_gone_#00",
-  ALARM_1 = "alarm_1_#00",
-  ALARM_2 = "alarm_2_#00",
-  ALARM_3 = "alarm_3_#00",
-  NOODLE_PRINTS = "noodle_prints_#00",
-  NOODLE_PRINTS_01 = "noodle_prints_#01",
-  NOODLE_PRINTS_02 = "noodle_prints_#02",
-  SHOE = "shoe_#00",
-  BIKE_PART = "bike_part_#00",
-  BIKE = "bike_#00",
-  FLAG = "flag_#00",
-  SOCCER = "soccer_#00",
-  SOCCER_PART = "soccer_part_#00",
-  QUANTUM = "quantum_#00",
-  PHOTO_4 = "photo_4_#00",
-  CELLO_BOX = "cello_box_#00",
-  APPLE_BLUE = "apple_blue_#00",
-  SAW_TOOL_TEMP = "saw_tool_temp_#00",
-  MOLDY_FOOD_SUBPART = "moldy_food_subpart_#00",
-  MOLDY_FOOD_SPICY = "moldy_food_spicy_#00",
-  MOLDY_FOOD_PART = "moldy_food_part_#00",
-  MOLDY_FOOD = "moldy_food_#00"
-};
-
-export enum DropLocation {
-  DepletedZone,
-  Zone,
-  Trash,
-};
-
-export type Item = {
-  id: ItemId;
-  numericalId: number;
-  name: Record<Lang, string>;
-  description: Record<Lang, string>;
-  info?: Record<Lang, string>;
-  categories: ItemCategory[];
-  icon: string;
-  decoration: number;
-  heavy: boolean;
-  watchPoints: number;
-  event?: GameEvent;
-  available?: boolean;
-  actions: ItemAction[];
-  drops?: Partial<Record<DropLocation, number>>;
-};
+import { BuildingId, DropLocation, Item, ItemId } from "./types";
 
 export const items: Readonly<Record<ItemId, Item>> = {
   [ItemId.WATER]: {
@@ -2358,7 +1954,8 @@ export const items: Readonly<Record<ItemId, Item>> = {
       {
         type: ItemActionType.Use,
         conditions: [
-          { item: ItemId.WATER_CLEANER }
+          { item: ItemId.WATER_CLEANER },
+          ItemActionConditionEnum.Inside
         ],
         effects: [
           {
@@ -2391,55 +1988,22 @@ export const items: Readonly<Record<ItemId, Item>> = {
       {
         type: ItemActionType.Use,
         conditions: [
-          { item: ItemId.WATER_CLEANER }
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "water_#00",
-            odds: 75
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "water_#00",
-            odds: 75
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "water_#00",
-            odds: 25
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "water_#00",
-            odds: 25
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "water_#00",
-            odds: 25
-          }
-        ]
-      },
-      {
-        type: ItemActionType.Use,
-        conditions: [
-          
+          { building: BuildingId.ITEM_JERRYCAN }
         ],
         effects: [
           {
             type: ItemActionEffectType.AddWaterToWell,
-            value: "2-2",
+            value: 2,
             odds: 40
           },
           {
             type: ItemActionEffectType.AddWaterToWell,
-            value: "3-3",
+            value: 3,
             odds: 35
           },
           {
             type: ItemActionEffectType.AddWaterToWell,
-            value: "4-4",
+            value: 4,
             odds: 25
           }
         ]
@@ -2447,7 +2011,51 @@ export const items: Readonly<Record<ItemId, Item>> = {
       {
         type: ItemActionType.Use,
         conditions: [
-          { item: ItemId.WATER_CLEANER }
+          { building: BuildingId.ITEM_JERRYCAN_01 }
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AddWaterToWell,
+            value: 3,
+            odds: 5
+          },
+          {
+            type: ItemActionEffectType.AddWaterToWell,
+            value: 4,
+            odds: 15
+          },
+          {
+            type: ItemActionEffectType.AddWaterToWell,
+            value: 5,
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.AddWaterToWell,
+            value: 6,
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.AddWaterToWell,
+            value: 7,
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.AddWaterToWell,
+            value: 8,
+            odds: 15
+          },
+          {
+            type: ItemActionEffectType.AddWaterToWell,
+            value: 9,
+            odds: 5
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          { item: ItemId.WATER_CLEANER },
+          ItemActionConditionEnum.Inside
         ],
         effects: [
           {
@@ -3377,42 +2985,42 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "mixergun_part_#00",
-            odds: 18.8
+            odds: 19
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "watergun_opt_part_#00",
-            odds: 18.8
+            odds: 19
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pocket_belt_#00",
-            odds: 11.9
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "chainsaw_part_#00",
-            odds: 11.9
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "lawn_part_#00",
-            odds: 11.9
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pilegun_upkit_#00",
-            odds: 9.9
+            odds: 10
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "cutcut_#00",
-            odds: 9.9
+            odds: 10
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "big_pgun_part_#00",
-            odds: 6.9
+            odds: 7
           }
         ]
       },
@@ -3426,42 +3034,42 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "mixergun_part_#00",
-            odds: 18.8
+            odds: 19
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "watergun_opt_part_#00",
-            odds: 18.8
+            odds: 19
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pocket_belt_#00",
-            odds: 11.9
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "chainsaw_part_#00",
-            odds: 11.9
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "lawn_part_#00",
-            odds: 11.9
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pilegun_upkit_#00",
-            odds: 9.9
+            odds: 10
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "cutcut_#00",
-            odds: 9.9
+            odds: 10
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "big_pgun_part_#00",
-            odds: 6.9
+            odds: 7
           }
         ]
       },
@@ -3478,42 +3086,42 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "mixergun_part_#00",
-            odds: 18.8
+            odds: 19
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "watergun_opt_part_#00",
-            odds: 18.8
+            odds: 19
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pocket_belt_#00",
-            odds: 11.9
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "chainsaw_part_#00",
-            odds: 11.9
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "lawn_part_#00",
-            odds: 11.9
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pilegun_upkit_#00",
-            odds: 9.9
+            odds: 10
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "cutcut_#00",
-            odds: 9.9
+            odds: 10
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "big_pgun_part_#00",
-            odds: 6.9
+            odds: 7
           }
         ]
       }
@@ -3552,32 +3160,32 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "pharma_#00",
-            odds: 25.3
+            odds: 25
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "explo_#00",
-            odds: 19.2
+            odds: 19
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "meca_parts_#00",
-            odds: 17.2
+            odds: 17
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "rustine_#00",
-            odds: 13.1
+            odds: 13
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "tube_#00",
-            odds: 13.1
+            odds: 13
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pile_#00",
-            odds: 12.1
+            odds: 12
           }
         ]
       },
@@ -3594,32 +3202,32 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "pharma_#00",
-            odds: 25.3
+            odds: 25
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "explo_#00",
-            odds: 19.2
+            odds: 19
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "meca_parts_#00",
-            odds: 17.2
+            odds: 17
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "rustine_#00",
-            odds: 13.1
+            odds: 13
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "tube_#00",
-            odds: 13.1
+            odds: 13
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pile_#00",
-            odds: 12.1
+            odds: 12
           }
         ]
       }
@@ -5201,12 +4809,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "hmeat_#00",
-            odds: 27.7
+            odds: 28
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "can_#00",
-            odds: 23.4
+            odds: 23
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -5221,7 +4829,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "meat_#00",
-            odds: 14.9
+            odds: 15
           }
         ]
       },
@@ -5234,12 +4842,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "hmeat_#00",
-            odds: 27.7
+            odds: 28
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "can_#00",
-            odds: 23.4
+            odds: 23
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -5254,7 +4862,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "meat_#00",
-            odds: 14.9
+            odds: 15
           },
           {
             type: ItemActionEffectType.CP,
@@ -5297,37 +4905,37 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_bar2_#00",
-            odds: 15.1
+            odds: 15
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_chick_#00",
-            odds: 13.2
+            odds: 13
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_biscuit_#00",
-            odds: 12.7
+            odds: 13
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_pims_#00",
-            odds: 12.6
+            odds: 13
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_bar3_#00",
-            odds: 12.3
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_tarte_#00",
-            odds: 11.8
+            odds: 12
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "food_bar1_#00",
-            odds: 11.4
+            odds: 11
           },
           {
             type: ItemActionEffectType.CreateItem,
@@ -7341,32 +6949,32 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "rp_book2_#00",
-            odds: 16.7
+            odds: 17
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "rp_manual_#00",
-            odds: 16.7
+            odds: 17
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "rp_scroll_#00",
-            odds: 16.7
+            odds: 17
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "rp_scroll_#01",
-            odds: 16.7
+            odds: 17
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "rp_sheets_#00",
-            odds: 16.7
+            odds: 17
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "rp_letter_#00",
-            odds: 16.7
+            odds: 17
           }
         ]
       }
@@ -9193,7 +8801,8 @@ export const items: Readonly<Record<ItemId, Item>> = {
       {
         type: ItemActionType.Use,
         conditions: [
-          { item: ItemId.WATER_CLEANER }
+          { item: ItemId.WATER_CLEANER },
+          ItemActionConditionEnum.Inside
         ],
         effects: [
           {
@@ -12923,17 +12532,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "poison_part_#00",
-            odds: 33.3
+            odds: 33
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pet_cat_#00",
-            odds: 33.3
+            odds: 33
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "angryc_#00",
-            odds: 33.3
+            odds: 33
           }
         ]
       },
@@ -12950,17 +12559,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "poison_part_#00",
-            odds: 33.3
+            odds: 33
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pet_cat_#00",
-            odds: 33.3
+            odds: 33
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "angryc_#00",
-            odds: 33.3
+            odds: 33
           }
         ]
       }
@@ -14816,37 +14425,37 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_cleaner_#00",
-            odds: 22.2
+            odds: 22
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "drug_water_#00",
-            odds: 22.2
+            odds: 22
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "ryebag_#00",
-            odds: 16.7
+            odds: 17
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "xanax_#00",
-            odds: 14.4
+            odds: 14
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "pharma_#00",
-            odds: 11.1
+            odds: 11
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "disinfect_#00",
-            odds: 11.1
+            odds: 11
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "cyanure_#00",
-            odds: 1.1
+            odds: 1
           },
           {
             type: ItemActionEffectType.CreateItem,

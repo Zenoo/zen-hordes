@@ -1,6 +1,7 @@
-import { Building, buildings } from "../data/buildings";
-import { Item, items } from "../data/items";
-import { Ruin, ruins } from "../data/ruins";
+import { buildings } from "../data/buildings";
+import { items } from "../data/items";
+import { ruins } from "../data/ruins";
+import { Building, Item, Ruin } from "../data/types";
 import { ASSETS } from "../utils/constants";
 import { tooltip } from "../utils/tooltip";
 import { insertBetterItemTooltips } from "./betterTooltips";
@@ -960,6 +961,7 @@ export const openItemInWiki = (node: HTMLElement) => {
     {
       tab: "items",
       category: "all",
+      search: "",
     },
     true
   );

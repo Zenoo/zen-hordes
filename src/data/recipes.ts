@@ -1,20 +1,4 @@
-import { ItemId } from './items';
-import { PictoId } from './pictos';
-
-export type RecipeItem = {
-  item: ItemId;
-  odds?: number;
-  infected?: boolean;
-  poisoned?: boolean;
-  broken?: boolean;
-}
-
-export type Recipe = {
-  type: RecipeType;
-  in: RecipeItem[];
-  out: RecipeItem[];
-  pictos?: PictoId[];
-};
+import { ItemId, PictoId, Recipe } from './types';
 
 export const recipes: Readonly<Recipe>[] = [
   {
