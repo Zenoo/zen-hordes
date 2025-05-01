@@ -1181,7 +1181,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
       if (itemDrop) {
         const totalOdds =
           drops[dropLocation]
-            ?.filter((drop) => item.event === drop.event)
+            ?.filter((drop) => typeof drop.event === "undefined" || item.event === drop.event)
             .reduce((acc, drop) => acc + drop.odds, 0) ?? 0;
 
         if (!item.drops) {

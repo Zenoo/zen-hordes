@@ -9434,7 +9434,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       
     ],
     drops: {
-      [DropLocation.Zone]: 17.39
+      [DropLocation.Zone]: 0.66
     },
   },
   [ItemId.CHRISTMAS_SUIT_2]: {
@@ -9462,7 +9462,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       
     ],
     drops: {
-      [DropLocation.Zone]: 15.22
+      [DropLocation.Zone]: 0.58
     },
   },
   [ItemId.CHRISTMAS_SUIT_3]: {
@@ -9490,7 +9490,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       
     ],
     drops: {
-      [DropLocation.Zone]: 13.04
+      [DropLocation.Zone]: 0.5
     },
   },
   [ItemId.CHRISTMAS_SUIT_FULL]: {
@@ -9912,7 +9912,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       }
     ],
     drops: {
-      [DropLocation.Zone]: 21.74
+      [DropLocation.Zone]: 0.83
     },
   },
   [ItemId.BPLAN_C]: {
@@ -11897,7 +11897,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       
     ],
     drops: {
-      [DropLocation.Zone]: 21.74
+      [DropLocation.Zone]: 0.83
     },
   },
   [ItemId.PAQUES]: {
@@ -11925,7 +11925,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       
     ],
     drops: {
-      [DropLocation.Zone]: 100
+      [DropLocation.Zone]: 2.1
     },
   },
   [ItemId.BADGE]: {
@@ -14216,7 +14216,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       
     ],
     drops: {
-      [DropLocation.Zone]: 10.87
+      [DropLocation.Zone]: 0.41
     },
   },
   [ItemId.WOOD_XMAS]: {
@@ -14297,7 +14297,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       }
     ],
     drops: {
-      [DropLocation.Zone]: 13.46
+      [DropLocation.Zone]: 0.58
     },
   },
   [ItemId.BROKEN]: {
@@ -14600,7 +14600,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       
     ],
     drops: {
-      [DropLocation.Zone]: 100
+      [DropLocation.Zone]: 0.43
     },
   },
   [ItemId.HURLING_STICK]: {
@@ -14645,7 +14645,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       }
     ],
     drops: {
-      [DropLocation.Zone]: 48.08
+      [DropLocation.Zone]: 2.05
     },
   },
   [ItemId.GUINESS]: {
@@ -14692,7 +14692,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       }
     ],
     drops: {
-      [DropLocation.Zone]: 38.46
+      [DropLocation.Zone]: 1.64
     },
   },
   [ItemId.APRIL_DRUG]: {
