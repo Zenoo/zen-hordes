@@ -1,15 +1,9 @@
-import { ItemId } from "./items";
+import { DropLocation, ItemId } from "./items";
 
 export type ItemDrop = {
 id: ItemId;
 odds: number;
 event?: GameEvent;
-};
-
-export enum DropLocation {
-  DepletedZone,
-  Zone,
-  Trash,
 };
 
 export const itemDrops: Record<DropLocation, ItemDrop[]> = {

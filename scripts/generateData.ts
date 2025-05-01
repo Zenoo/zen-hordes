@@ -304,12 +304,6 @@ const generateItemDrops = () => {
 id: ItemId;
 odds: number;
 event?: GameEvent;
-};
-
-export enum DropLocation {
-  DepletedZone,
-  Zone,
-  Trash,
 };`;
 
   const itemDropObject = `export const itemDrops: Record<DropLocation, ItemDrop[]> = {
@@ -329,7 +323,7 @@ export enum DropLocation {
     .join("\n  ")}
 };`;
 
-  const ouput = `import { ItemId } from "./items";
+  const ouput = `import { DropLocation, ItemId } from "./items";
 
 ${types}
 
@@ -1404,7 +1398,13 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
   ${Object.values(items)
     .map((item) => `${sanitizeItemId(item)} = "${item.id}"`)
     .join(",\n  ")}
-}`;
+};`;
+
+  const dropLocationEnum = `export enum DropLocation {
+  DepletedZone,
+  Zone,
+  Trash,
+};`;
 
   const itemType = `export type Item = {
   id: ItemId;
@@ -1528,9 +1528,9 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
     .join(",\n  ")}
 };`;
 
-  const output = `import { DropLocation } from "./itemDrops";
+  const output = `${itemIdEnum}
 
-${itemIdEnum}
+${dropLocationEnum}
 
 ${itemType}
 

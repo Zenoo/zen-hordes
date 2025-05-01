@@ -1,5 +1,3 @@
-import { DropLocation } from "./itemDrops";
-
 export enum ItemId {
   WATER = "water_#00",
   PILE = "pile_#00",
@@ -381,7 +379,13 @@ export enum ItemId {
   MOLDY_FOOD_SPICY = "moldy_food_spicy_#00",
   MOLDY_FOOD_PART = "moldy_food_part_#00",
   MOLDY_FOOD = "moldy_food_#00"
-}
+};
+
+export enum DropLocation {
+  DepletedZone,
+  Zone,
+  Trash,
+};
 
 export type Item = {
   id: ItemId;

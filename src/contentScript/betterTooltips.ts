@@ -1,5 +1,5 @@
 import { BuildingId, buildings } from "../data/buildings";
-import { Item, ItemId, items } from "../data/items";
+import { DropLocation, Item, ItemId, items } from "../data/items";
 import { PictoId, pictos } from "../data/pictos";
 import { Recipe, recipes } from "../data/recipes";
 import { ruins } from "../data/ruins";
@@ -36,7 +36,11 @@ const T: Translations = {
     [`condition.${ItemActionConditionEnum.Dehydrated}`]: "Dehydrated",
     [`condition.${ItemActionConditionEnum.Shaman}`]: "Shaman",
     [`condition.${ItemActionConditionEnum.Inside}`]: "Inside",
+    [`dropLocation.${DropLocation.DepletedZone}`]: "a depleted zone",
+    [`dropLocation.${DropLocation.Zone}`]: "a zone",
+    [`dropLocation.${DropLocation.Trash}`]: "the trash",
     foundIn: "Found in",
+    foundWhenSearching: "Found when searching",
     unavailable: "Not available anymore",
     privateTownOnly: "Can only be found in private towns",
     poisonable: "Can be poisoned",
@@ -71,7 +75,11 @@ const T: Translations = {
     [`condition.${ItemActionConditionEnum.Dehydrated}`]: "Déshydraté",
     [`condition.${ItemActionConditionEnum.Shaman}`]: "Chaman",
     [`condition.${ItemActionConditionEnum.Inside}`]: "À l'intérieur",
+    [`dropLocation.${DropLocation.DepletedZone}`]: "une zone épuisée",
+    [`dropLocation.${DropLocation.Zone}`]: "une zone",
+    [`dropLocation.${DropLocation.Trash}`]: "les poubelles",
     foundIn: "Trouvé dans",
+    foundWhenSearching: "Trouvé en fouillant",
     unavailable: "N'est plus disponible",
     privateTownOnly: "Peut uniquement être trouvé dans les villes privées",
     poisonable: "Peut être empoisonné",
@@ -106,7 +114,11 @@ const T: Translations = {
     [`condition.${ItemActionConditionEnum.Dehydrated}`]: "Deshidratado",
     [`condition.${ItemActionConditionEnum.Shaman}`]: "Chaman",
     [`condition.${ItemActionConditionEnum.Inside}`]: "Dentro",
+    [`dropLocation.${DropLocation.DepletedZone}`]: "una zona agotada",
+    [`dropLocation.${DropLocation.Zone}`]: "una zona",
+    [`dropLocation.${DropLocation.Trash}`]: "la basura",
     foundIn: "Encontrado en",
+    foundWhenSearching: "Encontrado al buscar",
     unavailable: "Ya no disponible",
     privateTownOnly: "Solo se puede encontrar en ciudades privadas",
     poisonable: "Puede ser envenenado",
@@ -141,7 +153,11 @@ const T: Translations = {
     [`condition.${ItemActionConditionEnum.Dehydrated}`]: "Dehydriert",
     [`condition.${ItemActionConditionEnum.Shaman}`]: "Schamane",
     [`condition.${ItemActionConditionEnum.Inside}`]: "Drinnen",
+    [`dropLocation.${DropLocation.DepletedZone}`]: "eine erschöpfte Zone",
+    [`dropLocation.${DropLocation.Zone}`]: "eine Zone",
+    [`dropLocation.${DropLocation.Trash}`]: "den Müll",
     foundIn: "Gefunden in",
+    foundWhenSearching: "Gefunden beim Suchen",
     unavailable: "Nicht mehr verfügbar",
     privateTownOnly: "Kann nur in privaten Städten gefunden werden",
     poisonable: "Kann vergiftet werden",
@@ -1000,6 +1016,16 @@ export const insertBetterItemTooltips = (
       eventTag.setAttribute("data-event", item.event.toString());
       eventTag.textContent = t(T, `event.${item.event}`);
       node.append(eventTag);
+    }
+
+    // Drops
+    if (item.drops) {
+      // Create an info tag
+      const dropTag = document.createElement("div");
+      dropTag.classList.add("item-tag", "item-tag-drop", "zen-added");
+      dropTag.textContent = `${t(T, `foundWhenSearching`)}: ${Object.entries(item.drops)
+        .map(([key, value]) => `${t(T, `dropLocation.${key}`)} (${value}%)`).join(", ")}`;
+      node.append(dropTag);
     }
 
     // Ruin drops
