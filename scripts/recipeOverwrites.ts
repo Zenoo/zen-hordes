@@ -81,4 +81,11 @@ export const overwriteRecipeData = (
         out: [{ item: item.id, poisoned: true }],
       }))
   );
+
+  // Improvised hacksaw 15% break chance
+  recipes.push({
+    type: RecipeType.Workshop,
+    in: [{ item: "saw_tool_temp_#00" }],
+    out: [{ item: "saw_tool_temp_#00", odds: 85}, { item: "saw_tool_temp_#00", odds: 15, broken: true }],
+  });
 };

@@ -488,8 +488,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
     ) {
       conditions.push({ item: "WATER_CLEANER" });
     }
-    // Well fed labradoodle exclusive
-    if (action?.meta.includes("must_have_drug")) {
+    if (action?.meta.includes("must_have_steak")) {
       conditions.push({ item: "MEAT" });
     }
 
@@ -1072,9 +1071,13 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
         case "drug_hyd_1":
         case "drug_hyd_2":
         case "open_catbox_t1":
+        case "watercup_1b":
+        case "watercup_2":
         case "watercup_3":
         case "throw_animal_t1":
         case "throw_animal_t2":
+        case "wagging_flag":
+        case "fill_ksplash1":
           return;
       }
 
@@ -1830,6 +1833,7 @@ type RecipeItem = {
   odds?: number;
   infected?: boolean;
   poisoned?: boolean;
+  broken?: boolean;
 };
 
 export type Recipe = {
@@ -1925,6 +1929,7 @@ export type RecipeItem = {
   odds?: number;
   infected?: boolean;
   poisoned?: boolean;
+  broken?: boolean;
 }
 
 export type Recipe = {
@@ -1957,7 +1962,9 @@ export type Recipe = {
               Object.values(items).find((it) => it.id === o.item)
             )}${o.odds ? `, odds: ${o.odds}` : ""}${
               o.infected ? `, infected: true` : ""
-            }${o.poisoned ? `, poisoned: true` : ""} }`
+            }${o.poisoned ? `, poisoned: true` : ""}${
+              o.broken ? `, broken: true` : ""
+            }}`
         )
         .join(",\n      ")}
     ],${

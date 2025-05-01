@@ -81,7 +81,7 @@ Zen Hordes provides a button to quickly copy the Shaman Souls locations from bel
 
 ### Wiki
 
-Zen Hordes includes a button in the bottom right corner of the page that allows you to quickly access the MyHordes wiki. This feature provides you with easy access to the game's items, buildings, ruins and much more. The wiki is a valuable resource for players looking to learn more about the game mechanics.
+Zen Hordes includes a button in the bottom right corner of the page that allows you to quickly access the MyHordes wiki. This feature provides you with easy access to the game's items, buildings, ruins and much more. The wiki is a valuable resource for players looking to learn more about the game mechanics. Pressing H while hovering over an item will open the wiki page for that item.
 
 ![Wiki](.github/media/wiki.jpeg)
 

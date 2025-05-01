@@ -472,16 +472,16 @@ export const exportActionEffects = async () => {
       type: "spawn",
       data: [{ items: ["xmas_gift_#01"], odds: null }],
     },
-    spawn_cello_box: {
+    spawn_cellobox: {
       type: "spawn",
       data: [
         { items: ["cutcut_#00"], odds: 25 },
         { items: ["big_pgun_empty_#00"], odds: 25 },
-        { items: ["maglite_off_#00"], odds: 1 },
-        { items: ["pet_cat_#00"], odds: 1 },
+        { items: ["maglite_off_#00"], odds: 25 },
+        { items: ["pet_cat_#00"], odds: 25 },
       ],
     },
-    spawn_cello_box_extra: {
+    spawn_cellobox_extra: {
       type: "spawn",
       data: [
         { items: ["money_#00"], odds: 40 },

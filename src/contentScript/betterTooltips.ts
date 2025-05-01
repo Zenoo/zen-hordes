@@ -545,6 +545,7 @@ const createLine = (
       text: inItem.odds?.toString(),
       infected: inItem.infected,
       poisoned: inItem.poisoned,
+      broken: inItem.broken,
     }));
 
     // Add conditions dependig on the recipe type
@@ -724,6 +725,7 @@ const createLine = (
         : undefined,
       infected: outItem.infected,
       poisoned: outItem.poisoned,
+      broken: outItem.broken,
     }));
 
     // Add recipe pictos
@@ -799,6 +801,10 @@ const createLine = (
 
     if (outputIcon.poisoned) {
       wrapper.classList.add("poisoned");
+    }
+
+    if (outputIcon.broken) {
+      wrapper.classList.add("broken");
     }
 
     wrapper.classList.add(...(outputIcon.classList ?? []));

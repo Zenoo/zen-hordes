@@ -6089,6 +6089,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Eine Säge, dessen Zacken größtenteils verbogen sind. Du kannst mit ihr aber noch verschiedene Sachen zerteilen (Die Säge verringert die Verarbeitungskosten in der Werkstatt um 1 AP. Dafür musst du sie in deinem Rucksack haben.",
       [Lang.ES]: "Tiene la mayoría de los dientes torcidos, pero servirá para cortar muchas cosas (reduce en 1 PA el costo de las transformaciones en el taller, debes colocarla en tu mochila)."
     },
+    info: {
+      [Lang.EN]: "Reduces the number of {{AP}} needed in the Workshop by 1 when in the rucksack (non stackable).",
+      [Lang.FR]: "Réduit le nombre de {{AP}} nécessaires dans l'atelier de 1 lorsqu'elle est dans le sac à dos (non cumulable).",
+      [Lang.DE]: "Reduziert die Anzahl der {{AP}}, die im Workshop benötigt werden, um 1, wenn sie im Rucksack ist (nicht stapelbar).",
+      [Lang.ES]: "Reduce el número de {{AP}} necesarios en el taller en 1 cuando está en la mochila (no apilable)."
+    },
     categories: [ItemCategory.Miscellaneous],
     icon: "item_saw_tool",
     decoration: 0,
@@ -8947,7 +8953,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Auf der Schachtel steht: \"Für BETA-Tester unter 18 Jahren nicht geeignet\". Seltsam...",
       [Lang.ES]: "En la caja dice: \"No recomendado para beta-testers menores de 18 años\". Extraño."
     },
-    categories: [ItemCategory.Pharmacy, ItemCategory.APSource],
+    categories: [ItemCategory.Pharmacy, ItemCategory.APSource, ItemCategory.PrivateTown],
     icon: "item_beta_drug",
     decoration: 0,
     heavy: false,
@@ -9182,40 +9188,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: false,
     watchPoints: 0,
     actions: [
-      {
-        type: ItemActionType.Use,
-        conditions: [
-          { item: ItemId.WATER_CLEANER }
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.GetPicto,
-            value: "r_solban_#00"
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "water_cup_#00",
-            odds: 100
-          }
-        ]
-      },
-      {
-        type: ItemActionType.Use,
-        conditions: [
-          { item: ItemId.WATER_CLEANER }
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.GetPicto,
-            value: "r_solban_#00"
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "water_cup_#00",
-            odds: 100
-          }
-        ]
-      },
       {
         type: ItemActionType.Use,
         conditions: [
@@ -9614,7 +9586,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     info: {
       [Lang.EN]: "Increases the chances of survival while camping by 5%. Stackable.",
-      [Lang.FR]: "Augmente les chances de survie lors du camping de 5%. Empilable.",
+      [Lang.FR]: "Augmente les chances de survie lors du camping de 5%. Cumulable.",
       [Lang.DE]: "Erhöht die Überlebenschancen beim Campen um 5 %. Stapelbar.",
       [Lang.ES]: "Aumenta las posibilidades de supervivencia mientras acampa en un 5%. Apilable."
     },
@@ -9644,12 +9616,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.FR]: "Cette grosse lampe de poche au design douteux pourrait bien vous être utile pour vos fouilles dans le désert. Pour l'allumer, il suffit d'appuyer sur le nez du gros chien jaune, sur la poignée.",
       [Lang.DE]: "Diese große Taschenlampe ist wirklich nützlich für die Suche in der Wüste, vor allem Nachts. Möglicherweise kan man noch eine andere Verwendung für sie finden, wenn sie angehen würde....",
       [Lang.ES]: "Esta gran linterna de forma rara puede serte útil en tus búsquedas en el desierto. Si solo tuvieras una pila..."
-    },
-    info: {
-      [Lang.EN]: "Decreases the night time penalty from -10% to -2.5% while scavenging if on the ground in a zone.",
-      [Lang.FR]: "Diminue la pénalité de nuit de -10% à -2,5% lors de la fouille si elle est au sol dans une zone.",
-      [Lang.DE]: "Verringert die Nachtzeitstrafe von -10 % auf -2,5 %, während Sie in einer Zone nach Schätzen suchen.",
-      [Lang.ES]: "Disminuye la penalización nocturna del -10% al -2.5% mientras se busca si está en el suelo en una zona."
     },
     categories: [ItemCategory.Furniture, ItemCategory.Decoration],
     icon: "item_maglite_off",
@@ -11991,18 +11957,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
             value: "kalach_#00"
           }
         ]
-      },
-      {
-        type: ItemActionType.Use,
-        conditions: [
-          { item: ItemId.WATER }
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "kalach_#00"
-          }
-        ]
       }
     ],
   },
@@ -12512,7 +12466,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     info: {
       [Lang.EN]: "Halves the number of citizens required to estimate the attack. This effect does not stack.",
-      [Lang.FR]: "Divise par deux le nombre de citoyens nécessaires pour estimer l'attaque. Cet effet ne s'accumule pas.",
+      [Lang.FR]: "Divise par deux le nombre de citoyens nécessaires pour estimer l'attaque. Cet effet ne se cumule pas.",
       [Lang.DE]: "Halbiert die Anzahl der Bürger, die erforderlich sind, um den Angriff zu schätzen. Dieser Effekt ist nicht stapelbar.",
       [Lang.ES]: "Reduce a la mitad el número de ciudadanos necesarios para estimar el ataque. Este efecto no se acumula."
     },
@@ -13420,12 +13374,24 @@ export const items: Readonly<Record<ItemId, Item>> = {
       {
         type: ItemActionType.Use,
         conditions: [
-          
+          { item: ItemId.MEAT }
         ],
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
             value: "tamed_pet_drug_#00"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "tamed_pet_off_#00"
           },
           {
             type: ItemActionEffectType.AddStatus,
@@ -15339,18 +15305,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: false,
     watchPoints: 0,
     actions: [
-      {
-        type: ItemActionType.Use,
-        conditions: [
-          
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.AddStatus,
-            value: "tg_flag"
-          }
-        ]
-      }
+      
     ],
   },
   [ItemId.SOCCER]: {
@@ -15572,7 +15527,54 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: true,
     watchPoints: 0,
     actions: [
-      
+      {
+        type: ItemActionType.Open,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "money_#00",
+            odds: 40
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "lamp_#00",
+            odds: 30
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "cutcut_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "big_pgun_empty_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "maglite_off_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "pet_cat_#00",
+            odds: 25
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "gun_#00",
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "machine_gun_#00",
+            odds: 10
+          }
+        ]
+      }
     ],
   },
   [ItemId.APPLE_BLUE]: {
@@ -15625,6 +15627,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Der „Do It Yourself“-Wahn ist sicherlich gut, aber wenn es um die Werkzeuge selbst geht...? Niemand kann sagen, wie lange diese selbstgebaute Säge hält (Die Säge verringert die Verarbeitungskosten in der Werkstatt um 1 AP. Dafür musst du sie in deinem Rucksack haben).",
       [Lang.ES]: "La tendencia “Hazlo tú mismo” tiene sus puntos buenos, pero ¿qué pasa con las herramientas en sí? No sabes cuanto tiempo durará esta sierra casera (la sierra reduce el coste de transformaciones en el taller en 1 PA, debes colocarla en tu Mochila)."
     },
+    info: {
+      [Lang.EN]: "Reduces the number of {{AP}} needed in the Workshop by 1 when in the rucksack (non stackable).",
+      [Lang.FR]: "Réduit le nombre de {{AP}} nécessaires dans l'atelier de 1 lorsqu'elle est dans le sac à dos (non cumulable).",
+      [Lang.DE]: "Reduziert die Anzahl der {{AP}}, die im Workshop benötigt werden, um 1, wenn sie im Rucksack ist (nicht stapelbar).",
+      [Lang.ES]: "Reduce el número de {{AP}} necesarios en el taller en 1 cuando está en la mochila (no apilable)."
+    },
     categories: [ItemCategory.Miscellaneous],
     icon: "item_saw_tool_temp",
     decoration: 0,
@@ -15648,6 +15656,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.FR]: "Un peu gluant, mais appétissant.",
       [Lang.DE]: "Ziemlich schleimig, aber genießbar.",
       [Lang.ES]: "Un poco viscoso, pero apetitoso."
+    },
+    info: {
+      [Lang.EN]: "Can be found by failing to lure an animal at the Tamer Experiment Center.",
+      [Lang.FR]: "Peut être trouvé en échouant à attirer un animal au Centre d'essai des Apprivoiseurs.",
+      [Lang.DE]: "Kann gefunden werden, indem man ein Tier im Experimentelle Klinik der Dompteure nicht anlockt.",
+      [Lang.ES]: "Puede ser encontrado al fallar en atraer un animal en el Centro de pruebas de Domadores."
     },
     categories: [ItemCategory.Food, ItemCategory.APSource],
     icon: "item_moldy_food_subpart",

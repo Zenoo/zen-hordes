@@ -1842,7 +1842,7 @@
       }
     ]
   },
-  "spawn_cello_box": {
+  "spawn_cellobox": {
     "type": "spawn",
     "data": [
       {
@@ -1861,17 +1861,17 @@
         "items": [
           "maglite_off_#00"
         ],
-        "odds": 1
+        "odds": 25
       },
       {
         "items": [
           "pet_cat_#00"
         ],
-        "odds": 1
+        "odds": 25
       }
     ]
   },
-  "spawn_cello_box_extra": {
+  "spawn_cellobox_extra": {
     "type": "spawn",
     "data": [
       {

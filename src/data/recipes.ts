@@ -6,6 +6,7 @@ export type RecipeItem = {
   odds?: number;
   infected?: boolean;
   poisoned?: boolean;
+  broken?: boolean;
 }
 
 export type Recipe = {
@@ -22,7 +23,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.REPAIR_KIT_PART }
     ],
     out: [
-      { item: ItemId.REPAIR_KIT }
+      { item: ItemId.REPAIR_KIT}
     ],
   },
   {
@@ -31,7 +32,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CAN }
     ],
     out: [
-      { item: ItemId.CAN_OPEN }
+      { item: ItemId.CAN_OPEN}
     ],
   },
   {
@@ -40,7 +41,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.PLATE_RAW }
     ],
     out: [
-      { item: ItemId.PLATE }
+      { item: ItemId.PLATE}
     ],
   },
   {
@@ -49,7 +50,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.WOOD_LOG }
     ],
     out: [
-      { item: ItemId.WOOD2 }
+      { item: ItemId.WOOD2}
     ],
   },
   {
@@ -58,7 +59,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.WOOD_BAD }
     ],
     out: [
-      { item: ItemId.WOOD2 }
+      { item: ItemId.WOOD2}
     ],
   },
   {
@@ -67,7 +68,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.WOOD2 }
     ],
     out: [
-      { item: ItemId.WOOD_BEAM }
+      { item: ItemId.WOOD_BEAM}
     ],
   },
   {
@@ -76,7 +77,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.WOOD_BEAM }
     ],
     out: [
-      { item: ItemId.WOOD2 }
+      { item: ItemId.WOOD2}
     ],
   },
   {
@@ -85,7 +86,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.METAL_BAD }
     ],
     out: [
-      { item: ItemId.METAL }
+      { item: ItemId.METAL}
     ],
   },
   {
@@ -94,7 +95,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.METAL }
     ],
     out: [
-      { item: ItemId.METAL_BEAM }
+      { item: ItemId.METAL_BEAM}
     ],
   },
   {
@@ -103,7 +104,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.METAL_BEAM }
     ],
     out: [
-      { item: ItemId.METAL }
+      { item: ItemId.METAL}
     ],
   },
   {
@@ -112,12 +113,12 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.ELECTRO_BOX }
     ],
     out: [
-      { item: ItemId.ELECTRO, odds: 23 },
-      { item: ItemId.MECA_PARTS, odds: 18 },
-      { item: ItemId.PILEGUN_EMPTY, odds: 16 },
-      { item: ItemId.PILE, odds: 15 },
-      { item: ItemId.TAGGER, odds: 14 },
-      { item: ItemId.DETO, odds: 14 }
+      { item: ItemId.ELECTRO, odds: 23},
+      { item: ItemId.MECA_PARTS, odds: 18},
+      { item: ItemId.PILEGUN_EMPTY, odds: 16},
+      { item: ItemId.PILE, odds: 15},
+      { item: ItemId.TAGGER, odds: 14},
+      { item: ItemId.DETO, odds: 14}
     ],
   },
   {
@@ -126,10 +127,10 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.MECANISM }
     ],
     out: [
-      { item: ItemId.METAL, odds: 51 },
-      { item: ItemId.MECA_PARTS, odds: 32 },
-      { item: ItemId.TUBE, odds: 9 },
-      { item: ItemId.METAL_BAD, odds: 8 }
+      { item: ItemId.METAL, odds: 51},
+      { item: ItemId.MECA_PARTS, odds: 32},
+      { item: ItemId.TUBE, odds: 9},
+      { item: ItemId.METAL_BAD, odds: 8}
     ],
   },
   {
@@ -138,13 +139,13 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST }
     ],
     out: [
-      { item: ItemId.BANDAGE, odds: 28 },
-      { item: ItemId.VODKA, odds: 20 },
-      { item: ItemId.DRUG, odds: 16 },
-      { item: ItemId.DRUG_HERO, odds: 16 },
-      { item: ItemId.EXPLO, odds: 8 },
-      { item: ItemId.RHUM, odds: 8 },
-      { item: ItemId.LIGHTS, odds: 4 }
+      { item: ItemId.BANDAGE, odds: 28},
+      { item: ItemId.VODKA, odds: 20},
+      { item: ItemId.DRUG, odds: 16},
+      { item: ItemId.DRUG_HERO, odds: 16},
+      { item: ItemId.EXPLO, odds: 8},
+      { item: ItemId.RHUM, odds: 8},
+      { item: ItemId.LIGHTS, odds: 4}
     ],
   },
   {
@@ -153,14 +154,14 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST_XL }
     ],
     out: [
-      { item: ItemId.WATERGUN_OPT_PART, odds: 19 },
-      { item: ItemId.MIXERGUN_PART, odds: 19 },
-      { item: ItemId.POCKET_BELT, odds: 12 },
-      { item: ItemId.CHAINSAW_PART, odds: 12 },
-      { item: ItemId.LAWN_PART, odds: 12 },
-      { item: ItemId.PILEGUN_UPKIT, odds: 10 },
-      { item: ItemId.CUTCUT, odds: 10 },
-      { item: ItemId.BIG_PGUN_PART, odds: 7 }
+      { item: ItemId.WATERGUN_OPT_PART, odds: 19},
+      { item: ItemId.MIXERGUN_PART, odds: 19},
+      { item: ItemId.POCKET_BELT, odds: 12},
+      { item: ItemId.CHAINSAW_PART, odds: 12},
+      { item: ItemId.LAWN_PART, odds: 12},
+      { item: ItemId.PILEGUN_UPKIT, odds: 10},
+      { item: ItemId.CUTCUT, odds: 10},
+      { item: ItemId.BIG_PGUN_PART, odds: 7}
     ],
   },
   {
@@ -169,12 +170,12 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST_TOOLS }
     ],
     out: [
-      { item: ItemId.PHARMA, odds: 25 },
-      { item: ItemId.EXPLO, odds: 19 },
-      { item: ItemId.MECA_PARTS, odds: 17 },
-      { item: ItemId.RUSTINE, odds: 13 },
-      { item: ItemId.TUBE, odds: 13 },
-      { item: ItemId.PILE, odds: 12 }
+      { item: ItemId.PHARMA, odds: 25},
+      { item: ItemId.EXPLO, odds: 19},
+      { item: ItemId.MECA_PARTS, odds: 17},
+      { item: ItemId.RUSTINE, odds: 13},
+      { item: ItemId.TUBE, odds: 13},
+      { item: ItemId.PILE, odds: 12}
     ],
   },
   {
@@ -183,11 +184,11 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST_FOOD }
     ],
     out: [
-      { item: ItemId.HMEAT, odds: 13 },
-      { item: ItemId.CAN, odds: 11 },
-      { item: ItemId.FOOD_BAG, odds: 8 },
-      { item: ItemId.VEGETABLE, odds: 8 },
-      { item: ItemId.MEAT, odds: 7 }
+      { item: ItemId.HMEAT, odds: 13},
+      { item: ItemId.CAN, odds: 11},
+      { item: ItemId.FOOD_BAG, odds: 8},
+      { item: ItemId.VEGETABLE, odds: 8},
+      { item: ItemId.MEAT, odds: 7}
     ],
   },
   {
@@ -196,11 +197,11 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.DECO_BOX }
     ],
     out: [
-      { item: ItemId.CHAIR_BASIC, odds: 60 },
-      { item: ItemId.CHAIR, odds: 46 },
-      { item: ItemId.DOOR, odds: 44 },
-      { item: ItemId.TRESTLE, odds: 35 },
-      { item: ItemId.TABLE, odds: 35 }
+      { item: ItemId.CHAIR_BASIC, odds: 60},
+      { item: ItemId.CHAIR, odds: 46},
+      { item: ItemId.DOOR, odds: 44},
+      { item: ItemId.TRESTLE, odds: 35},
+      { item: ItemId.TABLE, odds: 35}
     ],
   },
   {
@@ -209,9 +210,9 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CATBOX }
     ],
     out: [
-      { item: ItemId.POISON_PART },
-      { item: ItemId.PET_CAT },
-      { item: ItemId.ANGRYC }
+      { item: ItemId.POISON_PART},
+      { item: ItemId.PET_CAT},
+      { item: ItemId.ANGRYC}
     ],
   },
   {
@@ -220,7 +221,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.PRINTS }
     ],
     out: [
-      { item: ItemId.MAGNETICKEY }
+      { item: ItemId.MAGNETICKEY}
     ],
   },
   {
@@ -229,7 +230,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.PRINTS_01 }
     ],
     out: [
-      { item: ItemId.BUMPKEY }
+      { item: ItemId.BUMPKEY}
     ],
   },
   {
@@ -238,7 +239,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.PRINTS_02 }
     ],
     out: [
-      { item: ItemId.CLASSICKEY }
+      { item: ItemId.CLASSICKEY}
     ],
   },
   {
@@ -247,7 +248,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.FOOD_XMAS }
     ],
     out: [
-      { item: ItemId.WOOD_XMAS }
+      { item: ItemId.WOOD_XMAS}
     ],
   },
   {
@@ -256,7 +257,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.NOODLE_PRINTS }
     ],
     out: [
-      { item: ItemId.MAGNETICKEY }
+      { item: ItemId.MAGNETICKEY}
     ],
   },
   {
@@ -265,7 +266,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.NOODLE_PRINTS_01 }
     ],
     out: [
-      { item: ItemId.BUMPKEY }
+      { item: ItemId.BUMPKEY}
     ],
   },
   {
@@ -274,7 +275,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.NOODLE_PRINTS_02 }
     ],
     out: [
-      { item: ItemId.CLASSICKEY }
+      { item: ItemId.CLASSICKEY}
     ],
   },
   {
@@ -285,7 +286,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.SAW_TOOL_TEMP }
+      { item: ItemId.SAW_TOOL_TEMP}
     ],
   },
   {
@@ -294,7 +295,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.SOUL_BLUE }
     ],
     out: [
-      { item: ItemId.SOUL_YELLOW }
+      { item: ItemId.SOUL_YELLOW}
     ],
     pictos: [PictoId.MYSTIC2],
   },
@@ -306,7 +307,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.PLATE }
     ],
     out: [
-      { item: ItemId.CAR_DOOR }
+      { item: ItemId.CAR_DOOR}
     ],
   },
   {
@@ -319,7 +320,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.WIRE }
     ],
     out: [
-      { item: ItemId.SHEET }
+      { item: ItemId.SHEET}
     ],
   },
   {
@@ -329,8 +330,8 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.POISON_PART }
     ],
     out: [
-      { item: ItemId.BONE },
-      { item: ItemId.SMELLY_MEAT }
+      { item: ItemId.BONE},
+      { item: ItemId.SMELLY_MEAT}
     ],
   },
   {
@@ -345,7 +346,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.TUBE }
     ],
     out: [
-      { item: ItemId.COFFEE_MACHINE }
+      { item: ItemId.COFFEE_MACHINE}
     ],
   },
   {
@@ -356,7 +357,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.ELECTRO }
     ],
     out: [
-      { item: ItemId.MUSIC }
+      { item: ItemId.MUSIC}
     ],
   },
   {
@@ -367,7 +368,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.STAFF2 }
     ],
     out: [
-      { item: ItemId.GUITAR }
+      { item: ItemId.GUITAR}
     ],
   },
   {
@@ -379,7 +380,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.METAL }
     ],
     out: [
-      { item: ItemId.CAR_DOOR }
+      { item: ItemId.CAR_DOOR}
     ],
   },
   {
@@ -389,7 +390,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.WOOD_BAD }
     ],
     out: [
-      { item: ItemId.TORCH }
+      { item: ItemId.TORCH}
     ],
   },
   {
@@ -399,7 +400,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.WOOD2 }
     ],
     out: [
-      { item: ItemId.WOOD_PLATE }
+      { item: ItemId.WOOD_PLATE}
     ],
   },
   {
@@ -409,7 +410,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.WATER }
     ],
     out: [
-      { item: ItemId.CONCRETE_WALL }
+      { item: ItemId.CONCRETE_WALL}
     ],
   },
   {
@@ -419,7 +420,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.TORCH }
     ],
     out: [
-      { item: ItemId.CHAMA_TASTY }
+      { item: ItemId.CHAMA_TASTY}
     ],
   },
   {
@@ -430,7 +431,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.WATER }
     ],
     out: [
-      { item: ItemId.FOOD_NOODLES_HOT }
+      { item: ItemId.FOOD_NOODLES_HOT}
     ],
   },
   {
@@ -442,8 +443,8 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.WOOD_BAD }
     ],
     out: [
-      { item: ItemId.COFFEE_MACHINE },
-      { item: ItemId.COFFEE }
+      { item: ItemId.COFFEE_MACHINE},
+      { item: ItemId.COFFEE}
     ],
   },
   {
@@ -456,7 +457,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.WATERGUN_OPT_EMPTY }
+      { item: ItemId.WATERGUN_OPT_EMPTY}
     ],
   },
   {
@@ -469,7 +470,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.PILEGUN_UP_EMPTY }
+      { item: ItemId.PILEGUN_UP_EMPTY}
     ],
   },
   {
@@ -481,7 +482,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.MIXERGUN_EMPTY }
+      { item: ItemId.MIXERGUN_EMPTY}
     ],
   },
   {
@@ -492,7 +493,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.JERRYGUN }
+      { item: ItemId.JERRYGUN}
     ],
   },
   {
@@ -505,7 +506,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.CHAINSAW_EMPTY }
+      { item: ItemId.CHAINSAW_EMPTY}
     ],
   },
   {
@@ -517,7 +518,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.BGRENADE_EMPTY }
+      { item: ItemId.BGRENADE_EMPTY}
     ],
   },
   {
@@ -529,7 +530,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.LAWN }
+      { item: ItemId.LAWN}
     ],
   },
   {
@@ -540,7 +541,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.FLASH }
+      { item: ItemId.FLASH}
     ],
   },
   {
@@ -551,7 +552,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.COURROIE }
     ],
     out: [
-      { item: ItemId.BIG_PGUN_EMPTY }
+      { item: ItemId.BIG_PGUN_EMPTY}
     ],
   },
   {
@@ -563,7 +564,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.TUBE }
     ],
     out: [
-      { item: ItemId.CART }
+      { item: ItemId.CART}
     ],
   },
   {
@@ -574,7 +575,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.PHARMA }
     ],
     out: [
-      { item: ItemId.POISON }
+      { item: ItemId.POISON}
     ],
   },
   {
@@ -584,7 +585,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.FLESH_PART }
     ],
     out: [
-      { item: ItemId.FLESH }
+      { item: ItemId.FLESH}
     ],
   },
   {
@@ -595,7 +596,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.MECA_PARTS }
     ],
     out: [
-      { item: ItemId.SAW_TOOL }
+      { item: ItemId.SAW_TOOL}
     ],
   },
   {
@@ -609,7 +610,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.BONE }
     ],
     out: [
-      { item: ItemId.ENGINE }
+      { item: ItemId.ENGINE}
     ],
   },
   {
@@ -621,7 +622,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.WOOD2 }
     ],
     out: [
-      { item: ItemId.REPAIR_KIT }
+      { item: ItemId.REPAIR_KIT}
     ],
   },
   {
@@ -631,7 +632,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.FRUIT_SUB_PART }
     ],
     out: [
-      { item: ItemId.FRUIT_PART }
+      { item: ItemId.FRUIT_PART}
     ],
   },
   {
@@ -641,12 +642,12 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.PHARMA }
     ],
     out: [
-      { item: ItemId.DRUG_HERO, odds: 49 },
-      { item: ItemId.DRUG_RANDOM, odds: 46 },
-      { item: ItemId.DRUG_WATER, odds: 46 },
-      { item: ItemId.WATER_CLEANER, odds: 43 },
-      { item: ItemId.DRUG, odds: 42 },
-      { item: ItemId.XANAX, odds: 40 }
+      { item: ItemId.DRUG_HERO, odds: 49},
+      { item: ItemId.DRUG_RANDOM, odds: 46},
+      { item: ItemId.DRUG_WATER, odds: 46},
+      { item: ItemId.WATER_CLEANER, odds: 43},
+      { item: ItemId.DRUG, odds: 42},
+      { item: ItemId.XANAX, odds: 40}
     ],
   },
   {
@@ -656,12 +657,12 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.PHARMA_PART }
     ],
     out: [
-      { item: ItemId.PHARMA, odds: 7 },
-      { item: ItemId.DRUG_RANDOM, odds: 2 },
-      { item: ItemId.DRUG_WATER, odds: 2 },
-      { item: ItemId.DRUG, odds: 1 },
-      { item: ItemId.XANAX, odds: 1 },
-      { item: ItemId.WATER_CLEANER, odds: 1 }
+      { item: ItemId.PHARMA, odds: 7},
+      { item: ItemId.DRUG_RANDOM, odds: 2},
+      { item: ItemId.DRUG_WATER, odds: 2},
+      { item: ItemId.DRUG, odds: 1},
+      { item: ItemId.XANAX, odds: 1},
+      { item: ItemId.WATER_CLEANER, odds: 1}
     ],
   },
   {
@@ -671,7 +672,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.DOOR_CARPET }
     ],
     out: [
-      { item: ItemId.TRAPMA }
+      { item: ItemId.TRAPMA}
     ],
   },
   {
@@ -683,7 +684,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.CLAYMO }
+      { item: ItemId.CLAYMO}
     ],
   },
   {
@@ -693,7 +694,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.LENS }
     ],
     out: [
-      { item: ItemId.SCOPE }
+      { item: ItemId.SCOPE}
     ],
   },
   {
@@ -703,7 +704,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.LENS }
     ],
     out: [
-      { item: ItemId.FUNGUS }
+      { item: ItemId.FUNGUS}
     ],
   },
   {
@@ -713,7 +714,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.POISON_PART }
     ],
     out: [
-      { item: ItemId.LSD }
+      { item: ItemId.LSD}
     ],
   },
   {
@@ -723,7 +724,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.LSD }
     ],
     out: [
-      { item: ItemId.CHKSPK }
+      { item: ItemId.CHKSPK}
     ],
   },
   {
@@ -733,7 +734,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.FRUIT_PART }
     ],
     out: [
-      { item: ItemId.FRUIT }
+      { item: ItemId.FRUIT}
     ],
   },
   {
@@ -743,7 +744,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.MUSIC }
     ],
     out: [
-      { item: ItemId.DFHIFI }
+      { item: ItemId.DFHIFI}
     ],
   },
   {
@@ -753,7 +754,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.MUSIC }
     ],
     out: [
-      { item: ItemId.HIFIEV }
+      { item: ItemId.HIFIEV}
     ],
   },
   {
@@ -763,7 +764,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.MUSIC }
     ],
     out: [
-      { item: ItemId.HIFIEV }
+      { item: ItemId.HIFIEV}
     ],
   },
   {
@@ -773,7 +774,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.BQUIES }
     ],
     out: [
-      { item: ItemId.DFHIFI_01 }
+      { item: ItemId.DFHIFI_01}
     ],
   },
   {
@@ -786,7 +787,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.DIODE }
     ],
     out: [
-      { item: ItemId.LPOINT4 }
+      { item: ItemId.LPOINT4}
     ],
   },
   {
@@ -797,7 +798,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.OILCAN }
     ],
     out: [
-      { item: ItemId.HMBREW }
+      { item: ItemId.HMBREW}
     ],
   },
   {
@@ -807,7 +808,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CAN_OPEN }
     ],
     out: [
-      { item: ItemId.WOOD_XMAS }
+      { item: ItemId.WOOD_XMAS}
     ],
   },
   {
@@ -817,7 +818,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.BULLETS }
     ],
     out: [
-      { item: ItemId.GUN }
+      { item: ItemId.GUN}
     ],
   },
   {
@@ -827,7 +828,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.BULLETS }
     ],
     out: [
-      { item: ItemId.MACHINE_GUN }
+      { item: ItemId.MACHINE_GUN}
     ],
   },
   {
@@ -838,7 +839,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHRISTMAS_SUIT_3 }
     ],
     out: [
-      { item: ItemId.CHRISTMAS_SUIT_FULL }
+      { item: ItemId.CHRISTMAS_SUIT_FULL}
     ],
   },
   {
@@ -849,7 +850,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.PHARMA }
     ],
     out: [
-      { item: ItemId.PUMPKIN_ON }
+      { item: ItemId.PUMPKIN_ON}
     ],
   },
   {
@@ -859,7 +860,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CUTTER }
     ],
     out: [
-      { item: ItemId.ANGRYC }
+      { item: ItemId.ANGRYC}
     ],
   },
   {
@@ -869,7 +870,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.SMALL_KNIFE }
     ],
     out: [
-      { item: ItemId.PUMPKIN_OFF }
+      { item: ItemId.PUMPKIN_OFF}
     ],
   },
   {
@@ -882,7 +883,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.DRUG_WATER }
     ],
     out: [
-      { item: ItemId.INFECT_POISON }
+      { item: ItemId.INFECT_POISON}
     ],
   },
   {
@@ -894,7 +895,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHAIN }
     ],
     out: [
-      { item: ItemId.BIKE }
+      { item: ItemId.BIKE}
     ],
   },
   {
@@ -904,7 +905,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.RUSTINE }
     ],
     out: [
-      { item: ItemId.SOCCER }
+      { item: ItemId.SOCCER}
     ],
   },
   {
@@ -914,7 +915,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.MOLDY_FOOD_SUBPART }
     ],
     out: [
-      { item: ItemId.MOLDY_FOOD_PART }
+      { item: ItemId.MOLDY_FOOD_PART}
     ],
   },
   {
@@ -924,7 +925,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.MOLDY_FOOD_SUBPART }
     ],
     out: [
-      { item: ItemId.MOLDY_FOOD }
+      { item: ItemId.MOLDY_FOOD}
     ],
   },
   {
@@ -934,7 +935,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.SPICES }
     ],
     out: [
-      { item: ItemId.MOLDY_FOOD_SPICY }
+      { item: ItemId.MOLDY_FOOD_SPICY}
     ],
   },
   {
@@ -943,7 +944,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.ELECTRO_BOX }
     ],
     out: [
-      { item: ItemId.PILE }
+      { item: ItemId.PILE}
     ],
   },
   {
@@ -952,7 +953,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.ELECTRO_BOX }
     ],
     out: [
-      { item: ItemId.PILEGUN_EMPTY }
+      { item: ItemId.PILEGUN_EMPTY}
     ],
   },
   {
@@ -961,7 +962,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.ELECTRO_BOX }
     ],
     out: [
-      { item: ItemId.ELECTRO }
+      { item: ItemId.ELECTRO}
     ],
   },
   {
@@ -970,7 +971,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.ELECTRO_BOX }
     ],
     out: [
-      { item: ItemId.MECA_PARTS }
+      { item: ItemId.MECA_PARTS}
     ],
   },
   {
@@ -979,7 +980,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.ELECTRO_BOX }
     ],
     out: [
-      { item: ItemId.TAGGER }
+      { item: ItemId.TAGGER}
     ],
   },
   {
@@ -988,7 +989,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.ELECTRO_BOX }
     ],
     out: [
-      { item: ItemId.DETO }
+      { item: ItemId.DETO}
     ],
   },
   {
@@ -997,7 +998,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.MECANISM }
     ],
     out: [
-      { item: ItemId.METAL }
+      { item: ItemId.METAL}
     ],
   },
   {
@@ -1006,7 +1007,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.MECANISM }
     ],
     out: [
-      { item: ItemId.TUBE }
+      { item: ItemId.TUBE}
     ],
   },
   {
@@ -1015,7 +1016,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.MECANISM }
     ],
     out: [
-      { item: ItemId.METAL_BAD }
+      { item: ItemId.METAL_BAD}
     ],
   },
   {
@@ -1024,7 +1025,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.MECANISM }
     ],
     out: [
-      { item: ItemId.MECA_PARTS }
+      { item: ItemId.MECA_PARTS}
     ],
   },
   {
@@ -1033,7 +1034,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST }
     ],
     out: [
-      { item: ItemId.DRUG }
+      { item: ItemId.DRUG}
     ],
   },
   {
@@ -1042,7 +1043,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST }
     ],
     out: [
-      { item: ItemId.BANDAGE }
+      { item: ItemId.BANDAGE}
     ],
   },
   {
@@ -1051,7 +1052,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST }
     ],
     out: [
-      { item: ItemId.VODKA }
+      { item: ItemId.VODKA}
     ],
   },
   {
@@ -1060,7 +1061,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST }
     ],
     out: [
-      { item: ItemId.EXPLO }
+      { item: ItemId.EXPLO}
     ],
   },
   {
@@ -1069,7 +1070,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST }
     ],
     out: [
-      { item: ItemId.LIGHTS }
+      { item: ItemId.LIGHTS}
     ],
   },
   {
@@ -1078,7 +1079,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST }
     ],
     out: [
-      { item: ItemId.DRUG_HERO }
+      { item: ItemId.DRUG_HERO}
     ],
   },
   {
@@ -1087,7 +1088,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST }
     ],
     out: [
-      { item: ItemId.RHUM }
+      { item: ItemId.RHUM}
     ],
   },
   {
@@ -1096,7 +1097,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST_TOOLS }
     ],
     out: [
-      { item: ItemId.PILE }
+      { item: ItemId.PILE}
     ],
   },
   {
@@ -1105,7 +1106,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST_TOOLS }
     ],
     out: [
-      { item: ItemId.MECA_PARTS }
+      { item: ItemId.MECA_PARTS}
     ],
   },
   {
@@ -1114,7 +1115,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST_TOOLS }
     ],
     out: [
-      { item: ItemId.RUSTINE }
+      { item: ItemId.RUSTINE}
     ],
   },
   {
@@ -1123,7 +1124,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST_TOOLS }
     ],
     out: [
-      { item: ItemId.TUBE }
+      { item: ItemId.TUBE}
     ],
   },
   {
@@ -1132,7 +1133,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST_TOOLS }
     ],
     out: [
-      { item: ItemId.PHARMA }
+      { item: ItemId.PHARMA}
     ],
   },
   {
@@ -1141,7 +1142,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST_TOOLS }
     ],
     out: [
-      { item: ItemId.EXPLO }
+      { item: ItemId.EXPLO}
     ],
   },
   {
@@ -1150,7 +1151,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST_FOOD }
     ],
     out: [
-      { item: ItemId.FOOD_BAG }
+      { item: ItemId.FOOD_BAG}
     ],
   },
   {
@@ -1159,7 +1160,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST_FOOD }
     ],
     out: [
-      { item: ItemId.CAN }
+      { item: ItemId.CAN}
     ],
   },
   {
@@ -1168,7 +1169,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST_FOOD }
     ],
     out: [
-      { item: ItemId.MEAT }
+      { item: ItemId.MEAT}
     ],
   },
   {
@@ -1177,7 +1178,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST_FOOD }
     ],
     out: [
-      { item: ItemId.HMEAT }
+      { item: ItemId.HMEAT}
     ],
   },
   {
@@ -1186,7 +1187,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CHEST_FOOD }
     ],
     out: [
-      { item: ItemId.VEGETABLE }
+      { item: ItemId.VEGETABLE}
     ],
   },
   {
@@ -1195,7 +1196,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.DECO_BOX }
     ],
     out: [
-      { item: ItemId.DOOR }
+      { item: ItemId.DOOR}
     ],
   },
   {
@@ -1204,7 +1205,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.DECO_BOX }
     ],
     out: [
-      { item: ItemId.CHAIR_BASIC }
+      { item: ItemId.CHAIR_BASIC}
     ],
   },
   {
@@ -1213,7 +1214,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.DECO_BOX }
     ],
     out: [
-      { item: ItemId.TRESTLE }
+      { item: ItemId.TRESTLE}
     ],
   },
   {
@@ -1222,7 +1223,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.DECO_BOX }
     ],
     out: [
-      { item: ItemId.TABLE }
+      { item: ItemId.TABLE}
     ],
   },
   {
@@ -1231,7 +1232,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.DECO_BOX }
     ],
     out: [
-      { item: ItemId.CHAIR }
+      { item: ItemId.CHAIR}
     ],
   },
   {
@@ -1240,7 +1241,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CATBOX }
     ],
     out: [
-      { item: ItemId.POISON_PART }
+      { item: ItemId.POISON_PART}
     ],
   },
   {
@@ -1249,7 +1250,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CATBOX }
     ],
     out: [
-      { item: ItemId.PET_CAT }
+      { item: ItemId.PET_CAT}
     ],
   },
   {
@@ -1258,7 +1259,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CATBOX }
     ],
     out: [
-      { item: ItemId.ANGRYC }
+      { item: ItemId.ANGRYC}
     ],
   },
   {
@@ -1268,7 +1269,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.PHARMA }
     ],
     out: [
-      { item: ItemId.NOODLE_PRINTS }
+      { item: ItemId.NOODLE_PRINTS}
     ],
   },
   {
@@ -1278,7 +1279,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.PHARMA }
     ],
     out: [
-      { item: ItemId.NOODLE_PRINTS_01 }
+      { item: ItemId.NOODLE_PRINTS_01}
     ],
   },
   {
@@ -1288,7 +1289,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.PHARMA }
     ],
     out: [
-      { item: ItemId.NOODLE_PRINTS_02 }
+      { item: ItemId.NOODLE_PRINTS_02}
     ],
   },
   {
@@ -1297,7 +1298,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.XMAS_GIFT }
     ],
     out: [
-      { item: ItemId.XMAS_GIFT_01 }
+      { item: ItemId.XMAS_GIFT_01}
     ],
   },
   {
@@ -1307,7 +1308,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.INFECT_POISON }
     ],
     out: [
-      { item: ItemId.WATER, infected: true }
+      { item: ItemId.WATER, infected: true}
     ],
   },
   {
@@ -1317,7 +1318,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.INFECT_POISON }
     ],
     out: [
-      { item: ItemId.CAN_OPEN, infected: true }
+      { item: ItemId.CAN_OPEN, infected: true}
     ],
   },
   {
@@ -1327,7 +1328,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.INFECT_POISON }
     ],
     out: [
-      { item: ItemId.DRUG, infected: true }
+      { item: ItemId.DRUG, infected: true}
     ],
   },
   {
@@ -1337,7 +1338,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.INFECT_POISON }
     ],
     out: [
-      { item: ItemId.VEGETABLE, infected: true }
+      { item: ItemId.VEGETABLE, infected: true}
     ],
   },
   {
@@ -1347,7 +1348,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.INFECT_POISON }
     ],
     out: [
-      { item: ItemId.FRUIT, infected: true }
+      { item: ItemId.FRUIT, infected: true}
     ],
   },
   {
@@ -1356,7 +1357,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.KEYMOL }
     ],
     out: [
-      { item: ItemId.PRINTS }
+      { item: ItemId.PRINTS}
     ],
   },
   {
@@ -1365,7 +1366,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.KEYMOL }
     ],
     out: [
-      { item: ItemId.PRINTS_01 }
+      { item: ItemId.PRINTS_01}
     ],
   },
   {
@@ -1374,7 +1375,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.KEYMOL }
     ],
     out: [
-      { item: ItemId.PRINTS_02 }
+      { item: ItemId.PRINTS_02}
     ],
   },
   {
@@ -1384,7 +1385,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.POISON }
     ],
     out: [
-      { item: ItemId.WATER, poisoned: true }
+      { item: ItemId.WATER, poisoned: true}
     ],
   },
   {
@@ -1394,7 +1395,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.POISON }
     ],
     out: [
-      { item: ItemId.CAN_OPEN, poisoned: true }
+      { item: ItemId.CAN_OPEN, poisoned: true}
     ],
   },
   {
@@ -1404,7 +1405,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.POISON }
     ],
     out: [
-      { item: ItemId.DRUG, poisoned: true }
+      { item: ItemId.DRUG, poisoned: true}
     ],
   },
   {
@@ -1414,7 +1415,7 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.POISON }
     ],
     out: [
-      { item: ItemId.VEGETABLE, poisoned: true }
+      { item: ItemId.VEGETABLE, poisoned: true}
     ],
   },
   {
@@ -1424,7 +1425,17 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.POISON }
     ],
     out: [
-      { item: ItemId.FRUIT, poisoned: true }
+      { item: ItemId.FRUIT, poisoned: true}
+    ],
+  },
+  {
+    type: RecipeType.Workshop,
+    in: [
+      { item: ItemId.SAW_TOOL_TEMP }
+    ],
+    out: [
+      { item: ItemId.SAW_TOOL_TEMP, odds: 85},
+      { item: ItemId.SAW_TOOL_TEMP, odds: 15, broken: true}
     ],
   }
 ];

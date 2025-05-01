@@ -383,7 +383,7 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         // info
         item.info = {
           en: "Halves the number of citizens required to estimate the attack. This effect does not stack.",
-          fr: "Divise par deux le nombre de citoyens nécessaires pour estimer l'attaque. Cet effet ne s'accumule pas.",
+          fr: "Divise par deux le nombre de citoyens nécessaires pour estimer l'attaque. Cet effet ne se cumule pas.",
           de: "Halbiert die Anzahl der Bürger, die erforderlich sind, um den Angriff zu schätzen. Dieser Effekt ist nicht stapelbar.",
           es: "Reduce a la mitad el número de ciudadanos necesarios para estimar el ataque. Este efecto no se acumula.",
         };
@@ -478,7 +478,6 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         };
         break;
       }
-      case "maglite_off_#00":
       case "maglite_1_#00":
       case "maglite_2_#00": {
         // info
@@ -494,7 +493,7 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         // info
         item.info = {
           en: "Increases the chances of survival while camping by 5%. Stackable.",
-          fr: "Augmente les chances de survie lors du camping de 5%. Empilable.",
+          fr: "Augmente les chances de survie lors du camping de 5%. Cumulable.",
           de: "Erhöht die Überlebenschancen beim Campen um 5 %. Stapelbar.",
           es: "Aumenta las posibilidades de supervivencia mientras acampa en un 5%. Apilable.",
         };
@@ -535,6 +534,32 @@ export const overwriteItemData = (items: Record<string, Item>) => {
           de: "Kann die x,y-Koordinaten des vergrabenen Verstecks des verbannten Bürgers enthalten.",
           es: "Puede contener las coordenadas x,y del escondite enterrado del ciudadano desterrado.",
         };
+        break;
+      }
+      case "saw_tool_#00":
+      case "saw_tool_temp_#00": {
+        // info
+        item.info = {
+          en: "Reduces the number of {{AP}} needed in the Workshop by 1 when in the rucksack (non stackable).",
+          fr: "Réduit le nombre de {{AP}} nécessaires dans l'atelier de 1 lorsqu'elle est dans le sac à dos (non cumulable).",
+          de: "Reduziert die Anzahl der {{AP}}, die im Workshop benötigt werden, um 1, wenn sie im Rucksack ist (nicht stapelbar).",
+          es: "Reduce el número de {{AP}} necesarios en el taller en 1 cuando está en la mochila (no apilable).",
+        };
+        break;
+      }
+      case "moldy_food_subpart_#00": {
+        // info
+        item.info = {
+          en: "Can be found by failing to lure an animal at the Tamer Experiment Center.",
+          fr: "Peut être trouvé en échouant à attirer un animal au Centre d'essai des Apprivoiseurs.",
+          de: "Kann gefunden werden, indem man ein Tier im Experimentelle Klinik der Dompteure nicht anlockt.",
+          es: "Puede ser encontrado al fallar en atraer un animal en el Centro de pruebas de Domadores.",
+        };
+        break;
+      }
+      case "beta_drug_#00": {
+        // Private town only
+        item.categories.push("PrivateTown");
         break;
       }
     }
