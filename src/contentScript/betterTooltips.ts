@@ -900,6 +900,9 @@ export const insertBetterItemTooltips = (
       return;
     }
 
+    // Set item id as data-tooltip-item-id for later use
+    node.setAttribute("data-tooltip-item-id", item.id);
+
     // Bank count
     const bankStateTimestamp = localStorage.getItem("bankStateTimestamp");
     if (bankStateTimestamp) {
@@ -1220,4 +1223,29 @@ export const storeBankState = (node: HTMLElement) => {
       localStorage.setItem("bankStateTimestamp", Date.now().toString());
     }
   }, 250);
+};
+
+export const updateItemBankCountPeriodically = () => {
+  setInterval(() => {
+    const bankStateTimestamp = localStorage.getItem("bankStateTimestamp");
+    if (!bankStateTimestamp) return;
+
+    // Get all item counts in tooltips
+    document
+      .querySelectorAll(".zen-better-tooltip .bank-count")
+      .forEach((bankCountTarget) => {
+        const itemId = bankCountTarget
+          .closest(".zen-better-tooltip")
+          ?.getAttribute("data-tooltip-item-id");
+
+        if (!itemId) return;
+
+        const count = localStorage.getItem(`bankItem_${itemId}`);
+
+        bankCountTarget.textContent = t(T, "bankCount", {
+          count: +(count ?? 0),
+          time: getRelativeTime(+bankStateTimestamp),
+        });
+      });
+  }, 1000 * 60 * 5); // Update every 5 minutes
 };

@@ -1,5 +1,5 @@
 import { resetOnDeath, trackBank } from "./bankTracker";
-import { insertBetterItemTooltips, insertBetterRuinTooltips, storeBankState } from "./betterTooltips";
+import { insertBetterItemTooltips, insertBetterRuinTooltips, storeBankState, updateItemBankCountPeriodically } from "./betterTooltips";
 import { displayCampingCalculator, updateCampingCalculatorWithCurrentParams } from "./campingCalculator";
 import { displayExternalCityLinks } from "./externalCityLink";
 import { displayUpdateButton } from "./externalSiteUpdater";
@@ -31,6 +31,7 @@ listenToBackgroundMessages();
 // should be handled here
 insertMapPreview();
 insertWiki();
+updateItemBankCountPeriodically();
 
 // Actions that need to wait for specific elements
 // to be added to the DOM should be handled here

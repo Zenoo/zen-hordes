@@ -18,8 +18,8 @@ $fileContents = preg_replace('/^use\s.*;\s*$/m', '', $fileContents);
 // Remove 'implements' from the class declaration
 $fileContents = preg_replace('/implements\s+\w+\s*/', '', $fileContents);
 
-// Add DropMod class after the namespace declaration
-$dropModClass = <<<'CLASS'
+// Add Recipe class after the namespace declaration
+$recipeClass = <<<'CLASS'
 class Recipe
 {
     const WorkshopType = 1;
@@ -32,7 +32,7 @@ class Recipe
 
 CLASS;
 
-$fileContents = preg_replace('/(namespace\s+[^;]+;\s*)/', '$1' . $dropModClass, $fileContents);
+$fileContents = preg_replace('/(namespace\s+[^;]+;\s*)/', '$1' . $recipeClass, $fileContents);
 
 // Save the modified contents back to the file
 file_put_contents($localFilePath, $fileContents);

@@ -4,7 +4,5 @@ dist/
 tmp/
 dist.zip
 source.zip
-scripts/data/RuinDataService.php
-scripts/data/RecipeDataService.php
-scripts/data/ActionDataService.php
+scripts/data/*.php
 .env

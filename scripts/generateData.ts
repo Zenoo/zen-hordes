@@ -101,6 +101,7 @@ export type Item = {
   event?: string;
   available?: boolean;
   actions: ItemAction[];
+  drops?: Record<string, number>;
 };
 
 type ActionResult =
@@ -224,7 +225,127 @@ const getItemByUid = (items: Record<string, Item>, item: string) => {
 
 const languages: Lang[] = [Lang.EN, Lang.FR, Lang.DE, Lang.ES];
 
-const generateItems = async () => {
+type ItemDrop = {
+  id: string;
+  odds: number;
+  event?: string;
+};
+
+const generateItemDrops = () => {
+  // Get item drops from the main repo
+  execSync("php scripts/exportDrops.php", { stdio: "inherit" });
+
+  const dropsData = JSON.parse(
+    fs.readFileSync(path.join(__dirname, "data", "itemDrops.json"), "utf-8")
+  ) as Record<string, Record<string, number | [number, number]>>;
+
+  // Merge trash_good and trash_bad into trash
+  // 12.5% for trash_good and 87.5% for trash_bad
+  dropsData.trash = {
+    ...Object.fromEntries(
+      Object.entries(dropsData.trash_good ?? {}).map(([key, value]) => [
+        key,
+        (Array.isArray(value) ? value[0] : value) * 125,
+      ])
+    ),
+    ...Object.fromEntries(
+      Object.entries(dropsData.trash_bad ?? {}).map(([key, value]) => [
+        key,
+        (Array.isArray(value) ? value[0] : value) * 875,
+      ])
+    ),
+  };
+
+  const mapDrops = ([key, value]: [string, number | [number, number]]) => {
+    const odds = Array.isArray(value) ? value[0] : value;
+    const eventId = Array.isArray(value) ? value[1] : undefined;
+
+    const drop: ItemDrop = {
+      id: key,
+      odds,
+    };
+
+    switch (eventId) {
+      // Ignore some events
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+      case 201:
+      case undefined:
+        break;
+      case 101:
+        drop.event = "Easter";
+        break;
+      case 102:
+        drop.event = "Christmas";
+        break;
+      case 103:
+        drop.event = "StPatrick";
+        break;
+      case 104:
+        drop.event = "Halloween";
+        break;
+      default:
+        throw new Error(`Unknown event id ${eventId}`);
+    }
+
+    return drop;
+  };
+
+  const drops = {
+    DepletedZone: Object.entries(dropsData.empty_dig ?? {}).map(mapDrops),
+    Zone: Object.entries(dropsData.base_dig ?? {}).map(mapDrops),
+    Trash: Object.entries(dropsData.trash ?? {}).map(mapDrops),
+  };
+
+  const types = `export type ItemDrop = {
+id: ItemId;
+odds: number;
+event?: GameEvent;
+};
+
+export enum DropLocation {
+  DepletedZone,
+  Zone,
+  Trash,
+};`;
+
+  const itemDropObject = `export const itemDrops: Record<DropLocation, ItemDrop[]> = {
+  ${Object.entries(drops)
+    .map(
+      ([key, value]) => `[DropLocation.${key}]: [
+    ${value
+      .map(
+        (drop) =>
+          `{ id: ItemId.${sanitizeItemId(drop.id)}, odds: ${drop.odds}${
+            drop.event ? `, event: GameEvent.${drop.event}` : ""
+          }}`
+      )
+      .join(",\n    ")}
+  ],`
+    )
+    .join("\n  ")}
+};`;
+
+  const ouput = `import { ItemId } from "./items";
+
+${types}
+
+${itemDropObject}`;
+
+  fs.writeFileSync(
+    path.join(__dirname, "..", "src", "data", "itemDrops.ts"),
+    ouput,
+    "utf-8"
+  );
+  console.log("itemDrops.ts file has been generated.");
+
+  return drops;
+};
+
+const generateItems = async (drops: Record<string, ItemDrop[]>) => {
   const items: Record<string, Item> = {};
 
   const filePath = path.join(__dirname, "data", "items.json");
@@ -1054,10 +1175,22 @@ const generateItems = async () => {
         item.event = "NewYear";
     }
 
-    // Add custom categories
-    if (item.heavy) {
-      item.categories.push("Heavy");
-    }
+    // Add drops
+    ["DepletedZone", "Zone", "Trash"].forEach((dropLocation) => {
+      const itemDrop = drops[dropLocation]?.find((drop) => drop.id === item.id);
+      if (itemDrop) {
+        const totalOdds =
+          drops[dropLocation]
+            ?.filter((drop) => item.event === drop.event)
+            .reduce((acc, drop) => acc + drop.odds, 0) ?? 0;
+
+        if (!item.drops) {
+          item.drops = {};
+        }
+
+        item.drops[dropLocation] = +(itemDrop.odds / totalOdds * 100).toFixed(2);
+      }
+    });
 
     if (item.watchPoints) {
       item.categories.push("GuardWeapon");
@@ -1287,6 +1420,7 @@ const generateItems = async () => {
   event?: GameEvent;
   available?: boolean;
   actions: ItemAction[];
+  drops?: Partial<Record<DropLocation, number>>;
 };`;
 
   const itemsObject = `export const items: Readonly<Record<ItemId, Item>> = {
@@ -1379,13 +1513,24 @@ const generateItems = async () => {
       }`
         )
         .join(",\n      ")}
-    ]
+    ],${
+      item.drops
+        ? `
+    drops: {
+      ${Object.entries(item.drops)
+        .map(([location, odds]) => `[DropLocation.${location}]: ${odds}`)
+        .join(",\n      ")}
+    },`
+        : ""
+    }
   }`
     )
     .join(",\n  ")}
 };`;
 
-  const output = `${itemIdEnum}
+  const output = `import { DropLocation } from "./itemDrops";
+
+${itemIdEnum}
 
 ${itemType}
 
@@ -2224,7 +2369,8 @@ ${pictosObject}`;
     );
   }
 
-  const items = await generateItems();
+  const drops = generateItemDrops();
+  const items = await generateItems(drops);
   await generateRuins(items);
   generateRecipes(items);
   await generateBuildings(items);

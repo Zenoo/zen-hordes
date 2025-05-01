@@ -1,3 +1,5 @@
+import { DropLocation } from "./itemDrops";
+
 export enum ItemId {
   WATER = "water_#00",
   PILE = "pile_#00",
@@ -395,6 +397,7 @@ export type Item = {
   event?: GameEvent;
   available?: boolean;
   actions: ItemAction[];
+  drops?: Partial<Record<DropLocation, number>>;
 };
 
 export const items: Readonly<Record<ItemId, Item>> = {
@@ -464,7 +467,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.PILE]: {
     id: ItemId.PILE,
@@ -488,7 +491,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 4.29
+    },
   },
   [ItemId.CAN]: {
     id: ItemId.CAN,
@@ -552,7 +558,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 2.15
+    },
   },
   [ItemId.CAN_OPEN]: {
     id: ItemId.CAN_OPEN,
@@ -587,7 +596,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.PILEGUN]: {
     id: ItemId.PILEGUN,
@@ -632,7 +641,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.TASER]: {
     id: ItemId.TASER,
@@ -673,7 +682,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WATERGUN_OPT_EMPTY]: {
     id: ItemId.WATERGUN_OPT_EMPTY,
@@ -720,7 +729,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.MIXERGUN]: {
     id: ItemId.MIXERGUN,
@@ -760,7 +769,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.CHAINSAW]: {
     id: ItemId.CHAINSAW,
@@ -777,7 +786,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Damit richtest du ein wahres Massaker an. Ob du das aber zu 100% unversehrt überstehst ist eine andere Frage... Diese umgebaute Höllenmaschine funktioniert - man glaubt es kaum - mit einer gewöhnlichen Batterie!",
       [Lang.ES]: "Con eso puedes darte el gusto de masacrar a tus atacantes. Recuerda que puedes salir victorioso pero no siempre ileso... Esta máquina infernal ha sido modificada y funciona (increíblemente) ¡con una sola pila!"
     },
-    categories: [ItemCategory.Armoury, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
     icon: "item_chainsaw",
     decoration: 0,
     heavy: true,
@@ -800,7 +809,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.LAWN]: {
     id: ItemId.LAWN,
@@ -817,7 +826,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Du magst es wenn es sauber ist und frisch nach Gras duftet? Vergiss das mal lieber ganz schnell. Wenn du ihn verwendest, wird es ganz anders riechen...",
       [Lang.ES]: "¿Te gusta que quede parejo, limpio y que huela a jardín primaveral? Olvídalo, cuando lo utilices será todo lo contrario."
     },
-    categories: [ItemCategory.Armoury, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Breakable],
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon, ItemCategory.Breakable],
     icon: "item_lawn",
     decoration: 0,
     heavy: true,
@@ -840,7 +849,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WRENCH]: {
     id: ItemId.WRENCH,
@@ -881,7 +890,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.SCREW]: {
     id: ItemId.SCREW,
@@ -922,7 +931,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26
+    },
   },
   [ItemId.STAFF]: {
     id: ItemId.STAFF,
@@ -963,7 +975,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.86
+    },
   },
   [ItemId.KNIFE]: {
     id: ItemId.KNIFE,
@@ -1003,7 +1018,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.17
+    },
   },
   [ItemId.CUTCUT]: {
     id: ItemId.CUTCUT,
@@ -1043,7 +1061,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.SMALL_KNIFE]: {
     id: ItemId.SMALL_KNIFE,
@@ -1084,7 +1102,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.43
+    },
   },
   [ItemId.SWISS_KNIFE]: {
     id: ItemId.SWISS_KNIFE,
@@ -1125,7 +1146,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.CUTTER]: {
     id: ItemId.CUTTER,
@@ -1166,7 +1187,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.43
+    },
   },
   [ItemId.CART]: {
     id: ItemId.CART,
@@ -1183,14 +1207,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Man nennt ihn auch \"Caddy\". Niemand weiß so recht, wozu er gut ist, außer um ein paar Gegenstände herumzufahren. Im Sand rollt er leider nicht ganz so gut.",
       [Lang.ES]: "Solo sirve para poner cosas dentro. Lo malo es que no rueda muy bien en la arena."
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.GuardWeapon],
     icon: "item_cart",
     decoration: 0,
     heavy: true,
     watchPoints: 15,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.CAN_OPENER]: {
     id: ItemId.CAN_OPENER,
@@ -1230,7 +1254,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.43
+    },
   },
   [ItemId.BAG]: {
     id: ItemId.BAG,
@@ -1254,7 +1281,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.69
+    },
   },
   [ItemId.LIGHTS]: {
     id: ItemId.LIGHTS,
@@ -1278,7 +1308,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.34
+    },
   },
   [ItemId.XANAX]: {
     id: ItemId.XANAX,
@@ -1321,7 +1354,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.34
+    },
   },
   [ItemId.CHAIR]: {
     id: ItemId.CHAIR,
@@ -1338,14 +1374,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "ZZzzzz... Knarr knarr... ZZzzzz... Knarr knarr...",
       [Lang.ES]: "ZZzzzz... Chillido... ZZzzzz... Chillido..."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration],
     icon: "item_chair",
     decoration: 5,
     heavy: true,
     watchPoints: 15,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26
+    },
   },
   [ItemId.RP_BOOK]: {
     id: ItemId.RP_BOOK,
@@ -1380,7 +1419,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.BED]: {
     id: ItemId.BED,
@@ -1397,7 +1439,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "ZZzzzz ... Quietsch ... ZZzzzz ... Quietsch",
       [Lang.ES]: "No te importa saber con qué fue rellenado, lo que importa es que es suave."
     },
-    categories: [ItemCategory.Defences, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.CampingBoost],
+    categories: [ItemCategory.Defences, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.CampingBoost],
     icon: "item_bed",
     decoration: 3,
     heavy: true,
@@ -1415,7 +1457,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.43
+    },
   },
   [ItemId.LAMP]: {
     id: ItemId.LAMP,
@@ -1450,7 +1495,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26
+    },
   },
   [ItemId.CARPET]: {
     id: ItemId.CARPET,
@@ -1467,14 +1515,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Leg ihn dir ins Wohnzimmer dann fallen dir all die grässlichen Dinge, die überall am Boden herum liegen nicht mehr so auf...",
       [Lang.ES]: "Servirá para esconder la suciedad que cubre el suelo de tu casa."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration],
     icon: "item_carpet",
     decoration: 10,
     heavy: true,
     watchPoints: 8,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.MUSIC_PART]: {
     id: ItemId.MUSIC_PART,
@@ -1491,14 +1539,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Eine kleine Hi-Fi Anlage vom Discounter nebenan. Schade, dass keine Batterien mehr drin sind, aber vielleicht kannst du ja welche auftreiben...",
       [Lang.ES]: "De los baratos... pero necesita una pila para funcionar."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
     icon: "item_music_part",
     decoration: 1,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.17
+    },
   },
   [ItemId.LOCK]: {
     id: ItemId.LOCK,
@@ -1522,7 +1573,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.34
+    },
   },
   [ItemId.DOOR_CARPET]: {
     id: ItemId.DOOR_CARPET,
@@ -1546,7 +1600,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.DICE]: {
     id: ItemId.DICE,
@@ -1570,7 +1624,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: -10,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.ENGINE]: {
     id: ItemId.ENGINE,
@@ -1587,14 +1641,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Es handelt sich um einen kleinen Motor, der mit Ölspuren und undefinierbaren Brennresten verschmutzt ist und der schwer wie Blei ist.",
       [Lang.ES]: "Está lleno de aceite y suena a piezas sueltas cuando lo sacudes. Pesa."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon],
     icon: "item_engine",
     decoration: 0,
     heavy: true,
     watchPoints: 30,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.COURROIE]: {
     id: ItemId.COURROIE,
@@ -1618,7 +1672,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.17
+    },
   },
   [ItemId.MECA_PARTS]: {
     id: ItemId.MECA_PARTS,
@@ -1642,7 +1699,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.86
+    },
   },
   [ItemId.PET_CHICK]: {
     id: ItemId.PET_CHICK,
@@ -1703,7 +1763,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.43
+    },
   },
   [ItemId.PET_PIG]: {
     id: ItemId.PET_PIG,
@@ -1720,7 +1783,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Sehr schön! Jetzt musst du nur noch einen Metzger finden. Nebenbei bemerkt: Du kannst es auch auf einen Zombie werfen ...",
       [Lang.ES]: "Bueno, solo queda encontrar a un carnicero. Si te sirve, también puedes lanzarlo contra un zombie..."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Animal],
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon, ItemCategory.Animal],
     icon: "item_pet_pig",
     decoration: 0,
     heavy: true,
@@ -1774,7 +1837,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.43
+    },
   },
   [ItemId.PET_RAT]: {
     id: ItemId.PET_RAT,
@@ -1835,7 +1901,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.6
+    },
   },
   [ItemId.PET_DOG]: {
     id: ItemId.PET_DOG,
@@ -1902,7 +1971,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.PET_CAT]: {
     id: ItemId.PET_CAT,
@@ -1969,7 +2038,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.34
+    },
   },
   [ItemId.PET_SNAKE]: {
     id: ItemId.PET_SNAKE,
@@ -1986,7 +2058,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Sie ist grün, beißt und zischt. Du brauchst nur einen Metzger, dann kannst du dir ein paar Reptiliensteaks machen. Auf einen Zombie kannst du sie auch werfen...",
       [Lang.ES]: "Es verde, muerde y hace zzzt-zzzt. Solo falta encontrar a un carnicero que nos la rebane para la merienda. También puedes lanzarla sobre un zombie..."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Animal],
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon, ItemCategory.Animal],
     icon: "item_pet_snake",
     decoration: 0,
     heavy: true,
@@ -2040,7 +2112,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.69
+    },
   },
   [ItemId.VIBR]: {
     id: ItemId.VIBR,
@@ -2083,7 +2158,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.DRUG]: {
     id: ItemId.DRUG,
@@ -2126,7 +2201,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.86
+    },
   },
   [ItemId.MEAT]: {
     id: ItemId.MEAT,
@@ -2161,7 +2239,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.43
+    },
   },
   [ItemId.UNDEF]: {
     id: ItemId.UNDEF,
@@ -2196,7 +2277,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.SHEET]: {
     id: ItemId.SHEET,
@@ -2220,7 +2301,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 10,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.BAGXL]: {
     id: ItemId.BAGXL,
@@ -2244,7 +2328,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.JERRYCAN]: {
     id: ItemId.JERRYCAN,
@@ -2373,7 +2457,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 1.29
+    },
   },
   [ItemId.WOOD2]: {
     id: ItemId.WOOD2,
@@ -2397,7 +2484,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 14.59,
+      [DropLocation.Trash]: 0.23
+    },
   },
   [ItemId.METAL]: {
     id: ItemId.METAL,
@@ -2421,7 +2512,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 9.01,
+      [DropLocation.Trash]: 0.08
+    },
   },
   [ItemId.GRENADE]: {
     id: ItemId.GRENADE,
@@ -2456,7 +2551,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.PLATE]: {
     id: ItemId.PLATE,
@@ -2473,7 +2568,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Fast nichts ist besser als eine rostige Blechplatte, um die Zombies am Eindringen zu hindern... Anmerkung: Verteidigungsgegenstände zählen mehr Punkte, wenn sie in der Bank aufbewahrt werden anstatt daheim.",
       [Lang.ES]: "Muy buena para protegerte de los zombies... Nota: Las defensas valen más puntos si son instaladas en el pueblo en vez de en tu casa."
     },
-    categories: [ItemCategory.Defences, ItemCategory.Heavy, ItemCategory.CampingBoost],
+    categories: [ItemCategory.Defences, ItemCategory.CampingBoost],
     icon: "item_plate",
     decoration: 0,
     heavy: true,
@@ -2491,7 +2586,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26
+    },
   },
   [ItemId.JERRYGUN_PART]: {
     id: ItemId.JERRYGUN_PART,
@@ -2515,7 +2613,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.BANDAGE]: {
     id: ItemId.BANDAGE,
@@ -2554,7 +2652,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26
+    },
   },
   [ItemId.VODKA_DE]: {
     id: ItemId.VODKA_DE,
@@ -2597,7 +2698,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.JERRYGUN_OFF]: {
     id: ItemId.JERRYGUN_OFF,
@@ -2632,7 +2733,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.CINEMA]: {
     id: ItemId.CINEMA,
@@ -2649,7 +2750,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Dieser defekte Videoprojektor ist zu nichts mehr zu gebrauchen. Die Linse sieht allerdings noch halbwegs intakt aus....nur hast du nichts, um sie zu entfernen...",
       [Lang.ES]: "Este proyector defectuoso ya no se puede utilizar para nada. Sin embargo, la lente todavía parece relativamente intacta... Desafortunadamente no tienes nada para desarmarla..."
     },
-    categories: [ItemCategory.Armoury, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
     icon: "item_cinema",
     decoration: 0,
     heavy: true,
@@ -2672,7 +2773,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.EXPLO]: {
     id: ItemId.EXPLO,
@@ -2696,7 +2800,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.77
+    },
   },
   [ItemId.HMEAT]: {
     id: ItemId.HMEAT,
@@ -2759,7 +2866,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.17
+    },
   },
   [ItemId.GRENADE_EMPTY]: {
     id: ItemId.GRENADE_EMPTY,
@@ -2806,7 +2916,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 6.01
+    },
   },
   [ItemId.BGRENADE]: {
     id: ItemId.BGRENADE,
@@ -2841,7 +2954,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BGRENADE_EMPTY]: {
     id: ItemId.BGRENADE_EMPTY,
@@ -2888,7 +3001,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.CHAINSAW_PART]: {
     id: ItemId.CHAINSAW_PART,
@@ -2905,14 +3018,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Das ist ein richtig lustiges Spielzeug. Allerdings brauchst du noch einen Riemen und noch ein paar andere Kleinigkeiten, um sie zum Laufen zu bringen...",
       [Lang.ES]: "Una herramienta muy divertida, pero le faltan algunas piezas para que funcione..."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    categories: [ItemCategory.Miscellaneous],
     icon: "item_chainsaw_part",
     decoration: 0,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.MIXERGUN_PART]: {
     id: ItemId.MIXERGUN_PART,
@@ -2936,7 +3049,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.RUSTINE]: {
     id: ItemId.RUSTINE,
@@ -2960,7 +3073,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 2.32
+    },
   },
   [ItemId.LAWN_PART]: {
     id: ItemId.LAWN_PART,
@@ -2977,14 +3093,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "DAS klassische Gerät für die Gartenarbeit. Es funktioniert ohne Strom und ist in seine Einzelteile zerlegt...Du musst ihn zusammenbauen.",
       [Lang.ES]: "Una herramienta indispensable, funciona sin energía, pero requiere ser armada."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    categories: [ItemCategory.Miscellaneous],
     icon: "item_lawn_part",
     decoration: 0,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.TUBE]: {
     id: ItemId.TUBE,
@@ -3008,7 +3124,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 1.03
+    },
   },
   [ItemId.CART_PART]: {
     id: ItemId.CART_PART,
@@ -3025,14 +3144,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Eine Art Einkaufswagen aus Metall. Leider fehlt ihm eine Radachse. Du müsstest sie durch irgendetwas ersetzen...",
       [Lang.ES]: "Una especie de carrito metálico al que le falta un eje. Habría que repararlo..."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy, ItemCategory.BagExtension],
+    categories: [ItemCategory.Miscellaneous, ItemCategory.BagExtension],
     icon: "item_cart_part",
     decoration: 0,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26
+    },
   },
   [ItemId.POCKET_BELT]: {
     id: ItemId.POCKET_BELT,
@@ -3056,7 +3178,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.DRUG_HERO]: {
     id: ItemId.DRUG_HERO,
@@ -3099,7 +3221,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.52
+    },
   },
   [ItemId.CHEST]: {
     id: ItemId.CHEST,
@@ -3116,7 +3241,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Eine komplett zerbeulte, alte rostige Kiste. Was könnte da wohl drin sein?",
       [Lang.ES]: "Una vieja caja metálica bastante oxidada y golpeada. ¿Qué podrá contener?"
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.GuardWeapon],
     icon: "item_chest",
     decoration: 0,
     heavy: true,
@@ -3212,7 +3337,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.69,
+      [DropLocation.Trash]: 0.08
+    },
   },
   [ItemId.CHEST_XL]: {
     id: ItemId.CHEST_XL,
@@ -3229,7 +3358,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Der Koffer ist wirklich schwer und enthält bestimmt etwas Wertvolles....Jetzt musst du nur noch das passende Werkzeug finden, denn mit deinen Zähnen bekommst du das nicht auf.",
       [Lang.ES]: "Pesa mucho y seguramente contiene algo precioso... Encuentra algo mejor que tus dientes para abrirlo."
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.GuardWeapon],
     icon: "item_chest_xl",
     decoration: 0,
     heavy: true,
@@ -3384,7 +3513,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.CHEST_TOOLS]: {
     id: ItemId.CHEST_TOOLS,
@@ -3401,7 +3533,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Diese alte Holzkiste enthält sicher ein paar brauchbare Kleinigkeiten...",
       [Lang.ES]: "Esta vieja caja de madera seguramente contiene cosas útiles..."
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.GuardWeapon],
     icon: "item_chest_tools",
     decoration: 0,
     heavy: true,
@@ -3487,7 +3619,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 1.29
+    },
   },
   [ItemId.LAMP_ON]: {
     id: ItemId.LAMP_ON,
@@ -3511,7 +3646,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 5,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.MUSIC]: {
     id: ItemId.MUSIC,
@@ -3528,14 +3663,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Gönn dir etwas Entspannung und höre dir ein bisschen Musik an. Hmmm... Ne Maxi-CD mit \"Zombie Eaters\" von Faith No More befindet sich noch im CD-Fach.",
       [Lang.ES]: "Relájate un poco escuchando los últimos \"hits\" del momento: \"Zombie de mi corazón\" o \"El Baile del Zombie - Versión Remix\"."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration],
     icon: "item_music",
     decoration: 10,
     heavy: true,
     watchPoints: -30,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.PHARMA]: {
     id: ItemId.PHARMA,
@@ -3559,7 +3694,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 3.43,
+      [DropLocation.Trash]: 0.08
+    },
   },
   [ItemId.PLATE_RAW]: {
     id: ItemId.PLATE_RAW,
@@ -3576,14 +3715,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Ein paar Blechplatten, die nur darauf warten, von dir daheim verbaut zu werden... Du musst sie nur noch korrekt zusammensetzen.",
       [Lang.ES]: "Bien podrían servir para reforzar las defensas de tu casa si los unes correctamente"
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    categories: [ItemCategory.Miscellaneous],
     icon: "item_plate_raw",
     decoration: 0,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.86
+    },
   },
   [ItemId.RHUM]: {
     id: ItemId.RHUM,
@@ -3626,7 +3768,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26
+    },
   },
   [ItemId.COFFEE]: {
     id: ItemId.COFFEE,
@@ -3661,7 +3806,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.COFFEE_MACHINE]: {
     id: ItemId.COFFEE_MACHINE,
@@ -3678,14 +3823,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Das ultimative Gerät für den Abenteuerer, der in dir schlummert. Sein einzigartiges Filtersystem stellt den besten Kaffee her, den man mit den hier erhältlichen Zutaten brühen kann. Frag besser nicht nach....",
       [Lang.ES]: "Ideal para despertar al aventurero que hay en ti. Su sistema de filtrado te permite preparar un delicioso café a base de ingredientes... Insólitos. Nota: Debes estar en el pueblo para poder usarla."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
     icon: "item_coffee_machine",
     decoration: 5,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.COFFEE_MACHINE_PART]: {
     id: ItemId.COFFEE_MACHINE_PART,
@@ -3702,14 +3847,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Diese Kaffeemaschine könnte sehr nützlich sein, nur ist sie komplett zerlegt.",
       [Lang.ES]: "Podría ser de una gran utilidad, pero está desarmada."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    categories: [ItemCategory.Miscellaneous],
     icon: "item_coffee_machine_part",
     decoration: 0,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.ELECTRO]: {
     id: ItemId.ELECTRO,
@@ -3733,7 +3881,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.43
+    },
   },
   [ItemId.CHEST_CITIZEN]: {
     id: ItemId.CHEST_CITIZEN,
@@ -3750,7 +3901,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Diese kleine Box enthält alles, was man so als neuer Bürger braucht! Sie ist wie eine Wundertüte oder eine Pralinenschachtel: Man weiß nie was man bekommt. Aber eigentlich ist sie'n Witz...",
       [Lang.ES]: "Es lo que recibe todo habitante cuando llega al pueblo. Es como una cajita de sorpresas."
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    categories: [ItemCategory.Containers_and_boxes],
     icon: "item_chest_citizen",
     decoration: 0,
     heavy: true,
@@ -3784,7 +3935,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26
+    },
   },
   [ItemId.DRUG_WATER]: {
     id: ItemId.DRUG_WATER,
@@ -3827,7 +3981,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.RADIO_OFF]: {
     id: ItemId.RADIO_OFF,
@@ -3862,7 +4016,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.RADIO_ON]: {
     id: ItemId.RADIO_ON,
@@ -3886,7 +4040,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: -15,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.CYANURE]: {
     id: ItemId.CYANURE,
@@ -3920,7 +4074,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.17
+    },
   },
   [ItemId.DOOR]: {
     id: ItemId.DOOR,
@@ -3937,7 +4094,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Eine alte Holztür. Das klassische Modell in weiß. Sie ist zwar total verdreckt, aber wer weiß, wozu du sie noch gebrauchen kannst...",
       [Lang.ES]: "Pues eso, una vieja puerta de madera... Podría ser útil."
     },
-    categories: [ItemCategory.Defences, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.CampingBoost],
+    categories: [ItemCategory.Defences, ItemCategory.GuardWeapon, ItemCategory.CampingBoost],
     icon: "item_door",
     decoration: 0,
     heavy: true,
@@ -3955,7 +4112,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.77
+    },
   },
   [ItemId.VEGETABLE]: {
     id: ItemId.VEGETABLE,
@@ -3990,7 +4150,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.REPAIR_KIT_PART]: {
     id: ItemId.REPAIR_KIT_PART,
@@ -4014,7 +4174,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.REPAIR_KIT]: {
     id: ItemId.REPAIR_KIT,
@@ -4057,7 +4217,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WATERGUN_EMPTY]: {
     id: ItemId.WATERGUN_EMPTY,
@@ -4104,7 +4264,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.86
+    },
   },
   [ItemId.WATERGUN_OPT_3]: {
     id: ItemId.WATERGUN_OPT_3,
@@ -4143,7 +4306,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WATERGUN_OPT_2]: {
     id: ItemId.WATERGUN_OPT_2,
@@ -4182,7 +4345,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WATERGUN_OPT_1]: {
     id: ItemId.WATERGUN_OPT_1,
@@ -4221,7 +4384,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.MIXERGUN_EMPTY]: {
     id: ItemId.MIXERGUN_EMPTY,
@@ -4256,7 +4419,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.CHAINSAW_EMPTY]: {
     id: ItemId.CHAINSAW_EMPTY,
@@ -4273,7 +4436,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Damit richtest du ein wahres Massaker an. Ob du das aber zu 100% unversehrt überstehst ist eine andere Frage... Diese umgebaute Höllenmaschine funktioniert - man glaubt es kaum - mit einer gewöhnlichen Batterie!",
       [Lang.ES]: "Con eso puedes darte el gusto de masacrar a tus atacantes. Recuerda que puedes salir victorioso pero no siempre ileso... Esta máquina infernal ha sido modificada y funciona (increíblemente) ¡con una sola pila!"
     },
-    categories: [ItemCategory.Armoury, ItemCategory.Heavy],
+    categories: [ItemCategory.Armoury],
     icon: "item_chainsaw_empty",
     decoration: 0,
     heavy: true,
@@ -4291,7 +4454,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.PILEGUN_EMPTY]: {
     id: ItemId.PILEGUN_EMPTY,
@@ -4326,7 +4489,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.69
+    },
   },
   [ItemId.TASER_EMPTY]: {
     id: ItemId.TASER_EMPTY,
@@ -4361,7 +4527,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.SPORT_ELEC_EMPTY]: {
     id: ItemId.SPORT_ELEC_EMPTY,
@@ -4396,7 +4562,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.34
+    },
   },
   [ItemId.SPORT_ELEC]: {
     id: ItemId.SPORT_ELEC,
@@ -4443,7 +4612,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BIG_PGUN_EMPTY]: {
     id: ItemId.BIG_PGUN_EMPTY,
@@ -4478,7 +4647,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BIG_PGUN]: {
     id: ItemId.BIG_PGUN,
@@ -4528,7 +4697,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BIG_PGUN_PART]: {
     id: ItemId.BIG_PGUN_PART,
@@ -4552,7 +4721,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.TAGGER]: {
     id: ItemId.TAGGER,
@@ -4576,7 +4748,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.69
+    },
   },
   [ItemId.FLARE]: {
     id: ItemId.FLARE,
@@ -4600,7 +4775,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 15,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.JERRYGUN]: {
     id: ItemId.JERRYGUN,
@@ -4640,7 +4815,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.CHAIR_BASIC]: {
     id: ItemId.CHAIR_BASIC,
@@ -4657,7 +4832,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Ein schlichter Stuhl mit lustigem Namen aus schwedischer Herstellung. Man kann damit Leute vermöbeln, aber besser du stellst ihn dir ins Wohnzimmer...",
       [Lang.ES]: "Una simple silla con nombre raro, de fabricación sueca. Puedes usarla para defenderte, pero es más útil si la guardas en tu casa..."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Breakable],
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Breakable],
     icon: "item_chair_basic",
     decoration: 2,
     heavy: true,
@@ -4681,7 +4856,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.34
+    },
   },
   [ItemId.GUN]: {
     id: ItemId.GUN,
@@ -4705,7 +4883,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: -20,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.MACHINE_GUN]: {
     id: ItemId.MACHINE_GUN,
@@ -4729,7 +4910,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: -25,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.DETO]: {
     id: ItemId.DETO,
@@ -4753,7 +4934,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.77
+    },
   },
   [ItemId.CONCRETE]: {
     id: ItemId.CONCRETE,
@@ -4770,14 +4954,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Ein großer Zementsack von mittelmäßiger Qualität... Wenn du den Zement in Wasser auflöst trocknet er ziemlich schnell und du erhälst einen besonders festen Beton, den du für allerhand Konstruktionen verwenden kannst!",
       [Lang.ES]: "Al mezclarlo con agua, se endurece rápidamente y se hace muy resistente."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    categories: [ItemCategory.Miscellaneous],
     icon: "item_concrete",
     decoration: 0,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 1.46
+    },
   },
   [ItemId.CONCRETE_WALL]: {
     id: ItemId.CONCRETE_WALL,
@@ -4794,7 +4981,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Sie ähneln in keinster Weise Bauziegeln, aber es handelt sich um Stahlbeton, welchen du sicherlich für die Verbesserung der Verteidigung deines Hauses verwenden kannst... Schlimmstenfalls kannst du sie auch auf ein paar Zombies werfen, so wie bei einer Demo.",
       [Lang.ES]: "Hormigón armado. Puede servir para reforzar las defensas de tu casa... o para ser lanzado sobre un zombie."
     },
-    categories: [ItemCategory.Defences, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Breakable],
+    categories: [ItemCategory.Defences, ItemCategory.GuardWeapon, ItemCategory.Breakable],
     icon: "item_concrete_wall",
     decoration: 0,
     heavy: true,
@@ -4817,7 +5004,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.DRUG_RANDOM]: {
     id: ItemId.DRUG_RANDOM,
@@ -4887,7 +5074,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.69
+    },
   },
   [ItemId.DISINFECT]: {
     id: ItemId.DISINFECT,
@@ -4934,7 +5124,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26
+    },
   },
   [ItemId.DIGGER]: {
     id: ItemId.DIGGER,
@@ -4969,7 +5162,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 1.03
+    },
   },
   [ItemId.CHEST_FOOD]: {
     id: ItemId.CHEST_FOOD,
@@ -4986,7 +5182,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Ein unerträglicher Verwesungsgestank kitzelt deine Nase als du die Kiste anfasst. Du bist dir fast sicher, dass sie etwas Essbares enthält. Du hoffst es zumindest.",
       [Lang.ES]: "Un horrible olor a comida descompuesta sale de esa caja... Pero estás casi seguro de que aún queda algo comestible..."
     },
-    categories: [ItemCategory.Food, ItemCategory.Heavy],
+    categories: [ItemCategory.Food],
     icon: "item_chest_food",
     decoration: 0,
     heavy: true,
@@ -5062,7 +5258,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.34
+    },
   },
   [ItemId.FOOD_BAG]: {
     id: ItemId.FOOD_BAG,
@@ -5133,7 +5332,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 4.29
+    },
   },
   [ItemId.FOOD_BAR1]: {
     id: ItemId.FOOD_BAR1,
@@ -5168,7 +5370,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.FOOD_BAR2]: {
     id: ItemId.FOOD_BAR2,
@@ -5203,7 +5405,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.FOOD_BAR3]: {
     id: ItemId.FOOD_BAR3,
@@ -5238,7 +5440,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.FOOD_BISCUIT]: {
     id: ItemId.FOOD_BISCUIT,
@@ -5273,7 +5475,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.FOOD_CHICK]: {
     id: ItemId.FOOD_CHICK,
@@ -5308,7 +5510,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.FOOD_PIMS]: {
     id: ItemId.FOOD_PIMS,
@@ -5343,7 +5545,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.FOOD_TARTE]: {
     id: ItemId.FOOD_TARTE,
@@ -5378,7 +5580,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.FOOD_SANDW]: {
     id: ItemId.FOOD_SANDW,
@@ -5413,7 +5615,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.FOOD_NOODLES]: {
     id: ItemId.FOOD_NOODLES,
@@ -5448,7 +5650,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.69
+    },
   },
   [ItemId.SPICES]: {
     id: ItemId.SPICES,
@@ -5472,7 +5677,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.43
+    },
   },
   [ItemId.FOOD_NOODLES_HOT]: {
     id: ItemId.FOOD_NOODLES_HOT,
@@ -5507,7 +5715,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.CARDS]: {
     id: ItemId.CARDS,
@@ -5531,7 +5739,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: -10,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.GAME_BOX]: {
     id: ItemId.GAME_BOX,
@@ -5572,7 +5780,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.17
+    },
   },
   [ItemId.WATERGUN_OPT_PART]: {
     id: ItemId.WATERGUN_OPT_PART,
@@ -5596,7 +5807,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.VIBR_EMPTY]: {
     id: ItemId.VIBR_EMPTY,
@@ -5631,7 +5842,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.17
+    },
   },
   [ItemId.BONE_MEAT]: {
     id: ItemId.BONE_MEAT,
@@ -5706,7 +5920,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BONE]: {
     id: ItemId.BONE,
@@ -5746,7 +5960,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WOOD_BEAM]: {
     id: ItemId.WOOD_BEAM,
@@ -5763,14 +5977,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Notdürftig zusammengebundene Holzstücke, die einen relativ stabilen Stützbalken abgeben.",
       [Lang.ES]: "Varias piezas de madera unidas para ser muy resistentes."
     },
-    categories: [ItemCategory.Resources, ItemCategory.Heavy],
+    categories: [ItemCategory.Resources],
     icon: "item_wood_beam",
     decoration: 0,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 1.03
+    },
   },
   [ItemId.METAL_BEAM]: {
     id: ItemId.METAL_BEAM,
@@ -5787,14 +6004,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Eine schnell zusammengebaute Metallstruktur, die ein gutes stützendes Bauteil abgibt.",
       [Lang.ES]: "Un sólido soporte para una construcción."
     },
-    categories: [ItemCategory.Resources, ItemCategory.Heavy],
+    categories: [ItemCategory.Resources],
     icon: "item_metal_beam",
     decoration: 0,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.52
+    },
   },
   [ItemId.METAL_BAD]: {
     id: ItemId.METAL_BAD,
@@ -5818,7 +6038,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.DepletedZone]: 37.5
+    },
   },
   [ItemId.WOOD_BAD]: {
     id: ItemId.WOOD_BAD,
@@ -5842,7 +6065,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.DepletedZone]: 62.5
+    },
   },
   [ItemId.SAW_TOOL]: {
     id: ItemId.SAW_TOOL,
@@ -5866,7 +6092,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.WOOD_LOG]: {
     id: ItemId.WOOD_LOG,
@@ -5883,14 +6109,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Ein schöner Holzscheit, den du als Hocker für deine Einrichtung verwenden kannst. Was willst du mehr? Ist doch besser als nichts.",
       [Lang.ES]: "Un buen pedazo de madera que puede servir de taburete en tu casa. Después de todo, es mejor que nada."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
     icon: "item_wood_log",
     decoration: 2,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.17
+    },
   },
   [ItemId.ELECTRO_BOX]: {
     id: ItemId.ELECTRO_BOX,
@@ -5914,7 +6143,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.77
+    },
   },
   [ItemId.DECO_BOX]: {
     id: ItemId.DECO_BOX,
@@ -5931,14 +6163,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Ein Möbelstück, das in seine Einzelteile zerlegt ist. Schwer zu sagen, was es ist...",
       [Lang.ES]: "Una caja con muchas piezas, no sabes lo que es..."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon],
     icon: "item_deco_box",
     decoration: 0,
     heavy: true,
     watchPoints: 15,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 1.12
+    },
   },
   [ItemId.SAW_TOOL_PART]: {
     id: ItemId.SAW_TOOL_PART,
@@ -5962,7 +6197,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.MECANISM]: {
     id: ItemId.MECANISM,
@@ -5986,7 +6224,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.86
+    },
   },
   [ItemId.TRESTLE]: {
     id: ItemId.TRESTLE,
@@ -6003,7 +6244,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Ein relativ solider Holzbock, den du zweifelsohne für deine persönliche Verteidigung oder für die Stadtverteidigung gebrauchen kannst.",
       [Lang.ES]: "Puede servir muy bien para sostener las defensas de tu casa o del pueblo."
     },
-    categories: [ItemCategory.Defences, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.CampingBoost],
+    categories: [ItemCategory.Defences, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.CampingBoost],
     icon: "item_trestle",
     decoration: 1,
     heavy: true,
@@ -6021,7 +6262,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.69
+    },
   },
   [ItemId.TABLE]: {
     id: ItemId.TABLE,
@@ -6038,7 +6282,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Der Tisch lässt sich ganz leicht mit Gummizügen und Holzstiften zusammenbauen. In deinem Wohnzimmer wird er ein richtiger Hingucker sein. Und wenn du ihn senkrecht stellst, kann er dir eines Nachts vielleicht sogar das Leben retten.",
       [Lang.ES]: "Armada con elásticos y pedazos de madera, irá muy bien en el \"salón\" de tu casa. Y colocada verticalmente podría salvarte la vida una de estas noches."
     },
-    categories: [ItemCategory.Defences, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.CampingBoost],
+    categories: [ItemCategory.Defences, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.CampingBoost],
     icon: "item_table",
     decoration: 3,
     heavy: true,
@@ -6056,7 +6300,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WATER_CLEANER]: {
     id: ItemId.WATER_CLEANER,
@@ -6080,7 +6324,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.69
+    },
   },
   [ItemId.VEGETABLE_TASTY]: {
     id: ItemId.VEGETABLE_TASTY,
@@ -6115,7 +6362,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.POWDER]: {
     id: ItemId.POWDER,
@@ -6139,7 +6386,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 1.03
+    },
   },
   [ItemId.FLASH]: {
     id: ItemId.FLASH,
@@ -6174,7 +6424,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.TEDDY]: {
     id: ItemId.TEDDY,
@@ -6210,7 +6460,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WOOD_PLATE_PART]: {
     id: ItemId.WOOD_PLATE_PART,
@@ -6227,14 +6477,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Eine lose Ansammlung von Brettern, die früher wahrscheinlich einen Holzdeckel formten. Du könntest ihn gut für die Verteidigung gebrauchen, allerdings brauchst du etwas, um die Bretter zu fixieren.",
       [Lang.ES]: "Una vieja parrilla de tablas que servía para tapar una gran caja. Podría serte útil como defensa si encontrases algo para reforzarla."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    categories: [ItemCategory.Miscellaneous],
     icon: "item_wood_plate_part",
     decoration: 0,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 1.37
+    },
   },
   [ItemId.WOOD_PLATE]: {
     id: ItemId.WOOD_PLATE,
@@ -6251,7 +6504,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Dieser große Kistendeckel könnte dir gute Dienste leisten, um ein Fenster oder eine Tür bei dir daheim zu verriegeln...",
       [Lang.ES]: "Está muy sólida. Protegerá alguna ventana o puerta de tu casa..."
     },
-    categories: [ItemCategory.Defences, ItemCategory.Heavy, ItemCategory.CampingBoost],
+    categories: [ItemCategory.Defences, ItemCategory.CampingBoost],
     icon: "item_wood_plate",
     decoration: 0,
     heavy: true,
@@ -6269,7 +6522,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.MONEY]: {
     id: ItemId.MONEY,
@@ -6293,7 +6546,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.REPAIR_KIT_PART_RAW]: {
     id: ItemId.REPAIR_KIT_PART_RAW,
@@ -6317,7 +6573,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26
+    },
   },
   [ItemId.RADIUS_MK2_PART]: {
     id: ItemId.RADIUS_MK2_PART,
@@ -6352,7 +6611,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.RADIUS_MK2]: {
     id: ItemId.RADIUS_MK2,
@@ -6388,7 +6647,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.REPAIR_ONE]: {
     id: ItemId.REPAIR_ONE,
@@ -6427,7 +6686,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.77,
+      [DropLocation.Trash]: 0.08
+    },
   },
   [ItemId.ENGINE_PART]: {
     id: ItemId.ENGINE_PART,
@@ -6444,14 +6707,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Es handelt sich um einen kleinen Motor, der mit Ölspuren und undefinierbaren Brennresten verschmutzt ist und der schwer wie Blei ist.",
       [Lang.ES]: "Está lleno de aceite y suena a piezas sueltas cuando lo sacudes. Pesa."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    categories: [ItemCategory.Miscellaneous],
     icon: "item_engine_part",
     decoration: 0,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.17
+    },
   },
   [ItemId.MACHINE_1]: {
     id: ItemId.MACHINE_1,
@@ -6468,7 +6734,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Diese uralte Waschmaschine ist das Relikt einer Ära, in der die Menschen noch Wert auf Sauberkeit legten. Heute kannst du nur noch darüber lachen...",
       [Lang.ES]: "Uno de esos artefactos del hogar que representaba el sueño de muchas familias. Hoy, solo te causa risa..."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Breakable],
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Breakable],
     icon: "item_machine_1",
     decoration: 2,
     heavy: true,
@@ -6491,7 +6757,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.69
+    },
   },
   [ItemId.MACHINE_2]: {
     id: ItemId.MACHINE_2,
@@ -6508,7 +6777,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Legenden erzählen, dass die Mikrowellentechnologie einer der Gründe für den Untergang der menschlichen Zivilisation waren. Manche behaupten sogar, dass Mikrowellenöfen für das Auftauchen der Untoten verantwortlich seien...",
       [Lang.ES]: "Quienes salían en la tele diciendo que el horno microondas causaría la decadencia de nuestra sociedad, tal vez tenían razón. Incluso se dice que la existencia de muertos vivientes no sería ajena a su uso."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Breakable],
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Breakable],
     icon: "item_machine_2",
     decoration: 2,
     heavy: true,
@@ -6531,7 +6800,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.69
+    },
   },
   [ItemId.MACHINE_3]: {
     id: ItemId.MACHINE_3,
@@ -6548,7 +6820,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Leider enthält dieser kleine Kühlschrank keinen Alkohol mehr. Zudem funktioniert er nicht mehr. Allerdings könnte er ein gutes Wurfgeschoss abgeben.",
       [Lang.ES]: "Aún tiene la foto de una pareja de novios pegada con un imán. Ya no funciona pero algún uso le has de encontrar."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Breakable],
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Breakable],
     icon: "item_machine_3",
     decoration: 2,
     heavy: true,
@@ -6571,7 +6843,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.69
+    },
   },
   [ItemId.RP_LETTER]: {
     id: ItemId.RP_LETTER,
@@ -6606,7 +6881,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.RP_SCROLL]: {
     id: ItemId.RP_SCROLL,
@@ -6641,7 +6916,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.RP_MANUAL]: {
     id: ItemId.RP_MANUAL,
@@ -6676,7 +6951,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.RP_BOOK2]: {
     id: ItemId.RP_BOOK2,
@@ -6711,7 +6986,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.RP_BOOK_01]: {
     id: ItemId.RP_BOOK_01,
@@ -6746,7 +7021,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.RP_SHEETS]: {
     id: ItemId.RP_SHEETS,
@@ -6781,7 +7056,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.CHAIN]: {
     id: ItemId.CHAIN,
@@ -6822,7 +7097,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.43,
+      [DropLocation.Trash]: 0.08
+    },
   },
   [ItemId.DISH]: {
     id: ItemId.DISH,
@@ -6857,7 +7136,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.DISH_TASTY]: {
     id: ItemId.DISH_TASTY,
@@ -6892,7 +7171,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.HOME_BOX_XL]: {
     id: ItemId.HOME_BOX_XL,
@@ -6909,7 +7188,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Dieser Schrankkoffer ist zwar schwer, aber äußerst praktisch, um daheim mal aufzuräumen.",
       [Lang.ES]: "Pesado pero práctico para llevar a casa."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.ChestExtension],
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.ChestExtension],
     icon: "item_home_box_xl",
     decoration: 0,
     heavy: true,
@@ -6931,7 +7210,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.HOME_BOX]: {
     id: ItemId.HOME_BOX,
@@ -6970,7 +7252,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26,
+      [DropLocation.Trash]: 0.08
+    },
   },
   [ItemId.HOME_DEF]: {
     id: ItemId.HOME_DEF,
@@ -6987,7 +7273,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Dieser lustige Blech- und Holzverbund hat wohl einem anderen Einwohner als Schutz gedient. Den Beulen und Blutflecken nach zu urteilen, hat sie wohl nicht ganz gereicht...",
       [Lang.ES]: "Una estructura de madera y hierro que seguramente sirvió a un antiguo habitante. A juzgar por las manchas de sangre y golpes, no debió ser suficiente..."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy],
+    categories: [ItemCategory.Furniture],
     icon: "item_home_def",
     decoration: 0,
     heavy: true,
@@ -7009,7 +7295,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26,
+      [DropLocation.Trash]: 0.08
+    },
   },
   [ItemId.BOOK_GEN_LETTER]: {
     id: ItemId.BOOK_GEN_LETTER,
@@ -7070,7 +7360,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26
+    },
   },
   [ItemId.BOOK_GEN_BOX]: {
     id: ItemId.BOOK_GEN_BOX,
@@ -7121,7 +7414,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.17
+    },
   },
   [ItemId.FENCE]: {
     id: ItemId.FENCE,
@@ -7145,7 +7441,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26,
+      [DropLocation.Trash]: 0.77
+    },
   },
   [ItemId.WATERGUN_3]: {
     id: ItemId.WATERGUN_3,
@@ -7184,7 +7484,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WATERGUN_2]: {
     id: ItemId.WATERGUN_2,
@@ -7223,7 +7523,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WATERGUN_1]: {
     id: ItemId.WATERGUN_1,
@@ -7262,7 +7562,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WATERGUN_OPT_5]: {
     id: ItemId.WATERGUN_OPT_5,
@@ -7301,7 +7601,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WATERGUN_OPT_4]: {
     id: ItemId.WATERGUN_OPT_4,
@@ -7340,7 +7640,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.CIGS]: {
     id: ItemId.CIGS,
@@ -7385,7 +7685,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.17
+    },
   },
   [ItemId.PILEGUN_UPKIT]: {
     id: ItemId.PILEGUN_UPKIT,
@@ -7409,7 +7712,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.PILEGUN_UP_EMPTY]: {
     id: ItemId.PILEGUN_UP_EMPTY,
@@ -7444,7 +7750,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.PILEGUN_UP]: {
     id: ItemId.PILEGUN_UP,
@@ -7494,7 +7800,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.PILE_BROKEN]: {
     id: ItemId.PILE_BROKEN,
@@ -7518,7 +7824,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.RSC_PACK_3]: {
     id: ItemId.RSC_PACK_3,
@@ -7535,7 +7841,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Diese große Kiste ist in Zellophan eingeschweißt und mit bedruckten Etiketten nur so zugepflastert. Sie enthält wahrscheinlich Baumaterialien.",
       [Lang.ES]: "Esta gran cajota está muy bien empacada y debe contener materiales de construcción."
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    categories: [ItemCategory.Containers_and_boxes],
     icon: "item_rsc_pack_3",
     decoration: 0,
     heavy: true,
@@ -7563,7 +7869,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.RSC_PACK_2]: {
     id: ItemId.RSC_PACK_2,
@@ -7580,7 +7889,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Diese große Kiste ist in Zellophan eingeschweißt und mit bedruckten Etiketten nur so zugepflastert. Sie enthält wahrscheinlich Baumaterialien.",
       [Lang.ES]: "Esta gran cajota está muy bien empacada y debe contener materiales de construcción."
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    categories: [ItemCategory.Containers_and_boxes],
     icon: "item_rsc_pack_2",
     decoration: 0,
     heavy: true,
@@ -7608,7 +7917,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26
+    },
   },
   [ItemId.RSC_PACK_1]: {
     id: ItemId.RSC_PACK_1,
@@ -7625,7 +7937,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Diese große Kiste ist in Zellophan eingeschweißt und mit bedruckten Etiketten nur so zugepflastert. Sie enthält wahrscheinlich Baumaterialien.",
       [Lang.ES]: "Esta gran cajota está muy bien empacada y debe contener materiales de construcción."
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    categories: [ItemCategory.Containers_and_boxes],
     icon: "item_rsc_pack_1",
     decoration: 0,
     heavy: true,
@@ -7649,7 +7961,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.CAR_DOOR]: {
     id: ItemId.CAR_DOOR,
@@ -7666,14 +7978,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Diese Autotür kann dir als Schutzschild dienen, wenn du eine Reihe hungriger Kadaver durchqueren musst. Die haben nämlich nur eines im Sinn: Dein köstliches Gehirn zu verschlingen.",
       [Lang.ES]: "Esta buena puerta de coche estadounidense te servirá como escudo para pasar entre las turbas de muertos vivientes deseosos de darte mordiscos."
     },
-    categories: [ItemCategory.Defences, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    categories: [ItemCategory.Defences, ItemCategory.GuardWeapon],
     icon: "item_car_door",
     decoration: 0,
     heavy: true,
     watchPoints: 25,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.CAR_DOOR_PART]: {
     id: ItemId.CAR_DOOR_PART,
@@ -7690,14 +8002,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Eine Autotür, bei der ein entscheidendes Teil fehlt: Der Türgriff. Schlecht...",
       [Lang.ES]: "Una buena puerta de coche estadounidense, te serviría como escudo, pero le faltan piezas para poder ser sostenida..."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    categories: [ItemCategory.Miscellaneous],
     icon: "item_car_door_part",
     decoration: 0,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.POISON]: {
     id: ItemId.POISON,
@@ -7721,7 +8036,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.POISON_PART]: {
     id: ItemId.POISON_PART,
@@ -7745,7 +8060,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.CHEST_HERO]: {
     id: ItemId.CHEST_HERO,
@@ -7762,7 +8080,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Sobald du in dieser Welt ein wenig Erfahrung gesammelt hast, weißt du, dass es wichtig ist, ein paar Gegenstände bei sich zu behalten. Denn eines Tages könnten sie dir das Leben retten.",
       [Lang.ES]: "Cuando se adquiere una cierta experiencia en este mundo, uno comprende la importancia de guardar algunos objetos, porque un día podrían salvarnos la vida."
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    categories: [ItemCategory.Containers_and_boxes],
     icon: "item_chest_hero",
     decoration: 0,
     heavy: true,
@@ -7801,7 +8119,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.POSTAL_BOX]: {
     id: ItemId.POSTAL_BOX,
@@ -7852,7 +8170,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.FOOD_ARMAG]: {
     id: ItemId.FOOD_ARMAG,
@@ -7903,7 +8224,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.FOOD_CANDIES]: {
     id: ItemId.FOOD_CANDIES,
@@ -7938,7 +8262,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.OUT_DEF]: {
     id: ItemId.OUT_DEF,
@@ -7973,7 +8297,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.17
+    },
   },
   [ItemId.TORCH]: {
     id: ItemId.TORCH,
@@ -8012,7 +8339,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.TORCH_OFF]: {
     id: ItemId.TORCH_OFF,
@@ -8053,7 +8380,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.CHAMA]: {
     id: ItemId.CHAMA,
@@ -8077,7 +8404,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.CHAMA_TASTY]: {
     id: ItemId.CHAMA_TASTY,
@@ -8112,7 +8442,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.PC]: {
     id: ItemId.PC,
@@ -8129,7 +8459,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Diese alte Blechkiste war mal mit verschiedenen elektronischen Bauteilen gefüllt (CPU, Hauptplatine, Hardwareschnittstellen etc ...). Was willst du jetzt noch damit anfangen?",
       [Lang.ES]: "Esta vieja caja metálica contiene un montón de componentes eléctricos. Debe ser de algún antiguo servidor de Eternaltwin, ahora no sirve de mucho..."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Breakable],
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration, ItemCategory.Breakable],
     icon: "item_pc",
     decoration: 3,
     heavy: true,
@@ -8152,7 +8482,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.17
+    },
   },
   [ItemId.SAFE]: {
     id: ItemId.SAFE,
@@ -8169,7 +8502,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Toll... und wie findest du jetzt raus, was da drin ist? Ohne die Geheimkombination dürfte das etwas schwierig werden.",
       [Lang.ES]: "¿Qué tendrá dentro? Ah, claro, necesitas conocer la clave secreta para averiguarlo."
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    categories: [ItemCategory.Containers_and_boxes],
     icon: "item_safe",
     decoration: 0,
     heavy: true,
@@ -8240,7 +8573,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.RP_TWIN]: {
     id: ItemId.RP_TWIN,
@@ -8275,7 +8611,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.WATER_CAN_EMPTY]: {
     id: ItemId.WATER_CAN_EMPTY,
@@ -8292,7 +8631,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Ein typischer Wasserspender, wie man ihn in jedem Großraumbüro antreffen kann. Wie durch ein Wunder ist er dir in die Hände gefallen. So ein Ding könnte hier gut nützlich sein...",
       [Lang.ES]: "Tuviste suerte al encontrarla, no es común ver eso por aquí... -- USO: si llevas una Ración de agua, será colocada en la bombona. Si no, la acción será beber el contenido de la bombona."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    categories: [ItemCategory.Miscellaneous],
     icon: "item_water_can_empty",
     decoration: 0,
     heavy: true,
@@ -8310,7 +8649,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.WATER_CAN_1]: {
     id: ItemId.WATER_CAN_1,
@@ -8327,7 +8669,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Ein typischer Wasserspender, wie man ihn in jedem Großraumbüro antreffen kann. Wie durch ein Wunder ist er dir in die Hände gefallen. So ein Ding könnte hier gut nützlich sein...",
       [Lang.ES]: "Tuviste suerte al encontrarla, no es común ver eso por aquí... -- USO: si llevas una Ración de agua, será colocada en la bombona. Si no, la acción será beber el contenido de la bombona."
     },
-    categories: [ItemCategory.Food, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.APSource, ItemCategory.Water],
+    categories: [ItemCategory.Food, ItemCategory.GuardWeapon, ItemCategory.APSource, ItemCategory.Water],
     icon: "item_water_can_1",
     decoration: 0,
     heavy: true,
@@ -8381,7 +8723,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WATER_CAN_2]: {
     id: ItemId.WATER_CAN_2,
@@ -8398,7 +8740,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Ein typischer Wasserspender, wie man ihn in jedem Großraumbüro antreffen kann. Wie durch ein Wunder ist er dir in die Hände gefallen. So ein Ding könnte hier gut nützlich sein...",
       [Lang.ES]: "Tuviste suerte al encontrarla, no es común ver eso por aquí... -- USO: si llevas una Ración de agua, será colocada en la bombona. Si no, la acción será beber el contenido de la bombona."
     },
-    categories: [ItemCategory.Food, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.APSource, ItemCategory.Water],
+    categories: [ItemCategory.Food, ItemCategory.GuardWeapon, ItemCategory.APSource, ItemCategory.Water],
     icon: "item_water_can_2",
     decoration: 0,
     heavy: true,
@@ -8452,7 +8794,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WATER_CAN_3]: {
     id: ItemId.WATER_CAN_3,
@@ -8469,7 +8811,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Ein typischer Wasserspender, wie man ihn in jedem Großraumbüro antreffen kann. Wie durch ein Wunder ist er dir in die Hände gefallen. So ein Ding könnte hier gut nützlich sein...",
       [Lang.ES]: "Tuviste suerte al encontrarla, no es común ver eso por aquí... -- USO: si llevas una Ración de agua, será colocada en la bombona. Si no, la acción será beber el contenido de la bombona."
     },
-    categories: [ItemCategory.Food, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.APSource, ItemCategory.Water],
+    categories: [ItemCategory.Food, ItemCategory.GuardWeapon, ItemCategory.APSource, ItemCategory.Water],
     icon: "item_water_can_3",
     decoration: 0,
     heavy: true,
@@ -8511,7 +8853,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BETA_DRUG_BAD]: {
     id: ItemId.BETA_DRUG_BAD,
@@ -8581,7 +8923,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.BETA_DRUG]: {
     id: ItemId.BETA_DRUG,
@@ -8616,7 +8961,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.FRUIT_SUB_PART]: {
     id: ItemId.FRUIT_SUB_PART,
@@ -8640,7 +8985,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Trash]: 29.59
+    },
   },
   [ItemId.FRUIT_PART]: {
     id: ItemId.FRUIT_PART,
@@ -8664,7 +9012,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Trash]: 8.07
+    },
   },
   [ItemId.FLESH_PART]: {
     id: ItemId.FLESH_PART,
@@ -8688,7 +9039,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Trash]: 37.66
+    },
   },
   [ItemId.FLESH]: {
     id: ItemId.FLESH,
@@ -8723,7 +9077,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.PHARMA_PART]: {
     id: ItemId.PHARMA_PART,
@@ -8747,7 +9101,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Trash]: 21.52
+    },
   },
   [ItemId.FRUIT]: {
     id: ItemId.FRUIT,
@@ -8798,7 +9155,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WATER_CUP_PART]: {
     id: ItemId.WATER_CUP_PART,
@@ -8872,7 +9229,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Trash]: 1.61
+    },
   },
   [ItemId.WATER_CUP]: {
     id: ItemId.WATER_CUP,
@@ -8923,7 +9283,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BANNED_NOTE]: {
     id: ItemId.BANNED_NOTE,
@@ -8953,7 +9313,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.INFECT_POISON_PART]: {
     id: ItemId.INFECT_POISON_PART,
@@ -8977,7 +9337,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.TEDDY_01]: {
     id: ItemId.TEDDY_01,
@@ -9012,7 +9372,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WOODSTEAK]: {
     id: ItemId.WOODSTEAK,
@@ -9047,7 +9407,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.CHRISTMAS_SUIT_1]: {
     id: ItemId.CHRISTMAS_SUIT_1,
@@ -9072,7 +9432,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     event: GameEvent.Christmas,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 17.39
+    },
   },
   [ItemId.CHRISTMAS_SUIT_2]: {
     id: ItemId.CHRISTMAS_SUIT_2,
@@ -9097,7 +9460,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     event: GameEvent.Christmas,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 15.22
+    },
   },
   [ItemId.CHRISTMAS_SUIT_3]: {
     id: ItemId.CHRISTMAS_SUIT_3,
@@ -9122,7 +9488,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     event: GameEvent.Christmas,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 13.04
+    },
   },
   [ItemId.CHRISTMAS_SUIT_FULL]: {
     id: ItemId.CHRISTMAS_SUIT_FULL,
@@ -9164,7 +9533,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.IPHONE]: {
     id: ItemId.IPHONE,
@@ -9219,7 +9588,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.SMELLY_MEAT]: {
     id: ItemId.SMELLY_MEAT,
@@ -9249,7 +9621,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.MAGLITE_OFF]: {
     id: ItemId.MAGLITE_OFF,
@@ -9290,7 +9665,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.MAGLITE_1]: {
     id: ItemId.MAGLITE_1,
@@ -9331,7 +9709,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.MAGLITE_2]: {
     id: ItemId.MAGLITE_2,
@@ -9361,7 +9739,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.CADAVER]: {
     id: ItemId.CADAVER,
@@ -9378,7 +9756,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Diese Leiche liegt hier schon ein bisschen länger rum: Fliegenmaden haben sich schon an ihm zu schaffen gemacht und den größten Teil gegessen... Bist du sicher, dass du DIESES DING schultern möchtest?",
       [Lang.ES]: "Los gusanos no han dejado mucho... ¿Estás seguro de querer llevar eso en los hombros?"
     },
-    categories: [ItemCategory.Food, ItemCategory.Heavy, ItemCategory.APSource],
+    categories: [ItemCategory.Food, ItemCategory.APSource],
     icon: "item_cadaver",
     decoration: 0,
     heavy: true,
@@ -9436,7 +9814,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.CADAVER_REMAINS]: {
     id: ItemId.CADAVER_REMAINS,
@@ -9453,14 +9834,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Loses herumliegendes Gebein. Sieht aus, als ob es von einem 'wilden Tier' angenagt worden wäre... Die Bissspuren sehen aber menschlich aus. Irgendetwas stimmt hier nicht...",
       [Lang.ES]: "Los huesos han sido roídos por algo o... alguien. Este pueblo me sorprende cada vez más."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    categories: [ItemCategory.Miscellaneous],
     icon: "item_cadaver_remains",
     decoration: 0,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.SMOKE_BOMB]: {
     id: ItemId.SMOKE_BOMB,
@@ -9484,7 +9865,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.77
+    },
   },
   [ItemId.SAND_BALL]: {
     id: ItemId.SAND_BALL,
@@ -9526,7 +9910,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 21.74
+    },
   },
   [ItemId.BPLAN_C]: {
     id: ItemId.BPLAN_C,
@@ -9721,7 +10108,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BPLAN_U]: {
     id: ItemId.BPLAN_U,
@@ -9824,7 +10211,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BPLAN_R]: {
     id: ItemId.BPLAN_R,
@@ -9995,7 +10382,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BPLAN_E]: {
     id: ItemId.BPLAN_E,
@@ -10078,7 +10465,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BPLAN_BOX]: {
     id: ItemId.BPLAN_BOX,
@@ -10101,7 +10488,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Fünf davon sind in zufälligen Zonen 6–15 km von der Stadt entfernt verstreut.",
       [Lang.ES]: "Cinco de ellos están esparcidos en zonas aleatorias a 6-15 km de la ciudad."
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    categories: [ItemCategory.Containers_and_boxes],
     icon: "item_bplan_box",
     decoration: 0,
     heavy: true,
@@ -10120,7 +10507,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BPLAN_BOX_E]: {
     id: ItemId.BPLAN_BOX_E,
@@ -10143,7 +10530,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Zwei davon sind in zufälligen Zonen 9–21 km von der Stadt entfernt verstreut.",
       [Lang.ES]: "Dos de ellos están esparcidos en zonas aleatorias a 9-21 km de la ciudad."
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    categories: [ItemCategory.Containers_and_boxes],
     icon: "item_bplan_box_e",
     decoration: 0,
     heavy: true,
@@ -10171,7 +10558,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.EGG]: {
     id: ItemId.EGG,
@@ -10206,7 +10593,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.APPLE]: {
     id: ItemId.APPLE,
@@ -10245,7 +10632,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BOOMFRUIT]: {
     id: ItemId.BOOMFRUIT,
@@ -10280,7 +10667,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BPLAN_DROP]: {
     id: ItemId.BPLAN_DROP,
@@ -10337,7 +10724,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 1.29
+    },
   },
   [ItemId.MAGNETICKEY]: {
     id: ItemId.MAGNETICKEY,
@@ -10361,7 +10751,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.BUMPKEY]: {
     id: ItemId.BUMPKEY,
@@ -10385,7 +10775,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.CLASSICKEY]: {
     id: ItemId.CLASSICKEY,
@@ -10409,7 +10799,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.PRINTS]: {
     id: ItemId.PRINTS,
@@ -10433,7 +10823,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.PRINTS_01]: {
     id: ItemId.PRINTS_01,
@@ -10457,7 +10847,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.PRINTS_02]: {
     id: ItemId.PRINTS_02,
@@ -10481,7 +10871,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.VAGOUL]: {
     id: ItemId.VAGOUL,
@@ -10515,7 +10905,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.HBPLAN_U]: {
     id: ItemId.HBPLAN_U,
@@ -10566,7 +10956,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.HBPLAN_R]: {
     id: ItemId.HBPLAN_R,
@@ -10637,7 +11027,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.HBPLAN_E]: {
     id: ItemId.HBPLAN_E,
@@ -10688,7 +11078,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BBPLAN_U]: {
     id: ItemId.BBPLAN_U,
@@ -10743,7 +11133,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BBPLAN_R]: {
     id: ItemId.BBPLAN_R,
@@ -10814,7 +11204,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BBPLAN_E]: {
     id: ItemId.BBPLAN_E,
@@ -10865,7 +11255,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.MBPLAN_U]: {
     id: ItemId.MBPLAN_U,
@@ -10920,7 +11310,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.MBPLAN_R]: {
     id: ItemId.MBPLAN_R,
@@ -10991,7 +11381,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.MBPLAN_E]: {
     id: ItemId.MBPLAN_E,
@@ -11042,7 +11432,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.SOUL_BLUE]: {
     id: ItemId.SOUL_BLUE,
@@ -11129,7 +11519,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.SOUL_RED]: {
     id: ItemId.SOUL_RED,
@@ -11172,7 +11562,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.SOUL_BLUE_01]: {
     id: ItemId.SOUL_BLUE_01,
@@ -11215,7 +11605,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.FEST]: {
     id: ItemId.FEST,
@@ -11258,7 +11648,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.34
+    },
   },
   [ItemId.BRETZ]: {
     id: ItemId.BRETZ,
@@ -11293,7 +11686,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.69
+    },
   },
   [ItemId.TEKEL]: {
     id: ItemId.TEKEL,
@@ -11360,7 +11756,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.34
+    },
   },
   [ItemId.RLAUNC]: {
     id: ItemId.RLAUNC,
@@ -11377,14 +11776,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Der Pfahlwerfer kann dazu verwendet werden, Barrikaden zu verstärken oder jede Art von Gegner abzuwehren. Leider ist nur noch ein Pfahl übrig...",
       [Lang.ES]: "Esta arma debió ser construida por algún maniático de las armas y el bricolage. Solo queda un dardo dentro del aparato."
     },
-    categories: [ItemCategory.Armoury, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
     icon: "item_rlaunc",
     decoration: 0,
     heavy: true,
     watchPoints: 30,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.KALACH]: {
     id: ItemId.KALACH,
@@ -11401,7 +11800,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Eine mächtige Wasserwaffe, dessen defeker Mechanismus nur noch für einen Schuss reicht.",
       [Lang.ES]: "Una poderosa arma de agua, cuyo mecanismo roto solo alcanza para un disparo."
     },
-    categories: [ItemCategory.Armoury, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    categories: [ItemCategory.Armoury, ItemCategory.GuardWeapon],
     icon: "item_kalach",
     decoration: 0,
     heavy: true,
@@ -11423,7 +11822,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BUREAU]: {
     id: ItemId.BUREAU,
@@ -11440,14 +11839,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Dieser wackelige Tisch wurde offensichtlich in Eile gebaut. Doch könnte er, von den Barrikaden geworfen, bestimmt gut einige Zombies zerquetschen.",
       [Lang.ES]: "Este escritorio destartalado fue claramente construido con prisa. Sin embargo, lanzado desde lo alto de las murallas podría resultar más útil aplastando a algunos zombies."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration],
     icon: "item_bureau",
     decoration: 2,
     heavy: true,
     watchPoints: 20,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.DISTRI]: {
     id: ItemId.DISTRI,
@@ -11464,14 +11863,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Ich weiß was du denkst: \"Kann dieser Automat nicht 20 Rationen Wasser und 50 Tüten Chips enthalten?!?\" Dummerweise sieht das nicht so aus...aber immerhin ist er sehr klotzig und enthält ein paar Knochen.",
       [Lang.ES]: "Es tan inútil como pesado, sin embargo podría ayudarte a aplastar algunos zombies si lo lanzas desde una muralla."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Decoration],
+    categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration],
     icon: "item_distri",
     decoration: 4,
     heavy: true,
     watchPoints: 25,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.RENNE]: {
     id: ItemId.RENNE,
@@ -11488,7 +11887,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Es gab eine Zeit, da waren diese edlen Tiere legendär. Naja...diese Zeiten sind zwar vorbei, aber edel sind sie trotzdem noch.",
       [Lang.ES]: "Hubo un tiempo en que este magnífico animal se asoció con maravillosas leyendas... Esos días ya pasaron, pero sirven para otra cosa..."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.Event],
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon, ItemCategory.Event],
     icon: "item_renne",
     decoration: 0,
     heavy: true,
@@ -11496,7 +11895,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     event: GameEvent.Christmas,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 21.74
+    },
   },
   [ItemId.PAQUES]: {
     id: ItemId.PAQUES,
@@ -11521,7 +11923,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     event: GameEvent.Easter,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 100
+    },
   },
   [ItemId.BADGE]: {
     id: ItemId.BADGE,
@@ -11545,7 +11950,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 14,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26
+    },
   },
   [ItemId.KALACH_01]: {
     id: ItemId.KALACH_01,
@@ -11592,7 +12000,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.WIRE]: {
     id: ItemId.WIRE,
@@ -11616,7 +12024,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.69
+    },
   },
   [ItemId.OILCAN]: {
     id: ItemId.OILCAN,
@@ -11640,7 +12051,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 1.03
+    },
   },
   [ItemId.LENS]: {
     id: ItemId.LENS,
@@ -11664,7 +12078,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.34
+    },
   },
   [ItemId.ANGRYC]: {
     id: ItemId.ANGRYC,
@@ -11731,7 +12148,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.34
+    },
   },
   [ItemId.CLAYMO]: {
     id: ItemId.CLAYMO,
@@ -11755,7 +12175,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 40,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.DIODE]: {
     id: ItemId.DIODE,
@@ -11779,7 +12199,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.43
+    },
   },
   [ItemId.GUITAR]: {
     id: ItemId.GUITAR,
@@ -11809,7 +12232,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 10,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.LSD]: {
     id: ItemId.LSD,
@@ -11864,7 +12287,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.LPOINT4]: {
     id: ItemId.LPOINT4,
@@ -11903,7 +12326,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.LPOINT3]: {
     id: ItemId.LPOINT3,
@@ -11942,7 +12365,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.LPOINT2]: {
     id: ItemId.LPOINT2,
@@ -11981,7 +12404,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.LPOINT1]: {
     id: ItemId.LPOINT1,
@@ -12020,7 +12443,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.LPOINT]: {
     id: ItemId.LPOINT,
@@ -12066,7 +12489,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.SCOPE]: {
     id: ItemId.SCOPE,
@@ -12096,7 +12519,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.TRAPMA]: {
     id: ItemId.TRAPMA,
@@ -12126,7 +12549,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.CHUDOL]: {
     id: ItemId.CHUDOL,
@@ -12150,7 +12573,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.34
+    },
   },
   [ItemId.LILBOO]: {
     id: ItemId.LILBOO,
@@ -12191,7 +12617,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.43
+    },
   },
   [ItemId.RYEBAG]: {
     id: ItemId.RYEBAG,
@@ -12215,7 +12644,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.52
+    },
   },
   [ItemId.FUNGUS]: {
     id: ItemId.FUNGUS,
@@ -12239,7 +12671,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.HMBREW]: {
     id: ItemId.HMBREW,
@@ -12288,7 +12720,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.HIFIEV]: {
     id: ItemId.HIFIEV,
@@ -12305,14 +12737,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Wenn kombiniert mit einer CD, diese HiFi Anlage hat das Potential zu einer Massenvernichtungswaffe zu werden.",
       [Lang.ES]: "Cuando es usado con un CD, esta unidad tiene el potencial de convertirse en un arma de destrucción masiva."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy],
+    categories: [ItemCategory.Furniture],
     icon: "item_hifiev",
     decoration: 0,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.CDPHIL]: {
     id: ItemId.CDPHIL,
@@ -12336,7 +12768,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.BQUIES]: {
     id: ItemId.BQUIES,
@@ -12360,7 +12795,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.26
+    },
   },
   [ItemId.STAFF_01]: {
     id: ItemId.STAFF_01,
@@ -12385,7 +12823,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     available: false,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.CDBRIT]: {
     id: ItemId.CDBRIT,
@@ -12409,7 +12847,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.CDELVI]: {
     id: ItemId.CDELVI,
@@ -12433,7 +12874,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.09
+    },
   },
   [ItemId.DFHIFI]: {
     id: ItemId.DFHIFI,
@@ -12450,14 +12894,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Beflügelt durch die Hits des Kings, bist du motivierter als jemals zuvor!",
       [Lang.ES]: "¡Girando los golpes del Rey, te despertarás más motivado y con más energía que nunca!"
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
     icon: "item_dfhifi",
     decoration: 10,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.DFHIFI_01]: {
     id: ItemId.DFHIFI_01,
@@ -12480,14 +12924,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Verhindert, dass andere Spieler in Ihr Haus stehlen.",
       [Lang.ES]: "Evita que otros jugadores roben en tu casa."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
     icon: "item_dfhifi",
     decoration: 10,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.CATBOX]: {
     id: ItemId.CATBOX,
@@ -12504,7 +12948,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Sie ist verdammt schwer und du bist dir fast sicher, dass da etwas nützliches drin ist... Aber erstmal brauchst du etwas um sie zu öffnen - zumindest etwas besseres als deine Zähne.",
       [Lang.ES]: "Es pesada y seguramente contiene algo valioso... Solo falta encontrar algo mejor que tus dientes para abrirla."
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    categories: [ItemCategory.Containers_and_boxes],
     icon: "item_catbox",
     decoration: 0,
     heavy: true,
@@ -12560,7 +13004,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.17
+    },
   },
   [ItemId.CHKSPK]: {
     id: ItemId.CHKSPK,
@@ -12590,7 +13037,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.PET_SNAKE2]: {
     id: ItemId.PET_SNAKE2,
@@ -12607,14 +13054,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Diese riesige Schlange scheint Verdauungsprobleme zu haben... SO kannst du jedenfalls nichts mehr mit ihr anfangen.",
       [Lang.ES]: "La protuberancia en el vientre de esta boa hace pensar que sufre una severa indigestión. En ese estado no sirve de nada..."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy, ItemCategory.GuardWeapon],
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon],
     icon: "item_pet_snake2",
     decoration: 0,
     heavy: true,
     watchPoints: 15,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.34
+    },
   },
   [ItemId.CHEST_CHRISTMAS_3]: {
     id: ItemId.CHEST_CHRISTMAS_3,
@@ -12631,7 +13081,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Sieht so aus als hätte dein Nachbar dir ein Geschenkt gemacht! Dein Name steht drauf! Was mag sie wohl enthalten?.",
       [Lang.ES]: "Tu nombre está escrito en ella, ¡parece que tienes un admirador! ¿qué puede contener?"
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy, ItemCategory.Event],
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Event],
     icon: "item_chest_christmas_3",
     decoration: 0,
     heavy: true,
@@ -12655,7 +13105,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.CHEST_CHRISTMAS_2]: {
     id: ItemId.CHEST_CHRISTMAS_2,
@@ -12672,7 +13122,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Sieht so aus als hätte dein Nachbar dir ein Geschenkt gemacht! Dein Name steht drauf! Was mag sie wohl enthalten?.",
       [Lang.ES]: "Tu nombre está escrito en ella, ¡parece que tienes un admirador! ¿qué puede contener?"
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy, ItemCategory.Event],
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Event],
     icon: "item_chest_christmas_2",
     decoration: 0,
     heavy: true,
@@ -12696,7 +13146,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.CHEST_CHRISTMAS_1]: {
     id: ItemId.CHEST_CHRISTMAS_1,
@@ -12713,7 +13163,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Sieht so aus als hätte dein Nachbar dir ein Geschenkt gemacht! Dein Name steht drauf! Was mag sie wohl enthalten?.",
       [Lang.ES]: "Tu nombre está escrito en ella, ¡parece que tienes un admirador! ¿qué puede contener?"
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy, ItemCategory.Event],
+    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Event],
     icon: "item_chest_christmas_1",
     decoration: 0,
     heavy: true,
@@ -12733,7 +13183,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.OMG_THIS_WILL_KILL_YOU]: {
     id: ItemId.OMG_THIS_WILL_KILL_YOU,
@@ -12758,7 +13208,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     event: GameEvent.Christmas,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.RP_SCROLL_01]: {
     id: ItemId.RP_SCROLL_01,
@@ -12793,7 +13243,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BASIC_SUIT]: {
     id: ItemId.BASIC_SUIT,
@@ -12817,7 +13267,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.BASIC_SUIT_DIRT]: {
     id: ItemId.BASIC_SUIT_DIRT,
@@ -12857,7 +13307,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.VEST_ON]: {
     id: ItemId.VEST_ON,
@@ -12881,7 +13331,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.VEST_OFF]: {
     id: ItemId.VEST_OFF,
@@ -12916,7 +13366,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.PELLE]: {
     id: ItemId.PELLE,
@@ -12940,7 +13390,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.TAMED_PET]: {
     id: ItemId.TAMED_PET,
@@ -12979,7 +13429,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.TAMED_PET_DRUG]: {
     id: ItemId.TAMED_PET_DRUG,
@@ -13018,7 +13468,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.TAMED_PET_OFF]: {
     id: ItemId.TAMED_PET_OFF,
@@ -13042,7 +13492,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.SURV_BOOK]: {
     id: ItemId.SURV_BOOK,
@@ -13159,7 +13609,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.KEYMOL]: {
     id: ItemId.KEYMOL,
@@ -13198,7 +13648,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.SHIELD]: {
     id: ItemId.SHIELD,
@@ -13222,7 +13672,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.SHAMAN]: {
     id: ItemId.SHAMAN,
@@ -13246,7 +13696,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.FIREWORK_POWDER]: {
     id: ItemId.FIREWORK_POWDER,
@@ -13276,7 +13726,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.FIREWORK_TUBE]: {
     id: ItemId.FIREWORK_TUBE,
@@ -13299,14 +13749,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Einer ist in einer zufälligen Zone außerhalb der Stadt bis zu 15 km verstreut.",
       [Lang.ES]: "Uno está esparcido en una zona aleatoria fuera de la ciudad hasta 15 km."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
     icon: "item_firework_tube",
     decoration: 2,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.FIREWORK_BOX]: {
     id: ItemId.FIREWORK_BOX,
@@ -13329,14 +13779,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Zwei von ihnen sind in zufälligen Zonen außerhalb der Stadt bis zu 15 km verstreut.",
       [Lang.ES]: "Dos de ellos están esparcidos en zonas aleatorias fuera de la ciudad hasta 15 km."
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration],
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration],
     icon: "item_firework_box",
     decoration: 3,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.PUMPKIN_OFF]: {
     id: ItemId.PUMPKIN_OFF,
@@ -13353,7 +13803,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Eine Art großes, stinkendes Orangengemüse, wie Sie es noch nie zuvor gesehen haben. Ein grimassierendes Gesicht ist in sein Fleisch geritzt: Was für eine barbarische Tradition steckt hinter diesem Ritual?",
       [Lang.ES]: "Un tipo de vegetal naranja grande y maloliente como nunca has visto antes. Un rostro adusto está tallado en su carne: ¿cuál es la tradición bárbara detrás de este ritual?"
     },
-    categories: [ItemCategory.Furniture, ItemCategory.Heavy, ItemCategory.Decoration, ItemCategory.Event],
+    categories: [ItemCategory.Furniture, ItemCategory.Decoration, ItemCategory.Event],
     icon: "item_pumpkin_off",
     decoration: 5,
     heavy: true,
@@ -13361,7 +13811,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     event: GameEvent.Halloween,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.PUMPKIN_ON]: {
     id: ItemId.PUMPKIN_ON,
@@ -13397,7 +13847,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.XMAS_GIFT]: {
     id: ItemId.XMAS_GIFT,
@@ -13440,7 +13890,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.STAFF2]: {
     id: ItemId.STAFF2,
@@ -13464,7 +13914,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.VODKA]: {
     id: ItemId.VODKA,
@@ -13507,7 +13957,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.6
+    },
   },
   [ItemId.POTION]: {
     id: ItemId.POTION,
@@ -13568,7 +14021,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.PHOTO_3]: {
     id: ItemId.PHOTO_3,
@@ -13608,7 +14061,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.PHOTO_2]: {
     id: ItemId.PHOTO_2,
@@ -13648,7 +14101,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.PHOTO_1]: {
     id: ItemId.PHOTO_1,
@@ -13688,7 +14141,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.PHOTO_OFF]: {
     id: ItemId.PHOTO_OFF,
@@ -13712,7 +14165,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.SOUL_YELLOW]: {
     id: ItemId.SOUL_YELLOW,
@@ -13736,7 +14189,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.FOOD_XMAS]: {
     id: ItemId.FOOD_XMAS,
@@ -13761,7 +14214,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     event: GameEvent.Christmas,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 10.87
+    },
   },
   [ItemId.WOOD_XMAS]: {
     id: ItemId.WOOD_XMAS,
@@ -13778,7 +14234,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Entweder ein verschrumpelter alter Weihnachtskuchen oder etwas noch weniger Schmackhaftes, was am Weihnachtstag gebacken wird! Auf jeden Fall solltest du dieses Kuchen... artige Ding genießen.",
       [Lang.ES]: "¡Oh, un viejo pastel navideño arrugado! O algo menos sabroso... ¡Pero aún así horneado el día de Navidad! De cualquier modo, disfruta de este... pastel..."
     },
-    categories: [ItemCategory.Food, ItemCategory.Heavy, ItemCategory.Decoration, ItemCategory.APSource, ItemCategory.Event],
+    categories: [ItemCategory.Food, ItemCategory.Decoration, ItemCategory.APSource, ItemCategory.Event],
     icon: "item_wood_xmas",
     decoration: 8,
     heavy: true,
@@ -13797,7 +14253,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.LEPRECHAUN_SUIT]: {
     id: ItemId.LEPRECHAUN_SUIT,
@@ -13839,7 +14295,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 13.46
+    },
   },
   [ItemId.BROKEN]: {
     id: ItemId.BROKEN,
@@ -13863,7 +14322,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.BULLETS]: {
     id: ItemId.BULLETS,
@@ -13887,7 +14346,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.POSTAL_BOX_01]: {
     id: ItemId.POSTAL_BOX_01,
@@ -13938,7 +14397,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.POSTAL_BOX_XL]: {
     id: ItemId.POSTAL_BOX_XL,
@@ -13955,7 +14414,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Die Adresse ist nicht mehr lesbar. Es scheint etwas drin zu sein... Frohe Weihnachten!",
       [Lang.ES]: "La dirección se ha vuelto ilegible, pero definitivamente hay algo dentro... ¡Feliz Navidad!"
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    categories: [ItemCategory.Containers_and_boxes],
     icon: "item_postal_box_xl",
     decoration: 0,
     heavy: true,
@@ -13989,7 +14448,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.CHRISTMAS_CANDY]: {
     id: ItemId.CHRISTMAS_CANDY,
@@ -14054,7 +14513,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.ALARM_OFF]: {
     id: ItemId.ALARM_OFF,
@@ -14089,7 +14548,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.ALARM_ON]: {
     id: ItemId.ALARM_ON,
@@ -14114,7 +14573,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     available: false,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.PUMPKIN_RAW]: {
     id: ItemId.PUMPKIN_RAW,
@@ -14131,7 +14590,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Eine Art großes, stinkendes, orangefarbenes Gemüse, wie du es noch nie gesehen hast. Ein plötzlicher Drang, es auszugraben, ergreift dich, ohne dass du weißt warum...",
       [Lang.ES]: "Un tipo de verdura naranja grande y maloliente, como nunca has visto antes. Tienes un repentino impulso de tallarla, sin saber por qué..."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy, ItemCategory.Event],
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Event],
     icon: "item_pumpkin_raw",
     decoration: 0,
     heavy: true,
@@ -14139,7 +14598,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     event: GameEvent.Halloween,
     actions: [
       
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 100
+    },
   },
   [ItemId.HURLING_STICK]: {
     id: ItemId.HURLING_STICK,
@@ -14181,7 +14643,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 48.08
+    },
   },
   [ItemId.GUINESS]: {
     id: ItemId.GUINESS,
@@ -14225,7 +14690,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
+    drops: {
+      [DropLocation.Zone]: 38.46
+    },
   },
   [ItemId.APRIL_DRUG]: {
     id: ItemId.APRIL_DRUG,
@@ -14279,7 +14747,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.INFECT_POISON]: {
     id: ItemId.INFECT_POISON,
@@ -14303,7 +14771,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.PUMPKIN_TASTY]: {
     id: ItemId.PUMPKIN_TASTY,
@@ -14326,7 +14794,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Erhöht die Sicherheit eines Wächters um 1%.",
       [Lang.ES]: "Aumenta la seguridad de un vigilante en un 1%."
     },
-    categories: [ItemCategory.Food, ItemCategory.Heavy, ItemCategory.GuardWeapon, ItemCategory.APSource],
+    categories: [ItemCategory.Food, ItemCategory.GuardWeapon, ItemCategory.APSource],
     icon: "item_pumpkin_tasty",
     decoration: 0,
     heavy: true,
@@ -14344,7 +14812,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.MEDIC]: {
     id: ItemId.MEDIC,
@@ -14420,7 +14888,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.XMAS_GIFT_01]: {
     id: ItemId.XMAS_GIFT_01,
@@ -14468,7 +14936,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.TAMED_PET_GONE]: {
     id: ItemId.TAMED_PET_GONE,
@@ -14492,7 +14960,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.ALARM_1]: {
     id: ItemId.ALARM_1,
@@ -14537,7 +15005,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.ALARM_2]: {
     id: ItemId.ALARM_2,
@@ -14582,7 +15050,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.ALARM_3]: {
     id: ItemId.ALARM_3,
@@ -14627,7 +15095,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.NOODLE_PRINTS]: {
     id: ItemId.NOODLE_PRINTS,
@@ -14662,7 +15130,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.NOODLE_PRINTS_01]: {
     id: ItemId.NOODLE_PRINTS_01,
@@ -14697,7 +15165,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.NOODLE_PRINTS_02]: {
     id: ItemId.NOODLE_PRINTS_02,
@@ -14732,7 +15200,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.SHOE]: {
     id: ItemId.SHOE,
@@ -14773,7 +15241,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.BIKE_PART]: {
     id: ItemId.BIKE_PART,
@@ -14790,14 +15258,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Ein schönes Fahrrad, aber der wichtigste Teil davon fehlt: ein Lenker.",
       [Lang.ES]: "Una bicicleta preciosa, pero le falta la parte más importante: el manillar."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    categories: [ItemCategory.Miscellaneous],
     icon: "item_bike_part",
     decoration: 0,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.BIKE]: {
     id: ItemId.BIKE,
@@ -14820,7 +15288,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Täglicher {{EP}}-Gewinn um 2 erhöht. Gegenstände, die mindestens 4{{AP}} geben, geben zusätzlich 2 {{EP}}.",
       [Lang.ES]: "Aumento diario de {{EP}} en 2. Los objetos que dan al menos 4{{AP}} dan 2 {{EP}} adicionales."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Heavy],
+    categories: [ItemCategory.Miscellaneous],
     icon: "item_bike",
     decoration: 0,
     heavy: true,
@@ -14838,7 +15306,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.FLAG]: {
     id: ItemId.FLAG,
@@ -14879,7 +15347,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.SOCCER]: {
     id: ItemId.SOCCER,
@@ -14926,7 +15394,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.SOCCER_PART]: {
     id: ItemId.SOCCER_PART,
@@ -14950,7 +15418,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.QUANTUM]: {
     id: ItemId.QUANTUM,
@@ -15017,7 +15485,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.PHOTO_4]: {
     id: ItemId.PHOTO_4,
@@ -15077,7 +15545,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.CELLO_BOX]: {
     id: ItemId.CELLO_BOX,
@@ -15094,14 +15562,14 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Du weißt nicht einmal mehr, wo du das her hast... Die Farbe fängt schon an, sich abzulösen. Ist das Teil wirklich nützlich?",
       [Lang.ES]: "Ni siquiera sabes de dónde lo has sacado... El color ya comienza a desteñirse. ¿Es esta cosa realmente útil?"
     },
-    categories: [ItemCategory.Containers_and_boxes, ItemCategory.Heavy],
+    categories: [ItemCategory.Containers_and_boxes],
     icon: "item_cello_box",
     decoration: 0,
     heavy: true,
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.APPLE_BLUE]: {
     id: ItemId.APPLE_BLUE,
@@ -15136,7 +15604,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.SAW_TOOL_TEMP]: {
     id: ItemId.SAW_TOOL_TEMP,
@@ -15160,7 +15628,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.MOLDY_FOOD_SUBPART]: {
     id: ItemId.MOLDY_FOOD_SUBPART,
@@ -15195,7 +15663,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.MOLDY_FOOD_SPICY]: {
     id: ItemId.MOLDY_FOOD_SPICY,
@@ -15230,7 +15698,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   },
   [ItemId.MOLDY_FOOD_PART]: {
     id: ItemId.MOLDY_FOOD_PART,
@@ -15254,7 +15722,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
-    ]
+    ],
   },
   [ItemId.MOLDY_FOOD]: {
     id: ItemId.MOLDY_FOOD,
@@ -15289,6 +15757,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
-    ]
+    ],
   }
 };
