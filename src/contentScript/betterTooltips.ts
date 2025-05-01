@@ -47,6 +47,26 @@ const T: Translations = {
     [`dropLocation.${DropLocation.DepletedZone}`]: "a depleted zone",
     [`dropLocation.${DropLocation.Zone}`]: "a zone",
     [`dropLocation.${DropLocation.Trash}`]: "the trash",
+    [`effect-type.${ItemActionEffectType.AP}`]: "AP",
+    [`effect-type.${ItemActionEffectType.SP}`]: "SP",
+    [`effect-type.${ItemActionEffectType.MP}`]: "MP",
+    [`effect-type.${ItemActionEffectType.CP}`]: "CP",
+    [`effect-type.${ItemActionEffectType.Ghoulify}`]: "Become a Ghoul",
+    [`effect-type.${ItemActionEffectType.UnGhoulify}`]: "Un-Ghoulify",
+    [`effect-type.${ItemActionEffectType.Infect}`]: "Infected",
+    [`effect-type.${ItemActionEffectType.ReduceGhoulHunger}`]:
+      "Ghoul Hunger",
+    [`effect-type.${ItemActionEffectType.AddWaterToWell}`]:
+      "Add Water to Well",
+    [`effect-type.${ItemActionEffectType.Defense}`]: "Defense",
+    [`effect-type.${ItemActionEffectType.RemoveRuinDebris}`]:
+      "Remove Ruin Debris",
+    [`effect-type.${ItemActionEffectType.GetEscapeTime}`]: "Escape",
+    [`effect-type.${ItemActionEffectType.Kill}`]: "Zombie kills",
+    [`effect-type.${ItemActionEffectType.HomeDefense}`]: "Home Defense",
+    [`effect-type.${ItemActionEffectType.HomeStorage}`]: "Home Storage",
+    [`effect-type.${ItemActionEffectType.Death}`]: "Death",
+    [`effect-type.${ItemActionEffectType.CampingChances}`]: "Camping Chances",
     foundIn: "Found in",
     foundWhenSearching: "Found when searching",
     unavailable: "Not available anymore",
@@ -86,6 +106,26 @@ const T: Translations = {
     [`dropLocation.${DropLocation.DepletedZone}`]: "une zone épuisée",
     [`dropLocation.${DropLocation.Zone}`]: "une zone",
     [`dropLocation.${DropLocation.Trash}`]: "les poubelles",
+    [`effect-type.${ItemActionEffectType.AP}`]: "PA",
+    [`effect-type.${ItemActionEffectType.SP}`]: "PE",
+    [`effect-type.${ItemActionEffectType.MP}`]: "PM",
+    [`effect-type.${ItemActionEffectType.CP}`]: "PC",
+    [`effect-type.${ItemActionEffectType.Ghoulify}`]: "Devenir une goule",
+    [`effect-type.${ItemActionEffectType.UnGhoulify}`]: "Dé-ghoulifier",
+    [`effect-type.${ItemActionEffectType.Infect}`]: "Infecté",
+    [`effect-type.${ItemActionEffectType.ReduceGhoulHunger}`]:
+      "Réduire la voracité de ghoul",
+    [`effect-type.${ItemActionEffectType.AddWaterToWell}`]:
+      "Ajouter de l'eau au puits",
+    [`effect-type.${ItemActionEffectType.Defense}`]: "Défense",
+    [`effect-type.${ItemActionEffectType.RemoveRuinDebris}`]:
+      "Déblaiement",
+    [`effect-type.${ItemActionEffectType.GetEscapeTime}`]: "Évasion",
+    [`effect-type.${ItemActionEffectType.Kill}`]: "Zombies tués",
+    [`effect-type.${ItemActionEffectType.HomeDefense}`]: "Défense de maison",
+    [`effect-type.${ItemActionEffectType.HomeStorage}`]: "Stockage de maison",
+    [`effect-type.${ItemActionEffectType.Death}`]: "Mort",
+    [`effect-type.${ItemActionEffectType.CampingChances}`]: "Chances de camping",
     foundIn: "Trouvé dans",
     foundWhenSearching: "Trouvé en fouillant",
     unavailable: "N'est plus disponible",
@@ -125,6 +165,26 @@ const T: Translations = {
     [`dropLocation.${DropLocation.DepletedZone}`]: "una zona agotada",
     [`dropLocation.${DropLocation.Zone}`]: "una zona",
     [`dropLocation.${DropLocation.Trash}`]: "la basura",
+    [`effect-type.${ItemActionEffectType.AP}`]: "AP",
+    [`effect-type.${ItemActionEffectType.SP}`]: "SP",
+    [`effect-type.${ItemActionEffectType.MP}`]: "MP",
+    [`effect-type.${ItemActionEffectType.CP}`]: "CP",
+    [`effect-type.${ItemActionEffectType.Ghoulify}`]: "Convertirse en Ghoul",
+    [`effect-type.${ItemActionEffectType.UnGhoulify}`]: "Des-ghoulificar",
+    [`effect-type.${ItemActionEffectType.Infect}`]: "Infectado",
+    [`effect-type.${ItemActionEffectType.ReduceGhoulHunger}`]:
+      "Reducir la voracidad de ghoul",
+    [`effect-type.${ItemActionEffectType.AddWaterToWell}`]:
+      "Agregar agua al pozo",
+    [`effect-type.${ItemActionEffectType.Defense}`]: "Defensa",
+    [`effect-type.${ItemActionEffectType.RemoveRuinDebris}`]:
+      "Despejar escombros",
+    [`effect-type.${ItemActionEffectType.GetEscapeTime}`]: "Escape",
+    [`effect-type.${ItemActionEffectType.Kill}`]: "Zombis muertos",
+    [`effect-type.${ItemActionEffectType.HomeDefense}`]: "Defensa de casa",
+    [`effect-type.${ItemActionEffectType.HomeStorage}`]: "Almacenamiento de casa",
+    [`effect-type.${ItemActionEffectType.Death}`]: "Muerte",
+    [`effect-type.${ItemActionEffectType.CampingChances}`]: "Oportunidades de camping",
     foundIn: "Encontrado en",
     foundWhenSearching: "Encontrado al buscar",
     unavailable: "Ya no disponible",
@@ -164,6 +224,26 @@ const T: Translations = {
     [`dropLocation.${DropLocation.DepletedZone}`]: "eine erschöpfte Zone",
     [`dropLocation.${DropLocation.Zone}`]: "eine Zone",
     [`dropLocation.${DropLocation.Trash}`]: "den Müll",
+    [`effect-type.${ItemActionEffectType.AP}`]: "AP",
+    [`effect-type.${ItemActionEffectType.SP}`]: "SP",
+    [`effect-type.${ItemActionEffectType.MP}`]: "MP",
+    [`effect-type.${ItemActionEffectType.CP}`]: "CP",
+    [`effect-type.${ItemActionEffectType.Ghoulify}`]: "Zu Ghoul werden",
+    [`effect-type.${ItemActionEffectType.UnGhoulify}`]: "Un-Ghoulifizieren",
+    [`effect-type.${ItemActionEffectType.Infect}`]: "Infiziert",
+    [`effect-type.${ItemActionEffectType.ReduceGhoulHunger}`]:
+      "Ghoul Hunger reduzieren",
+    [`effect-type.${ItemActionEffectType.AddWaterToWell}`]:
+      "Wasser zum Brunnen hinzufügen",
+    [`effect-type.${ItemActionEffectType.Defense}`]: "Verteidigung",
+    [`effect-type.${ItemActionEffectType.RemoveRuinDebris}`]:
+      "Trümmer entfernen",
+    [`effect-type.${ItemActionEffectType.GetEscapeTime}`]: "Flucht",
+    [`effect-type.${ItemActionEffectType.Kill}`]: "Zombies getötet",
+    [`effect-type.${ItemActionEffectType.HomeDefense}`]: "Hausverteidigung",
+    [`effect-type.${ItemActionEffectType.HomeStorage}`]: "Hauslagerung",
+    [`effect-type.${ItemActionEffectType.Death}`]: "Tod",
+    [`effect-type.${ItemActionEffectType.CampingChances}`]: "Camping Chancen",
     foundIn: "Gefunden in",
     foundWhenSearching: "Gefunden beim Suchen",
     unavailable: "Nicht mehr verfügbar",
@@ -377,6 +457,7 @@ type DisplayedIcon = {
 const convertEffectToDisplayedItem = (effect: ItemActionEffect) => {
   const displayedIcon: DisplayedIcon = {
     icon: "",
+    title: t(T, `effect-type.${effect.type}`),
   };
 
   switch (effect.type) {
@@ -499,17 +580,19 @@ const convertEffectToDisplayedItem = (effect: ItemActionEffect) => {
       break;
     }
     case ItemActionEffectType.HomeStorage: {
-      displayedIcon.icon = "icons/small_homeup.gif";
+      displayedIcon.icon = "icons/item/item_home_box_xl.gif";
       displayedIcon.amount = effect.value;
       break;
     }
     case ItemActionEffectType.RemoveStatus: {
       displayedIcon.icon = getStatusIcon(effect.value?.toString() ?? "");
+      displayedIcon.title = undefined;
       displayedIcon.crossed = true;
       break;
     }
     case ItemActionEffectType.AddStatus: {
       displayedIcon.icon = getStatusIcon(effect.value?.toString() ?? "");
+      displayedIcon.title = undefined;
 
       // Add checked icon for shaman immunity
       if (effect.value === "tg_shaman_immune") {
@@ -530,6 +613,11 @@ const convertEffectToDisplayedItem = (effect: ItemActionEffect) => {
         store["hordes-lang"] !== Lang.DE ? `_${store["hordes-lang"]}` : ""
       }.gif`;
       displayedIcon.amount = Number(effect.value);
+      break;
+    }
+    case ItemActionEffectType.CampingChances: {
+      displayedIcon.icon = "emotes/camp.gif";
+      displayedIcon.text = String(effect.value);
       break;
     }
     default:

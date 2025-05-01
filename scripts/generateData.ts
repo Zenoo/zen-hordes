@@ -77,6 +77,7 @@ export enum ItemActionEffectType {
   AddStatus,
   Death,
   EP,
+  CampingChances,
 }
 
 type ItemActionEffect = {
@@ -959,8 +960,15 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
           });
           break;
         }
+        case "improveLevel": {
+          effects.push({
+            type: ItemActionEffectType.CampingChances,
+            value: `+${String(effectsData[effectName].data)}%`,
+            ...odds,
+          });
+          break;
+        }
         case "chatSilence":
-        case "improveLevel":
         case "morphTarget":
         case "consume":
         case "morphsStatus":
@@ -1096,6 +1104,8 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
         case "wagging_flag":
         case "fill_ksplash1":
         case "jerrycan_1b":
+        case "fill_splash1":
+        case "fill_asplash1":
           return;
       }
 
@@ -2344,7 +2354,10 @@ const generateTypes = () => {
   const apiStatus = await api.json.statusList();
 
   // Check if the game version has changed
-  if (apiStatus.data.version !== gameVersion.version) {
+  if (
+    apiStatus.data.version &&
+    apiStatus.data.version !== gameVersion.version
+  ) {
     console.log(
       `New game version available: ${apiStatus.data.version}. Fetching new data...`
     );
@@ -2415,17 +2428,19 @@ const generateTypes = () => {
   generateTypes();
 
   // Update game version file
-  fs.writeFileSync(
-    gameVersionFilePath,
-    JSON.stringify(
-      {
-        version: apiStatus.data.version,
-      },
-      null,
-      2
-    ),
-    "utf-8"
-  );
+  if (apiStatus.data.version) {
+    fs.writeFileSync(
+      gameVersionFilePath,
+      JSON.stringify(
+        {
+          version: apiStatus.data.version,
+        },
+        null,
+        2
+      ),
+      "utf-8"
+    );
+  }
 
   console.log("Data generation completed.");
   process.exit(0);

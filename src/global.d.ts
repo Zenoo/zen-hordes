@@ -110,6 +110,7 @@ declare global {
     AddStatus,
     Death,
     EP,
+    CampingChances,
   }
 
   type ItemActionEffect = {

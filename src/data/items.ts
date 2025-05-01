@@ -316,18 +316,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
             value: "watergun_opt_5_#00"
           }
         ]
-      },
-      {
-        type: ItemActionType.Use,
-        conditions: [
-          { item: ItemId.WATER }
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "watergun_opt_5_#00"
-          }
-        ]
       }
     ],
   },
@@ -1054,6 +1042,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.AP,
             value: -1
+          },
+          {
+            type: ItemActionEffectType.CampingChances,
+            value: "+9%"
           }
         ]
       }
@@ -2137,6 +2129,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.AP,
             value: -1
+          },
+          {
+            type: ItemActionEffectType.CampingChances,
+            value: "+9%"
           }
         ]
       }
@@ -3663,6 +3659,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.AP,
             value: -1
+          },
+          {
+            type: ItemActionEffectType.CampingChances,
+            value: "+9%"
           }
         ]
       }
@@ -3794,18 +3794,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: false,
     watchPoints: 0,
     actions: [
-      {
-        type: ItemActionType.Use,
-        conditions: [
-          { item: ItemId.WATER }
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "watergun_3_#00"
-          }
-        ]
-      },
       {
         type: ItemActionType.Use,
         conditions: [
@@ -5819,6 +5807,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.AP,
             value: -1
+          },
+          {
+            type: ItemActionEffectType.CampingChances,
+            value: "+9%"
           }
         ]
       }
@@ -5857,6 +5849,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.AP,
             value: -1
+          },
+          {
+            type: ItemActionEffectType.CampingChances,
+            value: "+9%"
           }
         ]
       }
@@ -6079,6 +6075,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.AP,
             value: -1
+          },
+          {
+            type: ItemActionEffectType.CampingChances,
+            value: "+9%"
           }
         ]
       }
@@ -6187,6 +6187,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.FR]: "La balise Radius Mark II est un appareil très rustique bricolé avec les moyens du bord qui permet de détecter la présence de créatures dans les environs. On raconte qu'il donne le cancer et grille les neurones, mais vous ne vivrez pas assez longtemps pour que cela soit un véritable problème.",
       [Lang.DE]: "Der Radar-Marker 'Radius Mark II' ist ein fantasievoll zusammengeschraubtes Gerät, das dir ermöglicht, Lebewesen in deiner Umgebung ausfindig zu machen. Es wird behauptet, dass er Krebs verursache und Gehirnzellen irreparabel schädige, doch das kann dir egal sein, da du eh nicht lang genug leben wirst...",
       [Lang.ES]: "El transmisor Radius Mark II es un aparato arcaico pero eficaz para detectar la presencia de zombies en los alrededores. Se dice que da cáncer y que quema las neuronas si se usa por mucho tiempo, pero como tu vida no será muy larga no hay problema."
+    },
+    info: {
+      [Lang.EN]: "Reveals the 8 zones surrounding your current location.",
+      [Lang.FR]: "Révèle les 8 zones entourant votre position actuelle.",
+      [Lang.DE]: "Enthüllt die 8 Zonen um Ihren aktuellen Standort.",
+      [Lang.ES]: "Revela las 8 zonas que rodean tu ubicación actual."
     },
     categories: [ItemCategory.Miscellaneous],
     icon: "item_radius_mk2",
@@ -6678,6 +6684,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Eine nicht ganz durchgegarte wilde Mischung verschiedenster Zutaten, fein abgeschmeckt mit Wüstensand. Hhhmmm...",
       [Lang.ES]: "Ingredientes variados sazonados con arena del desierto. Hmmm..."
     },
+    info: {
+      [Lang.EN]: "Created by a failed cooking in your home Kitchen {{item:machine_2}}.",
+      [Lang.FR]: "Créé par une cuisson ratée dans votre cuisine à domicile {{item:machine_2}}.",
+      [Lang.DE]: "Erstellt durch misslungenes Kochen in Ihrer heimischen Küche {{item:machine_2}}.",
+      [Lang.ES]: "Creado por una cocción fallida en tu cocina en casa {{item:machine_2}}."
+    },
     categories: [ItemCategory.Food, ItemCategory.GuardWeapon, ItemCategory.APSource],
     icon: "item_dish",
     decoration: 0,
@@ -6712,6 +6724,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.FR]: "En apparence, ça n'est guère mieux qu'une ration quotidienne. Mais en réalité ça a très bon goût et ça nourrit bien.",
       [Lang.DE]: "Auf den ersten Blick sieht es kaum besser aus als das, was du sonst zu dir nimmst. In Wirklichkeit schmeckt es jedoch sehr sehr gut und ist sättigend!",
       [Lang.ES]: "No parece nada extraordinario, ¡pero tiene buen sabor y alimenta muy bien!"
+    },
+    info: {
+      [Lang.EN]: "Created by a successful cooking in your home Kitchen {{item:machine_2}}.",
+      [Lang.FR]: "Créé par une cuisson réussie dans votre cuisine à domicile {{item:machine_2}}.",
+      [Lang.DE]: "Erstellt durch erfolgreiches Kochen in Ihrer heimischen Küche {{item:machine_2}}.",
+      [Lang.ES]: "Creado por una cocción exitosa en tu cocina en casa {{item:machine_2}}."
     },
     categories: [ItemCategory.Food, ItemCategory.GuardWeapon, ItemCategory.APSource],
     icon: "item_dish_tasty",
@@ -7845,12 +7863,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Dieses alte Sperrholzstück stammt aus irgendeinem alten Gebäude. Mit ein wenig Einfallsreichtum könntest du es für eine neue Konstruktion wiederverwerten.",
       [Lang.ES]: "Debe haber salido de un antiguo edificio. Con un poco de ingenio puede servir para hacer un escondite."
     },
-    info: {
-      [Lang.EN]: "Costs 1 {{AP}} to install in the desert and increases the survival chance by 9%, so it works like defensive objects {{item:plate}}, but in contrast to them it has only this use.",
-      [Lang.FR]: "Coûte 1 {{AP}} pour l'installer dans le désert et augmente la chance de survie de 9%, donc il fonctionne comme les objets défensifs {{item:plate}}, mais contrairement à eux, il n'a que cette utilisation.",
-      [Lang.DE]: "Kostet 1 {{AP}}, um in der Wüste installiert zu werden, und erhöht die Überlebenschance um 9 %, sodass es wie defensive Objekte {{item:plate}} funktioniert, aber im Gegensatz zu ihnen hat es nur diesen Gebrauch.",
-      [Lang.ES]: "Cuesta 1 {{AP}} instalarse en el desierto y aumenta la posibilidad de supervivencia en un 9%, por lo que funciona como objetos defensivos {{item:plate}}, pero a diferencia de ellos, solo tiene este uso."
-    },
     categories: [ItemCategory.Miscellaneous, ItemCategory.CampingBoost],
     icon: "item_out_def",
     decoration: 0,
@@ -7866,6 +7878,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.AP,
             value: -1
+          },
+          {
+            type: ItemActionEffectType.CampingChances,
+            value: "+9%"
           }
         ]
       }
@@ -12992,6 +13008,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.AddStatus,
             value: "tg_tomb"
+          },
+          {
+            type: ItemActionEffectType.CampingChances,
+            value: "+5%"
           }
         ]
       }
