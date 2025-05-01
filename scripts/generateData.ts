@@ -492,9 +492,10 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
       action?.meta.includes("must_have_micropur_in")
     ) {
       conditions.push({ item: "WATER_CLEANER" });
-    }
-    if (action?.meta.includes("must_have_micropur_in")) {
-      conditions.push(ItemActionConditionEnum.Inside);
+
+      if (action?.meta.includes("must_be_inside")) {
+        conditions.push(ItemActionConditionEnum.Inside);
+      }
     }
     if (action?.meta.includes("must_have_steak")) {
       conditions.push({ item: "MEAT" });
@@ -913,18 +914,19 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
               );
 
               grouped.forEach(([item, count, innerOdds]) => {
-                effects.push(
-                  ...Array(count)
-                    .fill(0)
-                    .map(() => {
-                      const odds = (innerOdds / totalOdds) * (_odds ?? 100);
-                      return {
-                        type: ItemActionEffectType.CreateItem,
-                        value: item,
-                        odds: odds < 1 ? +odds.toFixed(1) : Math.round(odds),
-                      };
-                    })
-                );
+                const odds = (innerOdds / totalOdds) * (_odds ?? 100);
+
+                const effect: ItemActionEffect = {
+                  type: ItemActionEffectType.CreateItem,
+                  value: item,
+                  odds: odds < 1 ? +odds.toFixed(1) : Math.round(odds),
+                };
+
+                if (count > 1) {
+                  effect.count = count;
+                }
+
+                effects.push(effect);
               });
 
               break;

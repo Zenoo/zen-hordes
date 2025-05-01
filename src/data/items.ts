@@ -1338,11 +1338,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "undef_#00",
-            odds: 100
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "undef_#00",
+            count: 2,
             odds: 100
           }
         ]
@@ -1402,21 +1398,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "undef_#00",
-            odds: 100
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "undef_#00",
-            odds: 100
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "undef_#00",
-            odds: 100
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "undef_#00",
+            count: 4,
             odds: 100
           }
         ]
@@ -1476,11 +1458,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "undef_#00",
-            odds: 100
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "undef_#00",
+            count: 2,
             odds: 100
           }
         ]
@@ -1540,11 +1518,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "meat_#00",
-            odds: 100
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "meat_#00",
+            count: 2,
             odds: 100
           }
         ]
@@ -1607,11 +1581,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "meat_#00",
-            odds: 100
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "meat_#00",
+            count: 2,
             odds: 100
           }
         ]
@@ -1677,21 +1647,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "meat_#00",
-            odds: 100
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "meat_#00",
-            odds: 100
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "meat_#00",
-            odds: 100
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "meat_#00",
+            count: 4,
             odds: 100
           }
         ]
@@ -1961,26 +1917,13 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
+            count: 2,
             odds: 75
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_#00",
-            odds: 75
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "water_#00",
-            odds: 25
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "water_#00",
-            odds: 25
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "water_#00",
+            count: 3,
             odds: 25
           }
         ]
@@ -2054,8 +1997,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       {
         type: ItemActionType.Use,
         conditions: [
-          { item: ItemId.WATER_CLEANER },
-          ItemActionConditionEnum.Inside
+          { item: ItemId.WATER_CLEANER }
         ],
         effects: [
           {
@@ -11306,11 +11248,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "meat_#00",
-            odds: 100
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "meat_#00",
+            count: 2,
             odds: 100
           }
         ]
@@ -11686,11 +11624,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "flesh_#00",
-            odds: 100
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "flesh_#00",
+            count: 2,
             odds: 100
           }
         ]
