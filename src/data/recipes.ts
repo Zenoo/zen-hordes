@@ -194,9 +194,9 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.CATBOX }
     ],
     out: [
-      { item: ItemId.POISON_PART},
-      { item: ItemId.PET_CAT},
-      { item: ItemId.ANGRYC}
+      { item: ItemId.POISON_PART, odds: 1},
+      { item: ItemId.PET_CAT, odds: 1},
+      { item: ItemId.ANGRYC, odds: 1}
     ],
   },
   {

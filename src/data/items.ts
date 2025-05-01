@@ -7538,6 +7538,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Diese Autotür kann dir als Schutzschild dienen, wenn du eine Reihe hungriger Kadaver durchqueren musst. Die haben nämlich nur eines im Sinn: Dein köstliches Gehirn zu verschlingen.",
       [Lang.ES]: "Esta buena puerta de coche estadounidense te servirá como escudo para pasar entre las turbas de muertos vivientes deseosos de darte mordiscos."
     },
+    info: {
+      [Lang.EN]: "+1 {{item:shield}} while in the rucksack.",
+      [Lang.FR]: "+1 {{item:shield}} lorsqu'elle est dans le sac à dos.",
+      [Lang.DE]: "+1 {{item:shield}} im Rucksack.",
+      [Lang.ES]: "+1 {{item:shield}} mientras está en la mochila."
+    },
     categories: [ItemCategory.Defences, ItemCategory.GuardWeapon],
     icon: "item_car_door",
     decoration: 0,
@@ -7838,6 +7844,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.FR]: "Ce vieux morceau de contreplaqué vient d'un quelconque bâtiment. Au prix de quelques efforts, il devrait pouvoir servir à aménager une planque dehors.",
       [Lang.DE]: "Dieses alte Sperrholzstück stammt aus irgendeinem alten Gebäude. Mit ein wenig Einfallsreichtum könntest du es für eine neue Konstruktion wiederverwerten.",
       [Lang.ES]: "Debe haber salido de un antiguo edificio. Con un poco de ingenio puede servir para hacer un escondite."
+    },
+    info: {
+      [Lang.EN]: "Costs 1 {{AP}} to install in the desert and increases the survival chance by 9%, so it works like defensive objects {{item:plate}}, but in contrast to them it has only this use.",
+      [Lang.FR]: "Coûte 1 {{AP}} pour l'installer dans le désert et augmente la chance de survie de 9%, donc il fonctionne comme les objets défensifs {{item:plate}}, mais contrairement à eux, il n'a que cette utilisation.",
+      [Lang.DE]: "Kostet 1 {{AP}}, um in der Wüste installiert zu werden, und erhöht die Überlebenschance um 9 %, sodass es wie defensive Objekte {{item:plate}} funktioniert, aber im Gegensatz zu ihnen hat es nur diesen Gebrauch.",
+      [Lang.ES]: "Cuesta 1 {{AP}} instalarse en el desierto y aumenta la posibilidad de supervivencia en un 9%, por lo que funciona como objetos defensivos {{item:plate}}, pero a diferencia de ellos, solo tiene este uso."
     },
     categories: [ItemCategory.Miscellaneous, ItemCategory.CampingBoost],
     icon: "item_out_def",

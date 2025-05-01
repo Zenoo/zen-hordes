@@ -562,6 +562,26 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         item.categories.push("PrivateTown");
         break;
       }
+      case "out_def_#00": {
+        // info
+        item.info = {
+          en: "Costs 1 {{AP}} to install in the desert and increases the survival chance by 9%, so it works like defensive objects {{item:plate}}, but in contrast to them it has only this use.",
+          fr: "Coûte 1 {{AP}} pour l'installer dans le désert et augmente la chance de survie de 9%, donc il fonctionne comme les objets défensifs {{item:plate}}, mais contrairement à eux, il n'a que cette utilisation.",
+          de: "Kostet 1 {{AP}}, um in der Wüste installiert zu werden, und erhöht die Überlebenschance um 9 %, sodass es wie defensive Objekte {{item:plate}} funktioniert, aber im Gegensatz zu ihnen hat es nur diesen Gebrauch.",
+          es: "Cuesta 1 {{AP}} instalarse en el desierto y aumenta la posibilidad de supervivencia en un 9%, por lo que funciona como objetos defensivos {{item:plate}}, pero a diferencia de ellos, solo tiene este uso.",
+        };
+        break;
+      }
+      case "car_door_#00": {
+        // info
+        item.info = {
+          en: "+1 {{item:shield}} while in the rucksack.",
+          fr: "+1 {{item:shield}} lorsqu'elle est dans le sac à dos.",
+          de: "+1 {{item:shield}} im Rucksack.",
+          es: "+1 {{item:shield}} mientras está en la mochila.",
+        };
+        break;
+      }
     }
   }
 };

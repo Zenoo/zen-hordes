@@ -1846,6 +1846,7 @@ type ExportedRecipeData = Record<
     in: string | string[];
     out: string | string[] | [string, number][];
     provoking?: string;
+    multi_out?: boolean;
   }
 >;
 
@@ -1897,7 +1898,11 @@ const generateRecipes = (items: Record<number, Item>) => {
 
     (Array.isArray(recipeData.out) ? recipeData.out : [recipeData.out]).forEach(
       (o) => {
-        const odds = Array.isArray(o) ? o[1] : undefined;
+        const odds = Array.isArray(o)
+          ? o[1]
+          : Array.isArray(recipeData.out) && !recipeData.multi_out
+          ? 1
+          : undefined;
         const baseItem = Array.isArray(o) ? o[0] : o;
         const item = getItemByUid(items, baseItem);
 

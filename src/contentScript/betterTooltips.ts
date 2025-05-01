@@ -3,7 +3,14 @@ import { items } from "../data/items";
 import { pictos } from "../data/pictos";
 import { recipes } from "../data/recipes";
 import { ruins } from "../data/ruins";
-import { BuildingId, DropLocation, Item, ItemId, PictoId, Recipe } from "../data/types";
+import {
+  BuildingId,
+  DropLocation,
+  Item,
+  ItemId,
+  PictoId,
+  Recipe,
+} from "../data/types";
 import { ASSETS } from "../utils/constants";
 import { store } from "./store";
 import { t } from "./translate";
@@ -957,11 +964,11 @@ export const insertBetterItemTooltips = (
     if (bankStateTimestamp) {
       const count = localStorage.getItem(`bankItem_${item.id}`);
 
-      const bankCountTarget = [...node.childNodes].find((child) => {
+      const bankCountTarget = [...node.childNodes].find((child, i) => {
         // Description can either be a text node or a <p> element
         // We need to check for both to avoid breaking the tooltip
         return (
-          child.nodeType === Node.TEXT_NODE ||
+          (i !== 0 && child.nodeType === Node.TEXT_NODE) ||
           (child.nodeType === Node.ELEMENT_NODE &&
             (child as HTMLElement).tagName === "P")
         );
