@@ -492,6 +492,7 @@ export const recipes: Readonly<Recipe>[] = [
     out: [
       { item: ItemId.CHAINSAW_EMPTY}
     ],
+    pictos: [PictoId.TRONCO],
   },
   {
     type: RecipeType.ManualAnywhere,

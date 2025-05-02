@@ -2546,18 +2546,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
             value: "bgrenade_#00"
           }
         ]
-      },
-      {
-        type: ItemActionType.Use,
-        conditions: [
-          { item: ItemId.WATER }
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "bgrenade_#00"
-          }
-        ]
       }
     ],
   },
@@ -2728,6 +2716,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.FR]: "Cette ceinture vous permet de disposer d'un emplacement de sac à dos supplémentaire. De plus, elle est particulièrement bien conçue car elle ne vous empêchera pas de prendre un autre sac plus tard...",
       [Lang.DE]: "Mit diesem Gürtel kannst du einen weiteren Platz in deinem Rucksack freimachen. Außerdem ist der Gürtel äußerst ergonomisch entworfen worden, denn er gestattet dir, später noch eine weitere Tasche tragen zu können.",
       [Lang.ES]: "Te brinda un compartimento adicional junto a tu mochila. Otra ventaja: te deja las manos libres para llevar otro contenedor (mochila)."
+    },
+    info: {
+      [Lang.EN]: "+2 backpack spaces, 1 is used by the belt allowing +1 items to be carried.",
+      [Lang.FR]: "2 espaces dans le sac à dos, 1 est utilisé par la ceinture permettant de transporter +1 objet.",
+      [Lang.DE]: "+2 Rucksackplätze, 1 wird von dem Gürtel verwendet, was +1 Gegenstand ermöglicht.",
+      [Lang.ES]: "+2 espacios en la mochila, 1 es utilizado por el cinturón permitiendo llevar +1 objeto."
     },
     categories: [ItemCategory.Containers_and_boxes, ItemCategory.BagExtension],
     icon: "item_pocket_belt",

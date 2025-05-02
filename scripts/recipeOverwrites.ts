@@ -88,4 +88,16 @@ export const overwriteRecipeData = (
     in: [{ item: "saw_tool_temp_#00" }],
     out: [{ item: "saw_tool_temp_#00", odds: 85}, { item: "saw_tool_temp_#00", odds: 15, broken: true }],
   });
+
+  // Add picto to CHAINSAW_EMPTY recipe
+  const chainsawRecipe = recipes.find(
+    (recipe) =>
+      recipe.type === RecipeType.ManualAnywhere &&
+      recipe.in[0]?.item === "chainsaw_part_#00" &&
+      recipe.out[0]?.item === "chainsaw_empty_#00"
+  );
+
+  if (chainsawRecipe) {
+    chainsawRecipe.pictos = ["r_tronco_#00"];
+  }
 };

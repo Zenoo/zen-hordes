@@ -1151,6 +1151,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
         case "fill_splash1":
         case "fill_asplash1":
         case "open_metalbox2_t1":
+        case "fill_exgrenade2":
           return;
       }
 
