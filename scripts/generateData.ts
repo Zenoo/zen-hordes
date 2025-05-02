@@ -1193,11 +1193,8 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
     actionIds?.forEach((actionId) => {
       // Actions to ignore
       switch (actionId) {
-        case "open_metalbox_t1":
-        case "open_toolbox_t1":
         case "drug_hyd_1":
         case "drug_hyd_2":
-        case "open_catbox_t1":
         case "watercup_1b":
         case "watercup_2":
         case "watercup_3":
@@ -1208,9 +1205,32 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
         case "jerrycan_1b":
         case "fill_splash1":
         case "fill_asplash1":
-        case "open_metalbox2_t1":
         case "fill_exgrenade2":
         case "fill_grenade2":
+          return;
+        // Openers
+        case "can":
+        case "can_t1":
+        case "can_t2":
+        case "can_t3":
+        case "open_metalbox":
+        case "open_metalbox_t1":
+        case "open_metalbox_t2":
+        case "open_metalbox2":
+        case "open_metalbox2_t1":
+        case "open_metalbox2_t2":
+        case "open_toolbox":
+        case "open_toolbox_t1":
+        case "open_toolbox_t2":
+        case "open_foodbox_in":
+        case "open_foodbox_out":
+        case "open_foodbox_in_t1":
+        case "open_foodbox_out_t1":
+        case "open_foodbox_in_t2":
+        case "open_foodbox_out_t2":
+        case "open_catbox":
+        case "open_catbox_t1":
+        case "open_catbox_t2":
           return;
       }
 

@@ -117,47 +117,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: false,
     watchPoints: 0,
     actions: [
-      {
-        type: ItemActionType.Use,
-        conditions: [
-          ItemActionConditionEnum.BoxOpener
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "can_open_#00"
-          }
-        ]
-      },
-      {
-        type: ItemActionType.Use,
-        conditions: [
-          ItemActionConditionEnum.Technician,
-          ItemActionConditionEnum.BoxOpener
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "can_open_#00"
-          }
-        ]
-      },
-      {
-        type: ItemActionType.Use,
-        conditions: [
-          ItemActionConditionEnum.Technician
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CP,
-            value: -1
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "can_open_#00"
-          }
-        ]
-      }
+      
     ],
     drops: {
       [DropLocation.Zone]: 2.15
@@ -838,6 +798,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.FR]: "On l'appelle « Le Caddie ». Personne ne sait à quoi ça pouvait bien servir à part mettre des objets dedans, mais le nom inscrit dessus était rigolo. Bon, par contre, ça ne roule pas bien dans le sable.",
       [Lang.DE]: "Man nennt ihn auch \"Caddy\". Niemand weiß so recht, wozu er gut ist, außer um ein paar Gegenstände herumzufahren. Im Sand rollt er leider nicht ganz so gut.",
       [Lang.ES]: "Solo sirve para poner cosas dentro. Lo malo es que no rueda muy bien en la arena."
+    },
+    info: {
+      [Lang.EN]: "+3 backpack spaces, 1 is used by the trolley allowing +2 items to be carried.",
+      [Lang.FR]: "+3 espaces dans le sac à dos, 1 est utilisé par le caddie permettant de transporter +2 objets.",
+      [Lang.DE]: "+3 Rucksackplätze, 1 wird von dem Wagen verwendet, was +2 Gegenstände ermöglicht.",
+      [Lang.ES]: "+3 espacios en la mochila, 1 es utilizado por el carrito permitiendo llevar +2 objetos."
     },
     categories: [ItemCategory.Containers_and_boxes, ItemCategory.GuardWeapon],
     icon: "item_cart",
@@ -2878,96 +2844,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: true,
     watchPoints: 8,
     actions: [
-      {
-        type: ItemActionType.Open,
-        conditions: [
-          ItemActionConditionEnum.BoxOpener
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "bandage_#00",
-            odds: 28
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "vodka_#00",
-            odds: 20
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "drug_hero_#00",
-            odds: 16
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "drug_#00",
-            odds: 16
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "explo_#00",
-            odds: 8
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "rhum_#00",
-            odds: 8
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "lights_#00",
-            odds: 4
-          }
-        ]
-      },
-      {
-        type: ItemActionType.Open,
-        conditions: [
-          ItemActionConditionEnum.Technician
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CP,
-            value: -1
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "bandage_#00",
-            odds: 28
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "vodka_#00",
-            odds: 20
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "drug_hero_#00",
-            odds: 16
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "drug_#00",
-            odds: 16
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "explo_#00",
-            odds: 8
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "rhum_#00",
-            odds: 8
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "lights_#00",
-            odds: 4
-          }
-        ]
-      }
+      
     ],
     drops: {
       [DropLocation.Zone]: 0.69,
@@ -2995,106 +2872,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: true,
     watchPoints: 10,
     actions: [
-      {
-        type: ItemActionType.Open,
-        conditions: [
-          ItemActionConditionEnum.BoxOpener
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "mixergun_part_#00",
-            odds: 19
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "watergun_opt_part_#00",
-            odds: 19
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "pocket_belt_#00",
-            odds: 12
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "chainsaw_part_#00",
-            odds: 12
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "lawn_part_#00",
-            odds: 12
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "pilegun_upkit_#00",
-            odds: 10
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "cutcut_#00",
-            odds: 10
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "big_pgun_part_#00",
-            odds: 7
-          }
-        ]
-      },
-      {
-        type: ItemActionType.Open,
-        conditions: [
-          ItemActionConditionEnum.Technician
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CP,
-            value: -1
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "mixergun_part_#00",
-            odds: 19
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "watergun_opt_part_#00",
-            odds: 19
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "pocket_belt_#00",
-            odds: 12
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "chainsaw_part_#00",
-            odds: 12
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "lawn_part_#00",
-            odds: 12
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "pilegun_upkit_#00",
-            odds: 10
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "cutcut_#00",
-            odds: 10
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "big_pgun_part_#00",
-            odds: 7
-          }
-        ]
-      },
       {
         type: ItemActionType.Find,
         conditions: [
@@ -3139,86 +2916,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: true,
     watchPoints: 5,
     actions: [
-      {
-        type: ItemActionType.Open,
-        conditions: [
-          ItemActionConditionEnum.BoxOpener
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "pharma_#00",
-            odds: 25
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "explo_#00",
-            odds: 19
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "meca_parts_#00",
-            odds: 17
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "rustine_#00",
-            odds: 13
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "tube_#00",
-            odds: 13
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "pile_#00",
-            odds: 12
-          }
-        ]
-      },
-      {
-        type: ItemActionType.Open,
-        conditions: [
-          ItemActionConditionEnum.Technician
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CP,
-            value: -1
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "pharma_#00",
-            odds: 25
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "explo_#00",
-            odds: 19
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "meca_parts_#00",
-            odds: 17
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "rustine_#00",
-            odds: 13
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "tube_#00",
-            odds: 13
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "pile_#00",
-            odds: 12
-          }
-        ]
-      }
+      
     ],
     drops: {
       [DropLocation.Zone]: 1.29
@@ -4832,76 +4530,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: true,
     watchPoints: 0,
     actions: [
-      {
-        type: ItemActionType.Open,
-        conditions: [
-          ItemActionConditionEnum.BoxOpener
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "hmeat_#00",
-            odds: 28
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "can_#00",
-            odds: 23
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "food_bag_#00",
-            odds: 17
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "vegetable_#00",
-            odds: 17
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "meat_#00",
-            odds: 15
-          }
-        ]
-      },
-      {
-        type: ItemActionType.Open,
-        conditions: [
-          ItemActionConditionEnum.Technician
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "hmeat_#00",
-            odds: 28
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "can_#00",
-            odds: 23
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "food_bag_#00",
-            odds: 17
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "vegetable_#00",
-            odds: 17
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "meat_#00",
-            odds: 15
-          },
-          {
-            type: ItemActionEffectType.CP,
-            value: -1
-          }
-        ]
-      }
+      
     ],
     drops: {
       [DropLocation.Zone]: 0.34
@@ -12653,56 +12282,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: true,
     watchPoints: 0,
     actions: [
-      {
-        type: ItemActionType.Open,
-        conditions: [
-          ItemActionConditionEnum.BoxOpener
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "poison_part_#00",
-            odds: 33
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "pet_cat_#00",
-            odds: 33
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "angryc_#00",
-            odds: 33
-          }
-        ]
-      },
-      {
-        type: ItemActionType.Open,
-        conditions: [
-          ItemActionConditionEnum.Technician
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CP,
-            value: -1
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "poison_part_#00",
-            odds: 33
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "pet_cat_#00",
-            odds: 33
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "angryc_#00",
-            odds: 33
-          }
-        ]
-      }
+      
     ],
     drops: {
       [DropLocation.Zone]: 0.17
