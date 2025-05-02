@@ -756,6 +756,16 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         };
         break;
       }
+      case "cart_#00": {
+        // info
+        item.info = {
+          en: "+3 backpack spaces, 1 is used by the trolley allowing +2 items to be carried.",
+          fr: "+3 espaces dans le sac à dos, 1 est utilisé par le caddie permettant de transporter +2 objets.",
+          de: "+3 Rucksackplätze, 1 wird von dem Wagen verwendet, was +2 Gegenstände ermöglicht.",
+          es: "+3 espacios en la mochila, 1 es utilizado por el carrito permitiendo llevar +2 objetos.",
+        };
+        break;
+      }
     }
   }
 };
