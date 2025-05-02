@@ -1473,3 +1473,9 @@ export const updateItemBankCountPeriodically = () => {
       });
   }, 1000 * 60 * 5); // Update every 5 minutes
 };
+
+export const toggleItemActions = (show: boolean) => {
+  if (!store["better-tooltips"]) return;
+
+  document.body.classList.toggle("zen-item-actions-hidden", !show);
+};

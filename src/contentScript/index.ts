@@ -1,9 +1,10 @@
 import { resetOnDeath, trackBank } from "./bankTracker";
-import { insertBetterItemTooltips, insertBetterRuinTooltips, storeBankState, updateItemBankCountPeriodically } from "./betterTooltips";
+import { insertBetterItemTooltips, insertBetterRuinTooltips, storeBankState, toggleItemActions, updateItemBankCountPeriodically } from "./betterTooltips";
 import { displayCampingCalculator, updateCampingCalculatorWithCurrentParams } from "./campingCalculator";
 import { displayExternalCityLinks } from "./externalCityLink";
 import { displayUpdateButton } from "./externalSiteUpdater";
 import { offHover } from "./hooks/offHover";
+import { offKey } from "./hooks/offKey";
 import { onClick } from "./hooks/onClick";
 import { onHover } from "./hooks/onHover";
 import { onKey } from "./hooks/onKey";
@@ -69,4 +70,10 @@ onClick((node) => {
 // should be handled here
 onKey("h", (node) => {
   openItemInWiki(node);
+});
+onKey("q", () => {
+  toggleItemActions(false);
+});
+offKey("q", () => {
+  toggleItemActions(true);
 });

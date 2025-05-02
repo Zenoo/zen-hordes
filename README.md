@@ -52,6 +52,9 @@ Zen Hordes offers several UI enhancements to make your experience on the MyHorde
 - Action points layout
 - ... and more!
 
+### Better tooltips
+Zen Hordes provides better tooltips for various elements on the MyHordes game website. These tooltips offer additional information and context about items, ruins, and other game elements, making it easier to understand their functions and uses. You can press `Q` while hovering over an item to hide their actions, if the tooltip gets too big.
+
 ### Bank Tracker
 One of the standout features of Zen Hordes is the Bank Tracker. This feature helps you manage your interactions with the game's city bank by notifying you of the number of items you can take within a specified period. A timer and item counter is displayed above the city bank. This helps in managing resources more effectively and prevents accidental overuse.
 
