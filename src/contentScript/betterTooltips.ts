@@ -24,6 +24,7 @@ const T: Translations = {
     [`action-type.${ItemActionType.Death}`]: "Death",
     [`action-type.${ItemActionType.Steal}`]: "Steal",
     [`action-type.${ItemActionType.Butcher}`]: "Butcher",
+    [`action-type.${ItemActionType.Find}`]: "Find",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Assemble",
     [`recipe-type.${RecipeType.ManualInside}`]: "Assemble (inside)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Assemble (outside)",
@@ -54,10 +55,8 @@ const T: Translations = {
     [`effect-type.${ItemActionEffectType.Ghoulify}`]: "Become a Ghoul",
     [`effect-type.${ItemActionEffectType.UnGhoulify}`]: "Un-Ghoulify",
     [`effect-type.${ItemActionEffectType.Infect}`]: "Infected",
-    [`effect-type.${ItemActionEffectType.ReduceGhoulHunger}`]:
-      "Ghoul Hunger",
-    [`effect-type.${ItemActionEffectType.AddWaterToWell}`]:
-      "Add Water to Well",
+    [`effect-type.${ItemActionEffectType.ReduceGhoulHunger}`]: "Ghoul Hunger",
+    [`effect-type.${ItemActionEffectType.AddWaterToWell}`]: "Add Water to Well",
     [`effect-type.${ItemActionEffectType.Defense}`]: "Defense",
     [`effect-type.${ItemActionEffectType.RemoveRuinDebris}`]:
       "Remove Ruin Debris",
@@ -67,6 +66,21 @@ const T: Translations = {
     [`effect-type.${ItemActionEffectType.HomeStorage}`]: "Home Storage",
     [`effect-type.${ItemActionEffectType.Death}`]: "Death",
     [`effect-type.${ItemActionEffectType.CampingChances}`]: "Camping Chances",
+    "status.clean": "Clean",
+    "status.drugged": "Drugged",
+    "status.infection": "Infected",
+    "status.immune": "Immune",
+    "status.tg_meta_wound": "Wounded",
+    "status.terror": "Terrorized",
+    "status.healed": "Healed",
+    "status.drunk": "Drunk",
+    "status.thirst1": "Thirsty",
+    "status.thirst2": "Dehydrated",
+    "status.addict": "Addicted",
+    "status.hasdrunk": "Has drunk",
+    "status.haseaten": "Has eaten",
+    "status.tg_shaman_immune": "Immune to red souls",
+    "status.tg_april_ooze": "Infected the next day",
     foundIn: "Found in",
     foundWhenSearching: "Found when searching",
     unavailable: "Not available anymore",
@@ -83,6 +97,7 @@ const T: Translations = {
     [`action-type.${ItemActionType.Death}`]: "Mort",
     [`action-type.${ItemActionType.Steal}`]: "Voler",
     [`action-type.${ItemActionType.Butcher}`]: "Découper",
+    [`action-type.${ItemActionType.Find}`]: "Trouver",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Assembler",
     [`recipe-type.${RecipeType.ManualInside}`]: "Assembler (intérieur)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Assembler (extérieur)",
@@ -114,18 +129,33 @@ const T: Translations = {
     [`effect-type.${ItemActionEffectType.UnGhoulify}`]: "Dé-ghoulifier",
     [`effect-type.${ItemActionEffectType.Infect}`]: "Infecté",
     [`effect-type.${ItemActionEffectType.ReduceGhoulHunger}`]:
-      "Réduire la voracité de ghoul",
+      "Réduit la voracité de goule",
     [`effect-type.${ItemActionEffectType.AddWaterToWell}`]:
-      "Ajouter de l'eau au puits",
+      "Ajoute de l'eau au puits",
     [`effect-type.${ItemActionEffectType.Defense}`]: "Défense",
-    [`effect-type.${ItemActionEffectType.RemoveRuinDebris}`]:
-      "Déblaiement",
+    [`effect-type.${ItemActionEffectType.RemoveRuinDebris}`]: "Déblaiement",
     [`effect-type.${ItemActionEffectType.GetEscapeTime}`]: "Évasion",
     [`effect-type.${ItemActionEffectType.Kill}`]: "Zombies tués",
     [`effect-type.${ItemActionEffectType.HomeDefense}`]: "Défense de maison",
     [`effect-type.${ItemActionEffectType.HomeStorage}`]: "Stockage de maison",
     [`effect-type.${ItemActionEffectType.Death}`]: "Mort",
-    [`effect-type.${ItemActionEffectType.CampingChances}`]: "Chances de camping",
+    [`effect-type.${ItemActionEffectType.CampingChances}`]:
+      "Chances de camping",
+    "status.clean": "Clair(e)",
+    "status.drugged": "Drogué",
+    "status.infection": "Infecté",
+    "status.immune": "Immunisé",
+    "status.tg_meta_wound": "Blessé",
+    "status.terror": "Terrorisé",
+    "status.healed": "Guéri",
+    "status.drunk": "Ivre",
+    "status.thirst1": "Assoiffé",
+    "status.thirst2": "Déshydraté",
+    "status.addict": "Addict",
+    "status.hasdrunk": "A bu",
+    "status.haseaten": "A mangé",
+    "status.tg_shaman_immune": "Immunisé contre les âmes rouges",
+    "status.tg_april_ooze": "Infecté le lendemain",
     foundIn: "Trouvé dans",
     foundWhenSearching: "Trouvé en fouillant",
     unavailable: "N'est plus disponible",
@@ -142,6 +172,7 @@ const T: Translations = {
     [`action-type.${ItemActionType.Death}`]: "Muerte",
     [`action-type.${ItemActionType.Steal}`]: "Robar",
     [`action-type.${ItemActionType.Butcher}`]: "Desollar",
+    [`action-type.${ItemActionType.Find}`]: "Encontrar",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Ensamblar",
     [`recipe-type.${RecipeType.ManualInside}`]: "Ensamblar (interior)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Ensamblar (exterior)",
@@ -182,9 +213,26 @@ const T: Translations = {
     [`effect-type.${ItemActionEffectType.GetEscapeTime}`]: "Escape",
     [`effect-type.${ItemActionEffectType.Kill}`]: "Zombis muertos",
     [`effect-type.${ItemActionEffectType.HomeDefense}`]: "Defensa de casa",
-    [`effect-type.${ItemActionEffectType.HomeStorage}`]: "Almacenamiento de casa",
+    [`effect-type.${ItemActionEffectType.HomeStorage}`]:
+      "Almacenamiento de casa",
     [`effect-type.${ItemActionEffectType.Death}`]: "Muerte",
-    [`effect-type.${ItemActionEffectType.CampingChances}`]: "Oportunidades de camping",
+    [`effect-type.${ItemActionEffectType.CampingChances}`]:
+      "Oportunidades de camping",
+    "status.clean": "Clean",
+    "status.drugged": "Drogado",
+    "status.infection": "Infectado",
+    "status.immune": "Inmunizado",
+    "status.tg_meta_wound": "Herido",
+    "status.terror": "Terrorizado",
+    "status.healed": "Curado",
+    "status.drunk": "Ebrio",
+    "status.thirst1": "Sediento",
+    "status.thirst2": "Deshidratado",
+    "status.addict": "Adicto",
+    "status.hasdrunk": "Ha bebido",
+    "status.haseaten": "Ha comido",
+    "status.tg_shaman_immune": "Inmunizado contra almas rojas",
+    "status.tg_april_ooze": "Infectado al día siguiente",
     foundIn: "Encontrado en",
     foundWhenSearching: "Encontrado al buscar",
     unavailable: "Ya no disponible",
@@ -201,6 +249,7 @@ const T: Translations = {
     [`action-type.${ItemActionType.Death}`]: "Tod",
     [`action-type.${ItemActionType.Steal}`]: "Stehlen",
     [`action-type.${ItemActionType.Butcher}`]: "Zerlegen",
+    [`action-type.${ItemActionType.Find}`]: "Finden",
     [`recipe-type.${RecipeType.ManualAnywhere}`]: "Zusammenbauen",
     [`recipe-type.${RecipeType.ManualInside}`]: "Zusammenbauen (innen)",
     [`recipe-type.${RecipeType.ManualOutside}`]: "Zusammenbauen (außen)",
@@ -244,6 +293,21 @@ const T: Translations = {
     [`effect-type.${ItemActionEffectType.HomeStorage}`]: "Hauslagerung",
     [`effect-type.${ItemActionEffectType.Death}`]: "Tod",
     [`effect-type.${ItemActionEffectType.CampingChances}`]: "Camping Chancen",
+    "status.clean": "Clean",
+    "status.drugged": "Drogiert",
+    "status.infection": "Infecté",
+    "status.immune": "Immunisé",
+    "status.tg_meta_wound": "Herido",
+    "status.terror": "Terrorizado",
+    "status.healed": "Curado",
+    "status.drunk": "Ebrio",
+    "status.thirst1": "Sediento",
+    "status.thirst2": "Deshidratado",
+    "status.addict": "Adicto",
+    "status.hasdrunk": "Ha bebido",
+    "status.haseaten": "Ha comido",
+    "status.tg_shaman_immune": "Inmunizado contra almas rojas",
+    "status.tg_april_ooze": "Infectado al día siguiente",
     foundIn: "Gefunden in",
     foundWhenSearching: "Gefunden beim Suchen",
     unavailable: "Nicht mehr verfügbar",
@@ -434,6 +498,8 @@ const getActionTypeIcon = (action: ItemAction) => {
       return "emotes/thief.gif";
     case ItemActionType.Butcher:
       return "pictos/r_animal.gif";
+    case ItemActionType.Find:
+      return "building/small_gather.gif";
     default:
       return "icons/item/item_broken.gif";
   }
@@ -586,13 +652,13 @@ const convertEffectToDisplayedItem = (effect: ItemActionEffect) => {
     }
     case ItemActionEffectType.RemoveStatus: {
       displayedIcon.icon = getStatusIcon(effect.value?.toString() ?? "");
-      displayedIcon.title = undefined;
+      displayedIcon.title = t(T, `status.${effect.value}`);
       displayedIcon.crossed = true;
       break;
     }
     case ItemActionEffectType.AddStatus: {
       displayedIcon.icon = getStatusIcon(effect.value?.toString() ?? "");
-      displayedIcon.title = undefined;
+      displayedIcon.title = t(T, `status.${effect.value}`);
 
       // Add checked icon for shaman immunity
       if (effect.value === "tg_shaman_immune") {
@@ -944,6 +1010,9 @@ const getIconSource = (icon: string) => {
   if (icon.startsWith("item:")) {
     return `icons/item/item_${icon.slice(5)}.gif`;
   }
+  if (icon.startsWith("status:")) {
+    return `status/status_${icon.slice(7)}.gif`;
+  }
 
   switch (icon) {
     case "EP":
@@ -966,8 +1035,6 @@ const getIconSource = (icon: string) => {
       return `icons/sp_small${
         store["hordes-lang"] !== Lang.DE ? `_${store["hordes-lang"]}` : ""
       }.gif`;
-    case "terror":
-      return "status/status_terror.gif";
   }
 
   return icon;

@@ -933,6 +933,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
             value: "r_drug_#00"
           },
           {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "clean"
+          },
+          {
             type: ItemActionEffectType.AddStatus,
             value: "drugged"
           },
@@ -1740,6 +1744,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
             value: "r_drug_#00"
           },
           {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "clean"
+          },
+          {
             type: ItemActionEffectType.AddStatus,
             value: "drugged"
           },
@@ -2274,7 +2282,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       {
         type: ItemActionType.Use,
         conditions: [
-          
+          { item: ItemId.JERRYCAN }
         ],
         effects: [
           {
@@ -2762,6 +2770,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
             value: "r_drug_#00"
           },
           {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "clean"
+          },
+          {
             type: ItemActionEffectType.AddStatus,
             value: "drugged"
           },
@@ -2965,55 +2977,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
       {
         type: ItemActionType.Open,
         conditions: [
-          ItemActionConditionEnum.Technician,
-          ItemActionConditionEnum.BoxOpener
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "mixergun_part_#00",
-            odds: 19
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "watergun_opt_part_#00",
-            odds: 19
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "pocket_belt_#00",
-            odds: 12
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "chainsaw_part_#00",
-            odds: 12
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "lawn_part_#00",
-            odds: 12
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "pilegun_upkit_#00",
-            odds: 10
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "cutcut_#00",
-            odds: 10
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "big_pgun_part_#00",
-            odds: 7
-          }
-        ]
-      },
-      {
-        type: ItemActionType.Open,
-        conditions: [
           ItemActionConditionEnum.Technician
         ],
         effects: [
@@ -3060,6 +3023,18 @@ export const items: Readonly<Record<ItemId, Item>> = {
             type: ItemActionEffectType.CreateItem,
             value: "big_pgun_part_#00",
             odds: 7
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Find,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_chstxl_#00"
           }
         ]
       }
@@ -3188,6 +3163,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.FR]: "Avec une lampe de chevet, vous aurez moins peur la nuit et vous dormirez peut-être mieux ainsi.",
       [Lang.DE]: "Mit einer Nachttischlampe hast du nachts weniger Angst und kannst so besser schlafen.",
       [Lang.ES]: "Con ella tendrás menos miedo en las noches y seguramente dormirás mejor."
+    },
+    info: {
+      [Lang.EN]: "Prevents being {{status:terror}} Terrorised if the house is breached during the attack. Decreases the night time penalty from -10% to -2.5% while scavenging if on the ground in a zone.",
+      [Lang.FR]: "Empêche d'être {{status:terror}} Terrorisé si la maison est ciblée pendant l'attaque. Diminue la pénalité de nuit de -10% à -2,5% lors de la fouille si elle est au sol dans une zone.",
+      [Lang.DE]: "Verhindert, dass Sie während des Angriffs {{status:terror}} Terrorisiert werden, wenn das Haus während des Angriffs durchbrochen wird. Verringert die Nachtzeitstrafe von -10 % auf -2,5 %, während Sie in einer Zone nach Schätzen suchen.",
+      [Lang.ES]: "Evita ser {{status:terror}} Aterrorizado si la casa es asaltada durante el ataque. Disminuye la penalización nocturna del -10% al -2.5% mientras se busca si está en el suelo en una zona."
     },
     categories: [ItemCategory.Furniture, ItemCategory.GuardWeapon, ItemCategory.Decoration],
     icon: "item_lamp_on",
@@ -3505,6 +3486,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Eine äußerst praktische Tablette, die du überall einstecken kannst. Kurz nach ihrer Einnahme verschwindet dein Durst. Trotzdem kann sie WEDER deine Erschöpfung lindern, NOCH gibt sie dir Aktionspunkte zurück.",
       [Lang.ES]: "Muy práctica, esta pastillita puede quitarte la sed. Sin embargo no quita el cansancio ni regenera tus Puntos de Acción."
     },
+    info: {
+      [Lang.EN]: "Will not reset the step counter (if you walk 6 steps in the desert and take a {{item:drug_water}} Hydratone 100mg. You will still get {{status:thirst1}} Thirsty at the 11th step).",
+      [Lang.FR]: "Ne réinitialisera pas le compteur de pas (si vous marchez 6 pas dans le désert et que vous prenez un {{item:drug_water}} Hydratone 100mg. Vous aurez toujours {{status:thirst1}} Soif au 11ème pas).",
+      [Lang.DE]: "Setzt den Schrittzähler nicht zurück (wenn Sie 6 Schritte in der Wüste gehen und ein {{item:drug_water}} Hydratone 100mg nehmen. Sie werden immer {{status:thirst1}} Durstig beim 11. Schritt).",
+      [Lang.ES]: "No reiniciará el contador de pasos (si caminas 6 pasos en el desierto y tomas un {{item:drug_water}} Hydratone 100mg. Aún tendrás {{status:thirst1}} Sed en el 11º paso)."
+    },
     categories: [ItemCategory.Pharmacy, ItemCategory.Water, ItemCategory.Drug],
     icon: "item_drug_water",
     decoration: 0,
@@ -3520,6 +3507,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.GetPicto,
             value: "r_drug_#00"
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "clean"
           },
           {
             type: ItemActionEffectType.AddStatus,
@@ -4283,6 +4274,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Der Zonenmarker 'Radius' zeigt dir auf der Karte alle Zonen an, die an deine aktuelle Position angrenzen.",
       [Lang.ES]: "Este instrumento te mostrará en el mapa todas las zonas que rodean el lugar donde te encuentras."
     },
+    info: {
+      [Lang.EN]: "Reveals the 8 zones surrounding your current location. Disappears after use.",
+      [Lang.FR]: "Révèle les 8 zones entourant votre position actuelle. Disparaît après utilisation.",
+      [Lang.DE]: "Enthüllt die 8 Zonen um Ihren aktuellen Standort. Verschwinden nach Gebrauch.",
+      [Lang.ES]: "Revela las 8 zonas que rodean tu ubicación actual. Desaparece después de usarlo."
+    },
     categories: [ItemCategory.Miscellaneous],
     icon: "item_tagger",
     decoration: 0,
@@ -4309,6 +4306,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.FR]: "La Fusée Éclairante vous permet de réveler les informations d'une zone éloignée de la ville. Une fois retombée elle libère un petit emetteur qui transmet de suite les informations.",
       [Lang.DE]: "Die Leuchtrakete ermöglicht dir Informationen über weit entfernte Zonen zu bekommen. Sobald die Rakete am Boden aufschlägt, wird ein kleiner Sender freigesetzt, der Informationen über die Umgebung sendet.",
       [Lang.ES]: "Este pequeñín te permitirá recoger información sobre zonas lejanas. Tan pronto como toca el suelo, cae un pequeño transmisor, que envía información del entorno."
+    },
+    info: {
+      [Lang.EN]: "Reveals a random distant unexplored zone in the desert.",
+      [Lang.FR]: "Révèle une zone éloignée inexplorée au hasard dans le désert.",
+      [Lang.DE]: "Enthüllt eine zufällige entfernte unerforschte Zone in der Wüste.",
+      [Lang.ES]: "Revela una zona alejada inexplorada al azar en el desierto."
     },
     categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon],
     icon: "item_flare",
@@ -4582,12 +4585,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.GetPicto,
             value: "r_drug_#00",
-            odds: 80
+            odds: 100
           },
           {
-            type: ItemActionEffectType.GetPicto,
-            value: "r_drug_#00",
-            odds: 20
+            type: ItemActionEffectType.RemoveStatus,
+            value: "clean",
+            odds: 80
           },
           {
             type: ItemActionEffectType.AddStatus,
@@ -4653,16 +4656,16 @@ export const items: Readonly<Record<ItemId, Item>> = {
             value: "r_drug_#00"
           },
           {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "clean"
+          },
+          {
             type: ItemActionEffectType.AddStatus,
             value: "drugged"
           },
           {
             type: ItemActionEffectType.AddStatus,
             value: "immune"
-          },
-          {
-            type: ItemActionEffectType.RemoveStatus,
-            value: "infection"
           }
         ]
       }
@@ -4699,6 +4702,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_digger_#00"
+          },
+          {
             type: ItemActionEffectType.RemoveRuinDebris,
             value: "2-3"
           }
@@ -4733,7 +4740,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       {
         type: ItemActionType.Open,
         conditions: [
-          
+          ItemActionConditionEnum.BoxOpener
         ],
         effects: [
           {
@@ -5280,7 +5287,24 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: false,
     watchPoints: -10,
     actions: [
-      
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 1,
+            odds: 11
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "terror",
+            odds: 2
+          }
+        ]
+      }
     ],
   },
   [ItemId.GAME_BOX]: {
@@ -5403,6 +5427,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.FR]: "Un os avec encore un peu de viande autour… Bizarre. Ça a l'air encore frais en plus. Peut-être un animal tué pendant la nuit ?",
       [Lang.DE]: "Ein Knochen, an dem noch Fleisch ist... Komisch, er riecht sogar noch frisch. Vielleicht stammt er von einem Tier, das letzte Nacht getötet wurde?",
       [Lang.ES]: "Qué raro, la carne parece fresca aún. ¿Será de un animal muerto anoche?"
+    },
+    info: {
+      [Lang.EN]: "A citizen that dies in the desert (except from dehydration {{status:thirst2}}) will drop this item.",
+      [Lang.FR]: "Un citoyen qui meurt dans le désert (sauf de déshydratation {{status:thirst2}}) laissera tomber cet objet.",
+      [Lang.DE]: "Ein Bürger, der in der Wüste stirbt (außer an Dehydrierung {{status:thirst2}}), lässt diesen Gegenstand fallen.",
+      [Lang.ES]: "Un ciudadano que muere en el desierto (excepto por deshidratación {{status:thirst2}}) dejará caer este objeto."
     },
     categories: [ItemCategory.Food, ItemCategory.GuardWeapon, ItemCategory.APSource],
     icon: "item_bone_meat",
@@ -8485,6 +8515,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
             type: ItemActionEffectType.GetPicto,
             value: "r_alcool_#00",
             odds: 25
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "clean",
+            odds: 100
           },
           {
             type: ItemActionEffectType.AddStatus,
@@ -11802,6 +11837,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
             odds: 100
           },
           {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "clean",
+            odds: 100
+          },
+          {
             type: ItemActionEffectType.AddStatus,
             value: "drugged",
             odds: 100
@@ -12125,10 +12165,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Este librito fue un best-seller. Te ayuda a asimilar tranquilamente tu triste vida. Previene el estado aterrorizado si está en tu mochila."
     },
     info: {
-      [Lang.EN]: "Prevents you from becoming {{terror}} terrorised while using items.",
-      [Lang.FR]: "Vous empêche d'être {{terror}} terrorisé en utilisant des objets.",
-      [Lang.DE]: "Verhindert, dass Sie {{terror}} terrorisiert werden, während Sie Gegenstände verwenden.",
-      [Lang.ES]: "Evita que te {{terror}} aterroricen mientras usas objetos."
+      [Lang.EN]: "Prevents you from becoming {{status:terror}} terrorised while using items.",
+      [Lang.FR]: "Vous empêche d'être {{status:terror}} terrorisé en utilisant des objets.",
+      [Lang.DE]: "Verhindert, dass Sie {{status:terror}} terrorisiert werden, während Sie Gegenstände verwenden.",
+      [Lang.ES]: "Evita que te {{status:terror}} aterroricen mientras usas objetos."
     },
     categories: [ItemCategory.Pharmacy, ItemCategory.RP],
     icon: "item_lilboo",
@@ -12968,7 +13008,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           },
           {
             type: ItemActionEffectType.AddStatus,
-            value: "tamer_guard_1"
+            value: "tamer_watch_1"
           }
         ]
       }
@@ -13004,10 +13044,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "tamed_pet_off_#00"
-          },
-          {
-            type: ItemActionEffectType.AddStatus,
-            value: "tg_tomb"
           },
           {
             type: ItemActionEffectType.CampingChances,
@@ -14279,6 +14315,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.GetPicto,
             value: "r_drug_#00"
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "clean"
           },
           {
             type: ItemActionEffectType.AddStatus,

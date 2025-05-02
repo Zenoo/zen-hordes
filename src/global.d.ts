@@ -64,6 +64,7 @@ declare global {
     Death,
     Steal,
     Butcher,
+    Find,
   }
 
   const enum ItemActionConditionEnum {

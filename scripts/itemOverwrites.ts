@@ -362,10 +362,10 @@ export const overwriteItemData = (items: Record<string, Item>) => {
       case "lilboo_#00": {
         // info
         item.info = {
-          en: "Prevents you from becoming {{terror}} terrorised while using items.",
-          fr: "Vous empêche d'être {{terror}} terrorisé en utilisant des objets.",
-          de: "Verhindert, dass Sie {{terror}} terrorisiert werden, während Sie Gegenstände verwenden.",
-          es: "Evita que te {{terror}} aterroricen mientras usas objetos.",
+          en: "Prevents you from becoming {{status:terror}} terrorised while using items.",
+          fr: "Vous empêche d'être {{status:terror}} terrorisé en utilisant des objets.",
+          de: "Verhindert, dass Sie {{status:terror}} terrorisiert werden, während Sie Gegenstände verwenden.",
+          es: "Evita que te {{status:terror}} aterroricen mientras usas objetos.",
         };
         break;
       }
@@ -599,6 +599,114 @@ export const overwriteItemData = (items: Record<string, Item>) => {
           fr: "Révèle les 8 zones entourant votre position actuelle.",
           de: "Enthüllt die 8 Zonen um Ihren aktuellen Standort.",
           es: "Revela las 8 zonas que rodean tu ubicación actual.",
+        };
+        break;
+      }
+      case "bone_meat_#00": {
+        // info
+        item.info = {
+          en: "A citizen that dies in the desert (except from dehydration {{status:thirst2}}) will drop this item.",
+          fr: "Un citoyen qui meurt dans le désert (sauf de déshydratation {{status:thirst2}}) laissera tomber cet objet.",
+          de: "Ein Bürger, der in der Wüste stirbt (außer an Dehydrierung {{status:thirst2}}), lässt diesen Gegenstand fallen.",
+          es: "Un ciudadano que muere en el desierto (excepto por deshidratación {{status:thirst2}}) dejará caer este objeto.",
+        };
+        break;
+      }
+      case "cards_#00": {
+        // Play action
+        item.actions.push({
+          type: ItemActionType.Use,
+          conditions: [],
+          effects: [
+            {
+              type: ItemActionEffectType.AP,
+              value: 1,
+              odds: 11, // (6/54)
+            },
+            {
+              type: ItemActionEffectType.AddStatus,
+              value: "terror",
+              odds: 2, // (1/54)
+            },
+          ],
+        });
+        break;
+      }
+      case "digger_#00": {
+        // Excavation distinction
+        const digAction = item.actions.find(
+          (action) => action.effects.some((effect) => effect.type === ItemActionEffectType.RemoveRuinDebris)
+        );
+
+        if (digAction) {
+          digAction.effects.splice(0, 0, {
+            type: ItemActionEffectType.GetPicto,
+            value: "r_digger_#00",
+          });
+        }
+        break;
+      }
+      case "flare_#00": {
+        // info
+        item.info = {
+          en: "Reveals a random distant unexplored zone in the desert.",
+          fr: "Révèle une zone éloignée inexplorée au hasard dans le désert.",
+          de: "Enthüllt eine zufällige entfernte unerforschte Zone in der Wüste.",
+          es: "Revela una zona alejada inexplorada al azar en el desierto.",
+        };
+        break;
+      }
+      case "tagger_#00": {
+        // info
+        item.info = {
+          en: "Reveals the 8 zones surrounding your current location. Disappears after use.",
+          fr: "Révèle les 8 zones entourant votre position actuelle. Disparaît après utilisation.",
+          de: "Enthüllt die 8 Zonen um Ihren aktuellen Standort. Verschwinden nach Gebrauch.",
+          es: "Revela las 8 zonas que rodean tu ubicación actual. Desaparece después de usarlo.",
+        };
+        break;
+      }
+      case "drug_water_#00": {
+        // info
+        item.info = {
+          en: "Will not reset the step counter (if you walk 6 steps in the desert and take a {{item:drug_water}} Hydratone 100mg. You will still get {{status:thirst1}} Thirsty at the 11th step).",
+          fr: "Ne réinitialisera pas le compteur de pas (si vous marchez 6 pas dans le désert et que vous prenez un {{item:drug_water}} Hydratone 100mg. Vous aurez toujours {{status:thirst1}} Soif au 11ème pas).",
+          de: "Setzt den Schrittzähler nicht zurück (wenn Sie 6 Schritte in der Wüste gehen und ein {{item:drug_water}} Hydratone 100mg nehmen. Sie werden immer {{status:thirst1}} Durstig beim 11. Schritt).",
+          es: "No reiniciará el contador de pasos (si caminas 6 pasos en el desierto y tomas un {{item:drug_water}} Hydratone 100mg. Aún tendrás {{status:thirst1}} Sed en el 11º paso).",
+        };
+        break;
+      }
+      case "lamp_on_#00": {
+        // info
+        item.info = {
+          en: "Prevents being {{status:terror}} Terrorised if the house is breached during the attack. Decreases the night time penalty from -10% to -2.5% while scavenging if on the ground in a zone.",
+          fr: "Empêche d'être {{status:terror}} Terrorisé si la maison est ciblée pendant l'attaque. Diminue la pénalité de nuit de -10% à -2,5% lors de la fouille si elle est au sol dans une zone.",
+          de: "Verhindert, dass Sie während des Angriffs {{status:terror}} Terrorisiert werden, wenn das Haus während des Angriffs durchbrochen wird. Verringert die Nachtzeitstrafe von -10 % auf -2,5 %, während Sie in einer Zone nach Schätzen suchen.",
+          es: "Evita ser {{status:terror}} Aterrorizado si la casa es asaltada durante el ataque. Disminuye la penalización nocturna del -10% al -2.5% mientras se busca si está en el suelo en una zona.",
+        };
+        break;
+      }
+      case "chest_xl_#00": {
+        // Play action
+        item.actions.push({
+          type: ItemActionType.Find,
+          conditions: [],
+          effects: [
+            {
+              type: ItemActionEffectType.GetPicto,
+              value: "r_chstxl_#00",
+            },
+          ],
+        });
+        break;
+      }
+      case "pocket_belt_#00": {
+        // info
+        item.info = {
+          en: "+2 backpack spaces, 1 is used by the belt allowing +1 items to be carried.",
+          fr: "2 espaces dans le sac à dos, 1 est utilisé par la ceinture permettant de transporter +1 objet.",
+          de: "+2 Rucksackplätze, 1 wird von dem Gürtel verwendet, was +1 Gegenstand ermöglicht.",
+          es: "+2 espacios en la mochila, 1 es utilizado por el cinturón permitiendo llevar +1 objeto.",
         };
         break;
       }

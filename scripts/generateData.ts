@@ -31,6 +31,7 @@ export enum ItemActionType {
   Death,
   Steal,
   Butcher,
+  Find,
 }
 
 export enum ItemActionConditionEnum {
@@ -507,6 +508,9 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
     if (action?.meta.includes("must_have_filter")) {
       conditions.push({ building: "ITEM_JERRYCAN_01" });
     }
+    if (action?.meta.includes("have_canister")) {
+      conditions.push({ item: "JERRYCAN" });
+    }
 
     if (
       [
@@ -514,6 +518,8 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
         "have_can_opener",
         "have_box_opener_hd",
         "have_box_opener",
+        "have_parcel_opener",
+        "have_parcel_opener_home",
       ].some((condition) => action?.meta.includes(condition))
     ) {
       conditions.push(ItemActionConditionEnum.BoxOpener);
@@ -675,7 +681,18 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
         "tg_has_shoe",
         "tg_had_shoe",
         "tg_shoe_first",
+        "tamer_guard_1",
+        "tg_tomb",
       ];
+
+      // Remove clean status on drug consumption
+      if (effectName === "drug_any") {
+        effects.push({
+          type: ItemActionEffectType.RemoveStatus,
+          value: "clean",
+          ...odds,
+        });
+      }
 
       switch (effectsData[effectName].type) {
         case "picto": {
@@ -686,6 +703,20 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
 
           data.forEach((picto) => {
             if (!picto.includes("'")) return;
+
+            // Check if the picto is already in the list
+            const existingEffect = effects.find(
+              (effect) =>
+                effect.type === ItemActionEffectType.GetPicto &&
+                effect.value === picto.replace(/'/g, "")
+            );
+
+            if (existingEffect) {
+              existingEffect.odds = Math.round(
+                (existingEffect.odds ?? 100) + (_odds ?? 100)
+              );
+              return;
+            }
 
             effects.push({
               type: ItemActionEffectType.GetPicto,
@@ -803,19 +834,32 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
         }
         case "addsStatus": {
           // If array, we have [status, picto]
-          if (Array.isArray(effectsData[effectName].data)) {
-            effects.push(
-              {
-                type: ItemActionEffectType.AddStatus,
-                value: String(effectsData[effectName].data[0]).slice(1, -1),
-                ...odds,
-              },
-              {
-                type: ItemActionEffectType.GetPicto,
-                value: String(effectsData[effectName].data[1]).slice(1, -1),
-                ...odds,
-              }
+          const statusData = effectsData[effectName].data;
+          if (Array.isArray(statusData)) {
+            effects.push({
+              type: ItemActionEffectType.AddStatus,
+              value: String(statusData[0]).slice(1, -1),
+              ...odds,
+            });
+
+            // Check if the picto is already in the list
+            const existingEffect = effects.find(
+              (effect) =>
+                effect.type === ItemActionEffectType.GetPicto &&
+                effect.value === String(statusData[1]).slice(1, -1)
             );
+
+            if (existingEffect) {
+              existingEffect.odds = Math.round(
+                (existingEffect.odds ?? 100) + (_odds ?? 100)
+              );
+            } else {
+              effects.push({
+                type: ItemActionEffectType.GetPicto,
+                value: String(statusData[1]).slice(1, -1),
+                ...odds,
+              });
+            }
             break;
           }
 
@@ -1106,6 +1150,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
         case "jerrycan_1b":
         case "fill_splash1":
         case "fill_asplash1":
+        case "open_metalbox2_t1":
           return;
       }
 
