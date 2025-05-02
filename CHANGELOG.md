@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.6.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.5.2...zen-hordes-v1.6.0) (2025-05-02)
+
+
+### Features
+
+* Display item drop locations ([9c0deb0](https://github.com/Zenoo/zen-hordes/commit/9c0deb041466f670c0fb420ccae7c321a6241d1a))
+* Generate item drop stats ([b4546b8](https://github.com/Zenoo/zen-hordes/commit/b4546b89765694801fe0b5cbab158eef4912a3fa))
+* Hide item actions in tooltips on Q press ([20eca02](https://github.com/Zenoo/zen-hordes/commit/20eca026285a6ee9bbb5cd3e9a7471f076dcd86d))
+* Openable item tags ([5e4bc44](https://github.com/Zenoo/zen-hordes/commit/5e4bc44dac334a03b1728a9a0f584232e9804a92))
+
+
+### Bug Fixes
+
+* 6-10 counter ([f198b4d](https://github.com/Zenoo/zen-hordes/commit/f198b4ddcb7daa7741adc8311b6fe08dd84a9f21))
+* All items reviewed ([6917bf0](https://github.com/Zenoo/zen-hordes/commit/6917bf01062d96a9b46884cd8e8d3d9490d2b949))
+* All items reviewed until ItemId.BGRENADE_EMPTY ([6eff07e](https://github.com/Zenoo/zen-hordes/commit/6eff07e8bd4c39185afd940f0b56ee0db730ced4))
+* All items reviewed until ItemId.CAR_DOOR ([0dec7d7](https://github.com/Zenoo/zen-hordes/commit/0dec7d79621ade9032615094c968ba548b4b81a9))
+* All items reviewed until ItemId.CUTCUT ([785450c](https://github.com/Zenoo/zen-hordes/commit/785450cc2bf10707971a1eea36016ab8de7b0504))
+* All items reviewed until ItemId.RP_TWIN ([73a7d5d](https://github.com/Zenoo/zen-hordes/commit/73a7d5d32b498ddef3250cbfc60fd60d24fa54ab))
+* All items reviewed until ItemId.RUSTINE ([6ac34ea](https://github.com/Zenoo/zen-hordes/commit/6ac34ea2c955987eb5c868138cd396be24a797cc))
+* All items reviewed until ItemId.SAFE ([a9ca74f](https://github.com/Zenoo/zen-hordes/commit/a9ca74ffbe94c6e6295ded805099c82c2493f4b8))
+* All items reviewed until ItemId.WATER_CLEANER ([aa12993](https://github.com/Zenoo/zen-hordes/commit/aa12993b4fe619152e03866df7e566147081af48))
+* Display item building conditions ([881e8dd](https://github.com/Zenoo/zen-hordes/commit/881e8dd774ae22b0199fff30734be35b10a13b7a))
+* ItemId.JERRYCAN actions ([6e25d8f](https://github.com/Zenoo/zen-hordes/commit/6e25d8fa1e0948130af793b65379755d2913a911))
+* Wrong drop rates for event items ([3658372](https://github.com/Zenoo/zen-hordes/commit/3658372338c04f788f16055532fc97469f2afed5))
+
 ## [1.5.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.5.1...zen-hordes-v1.5.2) (2025-04-30)
 
 
