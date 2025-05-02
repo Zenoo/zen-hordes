@@ -100,4 +100,39 @@ export const overwriteRecipeData = (
   if (chainsawRecipe) {
     chainsawRecipe.pictos = ["r_tronco_#00"];
   }
+
+  // Add picto to WATERGUN_OPT_EMPTY recipe
+  const watergunRecipe = recipes.find(
+    (recipe) =>
+      recipe.type === RecipeType.ManualAnywhere &&
+      recipe.in[0]?.item === "watergun_opt_part_#00" &&
+      recipe.out[0]?.item === "watergun_opt_empty_#00"
+  );
+
+  if (watergunRecipe) {
+    watergunRecipe.pictos = ["r_watgun_#00"];
+  }
+
+  // Add picto to PILEGUN_UP_EMPTY recipe
+  const pilegunRecipe = recipes.find(
+    (recipe) =>
+      recipe.type === RecipeType.ManualAnywhere &&
+      recipe.in[0]?.item === "pilegun_upkit_#00" &&
+      recipe.out[0]?.item === "pilegun_up_empty_#00"
+  );
+
+  if (pilegunRecipe) {
+    pilegunRecipe.pictos = ["r_batgun_#00"];
+  }
+
+  // Add picto to BIG_PGUN_EMPTY recipe
+  const bigPilegunRecipe = recipes.find(
+    (recipe) =>
+      recipe.type === RecipeType.ManualAnywhere &&
+      recipe.in[0]?.item === "big_pgun_part_#00" &&
+      recipe.out[0]?.item === "big_pgun_empty_#00"
+  );
+  if (bigPilegunRecipe) {
+    bigPilegunRecipe.pictos = ["r_batgun_#00"];
+  }
 };

@@ -109,6 +109,8 @@ export type Item = {
   available?: boolean;
   actions: ItemAction[];
   drops?: Record<string, number>;
+  opens?: string[];
+  openableBy?: string[];
 };
 
 type ActionResult =
@@ -347,6 +349,31 @@ ${itemDropObject}`;
 };
 
 const generateItems = async (drops: Record<string, ItemDrop[]>) => {
+  const openers = {
+    melee: [
+      "chair_basic_#00",
+      "pc_#00",
+      "wrench_#00",
+      "cutter_#00",
+      "bone_#00",
+      "cutcut_#00",
+      "small_knife_#00",
+      "chain_#00",
+      "knife_#00",
+      "staff_#00",
+      "can_opener_#00",
+      "screw_#00",
+      "swiss_knife_#00",
+      "hurling_stick_#00",
+    ],
+    main: ["saw_tool_#00", "can_opener_#00", "screw_#00", "swiss_knife_#00"],
+  };
+
+  const openableItems = {
+    main: ["can_#00", "chest_xl_#00", "catbox_#00"],
+    melee: ["chest_food_#00", "chest_tools_#00"],
+  };
+
   const items: Record<string, Item> = {};
 
   const filePath = path.join(__dirname, "data", "items.json");
@@ -389,6 +416,37 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
       watchPoints: itemData.guard,
       actions: [],
     };
+
+    // Openable items
+    Object.entries(openableItems).forEach(([key, value]) => {
+      if (value.some((item) => id === item)) {
+        if (!items[id]) {
+          throw new Error(`Item with id ${id} not found`);
+        }
+
+        if (!items[id].openableBy) {
+          items[id].openableBy = [];
+        }
+
+        items[id].openableBy.push(...openers[key as keyof typeof openers]);
+      }
+    });
+
+    Object.entries(openers).forEach(([key, value]) => {
+      if (value.some((item) => id === item)) {
+        if (!items[id]) {
+          throw new Error(`Item with id ${id} not found`);
+        }
+
+        if (!items[id].opens) {
+          items[id].opens = [];
+        }
+
+        items[id].opens.push(
+          ...openableItems[key as keyof typeof openableItems]
+        );
+      }
+    });
   });
 
   // Export actions from the main repo
@@ -1152,6 +1210,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
         case "fill_asplash1":
         case "open_metalbox2_t1":
         case "fill_exgrenade2":
+        case "fill_grenade2":
           return;
       }
 
@@ -1503,6 +1562,8 @@ export type Item = {
   available?: boolean;
   actions: ItemAction[];
   drops?: Partial<Record<DropLocation, number>>;
+  opens?: ItemId[];
+  openableBy?: ItemId[];
 };
 
 `;
@@ -1608,7 +1669,28 @@ export type Item = {
         .join(",\n      ")}
     },`
         : ""
-    }
+    }${
+        item.opens
+          ? `
+    opens: [
+      ${item.opens
+        .map((open) => `ItemId.${sanitizeItemId(getItemByUid(items, open))}`)
+        .join(",\n      ")}
+    ],`
+          : ""
+      }${
+        item.openableBy
+          ? `
+    openableBy: [
+      ${item.openableBy
+        .map(
+          (openableBy) =>
+            `ItemId.${sanitizeItemId(getItemByUid(items, openableBy))}`
+        )
+        .join(",\n      ")}
+    ],`
+          : ""
+      }
   }`
     )
     .join(",\n  ")}

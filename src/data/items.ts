@@ -162,6 +162,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
     drops: {
       [DropLocation.Zone]: 2.15
     },
+    openableBy: [
+      ItemId.SAW_TOOL,
+      ItemId.CAN_OPENER,
+      ItemId.SCREW,
+      ItemId.SWISS_KNIFE
+    ],
   },
   [ItemId.CAN_OPEN]: {
     id: ItemId.CAN_OPEN,
@@ -479,6 +485,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ]
       }
     ],
+    opens: [
+      ItemId.CHEST_FOOD,
+      ItemId.CHEST_TOOLS
+    ],
   },
   [ItemId.SCREW]: {
     id: ItemId.SCREW,
@@ -523,6 +533,13 @@ export const items: Readonly<Record<ItemId, Item>> = {
     drops: {
       [DropLocation.Zone]: 0.26
     },
+    opens: [
+      ItemId.CHEST_FOOD,
+      ItemId.CHEST_TOOLS,
+      ItemId.CAN,
+      ItemId.CHEST_XL,
+      ItemId.CATBOX
+    ],
   },
   [ItemId.STAFF]: {
     id: ItemId.STAFF,
@@ -567,6 +584,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     drops: {
       [DropLocation.Zone]: 0.86
     },
+    opens: [
+      ItemId.CHEST_FOOD,
+      ItemId.CHEST_TOOLS
+    ],
   },
   [ItemId.KNIFE]: {
     id: ItemId.KNIFE,
@@ -610,6 +631,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     drops: {
       [DropLocation.Zone]: 0.17
     },
+    opens: [
+      ItemId.CHEST_FOOD,
+      ItemId.CHEST_TOOLS
+    ],
   },
   [ItemId.CUTCUT]: {
     id: ItemId.CUTCUT,
@@ -649,6 +674,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
+    ],
+    opens: [
+      ItemId.CHEST_FOOD,
+      ItemId.CHEST_TOOLS
     ],
   },
   [ItemId.SMALL_KNIFE]: {
@@ -694,6 +723,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     drops: {
       [DropLocation.Zone]: 0.43
     },
+    opens: [
+      ItemId.CHEST_FOOD,
+      ItemId.CHEST_TOOLS
+    ],
   },
   [ItemId.SWISS_KNIFE]: {
     id: ItemId.SWISS_KNIFE,
@@ -734,6 +767,13 @@ export const items: Readonly<Record<ItemId, Item>> = {
           }
         ]
       }
+    ],
+    opens: [
+      ItemId.CHEST_FOOD,
+      ItemId.CHEST_TOOLS,
+      ItemId.CAN,
+      ItemId.CHEST_XL,
+      ItemId.CATBOX
     ],
   },
   [ItemId.CUTTER]: {
@@ -779,6 +819,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     drops: {
       [DropLocation.Zone]: 0.43
     },
+    opens: [
+      ItemId.CHEST_FOOD,
+      ItemId.CHEST_TOOLS
+    ],
   },
   [ItemId.CART]: {
     id: ItemId.CART,
@@ -846,6 +890,13 @@ export const items: Readonly<Record<ItemId, Item>> = {
     drops: {
       [DropLocation.Zone]: 0.43
     },
+    opens: [
+      ItemId.CHEST_FOOD,
+      ItemId.CHEST_TOOLS,
+      ItemId.CAN,
+      ItemId.CHEST_XL,
+      ItemId.CATBOX
+    ],
   },
   [ItemId.BAG]: {
     id: ItemId.BAG,
@@ -861,6 +912,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.FR]: "Idéal pour vos randonnées entre amis, il vous permet de stocker plus de souvenirs : biologiques, nucléaires ou autres.",
       [Lang.DE]: "Diese Tasche eignet sich bestens für ausgedehnte Wanderungen unter Freunden, denn sie erlaubt dir, noch mehr Souvenirstücke jeglicher Art (biologische, nukleare, usw..) mitzunehmen.",
       [Lang.ES]: "Muy práctica para los paseos entre amigos, en ella puedes llevar más cosas útiles."
+    },
+    info: {
+      [Lang.EN]: "+2 backpack spaces, 1 is used by the bag allowing +1 item to be carried.",
+      [Lang.FR]: "+2 espaces dans le sac à dos, 1 est utilisé par le sac permettant de transporter +1 objet.",
+      [Lang.DE]: "+2 Rucksackplätze, 1 wird von der Tasche verwendet, was +1 Gegenstände ermöglicht.",
+      [Lang.ES]: "+2 espacios en la mochila, 1 es utilizado por la bolsa permitiendo llevar +1 objetos."
     },
     categories: [ItemCategory.Containers_and_boxes, ItemCategory.BagExtension],
     icon: "item_bag",
@@ -1162,6 +1219,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Eine schwere Kette mit passendem Vorhängeschloss. Sie gibt dir ein beruhigendes Gefühl, wenn du mal nicht daheim bist. Für das Stadttor ist sie leider viel zu klein.",
       [Lang.ES]: "Con eso uno se siente más seguro en casa."
     },
+    info: {
+      [Lang.EN]: "Prevents other players from stealing from your house.",
+      [Lang.FR]: "Empêche les autres joueurs de voler dans votre maison.",
+      [Lang.DE]: "Verhindert, dass andere Spieler in Ihr Haus stehlen.",
+      [Lang.ES]: "Evita que otros jugadores roben en tu casa."
+    },
     categories: [ItemCategory.Furniture],
     icon: "item_lock",
     decoration: 0,
@@ -1219,7 +1282,19 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: false,
     watchPoints: -10,
     actions: [
-      
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 1,
+            odds: 17
+          }
+        ]
+      }
     ],
   },
   [ItemId.ENGINE]: {
@@ -1850,6 +1925,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Eine große, solide Zeltplane, die auch noch wasserdicht ist. Sie eignet sich bestens dazu die Löcher in deinem Hausdach zu schließen. ANMERKUNG: Dieser Gegenstand ist für die Verbesserung deines Hauses zwingend vorgeschrieben.",
       [Lang.ES]: "Una tela muy resistente e impermeable. Ideal para pasar la noche afuera (sin olvidar los bichos, zombies, enfermedades, tormentas y el frío). Aumenta tus posibilidades de sobrevivir al acampar, debes llevarla contigo para recibir el bonus."
     },
+    info: {
+      [Lang.EN]: "Increases the chances of survival while camping by 5%. Stackable.",
+      [Lang.FR]: "Augmente les chances de survie lors du camping de 5%. Cumulable.",
+      [Lang.DE]: "Erhöht die Überlebenschancen beim Campen um 5 %. Stapelbar.",
+      [Lang.ES]: "Aumenta las posibilidades de supervivencia mientras acampa en un 5%. Apilable."
+    },
     categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon, ItemCategory.CampingBoost],
     icon: "item_sheet",
     decoration: 0,
@@ -1876,6 +1957,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.FR]: "Le compagnon de voyage idéal ! Poches latérales, étanche, renforcé aux épaules, auto-massant pendant la marche et avec un joli logo \"Desert Addict\" chromé.",
       [Lang.DE]: "Dein idealer Begleiter für unterwegs! Massage im Schulter- und Lendenbereich, zweistufig regulierbar und mit großen Seitentaschen. Ein hübsches Logo aus Chrom mit der Auffschrift \"Desert Addict\" verziert ihn zusätzlich.",
       [Lang.ES]: "¡El accesorio de viaje ideal! Bolsillos laterales, impermeable, ergonómica, masajea la espalda mientras caminas y lleva un bonito logo \"Man vs Wild\""
+    },
+    info: {
+      [Lang.EN]: "+3 backpack spaces, 1 is used by the bag allowing +2 items to be carried.",
+      [Lang.FR]: "+3 espaces dans le sac à dos, 1 est utilisé par le sac permettant de transporter +2 objet.",
+      [Lang.DE]: "+3 Rucksackplätze, 1 wird von der Tasche verwendet, was +2 Gegenstände ermöglicht.",
+      [Lang.ES]: "+3 espacios en la mochila, 1 es utilizado por la bolsa permitiendo llevar +2 objetos."
     },
     categories: [ItemCategory.Containers_and_boxes, ItemCategory.BagExtension],
     icon: "item_bagxl",
@@ -2461,18 +2548,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
             value: "grenade_#00"
           }
         ]
-      },
-      {
-        type: ItemActionType.Use,
-        conditions: [
-          { item: ItemId.WATER }
-        ],
-        effects: [
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "grenade_#00"
-          }
-        ]
       }
     ],
     drops: {
@@ -2718,8 +2793,8 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Te brinda un compartimento adicional junto a tu mochila. Otra ventaja: te deja las manos libres para llevar otro contenedor (mochila)."
     },
     info: {
-      [Lang.EN]: "+2 backpack spaces, 1 is used by the belt allowing +1 items to be carried.",
-      [Lang.FR]: "2 espaces dans le sac à dos, 1 est utilisé par la ceinture permettant de transporter +1 objet.",
+      [Lang.EN]: "+2 backpack spaces, 1 is used by the belt allowing +1 item to be carried.",
+      [Lang.FR]: "+2 espaces dans le sac à dos, 1 est utilisé par la ceinture permettant de transporter +1 objet.",
       [Lang.DE]: "+2 Rucksackplätze, 1 wird von dem Gürtel verwendet, was +1 Gegenstand ermöglicht.",
       [Lang.ES]: "+2 espacios en la mochila, 1 es utilizado por el cinturón permitiendo llevar +1 objeto."
     },
@@ -3036,6 +3111,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
     drops: {
       [DropLocation.Zone]: 0.09
     },
+    openableBy: [
+      ItemId.SAW_TOOL,
+      ItemId.CAN_OPENER,
+      ItemId.SCREW,
+      ItemId.SWISS_KNIFE
+    ],
   },
   [ItemId.CHEST_TOOLS]: {
     id: ItemId.CHEST_TOOLS,
@@ -3142,6 +3223,22 @@ export const items: Readonly<Record<ItemId, Item>> = {
     drops: {
       [DropLocation.Zone]: 1.29
     },
+    openableBy: [
+      ItemId.CHAIR_BASIC,
+      ItemId.PC,
+      ItemId.WRENCH,
+      ItemId.CUTTER,
+      ItemId.BONE,
+      ItemId.CUTCUT,
+      ItemId.SMALL_KNIFE,
+      ItemId.CHAIN,
+      ItemId.KNIFE,
+      ItemId.STAFF,
+      ItemId.CAN_OPENER,
+      ItemId.SCREW,
+      ItemId.SWISS_KNIFE,
+      ItemId.HURLING_STICK
+    ],
   },
   [ItemId.LAMP_ON]: {
     id: ItemId.LAMP_ON,
@@ -4399,6 +4496,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     drops: {
       [DropLocation.Zone]: 0.34
     },
+    opens: [
+      ItemId.CHEST_FOOD,
+      ItemId.CHEST_TOOLS
+    ],
   },
   [ItemId.GUN]: {
     id: ItemId.GUN,
@@ -4805,6 +4906,22 @@ export const items: Readonly<Record<ItemId, Item>> = {
     drops: {
       [DropLocation.Zone]: 0.34
     },
+    openableBy: [
+      ItemId.CHAIR_BASIC,
+      ItemId.PC,
+      ItemId.WRENCH,
+      ItemId.CUTTER,
+      ItemId.BONE,
+      ItemId.CUTCUT,
+      ItemId.SMALL_KNIFE,
+      ItemId.CHAIN,
+      ItemId.KNIFE,
+      ItemId.STAFF,
+      ItemId.CAN_OPENER,
+      ItemId.SCREW,
+      ItemId.SWISS_KNIFE,
+      ItemId.HURLING_STICK
+    ],
   },
   [ItemId.FOOD_BAG]: {
     id: ItemId.FOOD_BAG,
@@ -5527,6 +5644,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ]
       }
     ],
+    opens: [
+      ItemId.CHEST_FOOD,
+      ItemId.CHEST_TOOLS
+    ],
   },
   [ItemId.WOOD_BEAM]: {
     id: ItemId.WOOD_BEAM,
@@ -5664,6 +5785,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
     watchPoints: 0,
     actions: [
       
+    ],
+    opens: [
+      ItemId.CAN,
+      ItemId.CHEST_XL,
+      ItemId.CATBOX
     ],
   },
   [ItemId.WOOD_LOG]: {
@@ -6692,6 +6818,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [DropLocation.Zone]: 0.43,
       [DropLocation.Trash]: 0.08
     },
+    opens: [
+      ItemId.CHEST_FOOD,
+      ItemId.CHEST_TOOLS
+    ],
   },
   [ItemId.DISH]: {
     id: ItemId.DISH,
@@ -8098,6 +8228,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     drops: {
       [DropLocation.Zone]: 0.17
     },
+    opens: [
+      ItemId.CHEST_FOOD,
+      ItemId.CHEST_TOOLS
+    ],
   },
   [ItemId.SAFE]: {
     id: ItemId.SAFE,
@@ -12573,6 +12707,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
     drops: {
       [DropLocation.Zone]: 0.17
     },
+    openableBy: [
+      ItemId.SAW_TOOL,
+      ItemId.CAN_OPENER,
+      ItemId.SCREW,
+      ItemId.SWISS_KNIFE
+    ],
   },
   [ItemId.CHKSPK]: {
     id: ItemId.CHKSPK,
@@ -14224,6 +14364,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
     drops: {
       [DropLocation.Zone]: 2.05
     },
+    opens: [
+      ItemId.CHEST_FOOD,
+      ItemId.CHEST_TOOLS
+    ],
   },
   [ItemId.GUINESS]: {
     id: ItemId.GUINESS,

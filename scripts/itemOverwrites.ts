@@ -489,7 +489,8 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         };
         break;
       }
-      case "smelly_meat_#00": {
+      case "smelly_meat_#00":
+      case "sheet_#00": {
         // info
         item.info = {
           en: "Increases the chances of survival while camping by 5%. Stackable.",
@@ -703,10 +704,55 @@ export const overwriteItemData = (items: Record<string, Item>) => {
       case "pocket_belt_#00": {
         // info
         item.info = {
-          en: "+2 backpack spaces, 1 is used by the belt allowing +1 items to be carried.",
-          fr: "2 espaces dans le sac à dos, 1 est utilisé par la ceinture permettant de transporter +1 objet.",
+          en: "+2 backpack spaces, 1 is used by the belt allowing +1 item to be carried.",
+          fr: "+2 espaces dans le sac à dos, 1 est utilisé par la ceinture permettant de transporter +1 objet.",
           de: "+2 Rucksackplätze, 1 wird von dem Gürtel verwendet, was +1 Gegenstand ermöglicht.",
           es: "+2 espacios en la mochila, 1 es utilizado por el cinturón permitiendo llevar +1 objeto.",
+        };
+        break;
+      }
+      case "bagxl_#00": {
+        // info
+        item.info = {
+          en: "+3 backpack spaces, 1 is used by the bag allowing +2 items to be carried.",
+          fr: "+3 espaces dans le sac à dos, 1 est utilisé par le sac permettant de transporter +2 objet.",
+          de: "+3 Rucksackplätze, 1 wird von der Tasche verwendet, was +2 Gegenstände ermöglicht.",
+          es: "+3 espacios en la mochila, 1 es utilizado por la bolsa permitiendo llevar +2 objetos.",
+        };
+        break;
+      }
+      case "dice_#00": {
+        // Play action
+        item.actions.push({
+          type: ItemActionType.Use,
+          conditions: [],
+          effects: [
+            {
+              type: ItemActionEffectType.AP,
+              value: 1,
+              odds: 17, // (1/6)
+            },
+          ],
+        });
+        break;
+      }
+      case "lock_#00": {
+        // info
+        item.info = {
+          en: "Prevents other players from stealing from your house.",
+          fr: "Empêche les autres joueurs de voler dans votre maison.",
+          de: "Verhindert, dass andere Spieler in Ihr Haus stehlen.",
+          es: "Evita que otros jugadores roben en tu casa.",
+        };
+        break;
+      }
+      case "bag_#00": {
+        // info
+        item.info = {
+          en: "+2 backpack spaces, 1 is used by the bag allowing +1 item to be carried.",
+          fr: "+2 espaces dans le sac à dos, 1 est utilisé par le sac permettant de transporter +1 objet.",
+          de: "+2 Rucksackplätze, 1 wird von der Tasche verwendet, was +1 Gegenstände ermöglicht.",
+          es: "+2 espacios en la mochila, 1 es utilizado por la bolsa permitiendo llevar +1 objetos.",
         };
         break;
       }

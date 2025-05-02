@@ -562,6 +562,25 @@ body.zen-map-preview-enabled {
     }
   }
 
+  // Open tag
+  .item-tag-open, .item-tag-openable {
+    height: unset !important;
+    font-size: 10px;
+    text-align: left;
+
+    &::after {
+      background-position-x: 50%;
+      background-position-y: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(https://zenoo.github.io/zen-hordes/icons/item/item_chest_tools.gif);
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+
   // Drop tag
   .item-tag-drop {
     height: unset !important;
@@ -743,6 +762,7 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
   // 6-10 above 0
   &[data-zen-amount="6-10"]::before {
     background-position: -106px -182px;
+    width: 14px;
   }
 }
 

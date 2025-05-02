@@ -408,6 +408,8 @@ export type Item = {
   available?: boolean;
   actions: ItemAction[];
   drops?: Partial<Record<DropLocation, number>>;
+  opens?: ItemId[];
+  openableBy?: ItemId[];
 };
 
 export enum RuinId {

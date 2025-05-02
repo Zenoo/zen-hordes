@@ -88,6 +88,8 @@ const T: Translations = {
     poisonable: "Can be poisoned",
     "item.tag.deco": "Home decoration",
     bankCount: "{{count}} in bank {{time}}",
+    canOpen: "Can open",
+    openableBy: "Can be opened by",
   },
   fr: {
     [`action-type.${ItemActionType.Eat}`]: "Manger",
@@ -163,6 +165,8 @@ const T: Translations = {
     poisonable: "Peut être empoisonné",
     "item.tag.deco": "Aménagement de maison",
     bankCount: "{{count}} en banque {{time}}",
+    canOpen: "Peut ouvrir",
+    openableBy: "Peut être ouvert par",
   },
   es: {
     [`action-type.${ItemActionType.Eat}`]: "Comer",
@@ -240,6 +244,8 @@ const T: Translations = {
     poisonable: "Puede ser envenenado",
     "item.tag.deco": "Hausdekoration",
     bankCount: "{{count}} en el banco {{time}}",
+    canOpen: "Puede abrir",
+    openableBy: "Puede ser abierto por",
   },
   de: {
     [`action-type.${ItemActionType.Eat}`]: "Essen",
@@ -315,6 +321,8 @@ const T: Translations = {
     poisonable: "Kann vergiftet werden",
     "item.tag.deco": "Hausdekoration",
     bankCount: "{{count}} in der Bank {{time}}",
+    canOpen: "Kann öffnen",
+    openableBy: "Kann geöffnet werden von",
   },
 };
 
@@ -1211,6 +1219,46 @@ export const insertBetterItemTooltips = (
       eventTag.setAttribute("data-event", item.event.toString());
       eventTag.textContent = t(T, `event.${item.event}`);
       node.append(eventTag);
+    }
+
+    // Opens
+    if (item.opens?.length) {
+      // Create an info tag
+      const openTag = document.createElement("div");
+      openTag.classList.add("item-tag", "item-tag-open", "zen-added");
+      openTag.textContent = `${t(T, `canOpen`)}: `;
+
+      item.opens.forEach((itemId) => {
+        const item = items[itemId];
+
+        const inputImg = document.createElement("img");
+        inputImg.src = `${ASSETS}/icons/item/${item.icon}.gif`;
+        inputImg.title = item.name[store["hordes-lang"]];
+        inputImg.setAttribute("data-type", "item");
+        inputImg.setAttribute("data-id", item.id);
+        openTag.append(inputImg);
+      });
+      node.append(openTag);
+    }
+
+    // Openable by
+    if (item.openableBy?.length) {
+      // Create an info tag
+      const openableTag = document.createElement("div");
+      openableTag.classList.add("item-tag", "item-tag-openable", "zen-added");
+      openableTag.textContent = `${t(T, `openableBy`)}: `;
+
+      item.openableBy.forEach((itemId) => {
+        const item = items[itemId];
+
+        const inputImg = document.createElement("img");
+        inputImg.src = `${ASSETS}/icons/item/${item.icon}.gif`;
+        inputImg.title = item.name[store["hordes-lang"]];
+        inputImg.setAttribute("data-type", "item");
+        inputImg.setAttribute("data-id", item.id);
+        openableTag.append(inputImg);
+      });
+      node.append(openableTag);
     }
 
     // Drops

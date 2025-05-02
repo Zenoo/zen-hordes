@@ -20,7 +20,6 @@ await initStore();
 // TODO: Change openBBHCityPage handler to not use matches
 // TODO: Change displayMapPreview handler to not use matches
 // (both can be solved by adding a mount listener that adds a custom class to the target imgs)
-// TODO: Implement rotating items in tooltips (repairable items, etc)
 // TODO: Add a list of items to bring back, with priorities (1-5)
 // TODO: Add custom tags to players
 

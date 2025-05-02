@@ -443,6 +443,7 @@ export const recipes: Readonly<Recipe>[] = [
     out: [
       { item: ItemId.WATERGUN_OPT_EMPTY}
     ],
+    pictos: [PictoId.WATGUN],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -456,6 +457,7 @@ export const recipes: Readonly<Recipe>[] = [
     out: [
       { item: ItemId.PILEGUN_UP_EMPTY}
     ],
+    pictos: [PictoId.BATGUN],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -539,6 +541,7 @@ export const recipes: Readonly<Recipe>[] = [
     out: [
       { item: ItemId.BIG_PGUN_EMPTY}
     ],
+    pictos: [PictoId.BATGUN],
   },
   {
     type: RecipeType.ManualAnywhere,
