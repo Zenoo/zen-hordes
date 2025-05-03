@@ -168,5 +168,9 @@ export const resetOnDeath = (node: HTMLElement) => {
     // Reset bank state
     resetBankState();
     localStorage.removeItem("bankStateTimestamp");
+
+    // Reset camping variables
+    setStore("camping-day", null);
+    setStore("previous-campings", 0);
   }
 };
