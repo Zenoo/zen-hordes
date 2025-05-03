@@ -61,14 +61,4 @@ export const initStore = async () => {
   const data = await chrome.storage.sync.get();
 
   Object.assign(store, data);
-
-  // UI enhancements handled by injected CSS
-  if (store["enhance-css"]) {
-    document.body.classList.add("zen-enhanced");
-  }
-
-  // Map preview styles
-  if (store["map-preview"]) {
-    document.body.classList.add("zen-map-preview-enabled");
-  }
 };

@@ -19,6 +19,8 @@ const T: Translations = {
 export const insertMapPreview = () => {
   if (!store["map-preview"]) return;
 
+  document.body.classList.add("zen-map-preview-enabled");
+
   // Insert map preview tooltip
   const existing = document.getElementById("zen-map-preview-tooltip");
   if (existing) return;

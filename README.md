@@ -40,17 +40,7 @@ The file `dist.zip` will be generated at the root of the project. You can then s
 ## Key Features
 
 ### User Interface Enhancements
-Zen Hordes offers several UI enhancements to make your experience on the MyHordes game website more enjoyable. These enhancements include improved layouts, better visibility of important information, and overall a more streamlined interface. Here is a list of the current UI modifications:
-- City data next to the in-game clock
-- Outside layout
-- Citizen list layout
-- Tabs alignment
-- Counters alignment
-- Citizen home layout
-- Heroic actions popup layout
-- Town dashboard layout
-- Action points layout
-- ... and more!
+Zen Hordes offers several UI enhancements to make your experience on the MyHordes game website more enjoyable. These enhancements include improved layouts, better visibility of important information, and overall a more streamlined interface. They also automatically select the map `Global` setting, and automatically open your bag outside.
 
 ### Better tooltips
 Zen Hordes provides better tooltips for various elements on the MyHordes game website. These tooltips offer additional information and context about items, ruins, and other game elements, making it easier to understand their functions and uses. You can press `Q` while hovering over an item to hide their actions, if the tooltip gets too big.

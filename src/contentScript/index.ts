@@ -13,10 +13,14 @@ import { displayMapPreview, insertMapPreview, openBBHCityPage, removeMapPreview 
 import { listenToBackgroundMessages } from "./messageListener";
 import { displayShamanSoulsButton } from "./shamanSoulsButton";
 import { initStore } from "./store";
+import { autoOpenBagOutside, autoSelectGlobalMapSetting, enhanceUI } from "./UIEnhancer";
 import { insertWiki, openItemInWiki } from "./wiki";
 
 // Initialize the store
 await initStore();
+// TODO: store is-camping as a date, update whenever the user camps
+// TODO: Check if is-camping < now (day), and set campings++ and unset is-camping
+// TODO: Populate previousCampings with campings in calculator
 // TODO: Change openBBHCityPage handler to not use matches
 // TODO: Change displayMapPreview handler to not use matches
 // (both can be solved by adding a mount listener that adds a custom class to the target imgs)
@@ -28,6 +32,7 @@ listenToBackgroundMessages();
 
 // Actions that can be performed immediately
 // should be handled here
+enhanceUI();
 insertMapPreview();
 insertWiki();
 updateItemBankCountPeriodically();
@@ -44,6 +49,8 @@ onMount((node) => {
   displayCampingCalculator(node);
   resetOnDeath(node);
   storeBankState(node);
+  autoSelectGlobalMapSetting(node);
+  autoOpenBagOutside(node);
 });
 
 // Actions that need to be performed on hover
