@@ -1,6 +1,16 @@
 import { resetOnDeath, trackBank } from "./bankTracker";
-import { insertBetterItemTooltips, insertBetterRuinTooltips, storeBankState, toggleItemActions, updateItemBankCountPeriodically } from "./betterTooltips";
-import { displayCampingCalculator, updateCampingCalculatorWithCurrentParams } from "./campingCalculator";
+import {
+  insertBetterItemTooltips,
+  insertBetterRuinTooltips,
+  storeBankState,
+  toggleItemActions,
+  updateItemBankCountPeriodically,
+} from "./betterTooltips";
+import {
+  displayCampingCalculator,
+  updateCampingCalculatorWithCurrentParams,
+  updatePreviousCampings,
+} from "./campingCalculator";
 import { displayExternalCityLinks } from "./externalCityLink";
 import { displayUpdateButton } from "./externalSiteUpdater";
 import { offHover } from "./hooks/offHover";
@@ -9,24 +19,31 @@ import { onClick } from "./hooks/onClick";
 import { onHover } from "./hooks/onHover";
 import { onKey } from "./hooks/onKey";
 import { onMount } from "./hooks/onMount";
-import { displayMapPreview, insertMapPreview, openBBHCityPage, removeMapPreview } from "./mapPreview";
+import {
+  displayMapPreview,
+  insertMapPreview,
+  openBBHCityPage,
+  removeMapPreview,
+} from "./mapPreview";
 import { listenToBackgroundMessages } from "./messageListener";
 import { displayShamanSoulsButton } from "./shamanSoulsButton";
 import { initStore } from "./store";
-import { autoOpenBagOutside, autoSelectGlobalMapSetting, enhanceUI } from "./UIEnhancer";
+import {
+  autoOpenBagOutside,
+  autoSelectGlobalMapSetting,
+  enhanceUI,
+} from "./UIEnhancer";
 import { insertWiki, openItemInWiki } from "./wiki";
 
-// Initialize the store
-await initStore();
-// TODO: store is-camping as a date, update whenever the user camps
-// TODO: Check if is-camping < now (day), and set campings++ and unset is-camping
-// TODO: Populate previousCampings with campings in calculator
+// TODO: Change removeMapPreview handler to no query on every single offHover
 // TODO: Change openBBHCityPage handler to not use matches
 // TODO: Change displayMapPreview handler to not use matches
 // (both can be solved by adding a mount listener that adds a custom class to the target imgs)
 // TODO: Add a list of items to bring back, with priorities (1-5)
 // TODO: Add custom tags to players
 
+// Initialize the store
+await initStore();
 // Listen for messages from the background script
 listenToBackgroundMessages();
 
@@ -51,6 +68,7 @@ onMount((node) => {
   storeBankState(node);
   autoSelectGlobalMapSetting(node);
   autoOpenBagOutside(node);
+  updatePreviousCampings(node);
 });
 
 // Actions that need to be performed on hover

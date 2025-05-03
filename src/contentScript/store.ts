@@ -26,6 +26,9 @@ export const store = {
   "bank-items-taken": 0,
   "last-bank-item-taken": Date.now(),
   "last-water-ration-taken": new Date(0).getTime(),
+  // Camping state
+  "camping-day": null as number | null,
+  "previous-campings": 0,
   // Game state
   "hordes-lang": (document.documentElement.lang ?? Lang.EN) as Lang,
   "town-id": 0,

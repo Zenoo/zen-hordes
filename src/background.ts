@@ -54,11 +54,29 @@ chrome.webRequest.onBeforeRequest.addListener(
       details.method === "GET"
     ) {
       // Take ration from the well
-      queue[details.requestId] = { action: Action.TakeItem, value: "water" };
-    } else if (details.url.endsWith("/logout")) {
+      queue[details.requestId] = { action: Action.TakeWaterFromWell };
+      return;
+    }
+
+    // Logout
+    if (details.url.endsWith("/logout")) {
       sendMessageToContentScript({ action: Action.Logout }).catch(
         console.error
       );
+      return;
+    }
+
+    // Camping
+    if (details.url.endsWith("/api/beyond/desert/camping")) {
+      const body = decodeRequestBody(details) as { action: string };
+      if (body.action === "6") {
+        // Set camping
+        queue[details.requestId] = { action: Action.Camp, value: true };
+      } else if (body.action === "9") {
+        // Remove camping
+        queue[details.requestId] = { action: Action.Camp, value: false };
+      }
+      return;
     }
   },
   { urls },
@@ -85,10 +103,11 @@ chrome.webRequest.onCompleted.addListener(
     const message = queue[details.requestId];
 
     // Take item from the bank
-    if (message?.action === Action.TakeItem) {
+    if (message?.action === Action.TakeWaterFromWell) {
       queue[details.requestId] = undefined;
 
       sendMessageToContentScript(message).catch(console.error);
+      return;
     }
 
     // Check if this is the desert request
@@ -106,6 +125,7 @@ chrome.webRequest.onCompleted.addListener(
           value: { name: "town-id", value: townId },
         }).catch(console.error);
       }
+      return;
     }
 
     // Desert refresh
@@ -116,6 +136,14 @@ chrome.webRequest.onCompleted.addListener(
       sendMessageToContentScript({
         action: Action.RefreshDesert,
       }).catch(console.error);
+      return;
+    }
+
+    // Camping
+    if (message?.action === Action.Camp) {
+      queue[details.requestId] = undefined;
+      sendMessageToContentScript(message).catch(console.error);
+      return;
     }
   },
   { urls },

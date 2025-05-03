@@ -21,8 +21,8 @@ export const listenToBackgroundMessages = async () => {
   chrome.runtime.onMessage.addListener(
     (message: Message, _sender, _sendResponse) => {
       switch (message.action) {
-        case Action.TakeItem: {
-          handleItemTaken(message.value);
+        case Action.TakeWaterFromWell: {
+          handleItemTaken(true);
           break;
         }
         case Action.ToggleFeature: {
@@ -225,6 +225,17 @@ export const listenToBackgroundMessages = async () => {
             document.querySelector<HTMLElement>(".inventory.desert");
           if (inventory) {
             displayUpdateButton(inventory);
+          }
+          break;
+        }
+        case Action.Camp: {
+          if (message.value === true) {
+            const day = document
+              .querySelector(".town-name+li")
+              ?.textContent?.replace(/\D/g, "");
+            setStore("camping-day", day ? +day : null);
+          } else {
+            setStore("camping-day", null);
           }
           break;
         }

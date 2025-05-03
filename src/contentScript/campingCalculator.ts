@@ -2,7 +2,7 @@ import { items } from "../data/items";
 import { ruins } from "../data/ruins";
 import { ItemId, Ruin } from "../data/types";
 import { ASSETS } from "../utils/constants";
-import { store } from "./store";
+import { setStore, store } from "./store";
 import { t } from "./translate";
 
 const T: Translations = {
@@ -851,6 +851,9 @@ export const updateCampingCalculatorWithCurrentParams = (node: HTMLElement) => {
     ".zone-subplane.center .actor.zombie"
   ).length;
 
+  // Previous campings
+  params.previousCampings = store["previous-campings"];
+
   // Camping items
   const campingItems = [...inventoryItems].filter((itemElement) => {
     // Get item
@@ -913,5 +916,18 @@ export const updateCampingCalculatorWithCurrentParams = (node: HTMLElement) => {
   const calculator = document.querySelector(".zen-camping-calculator");
   if (calculator) {
     calculator.setAttribute("data-updated", "true");
+  }
+};
+
+export const updatePreviousCampings = (node: HTMLElement) => {
+  if (!node.classList.contains("town-name")) return;
+  if (store["camping-day"] === null) return;
+
+  const day = node.nextElementSibling?.textContent?.replace(/\D/g, "");
+  if (!day) return;
+
+  if (+day > store["camping-day"]) {
+    setStore("previous-campings", store["previous-campings"] + 1);
+    setStore("camping-day", null);
   }
 };

@@ -4,11 +4,12 @@ import { ItemId } from "./data/types";
 declare global {
   // Extension types
   const enum Action {
-    TakeItem,
+    TakeWaterFromWell,
     ToggleFeature,
     Logout,
     SetStorage,
     RefreshDesert,
+    Camp,
   }
 
   const enum Lang {

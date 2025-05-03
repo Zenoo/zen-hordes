@@ -30,8 +30,8 @@ export const cleanupBankNotification = () => {
   setStore("bank-items-taken", 0);
 };
 
-export const handleItemTaken = (data?: unknown) => {
-  if (data === "water") {
+export const handleItemTaken = (waterFromWell?: boolean) => {
+  if (waterFromWell) {
     // First water ration per day doesn't count towards the bank limit
     const startOfDay = new Date();
     startOfDay.setHours(0, 0, 0, 0);
