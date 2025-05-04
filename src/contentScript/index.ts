@@ -30,6 +30,7 @@ import { displayShamanSoulsButton } from "./shamanSoulsButton";
 import { initStore } from "./store";
 import {
   autoOpenBagOutside,
+  autoOpenBagWhenMovingItems,
   autoSelectGlobalMapSetting,
   enhanceUI,
 } from "./UIEnhancer";
@@ -68,6 +69,7 @@ onMount((node) => {
   storeBankState(node);
   autoSelectGlobalMapSetting(node);
   autoOpenBagOutside(node);
+  autoOpenBagWhenMovingItems(node);
   updatePreviousCampings(node);
 });
 

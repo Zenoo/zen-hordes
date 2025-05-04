@@ -35,5 +35,28 @@ export const autoOpenBagOutside = (node: HTMLElement) => {
   // Only click on it if it's displayed
   if (node.parentElement?.id !== "wb-item-action-section") return;
 
+  console.log("Opening bag button 1");
   node.click();
+};
+
+export const autoOpenBagWhenMovingItems = (node: HTMLElement) => {
+  if (!store["enhance-css"]) return;
+  if (node.id !== "beyond-inventory") return;
+
+  // Listen to items click
+  node.addEventListener("click", (event) => {
+    const target = event.target as HTMLElement;
+    const item = target.closest(".item:not(.locked)");
+    if (!item) return;
+
+    setTimeout(() => {
+      // Open the bag
+      const bagButton = document.querySelector<HTMLButtonElement>(
+        "#wb-item-action-section button[x-load-from='/jx/beyond/partial/desert/actions']"
+      );
+      if (!bagButton) return;
+
+      bagButton.click();
+    }, 200);
+  });
 };
