@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.7.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.6.0...zen-hordes-v1.7.0) (2025-05-04)
+
+
+### Features
+
+* Auto select map global setting + Auto open bag outside ([c68a48b](https://github.com/Zenoo/zen-hordes/commit/c68a48bf85b98e9ea0ec55ddc4908a7a43560693))
+* Keep track of previous campings ([64480bd](https://github.com/Zenoo/zen-hordes/commit/64480bdea03d28df3a26cb67c4f005a3f1032ad8))
+
+
+### Bug Fixes
+
+* Auto open bag when moving items ([cf1f6ca](https://github.com/Zenoo/zen-hordes/commit/cf1f6ca1a033f0120411ea20bff48d7ccce856aa))
+* Reset camping variables on death ([4481ca4](https://github.com/Zenoo/zen-hordes/commit/4481ca444a2cead99aa05850cb240acc54819215))
+
 ## [1.6.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.5.2...zen-hordes-v1.6.0) (2025-05-02)
 
 
