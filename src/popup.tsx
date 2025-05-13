@@ -31,6 +31,7 @@ const T: Translations = {
     "shaman-souls-button": "Souls positions copy button",
     "better-tooltips": "Better tooltips",
     "camping-calculator": "Camping calculator",
+    "shopping-list": "Shopping list",
     "external-city-links": "External city history links",
     "update-sites": "External sites to update",
     "user-key": "User key",
@@ -42,6 +43,7 @@ const T: Translations = {
     "shaman-souls-button": "Bouton de copie des positions des âmes",
     "better-tooltips": "Meilleures infobulles",
     "camping-calculator": "Calculateur de camping",
+    "shopping-list": "Liste de courses",
     "external-city-links": "Liens externes des historiques des villes",
     "update-sites": "Sites externes à mettre à jour",
     "user-key": "Clé utilisateur",
@@ -53,6 +55,7 @@ const T: Translations = {
     "shaman-souls-button": "Schaltfläche zum Kopieren von Seelenpositionen",
     "better-tooltips": "Bessere Tooltips",
     "camping-calculator": "Camping-Rechner",
+    "shopping-list": "Einkaufsliste",
     "external-city-links": "Externe Stadtverlauf-Links",
     "update-sites": "Externe Sites aktualisieren",
     "user-key": "Benutzerschlüssel",
@@ -64,6 +67,7 @@ const T: Translations = {
     "shaman-souls-button": "Botón de copia de posiciones de almas",
     "better-tooltips": "Mejores tooltips",
     "camping-calculator": "Calculadora de camping",
+    "shopping-list": "Lista de compras",
     "external-city-links": "Enlaces externos de historiales de ciudades",
     "update-sites": "Sitios externos para actualizar",
     "user-key": "Clave de usuario",
@@ -110,6 +114,7 @@ const Popup = () => {
   const [shamanSoulsButton, setShamanSoulsButton] = useState(true);
   const [betterTooltips, setBetterTooltips] = useState(true);
   const [campingCalculator, setCampingCalculator] = useState(true);
+  const [shoppingList, setShoppingList] = useState(true);
   const [externalSiteLinks, setExternalSiteLinks] = useState([
     ExternalSiteName.BBH,
   ]);
@@ -126,18 +131,31 @@ const Popup = () => {
   useEffect(() => {
     const syncStorage = async () => {
       const data = await chrome.storage.sync.get();
-      setEnhanceCss(typeof data["enhance-css"] === "boolean" ? data["enhance-css"] : true);
-      setBankTracker(typeof data["bank-tracker"] === "boolean" ? data["bank-tracker"] : true);
-      setMapPreview(typeof data["map-preview"] === "boolean" ? data["map-preview"] : true);
+      setEnhanceCss(
+        typeof data["enhance-css"] === "boolean" ? data["enhance-css"] : true
+      );
+      setBankTracker(
+        typeof data["bank-tracker"] === "boolean" ? data["bank-tracker"] : true
+      );
+      setMapPreview(
+        typeof data["map-preview"] === "boolean" ? data["map-preview"] : true
+      );
       setShamanSoulsButton(
-        typeof data["shaman-souls-button"] === "boolean" ? data["shaman-souls-button"] : true
+        typeof data["shaman-souls-button"] === "boolean"
+          ? data["shaman-souls-button"]
+          : true
       );
       setBetterTooltips(
-        typeof data["better-tooltips"] === "boolean" ? data["better-tooltips"] : true
+        typeof data["better-tooltips"] === "boolean"
+          ? data["better-tooltips"]
+          : true
       );
       setCampingCalculator(
-        typeof data["camping-calculator"] === "boolean" ? data["camping-calculator"] : true
+        typeof data["camping-calculator"] === "boolean"
+          ? data["camping-calculator"]
+          : true
       );
+      setShoppingList(typeof data["shopping-list"] === "string");
       setExternalSiteLinks(
         (data["external-city-links"] as ExternalSiteName[] | undefined) ?? [
           ExternalSiteName.BBH,
@@ -222,6 +240,13 @@ const Popup = () => {
   ) => {
     setCampingCalculator(event.target.checked);
     await setFeature("camping-calculator", event.target.checked);
+  };
+
+  const handleShoppingListChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setShoppingList(event.target.checked);
+    await setFeature("shopping-list", event.target.checked);
   };
 
   const handleExternalSiteLinksChange =
@@ -359,6 +384,21 @@ const Popup = () => {
           label={
             <Typography variant="body2" sx={{ ml: 0.5 }}>
               {t("camping-calculator")}
+            </Typography>
+          }
+          sx={{ mx: 1 }}
+        />
+        <FormControlLabel
+          control={
+            <Switch
+              checked={shoppingList}
+              onChange={handleShoppingListChange}
+              size="small"
+            />
+          }
+          label={
+            <Typography variant="body2" sx={{ ml: 0.5 }}>
+              {t("shopping-list")}
             </Typography>
           }
           sx={{ mx: 1 }}

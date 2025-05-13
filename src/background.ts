@@ -110,24 +110,6 @@ chrome.webRequest.onCompleted.addListener(
       return;
     }
 
-    // Check if this is the desert request
-    if (details.url.includes("/jx/beyond/desert/cached")) {
-      // Check if the town ID is present in the request headers
-      const townId = +(
-        details.responseHeaders
-          ?.find((header) => header.name === "x-semaphores")
-          ?.value?.replace(/\D/g, "") ?? 0
-      );
-
-      if (townId) {
-        sendMessageToContentScript({
-          action: Action.SetStorage,
-          value: { name: "town-id", value: townId },
-        }).catch(console.error);
-      }
-      return;
-    }
-
     // Desert refresh
     if (
       details.url.includes("/jx/beyond/desert/cached") ||

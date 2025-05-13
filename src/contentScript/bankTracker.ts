@@ -163,7 +163,6 @@ export const resetOnDeath = (node: HTMLElement) => {
     setStore("last-water-ration-taken", new Date(0).getTime());
     setStore("bank-items-taken", 0);
     setStore("last-bank-item-taken", Date.now());
-    setStore("town-id", 0);
 
     // Reset bank state
     resetBankState();

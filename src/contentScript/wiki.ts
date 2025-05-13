@@ -2,11 +2,16 @@ import { buildings } from "../data/buildings";
 import { items } from "../data/items";
 import { ruins } from "../data/ruins";
 import { Building, Item, Ruin } from "../data/types";
-import { ASSETS } from "../utils/constants";
+import { ASSETS, DEFAULT_SHOPPING_LIST } from "../utils/constants";
 import { tooltip } from "../utils/tooltip";
 import { insertBetterItemTooltips } from "./betterTooltips";
 import { notify, Severity } from "./notify";
-import { store } from "./store";
+import {
+  generateShoppingListMessage,
+  getShoppingList,
+  setShoppingList,
+} from "./shoppingList";
+import { setStore, store } from "./store";
 import { t } from "./translate";
 
 const itemCategories = [
@@ -44,6 +49,7 @@ const T: Translations = {
     close: "Close",
     wikiMissing: "Couldn't reach the wiki",
     menu: "Menu",
+    shoppingList: "Shopping list",
     items: "Items",
     buildings: "Buildings",
     ruins: "Ruins",
@@ -78,12 +84,25 @@ const T: Translations = {
     "item.tag.weapon": "Weapon",
     "item.tag.guard-weapon": "Guard weapon",
     "item.tag.guard-weapon.points": "({{value}} attack pts)",
+    "priority.1": "Important",
+    "priority.2": "Useful",
+    "priority.3": "Supplementary",
+    others: "Others",
+    copyForForum: "Copy as a forum message",
+    setAsDefault: "Set as default",
+    restoreDefault: "Restore default",
+    restoreInitialDefault: "Restore initial default",
+    copyForForumSuccess: "Shopping list copied to clipboard",
+    setAsDefaultSuccess: "Default shopping list set",
+    restoreDefaultSuccess: "Default shopping list restored",
+    restoreInitialDefaultSuccess: "Initial default shopping list restored",
   },
   fr: {
     wiki: "Wiki",
     close: "Fermer",
     wikiMissing: "Impossible d'atteindre le wiki",
     menu: "Menu",
+    shoppingList: "Liste de courses",
     items: "Objets",
     buildings: "Chantiers",
     ruins: "Bâtiments",
@@ -118,12 +137,26 @@ const T: Translations = {
     "item.tag.weapon": "Arme",
     "item.tag.guard-weapon": "Arme de veille",
     "item.tag.guard-weapon.points": "({{value}} pts attaque)",
+    "priority.1": "Important",
+    "priority.2": "Utile",
+    "priority.3": "Supplémentaire",
+    others: "Autres",
+    setAsDefault: "Définir par défaut",
+    copyForForum: "Copier en message de forum",
+    restoreDefault: "Restaurer par défaut",
+    restoreInitialDefault: "Restaurer le défaut initial",
+    copyForForumSuccess: "Liste de courses copiée dans le presse-papiers",
+    setAsDefaultSuccess: "Liste de courses par défaut définie",
+    restoreDefaultSuccess: "Liste de courses par défaut restaurée",
+    restoreInitialDefaultSuccess:
+      "Liste de courses par défaut initiale restaurée",
   },
   de: {
     wiki: "Wiki",
     close: "Schließen",
     wikiMissing: "Wiki nicht erreichbar",
     menu: "Menü",
+    shoppingList: "Einkaufsliste",
     items: "Gegenstände",
     buildings: "Bauten",
     ruins: "Ruinen",
@@ -158,12 +191,27 @@ const T: Translations = {
     "item.tag.weapon": "Waffe",
     "item.tag.guard-weapon": "Wachwaffe",
     "item.tag.guard-weapon.points": "({{value}} Angriffspunkte)",
+    "priority.1": "Wichtig",
+    "priority.2": "Nützlich",
+    "priority.3": "Ergänzend",
+    others: "Andere",
+    copyForForum: "Als Forenbeitrag kopieren",
+    setAsDefault: "Als Standard festlegen",
+    restoreDefault: "Restaurieren Sie die Standardeinstellungen",
+    restoreInitialDefault:
+      "Stellen Sie die ursprünglichen Standardeinstellungen wieder her",
+    copyForForumSuccess: "Einkaufsliste in die Zwischenablage kopiert",
+    setAsDefaultSuccess: "Einkaufsliste als Standard festgelegt",
+    restoreDefaultSuccess: "Einkaufsliste auf Standard zurückgesetzt",
+    restoreInitialDefaultSuccess:
+      "Einkaufsliste auf ursprünglichen Standard zurückgesetzt",
   },
   es: {
     wiki: "Wiki",
     close: "Cerrar",
     wikiMissing: "No se pudo acceder a la wiki",
     menu: "Menú",
+    shoppingList: "Lista de compras",
     items: "Objetos",
     buildings: "Edificios",
     ruins: "Ruinas",
@@ -198,6 +246,19 @@ const T: Translations = {
     "item.tag.weapon": "Arma",
     "item.tag.guard-weapon": "Arma de guardia",
     "item.tag.guard-weapon.points": "({{value}} puntos de ataque)",
+    "priority.1": "Importante",
+    "priority.2": "Útil",
+    "priority.3": "Suplementario",
+    others: "Otros",
+    copyForForum: "Copiar como mensaje de foro",
+    setAsDefault: "Establecer como predeterminado",
+    restoreDefault: "Restaurar por defecto",
+    restoreInitialDefault: "Restaurar el defecto inicial",
+    copyForForumSuccess: "Lista de compras copiada al portapapeles",
+    setAsDefaultSuccess: "Lista de compras predeterminada establecida",
+    restoreDefaultSuccess: "Lista de compras por defecto restaurada",
+    restoreInitialDefaultSuccess:
+      "Lista de compras por defecto inicial restaurada",
   },
 };
 
@@ -206,6 +267,10 @@ const closeWiki = (backdrop: HTMLElement) => {
 };
 
 const wikiTabs = [
+  {
+    type: "shoppingList",
+    icon: "icons/item/item_cart.gif",
+  },
   {
     type: "buildings",
     icon: "pictos/r_buildr.gif",
@@ -311,19 +376,20 @@ const updateWiki = (state: Partial<WikiState>, resetSearch?: boolean) => {
 
   const search = WIKI_STATE.search.toLowerCase();
   const targets =
-    WIKI_STATE.tab === "items"
+    WIKI_STATE.tab === "items" || WIKI_STATE.tab === "shoppingList"
       ? items
       : WIKI_STATE.tab === "buildings"
       ? buildings
-      : ruins;
+      : WIKI_STATE.tab === "ruins"
+      ? ruins
+      : [];
 
   // Filter items
   let visibleCount = 0;
   Object.values(targets).forEach((target: Item | Building | Ruin) => {
-    const li = tab.querySelector(`li[data-id="${target.id}"]`);
+    const li = tab.querySelector(`li[data-id="${target.id}"]:not(.persistent)`);
 
     if (!li) {
-      console.error("Target not found in wiki", target.id);
       return;
     }
 
@@ -409,6 +475,49 @@ const setTextContent = (node: HTMLElement, content: string) => {
   }
 };
 
+const updateShoppingList = () => {
+  const shoppingList = getShoppingList();
+  const priorities = document.querySelectorAll(".zen-wiki-shopping-list-items");
+
+  // Empty the lists
+  priorities.forEach((list) => {
+    list.innerHTML = "";
+  });
+
+  Object.values(items).forEach((item) => {
+    const priorityIndex = shoppingList.findIndex((p) =>
+      p.includes(item.numericalId)
+    );
+    const priority = priorityIndex === -1 ? 4 : priorityIndex + 1;
+
+    const li = document.createElement("li");
+    li.classList.add("zen-priority-item", "visible");
+    li.setAttribute("data-id", item.id);
+    li.setAttribute("data-numerical-id", item.numericalId.toString());
+    li.draggable = true;
+
+    if (priority !== 4) {
+      li.classList.add("persistent");
+    }
+
+    const image = document.createElement("img");
+    image.src = `${ASSETS}/icons/item/${item.icon}.gif`;
+    image.title = item.name[store["hordes-lang"]];
+    image.alt = item.name[store["hordes-lang"]];
+    li.appendChild(image);
+
+    li.addEventListener("dragstart", (event) => {
+      const dataTransfer = event.dataTransfer;
+      if (!dataTransfer) return;
+
+      event.dataTransfer.dropEffect = "move";
+      event.dataTransfer.setData("text/plain", item.id);
+    });
+
+    priorities[priority - 1]?.appendChild(li);
+  });
+};
+
 export const insertWiki = () => {
   if (!store["wiki"]) return;
 
@@ -430,7 +539,6 @@ export const insertWiki = () => {
     target: button,
     content: t(T, "wiki"),
     position: "topLeft",
-    id: "zen-wiki-button-tooltip",
   });
 
   button.addEventListener("click", () => {
@@ -604,6 +712,10 @@ export const insertWiki = () => {
     const li = document.createElement("li");
     li.classList.add("zen-wiki-menu-item");
     li.setAttribute("data-type", tab.type);
+
+    if (tab.type === "shoppingList" && !store["shopping-list"]) {
+      li.classList.add("hidden");
+    }
 
     const icon = document.createElement("img");
     icon.src = `${ASSETS}/${tab.icon}`;
@@ -932,6 +1044,147 @@ export const insertWiki = () => {
 
             ruinList.appendChild(li);
           });
+        break;
+      }
+      case "shoppingList": {
+        // Shopping list
+        const shoppingList = document.createElement("ul");
+        shoppingList.classList.add("zen-wiki-shopping-list");
+        tab.appendChild(shoppingList);
+
+        // 3 priorities + unsorted (all items start in unsorted)
+        for (let i = 1; i <= 4; i++) {
+          const li = document.createElement("li");
+          li.setAttribute("data-priority", i.toString());
+
+          const title = document.createElement("h4");
+          li.appendChild(title);
+
+          if (i !== 4) {
+            const example = document.createElement("div");
+            example.setAttribute("data-zen-amount", i.toString());
+            title.appendChild(example);
+          }
+
+          const name = document.createElement("span");
+          name.textContent = t(T, i === 4 ? "others" : `priority.${i}`);
+          title.appendChild(name);
+
+          const list = document.createElement("ul");
+          list.classList.add(
+            "zen-wiki-shopping-list-items",
+            "inventory",
+            "desert"
+          );
+          list.setAttribute("data-priority", i.toString());
+          li.appendChild(list);
+          shoppingList.appendChild(li);
+
+          list.addEventListener("dragover", (event) => {
+            event.preventDefault();
+
+            if (!event.dataTransfer) return;
+            event.dataTransfer.dropEffect = "move";
+          });
+
+          list.addEventListener("drop", (event) => {
+            event.preventDefault();
+
+            if (!event.dataTransfer) return;
+            const id = event.dataTransfer.getData("text/plain");
+            const item = document.querySelector(
+              `.zen-priority-item[data-id="${id}"]`
+            );
+
+            if (!item) return;
+
+            const numericalId = +(item.getAttribute("data-numerical-id") ?? 0);
+
+            const target = event.target as HTMLElement;
+            target.appendChild(item);
+
+            // Update persistent class
+            if (i === 4) {
+              item.classList.remove("persistent");
+            } else {
+              item.classList.add("persistent");
+            }
+
+            // Update shopping list
+            setShoppingList(
+              getShoppingList().map((list, j) => {
+                if (list.includes(numericalId) && j !== i - 1) {
+                  return list.filter((item) => item !== numericalId);
+                }
+
+                if (j === i - 1) {
+                  return [...list, numericalId];
+                }
+
+                return list;
+              })
+            );
+          });
+        }
+
+        // Buttons
+        const buttonWrapper = document.createElement("div");
+        buttonWrapper.classList.add("zen-wiki-shopping-list-actions");
+        tab.appendChild(buttonWrapper);
+
+        // Copy for forum button
+        const copyForForum = document.createElement("button");
+        copyForForum.textContent = t(T, "copyForForum");
+
+        copyForForum.addEventListener("click", () => {
+          navigator.clipboard.writeText(generateShoppingListMessage());
+          notify(t(T, "copyForForumSuccess"));
+        });
+
+        buttonWrapper.appendChild(copyForForum);
+
+        // Set as default button
+        const setAsDefault = document.createElement("button");
+        setAsDefault.textContent = t(T, "setAsDefault");
+
+        setAsDefault.addEventListener("click", () => {
+          if (!store["shopping-list"]) return;
+
+          setStore("default-shopping-list", store["shopping-list"]);
+          notify(t(T, "setAsDefaultSuccess"));
+        });
+
+        buttonWrapper.appendChild(setAsDefault);
+
+        // Restore default button
+        const restoreDefault = document.createElement("button");
+        restoreDefault.textContent = t(T, "restoreDefault");
+
+        restoreDefault.addEventListener("click", () => {
+          if (!store["shopping-list"]) return;
+          const defaultList = store["default-shopping-list"];
+
+          setStore("shopping-list", defaultList);
+          notify(t(T, "restoreDefaultSuccess"));
+          updateShoppingList();
+        });
+
+        buttonWrapper.appendChild(restoreDefault);
+
+        // Restore initial default button
+        const restoreInitialDefault = document.createElement("button");
+        restoreInitialDefault.textContent = t(T, "restoreInitialDefault");
+
+        restoreInitialDefault.addEventListener("click", () => {
+          setStore("shopping-list", DEFAULT_SHOPPING_LIST);
+          setStore("default-shopping-list", DEFAULT_SHOPPING_LIST);
+          notify(t(T, "restoreInitialDefaultSuccess"));
+          updateShoppingList();
+        });
+
+        buttonWrapper.appendChild(restoreInitialDefault);
+
+        updateShoppingList();
         break;
       }
       default: {

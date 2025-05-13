@@ -1,3 +1,4 @@
+import { DEFAULT_SHOPPING_LIST } from "../utils/constants";
 import { ExternalSiteName } from "./externalSites";
 
 /**
@@ -11,6 +12,8 @@ export const store = {
   "map-preview": true,
   "external-city-links": [
     ExternalSiteName.BBH,
+    ExternalSiteName.FM,
+    ExternalSiteName.GH,
   ],
   "external-sites-to-update": [
     ExternalSiteName.BBH,
@@ -29,9 +32,11 @@ export const store = {
   // Camping state
   "camping-day": null as number | null,
   "previous-campings": 0,
+  // Shopping list
+  "shopping-list": DEFAULT_SHOPPING_LIST as string | null,
+  "default-shopping-list": DEFAULT_SHOPPING_LIST,
   // Game state
   "hordes-lang": (document.documentElement.lang ?? Lang.EN) as Lang,
-  "town-id": 0,
   // Updater settings
   "user-key": "",
 };
@@ -53,15 +58,26 @@ export const setStore = <K extends keyof Store>(
 };
 
 export const initStore = async () => {
-  // Clear old storage
-  await chrome.storage.sync.remove(["lang", "bank-blocker"]);
-
   // Update lang (don't update if wrong format)
   if (store["hordes-lang"].length === 2) {
     setStore("hordes-lang", store["hordes-lang"]);
   }
 
   const data = await chrome.storage.sync.get();
+
+  // Clear old storage
+  if (typeof data["lang"] !== "undefined") {
+    await chrome.storage.sync.remove("lang");
+    delete data["lang"];
+  }
+  if (typeof data["bank-blocker"] !== "undefined") {
+    await chrome.storage.sync.remove("bank-blocker");
+    delete data["bank-blocker"];
+  }
+  if (typeof data["town-id"] !== "undefined") {
+    await chrome.storage.sync.remove("town-id");
+    delete data["town-id"];
+  }
 
   Object.assign(store, data);
 };

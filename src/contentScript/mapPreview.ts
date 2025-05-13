@@ -16,31 +16,34 @@ const T: Translations = {
   },
 };
 
-export const insertMapPreview = () => {
+let tooltip: HTMLImageElement | null = null;
+
+export const insertMapPreviewTooltip = () => {
   if (!store["map-preview"]) return;
 
   document.body.classList.add("zen-map-preview-enabled");
 
-  // Insert map preview tooltip
-  const existing = document.getElementById("zen-map-preview-tooltip");
-  if (existing) return;
+  if (tooltip) return;
 
-  const tooltip = document.createElement("img");
+  tooltip = document.createElement("img");
   tooltip.id = "zen-map-preview-tooltip";
   tooltip.setAttribute("alt", t(T, "unavailable"));
   document.body.append(tooltip);
 };
 
-export const displayMapPreview = (event: MouseEvent) => {
+export const displayMapPreview = (node: HTMLElement) => {
   if (!store["map-preview"]) return;
-  const node = event.target;
-  if (!(node instanceof HTMLElement)) return;
+  if (!node.classList.contains("language")) return;
+  if (location.pathname !== "/jx/ghost/welcome") return;
 
-  if (node.matches(".town-row > .cell:first-child img")) {
-    const tooltip = document.getElementById("zen-map-preview-tooltip");
+  const townId = node.closest(".town-row")?.getAttribute("data-town-id");
+
+  if (!townId) return;
+
+  // Show tooltip on hover
+  node.addEventListener("mouseover", (event) => {
     if (!tooltip) return;
 
-    // Show tooltip
     tooltip.classList.add("visible");
 
     // Stick to node position
@@ -49,36 +52,25 @@ export const displayMapPreview = (event: MouseEvent) => {
 
     // Add map link
     if (!tooltip.getAttribute("src")) {
-      const mapId = node
-        .closest(".town-row")
-        ?.querySelector("[x-town-id]")
-        ?.getAttribute("x-town-id");
-      if (!mapId) return;
       tooltip.setAttribute(
         "src",
-        `https://bbh.fred26.fr/gfx/map/5/${mapId}/s.png`
+        `https://bbh.fred26.fr/gfx/map/5/${townId}/s.png`
       );
     }
-  }
-};
+  });
 
-export const removeMapPreview = () => {
-  const tooltip = document.getElementById("zen-map-preview-tooltip");
-  if (!tooltip) return;
+  // Hide tooltip on mouseout
+  node.addEventListener("mouseout", () => {
+    if (!tooltip) return;
 
-  tooltip.classList.remove("visible");
-  tooltip.setAttribute("src", "");
-};
+    tooltip.classList.remove("visible");
+    tooltip.setAttribute("src", "");
+  });
 
-export const openBBHCityPage = (node: HTMLElement) => {
-  if (!store["map-preview"]) return;
-  if (!node.matches(".town-row > .cell:first-child img")) return;
+  // Open map link on click
+  node.addEventListener("click", () => {
+    if (!tooltip) return;
 
-  const mapId = node
-    .closest(".town-row")
-    ?.querySelector("[x-town-id]")
-    ?.getAttribute("x-town-id");
-  if (!mapId) return;
-
-  window.open(`https://bbh.fred26.fr/?cid=5-${mapId}`, "_blank");
+    window.open(`https://bbh.fred26.fr/?cid=5-${townId}`, "_blank");
+  });
 };

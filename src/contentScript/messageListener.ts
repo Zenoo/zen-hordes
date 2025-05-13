@@ -1,3 +1,4 @@
+import { DEFAULT_SHOPPING_LIST } from "../utils/constants";
 import {
   trackBank,
   cleanupBankNotification,
@@ -15,6 +16,7 @@ import { displayExternalCityLinks } from "./externalCityLink";
 import { ExternalSiteName } from "./externalSites";
 import { displayUpdateButton } from "./externalSiteUpdater";
 import { displayShamanSoulsButton } from "./shamanSoulsButton";
+import { insertShoppingListToggle } from "./shoppingList";
 import { setStore, Store, store } from "./store";
 
 export const listenToBackgroundMessages = async () => {
@@ -73,7 +75,7 @@ export const listenToBackgroundMessages = async () => {
 
               // Display external links
               const anchor = document.querySelector<HTMLElement>(
-                ".soul .view-town > .row .cell button:not(.zen-external-link)"
+                ".view-town[data-town-id]"
               );
               if (anchor) {
                 displayExternalCityLinks(anchor);
@@ -182,6 +184,35 @@ export const listenToBackgroundMessages = async () => {
                 }
               } else {
                 document.querySelector(".zen-camping-calculator")?.remove();
+              }
+              break;
+            }
+            case "shopping-list": {
+              setStore(
+                "shopping-list",
+                value.enabled ? DEFAULT_SHOPPING_LIST : null
+              );
+
+              if (value.enabled) {
+                // Insert shopping list toggle
+                insertShoppingListToggle();
+
+                // Display shopping list wiki tab
+                document
+                  .querySelector(
+                    ".zen-wiki-menu-item[data-type='shoppingList']"
+                  )
+                  ?.classList.remove("hidden");
+              } else {
+                // Remove shopping list toggle
+                document.querySelector("#zen-shopping-list-toggle")?.remove();
+
+                // Hide shopping list wiki tab
+                document
+                  .querySelector(
+                    ".zen-wiki-menu-item[data-type='shoppingList']"
+                  )
+                  ?.classList.add("hidden");
               }
               break;
             }

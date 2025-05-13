@@ -35,7 +35,6 @@ export const autoOpenBagOutside = (node: HTMLElement) => {
   // Only click on it if it's displayed
   if (node.parentElement?.id !== "wb-item-action-section") return;
 
-  console.log("Opening bag button 1");
   node.click();
 };
 

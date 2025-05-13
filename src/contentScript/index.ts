@@ -13,20 +13,17 @@ import {
 } from "./campingCalculator";
 import { displayExternalCityLinks } from "./externalCityLink";
 import { displayUpdateButton } from "./externalSiteUpdater";
-import { offHover } from "./hooks/offHover";
 import { offKey } from "./hooks/offKey";
 import { onClick } from "./hooks/onClick";
-import { onHover } from "./hooks/onHover";
 import { onKey } from "./hooks/onKey";
 import { onMount } from "./hooks/onMount";
 import {
   displayMapPreview,
-  insertMapPreview,
-  openBBHCityPage,
-  removeMapPreview,
+  insertMapPreviewTooltip
 } from "./mapPreview";
 import { listenToBackgroundMessages } from "./messageListener";
 import { displayShamanSoulsButton } from "./shamanSoulsButton";
+import { insertShoppingListToggle } from "./shoppingList";
 import { initStore } from "./store";
 import {
   autoOpenBagOutside,
@@ -36,11 +33,7 @@ import {
 } from "./UIEnhancer";
 import { insertWiki, openItemInWiki } from "./wiki";
 
-// TODO: Change removeMapPreview handler to no query on every single offHover
-// TODO: Change openBBHCityPage handler to not use matches
-// TODO: Change displayMapPreview handler to not use matches
-// (both can be solved by adding a mount listener that adds a custom class to the target imgs)
-// TODO: Add a list of items to bring back, with priorities (1-5)
+// TODO: Add a button to synchronize the shopping list with a forum message
 // TODO: Add custom tags to players
 
 // Initialize the store
@@ -51,8 +44,9 @@ listenToBackgroundMessages();
 // Actions that can be performed immediately
 // should be handled here
 enhanceUI();
-insertMapPreview();
+insertMapPreviewTooltip();
 insertWiki();
+insertShoppingListToggle();
 updateItemBankCountPeriodically();
 
 // Actions that need to wait for specific elements
@@ -71,24 +65,24 @@ onMount((node) => {
   autoOpenBagOutside(node);
   autoOpenBagWhenMovingItems(node);
   updatePreviousCampings(node);
+  displayMapPreview(node);
 });
 
 // Actions that need to be performed on hover
 // should be handled here
-onHover((event) => {
-  displayMapPreview(event);
-});
+// onHover((_event) => {
+//   // Nothing yet
+// });
 
 // Actions that need to be performed off hover
 // should be handled here
-offHover((_event) => {
-  removeMapPreview();
-});
+// offHover((_event) => {
+//   // Nothing yet
+// });
 
 // Actions that need to be performed on a click
 // should be handled here
 onClick((node) => {
-  openBBHCityPage(node);
   updateCampingCalculatorWithCurrentParams(node);
 });
 

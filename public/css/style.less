@@ -1,3 +1,7 @@
+@priority-high: #FF4C4C;
+@priority-medium: #FFD700;
+@priority-low: #4CAF50;
+
 .section-title() {
   display: flex;
   align-items: center;
@@ -401,7 +405,7 @@ body.zen-enhanced {
 }
 
 body.zen-map-preview-enabled {
-  .town-row {
+  .town-row[data-town-id] {
     &>.cell:first-child img {
       animation: pulse 1s infinite;
       cursor: pointer;
@@ -415,9 +419,12 @@ body.zen-map-preview-enabled {
   align-items: center;
   justify-content: center;
   gap: 4px;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
 
   p {
     margin: 0;
+    font-size: 13px;
   }
 }
 
@@ -469,6 +476,7 @@ body.zen-map-preview-enabled {
 
 // Better tooltips
 .zen-better-tooltip {
+
   // Bank count
   .bank-count {
     color: #f0d79e;
@@ -563,7 +571,8 @@ body.zen-map-preview-enabled {
   }
 
   // Open tag
-  .item-tag-open, .item-tag-openable {
+  .item-tag-open,
+  .item-tag-openable {
     height: unset !important;
     font-size: 10px;
     text-align: left;
@@ -759,6 +768,7 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
   &[data-zen-amount="0"]::before {
     background-position: -108px -189px;
   }
+
   // 6-10 above 0
   &[data-zen-amount="6-10"]::before {
     background-position: -106px -182px;
@@ -813,6 +823,7 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
     outline: 2px solid #442012;
     padding: 4px;
     text-transform: uppercase;
+    width: 700px;
     max-width: 90%;
     max-height: 90%;
     overflow: auto;
@@ -857,6 +868,10 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
               color: #fff;
             }
 
+            &.hidden {
+              display: none;
+            }
+
             img {
               margin-right: 4px;
             }
@@ -864,11 +879,90 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
         }
       }
 
+      .zen-wiki-tab-content {
+        flex-grow: 1;
+      }
+
       .zen-wiki-tab {
         display: none;
 
         ul {
           padding-left: 0;
+        }
+
+        .zen-wiki-shopping-list {
+          list-style-type: none;
+
+          h4 {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            div {
+              height: 16px;
+              width: 16px;
+              border: 1px solid white;
+              margin-right: 4px;
+
+              &::before {
+                left: unset;
+                bottom: unset;
+                right: 0;
+                top: 0;
+              }
+            }
+          }
+
+          [data-priority="1"] {
+            h4 div {
+              border-color: @priority-high;
+
+              &::before {
+                // The icon is green by default, apply a filter to make it red
+                filter: hue-rotate(-120deg);
+              }
+            }
+          }
+
+          [data-priority="2"] {
+            h4 div {
+              border-color: @priority-medium;
+
+              &::before {
+                // The icon is green by default, apply a filter to make it yellow
+                filter: hue-rotate(-60deg);
+              }
+            }
+          }
+
+          [data-priority="3"] {
+            h4 div {
+              border-color: @priority-low;
+            }
+          }
+
+          .zen-wiki-shopping-list-items {
+            min-height: 30px;
+            padding: 6px;
+            display: flex;
+            flex-wrap: wrap;
+
+
+            li {
+              border: none;
+              display: none;
+
+              &.visible {
+                display: block;
+              }
+            }
+          }
+        }
+
+        .zen-wiki-shopping-list-actions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 4px;
         }
       }
 
@@ -998,7 +1092,7 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
     }
   }
 
-  .total{
+  .total {
     text-align: center;
     font-weight: bold;
 
@@ -1012,6 +1106,58 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
       .hidden {
         display: none;
       }
+    }
+  }
+}
+
+// Shopping list
+#zen-shopping-list-toggle {
+  position: fixed;
+  bottom: 0;
+  right: 40px;
+  cursor: pointer;
+}
+
+.zen-priority {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 7px;
+    background-image: url(https://zenoo.github.io/zen-hordes/icons/count.png);
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  &.zen-priority-1 {
+    border: 1px solid @priority-high  !important;
+
+    &::before {
+      background-position: 0px 0px;
+      filter: hue-rotate(-120deg);
+    }
+  }
+
+  &.zen-priority-2 {
+    border: 1px solid @priority-medium  !important;
+
+    &::before {
+      background-position: -12px 0px;
+      filter: hue-rotate(-60deg);
+    }
+  }
+
+  &.zen-priority-3 {
+    border: 1px solid @priority-low  !important;
+
+    &::before {
+      background-position: -24px 0px;
     }
   }
 }

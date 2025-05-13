@@ -150,6 +150,15 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
 
       urlVariables.userId = String(userId);
 
+      // Get town ID
+      const townId = document
+        .querySelector(".town-name")
+        ?.getAttribute("data-town-id");
+
+      if (!townId) {
+        throw new Error("No town ID found");
+      }
+
       updateParams = {
         method: "POST",
         headers: {
@@ -165,7 +174,7 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
             },
           },
           townDetails: {
-            townId: store["town-id"],
+            townId: +townId,
           },
         }),
       };
@@ -237,7 +246,8 @@ export const displayUpdateButton = (node: HTMLElement) => {
 
   if (
     !node.classList.contains("inventory") ||
-    !node.classList.contains("desert")
+    !node.classList.contains("desert") ||
+    node.classList.contains("zen-wiki-shopping-list-items")
   )
     return;
 
@@ -278,7 +288,6 @@ export const displayUpdateButton = (node: HTMLElement) => {
   tooltip({
     target: button,
     content: t(T, "updateExternalApps"),
-    id: "zen-update-tooltip",
   });
 
   // Click event

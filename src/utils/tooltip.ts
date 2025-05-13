@@ -2,69 +2,75 @@ export type TooltipOptions = {
   target: HTMLElement;
   content: string;
   position?: "topLeft" | "topRight" | "bottomLeft" | "bottomRight";
-  id: string
 };
+
+let tooltipElement: HTMLDivElement | null = null;
 
 export const tooltip = ({
   target,
   content,
   position = "bottomRight",
-  id,
 }: TooltipOptions) => {
-  // Check if the tooltip already exists
-  const existingTooltip = document.getElementById(id);
-  if (existingTooltip) {
-    existingTooltip.remove();
+  if (!tooltipElement) {
+    tooltipElement = document.createElement("div");
+    tooltipElement.classList.add("tooltip", "zen-tooltip");
+    document.body.appendChild(tooltipElement);
   }
 
-  const tooltip = document.createElement("div");
-  tooltip.id = id;
-  tooltip.classList.add("tooltip", "zen-tooltip");
-  tooltip.textContent = content;
-
-  document.body.appendChild(tooltip);
+  target.addEventListener("mouseenter", () => {
+    if (!tooltipElement) return;
+    tooltipElement.textContent = content;
+  });
 
   target.addEventListener("mousemove", (event) => {
+    if (!tooltipElement) return;
+
     const offset = 4; // Offset to prevent the tooltip from being too close to the cursor
     switch (position) {
       case "topLeft":
-        tooltip.style.left = 'unset';
-        tooltip.style.top = 'unset';
-        tooltip.style.right = `${window.innerWidth - event.clientX - offset * 2}px`;
-        tooltip.style.bottom = `${window.innerHeight - event.clientY + offset}px`;
+        tooltipElement.style.left = "unset";
+        tooltipElement.style.top = "unset";
+        tooltipElement.style.right = `${
+          window.innerWidth - event.clientX - offset * 2
+        }px`;
+        tooltipElement.style.bottom = `${
+          window.innerHeight - event.clientY + offset
+        }px`;
         break;
       case "topRight":
-        tooltip.style.left = `${event.clientX + offset}px`;
-        tooltip.style.top = 'unset';
-        tooltip.style.right = 'unset';
-        tooltip.style.bottom = `${window.innerHeight - event.clientY + offset}px`;
+        tooltipElement.style.left = `${event.clientX + offset}px`;
+        tooltipElement.style.top = "unset";
+        tooltipElement.style.right = "unset";
+        tooltipElement.style.bottom = `${
+          window.innerHeight - event.clientY + offset
+        }px`;
         break;
       case "bottomLeft":
-        tooltip.style.left = 'unset';
-        tooltip.style.top = `${event.clientY + offset * 4}px`;
-        tooltip.style.right = `${window.innerWidth - event.clientX}px`;
-        tooltip.style.bottom = 'unset';
+        tooltipElement.style.left = "unset";
+        tooltipElement.style.top = `${event.clientY + offset * 4}px`;
+        tooltipElement.style.right = `${window.innerWidth - event.clientX}px`;
+        tooltipElement.style.bottom = "unset";
         break;
       case "bottomRight":
-        tooltip.style.left = `${event.clientX + offset * 4}px`;
-        tooltip.style.top = `${event.clientY + offset * 4}px`;
-        tooltip.style.right = 'unset';
-        tooltip.style.bottom = 'unset';
+        tooltipElement.style.left = `${event.clientX + offset * 4}px`;
+        tooltipElement.style.top = `${event.clientY + offset * 4}px`;
+        tooltipElement.style.right = "unset";
+        tooltipElement.style.bottom = "unset";
         break;
       default:
-        tooltip.style.left = `${event.clientX + offset}px`;
-        tooltip.style.top = `${event.clientY + offset}px`;
-        tooltip.style.right = 'unset';
-        tooltip.style.bottom = 'unset';
+        tooltipElement.style.left = `${event.clientX + offset}px`;
+        tooltipElement.style.top = `${event.clientY + offset}px`;
+        tooltipElement.style.right = "unset";
+        tooltipElement.style.bottom = "unset";
         break;
     }
 
-    if (!tooltip.classList.contains("visible")) {
-      tooltip.classList.add("visible");
+    if (!tooltipElement.classList.contains("visible")) {
+      tooltipElement.classList.add("visible");
     }
   });
 
   target.addEventListener("mouseleave", () => {
-    tooltip.classList.remove("visible");
+    tooltipElement?.classList.remove("visible");
   });
 };
