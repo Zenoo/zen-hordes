@@ -1,8 +1,10 @@
 import { items } from "../data/items";
 import { ASSETS } from "../utils/constants";
 import { tooltip } from "../utils/tooltip";
+import { notify } from "./notify";
 import { setStore, store } from "./store";
 import { t } from "./translate";
+import { updateShoppingList } from "./wiki";
 
 const T: Translations = {
   en: {
@@ -14,6 +16,8 @@ const T: Translations = {
     codeDesc:
       "This code is used by Zen Hordes to synchronize its shopping list.",
     toggleShoppingList: "Toggle shopping list",
+    updateShoppingList: "Update shopping list",
+    updateSuccess: "Shopping list updated successfully",
   },
   fr: {
     shoppingList: "Liste de courses",
@@ -24,6 +28,8 @@ const T: Translations = {
     codeDesc:
       "Ce code est utilisé par Zen Hordes pour synchroniser sa liste de courses.",
     toggleShoppingList: "Utiliser la liste de courses",
+    updateShoppingList: "Mettre à jour la liste de courses",
+    updateSuccess: "Liste de courses mise à jour avec succès",
   },
   de: {
     shoppingList: "Einkaufsliste",
@@ -34,6 +40,8 @@ const T: Translations = {
     codeDesc:
       "Dieser Code wird von Zen Hordes verwendet, um seine Einkaufsliste zu synchronisieren.",
     toggleShoppingList: "Einkaufsliste verwenden",
+    updateShoppingList: "Einkaufsliste aktualisieren",
+    updateSuccess: "Einkaufsliste erfolgreich aktualisiert",
   },
   es: {
     shoppingList: "Lista de compras",
@@ -44,6 +52,8 @@ const T: Translations = {
     codeDesc:
       "Este código es utilizado por Zen Hordes para sincronizar su lista de compras.",
     toggleShoppingList: "Usar lista de compras",
+    updateShoppingList: "Actualizar lista de compras",
+    updateSuccess: "Lista de compras actualizada con éxito",
   },
 };
 
@@ -177,4 +187,25 @@ export const insertShoppingListToggle = () => {
   toggle.addEventListener("mouseleave", disableShoppingList);
 
   document.body.appendChild(toggle);
+};
+
+export const insertShoppingListUpdateButton = (node: HTMLElement) => {
+  if (!node.classList.contains("collapsor")) return;
+  if (node.textContent !== t(T, "zenHordesCode")) return;
+  if (node.closest("hordes-twino-editor")) return;
+
+  const code = node.nextElementSibling?.querySelector("pre")?.textContent?.trim();
+  if (!code) return;
+
+  const button = document.createElement("button");
+  button.classList.add("zen-shopping-list-update-button");
+  button.textContent = t(T, "updateShoppingList");
+
+  button.addEventListener("click", () => {
+    setStore("shopping-list", code);
+    updateShoppingList();
+    notify(t(T, "updateSuccess"));
+  });
+
+  node.parentElement?.appendChild(button);
 };

@@ -24,7 +24,7 @@ import {
 import { listenToBackgroundMessages } from "./messageListener";
 import { displayPlayerTag, insertPlayerInfo } from "./playerInfo";
 import { displayShamanSoulsButton } from "./shamanSoulsButton";
-import { insertShoppingListToggle } from "./shoppingList";
+import { insertShoppingListToggle, insertShoppingListUpdateButton } from "./shoppingList";
 import { initStore } from "./store";
 import {
   autoOpenBagOutside,
@@ -33,9 +33,6 @@ import {
   enhanceUI,
 } from "./UIEnhancer";
 import { insertWiki, openItemInWiki } from "./wiki";
-
-// TODO: Add a button to synchronize the shopping list with a forum message
-// TODO: Add custom tags to players
 
 // Initialize the store
 await initStore();
@@ -69,6 +66,7 @@ onMount((node) => {
   displayMapPreview(node);
   insertPlayerInfo(node);
   displayPlayerTag(node);
+  insertShoppingListUpdateButton(node);
 });
 
 // Actions that need to be performed on hover

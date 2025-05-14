@@ -503,7 +503,7 @@ const setTextContent = (node: HTMLElement, content: string) => {
   }
 };
 
-const updateShoppingList = () => {
+export const updateShoppingList = () => {
   const shoppingList = getShoppingList();
   const priorities = document.querySelectorAll(".zen-wiki-shopping-list-items");
 

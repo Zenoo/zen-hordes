@@ -90,6 +90,8 @@ Zen Hordes includes a shopping list feature that allows you to keep track of the
 
 ![Shopping list](.github/media/shopping-list.png)
 
+![Shopping list](.github/media/shopping-list-2.png)
+
 ### Player info
 
 Zen Hordes provides a player info feature that allows you to add a custom tag and custom notes to every player. This feature is useful for players who want to keep track of their interactions with other players and remember important details about them. You can add tags and notes to each player by clicking on their name in the game. The tags and notes are stored locally in your browser and are not shared with other players.
