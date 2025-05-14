@@ -96,6 +96,12 @@ const T: Translations = {
     setAsDefaultSuccess: "Default shopping list set",
     restoreDefaultSuccess: "Default shopping list restored",
     restoreInitialDefaultSuccess: "Initial default shopping list restored",
+    "shortcut.openItemInWiki":
+      "(While hovering over an item) Show item details in the wiki",
+    "shortcut.hideItemActions":
+      "(Hold while hovering over an item) Hide item actions (useful when the tooltip gets too big). Move the mouse to update the tooltip location.",
+    "shortcut.highlightShoppingList":
+      "(Hold on the shopping cart in the bottom right of the page) Highlight the items from the shopping list",
   },
   fr: {
     wiki: "Wiki",
@@ -150,6 +156,12 @@ const T: Translations = {
     restoreDefaultSuccess: "Liste de courses par défaut restaurée",
     restoreInitialDefaultSuccess:
       "Liste de courses par défaut initiale restaurée",
+    "shortcut.openItemInWiki":
+      "(En survolant un objet) Afficher les détails de l'objet dans le wiki",
+    "shortcut.hideItemActions":
+      "(Maintenir en survolant un objet) Masquer les actions de l'objet (utile lorsque l'info-bulle devient trop grande). Déplacez la souris pour mettre à jour l'emplacement de l'info-bulle.",
+    "shortcut.highlightShoppingList":
+      "(Maintenir sur le chariot en bas à droite de la page) Mettre en surbrillance les objets de la liste de courses",
   },
   de: {
     wiki: "Wiki",
@@ -205,6 +217,12 @@ const T: Translations = {
     restoreDefaultSuccess: "Einkaufsliste auf Standard zurückgesetzt",
     restoreInitialDefaultSuccess:
       "Einkaufsliste auf ursprünglichen Standard zurückgesetzt",
+    "shortcut.openItemInWiki":
+      "(Beim Überfahren eines Gegenstands) Zeigt die Einzelheiten des Gegenstands im Wiki an",
+    "shortcut.hideItemActions":
+      "(Halten Sie die Maus über einen Gegenstand) Blenden Sie die Aktionen des Gegenstands aus (nützlich, wenn das Tooltip zu groß wird). Bewege die Maus, um den Tooltip-Standort zu aktualisieren.",
+    "shortcut.highlightShoppingList":
+      "(Halten Sie den Einkaufswagen in der unteren rechten Ecke der Seite) Mettre en surbrillance les éléments de la liste de courses",
   },
   es: {
     wiki: "Wiki",
@@ -259,6 +277,12 @@ const T: Translations = {
     restoreDefaultSuccess: "Lista de compras por defecto restaurada",
     restoreInitialDefaultSuccess:
       "Lista de compras por defecto inicial restaurada",
+    "shortcut.openItemInWiki":
+      "(Al pasar el ratón sobre un objeto) Mostrar los detalles del objeto en la wiki",
+    "shortcut.hideItemActions":
+      "(Mantener mientras se pasa el ratón sobre un objeto) Ocultar acciones del objeto (útil cuando la información se vuelve demasiado grande). Mueva el mouse para actualizar la ubicación de la información.",
+    "shortcut.highlightShoppingList":
+      "(Halten Sie den Einkaufswagen in der unteren rechten Ecke der Seite) Mettre en surbrillance les éléments de la liste de courses",
   },
 };
 
@@ -267,6 +291,10 @@ const closeWiki = (backdrop: HTMLElement) => {
 };
 
 const wikiTabs = [
+  {
+    type: "guide",
+    icon: "roles/guide.gif",
+  },
   {
     type: "shoppingList",
     icon: "icons/item/item_cart.gif",
@@ -1185,6 +1213,52 @@ export const insertWiki = () => {
         buttonWrapper.appendChild(restoreInitialDefault);
 
         updateShoppingList();
+        break;
+      }
+      case "guide": {
+        const shortcuts = document.createElement("ul");
+        shortcuts.classList.add("zen-wiki-shortcuts");
+
+        // Open item in wiki
+        const openItem = document.createElement("li");
+        const openItemKey = document.createElement("kbd");
+        const openItemText = document.createElement("span");
+
+        openItemKey.textContent = "H";
+        openItemText.textContent = t(T, "shortcut.openItemInWiki");
+
+        openItem.appendChild(openItemKey);
+        openItem.appendChild(openItemText);
+        shortcuts.appendChild(openItem);
+
+        // Hide item tooltip actions
+        const hideItemActions = document.createElement("li");
+        const hideItemActionsKey = document.createElement("kbd");
+        const hideItemActionsText = document.createElement("span");
+
+        hideItemActionsKey.textContent = "Q";
+        hideItemActionsText.textContent = t(T, "shortcut.hideItemActions");
+
+        hideItemActions.appendChild(hideItemActionsKey);
+        hideItemActions.appendChild(hideItemActionsText);
+        shortcuts.appendChild(hideItemActions);
+
+        // Highlight shopping list items
+        const highlightShoppingList = document.createElement("li");
+        const highlightShoppingListKey = document.createElement("kbd");
+        const highlightShoppingListText = document.createElement("span");
+
+        highlightShoppingListKey.textContent = "Click";
+        highlightShoppingListText.textContent = t(
+          T,
+          "shortcut.highlightShoppingList"
+        );
+
+        highlightShoppingList.appendChild(highlightShoppingListKey);
+        highlightShoppingList.appendChild(highlightShoppingListText);
+        shortcuts.appendChild(highlightShoppingList);
+
+        tab.appendChild(shortcuts);
         break;
       }
       default: {
