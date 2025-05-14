@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.7.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.6.0...zen-hordes-v1.7.0) (2025-05-14)
+
+
+### Features
+
+* Auto select map global setting + Auto open bag outside ([c68a48b](https://github.com/Zenoo/zen-hordes/commit/c68a48bf85b98e9ea0ec55ddc4908a7a43560693))
+* Keep track of previous campings ([64480bd](https://github.com/Zenoo/zen-hordes/commit/64480bdea03d28df3a26cb67c4f005a3f1032ad8))
+* Player info ([a05b3df](https://github.com/Zenoo/zen-hordes/commit/a05b3df754832a316146b8783116b0f487170b49))
+* Shopping list ([260fc55](https://github.com/Zenoo/zen-hordes/commit/260fc55d1688475212e2f4edcd1ff9404eeb371b))
+* Shopping list update button ([50822fa](https://github.com/Zenoo/zen-hordes/commit/50822fa28ec29268b577f159af996f30d91bf258))
+* Wiki guide ([c0e9e3b](https://github.com/Zenoo/zen-hordes/commit/c0e9e3bf2941f58cb65fe600ee93512a2bcf0a19))
+
+
+### Bug Fixes
+
+* Auto open bag when moving items ([cf1f6ca](https://github.com/Zenoo/zen-hordes/commit/cf1f6ca1a033f0120411ea20bff48d7ccce856aa))
+* MH v4.0.5 data ([9e616f9](https://github.com/Zenoo/zen-hordes/commit/9e616f905ebf1ad33115a2fe4a0cc498b2c262c9))
+* Reset camping variables on death ([4481ca4](https://github.com/Zenoo/zen-hordes/commit/4481ca444a2cead99aa05850cb240acc54819215))
+* Shopping list drag & drop issues ([ae41879](https://github.com/Zenoo/zen-hordes/commit/ae41879e23594148260eeea13eaa10d640365810))
+
 ## [1.6.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.5.2...zen-hordes-v1.6.0) (2025-05-02)
 
 
