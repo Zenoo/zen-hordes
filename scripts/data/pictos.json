@@ -279,7 +279,7 @@
       "es": "Construcciones"
     },
     "desc": {
-      "fr": "Points d'action et/ou de chantier investis dans l'avancement d'un chantier en ville.",
+      "fr": "Points d’action et/ou de chantier investis dans l’avancement d’un chantier en ville.",
       "en": "The number of action / construction points you have invested in the construction projects in town.",
       "de": "Anzahl der Aktionspunkte, die du für den Bau neuer Kontruktionen und Stadtgebäude verwendet hast.",
       "es": "Puntos de acción o de construcción invertidos en el avance de una obra en el pueblo."
@@ -309,13 +309,13 @@
     "id": 18,
     "img": "pictos/r_collec.a1926566.gif",
     "name": {
-      "fr": "Purificateur d'âmes",
+      "fr": "Purificateur d’âmes",
       "en": "Soul Purificator",
       "de": "Seelenreiniger",
       "es": "Purificador de almas"
     },
     "desc": {
-      "fr": "Nombre d'âmes de citoyens décédés que vous avez purifiées.",
+      "fr": "Nombre d’âmes de citoyens décédés que vous avez purifiées.",
       "en": "The number of dead citizens' souls you purified.",
       "de": "Anzahl der Seelen verstorbener Bürger, die Sie gereinigt haben.",
       "es": "Cantidad de almas recolectadas que has purificado."
@@ -369,7 +369,7 @@
       "es": "Cocina exótica"
     },
     "desc": {
-      "fr": "Anciens amis que vous avez cuisinés au Cremato-cue.",
+      "fr": "Anciens amis que vous avez cuisinés au Crémato-Cue.",
       "en": "The number of former friends and fellow residents you have cooked and eaten.",
       "de": "Anzahl deiner Alten Freunde, die du im Kremato-Cue gegrillt hast.",
       "es": "Viejos amigos a los que has cocinado en el Cremato-bar."
@@ -387,7 +387,7 @@
       "es": "Desmonte"
     },
     "desc": {
-      "fr": "Points d'action investis dans le déblaiement d'un bâtiment dans l'Outre-Monde.",
+      "fr": "Points d’action investis dans le déblaiement d’un bâtiment dans l’Outre-Monde.",
       "en": "The number of action points you have invested in excavating ruins in the World Beyond.",
       "de": "Anzahl der Aktionspunkte, die du verbraucht hast, um eine Gebäuderuine in der Außenwelt freizulegen.",
       "es": "Puntos de acción invertidos en despejar un edificio en el Ultramundo."
@@ -405,7 +405,7 @@
       "es": "Decoración"
     },
     "desc": {
-      "fr": "Nombre de points de décoration que vous avez pris la peine d'ajouter à votre habitat.",
+      "fr": "Nombre de points de décoration que vous avez pris la peine d’ajouter à votre habitat.",
       "en": "The number of decoration points you have taken the trouble to add to your dwelling place.",
       "de": "Anzahl der Punkte, die du durch sinnlose Einrichtungsverschönerungen gewonnen hast.",
       "es": "Cantidad de puntos de decoración que has agregado a tu hogar."
@@ -423,7 +423,7 @@
       "es": "Última línea"
     },
     "desc": {
-      "fr": "Vous faites partie des derniers à avoir vu les Hordes déferler sur la ville...",
+      "fr": "Vous faites partie des derniers à avoir vu les Hordes déferler sur la ville…",
       "en": "You were one of the last people to see the Hordes descend on the town...",
       "de": "Du gehörst zu den letzten Bürgern der Stadt, die die Zombiehorde 'empfangen' hat...",
       "es": "Fuiste uno de los últimos en ver las hordas de zombies invadir el pueblo."
@@ -441,7 +441,7 @@
       "es": "Estimulantes"
     },
     "desc": {
-      "fr": "Nombre de petits cachets rigolos que vous avez avalés (ou placés ailleurs...).",
+      "fr": "Nombre de petits cachets rigolos que vous avez avalés (ou placés ailleurs…).",
       "en": "The number of funny little pills you have swallowed (or hidden elsewhere...)..",
       "de": "Anzahl kleiner lustiger Pillen, die du geschluckt oder sonstwie eingenommen hast.",
       "es": "Cantidad de pequeñas pildoritas de colores que has tragado (o colocado en otra parte...)"
@@ -453,7 +453,7 @@
     "id": 26,
     "img": "pictos/r_cobaye.8b4a78bb.gif",
     "name": {
-      "fr": "Expérimentations",
+      "fr": "Expérimen­tations",
       "en": "Drug Tests",
       "de": "Drogenerfahrungen",
       "es": "Experimentaciones"
@@ -531,7 +531,7 @@
       "es": "Generosidad"
     },
     "desc": {
-      "fr": "Nombre de jours de mode héros/actions héroïques que vous avez offert à un autre citoyen dans le besoin.",
+      "fr": "Nombre de journées de mode héros/actions héroïques que vous avez offertes à un autre citoyen dans le besoin.",
       "en": "The number of Hero days/Heroic actions that you have given to another citizen in need.",
       "de": "Anzahl der Heldentage, die du einem anderem Bürger in Not geschenkt hast.",
       "es": "Cantidad de días de Modo Héroe/Acciones Heroicas que regalaste a otro habitante necesitado."
@@ -543,7 +543,7 @@
     "id": 31,
     "img": "pictos/r_guide.cc129a02.gif",
     "name": {
-      "fr": "Guide Spirituel",
+      "fr": "Guide spirituel",
       "en": "Spiritual Guide",
       "de": "Spiritueller Führer",
       "es": "Guía Espiritual"
@@ -567,7 +567,7 @@
       "es": "Laboratorio"
     },
     "desc": {
-      "fr": "Cachets de Twinoïd produits dans votre Laboratoire personnel.",
+      "fr": "Cachets de Twinoïde produits dans votre Laboratoire personnel.",
       "en": "The number of little pills created in your personal laboratory.",
       "de": "Anzahl der kleinen bunten Pillen aus deinem privaten Hobbylabor.",
       "es": "Pastillas de Twinoid elaboradas en tu laboratorio personal."
@@ -585,7 +585,7 @@
       "es": "Hurtos"
     },
     "desc": {
-      "fr": "Nombre d'objets volés chez vos voisins (en vie).",
+      "fr": "Nombre d’objets volés chez vos voisins (en vie).",
       "en": "Number of objects you have stole from your fellow residents (alive).",
       "de": "Anzahl der Gegenstände, die du bei deinen (lebenden) Nachbarn geklaut hast.",
       "es": "Cantidad de objetos robados a tus vecinos (en vida)."
@@ -603,7 +603,7 @@
       "es": "Torpezas"
     },
     "desc": {
-      "fr": "Nombre d'objets que vous avez cassés au cours de vos expériences maladroites.",
+      "fr": "Nombre d’objets que vous avez cassés au cours de vos expériences maladroites.",
       "en": "Number of objects you have broken through your own clumsiness.",
       "de": "Anzahl der Gegenstände, die du durch seine Tollpatschigkeit kaputt gemacht hast.",
       "es": "Cantidad de objetos que has roto en tus experiencias fallidas."
@@ -633,13 +633,13 @@
     "id": 36,
     "img": "pictos/r_bgum.50a67852.gif",
     "name": {
-      "fr": "Médailles communautaires",
+      "fr": "Médailles communau­­taires",
       "en": "Community Awards",
       "de": "Event-Auszeichnungen",
       "es": "Reconocimiento de la Comunidad"
     },
     "desc": {
-      "fr": "Récompenses obtenues dans le cadre d'animations communautaires.",
+      "fr": "Récompenses obtenues dans le cadre d’animations communautaires.",
       "en": "Rewards earned through working with the community.",
       "de": "Auszeichnung für die Teilnahme an Events bei 'Die Verdammten'.",
       "es": "Recompensa obtenida por trabajar con la comunidad."
@@ -651,13 +651,13 @@
     "id": 37,
     "img": "pictos/r_ebcstl.bac38661.gif",
     "name": {
-      "fr": "Merveille : Château de sable",
+      "fr": "Merveille : Château de sable",
       "en": "Wonder: Sandcastle",
       "de": "Wunderwerk: Sandschloss",
       "es": "Maravilla: Castillo de arena"
     },
     "desc": {
-      "fr": "Summum de lʼinutile",
+      "fr": "Vous avez vraiment construit ça ?",
       "en": "You really built that?",
       "de": "Das hast du nicht wirklich gebaut?",
       "es": "¿Realmente has construido eso?"
@@ -669,13 +669,13 @@
     "id": 38,
     "img": "pictos/r_ebpmv.219a7ab4.gif",
     "name": {
-      "fr": "Merveille : PMV géant",
+      "fr": "Merveille : PMV géant",
       "en": "Wonder: Giant BRD",
       "de": "Wunderwerk: Riesiger KVF",
       "es": "Maravilla: COSA gigante"
     },
     "desc": {
-      "fr": "Gloire au PMV géant !",
+      "fr": "Gloire au PMV géant !",
       "en": "BRDs for everyone! The people demand BRDs",
       "de": "Huldigt den Riesigen KVF!",
       "es": "¡Gloria a la COSA gigante!"
@@ -687,13 +687,13 @@
     "id": 39,
     "img": "pictos/r_ebgros.dd5ca73c.gif",
     "name": {
-      "fr": "Merveille : Roue de Grostas",
+      "fr": "Merveille : Roue de Grostas",
       "en": "Wonder: Fearfulness Wheel",
       "de": "Wunderwerk: Rad des Schreckens",
       "es": "Maravilla: Gran Noria de Znarf"
     },
     "desc": {
-      "fr": "Regardez, on voit les zombies de là haut !",
+      "fr": "Regardez, on voit les zombies de là-haut !",
       "en": "Look, I can see the zeds from up here!",
       "de": "Sieh nur, man kann von da oben die Zombies sehen!",
       "es": "Increíble, ¡desde aquí los zombies se ven como hormiguitas!"
@@ -705,7 +705,7 @@
     "id": 40,
     "img": "pictos/r_ebcrow.c599721b.gif",
     "name": {
-      "fr": "Merveille : Statue du Corbeau",
+      "fr": "Merveille : Statue du Corbeau",
       "en": "Wonder: Statue of the Crow",
       "de": "Wunderwerk: Statue des Raben",
       "es": "Maravilla: Estatua del Cuervo"
@@ -765,7 +765,7 @@
       "es": "Explorador"
     },
     "desc": {
-      "fr": "Jours passés dans les ombres en tant qu'Éclaireur.",
+      "fr": "Jours passés dans les ombres en tant qu’Éclaireur.",
       "en": "Days spent in the shadows as a Scout.",
       "de": "Anzahl der Tage, die du als Aufklärer gespielt hast.",
       "es": "Días pasados en la oscuridad como Explorador."
@@ -783,7 +783,7 @@
       "es": "Ermitaño"
     },
     "desc": {
-      "fr": "Jours passés à manger n'importe quoi en tant qu'Ermite.",
+      "fr": "Jours passés à manger n’importe quoi en tant qu’Ermite.",
       "en": "Days spent as a survivalist, eating roots, worms and other such delicacies.",
       "de": "Anzahl der Tage, die du als Einsiedler gespielt hast.",
       "es": "Días pasados comiendo cualquier cosa como Ermitaño."
@@ -855,7 +855,7 @@
       "es": "¡Si me muero, mejor que sea cómodamente!"
     },
     "desc": {
-      "fr": "Mère-grand, comme vous avez de grandes dents... GROAR !",
+      "fr": "Mère-grand, comme vous avez de grandes dents… GROAR !",
       "en": "Grandma, what big teeth you have... GROAR!",
       "de": "Großmutter, was hast du für große Zähne... Grrrooooaaar!",
       "es": "¡Si me muero, mejor que sea cómodamente!"
@@ -867,13 +867,13 @@
     "id": 49,
     "img": "pictos/r_dwater.9739f1ff.gif",
     "name": {
-      "fr": "Morts par Déshydratation",
+      "fr": "Morts par Dés­hydrata­tion",
       "en": "Deaths by Dehydration",
       "de": "Dehydrationstode",
       "es": "Muertes por deshidratación"
     },
     "desc": {
-      "fr": "Nombre de morts par déshydratation terminale. Oui oui, l'eau, c'est important.",
+      "fr": "Nombre de morts par déshydratation terminale. Oui oui, l’eau, c’est important.",
       "en": "Number of times you have died from dehydration. Yes indeed, it turns out water is important.",
       "de": "Gibt die Anzahl der Dehydrationen an, an denen du gestorben bist. Doch, doch! Wasser ist wichtig !",
       "es": "Cantidad de muertes por deshidratación terminal. Sí, el agua es importante."
@@ -885,13 +885,13 @@
     "id": 50,
     "img": "pictos/r_dinfec.147c4573.gif",
     "name": {
-      "fr": "Mort par infection",
+      "fr": "Morts par Infection",
       "en": "Deaths by Infection",
       "de": "Tödliche Infektionen",
       "es": "Muertes por infección"
     },
     "desc": {
-      "fr": "Nombre d'extinctions des suites d'une infection virulente.",
+      "fr": "Nombre d’extinctions des suites d’une infection virulente.",
       "en": "Number of deaths from generalised infection.",
       "de": "Anzahl der Infektionen, die dich das Leben gekostet haben.",
       "es": "Cantidad de fallecimientos por infecciones."
@@ -927,7 +927,7 @@
       "es": "Muertes por abstinencia"
     },
     "desc": {
-      "fr": "Nuits que vous n'avez pas passées, par manque de drogue.",
+      "fr": "Nuits que vous n’avez pas passées, par manque de drogue.",
       "en": "Nights you didn't see the other side of, due to lack of drugs.",
       "de": "Die Anzahl der Male, in denen dein unfreiwilliger 'cold turkey' gescheitert ist...",
       "es": "Veces que has muerto por falta de estimulantes."
@@ -945,7 +945,7 @@
       "es": "¡El Último Habitante!"
     },
     "desc": {
-      "fr": "Vous êtes le ou la dernière à mourir ! Très peu de citoyens ont réalisé cet exploit !",
+      "fr": "Vous êtes le ou la dernière à mourir ! Très peu de citoyens ont réalisé cet exploit !",
       "en": "You were the last to die! Very few citizens have accomplished this feat!",
       "de": "Du bist die oder der letzte, die draufgeht. Diese Ehre wird nur sehr wenigen Bürgen zuteil.",
       "es": "Fuiste el último en morir en tu pueblo. ¡Muy pocos jugadores han logrado esta hazaña!"
@@ -957,13 +957,13 @@
     "id": 54,
     "img": "pictos/r_suhard.cd1cc92f.gif",
     "name": {
-      "fr": "Mort Ultime du Pandémonium !",
+      "fr": "Mort Ultime du Pandé­monium !",
       "en": "Last Man Standing - Hardcore!",
       "de": "Letzter Toter in einer Pandämoniumstadt",
       "es": "El Último Superviviente en Pandemonio"
     },
     "desc": {
-      "fr": "Vous êtes le ou la dernière à mourir au cours d'une ville du Pandémonium !",
+      "fr": "Vous êtes le ou la dernière à mourir au cours d’une ville du Pandémonium !",
       "en": "you were the last to bite the bullet in a Hardcore town!",
       "de": "Du bist der oder die Letzte, die in einer Pandämoniumstadt draufgeht!",
       "es": "¡Fuiste el último en morir en un pueblo del Pandemonio!"
@@ -981,7 +981,7 @@
       "es": "Puntos de Misticismo"
     },
     "desc": {
-      "fr": "Nombre d'âmes que votre ville a pu libérer.",
+      "fr": "Nombre d’âmes que votre ville a pu libérer.",
       "en": "The number of souls your town has managed to recycle.",
       "de": "Anzahl der Seelen, die die Stadt befreien konnte",
       "es": "Cantidad de almas que tu pueblo pudo reciclar en las construcciones"
@@ -999,7 +999,7 @@
       "es": "Noches en el desierto"
     },
     "desc": {
-      "fr": "Petites promenades dehors dont vous n'êtes jamais revenu(e).",
+      "fr": "Petites promenades dehors dont vous n’êtes jamais revenu(e).",
       "en": "Little walks you took outside from which you never returned.",
       "de": "Die Auszeichnung spiegelt die Anzahl der Wüstenausflüge wieder, von denen du nicht mehr zurückgekehrt bist.",
       "es": "Veces en las que saliste a pasear fuera del pueblo y nunca más volviste."
@@ -1011,7 +1011,7 @@
     "id": 57,
     "img": "pictos/r_door.a45ac87f.gif",
     "name": {
-      "fr": "Ouverture de porte",
+      "fr": "Ouvertures de porte",
       "en": "Covert Concierge",
       "de": "Geöffnete Tür",
       "es": "Apertura de puertas"
@@ -1107,7 +1107,7 @@
       "es": "Reparación de construcciones"
     },
     "desc": {
-      "fr": "Points d'action investis dans les réparations sans fin des chantiers.",
+      "fr": "Points d’action investis dans les réparations sans fin des chantiers.",
       "en": "Action Points invested in the ongoing repairs of buildings.",
       "de": "Anzahl der Aktionspunkte, die du in Reparaturen auf der Baustelle gesteckt hast.",
       "es": "Puntos de acción invertidos en reparaciones interminables."
@@ -1125,7 +1125,7 @@
       "es": "Rolista"
     },
     "desc": {
-      "fr": "Documents et autres découvertes 'roleplay'.",
+      "fr": "Documents et autres découvertes « roleplay ».",
       "en": "The number of documents and other uncovered 'roleplay' items.",
       "de": "Anzahl der Dokumente und Texte, die du in der Wüste gefunden hast.",
       "es": "Documentos y otros descubrimientos en el juego de rol."
@@ -1143,7 +1143,7 @@
       "es": "Lanzamuertos"
     },
     "desc": {
-      "fr": "Nombre d'amis morts que vous avez tirés hors de la ville.",
+      "fr": "Nombre d’amis morts que vous avez tirés hors de la ville.",
       "en": "The number of dead friends you've dragged out of town.",
       "de": "Anzahl deiner toten Freunde, die du außerhalb der Stadt entsorgt hast.",
       "es": "Cantidad de amigos muertos que has tirado fuera del pueblo."
@@ -1173,13 +1173,13 @@
     "id": 66,
     "img": "pictos/r_pande.91c2b58b.gif",
     "name": {
-      "fr": "Survivant de l'enfer !",
+      "fr": "Survivant de l’enfer !",
       "en": "Survivor of Hell!",
       "de": "Überlebende der Hölle!",
       "es": "Superviviente del Infierno"
     },
     "desc": {
-      "fr": "Vous êtes un vrai survivant de l'enfer.",
+      "fr": "Vous êtes un vrai survivant de l’enfer.",
       "en": "You are a true survivor of hell.",
       "de": "Sie sind ein wahrer Überlebenskünstler der Hölle.",
       "es": "Eres un verdadero superviviente del infierno"
@@ -1209,7 +1209,7 @@
     "id": 68,
     "img": "pictos/r_tronco.5dbc557f.gif",
     "name": {
-      "fr": "Tronçonneuses",
+      "fr": "Tronçon­neuses",
       "en": "Chainsaws",
       "de": "Kettensägen",
       "es": "Sierras eléctricas"
@@ -1251,7 +1251,7 @@
       "es": "Habitante prestigioso"
     },
     "desc": {
-      "fr": "Nombre de villes présentes dans le classement top 15 d'une saison précédente.",
+      "fr": "Nombre de villes présentes dans le classement top 15 d’une saison précédente.",
       "en": "Number of towns which figured in last season's rankings.",
       "de": "Anzahl der Städte, in denen Du mitgespielt hast, die es in einer vergangenen Saison ins Ranking geschafft haben.",
       "es": "Cantidad de veces en que has participado en pueblos presentes en una clasificación anterior."
@@ -1263,13 +1263,13 @@
     "id": 71,
     "img": "pictos/r_wintop.bede67a9.gif",
     "name": {
-      "fr": "Ville légendaire !",
+      "fr": "Ville légendaire !",
       "en": "Legendary Towns!",
       "de": "Legendäre Stadt",
       "es": "Habitante legendario"
     },
     "desc": {
-      "fr": "Nombre de villes arrivées en première place du classement d'une saison précédente.",
+      "fr": "Nombre de villes arrivées en première place du classement d’une saison précédente.",
       "en": "Number of towns which made the number one spot from previous seasons.",
       "de": "Anzahl der Städte, in denen Du mitgespielt hast, die in einer vergangenen Saison als Erste abgeschnitten haben.",
       "es": "Cantidad de pueblos colocados en el primer lugar en una clasificación anterior."
@@ -1287,7 +1287,7 @@
       "es": "Pueblo participante"
     },
     "desc": {
-      "fr": "Nombre de villes présentes dans le classement top 35 d'une saison précédente.",
+      "fr": "Nombre de villes présentes dans le classement top 35 d’une saison précédente.",
       "en": "Number of towns represented in the top 35 rankings of a past season.",
       "de": "Anzahl der Städte, die in der Top-35-Rangliste einer vergangenen Saison vertreten waren.",
       "es": "Cantidad de pueblos representadas en las primeras 35 clasificaciones de la temporada pasada"
@@ -1305,7 +1305,7 @@
       "es": "Zombies eliminados"
     },
     "desc": {
-      "fr": "Total de créatures mort-vivantes que vous avez renvoyées sous terre par n'importe quel moyen.",
+      "fr": "Nombre de créatures mort-vivantes que vous avez renvoyées sous terre par n’importe quel moyen.",
       "en": "Total number of the living-dead you have sent back underground by whatever means.",
       "de": "Gibt die Gesamtanzahl, der von dir umgebrachten Zombies an. Jede Tötungsmethode wird gezählt.",
       "es": "Total de muertos vivientes que volviste a enviar bajo tierra de cualquier manera."
@@ -1335,13 +1335,13 @@
     "id": 75,
     "img": "pictos/r_sandb.c3505991.gif",
     "name": {
-      "fr": "Boules de sable !",
+      "fr": "Boules de sable !",
       "en": "Sand balls!",
       "de": "Sandbälle! Yeah!",
       "es": "Bolas de arena"
     },
     "desc": {
-      "fr": "Nombre de boules de sable envoyées au visage d'autres joueurs.",
+      "fr": "Nombre de boules de sable envoyées au visage d’autres joueurs.",
       "en": "Number of sandballs successfully thrown at another citizen's chevy chase.",
       "de": "Anzahl der Sandbälle, die du deinen Mitspielern ins Gesicht geworfen hast. Kicher, kicher...",
       "es": "Cantidad de bolas de arena lanzadas a la cara de otros jugadores."
@@ -1359,7 +1359,7 @@
       "es": "Crucifixión"
     },
     "desc": {
-      "fr": "Réjouissez vous, vous n'aurez pas eu à marcher.",
+      "fr": "Réjouissez-vous, vous n’aurez pas eu à marcher.",
       "en": "Rejoice you didn't have to walk.",
       "de": "Freuen Sie sich, Sie hätten nicht laufen müssen.",
       "es": "Alégrate de que no tuviste que caminar"
@@ -1395,7 +1395,7 @@
       "es": "Chamán"
     },
     "desc": {
-      "fr": "Jours passés à trafiquer l'âme des morts.",
+      "fr": "Jours passés à trafiquer l’âme des morts.",
       "en": "Days spent trafficking the dead souls.",
       "de": "Tagelang wurde an den Seelen der Toten herumgepfuscht.",
       "es": "Días pasados jugando con almas de muertos."
@@ -1407,13 +1407,13 @@
     "id": 79,
     "img": "pictos/r_armag.647834c4.gif",
     "name": {
-      "fr": "Témoin de l'Armageddon",
+      "fr": "Témoin de l’Armageddon",
       "en": "Armageddon Witness",
       "de": "Zeuge von Harmagedon",
       "es": "Testigo del Armagedón"
     },
     "desc": {
-      "fr": "Marque rarissime réservée aux âmes qui ont vécu le grand Armageddon de l'univers de Hordes !",
+      "fr": "Marque rarissime réservée aux âmes qui ont vécu le grand Armageddon de l’univers de Hordes !",
       "en": "An extremely rare distinction reserved for souls who have experienced the great Armageddon of Die2Nite!",
       "de": "Eine äußerst seltene Auszeichnung, die den Seelen vorbehalten ist, die das große Harmagedon des Universums von Die Verdammten erlebt haben!",
       "es": "¡Una Distinción extremadamente rara reservado para las almas que presenciaron El Gran Armagedón!"
@@ -1431,7 +1431,7 @@
       "es": "Testigo de la Gran Contaminación"
     },
     "desc": {
-      "fr": "Marque rarissime réservée aux âmes qui ont vécu la Grande Contamination Hordienne !",
+      "fr": "Marque rarissime réservée aux âmes qui ont vécu la Grande Contamination Hordienne !",
       "en": "Extremely rare distinction reserved for souls who have experienced the Great Contamination of Die2Nite!",
       "de": "Äußerst seltene Marke, die für Seelen reserviert ist, die die Große Kontamination von Die Verdammten erlebt haben!",
       "es": "¡Distinción extremadamente rara reservada para las almas que presenciaron La Gran Contaminación!"
@@ -1443,13 +1443,13 @@
     "id": 81,
     "img": "pictos/r_ptame.d34db37f.gif",
     "name": {
-      "fr": "Valeur de l'âme",
+      "fr": "Valeur de l’âme",
       "en": "Soul Value",
       "de": "Seelenpunkte",
       "es": "Puntos de Alma"
     },
     "desc": {
-      "fr": "Nombre de points d'âme que vous avez obtenu au cours de vos incarnations.",
+      "fr": "Nombre de points d’âme que vous avez obtenus au cours de vos incarnations.",
       "en": "The number of soul points you have accumulated in the course of your many lives.",
       "de": "Anzahl der Seelenpunkte, die du durch deine Inkarnationen erhalten hast.",
       "es": "Cantidad de Puntos de Alma que has ganado en tus reencarnaciones."
@@ -1791,7 +1791,7 @@
       "es": "Ganador del CTP"
     },
     "desc": {
-      "fr": "Récompense honorifique décernée au gagnant de Guérir sa Pictophilie !",
+      "fr": "Récompense honorifique décernée au gagnant de Guérir sa Pictophilie !",
       "en": "Honorary reward awarded to the winner of the Cure his Pictophilia.",
       "de": "Ehrenauszeichnung für den Gewinner der Heilung für die Auszeichnungssucht.",
       "es": "¡Premio honorario dado al ganador de \"Curando tu Pictofilia\"!"
@@ -1803,13 +1803,13 @@
     "id": 101,
     "img": "pictos/r_collec2.72c54112.gif",
     "name": {
-      "fr": "Collecteur d'âmes",
+      "fr": "Collecteur d’âmes",
       "en": "Soul Collector",
       "de": "Kernsammler",
       "es": "Recolector de Almas"
     },
     "desc": {
-      "fr": "Nombres d'âmes de citoyens décédés collectées dans l'outre-monde",
+      "fr": "Nombres d’âmes de citoyens décédés collectées dans l’Outre-Monde",
       "en": "The number of dead citizens' souls collected in the World Beyond",
       "de": "Anzahl der im Ausland gesammelten Seelen verstorbener Bürger",
       "es": "Cantidad de almas recolectadas de habitantes fallecidos en el Ultramundo"
@@ -1821,13 +1821,13 @@
     "id": 102,
     "img": "pictos/r_mystic2.067e128e.gif",
     "name": {
-      "fr": "Transformation mystique",
+      "fr": "Trans­formation mystique",
       "en": "Mystical transformation",
       "de": "Mystische Transformation",
       "es": "Transformación Mística"
     },
     "desc": {
-      "fr": "Nombre d'âmes trafiquées par vos soins à l'Atelier.",
+      "fr": "Nombre d’âmes trafiquées par vos soins à l’Atelier.",
       "en": "Number of souls trafficked by you at the Workshop.",
       "de": "Anzahl der Seelen, die du in der Werkstatt umgewandelt hast",
       "es": "Cantidad de almas que has transformado en el Taller"

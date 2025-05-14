@@ -4665,7 +4665,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     id: ItemId.FOOD_BAR2,
     numericalId: 120,
     name: {
-      [Lang.EN]: "Mouldy Neapolitan",
+      [Lang.EN]: "Mouldy Twinkies",
       [Lang.FR]: "Napolitains moisis",
       [Lang.DE]: "Verschimmelte Waffeln",
       [Lang.ES]: "Bizcochos enmohecidos"
@@ -4735,7 +4735,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     id: ItemId.FOOD_BISCUIT,
     numericalId: 122,
     name: {
-      [Lang.EN]: "Rancid Jaffa Cakes",
+      [Lang.EN]: "Rancid Shortbread Pack",
       [Lang.FR]: "Petits beurres rances",
       [Lang.DE]: "Ranzige Butterkekse",
       [Lang.ES]: "Galletas rancias"
@@ -4805,7 +4805,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     id: ItemId.FOOD_PIMS,
     numericalId: 124,
     name: {
-      [Lang.EN]: "Out-of-Date Biscuits",
+      [Lang.EN]: "Out-of-Date Jaffa Cakes",
       [Lang.FR]: "Pim's périmé",
       [Lang.DE]: "Abgelaufene Pim's Kekse",
       [Lang.ES]: "Chocolate vencido"

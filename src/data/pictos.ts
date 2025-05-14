@@ -297,7 +297,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "The number of action / construction points you have invested in the construction projects in town.",
-      [Lang.FR]: "Points d'action et/ou de chantier investis dans l'avancement d'un chantier en ville.",
+      [Lang.FR]: "Points d’action et/ou de chantier investis dans l’avancement d’un chantier en ville.",
       [Lang.DE]: "Anzahl der Aktionspunkte, die du für den Bau neuer Kontruktionen und Stadtgebäude verwendet hast.",
       [Lang.ES]: "Puntos de acción o de construcción invertidos en el avance de una obra en el pueblo."
     },
@@ -329,13 +329,13 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 18,
     name: {
       [Lang.EN]: "Soul Purificator",
-      [Lang.FR]: "Purificateur d'âmes",
+      [Lang.FR]: "Purificateur d’âmes",
       [Lang.DE]: "Seelenreiniger",
       [Lang.ES]: "Purificador de almas"
     },
     description: {
       [Lang.EN]: "The number of dead citizens' souls you purified.",
-      [Lang.FR]: "Nombre d'âmes de citoyens décédés que vous avez purifiées.",
+      [Lang.FR]: "Nombre d’âmes de citoyens décédés que vous avez purifiées.",
       [Lang.DE]: "Anzahl der Seelen verstorbener Bürger, die Sie gereinigt haben.",
       [Lang.ES]: "Cantidad de almas recolectadas que has purificado."
     },
@@ -392,7 +392,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "The number of former friends and fellow residents you have cooked and eaten.",
-      [Lang.FR]: "Anciens amis que vous avez cuisinés au Cremato-cue.",
+      [Lang.FR]: "Anciens amis que vous avez cuisinés au Crémato-Cue.",
       [Lang.DE]: "Anzahl deiner Alten Freunde, die du im Kremato-Cue gegrillt hast.",
       [Lang.ES]: "Viejos amigos a los que has cocinado en el Cremato-bar."
     },
@@ -411,7 +411,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "The number of action points you have invested in excavating ruins in the World Beyond.",
-      [Lang.FR]: "Points d'action investis dans le déblaiement d'un bâtiment dans l'Outre-Monde.",
+      [Lang.FR]: "Points d’action investis dans le déblaiement d’un bâtiment dans l’Outre-Monde.",
       [Lang.DE]: "Anzahl der Aktionspunkte, die du verbraucht hast, um eine Gebäuderuine in der Außenwelt freizulegen.",
       [Lang.ES]: "Puntos de acción invertidos en despejar un edificio en el Ultramundo."
     },
@@ -430,7 +430,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "The number of decoration points you have taken the trouble to add to your dwelling place.",
-      [Lang.FR]: "Nombre de points de décoration que vous avez pris la peine d'ajouter à votre habitat.",
+      [Lang.FR]: "Nombre de points de décoration que vous avez pris la peine d’ajouter à votre habitat.",
       [Lang.DE]: "Anzahl der Punkte, die du durch sinnlose Einrichtungsverschönerungen gewonnen hast.",
       [Lang.ES]: "Cantidad de puntos de decoración que has agregado a tu hogar."
     },
@@ -449,7 +449,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "You were one of the last people to see the Hordes descend on the town...",
-      [Lang.FR]: "Vous faites partie des derniers à avoir vu les Hordes déferler sur la ville...",
+      [Lang.FR]: "Vous faites partie des derniers à avoir vu les Hordes déferler sur la ville…",
       [Lang.DE]: "Du gehörst zu den letzten Bürgern der Stadt, die die Zombiehorde 'empfangen' hat...",
       [Lang.ES]: "Fuiste uno de los últimos en ver las hordas de zombies invadir el pueblo."
     },
@@ -468,7 +468,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "The number of funny little pills you have swallowed (or hidden elsewhere...)..",
-      [Lang.FR]: "Nombre de petits cachets rigolos que vous avez avalés (ou placés ailleurs...).",
+      [Lang.FR]: "Nombre de petits cachets rigolos que vous avez avalés (ou placés ailleurs…).",
       [Lang.DE]: "Anzahl kleiner lustiger Pillen, die du geschluckt oder sonstwie eingenommen hast.",
       [Lang.ES]: "Cantidad de pequeñas pildoritas de colores que has tragado (o colocado en otra parte...)"
     },
@@ -481,7 +481,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 26,
     name: {
       [Lang.EN]: "Drug Tests",
-      [Lang.FR]: "Expérimentations",
+      [Lang.FR]: "Expérimen­tations",
       [Lang.DE]: "Drogenerfahrungen",
       [Lang.ES]: "Experimentaciones"
     },
@@ -563,7 +563,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "The number of Hero days/Heroic actions that you have given to another citizen in need.",
-      [Lang.FR]: "Nombre de jours de mode héros/actions héroïques que vous avez offert à un autre citoyen dans le besoin.",
+      [Lang.FR]: "Nombre de journées de mode héros/actions héroïques que vous avez offertes à un autre citoyen dans le besoin.",
       [Lang.DE]: "Anzahl der Heldentage, die du einem anderem Bürger in Not geschenkt hast.",
       [Lang.ES]: "Cantidad de días de Modo Héroe/Acciones Heroicas que regalaste a otro habitante necesitado."
     },
@@ -576,7 +576,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 31,
     name: {
       [Lang.EN]: "Spiritual Guide",
-      [Lang.FR]: "Guide Spirituel",
+      [Lang.FR]: "Guide spirituel",
       [Lang.DE]: "Spiritueller Führer",
       [Lang.ES]: "Guía Espiritual"
     },
@@ -601,7 +601,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "The number of little pills created in your personal laboratory.",
-      [Lang.FR]: "Cachets de Twinoïd produits dans votre Laboratoire personnel.",
+      [Lang.FR]: "Cachets de Twinoïde produits dans votre Laboratoire personnel.",
       [Lang.DE]: "Anzahl der kleinen bunten Pillen aus deinem privaten Hobbylabor.",
       [Lang.ES]: "Pastillas de Twinoid elaboradas en tu laboratorio personal."
     },
@@ -620,7 +620,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "Number of objects you have stole from your fellow residents (alive).",
-      [Lang.FR]: "Nombre d'objets volés chez vos voisins (en vie).",
+      [Lang.FR]: "Nombre d’objets volés chez vos voisins (en vie).",
       [Lang.DE]: "Anzahl der Gegenstände, die du bei deinen (lebenden) Nachbarn geklaut hast.",
       [Lang.ES]: "Cantidad de objetos robados a tus vecinos (en vida)."
     },
@@ -639,7 +639,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "Number of objects you have broken through your own clumsiness.",
-      [Lang.FR]: "Nombre d'objets que vous avez cassés au cours de vos expériences maladroites.",
+      [Lang.FR]: "Nombre d’objets que vous avez cassés au cours de vos expériences maladroites.",
       [Lang.DE]: "Anzahl der Gegenstände, die du durch seine Tollpatschigkeit kaputt gemacht hast.",
       [Lang.ES]: "Cantidad de objetos que has roto en tus experiencias fallidas."
     },
@@ -671,13 +671,13 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 36,
     name: {
       [Lang.EN]: "Community Awards",
-      [Lang.FR]: "Médailles communautaires",
+      [Lang.FR]: "Médailles communau­­taires",
       [Lang.DE]: "Event-Auszeichnungen",
       [Lang.ES]: "Reconocimiento de la Comunidad"
     },
     description: {
       [Lang.EN]: "Rewards earned through working with the community.",
-      [Lang.FR]: "Récompenses obtenues dans le cadre d'animations communautaires.",
+      [Lang.FR]: "Récompenses obtenues dans le cadre d’animations communautaires.",
       [Lang.DE]: "Auszeichnung für die Teilnahme an Events bei 'Die Verdammten'.",
       [Lang.ES]: "Recompensa obtenida por trabajar con la comunidad."
     },
@@ -690,13 +690,13 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 37,
     name: {
       [Lang.EN]: "Wonder: Sandcastle",
-      [Lang.FR]: "Merveille : Château de sable",
+      [Lang.FR]: "Merveille : Château de sable",
       [Lang.DE]: "Wunderwerk: Sandschloss",
       [Lang.ES]: "Maravilla: Castillo de arena"
     },
     description: {
       [Lang.EN]: "You really built that?",
-      [Lang.FR]: "Summum de lʼinutile",
+      [Lang.FR]: "Vous avez vraiment construit ça ?",
       [Lang.DE]: "Das hast du nicht wirklich gebaut?",
       [Lang.ES]: "¿Realmente has construido eso?"
     },
@@ -709,13 +709,13 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 38,
     name: {
       [Lang.EN]: "Wonder: Giant BRD",
-      [Lang.FR]: "Merveille : PMV géant",
+      [Lang.FR]: "Merveille : PMV géant",
       [Lang.DE]: "Wunderwerk: Riesiger KVF",
       [Lang.ES]: "Maravilla: COSA gigante"
     },
     description: {
       [Lang.EN]: "BRDs for everyone! The people demand BRDs",
-      [Lang.FR]: "Gloire au PMV géant !",
+      [Lang.FR]: "Gloire au PMV géant !",
       [Lang.DE]: "Huldigt den Riesigen KVF!",
       [Lang.ES]: "¡Gloria a la COSA gigante!"
     },
@@ -728,13 +728,13 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 39,
     name: {
       [Lang.EN]: "Wonder: Fearfulness Wheel",
-      [Lang.FR]: "Merveille : Roue de Grostas",
+      [Lang.FR]: "Merveille : Roue de Grostas",
       [Lang.DE]: "Wunderwerk: Rad des Schreckens",
       [Lang.ES]: "Maravilla: Gran Noria de Znarf"
     },
     description: {
       [Lang.EN]: "Look, I can see the zeds from up here!",
-      [Lang.FR]: "Regardez, on voit les zombies de là haut !",
+      [Lang.FR]: "Regardez, on voit les zombies de là-haut !",
       [Lang.DE]: "Sieh nur, man kann von da oben die Zombies sehen!",
       [Lang.ES]: "Increíble, ¡desde aquí los zombies se ven como hormiguitas!"
     },
@@ -747,7 +747,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 40,
     name: {
       [Lang.EN]: "Wonder: Statue of the Crow",
-      [Lang.FR]: "Merveille : Statue du Corbeau",
+      [Lang.FR]: "Merveille : Statue du Corbeau",
       [Lang.DE]: "Wunderwerk: Statue des Raben",
       [Lang.ES]: "Maravilla: Estatua del Cuervo"
     },
@@ -810,7 +810,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "Days spent in the shadows as a Scout.",
-      [Lang.FR]: "Jours passés dans les ombres en tant qu'Éclaireur.",
+      [Lang.FR]: "Jours passés dans les ombres en tant qu’Éclaireur.",
       [Lang.DE]: "Anzahl der Tage, die du als Aufklärer gespielt hast.",
       [Lang.ES]: "Días pasados en la oscuridad como Explorador."
     },
@@ -829,7 +829,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "Days spent as a survivalist, eating roots, worms and other such delicacies.",
-      [Lang.FR]: "Jours passés à manger n'importe quoi en tant qu'Ermite.",
+      [Lang.FR]: "Jours passés à manger n’importe quoi en tant qu’Ermite.",
       [Lang.DE]: "Anzahl der Tage, die du als Einsiedler gespielt hast.",
       [Lang.ES]: "Días pasados comiendo cualquier cosa como Ermitaño."
     },
@@ -905,7 +905,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "Grandma, what big teeth you have... GROAR!",
-      [Lang.FR]: "Mère-grand, comme vous avez de grandes dents... GROAR !",
+      [Lang.FR]: "Mère-grand, comme vous avez de grandes dents… GROAR !",
       [Lang.DE]: "Großmutter, was hast du für große Zähne... Grrrooooaaar!",
       [Lang.ES]: "¡Si me muero, mejor que sea cómodamente!"
     },
@@ -918,13 +918,13 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 49,
     name: {
       [Lang.EN]: "Deaths by Dehydration",
-      [Lang.FR]: "Morts par Déshydratation",
+      [Lang.FR]: "Morts par Dés­hydrata­tion",
       [Lang.DE]: "Dehydrationstode",
       [Lang.ES]: "Muertes por deshidratación"
     },
     description: {
       [Lang.EN]: "Number of times you have died from dehydration. Yes indeed, it turns out water is important.",
-      [Lang.FR]: "Nombre de morts par déshydratation terminale. Oui oui, l'eau, c'est important.",
+      [Lang.FR]: "Nombre de morts par déshydratation terminale. Oui oui, l’eau, c’est important.",
       [Lang.DE]: "Gibt die Anzahl der Dehydrationen an, an denen du gestorben bist. Doch, doch! Wasser ist wichtig !",
       [Lang.ES]: "Cantidad de muertes por deshidratación terminal. Sí, el agua es importante."
     },
@@ -937,13 +937,13 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 50,
     name: {
       [Lang.EN]: "Deaths by Infection",
-      [Lang.FR]: "Mort par infection",
+      [Lang.FR]: "Morts par Infection",
       [Lang.DE]: "Tödliche Infektionen",
       [Lang.ES]: "Muertes por infección"
     },
     description: {
       [Lang.EN]: "Number of deaths from generalised infection.",
-      [Lang.FR]: "Nombre d'extinctions des suites d'une infection virulente.",
+      [Lang.FR]: "Nombre d’extinctions des suites d’une infection virulente.",
       [Lang.DE]: "Anzahl der Infektionen, die dich das Leben gekostet haben.",
       [Lang.ES]: "Cantidad de fallecimientos por infecciones."
     },
@@ -981,7 +981,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "Nights you didn't see the other side of, due to lack of drugs.",
-      [Lang.FR]: "Nuits que vous n'avez pas passées, par manque de drogue.",
+      [Lang.FR]: "Nuits que vous n’avez pas passées, par manque de drogue.",
       [Lang.DE]: "Die Anzahl der Male, in denen dein unfreiwilliger 'cold turkey' gescheitert ist...",
       [Lang.ES]: "Veces que has muerto por falta de estimulantes."
     },
@@ -1000,7 +1000,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "You were the last to die! Very few citizens have accomplished this feat!",
-      [Lang.FR]: "Vous êtes le ou la dernière à mourir ! Très peu de citoyens ont réalisé cet exploit !",
+      [Lang.FR]: "Vous êtes le ou la dernière à mourir ! Très peu de citoyens ont réalisé cet exploit !",
       [Lang.DE]: "Du bist die oder der letzte, die draufgeht. Diese Ehre wird nur sehr wenigen Bürgen zuteil.",
       [Lang.ES]: "Fuiste el último en morir en tu pueblo. ¡Muy pocos jugadores han logrado esta hazaña!"
     },
@@ -1013,13 +1013,13 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 54,
     name: {
       [Lang.EN]: "Last Man Standing - Hardcore!",
-      [Lang.FR]: "Mort Ultime du Pandémonium !",
+      [Lang.FR]: "Mort Ultime du Pandé­monium !",
       [Lang.DE]: "Letzter Toter in einer Pandämoniumstadt",
       [Lang.ES]: "El Último Superviviente en Pandemonio"
     },
     description: {
       [Lang.EN]: "you were the last to bite the bullet in a Hardcore town!",
-      [Lang.FR]: "Vous êtes le ou la dernière à mourir au cours d'une ville du Pandémonium !",
+      [Lang.FR]: "Vous êtes le ou la dernière à mourir au cours d’une ville du Pandémonium !",
       [Lang.DE]: "Du bist der oder die Letzte, die in einer Pandämoniumstadt draufgeht!",
       [Lang.ES]: "¡Fuiste el último en morir en un pueblo del Pandemonio!"
     },
@@ -1038,7 +1038,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "The number of souls your town has managed to recycle.",
-      [Lang.FR]: "Nombre d'âmes que votre ville a pu libérer.",
+      [Lang.FR]: "Nombre d’âmes que votre ville a pu libérer.",
       [Lang.DE]: "Anzahl der Seelen, die die Stadt befreien konnte",
       [Lang.ES]: "Cantidad de almas que tu pueblo pudo reciclar en las construcciones"
     },
@@ -1057,7 +1057,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "Little walks you took outside from which you never returned.",
-      [Lang.FR]: "Petites promenades dehors dont vous n'êtes jamais revenu(e).",
+      [Lang.FR]: "Petites promenades dehors dont vous n’êtes jamais revenu(e).",
       [Lang.DE]: "Die Auszeichnung spiegelt die Anzahl der Wüstenausflüge wieder, von denen du nicht mehr zurückgekehrt bist.",
       [Lang.ES]: "Veces en las que saliste a pasear fuera del pueblo y nunca más volviste."
     },
@@ -1070,7 +1070,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 57,
     name: {
       [Lang.EN]: "Covert Concierge",
-      [Lang.FR]: "Ouverture de porte",
+      [Lang.FR]: "Ouvertures de porte",
       [Lang.DE]: "Geöffnete Tür",
       [Lang.ES]: "Apertura de puertas"
     },
@@ -1171,7 +1171,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "Action Points invested in the ongoing repairs of buildings.",
-      [Lang.FR]: "Points d'action investis dans les réparations sans fin des chantiers.",
+      [Lang.FR]: "Points d’action investis dans les réparations sans fin des chantiers.",
       [Lang.DE]: "Anzahl der Aktionspunkte, die du in Reparaturen auf der Baustelle gesteckt hast.",
       [Lang.ES]: "Puntos de acción invertidos en reparaciones interminables."
     },
@@ -1190,7 +1190,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "The number of documents and other uncovered 'roleplay' items.",
-      [Lang.FR]: "Documents et autres découvertes 'roleplay'.",
+      [Lang.FR]: "Documents et autres découvertes « roleplay ».",
       [Lang.DE]: "Anzahl der Dokumente und Texte, die du in der Wüste gefunden hast.",
       [Lang.ES]: "Documentos y otros descubrimientos en el juego de rol."
     },
@@ -1209,7 +1209,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "The number of dead friends you've dragged out of town.",
-      [Lang.FR]: "Nombre d'amis morts que vous avez tirés hors de la ville.",
+      [Lang.FR]: "Nombre d’amis morts que vous avez tirés hors de la ville.",
       [Lang.DE]: "Anzahl deiner toten Freunde, die du außerhalb der Stadt entsorgt hast.",
       [Lang.ES]: "Cantidad de amigos muertos que has tirado fuera del pueblo."
     },
@@ -1241,13 +1241,13 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 66,
     name: {
       [Lang.EN]: "Survivor of Hell!",
-      [Lang.FR]: "Survivant de l'enfer !",
+      [Lang.FR]: "Survivant de l’enfer !",
       [Lang.DE]: "Überlebende der Hölle!",
       [Lang.ES]: "Superviviente del Infierno"
     },
     description: {
       [Lang.EN]: "You are a true survivor of hell.",
-      [Lang.FR]: "Vous êtes un vrai survivant de l'enfer.",
+      [Lang.FR]: "Vous êtes un vrai survivant de l’enfer.",
       [Lang.DE]: "Sie sind ein wahrer Überlebenskünstler der Hölle.",
       [Lang.ES]: "Eres un verdadero superviviente del infierno"
     },
@@ -1279,7 +1279,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 68,
     name: {
       [Lang.EN]: "Chainsaws",
-      [Lang.FR]: "Tronçonneuses",
+      [Lang.FR]: "Tronçon­neuses",
       [Lang.DE]: "Kettensägen",
       [Lang.ES]: "Sierras eléctricas"
     },
@@ -1323,7 +1323,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "Number of towns which figured in last season's rankings.",
-      [Lang.FR]: "Nombre de villes présentes dans le classement top 15 d'une saison précédente.",
+      [Lang.FR]: "Nombre de villes présentes dans le classement top 15 d’une saison précédente.",
       [Lang.DE]: "Anzahl der Städte, in denen Du mitgespielt hast, die es in einer vergangenen Saison ins Ranking geschafft haben.",
       [Lang.ES]: "Cantidad de veces en que has participado en pueblos presentes en una clasificación anterior."
     },
@@ -1336,13 +1336,13 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 71,
     name: {
       [Lang.EN]: "Legendary Towns!",
-      [Lang.FR]: "Ville légendaire !",
+      [Lang.FR]: "Ville légendaire !",
       [Lang.DE]: "Legendäre Stadt",
       [Lang.ES]: "Habitante legendario"
     },
     description: {
       [Lang.EN]: "Number of towns which made the number one spot from previous seasons.",
-      [Lang.FR]: "Nombre de villes arrivées en première place du classement d'une saison précédente.",
+      [Lang.FR]: "Nombre de villes arrivées en première place du classement d’une saison précédente.",
       [Lang.DE]: "Anzahl der Städte, in denen Du mitgespielt hast, die in einer vergangenen Saison als Erste abgeschnitten haben.",
       [Lang.ES]: "Cantidad de pueblos colocados en el primer lugar en una clasificación anterior."
     },
@@ -1361,7 +1361,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "Number of towns represented in the top 35 rankings of a past season.",
-      [Lang.FR]: "Nombre de villes présentes dans le classement top 35 d'une saison précédente.",
+      [Lang.FR]: "Nombre de villes présentes dans le classement top 35 d’une saison précédente.",
       [Lang.DE]: "Anzahl der Städte, die in der Top-35-Rangliste einer vergangenen Saison vertreten waren.",
       [Lang.ES]: "Cantidad de pueblos representadas en las primeras 35 clasificaciones de la temporada pasada"
     },
@@ -1380,7 +1380,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "Total number of the living-dead you have sent back underground by whatever means.",
-      [Lang.FR]: "Total de créatures mort-vivantes que vous avez renvoyées sous terre par n'importe quel moyen.",
+      [Lang.FR]: "Nombre de créatures mort-vivantes que vous avez renvoyées sous terre par n’importe quel moyen.",
       [Lang.DE]: "Gibt die Gesamtanzahl, der von dir umgebrachten Zombies an. Jede Tötungsmethode wird gezählt.",
       [Lang.ES]: "Total de muertos vivientes que volviste a enviar bajo tierra de cualquier manera."
     },
@@ -1412,13 +1412,13 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 75,
     name: {
       [Lang.EN]: "Sand balls!",
-      [Lang.FR]: "Boules de sable !",
+      [Lang.FR]: "Boules de sable !",
       [Lang.DE]: "Sandbälle! Yeah!",
       [Lang.ES]: "Bolas de arena"
     },
     description: {
       [Lang.EN]: "Number of sandballs successfully thrown at another citizen's chevy chase.",
-      [Lang.FR]: "Nombre de boules de sable envoyées au visage d'autres joueurs.",
+      [Lang.FR]: "Nombre de boules de sable envoyées au visage d’autres joueurs.",
       [Lang.DE]: "Anzahl der Sandbälle, die du deinen Mitspielern ins Gesicht geworfen hast. Kicher, kicher...",
       [Lang.ES]: "Cantidad de bolas de arena lanzadas a la cara de otros jugadores."
     },
@@ -1437,7 +1437,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "Rejoice you didn't have to walk.",
-      [Lang.FR]: "Réjouissez vous, vous n'aurez pas eu à marcher.",
+      [Lang.FR]: "Réjouissez-vous, vous n’aurez pas eu à marcher.",
       [Lang.DE]: "Freuen Sie sich, Sie hätten nicht laufen müssen.",
       [Lang.ES]: "Alégrate de que no tuviste que caminar"
     },
@@ -1475,7 +1475,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "Days spent trafficking the dead souls.",
-      [Lang.FR]: "Jours passés à trafiquer l'âme des morts.",
+      [Lang.FR]: "Jours passés à trafiquer l’âme des morts.",
       [Lang.DE]: "Tagelang wurde an den Seelen der Toten herumgepfuscht.",
       [Lang.ES]: "Días pasados jugando con almas de muertos."
     },
@@ -1488,13 +1488,13 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 79,
     name: {
       [Lang.EN]: "Armageddon Witness",
-      [Lang.FR]: "Témoin de l'Armageddon",
+      [Lang.FR]: "Témoin de l’Armageddon",
       [Lang.DE]: "Zeuge von Harmagedon",
       [Lang.ES]: "Testigo del Armagedón"
     },
     description: {
       [Lang.EN]: "An extremely rare distinction reserved for souls who have experienced the great Armageddon of Die2Nite!",
-      [Lang.FR]: "Marque rarissime réservée aux âmes qui ont vécu le grand Armageddon de l'univers de Hordes !",
+      [Lang.FR]: "Marque rarissime réservée aux âmes qui ont vécu le grand Armageddon de l’univers de Hordes !",
       [Lang.DE]: "Eine äußerst seltene Auszeichnung, die den Seelen vorbehalten ist, die das große Harmagedon des Universums von Die Verdammten erlebt haben!",
       [Lang.ES]: "¡Una Distinción extremadamente rara reservado para las almas que presenciaron El Gran Armagedón!"
     },
@@ -1513,7 +1513,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "Extremely rare distinction reserved for souls who have experienced the Great Contamination of Die2Nite!",
-      [Lang.FR]: "Marque rarissime réservée aux âmes qui ont vécu la Grande Contamination Hordienne !",
+      [Lang.FR]: "Marque rarissime réservée aux âmes qui ont vécu la Grande Contamination Hordienne !",
       [Lang.DE]: "Äußerst seltene Marke, die für Seelen reserviert ist, die die Große Kontamination von Die Verdammten erlebt haben!",
       [Lang.ES]: "¡Distinción extremadamente rara reservada para las almas que presenciaron La Gran Contaminación!"
     },
@@ -1526,13 +1526,13 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 81,
     name: {
       [Lang.EN]: "Soul Value",
-      [Lang.FR]: "Valeur de l'âme",
+      [Lang.FR]: "Valeur de l’âme",
       [Lang.DE]: "Seelenpunkte",
       [Lang.ES]: "Puntos de Alma"
     },
     description: {
       [Lang.EN]: "The number of soul points you have accumulated in the course of your many lives.",
-      [Lang.FR]: "Nombre de points d'âme que vous avez obtenu au cours de vos incarnations.",
+      [Lang.FR]: "Nombre de points d’âme que vous avez obtenus au cours de vos incarnations.",
       [Lang.DE]: "Anzahl der Seelenpunkte, die du durch deine Inkarnationen erhalten hast.",
       [Lang.ES]: "Cantidad de Puntos de Alma que has ganado en tus reencarnaciones."
     },
@@ -1893,7 +1893,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     description: {
       [Lang.EN]: "Honorary reward awarded to the winner of the Cure his Pictophilia.",
-      [Lang.FR]: "Récompense honorifique décernée au gagnant de Guérir sa Pictophilie !",
+      [Lang.FR]: "Récompense honorifique décernée au gagnant de Guérir sa Pictophilie !",
       [Lang.DE]: "Ehrenauszeichnung für den Gewinner der Heilung für die Auszeichnungssucht.",
       [Lang.ES]: "¡Premio honorario dado al ganador de \"Curando tu Pictofilia\"!"
     },
@@ -1906,13 +1906,13 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 101,
     name: {
       [Lang.EN]: "Soul Collector",
-      [Lang.FR]: "Collecteur d'âmes",
+      [Lang.FR]: "Collecteur d’âmes",
       [Lang.DE]: "Kernsammler",
       [Lang.ES]: "Recolector de Almas"
     },
     description: {
       [Lang.EN]: "The number of dead citizens' souls collected in the World Beyond",
-      [Lang.FR]: "Nombres d'âmes de citoyens décédés collectées dans l'outre-monde",
+      [Lang.FR]: "Nombres d’âmes de citoyens décédés collectées dans l’Outre-Monde",
       [Lang.DE]: "Anzahl der im Ausland gesammelten Seelen verstorbener Bürger",
       [Lang.ES]: "Cantidad de almas recolectadas de habitantes fallecidos en el Ultramundo"
     },
@@ -1925,13 +1925,13 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     numericalId: 102,
     name: {
       [Lang.EN]: "Mystical transformation",
-      [Lang.FR]: "Transformation mystique",
+      [Lang.FR]: "Trans­formation mystique",
       [Lang.DE]: "Mystische Transformation",
       [Lang.ES]: "Transformación Mística"
     },
     description: {
       [Lang.EN]: "Number of souls trafficked by you at the Workshop.",
-      [Lang.FR]: "Nombre d'âmes trafiquées par vos soins à l'Atelier.",
+      [Lang.FR]: "Nombre d’âmes trafiquées par vos soins à l’Atelier.",
       [Lang.DE]: "Anzahl der Seelen, die du in der Werkstatt umgewandelt hast",
       [Lang.ES]: "Cantidad de almas que has transformado en el Taller"
     },
