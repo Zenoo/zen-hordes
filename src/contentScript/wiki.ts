@@ -1129,7 +1129,13 @@ export const insertWiki = () => {
             const numericalId = +(item.getAttribute("data-numerical-id") ?? 0);
 
             const target = event.target as HTMLElement;
-            target.appendChild(item);
+
+            // Don't do anything if dropped on the same list
+            if (target.closest("ul") === item.closest("ul")) {
+              return;
+            }
+
+            target.closest("ul")?.appendChild(item);
 
             // Update persistent class
             if (i === 4) {
