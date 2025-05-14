@@ -22,7 +22,6 @@ const urls = [
 export const decodeRequestBody = (
   details: chrome.webRequest.WebRequestBodyDetails
 ): unknown => {
-  console.log("decodeRequestBody", details);
   if (details.requestBody?.raw?.[0]?.bytes) {
     const raw = details.requestBody.raw[0].bytes;
     const decodedString = new TextDecoder().decode(raw);

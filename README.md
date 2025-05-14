@@ -82,9 +82,19 @@ Zen Hordes includes a button in the bottom right corner of the page that allows 
 
 Zen Hordes provides a camping calculator that helps you determine the chances of surviving a night in the desert. This feature is particularly useful for players who want to plan their camping strategies and maximize their chances of survival. The calculator takes into account various factors such as the number of players, the time of day, and muche more.
 
+![Camping calculator](.github/media/camping-calculator.png)
+
 ### Shopping list
 
 Zen Hordes includes a shopping list feature that allows you to keep track of the items you need to collect. You can customize the list in the wiki. To display the items from the list, you need to hold click on the shopping cart icon on the bottom right corner of the page. This feature is useful for players who want to stay organized and ensure they don't forget any important items while playing the game.
+
+![Shopping list](.github/media/shopping-list.png)
+
+### Player info
+
+Zen Hordes provides a player info feature that allows you to add a custom tag and custom notes to every player. This feature is useful for players who want to keep track of their interactions with other players and remember important details about them. You can add tags and notes to each player by clicking on their name in the game. The tags and notes are stored locally in your browser and are not shared with other players.
+
+![Player info](.github/media/player-info.png)
 
 ### Translations
 Zen Hordes supports multiple languages, including English, French, German, and Spanish. The extension automatically detects your preferred language and provides translations for various elements on the MyHordes game website. This ensures that you can navigate and use the site comfortably in your preferred language.

@@ -22,6 +22,7 @@ import {
   insertMapPreviewTooltip
 } from "./mapPreview";
 import { listenToBackgroundMessages } from "./messageListener";
+import { displayPlayerTag, insertPlayerInfo } from "./playerInfo";
 import { displayShamanSoulsButton } from "./shamanSoulsButton";
 import { insertShoppingListToggle } from "./shoppingList";
 import { initStore } from "./store";
@@ -66,6 +67,8 @@ onMount((node) => {
   autoOpenBagWhenMovingItems(node);
   updatePreviousCampings(node);
   displayMapPreview(node);
+  insertPlayerInfo(node);
+  displayPlayerTag(node);
 });
 
 // Actions that need to be performed on hover
