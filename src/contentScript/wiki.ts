@@ -102,6 +102,7 @@ const T: Translations = {
       "(Hold while hovering over an item) Hide item actions (useful when the tooltip gets too big). Move the mouse to update the tooltip location.",
     "shortcut.highlightShoppingList":
       "(Hold on the shopping cart in the bottom right of the page) Highlight the items from the shopping list",
+    temporaryBuilding: "Temporary building",
   },
   fr: {
     wiki: "Wiki",
@@ -162,6 +163,7 @@ const T: Translations = {
       "(Maintenir en survolant un objet) Masquer les actions de l'objet (utile lorsque l'info-bulle devient trop grande). Déplacez la souris pour mettre à jour l'emplacement de l'info-bulle.",
     "shortcut.highlightShoppingList":
       "(Maintenir sur le chariot en bas à droite de la page) Mettre en surbrillance les objets de la liste de courses",
+    temporaryBuilding: "Bâtiment temporaire",
   },
   de: {
     wiki: "Wiki",
@@ -223,6 +225,7 @@ const T: Translations = {
       "(Halten Sie die Maus über einen Gegenstand) Blenden Sie die Aktionen des Gegenstands aus (nützlich, wenn das Tooltip zu groß wird). Bewege die Maus, um den Tooltip-Standort zu aktualisieren.",
     "shortcut.highlightShoppingList":
       "(Halten Sie den Einkaufswagen in der unteren rechten Ecke der Seite) Mettre en surbrillance les éléments de la liste de courses",
+    temporaryBuilding: "Temporäres Gebäude",
   },
   es: {
     wiki: "Wiki",
@@ -283,6 +286,7 @@ const T: Translations = {
       "(Mantener mientras se pasa el ratón sobre un objeto) Ocultar acciones del objeto (útil cuando la información se vuelve demasiado grande). Mueva el mouse para actualizar la ubicación de la información.",
     "shortcut.highlightShoppingList":
       "(Halten Sie den Einkaufswagen in der unteren rechten Ecke der Seite) Mettre en surbrillance les éléments de la liste de courses",
+    temporaryBuilding: "Edificio temporal",
   },
 };
 
@@ -544,6 +548,145 @@ export const updateShoppingList = () => {
 
     priorities[priority - 1]?.appendChild(li);
   });
+};
+
+const buildBuildingRow = (building: Building, indent: number) => {
+  const elements: HTMLElement[] = [];
+
+  // Wrapper
+  const wrapper = document.createElement("div");
+  wrapper.classList.add("building", "zen-wiki-item", "zen-wiki-building");
+  wrapper.setAttribute("data-type", "building");
+  wrapper.setAttribute("data-id", building.id);
+  elements.push(wrapper);
+
+  if (indent === 0) {
+    wrapper.classList.add("root");
+  } else {
+    wrapper.classList.add(`lv-${indent}`);
+  }
+
+  // Row color tag
+  const indicator = document.createElement("div");
+  indicator.classList.add("type_indicator");
+  wrapper.appendChild(indicator);
+
+  // Row
+  const row = document.createElement("div");
+  row.classList.add("building_row");
+  wrapper.appendChild(row);
+
+  // Building info
+  const info = document.createElement("div");
+  info.classList.add("building_info", "cell");
+  row.appendChild(info);
+
+  tooltip({
+    target: info,
+    content: building.description[store["hordes-lang"]],
+  });
+
+  // Indents
+  if (indent >= 1) {
+    const indent = document.createElement("img");
+    indent.src = `${ASSETS}/building/small_parent2.gif`;
+    info.appendChild(indent);
+  }
+
+  if (indent >= 2) {
+    const indent = document.createElement("img");
+    indent.src = `${ASSETS}/building/small_parent.gif`;
+    info.appendChild(indent);
+  }
+
+  // Icon
+  const icon = document.createElement("img");
+  icon.src = `${ASSETS}/building/${building.icon}.gif`;
+  icon.alt = building.name[store["hordes-lang"]];
+  icon.classList.add("building_icon");
+  info.appendChild(icon);
+
+  // Name
+  const nameWrapper = document.createElement("div");
+  nameWrapper.classList.add("flex", "gap", "zen-wiki-building-name");
+  info.appendChild(nameWrapper);
+
+  const name = document.createElement("span");
+  name.classList.add("building_name");
+  name.textContent = building.name[store["hordes-lang"]];
+  nameWrapper.appendChild(name);
+
+  // Temporary building
+  if (building.temporary) {
+    const temporary = document.createElement("img");
+    temporary.src = `${ASSETS}/icons/small_warning.gif`;
+    temporary.alt = t(T, "temporaryBuilding");
+    nameWrapper.appendChild(temporary);
+  }
+
+  // Defense
+  if (building.defense) {
+    const defense = document.createElement("div");
+    defense.classList.add("defense");
+    defense.textContent = building.defense.toString();
+    info.appendChild(defense);
+  }
+
+  // Resources
+  const resources = document.createElement("div");
+  resources.classList.add("building_resources", "padded", "cell");
+  row.appendChild(resources);
+
+  // AP required
+  const apWrapper = document.createElement("div");
+  apWrapper.classList.add("build-req");
+  resources.appendChild(apWrapper);
+
+  const ap = document.createElement("div");
+  ap.classList.add("ap");
+  ap.textContent = building.apNeeded.toString();
+  apWrapper.appendChild(ap);
+
+  // Items required
+  const itemsWrapper = document.createElement("div");
+  itemsWrapper.classList.add("build-req-items");
+  resources.appendChild(itemsWrapper);
+
+  building.resources.forEach((item) => {
+    const itemWrapper = document.createElement("div");
+    itemWrapper.classList.add("build-req");
+    itemsWrapper.appendChild(itemWrapper);
+
+    const icon = document.createElement("img");
+    icon.src = `${ASSETS}/icons/item/${items[item.id].icon}.gif`;
+    icon.alt = items[item.id].name[store["hordes-lang"]];
+    icon.title = items[item.id].name[store["hordes-lang"]];
+    icon.setAttribute("data-type", "item");
+    icon.setAttribute("data-id", item.id);
+    itemWrapper.appendChild(icon);
+
+    const quantity = document.createElement("span");
+    quantity.classList.add("resource", "needed");
+    quantity.textContent = item.amount.toString();
+    itemWrapper.appendChild(quantity);
+  });
+
+  // Actions
+  const actions = document.createElement("div");
+  actions.classList.add("building_action", "cell");
+  row.appendChild(actions);
+
+  // Child buildings
+  const childBuildings = Object.values(buildings).filter(
+    (b) => b.parent === building.id
+  ).sort((a, b) => a.order - b.order);
+
+  childBuildings.forEach((child) => {
+    const childElements = buildBuildingRow(child, indent + 1);
+    elements.push(...childElements);
+  });
+
+  return elements;
 };
 
 export const insertWiki = () => {
@@ -918,80 +1061,40 @@ export const insertWiki = () => {
         break;
       }
       case "buildings": {
-        // Building list
-        const buildingList = document.createElement("ul");
-        buildingList.classList.add("zen-wiki-item-list");
-        tab.appendChild(buildingList);
+        // Find base buildings
+        const baseBuildings = Object.values(buildings)
+          .filter((building) => typeof building.parent === "undefined")
+          .sort((a, b) => a.order - b.order);
 
-        Object.values(buildings)
-          .sort((a, b) =>
-            a.name[store["hordes-lang"]].localeCompare(
-              b.name[store["hordes-lang"]]
-            )
-          )
-          .forEach((building) => {
-            const li = document.createElement("li");
-            li.classList.add("zen-wiki-item", "visible", "zen-better-tooltip");
-            li.setAttribute("data-type", "building");
-            li.setAttribute("data-id", building.id);
+        baseBuildings.forEach((building) => {
+          const wrapper = document.createElement("div");
+          wrapper.classList.add("buildings", `type_${building.icon}`);
 
-            const title = document.createElement("h4");
-            li.appendChild(title);
+          // Header
+          const header = document.createElement("div");
+          header.classList.add(
+            "row-flex",
+            "wrap",
+            "stretch",
+            "buildings_header"
+          );
+          wrapper.appendChild(header);
 
-            const icon = document.createElement("img");
-            icon.src = `${ASSETS}/building/${building.icon}.gif`;
-            icon.alt = building.name[store["hordes-lang"]];
-            title.appendChild(icon);
+          const indicator = document.createElement("div");
+          indicator.classList.add("type_indicator");
+          header.appendChild(indicator);
 
-            const name = document.createElement("span");
-            name.textContent = building.name[store["hordes-lang"]];
-            title.appendChild(name);
+          const headerImage = document.createElement("div");
+          headerImage.classList.add("stretch", "buildings_header_image");
+          header.appendChild(headerImage);
 
-            const description = document.createElement("p");
-            setTextContent(
-              description,
-              building.description[store["hordes-lang"]]
-            );
-            li.appendChild(description);
-
-            // TODO: Add building stats
-
-            // Resources
-            const table = document.createElement("table");
-            const tbody = document.createElement("tbody");
-            table.append(tbody);
-            const line = document.createElement("tr");
-            tbody.append(line);
-            const cell = document.createElement("td");
-            cell.classList.add("output");
-            line.append(cell);
-
-            building.resources
-              .sort((a, b) => b.amount - a.amount)
-              .forEach((resource) => {
-                const wrapper = document.createElement("div");
-                cell.append(wrapper);
-
-                // Icon
-                const resourceImg = document.createElement("img");
-                resourceImg.src = `${ASSETS}/icons/item/${
-                  items[resource.id].icon
-                }.gif`;
-                resourceImg.title =
-                  items[resource.id].name[store["hordes-lang"]];
-                resourceImg.setAttribute("data-type", "item");
-                resourceImg.setAttribute("data-id", resource.id);
-
-                // Odds
-                wrapper.setAttribute("data-text", resource.amount.toString());
-
-                wrapper.append(resourceImg);
-                cell.append(wrapper);
-              });
-
-            li.append(table);
-            buildingList.appendChild(li);
+          const elements = buildBuildingRow(building, 0);
+          elements.forEach((element) => {
+            wrapper.appendChild(element);
           });
+
+          tab.appendChild(wrapper);
+        });
         break;
       }
       case "ruins": {
