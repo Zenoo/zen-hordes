@@ -2188,6 +2188,7 @@ type Building = {
   rarity: number;
   temporary: boolean;
   parent?: string;
+  order: number;
   resources: {
     id: string;
     amount: number;
@@ -2256,6 +2257,7 @@ const generateBuildings = async (items: Record<number, Item>) => {
       parent: Object.entries(data).find(
         ([, b]) => b.id === buildingData.parent
       )?.[0],
+      order: buildingData.order,
       resources: buildingData.resources.map((r) => ({
         id:
           Object.values(items).find((i) => i.numericalId === r.rsc?.id)?.id ??
@@ -2285,6 +2287,7 @@ export type Building = {
   rarity: number;
   temporary: boolean;
   parent?: BuildingId;
+  order: number;
   resources: {
     id: ItemId;
     amount: number;
@@ -2331,6 +2334,7 @@ export type Building = {
           ? `\n    parent: BuildingId.${sanitizeBuildingId(building.parent)},`
           : ""
       }
+    order: ${building.order},
     resources: [
       ${building.resources
         .map(
@@ -2527,7 +2531,7 @@ const generateTypes = () => {
     // Fetch buildings
     const buildingsResponse = await api.json.buildingsList({
       fields:
-        "id,img,name,desc,pa,maxLife,breakable,def,hasUpgrade,rarity,temporary,parent,resources.rsc.fields(id)",
+        "id,img,name,desc,pa,maxLife,breakable,def,hasUpgrade,rarity,temporary,parent,order,resources.rsc.fields(id)",
     });
 
     const buildings = buildingsResponse.data;

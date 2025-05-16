@@ -699,6 +699,7 @@ export type Building = {
   rarity: number;
   temporary: boolean;
   parent?: BuildingId;
+  order: number;
   resources: {
     id: ItemId;
     amount: number;

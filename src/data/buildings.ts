@@ -25,6 +25,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_GATHER,
+    order: 0,
     resources: [
       {
         id: ItemId.WATER,
@@ -56,6 +57,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE,
+    order: 0,
     resources: [
       
     ]
@@ -84,6 +86,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE_03,
+    order: 0,
     resources: [
       {
         id: ItemId.METAL,
@@ -119,6 +122,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_GATHER,
+    order: 1,
     resources: [
       {
         id: ItemId.METAL,
@@ -154,6 +158,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: true,
     parent: BuildingId.SMALL_BARBED,
+    order: 0,
     resources: [
       {
         id: ItemId.BONE_MEAT,
@@ -185,6 +190,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE,
+    order: 6,
     resources: [
       {
         id: ItemId.METAL,
@@ -220,6 +226,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE,
+    order: 3,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -259,6 +266,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE_01,
+    order: 1,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -306,6 +314,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE_01,
+    order: 4,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -345,6 +354,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.ITEM_PLATE_04,
+    order: 0,
     resources: [
       {
         id: ItemId.METAL,
@@ -384,6 +394,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE_01,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -419,6 +430,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.ITEM_PLATE_09,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -458,6 +470,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE_01,
+    order: 2,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -497,6 +510,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE_01,
+    order: 3,
     resources: [
       {
         id: ItemId.WOOD_BEAM,
@@ -532,6 +546,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE_03,
+    order: 1,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -579,6 +594,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_GATHER,
+    order: 2,
     resources: [
       {
         id: ItemId.METAL_BEAM,
@@ -614,6 +630,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE,
+    order: 5,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -649,6 +666,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_FENCE,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -692,6 +710,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE,
+    order: 8,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -723,6 +742,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE,
+    order: 9,
     resources: [
       {
         id: ItemId.METAL,
@@ -754,6 +774,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE,
+    order: 10,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -789,6 +810,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE,
+    order: 7,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -824,6 +846,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE,
+    order: 11,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -859,6 +882,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE,
+    order: 4,
     resources: [
       {
         id: ItemId.METAL,
@@ -906,6 +930,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_WATERSPRAY,
+    order: 2,
     resources: [
       {
         id: ItemId.METAL_BEAM,
@@ -957,6 +982,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: true,
     parent: BuildingId.SMALL_WATERSPRAY,
+    order: 1,
     resources: [
       {
         id: ItemId.WATER,
@@ -992,6 +1018,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_WATER,
+    order: 5,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -1042,6 +1069,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -1077,6 +1105,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: true,
     parent: BuildingId.ITEM_VEGETABLE_TASTY,
+    order: 10,
     resources: [
       {
         id: ItemId.WATER,
@@ -1120,6 +1149,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.ITEM_JERRYCAN,
+    order: 0,
     resources: [
       {
         id: ItemId.METAL,
@@ -1167,6 +1197,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_WATER,
+    order: 4,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -1214,6 +1245,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.ITEM_VEGETABLE_TASTY,
+    order: 0,
     resources: [
       {
         id: ItemId.WATER,
@@ -1261,6 +1293,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.ITEM_VEGETABLE_TASTY,
+    order: 1,
     resources: [
       {
         id: ItemId.WATER,
@@ -1304,6 +1337,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_WATER,
+    order: 9,
     resources: [
       {
         id: ItemId.WATER,
@@ -1343,6 +1377,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.SMALL_WATER,
+    order: 2,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -1386,6 +1421,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_WATER,
+    order: 1,
     resources: [
       {
         id: ItemId.WOOD_BEAM,
@@ -1421,6 +1457,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_WATERSPRAY,
+    order: 0,
     resources: [
       {
         id: ItemId.WATER,
@@ -1468,6 +1505,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_DOOR_CLOSED,
+    order: 4,
     resources: [
       {
         id: ItemId.PLATE,
@@ -1511,6 +1549,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_WATERSPRAY,
+    order: 3,
     resources: [
       {
         id: ItemId.WATER,
@@ -1558,6 +1597,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.ITEM_FIREWORK_TUBE,
+    order: 3,
     resources: [
       {
         id: ItemId.WATER,
@@ -1605,6 +1645,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_WATER,
+    order: 8,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -1652,6 +1693,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_WATER,
+    order: 6,
     resources: [
       {
         id: ItemId.WATER,
@@ -1691,6 +1733,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: true,
     parent: BuildingId.SMALL_WATER,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -1726,6 +1769,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.SMALL_WATERSPRAY,
+    order: 4,
     resources: [
       {
         id: ItemId.WATER,
@@ -1769,6 +1813,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.ITEM_FIREWORK_TUBE,
+    order: 2,
     resources: [
       {
         id: ItemId.WATER,
@@ -1808,6 +1853,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.ITEM_FIREWORK_TUBE,
+    order: 1,
     resources: [
       {
         id: ItemId.WATER,
@@ -1839,6 +1885,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.SMALL_WATER_01,
+    order: 1,
     resources: [
       {
         id: ItemId.EXPLO,
@@ -1890,6 +1937,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 4,
     temporary: false,
     parent: BuildingId.SMALL_WATER,
+    order: 3,
     resources: [
       {
         id: ItemId.ELECTRO,
@@ -1937,6 +1985,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.ITEM_VEGETABLE_TASTY,
+    order: 2,
     resources: [
       {
         id: ItemId.WATER,
@@ -1979,6 +2028,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: true,
     rarity: 0,
     temporary: false,
+    order: 1,
     resources: [
       {
         id: ItemId.METAL,
@@ -2014,6 +2064,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.ITEM_MEAT,
+    order: 1,
     resources: [
       {
         id: ItemId.WOOD_BEAM,
@@ -2049,6 +2100,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_REFINE,
+    order: 2,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -2084,6 +2136,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_BUILDING,
+    order: 7,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -2123,6 +2176,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_DIG,
+    order: 0,
     resources: [
       {
         id: ItemId.TUBE,
@@ -2170,6 +2224,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.SMALL_DIG,
+    order: 1,
     resources: [
       {
         id: ItemId.WOOD_BEAM,
@@ -2217,6 +2272,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_DIG,
+    order: 2,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -2264,6 +2320,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: true,
     parent: BuildingId.SMALL_DIG,
+    order: 3,
     resources: [
       {
         id: ItemId.PLATE,
@@ -2299,6 +2356,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.ITEM_TAGGER,
+    order: 6,
     resources: [
       {
         id: ItemId.CONCRETE_WALL,
@@ -2342,6 +2400,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_DOOR_CLOSED,
+    order: 3,
     resources: [
       {
         id: ItemId.WOOD_BEAM,
@@ -2377,6 +2436,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_REFINE,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD_BEAM,
@@ -2416,6 +2476,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE_03,
+    order: 2,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -2467,6 +2528,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_SPA4SOULS_01,
+    order: 4,
     resources: [
       {
         id: ItemId.DRUG,
@@ -2510,6 +2572,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_REFINE,
+    order: 1,
     resources: [
       {
         id: ItemId.TABLE,
@@ -2545,6 +2608,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_REFINE,
+    order: 7,
     resources: [
       {
         id: ItemId.WOOD_BEAM,
@@ -2580,6 +2644,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: true,
     parent: BuildingId.SMALL_REFINE,
+    order: 5,
     resources: [
       {
         id: ItemId.WATER,
@@ -2615,6 +2680,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_CEMETERY,
+    order: 0,
     resources: [
       {
         id: ItemId.COURROIE,
@@ -2666,6 +2732,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.SMALL_SPA4SOULS_01,
+    order: 2,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -2701,6 +2768,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.SMALL_REFINE,
+    order: 3,
     resources: [
       {
         id: ItemId.PET_CHICK,
@@ -2748,6 +2816,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.ITEM_MEAT,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD_BEAM,
@@ -2791,6 +2860,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.ITEM_RP_BOOK2,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD_BEAM,
@@ -2834,6 +2904,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_REFINE,
+    order: 4,
     resources: [
       {
         id: ItemId.PHARMA,
@@ -2885,6 +2956,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_CITY_UP,
+    order: 0,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -2924,6 +2996,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_REFINE_01,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -2991,6 +3064,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_SPA4SOULS_01,
+    order: 3,
     resources: [
       {
         id: ItemId.PHARMA,
@@ -3034,6 +3108,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_REFINE,
+    order: 6,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -3088,6 +3163,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: true,
     rarity: 0,
     temporary: false,
+    order: 2,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -3123,6 +3199,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.ITEM_SCOPE,
+    order: 0,
     resources: [
       {
         id: ItemId.METAL,
@@ -3170,6 +3247,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.ITEM_SCOPE,
+    order: 1,
     resources: [
       {
         id: ItemId.PILE,
@@ -3217,6 +3295,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.ITEM_TAGGER,
+    order: 1,
     resources: [
       {
         id: ItemId.RUSTINE,
@@ -3252,6 +3331,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.ITEM_TAGGER,
+    order: 5,
     resources: [
       {
         id: ItemId.ELECTRO,
@@ -3303,6 +3383,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: true,
     parent: BuildingId.SMALL_DIG_01,
+    order: 1,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -3334,6 +3415,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: true,
     parent: BuildingId.STATUS_TERROR,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -3365,6 +3447,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: true,
     parent: BuildingId.STATUS_TERROR,
+    order: 1,
     resources: [
       {
         id: ItemId.WOOD_BEAM,
@@ -3412,6 +3495,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: true,
     parent: BuildingId.SMALL_DIG_01,
+    order: 0,
     resources: [
       {
         id: ItemId.METAL,
@@ -3443,6 +3527,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: true,
     parent: BuildingId.STATUS_TERROR,
+    order: 2,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -3478,6 +3563,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: true,
     parent: BuildingId.SMALL_DIG_01,
+    order: 2,
     resources: [
       {
         id: ItemId.METAL,
@@ -3513,6 +3599,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: true,
     parent: BuildingId.STATUS_TERROR,
+    order: 3,
     resources: [
       {
         id: ItemId.EXPLO,
@@ -3544,6 +3631,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: true,
     parent: BuildingId.STATUS_TERROR,
+    order: 4,
     resources: [
       {
         id: ItemId.WATER,
@@ -3587,6 +3675,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: true,
     parent: BuildingId.STATUS_TERROR,
+    order: 5,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -3630,6 +3719,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: true,
     parent: BuildingId.SMALL_SPA4SOULS_01,
+    order: 10,
     resources: [
       {
         id: ItemId.WATER,
@@ -3673,6 +3763,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_SPA4SOULS_01,
+    order: 7,
     resources: [
       {
         id: ItemId.WATER,
@@ -3720,6 +3811,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_SPA4SOULS_01,
+    order: 9,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -3763,6 +3855,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_SPA4SOULS_01,
+    order: 8,
     resources: [
       {
         id: ItemId.PLATE,
@@ -3806,6 +3899,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_WALLIMPROVE,
+    order: 13,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -3841,6 +3935,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.ITEM_COURROIE,
+    order: 0,
     resources: [
       {
         id: ItemId.TUBE,
@@ -3892,6 +3987,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.ITEM_TAGGER,
+    order: 4,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -3935,6 +4031,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_ROUND_PATH,
+    order: 2,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -3982,6 +4079,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_ARMOR,
+    order: 0,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -4037,6 +4135,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_WATER,
+    order: 7,
     resources: [
       {
         id: ItemId.WATER,
@@ -4092,6 +4191,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.ITEM_COURROIE,
+    order: 1,
     resources: [
       {
         id: ItemId.METAL,
@@ -4139,6 +4239,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_ROUND_PATH,
+    order: 0,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -4182,6 +4283,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.ITEM_SCOPE,
+    order: 2,
     resources: [
       {
         id: ItemId.TUBE,
@@ -4236,6 +4338,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
+    order: 3,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -4275,6 +4378,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_EDEN,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -4318,6 +4422,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_BUILDING,
+    order: 1,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -4365,6 +4470,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.ITEM_FIREWORK_TUBE,
+    order: 0,
     resources: [
       {
         id: ItemId.ENGINE,
@@ -4416,6 +4522,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_BUILDING,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -4463,6 +4570,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.ITEM_PUMPKIN_RAW,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -4502,6 +4610,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_REFINE,
+    order: 8,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -4545,6 +4654,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.ITEM_RP_BOOK2,
+    order: 1,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -4592,6 +4702,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.SMALL_BUILDING,
+    order: 6,
     resources: [
       {
         id: ItemId.CONCRETE_WALL,
@@ -4635,6 +4746,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 6,
     temporary: false,
     parent: BuildingId.SMALL_TRASH,
+    order: 4,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -4674,6 +4786,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 6,
     temporary: false,
     parent: BuildingId.SMALL_TRASH,
+    order: 5,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -4709,6 +4822,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 6,
     temporary: false,
     parent: BuildingId.SMALL_TRASH,
+    order: 6,
     resources: [
       {
         id: ItemId.WOOD_BEAM,
@@ -4740,6 +4854,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_TRASH,
+    order: 0,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -4787,6 +4902,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 6,
     temporary: false,
     parent: BuildingId.SMALL_TRASH,
+    order: 2,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -4822,6 +4938,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 6,
     temporary: false,
     parent: BuildingId.SMALL_TRASH,
+    order: 3,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -4853,6 +4970,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 6,
     temporary: false,
     parent: BuildingId.SMALL_TRASH,
+    order: 1,
     resources: [
       {
         id: ItemId.METAL_BEAM,
@@ -4888,6 +5006,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 4,
     temporary: false,
     parent: BuildingId.SMALL_TRASH,
+    order: 1,
     resources: [
       {
         id: ItemId.WATER,
@@ -4935,6 +5054,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_BUILDING,
+    order: 4,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -4986,6 +5106,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.ITEM_TAGGER,
+    order: 2,
     resources: [
       {
         id: ItemId.ELECTRO,
@@ -5033,6 +5154,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.ITEM_RP_BOOK2,
+    order: 4,
     resources: [
       {
         id: ItemId.PET_PIG,
@@ -5072,6 +5194,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 4,
     temporary: false,
     parent: BuildingId.SMALL_BUILDING,
+    order: 15,
     resources: [
       {
         id: ItemId.WATER,
@@ -5111,6 +5234,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: true,
     parent: BuildingId.SMALL_BUILDING,
+    order: 11,
     resources: [
       {
         id: ItemId.LIGHTS,
@@ -5146,6 +5270,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 4,
     temporary: false,
     parent: BuildingId.ITEM_RP_BOOK2,
+    order: 3,
     resources: [
       {
         id: ItemId.WOOD_BEAM,
@@ -5189,6 +5314,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 4,
     temporary: false,
     parent: BuildingId.SMALL_BUILDING,
+    order: 16,
     resources: [
       {
         id: ItemId.PILE,
@@ -5236,6 +5362,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_BUILDING,
+    order: 3,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -5279,6 +5406,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_BUILDING,
+    order: 5,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -5318,6 +5446,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 4,
     temporary: false,
     parent: BuildingId.SMALL_BUILDING,
+    order: 13,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -5353,6 +5482,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 4,
     temporary: false,
     parent: BuildingId.SMALL_BUILDING,
+    order: 14,
     resources: [
       {
         id: ItemId.WATER,
@@ -5396,6 +5526,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_BUILDING,
+    order: 10,
     resources: [
       {
         id: ItemId.FIREWORK_POWDER,
@@ -5435,6 +5566,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 4,
     temporary: false,
     parent: BuildingId.SMALL_SPA4SOULS_01,
+    order: 5,
     resources: [
       {
         id: ItemId.HMEAT,
@@ -5470,6 +5602,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 4,
     temporary: false,
     parent: BuildingId.SMALL_BUILDING,
+    order: 8,
     resources: [
       {
         id: ItemId.ELECTRO,
@@ -5517,6 +5650,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: true,
     parent: BuildingId.SMALL_BUILDING,
+    order: 9,
     resources: [
       {
         id: ItemId.WATER,
@@ -5568,6 +5702,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 4,
     temporary: false,
     parent: BuildingId.SMALL_BUILDING,
+    order: 12,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -5619,6 +5754,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 4,
     temporary: false,
     parent: BuildingId.SMALL_WATER_01,
+    order: 0,
     resources: [
       {
         id: ItemId.TUBE,
@@ -5661,6 +5797,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
+    order: 4,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -5700,6 +5837,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_DOOR_CLOSED,
+    order: 1,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -5731,6 +5869,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_DOOR_CLOSED_01,
+    order: 0,
     resources: [
       {
         id: ItemId.DIODE,
@@ -5762,6 +5901,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_DOOR_CLOSED,
+    order: 0,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -5809,6 +5949,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.SMALL_DOOR_CLOSED,
+    order: 2,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -5847,6 +5988,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: true,
     rarity: 0,
     temporary: false,
+    order: 12,
     resources: [
       {
         id: ItemId.METAL,
@@ -5878,6 +6020,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.ITEM_TAGGER,
+    order: 3,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -5921,6 +6064,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.ITEM_SOUL_BLUE_STATIC,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -5956,6 +6100,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 5,
     temporary: false,
     parent: BuildingId.SMALL_REFINE,
+    order: 7,
     resources: [
       {
         id: ItemId.WOOD_BEAM,
@@ -5991,6 +6136,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 1,
     temporary: false,
     parent: BuildingId.ITEM_TAGGER,
+    order: 7,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -6046,6 +6192,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_GATHER,
+    order: 3,
     resources: [
       {
         id: ItemId.EXPLO,
@@ -6085,6 +6232,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.ITEM_FIREWORK_TUBE,
+    order: 4,
     resources: [
       {
         id: ItemId.RYEBAG,
@@ -6128,6 +6276,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.ITEM_BGRENADE_01,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD_BEAM,
@@ -6183,6 +6332,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: true,
     parent: BuildingId.ITEM_BGRENADE_01,
+    order: 1,
     resources: [
       {
         id: ItemId.METAL_BEAM,
@@ -6226,6 +6376,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.ITEM_VEGETABLE_TASTY,
+    order: 3,
     resources: [
       {
         id: ItemId.WATER,
@@ -6273,6 +6424,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.ITEM_RP_BOOK2,
+    order: 2,
     resources: [
       {
         id: ItemId.WOOD_BEAM,
@@ -6332,6 +6484,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.ITEM_TAGGER,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -6371,6 +6524,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_BUILDING,
+    order: 2,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -6418,6 +6572,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 2,
     temporary: false,
     parent: BuildingId.SMALL_CITY_UP,
+    order: 1,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -6468,6 +6623,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
+    order: 5,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -6507,6 +6663,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 0,
     temporary: false,
     parent: BuildingId.SMALL_SPA4SOULS_01,
+    order: 0,
     resources: [
       {
         id: ItemId.METAL,
@@ -6554,6 +6711,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 4,
     temporary: false,
     parent: BuildingId.SMALL_SPA4SOULS_01,
+    order: 1,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -6609,6 +6767,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 4,
     temporary: false,
     parent: BuildingId.SMALL_SPA4SOULS_01,
+    order: 6,
     resources: [
       {
         id: ItemId.WATER,
@@ -6664,6 +6823,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.ITEM_MEAT,
+    order: 2,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -6711,6 +6871,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_ROUND_PATH,
+    order: 1,
     resources: [
       {
         id: ItemId.WOOD_BEAM,
@@ -6778,6 +6939,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_ARMOR,
+    order: 1,
     resources: [
       {
         id: ItemId.MECA_PARTS,
@@ -6829,6 +6991,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_ARMOR,
+    order: 3,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -6880,6 +7043,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.SMALL_ARMOR,
+    order: 4,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -6931,6 +7095,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     rarity: 3,
     temporary: false,
     parent: BuildingId.ITEM_MEAT,
+    order: 3,
     resources: [
       {
         id: ItemId.WOOD2,

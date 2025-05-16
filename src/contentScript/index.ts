@@ -34,6 +34,8 @@ import {
 } from "./UIEnhancer";
 import { insertWiki, openItemInWiki } from "./wiki";
 
+// TODO: Update the wiki buildings tab to look like the town buildings
+
 // Initialize the store
 await initStore();
 // Listen for messages from the background script
