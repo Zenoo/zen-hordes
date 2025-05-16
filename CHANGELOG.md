@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.7.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.0...zen-hordes-v1.7.1) (2025-05-16)
+
+
+### Bug Fixes
+
+* Store buildings display order ([75f2175](https://github.com/Zenoo/zen-hordes/commit/75f2175bec2aa8d9dbdf9eab2886849751df93f7))
+* Wiki buildings display ([3e172c5](https://github.com/Zenoo/zen-hordes/commit/3e172c545378002bef9f9410aaf63642b8605c3a))
+
 ## [1.7.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.6.0...zen-hordes-v1.7.0) (2025-05-14)
 
 
