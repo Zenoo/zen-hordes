@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.7.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.1...zen-hordes-v1.7.2) (2025-05-19)
+
+
+### Bug Fixes
+
+* Button z-indexes ([a049289](https://github.com/Zenoo/zen-hordes/commit/a0492896deffc2cef9ebc7f203d8bfe994fb35a5))
+* Default shopping list ([25642ba](https://github.com/Zenoo/zen-hordes/commit/25642ba87f79143828309ebbe1153c5b4863f8aa))
+
 ## [1.7.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.0...zen-hordes-v1.7.1) (2025-05-16)
 
 
