@@ -261,10 +261,10 @@
       "es": "Suertudo"
     },
     "desc": {
-      "fr": "Nombre de gros coffres en métal que vous avez dégotés dans l'Outre-Monde.",
-      "en": "Number of large metal chests you have found in the World Beyond.",
+      "fr": "Nombre de gros coffres en métal que vous avez dégotés lors de vos fouilles.",
+      "en": "Number of large metal chests you have uncovered during your searches.",
       "de": "Anzahl der großen Metallkoffer, die du in der Außenwelt ausgegraben hast.",
-      "es": "Cantidad de grandes cofres de metal que has encontrado en el Ultramundo."
+      "es": "Cantidad de grandes cofres de metal que has encontrado durante tus búsquedas."
     },
     "community": false,
     "rare": true
@@ -672,13 +672,13 @@
       "fr": "Merveille : PMV géant",
       "en": "Wonder: Giant BRD",
       "de": "Wunderwerk: Riesiger KVF",
-      "es": "Maravilla: COSA gigante"
+      "es": "Maravilla: gran COSA"
     },
     "desc": {
       "fr": "Gloire au PMV géant !",
       "en": "BRDs for everyone! The people demand BRDs",
       "de": "Huldigt den Riesigen KVF!",
-      "es": "¡Gloria a la COSA gigante!"
+      "es": "¡Gloria a la gran COSA!"
     },
     "community": false,
     "rare": true
@@ -852,7 +852,7 @@
       "fr": "Morts dans votre lit",
       "en": "Dead in your bed",
       "de": "In deinem Bett gestorben",
-      "es": "¡Si me muero, mejor que sea cómodamente!"
+      "es": "Muertes en tu cama"
     },
     "desc": {
       "fr": "Mère-grand, comme vous avez de grandes dents… GROAR !",

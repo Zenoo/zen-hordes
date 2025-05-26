@@ -3188,7 +3188,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.EN]: "This homemade scanner, if used correctly, makes it twice as easy to obtain an estimation of the magnitude of the forthcoming attack (only requires half as many citizens to use it to obtain a solid estimate)! It is essential if the town is to be run efficiently.",
       [Lang.FR]: "Ce scanner maison, s’il est bien utilisé, divise par deux la difficulté de l’estimation de l’attaque du soir. (Il faut deux fois moins de citoyens pour obtenir une bonne estimation !) Primordial pour s’organiser efficacement.",
       [Lang.DE]: "Dieser selbstgebaute Zonenscanner erleichtert die Abschätzung des nächtlichen Angriffs erheblich. Wenn er richtig eingesetzt wird, sind nur halb so viele Bürger notwendig, um eine gute Schätzung zu bekommen.",
-      [Lang.ES]: "Este radar casero (si es bien utilizado) permite reducir a la mitad la dificultad de calcular el ataque nocturno. Se requieren 2 veces menos habitantes para obtener un pronóstico. ¡Muy útil!"
+      [Lang.ES]: "Este radar casero, si es bien utilizado, permite reducir a la mitad la dificultad de calcular el ataque nocturno. Se requieren 2 veces menos habitantes para obtener un pronóstico. ¡Muy útil!"
     },
     icon: "item_tagger",
     apNeeded: 20,

@@ -5731,7 +5731,7 @@
       "fr": "Ce scanner maison, s’il est bien utilisé, divise par deux la difficulté de l’estimation de l’attaque du soir. (Il faut deux fois moins de citoyens pour obtenir une bonne estimation !) Primordial pour s’organiser efficacement.",
       "en": "This homemade scanner, if used correctly, makes it twice as easy to obtain an estimation of the magnitude of the forthcoming attack (only requires half as many citizens to use it to obtain a solid estimate)! It is essential if the town is to be run efficiently.",
       "de": "Dieser selbstgebaute Zonenscanner erleichtert die Abschätzung des nächtlichen Angriffs erheblich. Wenn er richtig eingesetzt wird, sind nur halb so viele Bürger notwendig, um eine gute Schätzung zu bekommen.",
-      "es": "Este radar casero (si es bien utilizado) permite reducir a la mitad la dificultad de calcular el ataque nocturno. Se requieren 2 veces menos habitantes para obtener un pronóstico. ¡Muy útil!"
+      "es": "Este radar casero, si es bien utilizado, permite reducir a la mitad la dificultad de calcular el ataque nocturno. Se requieren 2 veces menos habitantes para obtener un pronóstico. ¡Muy útil!"
     },
     "pa": 20,
     "maxLife": 20,

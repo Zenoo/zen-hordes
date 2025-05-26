@@ -277,10 +277,10 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
       [Lang.ES]: "Suertudo"
     },
     description: {
-      [Lang.EN]: "Number of large metal chests you have found in the World Beyond.",
-      [Lang.FR]: "Nombre de gros coffres en métal que vous avez dégotés dans l'Outre-Monde.",
+      [Lang.EN]: "Number of large metal chests you have uncovered during your searches.",
+      [Lang.FR]: "Nombre de gros coffres en métal que vous avez dégotés lors de vos fouilles.",
       [Lang.DE]: "Anzahl der großen Metallkoffer, die du in der Außenwelt ausgegraben hast.",
-      [Lang.ES]: "Cantidad de grandes cofres de metal que has encontrado en el Ultramundo."
+      [Lang.ES]: "Cantidad de grandes cofres de metal que has encontrado durante tus búsquedas."
     },
     icon: "r_chstxl",
     community: false,
@@ -711,13 +711,13 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
       [Lang.EN]: "Wonder: Giant BRD",
       [Lang.FR]: "Merveille : PMV géant",
       [Lang.DE]: "Wunderwerk: Riesiger KVF",
-      [Lang.ES]: "Maravilla: COSA gigante"
+      [Lang.ES]: "Maravilla: gran COSA"
     },
     description: {
       [Lang.EN]: "BRDs for everyone! The people demand BRDs",
       [Lang.FR]: "Gloire au PMV géant !",
       [Lang.DE]: "Huldigt den Riesigen KVF!",
-      [Lang.ES]: "¡Gloria a la COSA gigante!"
+      [Lang.ES]: "¡Gloria a la gran COSA!"
     },
     icon: "r_ebpmv",
     community: false,
@@ -901,7 +901,7 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
       [Lang.EN]: "Dead in your bed",
       [Lang.FR]: "Morts dans votre lit",
       [Lang.DE]: "In deinem Bett gestorben",
-      [Lang.ES]: "¡Si me muero, mejor que sea cómodamente!"
+      [Lang.ES]: "Muertes en tu cama"
     },
     description: {
       [Lang.EN]: "Grandma, what big teeth you have... GROAR!",

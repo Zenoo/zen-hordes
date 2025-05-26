@@ -7492,7 +7492,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     id: ItemId.POSTAL_BOX,
     numericalId: 197,
     name: {
-      [Lang.EN]: "Gift Parcel",
+      [Lang.EN]: "Postal Parcel",
       [Lang.FR]: "Colis postal",
       [Lang.DE]: "Postpaket",
       [Lang.ES]: "Paquete postal"
@@ -14679,12 +14679,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.AP,
             value: 1,
-            odds: 33
+            odds: 15
           },
           {
             type: ItemActionEffectType.CreateItem,
             value: "soccer_part_#00",
-            odds: 33
+            odds: 5
           }
         ]
       }

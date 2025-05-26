@@ -2184,21 +2184,21 @@
                                 "do_nothing",
                                 "msg_soccer_fail"
                             ],
-                            1
+                            80
                         ],
                         [
                             [
                                 "just_ap1",
                                 "msg_soccer_success"
                             ],
-                            1
+                            15
                         ],
                         [
                             [
                                 "morph_soccer_part",
                                 "msg_soccer_bigfail"
                             ],
-                            1
+                            5
                         ]
                     ]
                 }
@@ -2223,21 +2223,21 @@
                                 "morph_soccer_part",
                                 "msg_soccer_bigfail"
                             ],
-                            1
+                            80
                         ],
                         [
                             [
                                 "do_nothing",
                                 "msg_soccer_fail"
                             ],
-                            1
+                            15
                         ],
                         [
                             [
                                 "just_ap1",
                                 "msg_soccer_success"
                             ],
-                            1
+                            5
                         ]
                     ]
                 }
@@ -6911,9 +6911,7 @@
             "label": "Absteigen",
             "at00": true,
             "meta": [
-                "is_not_wounded_hands",
-                "bike_now",
-                "bike_first"
+                "bike_now"
             ],
             "result": [
                 "unequip_item",
