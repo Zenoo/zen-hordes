@@ -370,7 +370,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
   };
 
   const openableItems = {
-    main: ["can_#00", "chest_xl_#00", "catbox_#00"],
+    main: ["can_#00", "chest_xl_#00", "catbox_#00", "chest_#00"],
     melee: ["chest_food_#00", "chest_tools_#00"],
   };
 

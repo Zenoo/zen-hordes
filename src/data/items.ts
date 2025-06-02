@@ -498,7 +498,8 @@ export const items: Readonly<Record<ItemId, Item>> = {
       ItemId.CHEST_TOOLS,
       ItemId.CAN,
       ItemId.CHEST_XL,
-      ItemId.CATBOX
+      ItemId.CATBOX,
+      ItemId.CHEST
     ],
   },
   [ItemId.STAFF]: {
@@ -733,7 +734,8 @@ export const items: Readonly<Record<ItemId, Item>> = {
       ItemId.CHEST_TOOLS,
       ItemId.CAN,
       ItemId.CHEST_XL,
-      ItemId.CATBOX
+      ItemId.CATBOX,
+      ItemId.CHEST
     ],
   },
   [ItemId.CUTTER]: {
@@ -861,7 +863,8 @@ export const items: Readonly<Record<ItemId, Item>> = {
       ItemId.CHEST_TOOLS,
       ItemId.CAN,
       ItemId.CHEST_XL,
-      ItemId.CATBOX
+      ItemId.CATBOX,
+      ItemId.CHEST
     ],
   },
   [ItemId.BAG]: {
@@ -2850,6 +2853,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [DropLocation.Zone]: 0.69,
       [DropLocation.Trash]: 0.08
     },
+    openableBy: [
+      ItemId.SAW_TOOL,
+      ItemId.CAN_OPENER,
+      ItemId.SCREW,
+      ItemId.SWISS_KNIFE
+    ],
   },
   [ItemId.CHEST_XL]: {
     id: ItemId.CHEST_XL,
@@ -5418,7 +5427,8 @@ export const items: Readonly<Record<ItemId, Item>> = {
     opens: [
       ItemId.CAN,
       ItemId.CHEST_XL,
-      ItemId.CATBOX
+      ItemId.CATBOX,
+      ItemId.CHEST
     ],
   },
   [ItemId.WOOD_LOG]: {
