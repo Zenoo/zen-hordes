@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.4](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.3...zen-hordes-v1.7.4) (2025-06-02)
+
+
+### Bug Fixes
+
+* Metal chest openers missing ([a1285d6](https://github.com/Zenoo/zen-hordes/commit/a1285d6814046a47caf73fb1052c606fbf2de021))
+
 ## [1.7.3](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.2...zen-hordes-v1.7.3) (2025-05-26)
 
 
