@@ -905,7 +905,7 @@ export const displayCampingCalculator = (node: HTMLElement) => {
 
 export const updateCampingCalculatorWithCurrentParams = (node: HTMLElement) => {
   if (!store["camping-calculator"]) return;
-  if (node.getAttribute("for") !== "zone-camp") return;
+  if (node.getAttribute("for") !== "zone-camp" && !node.classList.contains("zone-dist")) return;
 
   // Check if calculator was already updated
   const existing = document.querySelector(

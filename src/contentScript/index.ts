@@ -69,6 +69,7 @@ onMount((node) => {
   insertPlayerInfo(node);
   displayPlayerTag(node);
   insertShoppingListUpdateButton(node);
+  updateCampingCalculatorWithCurrentParams(node);
 });
 
 // Actions that need to be performed on hover
