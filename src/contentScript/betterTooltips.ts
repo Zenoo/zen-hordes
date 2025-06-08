@@ -15,6 +15,15 @@ import { ASSETS } from "../utils/constants";
 import { store } from "./store";
 import { t } from "./translate";
 
+// Track mouse position globally
+let mouseX = 0;
+let mouseY = 0;
+
+window.addEventListener("mousemove", (event) => {
+  mouseX = event.clientX;
+  mouseY = event.clientY;
+});
+
 const T: Translations = {
   en: {
     [`action-type.${ItemActionType.Eat}`]: "Eat",
@@ -1526,4 +1535,20 @@ export const toggleItemActions = (show: boolean) => {
   if (!store["better-tooltips"]) return;
 
   document.body.classList.toggle("zen-item-actions-hidden", !show);
+
+  // Place the tooltip at the top left corner of the mouse cursor,
+  // but ensure it stays within the viewport
+  const tooltip = document.querySelector<HTMLElement>(
+    ".tooltip.zen-better-tooltip[style*='display: block;']"
+  );
+  if (!tooltip) return;
+
+  const { width, height } = tooltip.getBoundingClientRect();
+
+  const padding = 40;
+  const left = mouseX - width - padding;
+  const top = mouseY - height - padding;
+
+  tooltip.style.left = `${Math.max(left, padding)}px`;
+  tooltip.style.top = `${Math.max(top, padding)}px`;
 };

@@ -11,32 +11,6 @@ Zen Hordes is available as a browser extension for Google Chrome and Mozilla Fir
 - [Google Chrome](https://chromewebstore.google.com/detail/zen-hordes/mfmegmfbgapnopkjfocndlkbdapaogam)
 - [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/zen-hordes/)
 
-## Building the Extension
-
-To run the extension locally, you can follow these steps:
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/Zenoo/zen-hordes.git
-```
-
-2. Install the dependencies:
-
-```bash
-pnpm install
-```
-
-3. Build the extension:
-
-```bash
-pnpm build:chrome
-# or
-pnpm build:firefox
-```
-
-The file `dist.zip` will be generated at the root of the project. You can then submit this file to the browser store for review or load it as an unpacked extension in your browser.
-
 ## Key Features
 
 ### User Interface Enhancements
@@ -105,3 +79,35 @@ Zen Hordes supports multiple languages, including English, French, German, and S
 The extension allows you to customize various settings according to your preferences. You can enable or disable specific features such as UI enhancements and the Bank Tracker. All settings are stored locally on your device and in your Chrome cloud storage, ensuring that your preferences are preserved across sessions and devices.
 
 ![Popup](.github/media/popup.jpeg)
+
+## Building the Extension
+
+To run the extension locally, you can follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Zenoo/zen-hordes.git
+```
+
+2. Install the dependencies:
+
+```bash
+pnpm install
+```
+
+3. Build the extension:
+
+```bash
+pnpm build:chrome
+# or
+pnpm build:firefox
+```
+
+The file `dist.zip` will be generated at the root of the project. You can then submit this file to the browser store for review or load it as an unpacked extension in your browser.
+
+## Publishing the Extension
+
+A Github Action is set up to automatically publish the extension to the Chrome Web Store and Firefox Add-ons when a new release is created. The action will build the extension and upload it to the respective stores.
+
+**Note:** If there is an ongoing review for the extension in the Chrome Web Store, the action will fail to publish the new version. Make sure to cancel any ongoing reviews directly in the Chrome Web Store before creating a new release.

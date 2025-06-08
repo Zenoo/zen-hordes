@@ -99,7 +99,7 @@ const T: Translations = {
     "shortcut.openItemInWiki":
       "(While hovering over an item) Show item details in the wiki",
     "shortcut.hideItemActions":
-      "(Hold while hovering over an item) Hide item actions (useful when the tooltip gets too big). Move the mouse to update the tooltip location.",
+      "(Hold while hovering over an item) Hide item actions (useful when the tooltip gets too big)",
     "shortcut.highlightShoppingList":
       "(Hold on the shopping cart in the bottom right of the page) Highlight the items from the shopping list",
     temporaryBuilding: "Temporary building",
@@ -160,7 +160,7 @@ const T: Translations = {
     "shortcut.openItemInWiki":
       "(En survolant un objet) Afficher les détails de l'objet dans le wiki",
     "shortcut.hideItemActions":
-      "(Maintenir en survolant un objet) Masquer les actions de l'objet (utile lorsque l'info-bulle devient trop grande). Déplacez la souris pour mettre à jour l'emplacement de l'info-bulle.",
+      "(Maintenir en survolant un objet) Masquer les actions de l'objet (utile lorsque l'info-bulle devient trop grande)",
     "shortcut.highlightShoppingList":
       "(Maintenir sur le chariot en bas à droite de la page) Mettre en surbrillance les objets de la liste de courses",
     temporaryBuilding: "Bâtiment temporaire",
@@ -222,7 +222,7 @@ const T: Translations = {
     "shortcut.openItemInWiki":
       "(Beim Überfahren eines Gegenstands) Zeigt die Einzelheiten des Gegenstands im Wiki an",
     "shortcut.hideItemActions":
-      "(Halten Sie die Maus über einen Gegenstand) Blenden Sie die Aktionen des Gegenstands aus (nützlich, wenn das Tooltip zu groß wird). Bewege die Maus, um den Tooltip-Standort zu aktualisieren.",
+      "(Halten Sie die Maus über einen Gegenstand) Blenden Sie die Aktionen des Gegenstands aus (nützlich, wenn das Tooltip zu groß wird)",
     "shortcut.highlightShoppingList":
       "(Halten Sie den Einkaufswagen in der unteren rechten Ecke der Seite) Mettre en surbrillance les éléments de la liste de courses",
     temporaryBuilding: "Temporäres Gebäude",
@@ -283,7 +283,7 @@ const T: Translations = {
     "shortcut.openItemInWiki":
       "(Al pasar el ratón sobre un objeto) Mostrar los detalles del objeto en la wiki",
     "shortcut.hideItemActions":
-      "(Mantener mientras se pasa el ratón sobre un objeto) Ocultar acciones del objeto (útil cuando la información se vuelve demasiado grande). Mueva el mouse para actualizar la ubicación de la información.",
+      "(Mantener mientras se pasa el ratón sobre un objeto) Ocultar acciones del objeto (útil cuando la información se vuelve demasiado grande)",
     "shortcut.highlightShoppingList":
       "(Halten Sie den Einkaufswagen in der unteren rechten Ecke der Seite) Mettre en surbrillance les éléments de la liste de courses",
     temporaryBuilding: "Edificio temporal",

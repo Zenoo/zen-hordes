@@ -13,6 +13,8 @@ export const onKey = (
 ) => {
   // Listen for the keydown event
   document.addEventListener("keydown", (event) => {
+    if (event.repeat) return;
+
     if (event.key.toLowerCase() === key.toLowerCase()) {
       // Get the element under the mouse pointer
       const hoveredElement = document.elementFromPoint(

@@ -28,38 +28,6 @@ jobs:
       run: |
         pnpm install
         pnpm build:chrome
-    - name: Check Chrome Web Store review status
-      id: check_review
-      run: |
-        # Get OAuth2 token
-        TOKEN=$(curl -s \
-          -d client_id="${{ secrets.CLIENT_ID }}" \
-          -d client_secret="${{ secrets.CLIENT_SECRET }}" \
-          -d refresh_token="${{ secrets.REFRESH_TOKEN }}" \
-          -d grant_type=refresh_token \
-          https://oauth2.googleapis.com/token | jq -r .access_token)
-
-        # Query extension status
-        RESPONSE=$(curl -s \
-          -H "Authorization: Bearer $TOKEN" \
-          -H "x-goog-api-version: 2" \
-          "https://www.googleapis.com/chromewebstore/v1.1/items/mfmegmfbgapnopkjfocndlkbdapaogam?projection=DRAFT")
-
-        echo "API response: $RESPONSE"
-
-        STATUS=$(echo "$RESPONSE" | jq -r '.status // empty | .[]')
-
-        echo "Extension status: $STATUS"
-
-        if [[ "$STATUS" == *"IN_REVIEW"* ]]; then
-          echo "Ongoing review detected, cancelling review..."
-          curl -s -X POST \
-            -H "Authorization: Bearer $TOKEN" \
-            -H "x-goog-api-version: 2" \
-            "https://www.googleapis.com/chromewebstore/v1.1/items/mfmegmfbgapnopkjfocndlkbdapaogam/publish?publishTarget=default&action=abort"
-        else
-          echo "No ongoing review."
-        fi
     - name: Upload & release Chrome extension
       uses: mnao305/chrome-extension-upload@v5.0.0
       with:
