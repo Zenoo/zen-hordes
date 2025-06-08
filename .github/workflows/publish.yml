@@ -43,7 +43,7 @@ jobs:
         RESPONSE=$(curl -s \
           -H "Authorization: Bearer $TOKEN" \
           -H "x-goog-api-version: 2" \
-          "https://www.googleapis.com/chromewebstore/v1.1/items/mfmegmfbgapnopkjfocndlkbdapaogam")
+          "https://www.googleapis.com/chromewebstore/v1.1/items/mfmegmfbgapnopkjfocndlkbdapaogam?projection=DRAFT")
 
         echo "API response: $RESPONSE"
 
