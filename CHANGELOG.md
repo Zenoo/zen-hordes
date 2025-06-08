@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.7](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.6...zen-hordes-v1.7.7) (2025-06-08)
+
+
+### Bug Fixes
+
+* Cancel Chrome reviews when uploading a new version. ([720f777](https://github.com/Zenoo/zen-hordes/commit/720f777d859178f164c0a100e04d7f464ee9ef05))
+
 ## [1.7.6](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.5...zen-hordes-v1.7.6) (2025-06-08)
 
 
