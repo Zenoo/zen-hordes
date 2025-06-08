@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.9](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.8...zen-hordes-v1.7.9) (2025-06-08)
+
+
+### Bug Fixes
+
+* Cancel Chrome review using their API directly ([14c704e](https://github.com/Zenoo/zen-hordes/commit/14c704e777a5510d1a7530ba89089a2247afbf57))
+
 ## [1.7.8](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.7...zen-hordes-v1.7.8) (2025-06-08)
 
 
