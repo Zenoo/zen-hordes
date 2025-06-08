@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.8](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.7...zen-hordes-v1.7.8) (2025-06-08)
+
+
+### Bug Fixes
+
+* Debug Chrome extension status ([a01968b](https://github.com/Zenoo/zen-hordes/commit/a01968b42360e70b2de29d3a87f1d7d554059df0))
+
 ## [1.7.7](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.6...zen-hordes-v1.7.7) (2025-06-08)
 
 
