@@ -40,10 +40,14 @@ jobs:
           https://oauth2.googleapis.com/token | jq -r .access_token)
 
         # Query extension status
-        STATUS=$(curl -s \
+        RESPONSE=$(curl -s \
           -H "Authorization: Bearer $TOKEN" \
           -H "x-goog-api-version: 2" \
-          "https://www.googleapis.com/chromewebstore/v1.1/items/mfmegmfbgapnopkjfocndlkbdapaogam" | jq -r .status[])
+          "https://www.googleapis.com/chromewebstore/v1.1/items/mfmegmfbgapnopkjfocndlkbdapaogam")
+
+        echo "API response: $RESPONSE"
+
+        STATUS=$(echo "$RESPONSE" | jq -r '.status // empty | .[]')
 
         echo "Extension status: $STATUS"
 
