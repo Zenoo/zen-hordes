@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.12](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.11...zen-hordes-v1.7.12) (2025-06-08)
+
+
+### Bug Fixes
+
+* Update tooltip position when pressing Q ([9b7f6ac](https://github.com/Zenoo/zen-hordes/commit/9b7f6ac120f4d130aaf146f968292b34740a6337))
+
 ## [1.7.11](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.10...zen-hordes-v1.7.11) (2025-06-08)
 
 
