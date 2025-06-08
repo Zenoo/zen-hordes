@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.5](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.4...zen-hordes-v1.7.5) (2025-06-08)
+
+
+### Bug Fixes
+
+* Camping calculator wrong calculation outside a ruin ([6bee012](https://github.com/Zenoo/zen-hordes/commit/6bee012cc94aa6d692464ec68ec608f86dde2786))
+
 ## [1.7.4](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.3...zen-hordes-v1.7.4) (2025-06-02)
 
 
