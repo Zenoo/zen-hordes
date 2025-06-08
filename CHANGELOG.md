@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.10](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.9...zen-hordes-v1.7.10) (2025-06-08)
+
+
+### Bug Fixes
+
+* Debug Chrome API response ([bb1700c](https://github.com/Zenoo/zen-hordes/commit/bb1700c0359506087861d46fe5a8719bcc2c8e5d))
+
 ## [1.7.9](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.8...zen-hordes-v1.7.9) (2025-06-08)
 
 
