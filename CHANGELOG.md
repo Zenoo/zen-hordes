@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.6](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.5...zen-hordes-v1.7.6) (2025-06-08)
+
+
+### Bug Fixes
+
+* Update camping calculator params on distance load ([840bb8d](https://github.com/Zenoo/zen-hordes/commit/840bb8d3d39231504c29c70d7c6114143a1afaae))
+
 ## [1.7.5](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.4...zen-hordes-v1.7.5) (2025-06-08)
 
 
