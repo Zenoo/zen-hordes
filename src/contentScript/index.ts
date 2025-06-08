@@ -34,6 +34,8 @@ import {
 } from "./UIEnhancer";
 import { insertWiki, openItemInWiki } from "./wiki";
 
+// TODO: Change bank tracking to track items individually and display them with a timer
+
 // Initialize the store
 await initStore();
 // Listen for messages from the background script

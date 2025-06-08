@@ -26,6 +26,14 @@ const T: Translations = {
     campingItems: "Camping items",
     noRuin: "No ruin",
     total: "Total",
+    "campingChances.0": "You reckon your chances of surviving here are hee haw... Might as well take some cyanide now.",
+    "campingChances.11": "You reckon your chances of surviving here are really poor. Maybe you should play heads or tails?",
+    "campingChances.31": "You reckon your chances of surviving here are poor. Difficult to say.",
+    "campingChances.51": "You reckon your chances of surviving here are limited, but tempting. However, accidents happen...",
+    "campingChances.66": "You reckon your chances of surviving here are largely satisfactory, as long as nothing unforeseen happens.",
+    "campingChances.81": "You reckon your chances of surviving here are decent: you just have to hope for the best!",
+    "campingChances.91": "You reckon your chances of surviving here are good, you should be able to spend the night here.",
+    "campingChances.100": "You reckon your chances of surviving here are optimal. Nobody would see you, even if they were looking straight at you.",
   },
   fr: {
     campingCalculator: "Calculateur de camping",
@@ -47,6 +55,14 @@ const T: Translations = {
     campingItems: "Objets de camping",
     noRuin: "Aucun bâtiment",
     total: "Total",
+    "campingChances.0": "Vous estimez que vos chances de survie ici sont quasi nulles… Autant gober du cyanure tout de suite.",
+    "campingChances.11": "Vous estimez que vos chances de survie ici sont très faibles. Peut-être que vous aimez jouer à pile ou face ?",
+    "campingChances.31": "Vous estimez que vos chances de survie ici sont faibles. Difficile à dire.",
+    "campingChances.51": "Vous estimez que vos chances de survie ici sont limitées, bien que ça puisse se tenter. Mais un accident est vite arrivé…",
+    "campingChances.66": "Vous estimez que vos chances de survie ici sont à peu près satisfaisantes, pour peu qu’aucun imprévu ne vous tombe dessus.",
+    "campingChances.81": "Vous estimez que vos chances de survie ici sont correctes : il ne vous reste plus qu’à croiser les doigts !",
+    "campingChances.91": "Vous estimez que vos chances de survie ici sont élevées : vous devriez pouvoir passer la nuit ici.",
+    "campingChances.100": "Vous estimez que vos chances de survie ici sont optimales : personne ne vous verrait même en vous pointant du doigt.",
   },
   de: {
     campingCalculator: "Camping Rechner",
@@ -68,6 +84,14 @@ const T: Translations = {
     campingItems: "Campingartikel",
     noRuin: "Keine Ruine",
     total: "Gesamt",
+    "campingChances.0": "Du schätzt, dass deine Überlebenschancen hier quasi Null sind... Besser gleich 'ne Zyanidkapsel schlucken.",
+    "campingChances.11": "Du schätzt, dass deine Überlebenschancen hier sehr gering sind. Vielleicht hast du ja Bock 'ne Runde Kopf oder Zahl zu spielen?",
+    "campingChances.31": "Du schätzt, dass deine Überlebenschancen hier gering sind. Hmmm... schwer zu sagen, wie das hier ausgeht.",
+    "campingChances.51": "Du schätzt, dass deine Überlebenschancen hier mittelmäßig sind. Ist allerdings einen Versuch wert.. obwohl, Unfälle passieren schnell...",
+    "campingChances.66": "Du schätzt, dass deine Überlebenschancen hier zufriedenstellend sind - vorausgesetzt du erlebst keine böse Überraschung.",
+    "campingChances.81": "Du schätzt, dass deine Überlebenschancen hier korrekt sind. Jetzt heißt's nur noch Daumen drücken!",
+    "campingChances.91": "Du schätzt, dass deine Überlebenschancen hier gut sind. Du müsstest hier problemlos die Nacht verbringen können.",
+    "campingChances.100": "Du schätzt, dass deine Überlebenschancen hier optimal sind. Niemand wird dich sehen - selbst wenn man mit dem Finger auf dich zeigt.",
   },
   es: {
     campingCalculator: "Calculadora de Camping",
@@ -89,6 +113,14 @@ const T: Translations = {
     campingItems: "Artículos de camping",
     noRuin: "No hay ruina",
     total: "Total",
+    "campingChances.0": "Crees que tus posibilidades de sobrevivir aquí son casi nulas... ¿Cianuro?",
+    "campingChances.11": "Crees que tus posibilidades de sobrevivir aquí son muy pocas. ¿Apostamos?",
+    "campingChances.31": "Crees que tus posibilidades de sobrevivir aquí son pocas. Quién sabe...",
+    "campingChances.51": "Crees que tus posibilidades de sobrevivir aquí son reducidas, aunque se puede intentar. Tú sabes, podrías sufrir un accidente...",
+    "campingChances.66": "Crees que tus posibilidades de sobrevivir aquí son aceptables, esperando que no suceda ningún imprevisto.",
+    "campingChances.81": "Crees que tus posibilidades de sobrevivir aquí son buenas. ¡Cruza los dedos!",
+    "campingChances.91": "Crees que tus posibilidades de sobrevivir aquí son altas. Podrías pasar la noche aquí.",
+    "campingChances.100": "Crees que tus posibilidades de sobrevivir aquí son óptimas. Nadie te verá, ni señalándote con el dedo",
   },
 };
 
@@ -154,8 +186,10 @@ const updateCampingResult = () => {
   if (params.alreadyHiddenCitizens < spots) {
     total += ruinBaseValue;
     result.alreadyHiddenCitizens = 0;
-  } else {
+  } else if (params.ruin) {
     result.alreadyHiddenCitizens = -ruinBaseValue;
+  } else {
+    total += ruinBaseValue;
   }
 
   // Campsite upgrades
@@ -615,6 +649,28 @@ const updateView = () => {
       unlimitedTotal.classList.remove("hidden");
     }
   }
+
+  // Update total description
+  const totalDesc = document.querySelector(".zen-camping-calculator .total-desc");
+  if (totalDesc) {
+    if (result.total >= 100) {
+      totalDesc.textContent = t(T, "campingChances.100");
+    } else if (result.total >= 91) {
+      totalDesc.textContent = t(T, "campingChances.91");
+    } else if (result.total >= 81) {
+      totalDesc.textContent = t(T, "campingChances.81");
+    } else if (result.total >= 66) {
+      totalDesc.textContent = t(T, "campingChances.66");
+    } else if (result.total >= 51) {
+      totalDesc.textContent = t(T, "campingChances.51");
+    } else if (result.total >= 31) {
+      totalDesc.textContent = t(T, "campingChances.31");
+    } else if (result.total >= 11) {
+      totalDesc.textContent = t(T, "campingChances.11");
+    } else {
+      totalDesc.textContent = t(T, "campingChances.0");
+    }
+  }
 };
 
 const createLine = (key: keyof CampingParams) => {
@@ -819,6 +875,29 @@ export const displayCampingCalculator = (node: HTMLElement) => {
 
     totalWrapper.appendChild(unlimitedTotal);
     calculator.appendChild(totalWrapper);
+
+    // Total description
+    const totalDesc = document.createElement("p");
+    totalDesc.classList.add("total-desc");
+
+    if (result.total >= 100) {
+      totalDesc.textContent = t(T, "campingChances.100");
+    } else if (result.total >= 91) {
+      totalDesc.textContent = t(T, "campingChances.91");
+    } else if (result.total >= 81) {
+      totalDesc.textContent = t(T, "campingChances.81");
+    } else if (result.total >= 66) {
+      totalDesc.textContent = t(T, "campingChances.66");
+    } else if (result.total >= 51) {
+      totalDesc.textContent = t(T, "campingChances.51");
+    } else if (result.total >= 31) {
+      totalDesc.textContent = t(T, "campingChances.31");
+    } else if (result.total >= 11) {
+      totalDesc.textContent = t(T, "campingChances.11");
+    } else {
+      totalDesc.textContent = t(T, "campingChances.0");
+    }
+    calculator.appendChild(totalDesc);
 
     node.after(calculator);
   }
