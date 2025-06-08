@@ -28,29 +28,34 @@ jobs:
       run: |
         pnpm install
         pnpm build:chrome
-    - name: Check for ongoing Chrome review
+    - name: Check Chrome Web Store review status
+      id: check_review
       run: |
-        pnpm dlx chrome-webstore-upload-cli check \
-          --extension-id=mfmegmfbgapnopkjfocndlkbdapaogam \
-          --client-id="${{ secrets.CLIENT_ID }}" \
-          --client-secret="${{ secrets.CLIENT_SECRET }}" \
-          --refresh-token="${{ secrets.REFRESH_TOKEN }}" \
-          > review_status.txt
+        # Get OAuth2 token
+        TOKEN=$(curl -s \
+          -d client_id="${{ secrets.CLIENT_ID }}" \
+          -d client_secret="${{ secrets.CLIENT_SECRET }}" \
+          -d refresh_token="${{ secrets.REFRESH_TOKEN }}" \
+          -d grant_type=refresh_token \
+          https://oauth2.googleapis.com/token | jq -r .access_token)
 
-        echo "=== chrome-webstore-upload-cli check output ==="
-        cat review_status.txt
+        # Query extension status
+        STATUS=$(curl -s \
+          -H "Authorization: Bearer $TOKEN" \
+          -H "x-goog-api-version: 2" \
+          "https://www.googleapis.com/chromewebstore/v1.1/items/mfmegmfbgapnopkjfocndlkbdapaogam" | jq -r .status[])
 
-        if grep -q "IN_REVIEW" review_status.txt; then
-          echo "Ongoing review detected, aborting..."
-          pnpm dlx chrome-webstore-upload-cli abort \
-            --extension-id=mfmegmfbgapnopkjfocndlkbdapaogam \
-            --client-id="${{ secrets.CLIENT_ID }}" \
-            --client-secret="${{ secrets.CLIENT_SECRET }}" \
-            --refresh-token="${{ secrets.REFRESH_TOKEN }}"
+        echo "Extension status: $STATUS"
+
+        if [[ "$STATUS" == *"IN_REVIEW"* ]]; then
+          echo "Ongoing review detected, cancelling review..."
+          curl -s -X POST \
+            -H "Authorization: Bearer $TOKEN" \
+            -H "x-goog-api-version: 2" \
+            "https://www.googleapis.com/chromewebstore/v1.1/items/mfmegmfbgapnopkjfocndlkbdapaogam/publish?publishTarget=default&action=abort"
         else
           echo "No ongoing review."
         fi
-
     - name: Upload & release Chrome extension
       uses: mnao305/chrome-extension-upload@v5.0.0
       with:
