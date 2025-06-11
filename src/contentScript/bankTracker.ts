@@ -206,6 +206,11 @@ export const updateLastItemsNotification = (bank: HTMLElement) => {
     // Remove the alert if the limit is not reached
     alert?.remove();
   }
+
+  // Remove the notification if there are no items left
+  if (store["bank-last-items-taken"].length === 0) {
+    notification.remove();
+  }
 };
 
 export const trackBank = (node: HTMLElement) => {
