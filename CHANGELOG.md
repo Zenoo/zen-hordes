@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.8.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.12...zen-hordes-v1.8.0) (2025-06-11)
+
+
+### Features
+
+* km shown in zone tooltips ([4303981](https://github.com/Zenoo/zen-hordes/commit/4303981d4125519d78b0901a2763c1ff840001b3))
+* Track bank items individually ([3f16453](https://github.com/Zenoo/zen-hordes/commit/3f16453676cc5f93c800f1d3e5120b0d4915b018))
+
+
+### Bug Fixes
+
+* Camping calculator state after digging a tomb ([ab097f4](https://github.com/Zenoo/zen-hordes/commit/ab097f452093ad1e324a8288c895c822cdb12aab))
+
 ## [1.7.12](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.11...zen-hordes-v1.7.12) (2025-06-08)
 
 
