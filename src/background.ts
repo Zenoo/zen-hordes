@@ -71,6 +71,9 @@ chrome.webRequest.onBeforeRequest.addListener(
       if (body.action === "6") {
         // Set camping
         queue[details.requestId] = { action: Action.Camp, value: true };
+      } else if (body.action === "8") {
+        // Set camping (tomb)
+        queue[details.requestId] = { action: Action.Camp, value: true };
       } else if (body.action === "9") {
         // Remove camping
         queue[details.requestId] = { action: Action.Camp, value: false };
