@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.8.1...zen-hordes-v1.8.2) (2025-06-11)
+
+
+### Bug Fixes
+
+* Clear bank notification if no items are left ([ad63c92](https://github.com/Zenoo/zen-hordes/commit/ad63c929fc2a6989172f58a894715c7474eda802))
+
 ## [1.8.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.8.0...zen-hordes-v1.8.1) (2025-06-11)
 
 
