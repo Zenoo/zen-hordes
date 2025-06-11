@@ -1,3 +1,7 @@
+import { items } from "../data/items";
+import { ItemId } from "../data/types";
+import { ASSETS } from "../utils/constants";
+import { findItemFromInventory } from "../utils/itemUtils";
 import { resetBankState } from "./betterTooltips";
 import { setStore, store } from "./store";
 import { t } from "./translate";
@@ -8,29 +12,40 @@ const BLOCK_DURATION = 15 * 60 * 1000; // 15 minutes
 
 const T: Translations = {
   en: {
-    "items-taken": `You have taken {{count}} items from the bank in the last 15 minutes. You can take {{more}} more items before the limit is reached.`,
-    "limit-reached": `You reached the maximum number of items you can take from the bank ({{max}}) in a 15-minute period. Please wait a bit before taking more items.`,
+    "items-taken": "Items taken",
+    "limit-reached":
+      "You reached the maximum number of items you can take from the bank in the last 15 minutes. Please wait for a spot to become available before taking more items.",
   },
   fr: {
-    "items-taken": `Vous avez pris {{count}} objets de la banque au cours des 15 dernières minutes. Vous pouvez prendre encore {{more}} objets avant d'atteindre la limite.`,
-    "limit-reached": `Vous avez atteint le nombre maximum d'objets que vous pouvez prendre dans la banque ({{max}}) en 15 minutes. Veuillez attendre un peu avant de prendre plus d'objets.`,
+    "items-taken": "Objets pris",
+    "limit-reached":
+      "Vous avez atteint le nombre maximum d'objets que vous pouvez prendre dans la banque au cours des 15 dernières minutes. Veuillez attendre qu'une place se libère avant de prendre plus d'objets.",
   },
   de: {
-    "items-taken": `Sie haben {{count}} Gegenstände aus der Bank in den letzten 15 Minuten entnommen. Sie können noch {{more}} Gegenstände entnehmen, bevor die Grenze erreicht ist.`,
-    "limit-reached": `Sie haben die maximale Anzahl von Gegenständen erreicht, die Sie in einem Zeitraum von 15 Minuten aus der Bank entnehmen können ({{max}}). Bitte warten Sie einen Moment, bevor Sie weitere Gegenstände entnehmen.`,
+    "items-taken": "Gegenstände entnommen",
+    "limit-reached":
+      "Sie haben die maximale Anzahl an Gegenständen erreicht, die Sie in den letzten 15 Minuten aus der Bank entnehmen können. Bitte warten Sie, bis ein Platz frei wird, bevor Sie weitere Gegenstände entnehmen.",
   },
   es: {
-    "items-taken": `Has tomado {{count}} objetos del banco en los últimos 15 minutos. Puedes tomar {{more}} más objetos antes de alcanzar el límite.`,
-    "limit-reached": `Ha alcanzado la cantidad máxima de objetos que puede tomar del banco ({{max}}) en un período de 15 minutos. Espere un poco antes de tomar más objetos.`,
+    "items-taken": "Objetos tomados",
+    "limit-reached":
+      "Has alcanzado el número máximo de objetos que puedes tomar del banco en los últimos 15 minutos. Por favor, espera a que haya un espacio disponible antes de tomar más objetos.",
   },
+};
+
+const getMaxItems = () => {
+  const isChaos = !!document.querySelector(
+    "body[data-theme-secondary-modifier='chaos']"
+  );
+  return isChaos ? MAX_ITEMS_TAKEN_CHAOS : MAX_ITEMS_TAKEN;
 };
 
 export const cleanupBankNotification = () => {
-  document.querySelector("#bank-blocked-notification")?.remove();
-  setStore("bank-items-taken", 0);
+  document.querySelector("#zen-bank-notification")?.remove();
+  setStore("bank-last-items-taken", []);
 };
 
-export const handleItemTaken = (waterFromWell?: boolean) => {
+export const handleItemTaken = (itemId: ItemId, waterFromWell?: boolean) => {
   if (waterFromWell) {
     // First water ration per day doesn't count towards the bank limit
     const startOfDay = new Date();
@@ -42,16 +57,27 @@ export const handleItemTaken = (waterFromWell?: boolean) => {
     }
   }
 
-  const endTime = store["last-bank-item-taken"] + BLOCK_DURATION;
-  const timeRemaining = endTime - Date.now();
-
-  // Reset the counter if the time has expired
-  if (timeRemaining <= 0) {
-    cleanupBankNotification();
+  // Check if the limit has been reached
+  if (store["bank-last-items-taken"].length >= getMaxItems()) {
+    // Reset all item timers
+    setStore(
+      "bank-last-items-taken",
+      store["bank-last-items-taken"].map((item) => ({
+        item: item.item,
+        timestamp: Date.now(),
+      }))
+    );
+    return;
   }
 
-  setStore("bank-items-taken", store["bank-items-taken"] + 1);
-  setStore("last-bank-item-taken", Date.now());
+  // Add the item to the list of taken items
+  setStore(
+    "bank-last-items-taken",
+    store["bank-last-items-taken"].concat({
+      item: itemId,
+      timestamp: Date.now(),
+    })
+  );
 };
 
 const formatTime = (milliseconds: number) => {
@@ -61,20 +87,112 @@ const formatTime = (milliseconds: number) => {
   return `${minutes}:${seconds.toString().padStart(2, "0")}`;
 };
 
-const updateTimer = (timerElement: Element) => {
-  const interval = setInterval(() => {
-    const timeRemaining =
-      store["last-bank-item-taken"] + BLOCK_DURATION - Date.now();
+export const updateLastItemsNotification = (bank: HTMLElement) => {
+  let notification = document.querySelector("#zen-bank-notification");
 
-    // Clear everything if the timer has expired
-    if (timeRemaining <= 0) {
-      cleanupBankNotification();
-      clearInterval(interval);
-    } else {
-      const formattedTime = formatTime(timeRemaining);
-      timerElement.textContent = formattedTime;
+  if (store["bank-last-items-taken"].length === 0) {
+    // Remove the notification if there are no items taken
+    notification?.remove();
+    return;
+  }
+
+  if (!notification) {
+    // Create the notification if it doesn't exist
+    notification = document.createElement("div");
+    notification.id = "zen-bank-notification";
+    notification.classList.add("note", "note-critical");
+
+    const title = document.createElement("p");
+    title.classList.add("bank-notification-title");
+    title.textContent = t(T, "items-taken");
+    notification.append(title);
+
+    const list = document.createElement("ul");
+    notification.append(list);
+
+    bank.parentElement?.insertBefore(notification, bank);
+  }
+
+  const list = notification.querySelector("ul");
+  if (!list) {
+    throw new Error("List element not found in bank notification");
+  }
+
+  // Clear the list
+  while (list.firstChild) {
+    list.removeChild(list.firstChild);
+  }
+
+  // Add each item to the list
+  store["bank-last-items-taken"].forEach(({ item, timestamp }) => {
+    const listItem = document.createElement("li");
+
+    const icon = document.createElement("img");
+    icon.src = `${ASSETS}/icons/item/${items[item].icon}.gif`;
+    icon.alt = items[item].name[store["hordes-lang"]];
+    icon.title = items[item].name[store["hordes-lang"]];
+    listItem.append(icon);
+
+    const time = document.createElement("span");
+    time.classList.add("time-remaining");
+    time.textContent = formatTime(timestamp + BLOCK_DURATION - Date.now());
+    listItem.append(time);
+
+    // Update timer every second
+    const timer = setInterval(() => {
+      // Check if the item still exists in the DOM
+      if (!listItem.isConnected) {
+        clearInterval(timer);
+        return;
+      }
+
+      const timeRemaining = timestamp + BLOCK_DURATION - Date.now();
+      if (timeRemaining <= 0) {
+        // Clear the timer
+        clearInterval(timer);
+
+        // Remove the item from the list
+        listItem.remove();
+
+        // Remove the alert
+        const alert = notification?.querySelector(".bank-notification-alert");
+        alert?.remove();
+
+        // If the list is empty, remove the notification
+        if (list.children.length === 0) {
+          notification?.remove();
+        }
+
+        // Remove the item from the store
+        setStore(
+          "bank-last-items-taken",
+          store["bank-last-items-taken"].filter(
+            (i) => i.timestamp !== timestamp || i.item !== item
+          )
+        );
+        return;
+      }
+
+      time.textContent = formatTime(timeRemaining);
+    }, 1000);
+
+    list.append(listItem);
+  });
+
+  // Alert when the limit is reached
+  let alert = notification.querySelector(".bank-notification-alert");
+
+  if (store["bank-last-items-taken"].length >= getMaxItems()) {
+    if (!alert) {
+      alert = document.createElement("span");
+      alert.classList.add("bank-notification-alert");
+      alert.textContent = t(T, "limit-reached");
+      notification.append(alert);
     }
-  }, 1000);
+  } else {
+    // Remove the alert if the limit is not reached
+    alert?.remove();
+  }
 };
 
 export const trackBank = (node: HTMLElement) => {
@@ -92,67 +210,18 @@ export const trackBank = (node: HTMLElement) => {
       const bankElem = target.closest(".bank");
       if (!bankElem) return;
 
-      const item = target.closest(".item");
+      const itemElem = target.closest<HTMLElement>(".item");
+      if (!itemElem) return;
+
+      const item = findItemFromInventory(itemElem);
       if (!item) return;
 
-      handleItemTaken();
-      trackBank(node);
+      handleItemTaken(item.id);
+      updateLastItemsNotification(node);
     });
   }
 
-  const timeRemaining =
-    store["last-bank-item-taken"] + BLOCK_DURATION - Date.now();
-
-  // Reset the counter if the time has expired
-  if (timeRemaining <= 0) {
-    cleanupBankNotification();
-    return;
-  }
-
-  const isChaos = !!document.querySelector(
-    "body[data-theme-secondary-modifier='chaos']"
-  );
-  const maxItems = isChaos ? MAX_ITEMS_TAKEN_CHAOS : MAX_ITEMS_TAKEN;
-
-  // Bank displayed, check if we need to display the notification
-  if (store["bank-items-taken"] !== 0) {
-    let notification = document.querySelector("#bank-blocked-notification");
-    let title;
-
-    if (!notification) {
-      // Create the notification if it doesn't exist
-      notification = document.createElement("div");
-      notification.id = "bank-blocked-notification";
-      notification.classList.add("note", "note-critical");
-
-      title = document.createElement("span");
-      notification.append(title);
-
-      const timer = document.createElement("p");
-      timer.classList.add("time-remaining");
-      timer.textContent = formatTime(timeRemaining);
-      notification.append(timer);
-
-      node.parentElement?.insertBefore(notification, node);
-
-      updateTimer(timer);
-    } else {
-      title = notification.querySelector("span");
-      if (!title) {
-        throw new Error("Title element not found");
-      }
-    }
-
-    if (store["bank-items-taken"] < maxItems) {
-      const more = maxItems - store["bank-items-taken"];
-      title.textContent = t(T, "items-taken", {
-        count: store["bank-items-taken"],
-        more,
-      });
-    } else {
-      title.textContent = t(T, "limit-reached", { max: maxItems });
-    }
-  }
+  updateLastItemsNotification(node);
 };
 
 export const resetOnDeath = (node: HTMLElement) => {
@@ -161,8 +230,7 @@ export const resetOnDeath = (node: HTMLElement) => {
     if (!location.href.includes("/welcomeToNowhere")) return;
 
     setStore("last-water-ration-taken", new Date(0).getTime());
-    setStore("bank-items-taken", 0);
-    setStore("last-bank-item-taken", Date.now());
+    setStore("bank-last-items-taken", []);
 
     // Reset bank state
     resetBankState();

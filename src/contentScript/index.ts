@@ -1,6 +1,7 @@
 import { resetOnDeath, trackBank } from "./bankTracker";
 import {
   insertBetterItemTooltips,
+  insertBetterMapZoneTooltips,
   insertBetterRuinTooltips,
   storeBankState,
   toggleItemActions,
@@ -17,14 +18,14 @@ import { offKey } from "./hooks/offKey";
 import { onClick } from "./hooks/onClick";
 import { onKey } from "./hooks/onKey";
 import { onMount } from "./hooks/onMount";
-import {
-  displayMapPreview,
-  insertMapPreviewTooltip
-} from "./mapPreview";
+import { displayMapPreview, insertMapPreviewTooltip } from "./mapPreview";
 import { listenToBackgroundMessages } from "./messageListener";
 import { displayPlayerTag, insertPlayerInfo } from "./playerInfo";
 import { displayShamanSoulsButton } from "./shamanSoulsButton";
-import { insertShoppingListToggle, insertShoppingListUpdateButton } from "./shoppingList";
+import {
+  insertShoppingListToggle,
+  insertShoppingListUpdateButton,
+} from "./shoppingList";
 import { initStore } from "./store";
 import {
   autoOpenBagOutside,
@@ -33,8 +34,6 @@ import {
   enhanceUI,
 } from "./UIEnhancer";
 import { insertWiki, openItemInWiki } from "./wiki";
-
-// TODO: Change bank tracking to track items individually and display them with a timer
 
 // Initialize the store
 await initStore();
@@ -57,6 +56,7 @@ onMount((node) => {
   displayUpdateButton(node);
   insertBetterItemTooltips(node);
   insertBetterRuinTooltips(node);
+  insertBetterMapZoneTooltips(node);
   displayShamanSoulsButton(node);
   displayCampingCalculator(node);
   resetOnDeath(node);

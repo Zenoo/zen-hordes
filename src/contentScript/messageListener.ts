@@ -1,3 +1,4 @@
+import { ItemId } from "../data/types";
 import { DEFAULT_SHOPPING_LIST } from "../utils/constants";
 import {
   trackBank,
@@ -24,7 +25,7 @@ export const listenToBackgroundMessages = async () => {
     (message: Message, _sender, _sendResponse) => {
       switch (message.action) {
         case Action.TakeWaterFromWell: {
-          handleItemTaken(true);
+          handleItemTaken(ItemId.WATER, true);
           break;
         }
         case Action.ToggleFeature: {

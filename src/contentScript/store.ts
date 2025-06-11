@@ -1,3 +1,4 @@
+import { ItemId } from "../data/types";
 import { DEFAULT_SHOPPING_LIST } from "../utils/constants";
 import { ExternalSiteName } from "./externalSites";
 
@@ -23,11 +24,13 @@ export const store = {
   ],
   "better-tooltips": true,
   "shaman-souls-button": true,
-  "wiki": true,
+  wiki: true,
   "camping-calculator": true,
   // Bank tracker state
-  "bank-items-taken": 0,
-  "last-bank-item-taken": Date.now(),
+  "bank-last-items-taken": [] as {
+    item: ItemId;
+    timestamp: number;
+  }[],
   "last-water-ration-taken": new Date(0).getTime(),
   // Camping state
   "camping-day": null as number | null,
@@ -77,6 +80,14 @@ export const initStore = async () => {
   if (typeof data["town-id"] !== "undefined") {
     await chrome.storage.sync.remove("town-id");
     delete data["town-id"];
+  }
+  if (typeof data["bank-items-taken"] === "undefined") {
+    await chrome.storage.sync.remove("bank-items-taken");
+    delete data["bank-items-taken"];
+  }
+  if (typeof data["last-bank-item-taken"] === "undefined") {
+    await chrome.storage.sync.remove("last-bank-item-taken");
+    delete data["last-bank-item-taken"];
   }
 
   Object.assign(store, data);

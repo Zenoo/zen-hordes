@@ -365,12 +365,49 @@ body.zen-enhanced {
   }
 }
 
-.time-remaining {
-  font-weight: bold;
-  text-align: center;
-  color: #f0d79e;
-  margin: 0;
-  margin-top: 4px;
+// Bank tracker
+#zen-bank-notification {
+  .bank-notification-title {
+    font-weight: bold;
+    text-align: center;
+    color: #f0d79e;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background-color: #996739;
+      border: 1px solid #b37c4a;
+      border-radius: 4px;
+      padding: 1px 2px;
+      color: #e3c699;
+      font-weight: normal;
+      font-size: 10px;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .bank-notification-alert {
+    display: block;
+    margin-top: 4px;
+    text-align: justify;
+  }
 }
 
 // Map preview styles
