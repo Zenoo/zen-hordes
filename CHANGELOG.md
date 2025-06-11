@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.8.0...zen-hordes-v1.8.1) (2025-06-11)
+
+
+### Bug Fixes
+
+* Remove expired items from bank tracker on update ([8e1f4a4](https://github.com/Zenoo/zen-hordes/commit/8e1f4a4deef1418957f2e815d759e15461caaf36))
+
 ## [1.8.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.7.12...zen-hordes-v1.8.0) (2025-06-11)
 
 
