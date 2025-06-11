@@ -1406,7 +1406,7 @@ export const insertBetterRuinTooltips = (node: HTMLElement) => {
 
   if (node.classList.contains("tooltip-map")) {
     // Check if the tooltip has already been processed
-    const processed = node.classList.contains("zen-better-tooltip");
+    const processed = node.classList.contains("zen-better-ruin-tooltip");
     if (processed) return;
 
     // Check if the node is a ruin tooltip
@@ -1425,7 +1425,7 @@ export const insertBetterRuinTooltips = (node: HTMLElement) => {
       return;
     }
 
-    node.classList.add("zen-better-tooltip");
+    node.classList.add("zen-better-tooltip", "zen-better-ruin-tooltip");
 
     // Ruin drops
     const table = document.createElement("table");
@@ -1464,6 +1464,49 @@ export const insertBetterRuinTooltips = (node: HTMLElement) => {
       });
     target?.append(table);
   }
+};
+
+export const insertBetterMapZoneTooltips = (node: HTMLElement) => {
+  if (!store["better-tooltips"]) return;
+  if (!node.classList.contains("tooltip-map")) return;
+
+  // Check if the tooltip has already been processed
+  const processed = node.classList.contains("zen-better-zone-tooltip");
+  if (processed) return;
+
+  node.classList.add("zen-better-tooltip", "zen-better-zone-tooltip");
+
+  const coordsRow = Array.from(node.children).find((child) =>
+    child.children[1]?.textContent?.match(/\[(-?\d+) \/ (-?\d+)\]/)
+  );
+
+  const [x, y] =
+    (coordsRow?.textContent ?? "").match(/\[(-?\d+) \/ (-?\d+)\]/)?.slice(1) ??
+    [];
+
+  // Ignore city tooltip
+  if (x === "0" && y === "0") return;
+
+  // Calculate the distance in kilometers
+  const km = Math.round(
+    Math.sqrt(Math.pow(Number(x), 2) + Math.pow(Number(y), 2))
+  );
+
+  // Display the distance in km below the distance in AP
+  const newRow = document.createElement("div");
+  newRow.classList.add("row");
+  const leftCell = document.createElement("div");
+  leftCell.classList.add("cell", "rw-9", "left");
+  leftCell.textContent = "\u00A0"; // Non-breaking space
+  const rightCell = document.createElement("div");
+  rightCell.classList.add("cell", "rw-3", "right", "zen-km");
+  rightCell.textContent = `(${km}km)`;
+  newRow.append(leftCell, rightCell);
+
+  node.insertBefore(
+    newRow,
+    coordsRow?.nextElementSibling?.nextElementSibling ?? null
+  );
 };
 
 export const resetBankState = () => {
