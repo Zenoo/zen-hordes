@@ -125,6 +125,19 @@ export const updateLastItemsNotification = (bank: HTMLElement) => {
 
   // Add each item to the list
   store["bank-last-items-taken"].forEach(({ item, timestamp }) => {
+    // Check if the item has expired
+    const timeRemaining = timestamp + BLOCK_DURATION - Date.now();
+    if (timeRemaining <= 0) {
+      // Remove the item from the store if the time has expired
+      setStore(
+        "bank-last-items-taken",
+        store["bank-last-items-taken"].filter(
+          (i) => i.timestamp !== timestamp || i.item !== item
+        )
+      );
+      return;
+    }
+
     const listItem = document.createElement("li");
 
     const icon = document.createElement("img");
