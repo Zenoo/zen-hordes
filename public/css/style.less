@@ -1056,7 +1056,7 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
         }
 
         .zen-wiki-building {
-          display: flex;
+          display: none;
           font-size: 12px;
           font-weight: 700;
           text-align: left;
@@ -1076,6 +1076,10 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
 
           [data-type="item"] {
             cursor: pointer;
+          }
+
+          &.visible {
+            display: flex !important;
           }
         }
       }

@@ -1,7 +1,7 @@
 import { buildings } from "../data/buildings";
 import { items } from "../data/items";
 import { ruins } from "../data/ruins";
-import { Building, Item, Ruin } from "../data/types";
+import { Building, BuildingId, Item, Ruin } from "../data/types";
 import { ASSETS, DEFAULT_SHOPPING_LIST } from "../utils/constants";
 import { tooltip } from "../utils/tooltip";
 import { insertBetterItemTooltips } from "./betterTooltips";
@@ -419,7 +419,9 @@ const updateWiki = (state: Partial<WikiState>, resetSearch?: boolean) => {
   // Filter items
   let visibleCount = 0;
   Object.values(targets).forEach((target: Item | Building | Ruin) => {
-    const li = tab.querySelector(`li[data-id="${target.id}"]:not(.persistent)`);
+    const li = tab.querySelector(
+      `.zen-wiki-item[data-id="${target.id}"]:not(.persistent)`
+    );
 
     if (!li) {
       return;
@@ -433,7 +435,9 @@ const updateWiki = (state: Partial<WikiState>, resetSearch?: boolean) => {
       if (WIKI_STATE.category === "all") {
         visible = true;
       } else {
-        if (target.categories.includes(WIKI_STATE.category)) {
+        if (WIKI_STATE.category === ItemCategory.Heavy && target.heavy) {
+          visible = true;
+        } else if (target.categories.includes(WIKI_STATE.category)) {
           visible = true;
         } else {
           filteredOut = true;
@@ -469,6 +473,39 @@ const updateWiki = (state: Partial<WikiState>, resetSearch?: boolean) => {
       li.classList.remove("filtered-out");
     }
   });
+
+  if (WIKI_STATE.tab === "buildings" && WIKI_STATE.search) {
+    // Show parent buildings if they have visible children
+    tab
+      .querySelectorAll(".zen-wiki-item[data-type='building'].visible")
+      .forEach((building) => {
+        let childId = (building.getAttribute("data-id") ?? "") as BuildingId;
+        let parent = null;
+
+        while (parent === null || parent) {
+          parent = buildings[childId].parent;
+
+          if (parent) {
+            const li = tab.querySelector(`.zen-wiki-item[data-id="${parent}"]`);
+            if (li) {
+              li.classList.add("visible");
+            }
+
+            childId = parent;
+          }
+        }
+      });
+
+    // Hide building wrappers that have no visible children
+    tab.querySelectorAll(".buildings").forEach((wrapper) => {
+      const children = wrapper.querySelectorAll(".zen-wiki-item.visible");
+      if (children.length === 0) {
+        wrapper.classList.add("hidden");
+      } else {
+        wrapper.classList.remove("hidden");
+      }
+    });
+  }
 
   // Show empty item if no items are visible
   const emptyItem = tab.querySelector(".zen-wiki-item.empty");
