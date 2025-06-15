@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.8.3](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.8.2...zen-hordes-v1.8.3) (2025-06-15)
+
+
+### Bug Fixes
+
+* Display buildings using an item in tooltip ([ba063ca](https://github.com/Zenoo/zen-hordes/commit/ba063caa4b514c5e656ecf76f4d6d1d779b17915))
+* Scroll to building on icon click ([3cd2409](https://github.com/Zenoo/zen-hordes/commit/3cd24091e9681a450e658ccead6fa792e3583fb4))
+* Searchable buildings in wiki ([de84ad0](https://github.com/Zenoo/zen-hordes/commit/de84ad04ffc254de69ab3a0df29d14ed78c7b11c))
+
 ## [1.8.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.8.1...zen-hordes-v1.8.2) (2025-06-11)
 
 
