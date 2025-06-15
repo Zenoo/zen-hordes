@@ -812,12 +812,12 @@ export const insertWiki = () => {
       );
 
       // Scroll to the item
-      const scrollable = target.closest(".zen-wiki") as HTMLElement | null;
-      const item = scrollable?.querySelector(
+      const scrollable = target.closest<HTMLElement>(".zen-wiki");
+      const item = scrollable?.querySelector<HTMLElement>(
         `.zen-wiki-item[data-type="building"][data-id="${target.getAttribute(
           "data-id"
         )}"]`
-      ) as HTMLElement | null;
+      );
       if (!item) {
         console.error(
           "Building not found in wiki",
@@ -828,8 +828,13 @@ export const insertWiki = () => {
 
       item.classList.add("clicked");
 
+      const buildingContainer = item.closest<HTMLElement>(".buildings");
+
       scrollable?.scrollTo({
-        top: item.offsetTop - scrollable.offsetTop,
+        top:
+          item.offsetTop -
+          scrollable.offsetTop +
+          (buildingContainer?.offsetTop ?? 0),
         behavior: "smooth",
       });
     }

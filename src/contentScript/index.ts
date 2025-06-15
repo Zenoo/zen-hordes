@@ -35,6 +35,8 @@ import {
 } from "./UIEnhancer";
 import { insertWiki, openItemInWiki } from "./wiki";
 
+// TODO: Filter displayed buildings on search
+
 // Initialize the store
 await initStore();
 // Listen for messages from the background script
