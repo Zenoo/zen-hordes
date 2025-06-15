@@ -536,7 +536,7 @@ body.zen-map-preview-enabled {
   }
 
 
-  // Private town tag
+  // Poison tag
   .item-tag-poison {
     height: unset !important;
     font-size: 10px;
@@ -654,6 +654,25 @@ body.zen-map-preview-enabled {
       background-size: contain;
       background-repeat: no-repeat;
       background-image: url(https://zenoo.github.io/zen-hordes/emotes/ruin.gif);
+    }
+  }
+
+  // Building tag
+  .item-tag-buildings {
+    height: unset !important;
+    font-size: 10px;
+    text-align: left;
+
+    &::after {
+      background-position-x: 50%;
+      background-position-y: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(https://zenoo.github.io/zen-hordes/pictos/r_buildr.gif);
+    }
+
+    img {
+      cursor: pointer;
     }
   }
 
@@ -1079,6 +1098,7 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
 
         &.clicked {
           outline: 2px solid rgb(0 190 35);
+          z-index: 1;
         }
 
         h4 {

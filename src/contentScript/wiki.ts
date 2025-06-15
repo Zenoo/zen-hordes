@@ -677,9 +677,9 @@ const buildBuildingRow = (building: Building, indent: number) => {
   row.appendChild(actions);
 
   // Child buildings
-  const childBuildings = Object.values(buildings).filter(
-    (b) => b.parent === building.id
-  ).sort((a, b) => a.order - b.order);
+  const childBuildings = Object.values(buildings)
+    .filter((b) => b.parent === building.id)
+    .sort((a, b) => a.order - b.order);
 
   childBuildings.forEach((child) => {
     const childElements = buildBuildingRow(child, indent + 1);

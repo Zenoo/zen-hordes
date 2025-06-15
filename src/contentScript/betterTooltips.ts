@@ -92,6 +92,8 @@ const T: Translations = {
     "status.tg_april_ooze": "Infected the next day",
     foundIn: "Found in",
     foundWhenSearching: "Found when searching",
+    usedInBuildings_one: "Used in {{count}} building",
+    usedInBuildings_other: "Used in {{count}} buildings",
     unavailable: "Not available anymore",
     privateTownOnly: "Can only be found in private towns",
     poisonable: "Can be poisoned",
@@ -169,6 +171,8 @@ const T: Translations = {
     "status.tg_april_ooze": "Infecté le lendemain",
     foundIn: "Trouvé dans",
     foundWhenSearching: "Trouvé en fouillant",
+    usedInBuildings_one: "Utilisé dans {{count}} chantier",
+    usedInBuildings_other: "Utilisé dans {{count}} chantiers",
     unavailable: "N'est plus disponible",
     privateTownOnly: "Peut uniquement être trouvé dans les villes privées",
     poisonable: "Peut être empoisonné",
@@ -248,6 +252,8 @@ const T: Translations = {
     "status.tg_april_ooze": "Infectado al día siguiente",
     foundIn: "Encontrado en",
     foundWhenSearching: "Encontrado al buscar",
+    usedInBuildings_one: "Usado en {{count}} edificio",
+    usedInBuildings_other: "Usado en {{count}} edificios",
     unavailable: "Ya no disponible",
     privateTownOnly: "Solo se puede encontrar en ciudades privadas",
     poisonable: "Puede ser envenenado",
@@ -325,6 +331,8 @@ const T: Translations = {
     "status.tg_april_ooze": "Infectado al día siguiente",
     foundIn: "Gefunden in",
     foundWhenSearching: "Gefunden beim Suchen",
+    usedInBuildings_one: "Verwendet in {{count}} Gebäude",
+    usedInBuildings_other: "Verwendet in {{count}} Gebäuden",
     unavailable: "Nicht mehr verfügbar",
     privateTownOnly: "Kann nur in privaten Städten gefunden werden",
     poisonable: "Kann vergiftet werden",
@@ -477,6 +485,12 @@ const findRuinDrops = (item: Item) => {
     return ruin.drops.some((drop) => {
       return drop.item === item.id;
     });
+  });
+};
+
+const findRelatedBuildings = (item: Item) => {
+  return Object.values(buildings).filter((building) => {
+    return building.resources.some((resource) => resource.id === item.id);
   });
 };
 
@@ -1331,6 +1345,42 @@ export const insertBetterItemTooltips = (
       ruinDropTag.childNodes[ruinDropTag.childNodes.length - 1]?.remove();
 
       node.append(ruinDropTag);
+    }
+
+    // Buildings that can be built with this item
+    const relatedBuildings = findRelatedBuildings(item);
+    if (relatedBuildings.length) {
+      // Create a buildings tag
+      const buildingsTag = document.createElement("div");
+      buildingsTag.classList.add("item-tag", "item-tag-buildings", "zen-added");
+      buildingsTag.textContent = `${t(T, "usedInBuildings", {
+        count: relatedBuildings.length,
+      })}: `;
+
+      // Limit to 3 buildings outside the wiki
+      const inWiki = node.classList.contains("zen-wiki-item");
+      const displayedBuildings = inWiki
+        ? relatedBuildings
+        : relatedBuildings.slice(0, 3);
+
+      displayedBuildings.forEach((building) => {
+        const icon = document.createElement("img");
+        icon.src = `${ASSETS}/building/${building.icon}.gif`;
+        icon.title = building.name[store["hordes-lang"]];
+        icon.alt = building.name[store["hordes-lang"]];
+        icon.setAttribute("data-type", "building");
+        icon.setAttribute("data-id", building.id);
+        buildingsTag.append(icon);
+      });
+
+      // Add ellipsis if there are more than 3 buildings outside the wiki
+      if (!inWiki && relatedBuildings.length > 3) {
+        const ellipsis = document.createElement("span");
+        ellipsis.textContent = " ...";
+        buildingsTag.append(ellipsis);
+      }
+
+      node.append(buildingsTag);
     }
 
     // Recipes/Actions
