@@ -11403,7 +11403,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Lente convexa"
     },
     description: {
-      [Lang.EN]: "This almoust flawless lens is just waiting for your ingenuity to find a use for it.",
+      [Lang.EN]: "This almost flawless lens is just waiting for your ingenuity to find a use for it.",
       [Lang.FR]: "Cette lentille en bon état n'attend qu'un peu de votre ingéniosité pour être utilisée efficacement.",
       [Lang.DE]: "Diese fast makellose Linse wartet scheinbar nur darauf, von deiner Kreativität einem höheren Zweck zugeführt zu werden.",
       [Lang.ES]: "Esta lente en buen estado cuenta con tu ingeniosidad para ser utilizada eficazmente."
@@ -11520,7 +11520,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Diodo láser"
     },
     description: {
-      [Lang.EN]: "An electronic component from a revolutionary time. It looks like it's in good order, even if you can't see though it personally.",
+      [Lang.EN]: "An electronic component from a revolutionary time. It looks like it's in good order, even if you can't see through it personally.",
       [Lang.FR]: "Un composant électronique d'une époque révolue, dans l'état on peut s'en servir de judas, même si on ne voit pas à travers.",
       [Lang.DE]: "Ein elektronisches Bauteil aus alter Zeit. Du hast nicht viel Ahnung von dem Zeug, aber es scheint noch zu funktionieren.",
       [Lang.ES]: "Un componente electrónico de una época pasada. Ahora encuéntrale un uso."
@@ -11926,7 +11926,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Mini-libro de meditación"
     },
     description: {
-      [Lang.EN]: "This book, which has been published in many languages, teaches you how to deal with overwhealming situations. There is a life after death! It prevents the user from becoming terrorised.",
+      [Lang.EN]: "This book, which has been published in many languages, teaches you how to deal with overwhelming situations. There is a life after death! It prevents the user from becoming terrorised.",
       [Lang.FR]: "Ce livre, édité dans de nombreuses langues, vous permet d’appréhender plus calmement votre condition. Il y a une vie après la mort ! Prévient le statut terrorisé si utilisé.",
       [Lang.DE]: "Dieses Buch wurde in vielen Sprachen veröffentlicht. Es bietet Rat für aussichtslose Situationen und schützt so vor Angststarren.",
       [Lang.ES]: "Este librito fue un best-seller. Te ayuda a asimilar tranquilamente tu triste vida. Previene el estado aterrorizado si está en tu mochila."
@@ -11970,7 +11970,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Costal de hierba fresca"
     },
     description: {
-      [Lang.EN]: "Although it appears to be nothing but hay in the making, there must be another use for this herb apart from very disappointed cigarettes.",
+      [Lang.EN]: "Although it appears to be nothing but hay in the making, there must be another use for this herb apart from very disappointing cigarettes.",
       [Lang.FR]: "Puisqu'on vous dit que c'est de l'herbe banale, il y a surement une autre utilité à cette herbe qu'une simple cigarette roulée.",
       [Lang.DE]: "Scheint nicht viel besser als Heu zu sein, aber es wird sicher für irgendwas verwendbar sein. Außer ziemlich enttäuschenden Zigaretten.",
       [Lang.ES]: "Hierba común y corriente, debe tener otra utilidad, además de ser enrollada y fumada."
