@@ -11,7 +11,9 @@ export type ExternalSiteData = Readonly<{
   updateUrl?: string;
 }>;
 
-export const ExternalSite: Readonly<Record<ExternalSiteName, ExternalSiteData>> = {
+export const ExternalSite: Readonly<
+  Record<ExternalSiteName, ExternalSiteData>
+> = {
   [ExternalSiteName.BBH]: {
     id: 1,
     townUrl: "https://bbh.fred26.fr/?cid=5-{{townId}}",
@@ -20,7 +22,7 @@ export const ExternalSite: Readonly<Record<ExternalSiteName, ExternalSiteData>> 
   [ExternalSiteName.FM]: {
     id: 11,
     townUrl: "https://fatamorgana.md26.eu/spy/town/{{townId}}",
-    updateUrl: "https://fatamorgana.md26.eu/update?key={{userKey}}"
+    updateUrl: "https://fatamorgana.md26.eu/mho",
   },
   [ExternalSiteName.GH]: {
     id: 4,
@@ -29,6 +31,7 @@ export const ExternalSite: Readonly<Record<ExternalSiteName, ExternalSiteData>> 
   },
   [ExternalSiteName.MHO]: {
     id: 22,
-    updateUrl: "https://api.myhordesoptimizer.fr/externaltools/update?userKey={{userKey}}&userId={{userId}}",
+    updateUrl:
+      "https://api.myhordesoptimizer.fr/externaltools/update?userKey={{userKey}}&userId={{userId}}",
   },
 };

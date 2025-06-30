@@ -95,39 +95,73 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
       break;
     }
     case ExternalSiteName.FM: {
+      // Dead zombies
       const deadZombies = document.querySelectorAll(".actor.splatter").length;
-      const chaos = !!document.querySelector(
-        'body[data-theme-secondary-modifier="chaos"]'
-      );
+
+      // Players present
+      const playerList = Array.from(
+        document.querySelectorAll(".beyond-escort-off .username[x-user-id]")
+      )
+        .map((el) => +(el.getAttribute("x-user-id") ?? "0"))
+        .filter((id) => id > 0);
+
+      // Player position
       const position = {
         x: 0,
         y: 0,
       };
 
-      if (chaos) {
-        const displayedPosition = document.querySelector(
-          ".map .current-location"
-        );
+      const displayedPosition = document.querySelector(
+        ".map .current-location"
+      );
 
-        if (displayedPosition) {
-          const [x, y] = displayedPosition.textContent
-            ?.split(":")
-            .pop()
-            ?.split("/")
-            .map((coord) => Number(coord.trim())) ?? [0, 0];
-          position.x = x ?? 0;
-          position.y = y ?? 0;
-        }
+      if (displayedPosition) {
+        const [x, y] = displayedPosition.textContent
+          ?.split(":")
+          .pop()
+          ?.split("/")
+          .map((coord) => Number(coord.trim())) ?? [0, 0];
+        position.x = x ?? 0;
+        position.y = y ?? 0;
       }
 
+      // Scout information
+      const isScout = !!document.querySelector(
+        "hordes-passive-inventory .item img[src^='/build/images/item/item_vest']"
+      );
+      const scoutRadar = {
+        east: 0,
+        west: 0,
+        north: 0,
+        south: 0,
+      };
+
+      document
+        .querySelectorAll(".zone-plane-controls .scout-sense")
+        .forEach((element) => {
+          const direction = Array.from(element.classList)
+            .find((className) => className.startsWith("scout-sense-"))
+            ?.replace("scout-sense-", "");
+          if (direction) {
+            const estimate = element.querySelector("text")?.textContent;
+            scoutRadar[direction as keyof typeof scoutRadar] = +(estimate ?? 0);
+          }
+        });
+
+      // Final request params
       updateParams = {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: `key=${store["user-key"]}&deadzombies=${deadZombies}${
-          chaos ? `&chaosx=${position.x}&chaosy=${position.y}` : ""
-        }`,
+        body: JSON.stringify({
+          userKey: store["user-key"],
+          nbrKill: deadZombies,
+          x: position.x,
+          y: position.y,
+          scoutRadar: isScout ? scoutRadar : undefined,
+          playerList: playerList.length ? playerList : undefined,
+        }),
       };
       break;
     }
