@@ -45,7 +45,12 @@ export const displayPlayerTag = (node: HTMLElement) => {
 export const insertPlayerInfo = (node: HTMLElement) => {
   if (!node.classList.contains("link-blocks")) return;
 
-  const playerId = node.closest("#user-tooltip")?.querySelector(".link")?.getAttribute("x-ajax-href")?.split("/").pop();
+  const playerId = node
+    .closest("#user-tooltip")
+    ?.querySelector(".link[x-ajax-href^='/jx/soul']")
+    ?.getAttribute("x-ajax-href")
+    ?.split("/")
+    .pop();
 
   // Tag
   const tagWrapper = document.createElement("div");
@@ -69,15 +74,33 @@ export const insertPlayerInfo = (node: HTMLElement) => {
     tagInput.setAttribute("value", storedTag);
   }
 
+  const existingPosts =
+    document.querySelectorAll<HTMLElement>(".forum-post-header");
+
   tagInput.addEventListener("input", (event) => {
     const value = (event.target as HTMLInputElement).value;
 
     // Store in local storage
-    localStorage.setItem(`playerTag_${playerId}`, value);
+    if (value.length) {
+      localStorage.setItem(`playerTag_${playerId}`, value);
+    } else {
+      localStorage.removeItem(`playerTag_${playerId}`);
+    }
 
     // Update the tags displayed
-    document.querySelectorAll(`.zen-player-tag[data-player-id="${playerId}"]`).forEach((tag) => {
-      tag.textContent = value;
+    document
+      .querySelectorAll(`.zen-player-tag[data-player-id="${playerId}"]`)
+      .forEach((tag) => {
+        if (value.length) {
+          tag.textContent = value;
+        } else {
+          tag.remove(); // Remove the tag if empty
+        }
+      });
+
+    // Update the tags in existing posts
+    existingPosts.forEach((post) => {
+      displayPlayerTag(post);
     });
   });
 
@@ -109,7 +132,11 @@ export const insertPlayerInfo = (node: HTMLElement) => {
     const value = (event.target as HTMLInputElement).value;
 
     // Store in local storage
-    localStorage.setItem(`playerNotes_${playerId}`, value);
+    if (value.length) {
+      localStorage.setItem(`playerNotes_${playerId}`, value);
+    } else {
+      localStorage.removeItem(`playerNotes_${playerId}`);
+    }
   });
 
   notesWrapper.appendChild(notesInput);
