@@ -2,7 +2,6 @@ import { items } from "../data/items";
 import { ItemId } from "../data/types";
 import { ASSETS } from "../utils/constants";
 import { findItemFromInventory } from "../utils/itemUtils";
-import { resetBankState } from "./betterTooltips";
 import { setStore, store } from "./store";
 import { t } from "./translate";
 
@@ -58,7 +57,11 @@ export const handleItemTaken = (itemId: ItemId, waterFromWell?: boolean) => {
   }
 
   // Check if the limit has been reached
-  if (store["bank-last-items-taken"].length >= getMaxItems()) {
+  if (
+    store["bank-last-items-taken"].filter(
+      ({ timestamp }) => timestamp + BLOCK_DURATION > Date.now()
+    ).length >= getMaxItems()
+  ) {
     // Reset all item timers
     setStore(
       "bank-last-items-taken",
@@ -240,22 +243,4 @@ export const trackBank = (node: HTMLElement) => {
   }
 
   updateLastItemsNotification(node);
-};
-
-export const resetOnDeath = (node: HTMLElement) => {
-  if (node.classList.contains("death_header")) {
-    // Only reset for own death, not for history views
-    if (!location.href.includes("/welcomeToNowhere")) return;
-
-    setStore("last-water-ration-taken", new Date(0).getTime());
-    setStore("bank-last-items-taken", []);
-
-    // Reset bank state
-    resetBankState();
-    localStorage.removeItem("bankStateTimestamp");
-
-    // Reset camping variables
-    setStore("camping-day", null);
-    setStore("previous-campings", 0);
-  }
 };

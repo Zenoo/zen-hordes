@@ -1,4 +1,4 @@
-import { resetOnDeath, trackBank } from "./bankTracker";
+import { trackBank } from "./bankTracker";
 import {
   insertBetterItemTooltips,
   insertBetterMapZoneTooltips,
@@ -26,7 +26,7 @@ import {
   insertShoppingListToggle,
   insertShoppingListUpdateButton,
 } from "./shoppingList";
-import { initStore } from "./store";
+import { initStore, resetOnDeath } from "./store";
 import {
   autoOpenBagOutside,
   autoOpenBagWhenMovingItems,
@@ -34,6 +34,12 @@ import {
   enhanceUI,
 } from "./UIEnhancer";
 import { insertWiki, openItemInWiki } from "./wiki";
+
+// TODO: Give scavenger data to FM
+// TODO: Prevent addon on asset URLS
+// TODO: Be able to change every parameter of the camping calculator
+// TODO: Add a button to the camping calculator to reset the parameters
+// TODO: Listen to html event for items taken
 
 // Initialize the store
 await initStore();

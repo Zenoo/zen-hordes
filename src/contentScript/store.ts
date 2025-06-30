@@ -1,5 +1,6 @@
 import { ItemId } from "../data/types";
 import { DEFAULT_SHOPPING_LIST } from "../utils/constants";
+import { resetBankState } from "./betterTooltips";
 import { ExternalSiteName } from "./externalSites";
 
 /**
@@ -91,4 +92,22 @@ export const initStore = async () => {
   }
 
   Object.assign(store, data);
+};
+
+export const resetOnDeath = (node: HTMLElement) => {
+  if (node.classList.contains("death_header")) {
+    // Only reset for own death, not for history views
+    if (!location.href.includes("/welcomeToNowhere")) return;
+
+    setStore("last-water-ration-taken", new Date(0).getTime());
+    setStore("bank-last-items-taken", []);
+
+    // Reset bank state
+    resetBankState();
+    localStorage.removeItem("bankStateTimestamp");
+
+    // Reset camping variables
+    setStore("camping-day", null);
+    setStore("previous-campings", 0);
+  }
 };
