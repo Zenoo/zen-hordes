@@ -148,6 +148,42 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
           }
         });
 
+      // Scavenger information
+      const isScavenger = !!document.querySelector(
+        "hordes-passive-inventory .item img[src^='/build/images/item/item_pelle']"
+      );
+
+      type ScavengerDepletedZones = {
+        east?: boolean;
+        west?: boolean;
+        north?: boolean;
+        south?: boolean;
+      };
+
+      const scavengerDepletedZones: ScavengerDepletedZones = {};
+
+      document
+        .querySelectorAll(".zone-plane-controls .scavenger-sense")
+        .forEach((element) => {
+          const classes = Array.from(element.classList);
+          const direction = classes
+            .find((className) =>
+              className.match(/scavenger-sense-(east|west|north|south)/)
+            )
+            ?.replace("scavenger-sense-", "");
+          if (direction) {
+            const estimate = classes
+              .find((className) => className.match(/scavenger-sense-\d+/))
+              ?.replace("scavenger-sense-", "");
+
+            if (!estimate) return;
+
+            scavengerDepletedZones[
+              direction as keyof typeof scavengerDepletedZones
+            ] = estimate === "0";
+          }
+        });
+
       // Final request params
       updateParams = {
         method: "POST",
@@ -160,6 +196,7 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
           x: position.x,
           y: position.y,
           scoutRadar: isScout ? scoutRadar : undefined,
+          scavRadar: isScavenger ? scavengerDepletedZones : undefined,
           playerList: playerList.length ? playerList : undefined,
         }),
       };
