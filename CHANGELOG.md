@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.9.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.8.3...zen-hordes-v1.9.0) (2025-07-02)
+
+
+### Features
+
+* Allow camping calculator parameters customization + reset ([1dba520](https://github.com/Zenoo/zen-hordes/commit/1dba5202e70224042baefd7bf5964bbc691e396a))
+
+
+### Bug Fixes
+
+* Don't load the script on asset URLs ([e7f9b50](https://github.com/Zenoo/zen-hordes/commit/e7f9b5070f2f1de973d68f9b8327f145abaf0c45))
+* MH v4.0.9 data ([c75cca7](https://github.com/Zenoo/zen-hordes/commit/c75cca7eb9dfecf6e4968d984a8ed5e3fd3558b3))
+* Player list + Scout data sent to FM ([6547422](https://github.com/Zenoo/zen-hordes/commit/65474226b8bb19112e3e04985dd4bad95a3d994c))
+* Player tag display in town ([dae56fe](https://github.com/Zenoo/zen-hordes/commit/dae56fe045db555b42836aa7fb21f7c58e3649ee))
+* Send scavenger data to FM ([767a1f7](https://github.com/Zenoo/zen-hordes/commit/767a1f7e5119093272264fa80e36b926d1b049cf))
+* Taking a ration from the well resets the items taken timer ([84a8475](https://github.com/Zenoo/zen-hordes/commit/84a84759831ed2cf2a823d7fb052518fca9be90e))
+
 ## [1.8.3](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.8.2...zen-hordes-v1.8.3) (2025-06-15)
 
 
