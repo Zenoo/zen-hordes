@@ -1,5 +1,5 @@
 import { ruins } from "../data/ruins";
-import { ItemId, Ruin } from "../data/types";
+import { ItemId, Ruin, RuinId } from "../data/types";
 import { ASSETS } from "../utils/constants";
 import { findItemFromInventory } from "../utils/itemUtils";
 import { setStore, store } from "./store";
@@ -42,6 +42,8 @@ const T: Translations = {
       "You reckon your chances of surviving here are good, you should be able to spend the night here.",
     "campingChances.100":
       "You reckon your chances of surviving here are optimal. Nobody would see you, even if they were looking straight at you.",
+    reset: "Reset",
+    close: "Close",
   },
   fr: {
     campingCalculator: "Calculateur de camping",
@@ -79,6 +81,8 @@ const T: Translations = {
       "Vous estimez que vos chances de survie ici sont élevées : vous devriez pouvoir passer la nuit ici.",
     "campingChances.100":
       "Vous estimez que vos chances de survie ici sont optimales : personne ne vous verrait même en vous pointant du doigt.",
+    reset: "Réinitialiser",
+    close: "Fermer",
   },
   de: {
     campingCalculator: "Camping Rechner",
@@ -116,6 +120,8 @@ const T: Translations = {
       "Du schätzt, dass deine Überlebenschancen hier gut sind. Du müsstest hier problemlos die Nacht verbringen können.",
     "campingChances.100":
       "Du schätzt, dass deine Überlebenschancen hier optimal sind. Niemand wird dich sehen - selbst wenn man mit dem Finger auf dich zeigt.",
+    reset: "Zurücksetzen",
+    close: "Schließen",
   },
   es: {
     campingCalculator: "Calculadora de Camping",
@@ -153,6 +159,8 @@ const T: Translations = {
       "Crees que tus posibilidades de sobrevivir aquí son altas. Podrías pasar la noche aquí.",
     "campingChances.100":
       "Crees que tus posibilidades de sobrevivir aquí son óptimas. Nadie te verá, ni señalándote con el dedo",
+    reset: "Reiniciar",
+    close: "Cerrar",
   },
 };
 
@@ -749,11 +757,6 @@ const createLine = (key: keyof CampingParams) => {
         return;
       }
 
-      // Don't display pandemonium
-      if (key === "pandemonium") {
-        return;
-      }
-
       const icons = document.createElement("div");
       const text = document.createElement("p");
 
@@ -785,7 +788,7 @@ const createLine = (key: keyof CampingParams) => {
       });
 
       // Some params don't need the text
-      if (key !== "reclusiveLevel" && key !== "job") {
+      if (key !== "reclusiveLevel" && key !== "job" && key !== "pandemonium") {
         // Text
         text.textContent = `${result[key]}%`;
       }
@@ -823,6 +826,136 @@ const createLine = (key: keyof CampingParams) => {
     text.textContent = `${result.ruin}%`;
     li.appendChild(icons);
     li.appendChild(text);
+
+    // Ruin selector
+    const ruinSelector = document.createElement("ul");
+    ruinSelector.classList.add("zen-ruin-selector", "heroic_actions");
+
+    // Close button
+    const closeButton = document.createElement("li");
+    closeButton.classList.add("zen-ruin-close", "help");
+
+    const closeIcon = document.createElement("img");
+    closeIcon.src = `${ASSETS}/icons/error.png`;
+    closeIcon.alt = t(T, "close");
+    closeIcon.title = t(T, "close");
+    closeButton.appendChild(closeIcon);
+
+    closeButton.addEventListener("click", () => {
+      ruinSelector.classList.remove("active");
+    });
+
+    ruinSelector.appendChild(closeButton);
+
+    [
+      {
+        id: 0,
+        name: {
+          [Lang.EN]: T[Lang.EN]?.noRuin ?? "",
+          [Lang.FR]: T[Lang.FR]?.noRuin ?? "",
+          [Lang.DE]: T[Lang.DE]?.noRuin ?? "",
+          [Lang.ES]: T[Lang.ES]?.noRuin ?? "",
+        },
+        icon: "ruin",
+        km: {
+          min: 1,
+          max: 100,
+        },
+      },
+    ]
+      .concat(
+        Object.values(ruins).sort((a, b) =>
+          a.name[store["hordes-lang"]].localeCompare(
+            b.name[store["hordes-lang"]]
+          )
+        )
+      )
+      .forEach((ruin) => {
+        const ruinLi = document.createElement("li");
+        ruinLi.classList.add("zen-ruin-item", "heroic_action");
+        ruinLi.setAttribute("data-ruin-id", ruin.id.toString());
+
+        // Ruin icon
+        const ruinIcon = document.createElement("img");
+        ruinIcon.src =
+          ruin.id === 0
+            ? `${ASSETS}/emotes/ruin.gif`
+            : `${ASSETS}/ruin/${ruin.icon}.gif`;
+        ruinIcon.alt = ruin.name[store["hordes-lang"]];
+
+        if (ruin.id === 0) {
+          ruinIcon.classList.add("no-ruin");
+        }
+
+        ruinLi.appendChild(ruinIcon);
+
+        // Ruin title
+        const ruinTitle = document.createElement("span");
+        ruinTitle.classList.add("label");
+        ruinTitle.textContent = ruin.name[store["hordes-lang"]];
+        ruinLi.appendChild(ruinTitle);
+
+        // Ruin km
+        const ruinKm = document.createElement("em");
+        ruinKm.classList.add("em");
+        ruinKm.textContent = `[${ruin.km.min} - ${ruin.km.max} km]`;
+        ruinLi.appendChild(ruinKm);
+
+        ruinSelector.appendChild(ruinLi);
+      });
+
+    li.appendChild(ruinSelector);
+
+    // Open ruin selector on click
+    ruinIcon.addEventListener("click", () => {
+      const open = ruinSelector.classList.toggle("active");
+
+      if (!open) return;
+
+      // Position the selector (centered on top of the ruin icon)
+      const closestRelative = ruinIcon.closest<HTMLElement>(".cell");
+      if (!closestRelative) return;
+
+      const closestRelativeRect = closestRelative.getBoundingClientRect();
+      const rect = ruinIcon.getBoundingClientRect();
+      ruinSelector.style.left = `${
+        rect.left - closestRelativeRect.left - ruinSelector.offsetWidth / 2
+      }px`;
+      ruinSelector.style.top = `${
+        rect.top - closestRelativeRect.top - ruinSelector.offsetHeight
+      }px`;
+
+      // Snap to window edges
+      const windowRect = document.body.getBoundingClientRect();
+      if (+ruinSelector.style.left < windowRect.left) {
+        ruinSelector.style.left = `${windowRect.left}px`;
+      }
+      if (
+        +ruinSelector.style.left + ruinSelector.offsetWidth >
+        windowRect.right
+      ) {
+        ruinSelector.style.left = `${
+          windowRect.right - ruinSelector.offsetWidth
+        }px`;
+      }
+    });
+
+    // Handle ruin selection
+    ruinSelector.addEventListener("click", (event) => {
+      const target = event.target as HTMLElement;
+      const li = target.closest<HTMLElement>(".zen-ruin-item");
+      if (!li) return;
+
+      const ruinId = +(li.getAttribute("data-ruin-id") ?? "0");
+
+      // Set the selected ruin
+      params.ruin = ruinId === 0 ? undefined : ruins[ruinId as RuinId];
+
+      updateCampingCalculatorWithCurrentParams(undefined, true);
+
+      // Close the selector
+      ruinSelector.classList.remove("active");
+    });
   }
 
   return li;
@@ -831,92 +964,107 @@ const createLine = (key: keyof CampingParams) => {
 export const displayCampingCalculator = (node: HTMLElement) => {
   if (!store["camping-calculator"]) return;
 
-  if (node.classList.contains("camping_actions")) {
-    const existing = document.querySelector(".zen-camping-calculator");
-    if (existing) return;
+  if (!node.classList.contains("camping_actions")) return;
 
-    const calculator = document.createElement("div");
-    calculator.classList.add("zen-camping-calculator");
+  const existing = document.querySelector(".zen-camping-calculator");
+  if (existing) return;
 
-    // Title
-    const title = document.createElement("h3");
-    title.innerText = t(T, "campingCalculator");
-    title.classList.add("emphasis");
-    calculator.appendChild(title);
+  const calculator = document.createElement("div");
+  calculator.classList.add("zen-camping-calculator");
 
-    // Params
-    const list = document.createElement("ul");
-    updateCampingResult();
+  // Title
+  const title = document.createElement("h3");
+  title.innerText = t(T, "campingCalculator");
+  title.classList.add("emphasis");
+  calculator.appendChild(title);
 
-    // Add params
-    Object.keys(params).forEach((key) => {
-      const paramKey = key as keyof CampingParams;
-      const line = createLine(paramKey);
-      if (line) {
-        list.appendChild(line);
-      }
-    });
+  // Params
+  const list = document.createElement("ul");
+  updateCampingResult();
 
-    calculator.appendChild(list);
-
-    // Total
-    const totalWrapper = document.createElement("p");
-    totalWrapper.classList.add("total");
-
-    const totalText = document.createElement("span");
-    totalText.classList.add("total-text");
-    totalText.textContent = `${t(T, "total")}: `;
-    totalWrapper.prepend(totalText);
-
-    const total = document.createElement("span");
-    total.classList.add("total-value");
-    total.textContent = `${result.total}%`;
-    totalWrapper.appendChild(total);
-
-    const unlimitedTotal = document.createElement("span");
-    unlimitedTotal.classList.add("unlimited-total-value");
-    unlimitedTotal.textContent = ` (${result.unlimitedTotal}%)`;
-
-    // Hide unlimited total if it's the same as total
-    if (result.unlimitedTotal === result.total) {
-      unlimitedTotal.classList.add("hidden");
+  // Add params
+  Object.keys(params).forEach((key) => {
+    const paramKey = key as keyof CampingParams;
+    const line = createLine(paramKey);
+    if (line) {
+      list.appendChild(line);
     }
+  });
 
-    totalWrapper.appendChild(unlimitedTotal);
-    calculator.appendChild(totalWrapper);
+  calculator.appendChild(list);
 
-    // Total description
-    const totalDesc = document.createElement("p");
-    totalDesc.classList.add("total-desc");
+  // Total
+  const totalWrapper = document.createElement("p");
+  totalWrapper.classList.add("total");
 
-    if (result.total >= 100) {
-      totalDesc.textContent = t(T, "campingChances.100");
-    } else if (result.total >= 91) {
-      totalDesc.textContent = t(T, "campingChances.91");
-    } else if (result.total >= 81) {
-      totalDesc.textContent = t(T, "campingChances.81");
-    } else if (result.total >= 66) {
-      totalDesc.textContent = t(T, "campingChances.66");
-    } else if (result.total >= 51) {
-      totalDesc.textContent = t(T, "campingChances.51");
-    } else if (result.total >= 31) {
-      totalDesc.textContent = t(T, "campingChances.31");
-    } else if (result.total >= 11) {
-      totalDesc.textContent = t(T, "campingChances.11");
-    } else {
-      totalDesc.textContent = t(T, "campingChances.0");
-    }
-    calculator.appendChild(totalDesc);
+  const totalText = document.createElement("span");
+  totalText.classList.add("total-text");
+  totalText.textContent = `${t(T, "total")}: `;
+  totalWrapper.prepend(totalText);
 
-    node.after(calculator);
+  const total = document.createElement("span");
+  total.classList.add("total-value");
+  total.textContent = `${result.total}%`;
+  totalWrapper.appendChild(total);
+
+  const unlimitedTotal = document.createElement("span");
+  unlimitedTotal.classList.add("unlimited-total-value");
+  unlimitedTotal.textContent = ` (${result.unlimitedTotal}%)`;
+
+  // Hide unlimited total if it's the same as total
+  if (result.unlimitedTotal === result.total) {
+    unlimitedTotal.classList.add("hidden");
   }
+
+  totalWrapper.appendChild(unlimitedTotal);
+  calculator.appendChild(totalWrapper);
+
+  // Total description
+  const totalDesc = document.createElement("p");
+  totalDesc.classList.add("total-desc");
+
+  if (result.total >= 100) {
+    totalDesc.textContent = t(T, "campingChances.100");
+  } else if (result.total >= 91) {
+    totalDesc.textContent = t(T, "campingChances.91");
+  } else if (result.total >= 81) {
+    totalDesc.textContent = t(T, "campingChances.81");
+  } else if (result.total >= 66) {
+    totalDesc.textContent = t(T, "campingChances.66");
+  } else if (result.total >= 51) {
+    totalDesc.textContent = t(T, "campingChances.51");
+  } else if (result.total >= 31) {
+    totalDesc.textContent = t(T, "campingChances.31");
+  } else if (result.total >= 11) {
+    totalDesc.textContent = t(T, "campingChances.11");
+  } else {
+    totalDesc.textContent = t(T, "campingChances.0");
+  }
+  calculator.appendChild(totalDesc);
+
+  // Reset button
+  const resetButton = document.createElement("button");
+  resetButton.classList.add("zen-reset-button");
+  resetButton.textContent = t(T, "reset");
+  resetButton.addEventListener("click", () => {
+    // Reset params
+    params.ruin = undefined;
+    updateCampingCalculatorWithCurrentParams(undefined, true);
+  });
+  calculator.appendChild(resetButton);
+
+  node.after(calculator);
 };
 
-export const updateCampingCalculatorWithCurrentParams = (node: HTMLElement) => {
+export const updateCampingCalculatorWithCurrentParams = (
+  node?: HTMLElement,
+  force?: boolean
+) => {
   if (!store["camping-calculator"]) return;
   if (
-    node.getAttribute("for") !== "zone-camp" &&
-    !node.classList.contains("zone-dist")
+    node?.getAttribute("for") !== "zone-camp" &&
+    !node?.classList.contains("zone-dist") &&
+    !force
   )
     return;
 
@@ -924,11 +1072,20 @@ export const updateCampingCalculatorWithCurrentParams = (node: HTMLElement) => {
   const existing = document.querySelector(
     ".zen-camping-calculator[data-updated]"
   );
-  if (existing) return;
+  if (existing && !force) return;
 
   const inventoryItems = document.querySelectorAll<HTMLElement>(
     "hordes-passive-inventory li.item"
   );
+
+  // Already hidden citizens
+  params.alreadyHiddenCitizens = 0;
+
+  // Defense objects
+  params.defenseObjects = 0;
+
+  // Manual improvements
+  params.manualImprovements = 0;
 
   // Distance
   const distance = document.querySelector(".zone-dist .center b");
@@ -991,6 +1148,18 @@ export const updateCampingCalculatorWithCurrentParams = (node: HTMLElement) => {
       return true;
     }
   });
+
+  // Night (assume the player is planning to camp at night)
+  params.night = true;
+
+  // Lighthouse built
+  params.lighthouseBuilt = false;
+
+  // Devastated town
+  params.devastatedTown = false;
+
+  // Tomb
+  params.tomb = false;
 
   // Pandemonium
   params.pandemonium = !!document.querySelector(

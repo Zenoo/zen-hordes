@@ -119,6 +119,7 @@ body.zen-enhanced {
   // Missing padding for camping zone
   .zone-camp {
     padding-bottom: 5px;
+    overflow: unset;
   }
 
   // Citizen list avatar size
@@ -1186,6 +1187,7 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
         flex-shrink: 0;
 
         .zen-ruin-icon {
+          cursor: pointer;
           margin: 0 20px;
         }
 
@@ -1205,8 +1207,62 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
         margin-left: 4px;
       }
 
-      &[data-param="ruin"] .crossed::before {
-        right: 20px;
+      &[data-param="ruin"] {
+        .crossed::before {
+          right: 20px;
+        }
+
+        .zen-ruin-selector {
+          display: none;
+          position: absolute;
+          max-height: 200px;
+          overflow-y: auto;
+          padding-top: 14px;
+          z-index: 1000;
+
+          &.active {
+            display: block;
+          }
+
+          li.heroic_action {
+            display: block;
+            padding-left: 40px;
+            overflow: hidden;
+
+            img {
+              height: auto;
+              width: 32px;
+
+              &.no-ruin {
+                opacity: 0;
+              }
+            }
+
+            .em {
+              font-variant: none;
+            }
+          }
+
+          .zen-ruin-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 3px;
+            cursor: pointer;
+
+            img {
+              position: relative;
+              top: unset;
+              left: unset;
+              height: 8px;
+              width: 8px;
+            }
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
       }
     }
   }
@@ -1233,6 +1289,11 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
+  }
+
+  .zen-reset-button {
+    width: auto;
+    margin: 4px auto;
   }
 }
 

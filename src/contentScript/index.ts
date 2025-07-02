@@ -35,8 +35,6 @@ import {
 } from "./UIEnhancer";
 import { insertWiki, openItemInWiki } from "./wiki";
 
-// TODO: Be able to change every parameter of the camping calculator
-// TODO: Add a button to the camping calculator to reset the parameters
 // TODO: Listen to html event for items taken
 
 (async () => {
