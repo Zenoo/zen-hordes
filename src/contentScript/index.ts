@@ -35,75 +35,80 @@ import {
 } from "./UIEnhancer";
 import { insertWiki, openItemInWiki } from "./wiki";
 
-// TODO: Give scavenger data to FM
-// TODO: Prevent addon on asset URLS
 // TODO: Be able to change every parameter of the camping calculator
 // TODO: Add a button to the camping calculator to reset the parameters
 // TODO: Listen to html event for items taken
 
-// Initialize the store
-await initStore();
-// Listen for messages from the background script
-listenToBackgroundMessages();
+(async () => {
+  // Do nothing on asset URLs
+  if (location.href.includes("/build/images/")) {
+    return;
+  }
 
-// Actions that can be performed immediately
-// should be handled here
-enhanceUI();
-insertMapPreviewTooltip();
-insertWiki();
-insertShoppingListToggle();
-updateItemBankCountPeriodically();
+  // Initialize the store
+  await initStore();
+  // Listen for messages from the background script
+  listenToBackgroundMessages();
 
-// Actions that need to wait for specific elements
-// to be added to the DOM should be handled here
-onMount((node) => {
-  trackBank(node);
-  displayExternalCityLinks(node);
-  displayUpdateButton(node);
-  insertBetterItemTooltips(node);
-  insertBetterRuinTooltips(node);
-  insertBetterMapZoneTooltips(node);
-  displayShamanSoulsButton(node);
-  displayCampingCalculator(node);
-  resetOnDeath(node);
-  storeBankState(node);
-  autoSelectGlobalMapSetting(node);
-  autoOpenBagOutside(node);
-  autoOpenBagWhenMovingItems(node);
-  updatePreviousCampings(node);
-  displayMapPreview(node);
-  insertPlayerInfo(node);
-  displayPlayerTag(node);
-  insertShoppingListUpdateButton(node);
-  updateCampingCalculatorWithCurrentParams(node);
-});
+  // Actions that can be performed immediately
+  // should be handled here
+  enhanceUI();
+  insertMapPreviewTooltip();
+  insertWiki();
+  insertShoppingListToggle();
+  updateItemBankCountPeriodically();
 
-// Actions that need to be performed on hover
-// should be handled here
-// onHover((_event) => {
-//   // Nothing yet
-// });
+  // Actions that need to wait for specific elements
+  // to be added to the DOM should be handled here
+  onMount((node) => {
+    trackBank(node);
+    displayExternalCityLinks(node);
+    displayUpdateButton(node);
+    insertBetterItemTooltips(node);
+    insertBetterRuinTooltips(node);
+    insertBetterMapZoneTooltips(node);
+    displayShamanSoulsButton(node);
+    displayCampingCalculator(node);
+    resetOnDeath(node);
+    storeBankState(node);
+    autoSelectGlobalMapSetting(node);
+    autoOpenBagOutside(node);
+    autoOpenBagWhenMovingItems(node);
+    updatePreviousCampings(node);
+    displayMapPreview(node);
+    insertPlayerInfo(node);
+    displayPlayerTag(node);
+    insertShoppingListUpdateButton(node);
+    updateCampingCalculatorWithCurrentParams(node);
+  });
 
-// Actions that need to be performed off hover
-// should be handled here
-// offHover((_event) => {
-//   // Nothing yet
-// });
+  // Actions that need to be performed on hover
+  // should be handled here
+  // onHover((_event) => {
+  //   // Nothing yet
+  // });
 
-// Actions that need to be performed on a click
-// should be handled here
-onClick((node) => {
-  updateCampingCalculatorWithCurrentParams(node);
-});
+  // Actions that need to be performed off hover
+  // should be handled here
+  // offHover((_event) => {
+  //   // Nothing yet
+  // });
 
-// Actions that need to be performed on a key press
-// should be handled here
-onKey("h", (node) => {
-  openItemInWiki(node);
-});
-onKey("q", () => {
-  toggleItemActions(false);
-});
-offKey("q", () => {
-  toggleItemActions(true);
-});
+  // Actions that need to be performed on a click
+  // should be handled here
+  onClick((node) => {
+    updateCampingCalculatorWithCurrentParams(node);
+  });
+
+  // Actions that need to be performed on a key press
+  // should be handled here
+  onKey("h", (node) => {
+    openItemInWiki(node);
+  });
+  onKey("q", () => {
+    toggleItemActions(false);
+  });
+  offKey("q", () => {
+    toggleItemActions(true);
+  });
+})();
