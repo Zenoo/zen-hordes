@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.9.0...zen-hordes-v1.9.1) (2025-07-04)
+
+
+### Bug Fixes
+
+* Camping already hidden citizen malus reset ([5b3e87f](https://github.com/Zenoo/zen-hordes/commit/5b3e87f4ab972d612d2b312e723426a9fdaf8beb))
+
 ## [1.9.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.8.3...zen-hordes-v1.9.0) (2025-07-02)
 
 
