@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.9.1...zen-hordes-v1.9.2) (2025-07-04)
+
+
+### Bug Fixes
+
+* Camping calculator UI improvement ([7213602](https://github.com/Zenoo/zen-hordes/commit/7213602a72d9d41bd1efe8eb919e5c2837bb2e56))
+
 ## [1.9.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.9.0...zen-hordes-v1.9.1) (2025-07-04)
 
 
