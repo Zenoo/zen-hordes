@@ -7,7 +7,7 @@ import { t } from "./translate";
 
 const T: Translations = {
   en: {
-    campingCalculator: "Camping Calculator",
+    campingCalculator: "camping calculator",
     more: "More",
     less: "Less",
     alreadyHiddenCitizens: "Already hidden citizens",
@@ -46,7 +46,7 @@ const T: Translations = {
     close: "Close",
   },
   fr: {
-    campingCalculator: "Calculateur de camping",
+    campingCalculator: "calculateur de camping",
     more: "Plus",
     less: "Moins",
     alreadyHiddenCitizens: "Citoyens déjà cachés",
@@ -85,7 +85,7 @@ const T: Translations = {
     close: "Fermer",
   },
   de: {
-    campingCalculator: "Camping Rechner",
+    campingCalculator: "camping rechner",
     more: "Mehr",
     less: "Weniger",
     alreadyHiddenCitizens: "Bereits versteckte Bürger",
@@ -124,7 +124,7 @@ const T: Translations = {
     close: "Schließen",
   },
   es: {
-    campingCalculator: "Calculadora de Camping",
+    campingCalculator: "calculadora de camping",
     more: "Más",
     less: "Menos",
     alreadyHiddenCitizens: "Ciudadanos ya ocultos",
