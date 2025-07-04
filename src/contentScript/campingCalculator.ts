@@ -223,9 +223,9 @@ const updateCampingResult = () => {
   // Only applied if a spot is available
   const ruinBaseValue = params.ruin ? params.ruin.camping.baseValue : -25;
   result.ruin = ruinBaseValue;
+  result.alreadyHiddenCitizens = 0;
   if (params.alreadyHiddenCitizens < spots) {
     total += ruinBaseValue;
-    result.alreadyHiddenCitizens = 0;
   } else if (params.ruin) {
     result.alreadyHiddenCitizens = -ruinBaseValue;
   } else {
