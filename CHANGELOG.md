@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.9.3](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.9.2...zen-hordes-v1.9.3) (2025-07-14)
+
+
+### Bug Fixes
+
+* Broken tooltips after v4.0.10 ([cc8858a](https://github.com/Zenoo/zen-hordes/commit/cc8858a92e18626e563e855b3cf96239a2e78ce3))
+* MH v4.0.10 data ([3aa3d34](https://github.com/Zenoo/zen-hordes/commit/3aa3d34ce7cb58c662475542b650fab9807f1de3))
+
 ## [1.9.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.9.1...zen-hordes-v1.9.2) (2025-07-04)
 
 
