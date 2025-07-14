@@ -2796,7 +2796,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     id: BuildingId.SMALL_SLAUGHTERHOUSE,
     numericalId: 69,
     name: {
-      [Lang.EN]: "Abbatoir",
+      [Lang.EN]: "Abattoir",
       [Lang.FR]: "Abattoir",
       [Lang.DE]: "Schlachthof",
       [Lang.ES]: "Matadero"
