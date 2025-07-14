@@ -14,7 +14,7 @@
     "data:generate": "tsx ./scripts/generateData.ts",
     "mh-api:get-types": "sh ./scripts/getMhApiTypes.sh"
   },
-  "author": "",
+  "author": "Zenoo",
   "license": "MIT",
   "repository": {
     "type": "git",

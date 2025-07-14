@@ -1050,7 +1050,7 @@ export const insertWiki = () => {
             name.textContent = item.name[store["hordes-lang"]];
             title.appendChild(name);
 
-            const description = document.createElement("p");
+            const description = document.createElement("div");
             setTextContent(description, item.description[store["hordes-lang"]]);
             li.appendChild(description);
 
