@@ -481,6 +481,7 @@ type BooleanKeys<T> = Exclude<
 >;
 
 type AddButtonProps = {
+  calculator: HTMLElement;
   params: CampingParams;
   type: "more" | "less";
   key: NumericKeys<CampingParams>;
@@ -488,7 +489,14 @@ type AddButtonProps = {
   max?: number;
 };
 
-const addButton = ({ params, type, key, min, max }: AddButtonProps) => {
+const addButton = ({
+  calculator,
+  params,
+  type,
+  key,
+  min,
+  max,
+}: AddButtonProps) => {
   const icon = document.createElement("img");
   icon.src = `${ASSETS}/icons/small_${type}.gif`;
   icon.classList.add(type);
@@ -512,7 +520,7 @@ const addButton = ({ params, type, key, min, max }: AddButtonProps) => {
       setStore("previous-campings", params.previousCampings);
     }
 
-    updateView();
+    updateView(calculator);
   });
 
   return icon;
@@ -585,8 +593,8 @@ const paramsData: Record<
   },
 };
 
-const updateView = () => {
-  const list = document.querySelector(".zen-camping-calculator ul");
+const updateView = (calculator: HTMLElement) => {
+  const list = calculator.querySelector("ul");
   if (!list) return;
 
   updateCampingResult();
@@ -648,10 +656,8 @@ const updateView = () => {
   });
 
   // Update total
-  const total = document.querySelector(".zen-camping-calculator .total-value");
-  const unlimitedTotal = document.querySelector(
-    ".zen-camping-calculator .unlimited-total-value"
-  );
+  const total = calculator.querySelector(".total-value");
+  const unlimitedTotal = calculator.querySelector(".unlimited-total-value");
   if (total) {
     total.textContent = `${result.total}%`;
   }
@@ -666,9 +672,7 @@ const updateView = () => {
   }
 
   // Update total description
-  const totalDesc = document.querySelector(
-    ".zen-camping-calculator .total-desc"
-  );
+  const totalDesc = calculator.querySelector(".total-desc");
   if (totalDesc) {
     if (result.total >= 100) {
       totalDesc.textContent = t(T, "campingChances.100");
@@ -690,7 +694,7 @@ const updateView = () => {
   }
 };
 
-const createLine = (key: keyof CampingParams) => {
+const createLine = (calculator: HTMLElement, key: keyof CampingParams) => {
   const li = document.createElement("li");
   li.setAttribute("data-param", key);
 
@@ -724,6 +728,7 @@ const createLine = (key: keyof CampingParams) => {
       // Less and more buttons
       icons.appendChild(
         addButton({
+          calculator,
           params,
           type: "less",
           key: key as NumericKeys<CampingParams>,
@@ -733,6 +738,7 @@ const createLine = (key: keyof CampingParams) => {
       icons.appendChild(iconWrapper);
       icons.appendChild(
         addButton({
+          calculator,
           params,
           type: "more",
           key: key as NumericKeys<CampingParams>,
@@ -784,7 +790,7 @@ const createLine = (key: keyof CampingParams) => {
       iconWrapper.addEventListener("click", () => {
         params[key as BooleanKeys<CampingParams>] =
           !params[key as BooleanKeys<CampingParams>];
-        updateView();
+        updateView(calculator);
       });
 
       // Some params don't need the text
@@ -951,7 +957,7 @@ const createLine = (key: keyof CampingParams) => {
       // Set the selected ruin
       params.ruin = ruinId === 0 ? undefined : ruins[ruinId as RuinId];
 
-      updateCampingCalculatorWithCurrentParams(undefined, true);
+      updateCampingCalculatorWithCurrentParams(undefined, calculator);
 
       // Close the selector
       ruinSelector.classList.remove("active");
@@ -964,9 +970,15 @@ const createLine = (key: keyof CampingParams) => {
 export const displayCampingCalculator = (node: HTMLElement) => {
   if (!store["camping-calculator"]) return;
 
-  if (!node.classList.contains("camping_actions")) return;
+  if (
+    !node.classList.contains("camping_actions") &&
+    !node.classList.contains("zen-wiki-camping-calculator-anchor")
+  )
+    return;
 
-  const existing = document.querySelector(".zen-camping-calculator");
+  const existing = node.nextElementSibling?.classList.contains(
+    "zen-camping-calculator"
+  );
   if (existing) return;
 
   const calculator = document.createElement("div");
@@ -985,7 +997,7 @@ export const displayCampingCalculator = (node: HTMLElement) => {
   // Add params
   Object.keys(params).forEach((key) => {
     const paramKey = key as keyof CampingParams;
-    const line = createLine(paramKey);
+    const line = createLine(calculator, paramKey);
     if (line) {
       list.appendChild(line);
     }
@@ -1049,7 +1061,7 @@ export const displayCampingCalculator = (node: HTMLElement) => {
   resetButton.addEventListener("click", () => {
     // Reset params
     params.ruin = undefined;
-    updateCampingCalculatorWithCurrentParams(undefined, true);
+    updateCampingCalculatorWithCurrentParams(undefined, calculator);
   });
   calculator.appendChild(resetButton);
 
@@ -1058,21 +1070,21 @@ export const displayCampingCalculator = (node: HTMLElement) => {
 
 export const updateCampingCalculatorWithCurrentParams = (
   node?: HTMLElement,
-  force?: boolean
+  calculator?: HTMLElement
 ) => {
   if (!store["camping-calculator"]) return;
   if (
     node?.getAttribute("for") !== "zone-camp" &&
     !node?.classList.contains("zone-dist") &&
-    !force
+    !calculator
   )
     return;
 
   // Check if calculator was already updated
-  const existing = document.querySelector(
-    ".zen-camping-calculator[data-updated]"
+  const existing = node?.nextElementSibling?.classList.contains(
+    "zen-camping-calculator"
   );
-  if (existing && !force) return;
+  if (existing && !calculator) return;
 
   const inventoryItems = document.querySelectorAll<HTMLElement>(
     "hordes-passive-inventory li.item"
@@ -1169,13 +1181,16 @@ export const updateCampingCalculatorWithCurrentParams = (
   // Job
   params.job = getJob();
 
-  // Update params
-  updateView();
+  const calculatorElements = calculator
+    ? [calculator]
+    : document.querySelectorAll<HTMLElement>(".zen-camping-calculator");
 
-  // Set calculator as updated
-  const calculator = document.querySelector(".zen-camping-calculator");
-  if (calculator) {
-    calculator.setAttribute("data-updated", "true");
+  for (const calculatorElement of calculatorElements) {
+    // Update params
+    updateView(calculatorElement);
+
+    // Set calculator as updated
+    calculatorElement.setAttribute("data-updated", "true");
   }
 };
 

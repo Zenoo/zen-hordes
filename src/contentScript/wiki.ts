@@ -5,6 +5,7 @@ import { Building, BuildingId, Item, Ruin } from "../data/types";
 import { ASSETS, DEFAULT_SHOPPING_LIST } from "../utils/constants";
 import { tooltip } from "../utils/tooltip";
 import { insertBetterItemTooltips } from "./betterTooltips";
+import { displayCampingCalculator } from "./campingCalculator";
 import { notify, Severity } from "./notify";
 import {
   generateShoppingListMessage,
@@ -49,6 +50,8 @@ const T: Translations = {
     close: "Close",
     wikiMissing: "Couldn't reach the wiki",
     menu: "Menu",
+    guide: "Guide",
+    calculator: "Calculator",
     shoppingList: "Shopping list",
     items: "Items",
     buildings: "Buildings",
@@ -109,6 +112,8 @@ const T: Translations = {
     close: "Fermer",
     wikiMissing: "Impossible d'atteindre le wiki",
     menu: "Menu",
+    guide: "Guide",
+    calculator: "Calculateur",
     shoppingList: "Liste de courses",
     items: "Objets",
     buildings: "Chantiers",
@@ -170,6 +175,8 @@ const T: Translations = {
     close: "Schließen",
     wikiMissing: "Wiki nicht erreichbar",
     menu: "Menü",
+    guide: "Leitfaden",
+    calculator: "Rechner",
     shoppingList: "Einkaufsliste",
     items: "Gegenstände",
     buildings: "Bauten",
@@ -232,6 +239,8 @@ const T: Translations = {
     close: "Cerrar",
     wikiMissing: "No se pudo acceder a la wiki",
     menu: "Menú",
+    guide: "Guía",
+    calculator: "Calculadora",
     shoppingList: "Lista de compras",
     items: "Objetos",
     buildings: "Edificios",
@@ -298,6 +307,10 @@ const wikiTabs = [
   {
     type: "guide",
     icon: "roles/guide.gif",
+  },
+  {
+    type: "calculator",
+    icon: "pictos/r_camp.gif",
   },
   {
     type: "shoppingList",
@@ -943,6 +956,9 @@ export const insertWiki = () => {
     if (tab.type === "shoppingList" && !store["shopping-list"]) {
       li.classList.add("hidden");
     }
+    if (tab.type === "calculator" && !store["camping-calculator"]) {
+      li.classList.add("hidden");
+    }
 
     const icon = document.createElement("img");
     icon.src = `${ASSETS}/${tab.icon}`;
@@ -1019,9 +1035,12 @@ export const insertWiki = () => {
     tab.classList.add("zen-wiki-tab");
     tab.setAttribute("data-type", item.type);
 
-    const title = document.createElement("h3");
-    title.textContent = t(T, item.type);
-    tab.appendChild(title);
+    // No title for calculator tab
+    if (item.type !== "calculator") {
+      const title = document.createElement("h3");
+      title.textContent = t(T, item.type);
+      tab.appendChild(title);
+    }
     tabContent.appendChild(tab);
 
     switch (item.type) {
@@ -1424,6 +1443,14 @@ export const insertWiki = () => {
         shortcuts.appendChild(highlightShoppingList);
 
         tab.appendChild(shortcuts);
+        break;
+      }
+      case "calculator": {
+        const anchor = document.createElement("div");
+        anchor.classList.add("zen-wiki-camping-calculator-anchor");
+        tab.appendChild(anchor);
+
+        displayCampingCalculator(anchor);
         break;
       }
       default: {
