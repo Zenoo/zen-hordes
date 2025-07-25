@@ -4,6 +4,20 @@ import { ExternalSite, ExternalSiteName } from "./externalSites";
 import { store } from "./store";
 import { replaceString, t } from "./translate";
 
+type ScoutRadar = {
+  east?: number;
+  west?: number;
+  north?: number;
+  south?: number;
+};
+
+type ScavengerDepletedZones = {
+  east?: boolean;
+  west?: boolean;
+  north?: boolean;
+  south?: boolean;
+};
+
 const T = {
   en: {
     noUserKey:
@@ -129,12 +143,7 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
       const isScout = !!document.querySelector(
         "hordes-passive-inventory .item img[src^='/build/images/item/item_vest']"
       );
-      const scoutRadar = {
-        east: 0,
-        west: 0,
-        north: 0,
-        south: 0,
-      };
+      const scoutRadar: ScoutRadar = {};
 
       document
         .querySelectorAll(".zone-plane-controls .scout-sense")
@@ -144,7 +153,10 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
             ?.replace("scout-sense-", "");
           if (direction) {
             const estimate = element.querySelector("text")?.textContent;
-            scoutRadar[direction as keyof typeof scoutRadar] = +(estimate ?? 0);
+
+            if (estimate) {
+              scoutRadar[direction as keyof ScoutRadar] = +estimate;
+            }
           }
         });
 
@@ -152,13 +164,6 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
       const isScavenger = !!document.querySelector(
         "hordes-passive-inventory .item img[src^='/build/images/item/item_pelle']"
       );
-
-      type ScavengerDepletedZones = {
-        east?: boolean;
-        west?: boolean;
-        north?: boolean;
-        south?: boolean;
-      };
 
       const scavengerDepletedZones: ScavengerDepletedZones = {};
 

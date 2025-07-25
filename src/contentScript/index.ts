@@ -43,6 +43,7 @@ import { insertWiki, openItemInWiki } from "./wiki";
 // ex: drag & drop, images, etc
 // TODO: Add a note-taking feature
 // TODO: Add the camping calculator in the wiki to be accessible even when not out
+// TODO: Add distinctions linked to some action tooltips (throw out someone, etc)
 
 (async () => {
   // Do nothing on asset URLs
