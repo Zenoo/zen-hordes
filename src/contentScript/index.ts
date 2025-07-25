@@ -35,9 +35,7 @@ import {
 } from "./UIEnhancer";
 import { insertWiki, openItemInWiki } from "./wiki";
 
-// TODO: Add spy links on current city page
 // TODO: Listen to html event for items taken
-// TODO: Search doesn't work in the shopping list
 // TODO: Add a way to store/share camping calculations
 // TODO: Add more detailed instructions to the guide
 // ex: drag & drop, images, etc

@@ -420,7 +420,9 @@ const updateWiki = (state: Partial<WikiState>, resetSearch?: boolean) => {
   let visibleCount = 0;
   Object.values(targets).forEach((target: Item | Building | Ruin) => {
     const li = tab.querySelector(
-      `.zen-wiki-item[data-id="${target.id}"]:not(.persistent)`
+      WIKI_STATE.tab === "shoppingList"
+        ? `.zen-priority-item[data-id="${target.id}"]:not(.persistent)`
+        : `.zen-wiki-item[data-id="${target.id}"]:not(.persistent)`
     );
 
     if (!li) {
