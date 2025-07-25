@@ -17,11 +17,7 @@ const T: Translations = {
   },
 };
 
-const buildButton = (
-  logo: Element | null,
-  text: string,
-  link: string
-) => {
+const buildButton = (logo: Element | null, text: string, link: string) => {
   const button = document.createElement("a");
   button.classList.add("button", "zen-external-link", "center");
   button.href = link;
@@ -53,7 +49,7 @@ export const displayExternalCityLinks = (node: HTMLElement) => {
     const siteData = ExternalSite[site];
     if (!siteData.townUrl) continue;
 
-    const translation = t(T, "link", { site });
+    const translation = t(T, "link", { site: siteData.name });
     const logo = document.querySelector(
       `.app-external[data-id="${siteData.id}"] img`
     );
@@ -61,6 +57,8 @@ export const displayExternalCityLinks = (node: HTMLElement) => {
 
     const button = buildButton(logo, translation, link);
 
-    node.querySelector('button[x-ajax-href^="/jx/soul/obituary/"]')?.after(button);
+    node
+      .querySelector('button[x-ajax-href="/jx/soul/game_history"]')
+      ?.after(button);
   }
 };

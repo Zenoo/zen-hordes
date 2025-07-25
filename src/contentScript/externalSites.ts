@@ -7,6 +7,7 @@ export enum ExternalSiteName {
 
 export type ExternalSiteData = Readonly<{
   id: number;
+  name: string;
   townUrl?: string;
   updateUrl?: string;
 }>;
@@ -16,21 +17,25 @@ export const ExternalSite: Readonly<
 > = {
   [ExternalSiteName.BBH]: {
     id: 1,
+    name: "BigBroth'Hordes",
     townUrl: "https://bbh.fred26.fr/?cid=5-{{townId}}",
     updateUrl: "https://bbh.fred26.fr/update.php?sid=5",
   },
   [ExternalSiteName.FM]: {
     id: 11,
+    name: "Fata Morgana",
     townUrl: "https://fatamorgana.md26.eu/spy/town/{{townId}}",
     updateUrl: "https://fatamorgana.md26.eu/mho",
   },
   [ExternalSiteName.GH]: {
     id: 4,
+    name: "Gest'Hordes",
     townUrl: "https://gest-hordes2.eragaming.fr/carte/{{townId}}",
     updateUrl: "https://gest-hordes2.eragaming.fr/majScript?key={{userKey}}",
   },
   [ExternalSiteName.MHO]: {
     id: 22,
+    name: "MyHordes Optimizer",
     updateUrl:
       "https://api.myhordesoptimizer.fr/externaltools/update?userKey={{userKey}}&userId={{userId}}",
   },
