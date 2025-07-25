@@ -341,6 +341,17 @@ const updateWiki = (state: Partial<WikiState>, resetSearch?: boolean) => {
     search.value = WIKI_STATE.search;
   }
 
+  // Toggle search visibility
+  const searchInput = document.querySelector("#zen-wiki-search");
+
+  if (searchInput) {
+    if (WIKI_STATE.tab === "guide") {
+      searchInput.classList.add("hidden");
+    } else {
+      searchInput.classList.remove("hidden");
+    }
+  }
+
   // Remove clicked class from items
   const clicked = document.querySelectorAll(".zen-wiki-item.clicked");
   clicked.forEach((item) => {
@@ -911,6 +922,7 @@ export const insertWiki = () => {
   const search = document.createElement("input");
   search.type = "text";
   search.placeholder = t(T, "search");
+  search.id = "zen-wiki-search";
   leftMenu.appendChild(search);
 
   search.addEventListener("input", (event) => {
