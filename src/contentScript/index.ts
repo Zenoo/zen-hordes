@@ -41,6 +41,7 @@ import { insertWiki, openItemInWiki } from "./wiki";
 // ex: drag & drop, images, etc
 // TODO: Add a note-taking feature
 // TODO: Add distinctions linked to some action tooltips (throw out someone, etc)
+// TODO: rework tooltips to generate them on the fly and reuse them
 
 (async () => {
   // Do nothing on asset URLs

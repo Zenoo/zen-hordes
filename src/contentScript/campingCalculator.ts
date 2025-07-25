@@ -1,3 +1,4 @@
+import { items } from "../data/items";
 import { ruins } from "../data/ruins";
 import { ItemId, Ruin, RuinId } from "../data/types";
 import { ASSETS } from "../utils/constants";
@@ -24,6 +25,13 @@ const T: Translations = {
     pandemonium: "Pandemonium",
     previousCampings: "Number of nights already camped",
     campingItems: "Camping items",
+    "job.0": "Resident",
+    "job.1": "Guardian",
+    "job.2": "Scavenger",
+    "job.3": "Scout",
+    "job.4": "Survivalist",
+    "job.5": "Tamer",
+    "job.6": "Technician",
     noRuin: "No ruin",
     total: "Total",
     "campingChances.0":
@@ -63,6 +71,13 @@ const T: Translations = {
     pandemonium: "Pandémonium",
     previousCampings: "Nombre de nuits déjà campées",
     campingItems: "Objets de camping",
+    "job.0": "Habitant",
+    "job.1": "Gardien",
+    "job.2": "Fouineur",
+    "job.3": "Éclaireur",
+    "job.4": "Ermite",
+    "job.5": "Apprivoiseur",
+    "job.6": "Technicien",
     noRuin: "Aucun bâtiment",
     total: "Total",
     "campingChances.0":
@@ -102,6 +117,13 @@ const T: Translations = {
     pandemonium: "Pandämonium",
     previousCampings: "Anzahl der bereits gecampten Nächte",
     campingItems: "Campingartikel",
+    "job.0": "Bewohner",
+    "job.1": "Wächter",
+    "job.2": "Plünderer",
+    "job.3": "Späher",
+    "job.4": "Überlebenskünstler",
+    "job.5": "Dompteur",
+    "job.6": "Techniker",
     noRuin: "Keine Ruine",
     total: "Gesamt",
     "campingChances.0":
@@ -141,6 +163,13 @@ const T: Translations = {
     pandemonium: "Pandemonium",
     previousCampings: "Número de noches ya acampadas",
     campingItems: "Artículos de camping",
+    "job.0": "Habitante",
+    "job.1": "Guardián",
+    "job.2": "Merodeador",
+    "job.3": "Explorador",
+    "job.4": "Superviviente",
+    "job.5": "Domador",
+    "job.6": "Técnico",
     noRuin: "No hay ruina",
     total: "Total",
     "campingChances.0":
@@ -420,7 +449,7 @@ const jobItems: Record<Job, ItemId[]> = {
   [Job.Resident]: [ItemId.BASIC_SUIT, ItemId.BASIC_SUIT_DIRT],
   [Job.Guardian]: [ItemId.SHIELD],
   [Job.Scavenger]: [ItemId.PELLE],
-  [Job.Scout]: [ItemId.VEST_OFF, ItemId.VEST_ON],
+  [Job.Scout]: [ItemId.VEST_ON, ItemId.VEST_OFF],
   [Job.Survivalist]: [ItemId.SURV_BOOK],
   [Job.Tamer]: [
     ItemId.TAMED_PET,
@@ -652,6 +681,21 @@ const updateView = (calculator: HTMLElement) => {
           ruinIcon.setAttribute("src", `${ASSETS}/emotes/ruin.gif`);
         }
       }
+
+      // Update job
+      if (paramKey === "job") {
+        const jobIcon = li.querySelector("span img");
+        if (jobIcon) {
+          const jobItemId = jobItems[params.job][0] ?? ItemId.BASIC_SUIT;
+          jobIcon.setAttribute(
+            "src",
+            `${ASSETS}/icons/item/${items[jobItemId].icon}.gif`
+          );
+          const jobTitle = t(T, `job.${params.job}`);
+          jobIcon.setAttribute("title", jobTitle);
+          jobIcon.setAttribute("aria-label", jobTitle);
+        }
+      }
     }
   });
 
@@ -700,10 +744,7 @@ const createLine = (calculator: HTMLElement, key: keyof CampingParams) => {
 
   switch (typeof params[key]) {
     case "number": {
-      // Don't display job
-      if (key === "job") {
-        return;
-      }
+      if (key === "job") break;
 
       const icons = document.createElement("div");
       const text = document.createElement("p");
@@ -957,10 +998,157 @@ const createLine = (calculator: HTMLElement, key: keyof CampingParams) => {
       // Set the selected ruin
       params.ruin = ruinId === 0 ? undefined : ruins[ruinId as RuinId];
 
-      updateCampingCalculatorWithCurrentParams(undefined, calculator);
+      updateView(calculator);
 
       // Close the selector
       ruinSelector.classList.remove("active");
+    });
+  }
+
+  // Job
+  if (key === "job") {
+    const icons = document.createElement("div");
+    const text = document.createElement("p");
+
+    const jobIconWrapper = document.createElement("span");
+    const jobIcon = document.createElement("img");
+    jobIcon.classList.add("zen-job-icon");
+
+    const jobItemId = jobItems[params.job][0] ?? ItemId.BASIC_SUIT;
+    jobIcon.src = `${ASSETS}/icons/item/${items[jobItemId].icon}.gif`;
+    const jobTitle = t(T, `job.${params.job}`);
+    jobIconWrapper.title = jobTitle;
+    jobIcon.alt = jobTitle;
+    jobIcon.setAttribute("aria-label", jobTitle);
+
+    jobIconWrapper.appendChild(jobIcon);
+    icons.appendChild(jobIconWrapper);
+
+    li.appendChild(icons);
+    li.appendChild(text);
+
+    // Job selector
+    const jobSelector = document.createElement("ul");
+    jobSelector.classList.add("zen-job-selector", "heroic_actions");
+
+    // Close button
+    const closeButton = document.createElement("li");
+    closeButton.classList.add("zen-job-close", "help");
+
+    const closeIcon = document.createElement("img");
+    closeIcon.src = `${ASSETS}/icons/error.png`;
+    closeIcon.alt = t(T, "close");
+    closeIcon.title = t(T, "close");
+    closeButton.appendChild(closeIcon);
+
+    closeButton.addEventListener("click", () => {
+      jobSelector.classList.remove("active");
+    });
+
+    jobSelector.appendChild(closeButton);
+
+    [
+      {
+        id: Job.Resident,
+        icon: items[ItemId.BASIC_SUIT].icon,
+      },
+      {
+        id: Job.Guardian,
+        icon: items[ItemId.SHIELD].icon,
+      },
+      {
+        id: Job.Scavenger,
+        icon: items[ItemId.PELLE].icon,
+      },
+      {
+        id: Job.Scout,
+        icon: items[ItemId.VEST_ON].icon,
+      },
+      {
+        id: Job.Survivalist,
+        icon: items[ItemId.SURV_BOOK].icon,
+      },
+      {
+        id: Job.Tamer,
+        icon: items[ItemId.TAMED_PET].icon,
+      },
+      {
+        id: Job.Technician,
+        icon: items[ItemId.KEYMOL].icon,
+      },
+    ].forEach((job) => {
+      const jobLi = document.createElement("li");
+      jobLi.classList.add("zen-job-item", "heroic_action");
+      jobLi.setAttribute("data-job-id", job.id.toString());
+
+      // Job icon
+      const jobIcon = document.createElement("img");
+      jobIcon.classList.add("job-icon");
+      jobIcon.src = `${ASSETS}/icons/item/${job.icon}.gif`;
+      jobIcon.alt = t(T, `job.${job.id}`);
+
+      jobLi.appendChild(jobIcon);
+
+      // Job title
+      const jobTitle = document.createElement("span");
+      jobTitle.classList.add("label");
+      jobTitle.textContent = t(T, `job.${job.id}`);
+      jobLi.appendChild(jobTitle);
+
+      jobSelector.appendChild(jobLi);
+    });
+
+    li.appendChild(jobSelector);
+
+    // Open job selector on click
+    jobIcon.addEventListener("click", () => {
+      const open = jobSelector.classList.toggle("active");
+
+      if (!open) return;
+
+      // Position the selector (centered on top of the job icon)
+      const closestRelative = jobIcon.closest<HTMLElement>(".cell");
+      if (!closestRelative) return;
+
+      const closestRelativeRect = closestRelative.getBoundingClientRect();
+      const rect = jobIcon.getBoundingClientRect();
+      jobSelector.style.left = `${
+        rect.left - closestRelativeRect.left - jobSelector.offsetWidth / 2
+      }px`;
+      jobSelector.style.top = `${
+        rect.top - closestRelativeRect.top - jobSelector.offsetHeight
+      }px`;
+
+      // Snap to window edges
+      const windowRect = document.body.getBoundingClientRect();
+      if (+jobSelector.style.left < windowRect.left) {
+        jobSelector.style.left = `${windowRect.left}px`;
+      }
+      if (
+        +jobSelector.style.left + jobSelector.offsetWidth >
+        windowRect.right
+      ) {
+        jobSelector.style.left = `${
+          windowRect.right - jobSelector.offsetWidth
+        }px`;
+      }
+    });
+
+    // Handle job selection
+    jobSelector.addEventListener("click", (event) => {
+      const target = event.target as HTMLElement;
+      const li = target.closest<HTMLElement>(".zen-job-item");
+      if (!li) return;
+
+      const jobId = +(li.getAttribute("data-job-id") ?? "0");
+
+      // Set the selected job
+      params.job = jobId;
+
+      updateView(calculator);
+
+      // Close the selector
+      jobSelector.classList.remove("active");
     });
   }
 

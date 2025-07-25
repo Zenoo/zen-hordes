@@ -1205,7 +1205,8 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
       &>div {
         flex-shrink: 0;
 
-        .zen-ruin-icon {
+        .zen-ruin-icon,
+        .zen-job-icon {
           cursor: pointer;
           margin: 0 20px;
         }
@@ -1226,12 +1227,14 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
         margin-left: 4px;
       }
 
-      &[data-param="ruin"] {
+      &[data-param="ruin"],
+      &[data-param="job"] {
         .crossed::before {
           right: 20px;
         }
 
-        .zen-ruin-selector {
+        .zen-ruin-selector,
+        .zen-job-selector {
           display: none;
           position: absolute;
           max-height: 200px;
@@ -1255,6 +1258,10 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
               &.no-ruin {
                 opacity: 0;
               }
+
+              &.job-icon {
+                width: auto;
+              }
             }
 
             .em {
@@ -1262,7 +1269,8 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
             }
           }
 
-          .zen-ruin-close {
+          .zen-ruin-close,
+          .zen-job-close {
             position: absolute;
             top: 0;
             right: 0;
