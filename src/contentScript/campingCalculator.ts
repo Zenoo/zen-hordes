@@ -3,6 +3,7 @@ import { ruins } from "../data/ruins";
 import { ItemId, Ruin, RuinId } from "../data/types";
 import { ASSETS } from "../utils/constants";
 import { findItemFromInventory } from "../utils/itemUtils";
+import { positionElement } from "../utils/position";
 import { setStore, store } from "./store";
 import { t } from "./translate";
 
@@ -738,7 +739,11 @@ const updateView = (calculator: HTMLElement) => {
   }
 };
 
-const createLine = (calculator: HTMLElement, key: keyof CampingParams) => {
+const createLine = (
+  calculator: HTMLElement,
+  key: keyof CampingParams,
+  inWiki: boolean
+) => {
   const li = document.createElement("li");
   li.setAttribute("data-param", key);
 
@@ -960,31 +965,15 @@ const createLine = (calculator: HTMLElement, key: keyof CampingParams) => {
       if (!open) return;
 
       // Position the selector (centered on top of the ruin icon)
-      const closestRelative = ruinIcon.closest<HTMLElement>(".cell");
+      const closestRelative = ruinIcon.closest<HTMLElement>(".cell, .zen-wiki");
       if (!closestRelative) return;
 
-      const closestRelativeRect = closestRelative.getBoundingClientRect();
-      const rect = ruinIcon.getBoundingClientRect();
-      ruinSelector.style.left = `${
-        rect.left - closestRelativeRect.left - ruinSelector.offsetWidth / 2
-      }px`;
-      ruinSelector.style.top = `${
-        rect.top - closestRelativeRect.top - ruinSelector.offsetHeight
-      }px`;
-
-      // Snap to window edges
-      const windowRect = document.body.getBoundingClientRect();
-      if (+ruinSelector.style.left < windowRect.left) {
-        ruinSelector.style.left = `${windowRect.left}px`;
-      }
-      if (
-        +ruinSelector.style.left + ruinSelector.offsetWidth >
-        windowRect.right
-      ) {
-        ruinSelector.style.left = `${
-          windowRect.right - ruinSelector.offsetWidth
-        }px`;
-      }
+      positionElement({
+        element: ruinSelector,
+        relativeTo: closestRelative,
+        anchor: ruinIcon,
+        yPosition: inWiki ? "bottom" : "top",
+      });
     });
 
     // Handle ruin selection
@@ -1106,32 +1095,16 @@ const createLine = (calculator: HTMLElement, key: keyof CampingParams) => {
 
       if (!open) return;
 
-      // Position the selector (centered on top of the job icon)
-      const closestRelative = jobIcon.closest<HTMLElement>(".cell");
+      // Position the selector
+      const closestRelative = jobIcon.closest<HTMLElement>(".cell, .zen-wiki");
       if (!closestRelative) return;
 
-      const closestRelativeRect = closestRelative.getBoundingClientRect();
-      const rect = jobIcon.getBoundingClientRect();
-      jobSelector.style.left = `${
-        rect.left - closestRelativeRect.left - jobSelector.offsetWidth / 2
-      }px`;
-      jobSelector.style.top = `${
-        rect.top - closestRelativeRect.top - jobSelector.offsetHeight
-      }px`;
-
-      // Snap to window edges
-      const windowRect = document.body.getBoundingClientRect();
-      if (+jobSelector.style.left < windowRect.left) {
-        jobSelector.style.left = `${windowRect.left}px`;
-      }
-      if (
-        +jobSelector.style.left + jobSelector.offsetWidth >
-        windowRect.right
-      ) {
-        jobSelector.style.left = `${
-          windowRect.right - jobSelector.offsetWidth
-        }px`;
-      }
+      positionElement({
+        element: jobSelector,
+        relativeTo: closestRelative,
+        anchor: jobIcon,
+        yPosition: inWiki ? "bottom" : "top",
+      });
     });
 
     // Handle job selection
@@ -1158,11 +1131,9 @@ const createLine = (calculator: HTMLElement, key: keyof CampingParams) => {
 export const displayCampingCalculator = (node: HTMLElement) => {
   if (!store["camping-calculator"]) return;
 
-  if (
-    !node.classList.contains("camping_actions") &&
-    !node.classList.contains("zen-wiki-camping-calculator-anchor")
-  )
-    return;
+  const inWiki = node.classList.contains("zen-wiki-camping-calculator-anchor");
+
+  if (!node.classList.contains("camping_actions") && !inWiki) return;
 
   const existing = node.nextElementSibling?.classList.contains(
     "zen-camping-calculator"
@@ -1185,7 +1156,7 @@ export const displayCampingCalculator = (node: HTMLElement) => {
   // Add params
   Object.keys(params).forEach((key) => {
     const paramKey = key as keyof CampingParams;
-    const line = createLine(calculator, paramKey);
+    const line = createLine(calculator, paramKey, inWiki);
     if (line) {
       list.appendChild(line);
     }
