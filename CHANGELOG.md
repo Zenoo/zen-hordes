@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.9.4](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.9.3...zen-hordes-v1.9.4) (2025-07-26)
+
+
+### Bug Fixes
+
+* Add camping calculator to the wiki ([5115d76](https://github.com/Zenoo/zen-hordes/commit/5115d764aadf950030390383ef0c8779101dee08))
+* Add external city links to current town ([6233a0e](https://github.com/Zenoo/zen-hordes/commit/6233a0e4094deb611f752c1df2eae3dea7be8a47))
+* Display current job in camping calculator ([0e0cf70](https://github.com/Zenoo/zen-hordes/commit/0e0cf7011d2928cfb885a33c8c20db1cc5fea3b1))
+* Don't send empty scout data to FM ([a3e0463](https://github.com/Zenoo/zen-hordes/commit/a3e0463b9ccbfd2c3f46b3fb94408355bd679d69))
+* Enable search in shopping list ([c873df0](https://github.com/Zenoo/zen-hordes/commit/c873df02c1dfc3b3ede4b6c43308e3e04cbd5df7))
+* Hide search on guide wiki page ([0c4c982](https://github.com/Zenoo/zen-hordes/commit/0c4c9826d13b1b3c248d7e6066fa95b30d0e71a0))
+* MH v4.0.11 data ([cdd3cab](https://github.com/Zenoo/zen-hordes/commit/cdd3cab0aaf68c621ec7f84c01750ca1644ad256))
+* Position ruin/job selectors relative to their icons ([f7ed42f](https://github.com/Zenoo/zen-hordes/commit/f7ed42fbfd6ba4db5c319c32be383ef038f63710))
+
 ## [1.9.3](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.9.2...zen-hordes-v1.9.3) (2025-07-14)
 
 
