@@ -1443,78 +1443,83 @@ export const insertBetterItemTooltips = (
   }
 };
 
-export const insertBetterRuinTooltips = (node: HTMLElement) => {
+export const insertBetterRuinTooltips = (
+  node: HTMLElement,
+  force?: boolean
+) => {
   if (!store["better-tooltips"]) return;
+  if (!node.classList.contains("tooltip-map")) return;
 
-  if (node.classList.contains("tooltip-map")) {
-    // Check if the tooltip has already been processed
-    const processed = node.classList.contains("zen-better-ruin-tooltip");
-    if (processed) return;
+  // Check if the tooltip has already been processed
+  const processed = node.classList.contains("zen-better-ruin-tooltip");
+  if (!force && processed) return;
 
-    // Check if the node is a ruin tooltip
-    const ruinTitle = node.querySelector(".cell.bold");
-    if (!ruinTitle) return;
+  // Check if the node is a ruin tooltip
+  const ruinTitle = node.querySelector(".cell.bold");
+  if (!ruinTitle) return;
 
-    // Ignore city tooltip
-    if (node.children[1]?.children[1]?.textContent === "[0 / 0]") return;
+  // Ignore city tooltip
+  if (node.children[1]?.children[1]?.textContent === "[0 / 0]") return;
 
-    // Find the ruin
-    const ruin = Object.values(ruins).find(
-      (ruin) => ruin.name[store["hordes-lang"]] === ruinTitle.textContent
-    );
-    if (!ruin) {
-      // Probably a buried building
-      return;
-    }
-
-    node.classList.add("zen-better-tooltip", "zen-better-ruin-tooltip");
-
-    // Ruin drops
-    const table = document.createElement("table");
-    table.classList.add("clear", "zen-ruin-drops", "zen-added");
-    const tbody = document.createElement("tbody");
-    table.append(tbody);
-    const line = document.createElement("tr");
-    tbody.append(line);
-    const cell = document.createElement("td");
-    cell.classList.add("output");
-    line.append(cell);
-
-    const target = node.children[0];
-    const totalOdds = ruin.drops.reduce((acc, d) => acc + d.odds, 0);
-
-    ruin.drops
-      .sort((a, b) => b.odds / totalOdds - a.odds / totalOdds)
-      .forEach((drop) => {
-        const wrapper = document.createElement("div");
-
-        // Icon
-        const dropImg = document.createElement("img");
-        dropImg.src = `${ASSETS}/icons/item/${items[drop.item].icon}.gif`;
-        dropImg.title = items[drop.item].name[store["hordes-lang"]];
-        dropImg.setAttribute("data-type", "item");
-        dropImg.setAttribute("data-id", drop.item);
-
-        // Odds
-        wrapper.setAttribute(
-          "data-text",
-          drop.odds ? `${Math.round((drop.odds / totalOdds) * 100)}%` : "?%"
-        );
-
-        wrapper.append(dropImg);
-        cell.append(wrapper);
-      });
-    target?.append(table);
+  // Find the ruin
+  const ruin = Object.values(ruins).find(
+    (ruin) => ruin.name[store["hordes-lang"]] === ruinTitle.textContent
+  );
+  if (!ruin) {
+    // Probably a buried building
+    return;
   }
+
+  node.classList.add("zen-better-tooltip", "zen-better-ruin-tooltip");
+
+  // Ruin drops
+  const table = document.createElement("table");
+  table.classList.add("clear", "zen-ruin-drops", "zen-added");
+  const tbody = document.createElement("tbody");
+  table.append(tbody);
+  const line = document.createElement("tr");
+  tbody.append(line);
+  const cell = document.createElement("td");
+  cell.classList.add("output");
+  line.append(cell);
+
+  const target = node.children[0];
+  const totalOdds = ruin.drops.reduce((acc, d) => acc + d.odds, 0);
+
+  ruin.drops
+    .sort((a, b) => b.odds / totalOdds - a.odds / totalOdds)
+    .forEach((drop) => {
+      const wrapper = document.createElement("div");
+
+      // Icon
+      const dropImg = document.createElement("img");
+      dropImg.src = `${ASSETS}/icons/item/${items[drop.item].icon}.gif`;
+      dropImg.title = items[drop.item].name[store["hordes-lang"]];
+      dropImg.setAttribute("data-type", "item");
+      dropImg.setAttribute("data-id", drop.item);
+
+      // Odds
+      wrapper.setAttribute(
+        "data-text",
+        drop.odds ? `${Math.round((drop.odds / totalOdds) * 100)}%` : "?%"
+      );
+
+      wrapper.append(dropImg);
+      cell.append(wrapper);
+    });
+  target?.append(table);
 };
 
-export const insertBetterMapZoneTooltips = (node: HTMLElement) => {
+export const insertBetterMapZoneTooltips = (
+  node: HTMLElement,
+  force?: boolean
+) => {
   if (!store["better-tooltips"]) return;
   if (!node.classList.contains("tooltip-map")) return;
 
   // Check if the tooltip has already been processed
   const processed = node.classList.contains("zen-better-zone-tooltip");
-  if (processed) return;
+  if (!force && processed) return;
 
   node.classList.add("zen-better-tooltip", "zen-better-zone-tooltip");
 
@@ -1522,9 +1527,15 @@ export const insertBetterMapZoneTooltips = (node: HTMLElement) => {
     child.children[1]?.textContent?.match(/\[(-?\d+) \/ (-?\d+)\]/)
   );
 
+  if (!coordsRow) return;
+
   const [x, y] =
-    (coordsRow?.textContent ?? "").match(/\[(-?\d+) \/ (-?\d+)\]/)?.slice(1) ??
+    (coordsRow.textContent ?? "").match(/\[(-?\d+) \/ (-?\d+)\]/)?.slice(1) ??
     [];
+
+  // Add coordinates to the tooltip
+  node.setAttribute("data-x", x ?? "0");
+  node.setAttribute("data-y", y ?? "0");
 
   // Ignore city tooltip
   if (x === "0" && y === "0") return;
@@ -1536,7 +1547,7 @@ export const insertBetterMapZoneTooltips = (node: HTMLElement) => {
 
   // Display the distance in km below the distance in AP
   const newRow = document.createElement("div");
-  newRow.classList.add("row");
+  newRow.classList.add("row", "zen-km-row");
   const leftCell = document.createElement("div");
   leftCell.classList.add("cell", "rw-9", "left");
   leftCell.textContent = "\u00A0"; // Non-breaking space
@@ -1547,8 +1558,45 @@ export const insertBetterMapZoneTooltips = (node: HTMLElement) => {
 
   node.insertBefore(
     newRow,
-    coordsRow?.nextElementSibling?.nextElementSibling ?? null
+    coordsRow.nextElementSibling?.nextElementSibling ?? null
   );
+};
+
+type HorrorMessageClearedDetail =
+  | Partial<{
+      g: boolean;
+      r?: Partial<{
+        b: boolean;
+        e: boolean;
+        n: string;
+      }>;
+      t: boolean;
+      tg: number;
+      x: number;
+      y: number;
+    }>
+  | undefined;
+
+export const rebuildZoneTooltipAfterClear = (event: Event) => {
+  const detail = (event as CustomEvent).detail as HorrorMessageClearedDetail;
+
+  // Find the tooltip for the cleared horror
+  const tooltip = document.querySelector<HTMLElement>(
+    `.tooltip-map.zen-better-zone-tooltip[data-x="${detail?.x}"][data-y="${detail?.y}"]`
+  );
+  if (!tooltip) return;
+
+  // Rebuild the tooltip after the message is cleared
+  setTimeout(() => {
+    // Remove the distance in km
+    const kmRow = tooltip.querySelector(".zen-km-row");
+    if (kmRow) {
+      kmRow.remove();
+    }
+
+    insertBetterRuinTooltips(tooltip, true);
+    insertBetterMapZoneTooltips(tooltip, true);
+  }, 200);
 };
 
 export const resetBankState = () => {

@@ -1,8 +1,9 @@
-import { trackBank } from "./bankTracker";
+import { onItemTransfer, trackBank } from "./bankTracker";
 import {
   insertBetterItemTooltips,
   insertBetterMapZoneTooltips,
   insertBetterRuinTooltips,
+  rebuildZoneTooltipAfterClear,
   storeBankState,
   toggleItemActions,
   updateItemBankCountPeriodically,
@@ -16,6 +17,7 @@ import { displayExternalCityLinks } from "./externalCityLink";
 import { displayUpdateButton } from "./externalSiteUpdater";
 import { offKey } from "./hooks/offKey";
 import { onClick } from "./hooks/onClick";
+import { onEvent } from "./hooks/onEvent";
 import { onKey } from "./hooks/onKey";
 import { onMount } from "./hooks/onMount";
 import { displayMapPreview, insertMapPreviewTooltip } from "./mapPreview";
@@ -115,4 +117,9 @@ import { insertWiki, openItemInWiki } from "./wiki";
   offKey("q", () => {
     toggleItemActions(true);
   });
+
+  // Actions that need to be performed after an event
+  // should be handled here
+  onEvent("sig-item-transfer", onItemTransfer);
+  onEvent("sig-horror-message-cleared", rebuildZoneTooltipAfterClear);
 })();
