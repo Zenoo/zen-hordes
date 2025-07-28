@@ -1150,7 +1150,7 @@ export const insertBetterItemTooltips = (
     if (bankStateTimestamp) {
       const count = localStorage.getItem(`bankItem_${item.id}`);
 
-      const bankCountTarget = node.querySelector("h1+div, h4+div");
+      const bankCountTarget = node.querySelector("h1, h4")?.nextSibling;
 
       if (!bankCountTarget) {
         console.error("Bank count target not found in tooltip:", node);
