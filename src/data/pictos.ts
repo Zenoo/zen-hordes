@@ -2095,10 +2095,10 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     id: PictoId.THERMAL,
     numericalId: 111,
     name: {
-      [Lang.EN]: "Blue Gold Thermal baths",
-      [Lang.FR]: "Thermes de l'Or bleu",
-      [Lang.DE]: "Blaugoldige Thermalbäder",
-      [Lang.ES]: "Baños Termales de Oro Azul"
+      [Lang.EN]: "Wonder: Blue Gold Thermal baths",
+      [Lang.FR]: "Merveille : Thermes de l'Or bleu",
+      [Lang.DE]: "Wunderwerk: Blaugoldige Thermalbäder",
+      [Lang.ES]: "Maravilla: Baños Termales de Oro Azul"
     },
     description: {
       [Lang.EN]: "Hey, you should have thought about your soap!",
