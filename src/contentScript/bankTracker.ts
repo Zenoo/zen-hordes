@@ -1,7 +1,6 @@
 import { items } from "../data/items";
 import { ItemId } from "../data/types";
 import { ASSETS } from "../utils/constants";
-import { findItemFromInventory } from "../utils/itemUtils";
 import { setStore, store } from "./store";
 import { t } from "./translate";
 
@@ -90,7 +89,7 @@ const formatTime = (milliseconds: number) => {
   return `${minutes}:${seconds.toString().padStart(2, "0")}`;
 };
 
-export const updateLastItemsNotification = (bank: HTMLElement) => {
+export const updateLastItemsNotification = (bank: HTMLElement | null) => {
   let notification = document.querySelector("#zen-bank-notification");
 
   if (store["bank-last-items-taken"].length === 0) {
@@ -113,7 +112,7 @@ export const updateLastItemsNotification = (bank: HTMLElement) => {
     const list = document.createElement("ul");
     notification.append(list);
 
-    bank.parentElement?.insertBefore(notification, bank);
+    bank?.parentElement?.insertBefore(notification, bank);
   }
 
   const list = notification.querySelector("ul");
@@ -220,27 +219,95 @@ export const trackBank = (node: HTMLElement) => {
   if (!store["bank-tracker"]) return;
   if (node.id !== "bank-inventory") return;
 
-  // Listen to item clicks
-  if (node.getAttribute("data-zen-bank-listener") !== "true") {
-    node.setAttribute("data-zen-bank-listener", "true");
-
-    node.addEventListener("click", (event) => {
-      const target = event.target;
-      if (!(target instanceof HTMLElement)) return;
-
-      const bankElem = target.closest(".bank");
-      if (!bankElem) return;
-
-      const itemElem = target.closest<HTMLElement>(".item");
-      if (!itemElem) return;
-
-      const item = findItemFromInventory(itemElem);
-      if (!item) return;
-
-      handleItemTaken(item.id);
-      updateLastItemsNotification(node);
-    });
-  }
-
   updateLastItemsNotification(node);
+};
+
+type ItemTransferDetail =
+  | Partial<{
+      direction: "up" | "down" | "down-all";
+      item: number;
+      from: number;
+      to: number;
+      response?: {
+        success: boolean;
+        errors?: unknown[];
+        reload: boolean;
+        incidentals?: unknown[];
+        messages: string;
+        source?: Partial<{
+          bank: boolean;
+          rsc: boolean;
+          size: number;
+          mods?: Partial<{
+            has_drunk: boolean;
+          }>;
+          categories?: {
+            id: number;
+            items?: Partial<{
+              i: number;
+              p: number;
+              c: number;
+              b: boolean;
+              h: boolean;
+              e: boolean;
+              w: null;
+              s: number[];
+            }>[];
+          }[];
+        }>;
+        target?: Partial<{
+          bank: boolean;
+          rsc: boolean;
+          size: number;
+          mods?: {
+            has_drunk: boolean;
+          };
+          items?: Partial<{
+            i: number;
+            p: number;
+            c: number;
+            b: boolean;
+            h: boolean;
+            e: boolean;
+            w: null;
+            s: number[];
+          }>[];
+        }>;
+      };
+    }>
+  | undefined;
+
+export const onItemTransfer = (event: Event) => {
+  const detail = (event as CustomEvent).detail as ItemTransferDetail;
+
+  if (!detail || !detail.response || !detail.response.source) return;
+  // Check if the item was taken from the bank
+  if (
+    detail.direction === "up" &&
+    detail.response.success &&
+    detail.response.source.bank
+  ) {
+    // Find item ID
+    const itemUID = detail.item;
+
+    const itemNumericalId = detail.response.source?.categories
+      ?.flatMap(
+        (category) => category.items?.find((item) => item.i === itemUID)?.p
+      )
+      ?.find(Boolean);
+
+    if (!itemNumericalId) return;
+
+    const itemId = Object.values(items).find(
+      (item) => item.numericalId === itemNumericalId
+    )?.id;
+
+    if (!itemId) return;
+
+    // Item was taken from the bank
+    handleItemTaken(itemId);
+    updateLastItemsNotification(
+      document.querySelector<HTMLElement>("#bank-inventory")
+    );
+  }
 };
