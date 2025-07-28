@@ -22,6 +22,7 @@ import { ExternalSite, ExternalSiteName } from "./contentScript/externalSites";
 import { Version } from "./utils/Version";
 import { theme } from "./utils/theme";
 import { websiteUrls } from "./utils/constants";
+import gameVersion from "./data/game-version.json";
 
 const T: Translations = {
   en: {
@@ -473,7 +474,7 @@ const Popup = () => {
         variant="caption"
         sx={{ display: "block", opacity: 0.8, textAlign: "center" }}
       >
-        v{Version}
+        v{Version} | MyHordes v{gameVersion.version}
       </Typography>
     </ThemeProvider>
   );

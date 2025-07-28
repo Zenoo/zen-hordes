@@ -2482,7 +2482,12 @@ const generateTypes = () => {
 
 (async () => {
   // Get last API game version stored in game-version.json
-  const gameVersionFilePath = path.join(__dirname, "game-version.json");
+  const gameVersionFilePath = path.join(
+    __dirname,
+    "..",
+    "data",
+    "game-version.json"
+  );
   const gameVersionFile = fs.readFileSync(gameVersionFilePath, "utf-8");
   const gameVersion = JSON.parse(gameVersionFile) as {
     version: string;
