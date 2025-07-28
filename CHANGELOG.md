@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.5](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.9.4...zen-hordes-v1.9.5) (2025-07-28)
+
+
+### Bug Fixes
+
+* Item tooltip bank count target ([4ca5983](https://github.com/Zenoo/zen-hordes/commit/4ca59837e454625af0b3eaba04436e5e73390534))
+
 ## [1.9.4](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.9.3...zen-hordes-v1.9.4) (2025-07-28)
 
 
