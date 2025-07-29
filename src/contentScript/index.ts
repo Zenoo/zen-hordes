@@ -33,6 +33,7 @@ import {
   autoOpenBagOutside,
   autoOpenBagWhenMovingItems,
   autoSelectGlobalMapSetting,
+  displayRuinBuryCount,
   enhanceUI,
 } from "./UIEnhancer";
 import { insertWiki, openItemInWiki } from "./wiki";
@@ -86,6 +87,7 @@ import { insertWiki, openItemInWiki } from "./wiki";
     displayPlayerTag(node);
     insertShoppingListUpdateButton(node);
     updateCampingCalculatorWithCurrentParams(node);
+    displayRuinBuryCount(node);
   });
 
   // Actions that need to be performed on hover

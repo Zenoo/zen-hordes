@@ -59,3 +59,11 @@ export const autoOpenBagWhenMovingItems = (node: HTMLElement) => {
     }, 200);
   });
 };
+
+export const displayRuinBuryCount = (node: HTMLElement) => {
+  if (!node.classList.contains("ruin-bury-desc")) return;
+
+  const count = document.querySelectorAll(".ruin-bury-count .sand").length;
+
+  node.textContent = node.textContent?.replace(":", ` (${count}):`) ?? "";
+};
