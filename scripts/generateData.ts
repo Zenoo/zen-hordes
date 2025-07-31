@@ -13,6 +13,7 @@ import { overwriteItemData } from "./itemOverwrites";
 import { overwriteRecipeData } from "./recipeOverwrites";
 import { overwriteRuinData } from "./ruinOverwrites";
 import dotenv from "dotenv";
+import { exportTitles } from "./exportTitles";
 
 let types = "";
 
@@ -2370,11 +2371,16 @@ type Picto = {
   icon: string;
   community: boolean;
   rare: boolean;
+  titles: {
+    quantity: number;
+    points?: number;
+  }[];
 };
 
 const generatePictos = async () => {
   const pictos: Record<string, Picto> = {};
 
+  const titles = await exportTitles();
   const filePath = path.join(__dirname, "data", "pictos.json");
   const data = JSON.parse(fs.readFileSync(filePath, "utf-8")) as Record<
     string,
@@ -2408,6 +2414,7 @@ const generatePictos = async () => {
       },
       community: pictoData.community,
       rare: pictoData.rare,
+      titles: titles[id] ?? [],
     };
   });
 
@@ -2425,6 +2432,10 @@ export type Picto = {
   icon: string;
   community: boolean;
   rare: boolean;
+  titles?: {
+    quantity: number;
+    points?: number;
+  }[];
 };`;
 
   const pictosObject = `export const pictos: Readonly<Record<PictoId, Picto>> = {
@@ -2453,10 +2464,29 @@ export type Picto = {
     },
     icon: "${picto.icon}",
     community: ${picto.community},
-    rare: ${picto.rare}
+    rare: ${picto.rare}${
+        picto.titles.length > 0
+          ? `,
+    titles: [
+      ${picto.titles
+        .map(
+          (title) => `{
+        quantity: ${title.quantity}${
+            title.points !== undefined
+              ? `,
+        points: ${title.points}`
+              : ""
+          }
+      }`
+        )
+        .join(",\n      ")}
+    ]`
+          : ""
+      }
   }`
     )
     .join(",\n  ")}
+
 };`;
 
   const output = `import { Picto, PictoId } from './types';
@@ -2485,6 +2515,7 @@ const generateTypes = () => {
   const gameVersionFilePath = path.join(
     __dirname,
     "..",
+    "src",
     "data",
     "game-version.json"
   );
@@ -2581,7 +2612,7 @@ const generateTypes = () => {
   await generateRuins(items);
   generateRecipes(items);
   await generateBuildings(items);
-  generatePictos();
+  await generatePictos();
   generateTypes();
 
   // Update game version file

@@ -1,0 +1,1710 @@
+{
+  "r_jrangr_#00": [
+    {
+      "quantity": 10,
+      "points": 3.5
+    },
+    {
+      "quantity": 25,
+      "points": 6.5
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 300
+    },
+    {
+      "quantity": 800
+    },
+    {
+      "quantity": 1500
+    }
+  ],
+  "r_jcolle_#00": [
+    {
+      "quantity": 10,
+      "points": 3.5
+    },
+    {
+      "quantity": 25,
+      "points": 6.5
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 300
+    },
+    {
+      "quantity": 800
+    },
+    {
+      "quantity": 1500
+    }
+  ],
+  "r_jtamer_#00": [
+    {
+      "quantity": 10,
+      "points": 3.5
+    },
+    {
+      "quantity": 25,
+      "points": 6.5
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 300
+    },
+    {
+      "quantity": 800
+    },
+    {
+      "quantity": 1500
+    }
+  ],
+  "r_jermit_#00": [
+    {
+      "quantity": 10,
+      "points": 3.5
+    },
+    {
+      "quantity": 25,
+      "points": 6.5
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 300
+    },
+    {
+      "quantity": 800
+    },
+    {
+      "quantity": 1500
+    }
+  ],
+  "r_jsham_#00": [
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 25
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 300
+    },
+    {
+      "quantity": 800
+    },
+    {
+      "quantity": 1500
+    }
+  ],
+  "r_jtech_#00": [
+    {
+      "quantity": 10,
+      "points": 3.5
+    },
+    {
+      "quantity": 25,
+      "points": 6.5
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 300
+    },
+    {
+      "quantity": 800
+    },
+    {
+      "quantity": 1500
+    }
+  ],
+  "r_jguard_#00": [
+    {
+      "quantity": 10,
+      "points": 3.5
+    },
+    {
+      "quantity": 25,
+      "points": 6.5
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 300
+    },
+    {
+      "quantity": 800
+    },
+    {
+      "quantity": 1500
+    }
+  ],
+  "r_cookr_#00": [
+    {
+      "quantity": 10,
+      "points": 3.5
+    },
+    {
+      "quantity": 25,
+      "points": 6.5
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 250
+    },
+    {
+      "quantity": 500
+    },
+    {
+      "quantity": 1000
+    },
+    {
+      "quantity": 2000
+    }
+  ],
+  "r_drgmkr_#00": [
+    {
+      "quantity": 10,
+      "points": 3.5
+    },
+    {
+      "quantity": 25,
+      "points": 6.5
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 250
+    },
+    {
+      "quantity": 500
+    },
+    {
+      "quantity": 1000
+    },
+    {
+      "quantity": 2000
+    }
+  ],
+  "r_heroac_#00": [
+    {
+      "quantity": 15,
+      "points": 3.5
+    },
+    {
+      "quantity": 30,
+      "points": 6.5
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 70
+    },
+    {
+      "quantity": 90
+    },
+    {
+      "quantity": 120
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 200
+    },
+    {
+      "quantity": 500
+    },
+    {
+      "quantity": 850
+    },
+    {
+      "quantity": 1000
+    }
+  ],
+  "r_solban_#00": [
+    {
+      "quantity": 20
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 200
+    },
+    {
+      "quantity": 300
+    },
+    {
+      "quantity": 400
+    },
+    {
+      "quantity": 550
+    },
+    {
+      "quantity": 700
+    },
+    {
+      "quantity": 1000
+    }
+  ],
+  "r_theft_#00": [
+    {
+      "quantity": 10,
+      "points": 3.5
+    },
+    {
+      "quantity": 30,
+      "points": 6.5
+    },
+    {
+      "quantity": 40
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 500
+    },
+    {
+      "quantity": 1000
+    },
+    {
+      "quantity": 2000
+    }
+  ],
+  "r_deco_#00": [
+    {
+      "quantity": 100,
+      "points": 3.5
+    },
+    {
+      "quantity": 250,
+      "points": 6.5
+    },
+    {
+      "quantity": 500
+    },
+    {
+      "quantity": 1000
+    },
+    {
+      "quantity": 1500
+    },
+    {
+      "quantity": 2000
+    },
+    {
+      "quantity": 2500
+    }
+  ],
+  "r_plundr_#00": [
+    {
+      "quantity": 30,
+      "points": 3.5
+    },
+    {
+      "quantity": 60,
+      "points": 6.5
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 200
+    },
+    {
+      "quantity": 400
+    },
+    {
+      "quantity": 600
+    },
+    {
+      "quantity": 1000
+    }
+  ],
+  "r_cwater_#00": [
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 200
+    }
+  ],
+  "r_cgarb_#00": [
+    {
+      "quantity": 60
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 200
+    },
+    {
+      "quantity": 300
+    }
+  ],
+  "r_maso_#00": [
+    {
+      "quantity": 20,
+      "points": 3.5
+    },
+    {
+      "quantity": 40,
+      "points": 6.5
+    },
+    {
+      "quantity": 60
+    },
+    {
+      "quantity": 100
+    }
+  ],
+  "r_animal_#00": [
+    {
+      "quantity": 30,
+      "points": 3.5
+    },
+    {
+      "quantity": 60,
+      "points": 6.5
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 300
+    }
+  ],
+  "r_guard_#00": [
+    {
+      "quantity": 20,
+      "points": 3.5
+    },
+    {
+      "quantity": 40,
+      "points": 6.5
+    },
+    {
+      "quantity": 80
+    },
+    {
+      "quantity": 120
+    },
+    {
+      "quantity": 200
+    },
+    {
+      "quantity": 400
+    },
+    {
+      "quantity": 600
+    }
+  ],
+  "r_wondrs_#00": [
+    {
+      "quantity": 20,
+      "points": 3.5
+    },
+    {
+      "quantity": 50,
+      "points": 6.5
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 200
+    },
+    {
+      "quantity": 250
+    },
+    {
+      "quantity": 300
+    },
+    {
+      "quantity": 350
+    }
+  ],
+  "r_ebuild_#00": [
+    {
+      "quantity": 1,
+      "points": 3.5
+    },
+    {
+      "quantity": 3,
+      "points": 6.5
+    },
+    {
+      "quantity": 7
+    },
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 15
+    },
+    {
+      "quantity": 20
+    },
+    {
+      "quantity": 30
+    },
+    {
+      "quantity": 40
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 60
+    },
+    {
+      "quantity": 80
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 120
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 200
+    }
+  ],
+  "r_ebpmv_#00": [
+    {
+      "quantity": 5
+    },
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 15
+    },
+    {
+      "quantity": 20
+    },
+    {
+      "quantity": 25
+    },
+    {
+      "quantity": 30
+    },
+    {
+      "quantity": 40
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 100
+    }
+  ],
+  "r_ebcstl_#00": [
+    {
+      "quantity": 5
+    },
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 15
+    },
+    {
+      "quantity": 20
+    },
+    {
+      "quantity": 25
+    },
+    {
+      "quantity": 30
+    },
+    {
+      "quantity": 40
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 100
+    }
+  ],
+  "r_ebcrow_#00": [
+    {
+      "quantity": 5
+    },
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 15
+    },
+    {
+      "quantity": 20
+    },
+    {
+      "quantity": 25
+    },
+    {
+      "quantity": 30
+    },
+    {
+      "quantity": 40
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 100
+    }
+  ],
+  "r_ebgros_#00": [
+    {
+      "quantity": 5
+    },
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 15
+    },
+    {
+      "quantity": 20
+    },
+    {
+      "quantity": 25
+    },
+    {
+      "quantity": 30
+    },
+    {
+      "quantity": 40
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 75
+    }
+  ],
+  "r_batgun_#00": [
+    {
+      "quantity": 15
+    },
+    {
+      "quantity": 25
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 150
+    }
+  ],
+  "r_buildr_#00": [
+    {
+      "quantity": 100,
+      "points": 3.5
+    },
+    {
+      "quantity": 200,
+      "points": 6.5
+    },
+    {
+      "quantity": 400
+    },
+    {
+      "quantity": 700
+    },
+    {
+      "quantity": 1300
+    },
+    {
+      "quantity": 2000
+    },
+    {
+      "quantity": 3000
+    },
+    {
+      "quantity": 4000
+    },
+    {
+      "quantity": 5000
+    },
+    {
+      "quantity": 6000
+    },
+    {
+      "quantity": 8000
+    },
+    {
+      "quantity": 10000
+    }
+  ],
+  "r_brep_#00": [
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 250
+    },
+    {
+      "quantity": 500
+    },
+    {
+      "quantity": 1000
+    },
+    {
+      "quantity": 1500
+    },
+    {
+      "quantity": 2000
+    },
+    {
+      "quantity": 2500
+    },
+    {
+      "quantity": 3000
+    },
+    {
+      "quantity": 3500
+    }
+  ],
+  "r_tronco_#00": [
+    {
+      "quantity": 5
+    },
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 30
+    }
+  ],
+  "r_repair_#00": [
+    {
+      "quantity": 15
+    },
+    {
+      "quantity": 30
+    },
+    {
+      "quantity": 60
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 400
+    }
+  ],
+  "r_watgun_#00": [
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 25
+    },
+    {
+      "quantity": 35
+    },
+    {
+      "quantity": 60
+    }
+  ],
+  "r_digger_#00": [
+    {
+      "quantity": 50,
+      "points": 3.5
+    },
+    {
+      "quantity": 300,
+      "points": 6.5
+    },
+    {
+      "quantity": 750
+    },
+    {
+      "quantity": 1000
+    },
+    {
+      "quantity": 1500
+    }
+  ],
+  "r_cmplst_#00": [
+    {
+      "quantity": 10,
+      "points": 3.5
+    },
+    {
+      "quantity": 25,
+      "points": 6.5
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 200
+    }
+  ],
+  "r_explo2_#00": [
+    {
+      "quantity": 5,
+      "points": 3.5
+    },
+    {
+      "quantity": 15,
+      "points": 6.5
+    },
+    {
+      "quantity": 30
+    },
+    {
+      "quantity": 70
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 300
+    }
+  ],
+  "r_ruine_#00": [
+    {
+      "quantity": 5,
+      "points": 3.5
+    },
+    {
+      "quantity": 10,
+      "points": 6.5
+    },
+    {
+      "quantity": 20
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 200
+    },
+    {
+      "quantity": 250
+    },
+    {
+      "quantity": 400
+    }
+  ],
+  "r_door_#00": [
+    {
+      "quantity": 1,
+      "points": 3.5
+    },
+    {
+      "quantity": 5,
+      "points": 6.5
+    },
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 15
+    },
+    {
+      "quantity": 20
+    },
+    {
+      "quantity": 30
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 100
+    }
+  ],
+  "r_killz_#00": [
+    {
+      "quantity": 100,
+      "points": 3.5
+    },
+    {
+      "quantity": 200,
+      "points": 6.5
+    },
+    {
+      "quantity": 300,
+      "points": 10
+    },
+    {
+      "quantity": 800,
+      "points": 13
+    },
+    {
+      "quantity": 2000
+    },
+    {
+      "quantity": 4000
+    },
+    {
+      "quantity": 6000
+    },
+    {
+      "quantity": 10000
+    },
+    {
+      "quantity": 15000
+    }
+  ],
+  "r_chstxl_#00": [
+    {
+      "quantity": 5,
+      "points": 3.5
+    },
+    {
+      "quantity": 10,
+      "points": 6.5
+    },
+    {
+      "quantity": 15
+    },
+    {
+      "quantity": 20
+    },
+    {
+      "quantity": 30
+    },
+    {
+      "quantity": 50
+    }
+  ],
+  "r_wrestl_#00": [
+    {
+      "quantity": 20
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 200
+    },
+    {
+      "quantity": 400
+    },
+    {
+      "quantity": 600
+    }
+  ],
+  "r_explor_#00": [
+    {
+      "quantity": 15,
+      "points": 3.5
+    },
+    {
+      "quantity": 30,
+      "points": 6.5
+    },
+    {
+      "quantity": 70
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 200
+    },
+    {
+      "quantity": 250
+    },
+    {
+      "quantity": 300
+    },
+    {
+      "quantity": 350
+    },
+    {
+      "quantity": 400
+    }
+  ],
+  "r_camp_#00": [
+    {
+      "quantity": 10,
+      "points": 3.5
+    },
+    {
+      "quantity": 25,
+      "points": 6.5
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 200
+    },
+    {
+      "quantity": 250
+    },
+    {
+      "quantity": 300
+    },
+    {
+      "quantity": 350
+    }
+  ],
+  "r_rp_#00": [
+    {
+      "quantity": 5,
+      "points": 3.5
+    },
+    {
+      "quantity": 10,
+      "points": 6.5
+    },
+    {
+      "quantity": 20,
+      "points": 10
+    },
+    {
+      "quantity": 30,
+      "points": 13
+    },
+    {
+      "quantity": 40,
+      "points": 16.5
+    },
+    {
+      "quantity": 60,
+      "points": 20
+    },
+    {
+      "quantity": 100
+    }
+  ],
+  "r_nodrug_#00": [
+    {
+      "quantity": 20,
+      "points": 3.5
+    },
+    {
+      "quantity": 75,
+      "points": 6.5
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 500
+    },
+    {
+      "quantity": 1000
+    }
+  ],
+  "r_cobaye_#00": [
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 200
+    },
+    {
+      "quantity": 250
+    }
+  ],
+  "r_cannib_#00": [
+    {
+      "quantity": 10,
+      "points": 3.5
+    },
+    {
+      "quantity": 40,
+      "points": 6.5
+    },
+    {
+      "quantity": 80
+    },
+    {
+      "quantity": 120
+    },
+    {
+      "quantity": 180
+    },
+    {
+      "quantity": 250
+    },
+    {
+      "quantity": 500
+    },
+    {
+      "quantity": 1000
+    }
+  ],
+  "r_surlst_#00": [
+    {
+      "quantity": 10,
+      "points": 3.5
+    },
+    {
+      "quantity": 15,
+      "points": 6.5
+    },
+    {
+      "quantity": 30,
+      "points": 10
+    },
+    {
+      "quantity": 50,
+      "points": 13
+    },
+    {
+      "quantity": 100,
+      "points": 16.5
+    }
+  ],
+  "r_suhard_#00": [
+    {
+      "quantity": 5,
+      "points": 3.5
+    },
+    {
+      "quantity": 10,
+      "points": 6.5
+    },
+    {
+      "quantity": 20,
+      "points": 10
+    },
+    {
+      "quantity": 40,
+      "points": 13
+    },
+    {
+      "quantity": 100
+    }
+  ],
+  "r_dinfec_#00": [
+    {
+      "quantity": 20
+    },
+    {
+      "quantity": 40
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 150
+    }
+  ],
+  "r_doutsd_#00": [
+    {
+      "quantity": 20,
+      "points": 3.5
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 250
+    }
+  ],
+  "r_winbas_#00": [
+    {
+      "quantity": 2,
+      "points": 13
+    },
+    {
+      "quantity": 5,
+      "points": 20
+    },
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 15
+    },
+    {
+      "quantity": 20
+    }
+  ],
+  "r_winthi_#00": [
+    {
+      "quantity": 2
+    },
+    {
+      "quantity": 5
+    },
+    {
+      "quantity": 10
+    }
+  ],
+  "r_wintop_#00": [
+    {
+      "quantity": 1,
+      "points": 20
+    },
+    {
+      "quantity": 2
+    },
+    {
+      "quantity": 3
+    }
+  ],
+  "r_goodg_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_ginfec_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_beta_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_bgum_#00": [
+    {
+      "quantity": 1
+    },
+    {
+      "quantity": 5
+    },
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 15
+    },
+    {
+      "quantity": 20
+    },
+    {
+      "quantity": 30
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 150
+    }
+  ],
+  "r_fjv2_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_fjvani_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_fjv_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_rrefer_#00": [
+    {
+      "quantity": 1
+    },
+    {
+      "quantity": 3
+    },
+    {
+      "quantity": 5
+    },
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 15
+    },
+    {
+      "quantity": 20
+    },
+    {
+      "quantity": 25
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 150
+    }
+  ],
+  "r_comu_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_comu2_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_share_#00": [
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 25
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 250
+    },
+    {
+      "quantity": 400
+    }
+  ],
+  "r_santac_#00": [
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 25
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 100
+    }
+  ],
+  "r_collec_#00": [
+    {
+      "quantity": 2
+    },
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 20
+    },
+    {
+      "quantity": 30
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 80
+    },
+    {
+      "quantity": 120
+    },
+    {
+      "quantity": 180
+    },
+    {
+      "quantity": 300
+    }
+  ],
+  "r_ptame_#00": [
+    {
+      "quantity": 100,
+      "points": 13
+    },
+    {
+      "quantity": 500,
+      "points": 33
+    },
+    {
+      "quantity": 1000,
+      "points": 66
+    },
+    {
+      "quantity": 2000,
+      "points": 132
+    },
+    {
+      "quantity": 3000,
+      "points": 198
+    },
+    {
+      "quantity": 5000
+    },
+    {
+      "quantity": 7000
+    },
+    {
+      "quantity": 9000
+    },
+    {
+      "quantity": 12000
+    }
+  ],
+  "r_ermwin_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_cott_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_mystic_#00": [
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 25
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 300
+    },
+    {
+      "quantity": 800
+    },
+    {
+      "quantity": 1500
+    }
+  ],
+  "r_dnucl_#00": [
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 20
+    },
+    {
+      "quantity": 30
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 60
+    },
+    {
+      "quantity": 80
+    },
+    {
+      "quantity": 90
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 120
+    },
+    {
+      "quantity": 150
+    }
+  ],
+  "r_pande_#00": [
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 300
+    },
+    {
+      "quantity": 500
+    },
+    {
+      "quantity": 1000
+    }
+  ],
+  "r_lepre_#00": [
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 25
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 75
+    },
+    {
+      "quantity": 100
+    }
+  ],
+  "r_paques_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_gsp_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_ripflash_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_beta2_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_derwin_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_sandb_#00": [
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 50
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 250
+    }
+  ],
+  "r_guide_#00": [
+    {
+      "quantity": 300,
+      "points": 3.5
+    },
+    {
+      "quantity": 1000,
+      "points": 6.5
+    },
+    {
+      "quantity": 2500
+    },
+    {
+      "quantity": 5000
+    },
+    {
+      "quantity": 8000
+    },
+    {
+      "quantity": 15000
+    },
+    {
+      "quantity": 30000
+    }
+  ],
+  "r_armag_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_surgrp_#00": [
+    {
+      "quantity": 5
+    },
+    {
+      "quantity": 10
+    },
+    {
+      "quantity": 20
+    },
+    {
+      "quantity": 30
+    },
+    {
+      "quantity": 40
+    },
+    {
+      "quantity": 60
+    },
+    {
+      "quantity": 100
+    },
+    {
+      "quantity": 150
+    }
+  ],
+  "r_alcool_#00": [
+    {
+      "quantity": 30
+    },
+    {
+      "quantity": 60
+    },
+    {
+      "quantity": 150
+    },
+    {
+      "quantity": 300
+    },
+    {
+      "quantity": 400
+    },
+    {
+      "quantity": 500
+    },
+    {
+      "quantity": 600
+    },
+    {
+      "quantity": 800
+    }
+  ],
+  "r_defwin_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_cdhwin_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_tamwin_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_scaddh_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_rangwin_#00": [
+    {
+      "quantity": 1
+    }
+  ],
+  "r_techwin_#00": [
+    {
+      "quantity": 1
+    }
+  ]
+}

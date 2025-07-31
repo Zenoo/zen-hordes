@@ -38,13 +38,15 @@ import {
 } from "./UIEnhancer";
 import { insertWiki, openItemInWiki } from "./wiki";
 
-// TODO: Listen to html event for items taken
 // TODO: Add a way to store/share camping calculations
 // TODO: Add more detailed instructions to the guide
 // ex: drag & drop, images, etc
 // TODO: Add a note-taking feature
 // TODO: Add distinctions linked to some action tooltips (throw out someone, etc)
 // TODO: rework tooltips to generate them on the fly and reuse them
+// TODO: Add next unlockable title in reward tooltips (.forum-tooltip h1) (+ points if any)
+// TODO: Add missing titles in soul page title tab (never unlocked titles at the end)
+// TODO: Prefill building AP investment input with max values
 
 (async () => {
   // Do nothing on asset URLs

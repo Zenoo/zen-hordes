@@ -831,4 +831,8 @@ export type Picto = {
   icon: string;
   community: boolean;
   rare: boolean;
+  titles?: {
+    quantity: number;
+    points?: number;
+  }[];
 };

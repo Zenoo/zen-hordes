@@ -18,7 +18,44 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_heroac",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 15,
+        points: 3.5
+      },
+      {
+        quantity: 30,
+        points: 6.5
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 70
+      },
+      {
+        quantity: 90
+      },
+      {
+        quantity: 120
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 200
+      },
+      {
+        quantity: 500
+      },
+      {
+        quantity: 850
+      },
+      {
+        quantity: 1000
+      }
+    ]
   },
   [PictoId.ALCOOL]: {
     id: PictoId.ALCOOL,
@@ -37,7 +74,33 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_alcool",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 30
+      },
+      {
+        quantity: 60
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 300
+      },
+      {
+        quantity: 400
+      },
+      {
+        quantity: 500
+      },
+      {
+        quantity: 600
+      },
+      {
+        quantity: 800
+      }
+    ]
   },
   [PictoId.HOMEUP]: {
     id: PictoId.HOMEUP,
@@ -94,7 +157,18 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_cwater",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 50
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 200
+      }
+    ]
   },
   [PictoId.SOLBAN]: {
     id: PictoId.SOLBAN,
@@ -113,7 +187,33 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_solban",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 20
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 200
+      },
+      {
+        quantity: 300
+      },
+      {
+        quantity: 400
+      },
+      {
+        quantity: 550
+      },
+      {
+        quantity: 700
+      },
+      {
+        quantity: 1000
+      }
+    ]
   },
   [PictoId.BAN]: {
     id: PictoId.BAN,
@@ -170,7 +270,35 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_cookr",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 10,
+        points: 3.5
+      },
+      {
+        quantity: 25,
+        points: 6.5
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 250
+      },
+      {
+        quantity: 500
+      },
+      {
+        quantity: 1000
+      },
+      {
+        quantity: 2000
+      }
+    ]
   },
   [PictoId.ANIMAL]: {
     id: PictoId.ANIMAL,
@@ -189,7 +317,23 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_animal",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 30,
+        points: 3.5
+      },
+      {
+        quantity: 60,
+        points: 6.5
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 300
+      }
+    ]
   },
   [PictoId.CMPLST]: {
     id: PictoId.CMPLST,
@@ -208,7 +352,29 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_cmplst",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 10,
+        points: 3.5
+      },
+      {
+        quantity: 25,
+        points: 6.5
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 200
+      }
+    ]
   },
   [PictoId.CAMP]: {
     id: PictoId.CAMP,
@@ -227,7 +393,41 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_camp",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 10,
+        points: 3.5
+      },
+      {
+        quantity: 25,
+        points: 6.5
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 200
+      },
+      {
+        quantity: 250
+      },
+      {
+        quantity: 300
+      },
+      {
+        quantity: 350
+      }
+    ]
   },
   [PictoId.CANNIB]: {
     id: PictoId.CANNIB,
@@ -246,7 +446,35 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_cannib",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 10,
+        points: 3.5
+      },
+      {
+        quantity: 40,
+        points: 6.5
+      },
+      {
+        quantity: 80
+      },
+      {
+        quantity: 120
+      },
+      {
+        quantity: 180
+      },
+      {
+        quantity: 250
+      },
+      {
+        quantity: 500
+      },
+      {
+        quantity: 1000
+      }
+    ]
   },
   [PictoId.WATGUN]: {
     id: PictoId.WATGUN,
@@ -265,7 +493,21 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_watgun",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 10
+      },
+      {
+        quantity: 25
+      },
+      {
+        quantity: 35
+      },
+      {
+        quantity: 60
+      }
+    ]
   },
   [PictoId.CHSTXL]: {
     id: PictoId.CHSTXL,
@@ -284,7 +526,29 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_chstxl",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 5,
+        points: 3.5
+      },
+      {
+        quantity: 10,
+        points: 6.5
+      },
+      {
+        quantity: 15
+      },
+      {
+        quantity: 20
+      },
+      {
+        quantity: 30
+      },
+      {
+        quantity: 50
+      }
+    ]
   },
   [PictoId.BUILDR]: {
     id: PictoId.BUILDR,
@@ -303,7 +567,47 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_buildr",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 100,
+        points: 3.5
+      },
+      {
+        quantity: 200,
+        points: 6.5
+      },
+      {
+        quantity: 400
+      },
+      {
+        quantity: 700
+      },
+      {
+        quantity: 1300
+      },
+      {
+        quantity: 2000
+      },
+      {
+        quantity: 3000
+      },
+      {
+        quantity: 4000
+      },
+      {
+        quantity: 5000
+      },
+      {
+        quantity: 6000
+      },
+      {
+        quantity: 8000
+      },
+      {
+        quantity: 10000
+      }
+    ]
   },
   [PictoId.NODRUG]: {
     id: PictoId.NODRUG,
@@ -322,7 +626,26 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_nodrug",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 20,
+        points: 3.5
+      },
+      {
+        quantity: 75,
+        points: 6.5
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 500
+      },
+      {
+        quantity: 1000
+      }
+    ]
   },
   [PictoId.COLLEC]: {
     id: PictoId.COLLEC,
@@ -341,7 +664,36 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_collec",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 2
+      },
+      {
+        quantity: 10
+      },
+      {
+        quantity: 20
+      },
+      {
+        quantity: 30
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 80
+      },
+      {
+        quantity: 120
+      },
+      {
+        quantity: 180
+      },
+      {
+        quantity: 300
+      }
+    ]
   },
   [PictoId.WRESTL]: {
     id: PictoId.WRESTL,
@@ -360,7 +712,24 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_wrestl",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 20
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 200
+      },
+      {
+        quantity: 400
+      },
+      {
+        quantity: 600
+      }
+    ]
   },
   [PictoId.EBUILD]: {
     id: PictoId.EBUILD,
@@ -379,7 +748,56 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_ebuild",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1,
+        points: 3.5
+      },
+      {
+        quantity: 3,
+        points: 6.5
+      },
+      {
+        quantity: 7
+      },
+      {
+        quantity: 10
+      },
+      {
+        quantity: 15
+      },
+      {
+        quantity: 20
+      },
+      {
+        quantity: 30
+      },
+      {
+        quantity: 40
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 60
+      },
+      {
+        quantity: 80
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 120
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 200
+      }
+    ]
   },
   [PictoId.COOKED]: {
     id: PictoId.COOKED,
@@ -417,7 +835,26 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_digger",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 50,
+        points: 3.5
+      },
+      {
+        quantity: 300,
+        points: 6.5
+      },
+      {
+        quantity: 750
+      },
+      {
+        quantity: 1000
+      },
+      {
+        quantity: 1500
+      }
+    ]
   },
   [PictoId.DECO]: {
     id: PictoId.DECO,
@@ -436,7 +873,32 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_deco",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 100,
+        points: 3.5
+      },
+      {
+        quantity: 250,
+        points: 6.5
+      },
+      {
+        quantity: 500
+      },
+      {
+        quantity: 1000
+      },
+      {
+        quantity: 1500
+      },
+      {
+        quantity: 2000
+      },
+      {
+        quantity: 2500
+      }
+    ]
   },
   [PictoId.SURGRP]: {
     id: PictoId.SURGRP,
@@ -455,7 +917,33 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_surgrp",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 5
+      },
+      {
+        quantity: 10
+      },
+      {
+        quantity: 20
+      },
+      {
+        quantity: 30
+      },
+      {
+        quantity: 40
+      },
+      {
+        quantity: 60
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 150
+      }
+    ]
   },
   [PictoId.DRUG]: {
     id: PictoId.DRUG,
@@ -493,7 +981,24 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_cobaye",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 50
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 200
+      },
+      {
+        quantity: 250
+      }
+    ]
   },
   [PictoId.RUINE]: {
     id: PictoId.RUINE,
@@ -512,7 +1017,38 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_ruine",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 5,
+        points: 3.5
+      },
+      {
+        quantity: 10,
+        points: 6.5
+      },
+      {
+        quantity: 20
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 200
+      },
+      {
+        quantity: 250
+      },
+      {
+        quantity: 400
+      }
+    ]
   },
   [PictoId.EXPLOR]: {
     id: PictoId.EXPLOR,
@@ -531,7 +1067,38 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_explor",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 15,
+        points: 3.5
+      },
+      {
+        quantity: 30,
+        points: 6.5
+      },
+      {
+        quantity: 70
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 200
+      },
+      {
+        quantity: 250
+      },
+      {
+        quantity: 300
+      },
+      {
+        quantity: 350
+      },
+      {
+        quantity: 400
+      }
+    ]
   },
   [PictoId.EXPLO2]: {
     id: PictoId.EXPLO2,
@@ -550,7 +1117,29 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_explo2",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 5,
+        points: 3.5
+      },
+      {
+        quantity: 15,
+        points: 6.5
+      },
+      {
+        quantity: 30
+      },
+      {
+        quantity: 70
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 300
+      }
+    ]
   },
   [PictoId.SHARE]: {
     id: PictoId.SHARE,
@@ -569,7 +1158,30 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_share",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 10
+      },
+      {
+        quantity: 25
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 250
+      },
+      {
+        quantity: 400
+      }
+    ]
   },
   [PictoId.GUIDE]: {
     id: PictoId.GUIDE,
@@ -588,7 +1200,32 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_guide",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 300,
+        points: 3.5
+      },
+      {
+        quantity: 1000,
+        points: 6.5
+      },
+      {
+        quantity: 2500
+      },
+      {
+        quantity: 5000
+      },
+      {
+        quantity: 8000
+      },
+      {
+        quantity: 15000
+      },
+      {
+        quantity: 30000
+      }
+    ]
   },
   [PictoId.DRGMKR]: {
     id: PictoId.DRGMKR,
@@ -607,7 +1244,35 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_drgmkr",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 10,
+        points: 3.5
+      },
+      {
+        quantity: 25,
+        points: 6.5
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 250
+      },
+      {
+        quantity: 500
+      },
+      {
+        quantity: 1000
+      },
+      {
+        quantity: 2000
+      }
+    ]
   },
   [PictoId.THEFT]: {
     id: PictoId.THEFT,
@@ -626,7 +1291,38 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_theft",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 10,
+        points: 3.5
+      },
+      {
+        quantity: 30,
+        points: 6.5
+      },
+      {
+        quantity: 40
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 500
+      },
+      {
+        quantity: 1000
+      },
+      {
+        quantity: 2000
+      }
+    ]
   },
   [PictoId.BROKEN]: {
     id: PictoId.BROKEN,
@@ -664,7 +1360,23 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_maso",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 20,
+        points: 3.5
+      },
+      {
+        quantity: 40,
+        points: 6.5
+      },
+      {
+        quantity: 60
+      },
+      {
+        quantity: 100
+      }
+    ]
   },
   [PictoId.BGUM]: {
     id: PictoId.BGUM,
@@ -683,7 +1395,36 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_bgum",
     community: true,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      },
+      {
+        quantity: 5
+      },
+      {
+        quantity: 10
+      },
+      {
+        quantity: 15
+      },
+      {
+        quantity: 20
+      },
+      {
+        quantity: 30
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 150
+      }
+    ]
   },
   [PictoId.EBCSTL]: {
     id: PictoId.EBCSTL,
@@ -702,7 +1443,39 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_ebcstl",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 5
+      },
+      {
+        quantity: 10
+      },
+      {
+        quantity: 15
+      },
+      {
+        quantity: 20
+      },
+      {
+        quantity: 25
+      },
+      {
+        quantity: 30
+      },
+      {
+        quantity: 40
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 100
+      }
+    ]
   },
   [PictoId.EBPMV]: {
     id: PictoId.EBPMV,
@@ -721,7 +1494,39 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_ebpmv",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 5
+      },
+      {
+        quantity: 10
+      },
+      {
+        quantity: 15
+      },
+      {
+        quantity: 20
+      },
+      {
+        quantity: 25
+      },
+      {
+        quantity: 30
+      },
+      {
+        quantity: 40
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 100
+      }
+    ]
   },
   [PictoId.EBGROS]: {
     id: PictoId.EBGROS,
@@ -740,7 +1545,36 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_ebgros",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 5
+      },
+      {
+        quantity: 10
+      },
+      {
+        quantity: 15
+      },
+      {
+        quantity: 20
+      },
+      {
+        quantity: 25
+      },
+      {
+        quantity: 30
+      },
+      {
+        quantity: 40
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 75
+      }
+    ]
   },
   [PictoId.EBCROW]: {
     id: PictoId.EBCROW,
@@ -759,7 +1593,39 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_ebcrow",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 5
+      },
+      {
+        quantity: 10
+      },
+      {
+        quantity: 15
+      },
+      {
+        quantity: 20
+      },
+      {
+        quantity: 25
+      },
+      {
+        quantity: 30
+      },
+      {
+        quantity: 40
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 100
+      }
+    ]
   },
   [PictoId.FORUM]: {
     id: PictoId.FORUM,
@@ -797,7 +1663,32 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_jtamer",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 10,
+        points: 3.5
+      },
+      {
+        quantity: 25,
+        points: 6.5
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 300
+      },
+      {
+        quantity: 800
+      },
+      {
+        quantity: 1500
+      }
+    ]
   },
   [PictoId.JRANGR]: {
     id: PictoId.JRANGR,
@@ -816,7 +1707,32 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_jrangr",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 10,
+        points: 3.5
+      },
+      {
+        quantity: 25,
+        points: 6.5
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 300
+      },
+      {
+        quantity: 800
+      },
+      {
+        quantity: 1500
+      }
+    ]
   },
   [PictoId.JERMIT]: {
     id: PictoId.JERMIT,
@@ -835,7 +1751,32 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_jermit",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 10,
+        points: 3.5
+      },
+      {
+        quantity: 25,
+        points: 6.5
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 300
+      },
+      {
+        quantity: 800
+      },
+      {
+        quantity: 1500
+      }
+    ]
   },
   [PictoId.JCOLLE]: {
     id: PictoId.JCOLLE,
@@ -854,7 +1795,32 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_jcolle",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 10,
+        points: 3.5
+      },
+      {
+        quantity: 25,
+        points: 6.5
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 300
+      },
+      {
+        quantity: 800
+      },
+      {
+        quantity: 1500
+      }
+    ]
   },
   [PictoId.JGUARD]: {
     id: PictoId.JGUARD,
@@ -873,7 +1839,32 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_jguard",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 10,
+        points: 3.5
+      },
+      {
+        quantity: 25,
+        points: 6.5
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 300
+      },
+      {
+        quantity: 800
+      },
+      {
+        quantity: 1500
+      }
+    ]
   },
   [PictoId.JTECH]: {
     id: PictoId.JTECH,
@@ -892,7 +1883,32 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_jtech",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 10,
+        points: 3.5
+      },
+      {
+        quantity: 25,
+        points: 6.5
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 300
+      },
+      {
+        quantity: 800
+      },
+      {
+        quantity: 1500
+      }
+    ]
   },
   [PictoId.DCITY]: {
     id: PictoId.DCITY,
@@ -949,7 +1965,24 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_dinfec",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 20
+      },
+      {
+        quantity: 40
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 150
+      }
+    ]
   },
   [PictoId.DNUCL]: {
     id: PictoId.DNUCL,
@@ -968,7 +2001,39 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_dnucl",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 10
+      },
+      {
+        quantity: 20
+      },
+      {
+        quantity: 30
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 60
+      },
+      {
+        quantity: 80
+      },
+      {
+        quantity: 90
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 120
+      },
+      {
+        quantity: 150
+      }
+    ]
   },
   [PictoId.DDRUG]: {
     id: PictoId.DDRUG,
@@ -1006,7 +2071,29 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_surlst",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 10,
+        points: 3.5
+      },
+      {
+        quantity: 15,
+        points: 6.5
+      },
+      {
+        quantity: 30,
+        points: 10
+      },
+      {
+        quantity: 50,
+        points: 13
+      },
+      {
+        quantity: 100,
+        points: 16.5
+      }
+    ]
   },
   [PictoId.SUHARD]: {
     id: PictoId.SUHARD,
@@ -1025,7 +2112,28 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_suhard",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 5,
+        points: 3.5
+      },
+      {
+        quantity: 10,
+        points: 6.5
+      },
+      {
+        quantity: 20,
+        points: 10
+      },
+      {
+        quantity: 40,
+        points: 13
+      },
+      {
+        quantity: 100
+      }
+    ]
   },
   [PictoId.MYSTIC]: {
     id: PictoId.MYSTIC,
@@ -1044,7 +2152,30 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_mystic",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 10
+      },
+      {
+        quantity: 25
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 300
+      },
+      {
+        quantity: 800
+      },
+      {
+        quantity: 1500
+      }
+    ]
   },
   [PictoId.DOUTSD]: {
     id: PictoId.DOUTSD,
@@ -1063,7 +2194,19 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_doutsd",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 20,
+        points: 3.5
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 250
+      }
+    ]
   },
   [PictoId.DOOR]: {
     id: PictoId.DOOR,
@@ -1082,7 +2225,35 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_door",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1,
+        points: 3.5
+      },
+      {
+        quantity: 5,
+        points: 6.5
+      },
+      {
+        quantity: 10
+      },
+      {
+        quantity: 15
+      },
+      {
+        quantity: 20
+      },
+      {
+        quantity: 30
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 100
+      }
+    ]
   },
   [PictoId.DHANG]: {
     id: PictoId.DHANG,
@@ -1120,7 +2291,32 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_plundr",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 30,
+        points: 3.5
+      },
+      {
+        quantity: 60,
+        points: 6.5
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 200
+      },
+      {
+        quantity: 400
+      },
+      {
+        quantity: 600
+      },
+      {
+        quantity: 1000
+      }
+    ]
   },
   [PictoId.WONDRS]: {
     id: PictoId.WONDRS,
@@ -1139,7 +2335,35 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_wondrs",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 20,
+        points: 3.5
+      },
+      {
+        quantity: 50,
+        points: 6.5
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 200
+      },
+      {
+        quantity: 250
+      },
+      {
+        quantity: 300
+      },
+      {
+        quantity: 350
+      }
+    ]
   },
   [PictoId.REPAIR]: {
     id: PictoId.REPAIR,
@@ -1158,7 +2382,24 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_repair",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 15
+      },
+      {
+        quantity: 30
+      },
+      {
+        quantity: 60
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 400
+      }
+    ]
   },
   [PictoId.BREP]: {
     id: PictoId.BREP,
@@ -1177,7 +2418,36 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_brep",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 100
+      },
+      {
+        quantity: 250
+      },
+      {
+        quantity: 500
+      },
+      {
+        quantity: 1000
+      },
+      {
+        quantity: 1500
+      },
+      {
+        quantity: 2000
+      },
+      {
+        quantity: 2500
+      },
+      {
+        quantity: 3000
+      },
+      {
+        quantity: 3500
+      }
+    ]
   },
   [PictoId.RP]: {
     id: PictoId.RP,
@@ -1196,7 +2466,36 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_rp",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 5,
+        points: 3.5
+      },
+      {
+        quantity: 10,
+        points: 6.5
+      },
+      {
+        quantity: 20,
+        points: 10
+      },
+      {
+        quantity: 30,
+        points: 13
+      },
+      {
+        quantity: 40,
+        points: 16.5
+      },
+      {
+        quantity: 60,
+        points: 20
+      },
+      {
+        quantity: 100
+      }
+    ]
   },
   [PictoId.CGARB]: {
     id: PictoId.CGARB,
@@ -1215,7 +2514,21 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_cgarb",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 60
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 200
+      },
+      {
+        quantity: 300
+      }
+    ]
   },
   [PictoId.BATGUN]: {
     id: PictoId.BATGUN,
@@ -1234,7 +2547,27 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_batgun",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 15
+      },
+      {
+        quantity: 25
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 150
+      }
+    ]
   },
   [PictoId.PANDE]: {
     id: PictoId.PANDE,
@@ -1253,7 +2586,24 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_pande",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 50
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 300
+      },
+      {
+        quantity: 500
+      },
+      {
+        quantity: 1000
+      }
+    ]
   },
   [PictoId.HBUILD]: {
     id: PictoId.HBUILD,
@@ -1291,7 +2641,18 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_tronco",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 5
+      },
+      {
+        quantity: 10
+      },
+      {
+        quantity: 30
+      }
+    ]
   },
   [PictoId.GUARD]: {
     id: PictoId.GUARD,
@@ -1310,7 +2671,32 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_guard",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 20,
+        points: 3.5
+      },
+      {
+        quantity: 40,
+        points: 6.5
+      },
+      {
+        quantity: 80
+      },
+      {
+        quantity: 120
+      },
+      {
+        quantity: 200
+      },
+      {
+        quantity: 400
+      },
+      {
+        quantity: 600
+      }
+    ]
   },
   [PictoId.WINBAS]: {
     id: PictoId.WINBAS,
@@ -1329,7 +2715,26 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_winbas",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 2,
+        points: 13
+      },
+      {
+        quantity: 5,
+        points: 20
+      },
+      {
+        quantity: 10
+      },
+      {
+        quantity: 15
+      },
+      {
+        quantity: 20
+      }
+    ]
   },
   [PictoId.WINTOP]: {
     id: PictoId.WINTOP,
@@ -1348,7 +2753,19 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_wintop",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1,
+        points: 20
+      },
+      {
+        quantity: 2
+      },
+      {
+        quantity: 3
+      }
+    ]
   },
   [PictoId.WINTHI]: {
     id: PictoId.WINTHI,
@@ -1367,7 +2784,18 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_winthi",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 2
+      },
+      {
+        quantity: 5
+      },
+      {
+        quantity: 10
+      }
+    ]
   },
   [PictoId.KILLZ]: {
     id: PictoId.KILLZ,
@@ -1386,7 +2814,40 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_killz",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 100,
+        points: 3.5
+      },
+      {
+        quantity: 200,
+        points: 6.5
+      },
+      {
+        quantity: 300,
+        points: 10
+      },
+      {
+        quantity: 800,
+        points: 13
+      },
+      {
+        quantity: 2000
+      },
+      {
+        quantity: 4000
+      },
+      {
+        quantity: 6000
+      },
+      {
+        quantity: 10000
+      },
+      {
+        quantity: 15000
+      }
+    ]
   },
   [PictoId.BETA]: {
     id: PictoId.BETA,
@@ -1405,7 +2866,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_beta",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.SANDB]: {
     id: PictoId.SANDB,
@@ -1424,7 +2890,21 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_sandb",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 10
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 250
+      }
+    ]
   },
   [PictoId.PAQUES]: {
     id: PictoId.PAQUES,
@@ -1443,7 +2923,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_paques",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.SANTAC]: {
     id: PictoId.SANTAC,
@@ -1462,7 +2947,24 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_santac",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 10
+      },
+      {
+        quantity: 25
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 100
+      }
+    ]
   },
   [PictoId.CHAMAN]: {
     id: PictoId.CHAMAN,
@@ -1500,7 +3002,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_armag",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.GINFEC]: {
     id: PictoId.GINFEC,
@@ -1519,7 +3026,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_ginfec",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.PTAME]: {
     id: PictoId.PTAME,
@@ -1538,7 +3050,41 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_ptame",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 100,
+        points: 13
+      },
+      {
+        quantity: 500,
+        points: 33
+      },
+      {
+        quantity: 1000,
+        points: 66
+      },
+      {
+        quantity: 2000,
+        points: 132
+      },
+      {
+        quantity: 3000,
+        points: 198
+      },
+      {
+        quantity: 5000
+      },
+      {
+        quantity: 7000
+      },
+      {
+        quantity: 9000
+      },
+      {
+        quantity: 12000
+      }
+    ]
   },
   [PictoId.JSHAM]: {
     id: PictoId.JSHAM,
@@ -1557,7 +3103,30 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_jsham",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 10
+      },
+      {
+        quantity: 25
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 150
+      },
+      {
+        quantity: 300
+      },
+      {
+        quantity: 800
+      },
+      {
+        quantity: 1500
+      }
+    ]
   },
   [PictoId.RREFER]: {
     id: PictoId.RREFER,
@@ -1576,7 +3145,39 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_rrefer",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      },
+      {
+        quantity: 3
+      },
+      {
+        quantity: 5
+      },
+      {
+        quantity: 10
+      },
+      {
+        quantity: 15
+      },
+      {
+        quantity: 20
+      },
+      {
+        quantity: 25
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 100
+      },
+      {
+        quantity: 150
+      }
+    ]
   },
   [PictoId.FJVANI]: {
     id: PictoId.FJVANI,
@@ -1595,7 +3196,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_fjvani",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.FJV2]: {
     id: PictoId.FJV2,
@@ -1614,7 +3220,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_fjv2",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.FJV]: {
     id: PictoId.FJV,
@@ -1633,7 +3244,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_fjv",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.COMU]: {
     id: PictoId.COMU,
@@ -1652,7 +3268,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_comu",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.COMU2]: {
     id: PictoId.COMU2,
@@ -1671,7 +3292,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_comu2",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.COTT]: {
     id: PictoId.COTT,
@@ -1690,7 +3316,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_cott",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.CDH]: {
     id: PictoId.CDH,
@@ -1728,7 +3359,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_derwin",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.ERMWIN]: {
     id: PictoId.ERMWIN,
@@ -1747,7 +3383,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_ermwin",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.CDHWIN]: {
     id: PictoId.CDHWIN,
@@ -1766,7 +3407,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_cdhwin",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.DEFWIN]: {
     id: PictoId.DEFWIN,
@@ -1785,7 +3431,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_defwin",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.KOHLMB]: {
     id: PictoId.KOHLMB,
@@ -1823,7 +3474,24 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_lepre",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 10
+      },
+      {
+        quantity: 25
+      },
+      {
+        quantity: 50
+      },
+      {
+        quantity: 75
+      },
+      {
+        quantity: 100
+      }
+    ]
   },
   [PictoId.GOODG]: {
     id: PictoId.GOODG,
@@ -1842,7 +3510,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_goodg",
     community: true,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.BETA2]: {
     id: PictoId.BETA2,
@@ -1861,7 +3534,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_beta2",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.RANGWIN]: {
     id: PictoId.RANGWIN,
@@ -1880,7 +3558,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_rangwin",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.GSP]: {
     id: PictoId.GSP,
@@ -1899,7 +3582,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_gsp",
     community: true,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.COLLEC2]: {
     id: PictoId.COLLEC2,
@@ -1975,7 +3663,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_ripflash",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.TAMWIN]: {
     id: PictoId.TAMWIN,
@@ -1994,7 +3687,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_tamwin",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.JBASIC]: {
     id: PictoId.JBASIC,
@@ -2032,7 +3730,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_scaddh",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   },
   [PictoId.DDH]: {
     id: PictoId.DDH,
@@ -2165,6 +3868,12 @@ export const pictos: Readonly<Record<PictoId, Picto>> = {
     },
     icon: "r_techwin",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        quantity: 1
+      }
+    ]
   }
+
 };
