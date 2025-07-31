@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.9.6](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.9.5...zen-hordes-v1.9.6) (2025-07-31)
+
+
+### Bug Fixes
+
+* Display ruin bury count ([223252f](https://github.com/Zenoo/zen-hordes/commit/223252f86f285b0d81f9e6967e636ada434e38f4))
+* Fetch reward titles quantity and points ([b676a99](https://github.com/Zenoo/zen-hordes/commit/b676a99e0533b5653e27ce12ed4474b88f5b2b1e))
+
 ## [1.9.5](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.9.4...zen-hordes-v1.9.5) (2025-07-28)
 
 
