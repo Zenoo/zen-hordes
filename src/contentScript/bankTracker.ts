@@ -290,19 +290,31 @@ export const onItemTransfer = (event: Event) => {
     // Find item ID
     const itemUID = detail.item;
 
-    const itemNumericalId = detail.response.source?.categories
-      ?.flatMap(
-        (category) => category.items?.find((item) => item.i === itemUID)?.p
-      )
-      ?.find(Boolean);
+    const itemNumericalId =
+      detail.response.source?.categories
+        ?.flatMap(
+          (category) => category.items?.find((item) => item.i === itemUID)?.p
+        )
+        ?.find(Boolean) ??
+      detail.response.target?.items?.find((item) => item.i === itemUID)?.p;
 
-    if (!itemNumericalId) return;
+    if (!itemNumericalId) {
+      console.error("Item numerical ID not found for UID:", itemUID, detail);
+      throw new Error("Item numerical ID not found");
+    }
 
     const itemId = Object.values(items).find(
       (item) => item.numericalId === itemNumericalId
     )?.id;
 
-    if (!itemId) return;
+    if (!itemId) {
+      console.error(
+        "Item ID not found for numerical ID:",
+        itemNumericalId,
+        detail
+      );
+      throw new Error("Item ID not found");
+    }
 
     // Item was taken from the bank
     handleItemTaken(itemId);
