@@ -584,6 +584,15 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
           [Lang.ES]: "Especialidad: Puré de gato"
         },
         quantity: 300
+      },
+      {
+        name: {
+          [Lang.EN]: "30 millions d'ennemis",
+          [Lang.FR]: "30 millions d'ennemis",
+          [Lang.DE]: "30 millions d'ennemis",
+          [Lang.ES]: "30 millions d'ennemis"
+        },
+        quantity: 500
       }
     ]
   },
@@ -774,6 +783,78 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
           [Lang.ES]: "Sin techo ni hígado"
         },
         quantity: 350
+      },
+      {
+        name: {
+          [Lang.EN]: "Je ne suis pas là",
+          [Lang.FR]: "Je ne suis pas là",
+          [Lang.DE]: "Je ne suis pas là",
+          [Lang.ES]: "Je ne suis pas là"
+        },
+        quantity: 400
+      },
+      {
+        name: {
+          [Lang.EN]: "Juste moi et les étoiles...",
+          [Lang.FR]: "Juste moi et les étoiles...",
+          [Lang.DE]: "Juste moi et les étoiles...",
+          [Lang.ES]: "Juste moi et les étoiles..."
+        },
+        quantity: 450
+      },
+      {
+        name: {
+          [Lang.EN]: "Immunisé contre les moustiques",
+          [Lang.FR]: "Immunisé contre les moustiques",
+          [Lang.DE]: "Immunisé contre les moustiques",
+          [Lang.ES]: "Immunisé contre les moustiques"
+        },
+        quantity: 499
+      },
+      {
+        name: {
+          [Lang.EN]: "Dormir en ville ? Pourquoi ?",
+          [Lang.FR]: "Dormir en ville ? Pourquoi ?",
+          [Lang.DE]: "Dormir en ville ? Pourquoi ?",
+          [Lang.ES]: "Dormir en ville ? Pourquoi ?"
+        },
+        quantity: 600
+      },
+      {
+        name: {
+          [Lang.EN]: "J'irai dormir chez vous",
+          [Lang.FR]: "J'irai dormir chez vous",
+          [Lang.DE]: "J'irai dormir chez vous",
+          [Lang.ES]: "J'irai dormir chez vous"
+        },
+        quantity: 700
+      },
+      {
+        name: {
+          [Lang.EN]: "Mieux seul que mal accompagné",
+          [Lang.FR]: "Mieux seul que mal accompagné",
+          [Lang.DE]: "Mieux seul que mal accompagné",
+          [Lang.ES]: "Mieux seul que mal accompagné"
+        },
+        quantity: 800
+      },
+      {
+        name: {
+          [Lang.EN]: "SDF",
+          [Lang.FR]: "SDF",
+          [Lang.DE]: "SDF",
+          [Lang.ES]: "SDF"
+        },
+        quantity: 900
+      },
+      {
+        name: {
+          [Lang.EN]: "Roi du désert",
+          [Lang.FR]: "Roi du désert",
+          [Lang.DE]: "Roi du désert",
+          [Lang.ES]: "Roi du désert"
+        },
+        quantity: 1000
       }
     ]
   },
@@ -1202,6 +1283,69 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
           [Lang.ES]: "Ejemplo para los jóvenes"
         },
         quantity: 1000
+      },
+      {
+        name: {
+          [Lang.EN]: "Breaking Good",
+          [Lang.FR]: "Breaking Good",
+          [Lang.DE]: "Breaking Good",
+          [Lang.ES]: "Breaking Good"
+        },
+        quantity: 1500
+      },
+      {
+        name: {
+          [Lang.EN]: "Trop clean pour être honnête",
+          [Lang.FR]: "Trop clean pour être honnête",
+          [Lang.DE]: "Trop clean pour être honnête",
+          [Lang.ES]: "Trop clean pour être honnête"
+        },
+        quantity: 2500
+      },
+      {
+        name: {
+          [Lang.EN]: "Garanti sans OGM",
+          [Lang.FR]: "Garanti sans OGM",
+          [Lang.DE]: "Garanti sans OGM",
+          [Lang.ES]: "Garanti sans OGM"
+        },
+        quantity: 3333
+      },
+      {
+        name: {
+          [Lang.EN]: "Antivax",
+          [Lang.FR]: "Antivax",
+          [Lang.DE]: "Antivax",
+          [Lang.ES]: "Antivax"
+        },
+        quantity: 4500
+      },
+      {
+        name: {
+          [Lang.EN]: "La drogue c'est mal, m'voyez",
+          [Lang.FR]: "La drogue c'est mal, m'voyez",
+          [Lang.DE]: "La drogue c'est mal, m'voyez",
+          [Lang.ES]: "La drogue c'est mal, m'voyez"
+        },
+        quantity: 6666
+      },
+      {
+        name: {
+          [Lang.EN]: "Accro à mon point de contrôle",
+          [Lang.FR]: "Accro à mon point de contrôle",
+          [Lang.DE]: "Accro à mon point de contrôle",
+          [Lang.ES]: "Accro à mon point de contrôle"
+        },
+        quantity: 8500
+      },
+      {
+        name: {
+          [Lang.EN]: "Prix Nobel de Santé",
+          [Lang.FR]: "Prix Nobel de Santé",
+          [Lang.DE]: "Prix Nobel de Santé",
+          [Lang.ES]: "Prix Nobel de Santé"
+        },
+        quantity: 10000
       }
     ]
   },
@@ -6269,7 +6413,18 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
     },
     icon: "r_kohlmb",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        name: {
+          [Lang.EN]: "Citoyen Koh-Lambdais",
+          [Lang.FR]: "Citoyen Koh-Lambdais",
+          [Lang.DE]: "Citoyen Koh-Lambdais",
+          [Lang.ES]: "Citoyen Koh-Lambdais"
+        },
+        quantity: 1
+      }
+    ]
   },
   [RewardId.LEPRE]: {
     id: RewardId.LEPRE,
@@ -6474,7 +6629,90 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
     },
     icon: "r_collec2",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        name: {
+          [Lang.EN]: "Rencontre du 4ème type",
+          [Lang.FR]: "Rencontre du 4ème type",
+          [Lang.DE]: "Rencontre du 4ème type",
+          [Lang.ES]: "Rencontre du 4ème type"
+        },
+        quantity: 2
+      },
+      {
+        name: {
+          [Lang.EN]: "Vous avez du feu ?",
+          [Lang.FR]: "Vous avez du feu ?",
+          [Lang.DE]: "Vous avez du feu ?",
+          [Lang.ES]: "Vous avez du feu ?"
+        },
+        quantity: 10
+      },
+      {
+        name: {
+          [Lang.EN]: "Médium au rabais",
+          [Lang.FR]: "Médium au rabais",
+          [Lang.DE]: "Médium au rabais",
+          [Lang.ES]: "Médium au rabais"
+        },
+        quantity: 20
+      },
+      {
+        name: {
+          [Lang.EN]: "Amophilis psychotropes",
+          [Lang.FR]: "Amophilis psychotropes",
+          [Lang.DE]: "Amophilis psychotropes",
+          [Lang.ES]: "Amophilis psychotropes"
+        },
+        quantity: 30
+      },
+      {
+        name: {
+          [Lang.EN]: "Cracheur de flamme bleue",
+          [Lang.FR]: "Cracheur de flamme bleue",
+          [Lang.DE]: "Cracheur de flamme bleue",
+          [Lang.ES]: "Cracheur de flamme bleue"
+        },
+        quantity: 50
+      },
+      {
+        name: {
+          [Lang.EN]: "I see dead people 0_0",
+          [Lang.FR]: "I see dead people 0_0",
+          [Lang.DE]: "I see dead people 0_0",
+          [Lang.ES]: "I see dead people 0_0"
+        },
+        quantity: 80
+      },
+      {
+        name: {
+          [Lang.EN]: "Aspi-rituel",
+          [Lang.FR]: "Aspi-rituel",
+          [Lang.DE]: "Aspi-rituel",
+          [Lang.ES]: "Aspi-rituel"
+        },
+        quantity: 120
+      },
+      {
+        name: {
+          [Lang.EN]: "Collectionneur de vie",
+          [Lang.FR]: "Collectionneur de vie",
+          [Lang.DE]: "Collectionneur de vie",
+          [Lang.ES]: "Collectionneur de vie"
+        },
+        quantity: 180
+      },
+      {
+        name: {
+          [Lang.EN]: "Faucheur de l'outre-monde",
+          [Lang.FR]: "Faucheur de l'outre-monde",
+          [Lang.DE]: "Faucheur de l'outre-monde",
+          [Lang.ES]: "Faucheur de l'outre-monde"
+        },
+        quantity: 300
+      }
+    ]
   },
   [RewardId.MYSTIC2]: {
     id: RewardId.MYSTIC2,
@@ -6591,7 +6829,54 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
     },
     icon: "r_jbasic",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        name: {
+          [Lang.EN]: "Aucun titre à débloquer",
+          [Lang.FR]: "Aucun titre à débloquer",
+          [Lang.DE]: "Aucun titre à débloquer",
+          [Lang.ES]: "Aucun titre à débloquer"
+        },
+        quantity: 10
+      },
+      {
+        name: {
+          [Lang.EN]: "Même gratuit, je ne paie pas.",
+          [Lang.FR]: "Même gratuit, je ne paie pas.",
+          [Lang.DE]: "Même gratuit, je ne paie pas.",
+          [Lang.ES]: "Même gratuit, je ne paie pas."
+        },
+        quantity: 25
+      },
+      {
+        name: {
+          [Lang.EN]: "Moldu",
+          [Lang.FR]: "Moldu",
+          [Lang.DE]: "Moldu",
+          [Lang.ES]: "Moldu"
+        },
+        quantity: 75
+      },
+      {
+        name: {
+          [Lang.EN]: "Norman Normal",
+          [Lang.FR]: "Norman Normal",
+          [Lang.DE]: "Norman Normal",
+          [Lang.ES]: "Norman Normal"
+        },
+        quantity: 150
+      },
+      {
+        name: {
+          [Lang.EN]: "Point fort : trop faible.",
+          [Lang.FR]: "Point fort : trop faible.",
+          [Lang.DE]: "Point fort : trop faible.",
+          [Lang.ES]: "Point fort : trop faible."
+        },
+        quantity: 299
+      }
+    ]
   },
   [RewardId.SCADDH]: {
     id: RewardId.SCADDH,
@@ -6678,7 +6963,18 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
     },
     icon: "r_eventpart",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        name: {
+          [Lang.EN]: "Veni, vidi, perdidi",
+          [Lang.FR]: "Veni, vidi, perdidi",
+          [Lang.DE]: "Veni, vidi, perdidi",
+          [Lang.ES]: "Veni, vidi, perdidi"
+        },
+        quantity: 1
+      }
+    ]
   },
   [RewardId.THERMAL]: {
     id: RewardId.THERMAL,
@@ -6697,7 +6993,45 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
     },
     icon: "r_thermal",
     community: false,
-    rare: true
+    rare: true,
+    titles: [
+      {
+        name: {
+          [Lang.EN]: "Ils sont fous ces romains!",
+          [Lang.FR]: "Ils sont fous ces romains!",
+          [Lang.DE]: "Ils sont fous ces romains!",
+          [Lang.ES]: "Ils sont fous ces romains!"
+        },
+        quantity: 5
+      },
+      {
+        name: {
+          [Lang.EN]: "Aqua ça sert ?",
+          [Lang.FR]: "Aqua ça sert ?",
+          [Lang.DE]: "Aqua ça sert ?",
+          [Lang.ES]: "Aqua ça sert ?"
+        },
+        quantity: 10
+      },
+      {
+        name: {
+          [Lang.EN]: "Comme un poney dans l'eau",
+          [Lang.FR]: "Comme un poney dans l'eau",
+          [Lang.DE]: "Comme un poney dans l'eau",
+          [Lang.ES]: "Comme un poney dans l'eau"
+        },
+        quantity: 15
+      },
+      {
+        name: {
+          [Lang.EN]: "Qui m'Hammam me suive!",
+          [Lang.FR]: "Qui m'Hammam me suive!",
+          [Lang.DE]: "Qui m'Hammam me suive!",
+          [Lang.ES]: "Qui m'Hammam me suive!"
+        },
+        quantity: 20
+      }
+    ]
   },
   [RewardId.CBURN]: {
     id: RewardId.CBURN,
@@ -6716,7 +7050,27 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
     },
     icon: "r_cburn",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        name: {
+          [Lang.EN]: "Tout va bien",
+          [Lang.FR]: "Tout va bien",
+          [Lang.DE]: "Tout va bien",
+          [Lang.ES]: "Tout va bien"
+        },
+        quantity: 50
+      },
+      {
+        name: {
+          [Lang.EN]: "Cendrier de l'Outre-Monde",
+          [Lang.FR]: "Cendrier de l'Outre-Monde",
+          [Lang.DE]: "Cendrier de l'Outre-Monde",
+          [Lang.ES]: "Cendrier de l'Outre-Monde"
+        },
+        quantity: 100
+      }
+    ]
   },
   [RewardId.DECOFEIST]: {
     id: RewardId.DECOFEIST,
@@ -6735,7 +7089,18 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
     },
     icon: "r_decofeist",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        name: {
+          [Lang.EN]: "Enguirlandé",
+          [Lang.FR]: "Enguirlandé",
+          [Lang.DE]: "Enguirlandé",
+          [Lang.ES]: "Enguirlandé"
+        },
+        quantity: 25
+      }
+    ]
   },
   [RewardId.TECHWIN]: {
     id: RewardId.TECHWIN,

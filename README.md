@@ -14,22 +14,27 @@ Zen Hordes is available as a browser extension for Google Chrome and Mozilla Fir
 ## Key Features
 
 ### User Interface Enhancements
+
 Zen Hordes offers several UI enhancements to make your experience on the MyHordes game website more enjoyable. These enhancements include improved layouts, better visibility of important information, and overall a more streamlined interface. They also automatically select the map `Global` setting, and automatically open your bag outside.
 
 ### Better tooltips
+
 Zen Hordes provides better tooltips for various elements on the MyHordes game website. These tooltips offer additional information and context about items, ruins, and other game elements, making it easier to understand their functions and uses. You can press `Q` while hovering over an item to hide their actions, if the tooltip gets too big.
 
 ### Bank Tracker
+
 One of the standout features of Zen Hordes is the Bank Tracker. This feature helps you manage your interactions with the game's city bank by notifying you of the number of items you can take within a specified period. A timer and item counter is displayed above the city bank. This helps in managing resources more effectively and prevents accidental overuse.
 
 ![Bank Tracker](.github/media/bank-tracker.jpeg)
 
 ### Map Preview
+
 Zen Hordes provides a map preview feature that allows you to see the map of available cities in the game. This feature gives you a visual representation of the cities and their locations, making it easier to plan your strategies and jump more efficiently.
 
 ![Map Preview](.github/media/map-preview.jpeg)
 
 ### External City Links
+
 Zen Hordes includes a feature that provides quick access to external sites related to the game. These external city links allow you to easily navigate to additional resources and tools that can enhance your gameplay experience. You can customize which external sites are available through the extension's settings.
 
 ![External City Links](.github/media/external-city-links.jpeg)
@@ -72,10 +77,22 @@ Zen Hordes provides a player info feature that allows you to add a custom tag an
 
 ![Player info](.github/media/player-info.png)
 
+### Better reward titles
+
+Zen Hordes enhances the reward titles by displaying locked titles and the points gained by each title. This provides players with a clearer understanding of the rewards they can earn and the effort required to unlock them.
+
+![Better reward titles](.github/media/better-reward-title.png)
+
+### Max AP Investment
+
+Zen Hordes allows players to invest their maximum available Action Points (AP) into buildings, without needing to manually allocate points one by one. This feature streamlines the building process and helps players optimize their resource management.
+
 ### Translations
+
 Zen Hordes supports multiple languages, including English, French, German, and Spanish. The extension automatically detects your preferred language and provides translations for various elements on the MyHordes game website. This ensures that you can navigate and use the site comfortably in your preferred language.
 
 ### Customizable Settings
+
 The extension allows you to customize various settings according to your preferences. You can enable or disable specific features such as UI enhancements and the Bank Tracker. All settings are stored locally on your device and in your Chrome cloud storage, ensuring that your preferences are preserved across sessions and devices.
 
 ![Popup](.github/media/popup.jpeg)

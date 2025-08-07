@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
-import { Lang } from "./generateData";
+import { Lang, languages, Reward } from "./generateData";
 import YAML from "yaml";
 
 const getTitleName = (names: Record<Lang, string | string[]>, lang: Lang) => {
@@ -193,4 +193,83 @@ export const exportTitles = async () => {
   console.log("titles.json file has been generated.");
 
   return titlesList;
+};
+
+const newReward = (reward: Reward, title: string, quantity: number) => {
+  if (!reward.titles) {
+    reward.titles = [];
+  }
+  reward.titles.push({
+    name: languages.reduce((acc, lang) => {
+      acc[lang] = title;
+      return acc;
+    }, {} as Record<Lang, string>),
+    quantity,
+  });
+};
+
+export const addHiddenRewardTitles = (rewards: Record<string, Reward>) => {
+  for (const reward of Object.values(rewards)) {
+    switch (reward.id) {
+      case "r_decofeist_#00":
+        newReward(reward, "Enguirlandé", 25);
+        break;
+      case "r_cburn_#00":
+        newReward(reward, "Tout va bien", 50);
+        newReward(reward, "Cendrier de l'Outre-Monde", 100);
+        break;
+      case "r_thermal_#00":
+        newReward(reward, "Ils sont fous ces romains!", 5);
+        newReward(reward, "Aqua ça sert ?", 10);
+        newReward(reward, "Comme un poney dans l'eau", 15);
+        newReward(reward, "Qui m'Hammam me suive!", 20);
+        break;
+      case "r_eventpart_#00":
+        newReward(reward, "Veni, vidi, perdidi", 1);
+        break;
+      case "r_jbasic_#00":
+        newReward(reward, "Aucun titre à débloquer", 10);
+        newReward(reward, "Même gratuit, je ne paie pas.", 25);
+        newReward(reward, "Moldu", 75);
+        newReward(reward, "Norman Normal", 150);
+        newReward(reward, "Point fort : trop faible.", 299);
+        break;
+      case "r_collec2_#00":
+        newReward(reward, "Rencontre du 4ème type", 2);
+        newReward(reward, "Vous avez du feu ?", 10);
+        newReward(reward, "Médium au rabais", 20);
+        newReward(reward, "Amophilis psychotropes", 30);
+        newReward(reward, "Cracheur de flamme bleue", 50);
+        newReward(reward, "I see dead people 0_0", 80);
+        newReward(reward, "Aspi-rituel", 120);
+        newReward(reward, "Collectionneur de vie", 180);
+        newReward(reward, "Faucheur de l'outre-monde", 300);
+        break;
+      case "r_kohlmb_#00":
+        newReward(reward, "Citoyen Koh-Lambdais", 1);
+        break;
+      case "r_nodrug_#00":
+        newReward(reward, "Breaking Good", 1500);
+        newReward(reward, "Trop clean pour être honnête", 2500);
+        newReward(reward, "Garanti sans OGM", 3333);
+        newReward(reward, "Antivax", 4500);
+        newReward(reward, "La drogue c'est mal, m'voyez", 6666);
+        newReward(reward, "Accro à mon point de contrôle", 8500);
+        newReward(reward, "Prix Nobel de Santé", 10000);
+        break;
+      case "r_camp_#00":
+        newReward(reward, "Je ne suis pas là", 400);
+        newReward(reward, "Juste moi et les étoiles...", 450);
+        newReward(reward, "Immunisé contre les moustiques", 499);
+        newReward(reward, "Dormir en ville ? Pourquoi ?", 600);
+        newReward(reward, "J'irai dormir chez vous", 700);
+        newReward(reward, "Mieux seul que mal accompagné", 800);
+        newReward(reward, "SDF", 900);
+        newReward(reward, "Roi du désert", 1000);
+        break;
+      case "r_animal_#00":
+        newReward(reward, "30 millions d'ennemis", 500);
+        break;
+    }
+  }
 };

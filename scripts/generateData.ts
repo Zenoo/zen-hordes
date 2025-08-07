@@ -13,7 +13,7 @@ import { overwriteItemData } from "./itemOverwrites";
 import { overwriteRecipeData } from "./recipeOverwrites";
 import { overwriteRuinData } from "./ruinOverwrites";
 import dotenv from "dotenv";
-import { exportTitles } from "./exportTitles";
+import { addHiddenRewardTitles, exportTitles } from "./exportTitles";
 
 let types = "";
 
@@ -233,7 +233,7 @@ const getItemByUid = (items: Record<string, Item>, item: string) => {
   return found;
 };
 
-const languages: Lang[] = [Lang.EN, Lang.FR, Lang.DE, Lang.ES];
+export const languages: Lang[] = [Lang.EN, Lang.FR, Lang.DE, Lang.ES];
 
 type ItemDrop = {
   id: string;
@@ -2363,7 +2363,7 @@ ${buildingsObject}`;
   console.log("buildings.ts file has been generated.");
 };
 
-type Reward = {
+export type Reward = {
   id: string;
   numericalId: number;
   name: Record<Lang, string>;
@@ -2418,6 +2418,8 @@ const generateRewards = async () => {
       titles: titles[id] ?? [],
     };
   });
+
+  addHiddenRewardTitles(rewards);
 
   types += `export enum RewardId {
   ${Object.values(rewards)
