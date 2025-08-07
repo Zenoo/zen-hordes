@@ -646,6 +646,7 @@ const buildBuildingRow = (building: Building, indent: number) => {
 
   tooltip({
     target: info,
+    id: `zen-building-tooltip-${building.id}`,
     content: building.description[store["hordes-lang"]],
   });
 
@@ -771,6 +772,7 @@ export const insertWiki = () => {
 
   tooltip({
     target: button,
+    id: "zen-wiki-tooltip",
     content: t(T, "wiki"),
     position: "topLeft",
   });

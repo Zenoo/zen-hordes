@@ -1,25 +1,50 @@
 export type TooltipOptions = {
-  target: HTMLElement;
-  content: string;
+  target: Element;
+  /**
+   * Should be unique within the document
+   */
+  id: string;
+  content: Element[] | string;
   position?: "topLeft" | "topRight" | "bottomLeft" | "bottomRight";
+  classes?: string[];
 };
-
-let tooltipElement: HTMLDivElement | null = null;
 
 export const tooltip = ({
   target,
+  id,
   content,
   position = "bottomRight",
+  classes = [],
 }: TooltipOptions) => {
-  if (!tooltipElement) {
-    tooltipElement = document.createElement("div");
-    tooltipElement.classList.add("tooltip", "zen-tooltip");
-    document.body.appendChild(tooltipElement);
+  if (!(target instanceof HTMLElement)) {
+    console.warn(`Tooltip target is not an HTMLElement: ${target.outerHTML}`);
+    return;
   }
 
+  let tooltipElement: HTMLElement | null = null;
+
   target.addEventListener("mouseenter", () => {
-    if (!tooltipElement) return;
-    tooltipElement.textContent = content;
+    if (!tooltipElement) {
+      tooltipElement = document.getElementById(id);
+
+      if (!tooltipElement) {
+        tooltipElement = document.createElement("div");
+        tooltipElement.classList.add("tooltip", "zen-tooltip", ...classes);
+        tooltipElement.id = id;
+
+        if (typeof content === "string") {
+          tooltipElement.textContent = content;
+        } else {
+          for (const item of content) {
+            tooltipElement.appendChild(item);
+          }
+        }
+
+        document.body.appendChild(tooltipElement);
+      }
+    }
+
+    tooltipElement.classList.add("visible");
   });
 
   target.addEventListener("mousemove", (event) => {
@@ -64,13 +89,10 @@ export const tooltip = ({
         tooltipElement.style.bottom = "unset";
         break;
     }
-
-    if (!tooltipElement.classList.contains("visible")) {
-      tooltipElement.classList.add("visible");
-    }
   });
 
   target.addEventListener("mouseleave", () => {
     tooltipElement?.classList.remove("visible");
+    tooltipElement = null;
   });
 };

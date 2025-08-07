@@ -1,5 +1,9 @@
 import { onItemTransfer, trackBank } from "./bankTracker";
-import { displayRewardTitlePoints } from "./betterRewardTitles";
+import {
+  displayMissingPointsTitlesButton,
+  displayMissingTitles,
+  displayRewardTitlePoints,
+} from "./betterRewardTitles";
 import {
   insertBetterItemTooltips,
   insertBetterMapZoneTooltips,
@@ -44,9 +48,6 @@ import { insertWiki, openItemInWiki } from "./wiki";
 // ex: drag & drop, images, etc
 // TODO: Add a note-taking feature
 // TODO: Add distinctions linked to some action tooltips (throw out someone, etc)
-// TODO: rework tooltips to generate them on the fly and reuse them
-// TODO: Add next unlockable title in reward tooltips (.forum-tooltip h1) (+ points if any)
-// TODO: Add missing titles in soul page title tab (never unlocked titles at the end)
 // TODO: Prefill building AP investment input with max values
 
 (async () => {
@@ -91,7 +92,9 @@ import { insertWiki, openItemInWiki } from "./wiki";
     insertShoppingListUpdateButton(node);
     updateCampingCalculatorWithCurrentParams(node);
     displayRuinBuryCount(node);
+    displayMissingTitles(node);
     displayRewardTitlePoints(node);
+    displayMissingPointsTitlesButton(node);
   });
 
   // Actions that need to be performed on hover

@@ -123,6 +123,7 @@ export const insertShoppingListToggle = () => {
 
   tooltip({
     target: toggle,
+    id: "zen-shopping-list-toggle-tooltip",
     content: t(T, "toggleShoppingList"),
     position: "topLeft",
   });
@@ -194,7 +195,9 @@ export const insertShoppingListUpdateButton = (node: HTMLElement) => {
   if (node.textContent !== t(T, "zenHordesCode")) return;
   if (node.closest("hordes-twino-editor")) return;
 
-  const code = node.nextElementSibling?.querySelector("pre")?.textContent?.trim();
+  const code = node.nextElementSibling
+    ?.querySelector("pre")
+    ?.textContent?.trim();
   if (!code) return;
 
   const button = document.createElement("button");

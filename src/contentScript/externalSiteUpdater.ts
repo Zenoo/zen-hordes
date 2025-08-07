@@ -363,6 +363,7 @@ export const displayUpdateButton = (node: HTMLElement) => {
   // Hover tooltip
   tooltip({
     target: button,
+    id: "zen-update-external-apps",
     content: t(T, "updateExternalApps"),
   });
 
