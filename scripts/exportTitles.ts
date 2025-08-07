@@ -234,17 +234,6 @@ export const addHiddenRewardTitles = (rewards: Record<string, Reward>) => {
         newReward(reward, "Norman Normal", 150);
         newReward(reward, "Point fort : trop faible.", 299);
         break;
-      case "r_collec2_#00":
-        newReward(reward, "Rencontre du 4ème type", 2);
-        newReward(reward, "Vous avez du feu ?", 10);
-        newReward(reward, "Médium au rabais", 20);
-        newReward(reward, "Amophilis psychotropes", 30);
-        newReward(reward, "Cracheur de flamme bleue", 50);
-        newReward(reward, "I see dead people 0_0", 80);
-        newReward(reward, "Aspi-rituel", 120);
-        newReward(reward, "Collectionneur de vie", 180);
-        newReward(reward, "Faucheur de l'outre-monde", 300);
-        break;
       case "r_kohlmb_#00":
         newReward(reward, "Citoyen Koh-Lambdais", 1);
         break;
