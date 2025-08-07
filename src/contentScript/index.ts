@@ -1,4 +1,5 @@
 import { onItemTransfer, trackBank } from "./bankTracker";
+import { displayRewardTitlePoints } from "./betterRewardTitles";
 import {
   insertBetterItemTooltips,
   insertBetterMapZoneTooltips,
@@ -90,6 +91,7 @@ import { insertWiki, openItemInWiki } from "./wiki";
     insertShoppingListUpdateButton(node);
     updateCampingCalculatorWithCurrentParams(node);
     displayRuinBuryCount(node);
+    displayRewardTitlePoints(node);
   });
 
   // Actions that need to be performed on hover

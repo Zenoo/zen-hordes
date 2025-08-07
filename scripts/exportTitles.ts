@@ -1,5 +1,23 @@
 import * as fs from "fs";
 import * as path from "path";
+import { Lang } from "./generateData";
+import YAML from "yaml";
+
+const getTitleName = (names: Record<Lang, string | string[]>, lang: Lang) => {
+  const name = names[lang];
+
+  if (typeof name === "string") {
+    return name;
+  }
+
+  const lastName = name[name.length - 1];
+
+  if (!lastName) {
+    throw new Error(`${JSON.stringify(name)} has no last name`);
+  }
+
+  return lastName;
+};
 
 export const exportTitles = async () => {
   // Get file from the main repo
@@ -13,7 +31,14 @@ export const exportTitles = async () => {
   const titlesRegex =
     /(?<!# )\$container->add\(\)->title\('(.+)'\)->unlockquantity\((\d+)\)->associatedtag\('[^)]+'\)->associatedpicto\('(.+)'\)/gm;
   const titlesList = [...text.matchAll(titlesRegex)].reduce<
-    Record<string, { quantity: number; points?: number }[]>
+    Record<
+      string,
+      {
+        name: Record<Lang, string | string[]>;
+        quantity: number;
+        points?: number;
+      }[]
+    >
   >((acc, [, germanTitle, quantity, picto]) => {
     if (!germanTitle || !quantity || !picto) {
       throw new Error("Title, quantity or picto not found");
@@ -22,9 +47,50 @@ export const exportTitles = async () => {
     if (!acc[picto]) {
       acc[picto] = [];
     }
-    acc[picto].push({ quantity: +quantity });
+    acc[picto].push({
+      name: {
+        [Lang.DE]: germanTitle.replace(/\\'/g, "'"), // Replace escaped quotes
+        [Lang.EN]: "",
+        [Lang.FR]: "",
+        [Lang.ES]: "",
+      },
+      quantity: +quantity,
+    });
     return acc;
   }, {});
+
+  // Get title translations from the main repo
+  for (const lang of [Lang.EN, Lang.FR, Lang.ES]) {
+    const titlesResponse = await fetch(
+      `https://gitlab.com/eternaltwin/myhordes/myhordes/-/raw/master/translations/game+intl-icu.${lang}.yml`
+    );
+    const titlesText = await titlesResponse.text();
+    const titlesData = YAML.parse(titlesText);
+
+    Object.values(titlesList).forEach((titles) => {
+      titles.forEach((title) => {
+        const translatedTitle = titlesData[getTitleName(title.name, Lang.DE)];
+
+        if (typeof translatedTitle === "string") {
+          // Some titles include a query depending on the player gender
+          if (translatedTitle.includes("ref__gender")) {
+            title.name[lang] = Array.from(
+              translatedTitle.matchAll(/\{([^{}]+)\}/g)
+            ).map((m) => m[1] ?? "");
+          } else {
+            title.name[lang] = translatedTitle;
+          }
+        } else {
+          console.warn(
+            `No translation found for ${getTitleName(
+              title.name,
+              Lang.DE
+            )} in ${lang}`
+          );
+        }
+      });
+    });
+  }
 
   // Get points from the main repo
   const pointsResponse = await fetch(

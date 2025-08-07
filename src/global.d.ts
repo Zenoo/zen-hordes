@@ -99,7 +99,7 @@ declare global {
     Infect,
     CreateItem,
     ReduceGhoulHunger,
-    GetPicto,
+    GetReward,
     AddWaterToWell,
     Defense,
     UnlockBuilding,

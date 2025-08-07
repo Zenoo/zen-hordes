@@ -1,4 +1,4 @@
-import { ItemId, PictoId, Recipe } from './types';
+import { ItemId, RewardId, Recipe } from './types';
 
 export const recipes: Readonly<Recipe>[] = [
   {
@@ -281,7 +281,7 @@ export const recipes: Readonly<Recipe>[] = [
     out: [
       { item: ItemId.SOUL_YELLOW}
     ],
-    pictos: [PictoId.MYSTIC2],
+    rewards: [RewardId.MYSTIC2],
   },
   {
     type: RecipeType.WorkshopTech,
@@ -443,7 +443,7 @@ export const recipes: Readonly<Recipe>[] = [
     out: [
       { item: ItemId.WATERGUN_OPT_EMPTY}
     ],
-    pictos: [PictoId.WATGUN],
+    rewards: [RewardId.WATGUN],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -457,7 +457,7 @@ export const recipes: Readonly<Recipe>[] = [
     out: [
       { item: ItemId.PILEGUN_UP_EMPTY}
     ],
-    pictos: [PictoId.BATGUN],
+    rewards: [RewardId.BATGUN],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -494,7 +494,7 @@ export const recipes: Readonly<Recipe>[] = [
     out: [
       { item: ItemId.CHAINSAW_EMPTY}
     ],
-    pictos: [PictoId.TRONCO],
+    rewards: [RewardId.TRONCO],
   },
   {
     type: RecipeType.ManualAnywhere,
@@ -541,7 +541,7 @@ export const recipes: Readonly<Recipe>[] = [
     out: [
       { item: ItemId.BIG_PGUN_EMPTY}
     ],
-    pictos: [PictoId.BATGUN],
+    rewards: [RewardId.BATGUN],
   },
   {
     type: RecipeType.ManualAnywhere,

@@ -11,7 +11,7 @@
     "noEmitOnError": true,
     "jsx": "react",
     "typeRoots": ["node_modules/@types"],
-    "noUncheckedIndexedAccess": true,
+    "noUncheckedIndexedAccess": true
   },
   "exclude": ["scripts"]
 }

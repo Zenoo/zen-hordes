@@ -1,6 +1,6 @@
 import { buildings } from "../data/buildings";
 import { items } from "../data/items";
-import { pictos } from "../data/pictos";
+import { rewards } from "../data/rewards";
 import { recipes } from "../data/recipes";
 import { ruins } from "../data/ruins";
 import {
@@ -8,7 +8,7 @@ import {
   DropLocation,
   Item,
   ItemId,
-  PictoId,
+  RewardId,
   Recipe,
 } from "../data/types";
 import { ASSETS } from "../utils/constants";
@@ -623,15 +623,15 @@ const convertEffectToDisplayedItem = (effect: ItemActionEffect) => {
       displayedIcon.amount = effect.value;
       break;
     }
-    case ItemActionEffectType.GetPicto: {
-      const picto = pictos[effect.value as PictoId];
-      if (!picto) {
-        throw new Error(`Picto not found: ${effect.value}`);
+    case ItemActionEffectType.GetReward: {
+      const reward = rewards[effect.value as RewardId];
+      if (!reward) {
+        throw new Error(`Reward not found: ${effect.value}`);
       }
 
-      displayedIcon.icon = `pictos/${picto.icon}.gif`;
-      displayedIcon.classList = ["picto"];
-      displayedIcon.title = picto.name[store["hordes-lang"]];
+      displayedIcon.icon = `pictos/${reward.icon}.gif`;
+      displayedIcon.classList = ["reward"];
+      displayedIcon.title = reward.name[store["hordes-lang"]];
       break;
     }
     case ItemActionEffectType.AddWaterToWell: {
@@ -947,15 +947,15 @@ const createLine = (
       broken: outItem.broken,
     }));
 
-    // Add recipe pictos
-    if (data.pictos?.length) {
+    // Add recipe rewards
+    if (data.rewards?.length) {
       outputIcons.push(
-        ...data.pictos.map((picto) => {
-          const pictoItem = pictos[picto];
+        ...data.rewards.map((reward) => {
+          const rewardItem = rewards[reward];
           return {
-            icon: `pictos/${pictoItem.icon}.gif`,
-            classList: ["picto"],
-            title: pictoItem.name[store["hordes-lang"]],
+            icon: `pictos/${rewardItem.icon}.gif`,
+            classList: ["reward"],
+            title: rewardItem.name[store["hordes-lang"]],
           };
         })
       );

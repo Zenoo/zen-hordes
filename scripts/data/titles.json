@@ -1,1709 +1,4609 @@
 {
   "r_jrangr_#00": [
     {
+      "name": {
+        "de": "Pfadfinder",
+        "en": "Sneaky",
+        "fr": "Furtif",
+        "es": "Furtivo"
+      },
       "quantity": 10,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Ninja",
+        "en": "Shadow Master",
+        "fr": "Maître des ombres",
+        "es": "Maestro de la oscuridad"
+      },
       "quantity": 25,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Green Beret",
+        "en": "Dune Ranger",
+        "fr": "Ranger du risque",
+        "es": "Amante del riesgo"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Schattenmann",
+        "en": "Sand Phantom",
+        "fr": "Fantôme des sables",
+        "es": "Fantasma de arena"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Wüstenphantom",
+        "en": "Taught Sam Fisher everything he knows!",
+        "fr": "Plus fort que Sam Fisher",
+        "es": "Más fuerte que Sam Fisher"
+      },
       "quantity": 300
     },
     {
+      "name": {
+        "de": "Solid Snake war gestern...",
+        "en": "I think you are underestimating the sneakiness...",
+        "fr": "Disciple de Garrett",
+        "es": "Ayer fue Serpiente Sólida..."
+      },
       "quantity": 800
     },
     {
+      "name": {
+        "de": "Der unsichtbare Mann",
+        "en": "The Invisible Man",
+        "fr": "Lady in Red",
+        "es": "El hombre invisible"
+      },
       "quantity": 1500
     }
   ],
   "r_jcolle_#00": [
     {
+      "name": {
+        "de": "Sandarbeiter",
+        "en": "Seeker",
+        "fr": "Trouveur",
+        "es": "Husmeador"
+      },
       "quantity": 10,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Wüstenspringmaus",
+        "en": "Master Scavenger",
+        "fr": "Maître dénicheur",
+        "es": "Descubridor"
+      },
       "quantity": 25,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Großer Ameisenbär",
+        "en": "Check out my knick-knacks",
+        "fr": "Exhumeur de babioles",
+        "es": "Jefe Excavador"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Wüstenfuchs",
+        "en": "Ultra Scavenger",
+        "fr": "Trouveur en chef",
+        "es": "Maestro Excavador"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Ich sehe Alles!",
+        "en": "I don't miss anything.",
+        "fr": "Rien ne m’échappe.",
+        "es": "Nada se me escapa"
+      },
       "quantity": 300
     },
     {
+      "name": {
+        "de": "Ein BMW? Kein Problem!",
+        "en": "I've got everything you need.",
+        "fr": "Une BMW ? Pas de p’oblème !",
+        "es": "¿Un BMW? ¡No hay problema!"
+      },
       "quantity": 800
     },
     {
+      "name": {
+        "de": "Où est Larchi ?",
+        "en": "A BMW M3? Too easy!",
+        "fr": "Où est Larchi ?",
+        "es": "¿Dónde está Larchi?"
+      },
       "quantity": 1500
     }
   ],
   "r_jtamer_#00": [
     {
+      "name": {
+        "de": "Tierliebhaber",
+        "en": "Talks to the animals",
+        "fr": "Ami des bêtes",
+        "es": "Amigo de los Animales"
+      },
       "quantity": 10,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Malteserzüchter",
+        "en": "Legend of Labradoodle",
+        "fr": "Maître-bichon",
+        "es": "Maestro Domador"
+      },
       "quantity": 25,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Ich bändige Bestien",
+        "en": "Wild Beast Tamer",
+        "fr": "Dresseur de bêtes sauvages",
+        "es": "Domador de Bestias"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Nie ohne meinen Hund!",
+        "en": "Not without my dog!",
+        "fr": "Jamais sans mon chien !",
+        "es": "Manimal"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Hundewurst schmeckt gar nicht schlecht!",
+        "en": "Dog food doesn't taste so bad",
+        "fr": "La pâtée, c’est pas si mauvais",
+        "es": "La comida para perros no sabe tan mal"
+      },
       "quantity": 300
     },
     {
+      "name": {
+        "de": "Meser (halb Mensch, halb Malteser)",
+        "en": "Homosapien / Labradoodle cross",
+        "fr": "Bichon-garou susceptible",
+        "es": "Cinocéfalo"
+      },
       "quantity": 800
     },
     {
+      "name": {
+        "de": "Personalisierter Titel - Dompteur (T-ID: 1725642)",
+        "en": "Certified Were-doodle",
+        "fr": "Buffy contre les zombies",
+        "es": "Maestria en Labradoodles"
+      },
       "quantity": 1500
     }
   ],
   "r_jermit_#00": [
     {
+      "name": {
+        "de": "Wurmfresser",
+        "en": "Wormfinder General",
+        "fr": "Dégoteur de vers",
+        "es": "Comegusanos"
+      },
       "quantity": 10,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Meister im Würmerfinden",
+        "en": "Master Rootfinder",
+        "fr": "Maître dégoteur",
+        "es": "Degustador"
+      },
       "quantity": 25,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Gefräßiger Bürger",
+        "en": "Insatiable Citizen",
+        "fr": "Insatiable citoyen",
+        "es": "Paladar insaciable"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Wüstenwurmzüchter",
+        "en": "Rat Roaster",
+        "fr": "Grand Mange-vermines",
+        "es": "Devorador de insectos"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Ich brauche niemanden!",
+        "en": "Friends? Who needs 'em!",
+        "fr": "Hermitamor",
+        "es": "Omnívoro"
+      },
       "quantity": 300
     },
     {
+      "name": {
+        "de": "Heraklit der Außenwelt",
+        "en": "Lonely...I'm so lonely",
+        "fr": "I'm a poor lonesome hermit...",
+        "es": "Solo... estoy tan solo"
+      },
       "quantity": 800
     },
     {
+      "name": {
+        "de": "Gepanzerter Fakir",
+        "en": "Hardened Hermit",
+        "fr": "Cocodile dundee",
+        "es": "Ermitaño Experimentado"
+      },
       "quantity": 1500
     }
   ],
   "r_jsham_#00": [
     {
+      "name": {
+        "de": "Diplomierter Scharlatan",
+        "en": "Certified Charlatan",
+        "fr": "Aborigène curieux",
+        "es": "Aborigen curioso"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Schlimmer Finger",
+        "en": "Accursed Soothsayer",
+        "fr": "Charlatan diplômé",
+        "es": "Charlatán Amateur"
+      },
       "quantity": 25
     },
     {
+      "name": {
+        "de": "Seelenverwerter",
+        "en": "Soul Recycler",
+        "fr": "Aruspice maudit",
+        "es": "Charlatán Profesional"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Mystischer Seher",
+        "en": "Divine Mystic",
+        "fr": "Recycleur d’âmes",
+        "es": "Reciclador de almas"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Voodoo Sorceror",
+        "en": "Voodoo Sorceror",
+        "fr": "Sorcier vaudou",
+        "es": "Hechicero vudú"
+      },
       "quantity": 300
     },
     {
+      "name": {
+        "de": "Allwissender Schamane",
+        "en": "Omniscient Shaman",
+        "fr": "Chaman omniscient",
+        "es": "Chamán omnisciente"
+      },
       "quantity": 800
     },
     {
+      "name": {
+        "de": "Anführer der verlorenen Seelen",
+        "en": "Guide of lost souls",
+        "fr": "Guide des âmes perdues",
+        "es": "Guía de las almas perdidas"
+      },
       "quantity": 1500
     }
   ],
   "r_jtech_#00": [
     {
+      "name": {
+        "de": "Yo, wir schaffen das!",
+        "en": "I'll let myself in...",
+        "fr": "Bricol' girl travesti",
+        "es": "Bricoloco"
+      },
       "quantity": 10,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Kleiner Schraubendreher",
+        "en": "The BRD Screwdriver Combo",
+        "fr": "Amateur du PMV tournevis",
+        "es": "Destornillador Humano"
+      },
       "quantity": 25,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Schweizer Taschenmesser",
+        "en": "Spanners and Bump keys",
+        "fr": "Nuchuk à molette",
+        "es": "Mascafierros"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Unermüdlicher Schrauber",
+        "en": "Tireless tumbler tickler",
+        "fr": "Constructeur increvable",
+        "es": "Técnico Inagotable"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Seele des Handwerks",
+        "en": "TechnicoMecanoMegalo",
+        "fr": "TechnicoMecanoMegalo",
+        "es": "TecnicoMecanoMegalomano"
+      },
       "quantity": 300
     },
     {
+      "name": {
+        "de": "Seele eines Profis",
+        "en": "Soul of the professional",
+        "fr": "Âme du professionnel",
+        "es": "Alma de un profesional"
+      },
       "quantity": 800
     },
     {
+      "name": {
+        "de": "Personalisierter Titel - Techniker (T-ID: 631944)",
+        "en": "Never walk without his keys",
+        "fr": "Se balade jamais sans ses clefs",
+        "es": "Nunca camines sin tus llaves"
+      },
       "quantity": 1500
     }
   ],
   "r_jguard_#00": [
     {
+      "name": {
+        "de": "Die Mauer",
+        "en": "Defender",
+        "fr": "Défenseur",
+        "es": "Defensor"
+      },
       "quantity": 10,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Höllenwächter",
+        "en": "Master Guardian",
+        "fr": "Maître gardien",
+        "es": "Gran Guardián"
+      },
       "quantity": 25,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Kerberos",
+        "en": "Wandering Knight",
+        "fr": "Paladin",
+        "es": "Paladín"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Die letzte Verteidigungslinie",
+        "en": "Last Bastion",
+        "fr": "Dernier rempart",
+        "es": "Último escudero"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Du kommst hier NICHT durch!",
+        "en": "You... shall... not...PASS!",
+        "fr": "Vous… ne… passerez… PAS !",
+        "es": "¡Usted no entra!"
+      },
       "quantity": 300
     },
     {
+      "name": {
+        "de": "Hekatoncheir",
+        "en": "Insurmountable citizen",
+        "fr": "Citoyen infranchissable",
+        "es": "Habitante insuperable"
+      },
       "quantity": 800
     },
     {
+      "name": {
+        "de": "Holy F***ing Iceberg",
+        "en": "Holy F***ing Iceberg",
+        "fr": "Holy F***ing Iceberg",
+        "es": "¡Maldita sea, un Iceberg!"
+      },
       "quantity": 1500
     }
   ],
   "r_cookr_#00": [
     {
+      "name": {
+        "de": "Kantinenkoch",
+        "en": "Cantine Cook",
+        "fr": "Cuistot de cantine",
+        "es": "Ayudante de cocina"
+      },
       "quantity": 10,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Kleiner Küchenchef",
+        "en": "Commis Chef",
+        "fr": "Petit chef cuistot",
+        "es": "Cocinerillo"
+      },
       "quantity": 25,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Meister Eintopf",
+        "en": "Demi Chef de Partie",
+        "fr": "Cordon bleu du village",
+        "es": "Cordon bleu del barrio"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Großer Wüstenkonditor",
+        "en": "Mama's Finest",
+        "fr": "Grand pâtissier du désert",
+        "es": "Cordon bleu del pueblo"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Begnadeter Wüstenkonditor",
+        "en": "Under Chef",
+        "fr": "Maître pâtissier du désert",
+        "es": "Cuchara-brava"
+      },
       "quantity": 250
     },
     {
+      "name": {
+        "de": "Cooking Mama",
+        "en": "Cooking Papa",
+        "fr": "Cooking-papa",
+        "es": "Cooking Papa"
+      },
       "quantity": 500
     },
     {
+      "name": {
+        "de": "Meisterhafter Kochlöffelschwinger",
+        "en": "Pukka Chef",
+        "fr": "Expert de la cuillère",
+        "es": "Maestro Cocinero"
+      },
       "quantity": 1000
     },
     {
+      "name": {
+        "de": "Meisterkoch der Sterne",
+        "en": "Marco Pierre Die2Nite",
+        "fr": "Top-Chef de lʼoutre-monde",
+        "es": "MasterChef"
+      },
       "quantity": 2000
     }
   ],
   "r_drgmkr_#00": [
     {
+      "name": {
+        "de": "Amateur-Laborratte",
+        "en": "Amateur Lab Rat",
+        "fr": "Laborantin amateur",
+        "es": "Laboratorista amateur"
+      },
       "quantity": 10,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Kleiner Präparator",
+        "en": "Potion Preparer",
+        "fr": "Petit préparateur",
+        "es": "Laboratorista autodidacta"
+      },
       "quantity": 25,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Chemiker von um die Ecke",
+        "en": "Corner Chemist",
+        "fr": "Chimiste du coin",
+        "es": "Químico de barrio"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Produkttester",
+        "en": "Product Tester",
+        "fr": "Orfèvre gobeur",
+        "es": "Catador de productos"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Wüstenstadt-Dealer",
+        "en": "Local Dealer",
+        "fr": "Dealer du village",
+        "es": "Distribuidor local"
+      },
       "quantity": 250
     },
     {
+      "name": {
+        "de": "Ich koste alle meine Produkte",
+        "en": "I taste all my products",
+        "fr": "Je goûte tous mes produits",
+        "es": "Pruebo todos mis productos"
+      },
       "quantity": 500
     },
     {
+      "name": {
+        "de": "Rauchts? Dann ist es meins.",
+        "en": "Does it smoke? It is from me.",
+        "fr": "Ça se fume ? c'est de moi.",
+        "es": "¿Fumas? Este va por mi cuenta"
+      },
       "quantity": 1000
     },
     {
+      "name": {
+        "de": "Offizieller AP-Versorger",
+        "en": "Official AP Provider",
+        "fr": "Fournisseur officiel de PA",
+        "es": "Proveedor oficial de PA"
+      },
       "quantity": 2000
     }
   ],
   "r_heroac_#00": [
     {
+      "name": {
+        "de": "X-Men Leser",
+        "en": "Comic book fan",
+        "fr": "Fan des X-Men",
+        "es": "Fan de X-Men"
+      },
       "quantity": 15,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Aussergewöhnlicher Bürger",
+        "en": "Extraordinary citizen",
+        "fr": "Citoyen hors norme",
+        "es": "Habitante fuera de serie"
+      },
       "quantity": 30,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Wunder",
+        "en": "Prodigy",
+        "fr": "Prodige",
+        "es": "Prodigio"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Werdender Superheld",
+        "en": "Superhero in training",
+        "fr": "Super-héros en devenir",
+        "es": "Aspirante a superhéroe"
+      },
       "quantity": 70
     },
     {
+      "name": {
+        "de": "Volksheld",
+        "en": "Champion of the people",
+        "fr": "Héros du peuple",
+        "es": "Héroe popular"
+      },
       "quantity": 90
     },
     {
+      "name": {
+        "de": "Neo",
+        "en": "I'm Batman",
+        "fr": "L'incroyable citoyen",
+        "es": "Soy una leyenda"
+      },
       "quantity": 120
     },
     {
+      "name": {
+        "de": "Erlöser der Menschheit",
+        "en": "Saviour of Citizenkind",
+        "fr": "Sauveur de l’humanité",
+        "es": "Salvador de la humanidad"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Außenweltlegende",
+        "en": "Legend of the World Beyond",
+        "fr": "Légende de l’Outre-Monde",
+        "es": "Superhéroe"
+      },
       "quantity": 200
     },
     {
+      "name": {
+        "de": "Messie der verlorenen Welt",
+        "en": "Lost World Messiah",
+        "fr": "Messie du monde perdu",
+        "es": "Mesías del Mundo Perdido"
+      },
       "quantity": 500
     },
     {
+      "name": {
+        "de": "Mein Name ist Nobody",
+        "en": "My name is nobody",
+        "fr": "Mon nom est personne",
+        "es": "Mi nombre es ninguno"
+      },
       "quantity": 850
     },
     {
+      "name": {
+        "de": "Ein Sternbild trägt meinen Namen",
+        "en": "They named a constellation after me",
+        "fr": "J'ai donné mon nom à une constellation",
+        "es": "Una constelación lleva mi nombre"
+      },
       "quantity": 1000
     }
   ],
   "r_solban_#00": [
     {
+      "name": {
+        "de": "Abstauber",
+        "en": "Bin Raker",
+        "fr": "Fouineur de décharge",
+        "es": "Rastrillador del vertedero"
+      },
       "quantity": 20
     },
     {
+      "name": {
+        "de": "Müllkind",
+        "en": "Dumpster Diver",
+        "fr": "Enquiquineur débrouillard",
+        "es": "Recolector de basura"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Autonomer Müll",
+        "en": "Autonomous junk",
+        "fr": "Indésirable autonome",
+        "es": "Investigador ingenioso"
+      },
       "quantity": 200
     },
     {
+      "name": {
+        "de": "Freier Bürger",
+        "en": "Free citizen!",
+        "fr": "Citoyen libre !",
+        "es": "¡Habitante libre!"
+      },
       "quantity": 300
     },
     {
+      "name": {
+        "de": "Alles für meinen Mund",
+        "en": "Everything for my mouth",
+        "fr": "Tout pour ma gueule",
+        "es": "Todo para mi boca"
+      },
       "quantity": 400
     },
     {
+      "name": {
+        "de": "Ich brauche niemanden",
+        "en": "I do not need anyone",
+        "fr": "Je n'ai besoin de personne",
+        "es": "No necesito a nadie"
+      },
       "quantity": 550
     },
     {
+      "name": {
+        "de": "Unabhängiger Großeinsiedler",
+        "en": "Great Independent Hermit",
+        "fr": "Grand Ermite indépendant",
+        "es": "Gran Eremita independiente"
+      },
       "quantity": 700
     },
     {
+      "name": {
+        "de": "Che Guevara der Wüste",
+        "en": "Che Guevara of the World Beyond",
+        "fr": "Che Guevara du désert",
+        "es": "Che Guevara del Ultramundo"
+      },
       "quantity": 1000
     }
   ],
   "r_theft_#00": [
     {
+      "name": {
+        "de": "Maulheld",
+        "en": "Tea Leaf",
+        "fr": "Petite frappe",
+        "es": "Cleptómano"
+      },
       "quantity": 10,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Lump",
+        "en": "Artful Dodger",
+        "fr": "Fripouille",
+        "es": "Bandido"
+      },
       "quantity": 30,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Schaumschläger",
+        "en": "Chiseler",
+        "fr": "Crapule",
+        "es": "Pillo"
+      },
       "quantity": 40
     },
     {
+      "name": {
+        "de": "Dieb",
+        "en": "Ali Baba",
+        "fr": "Monte-en-l’air",
+        "es": "Ratero"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Fantomas",
+        "en": "Rusty Ryan",
+        "fr": "Voleur",
+        "es": "Amante de lo ajeno"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Ali Baba",
+        "en": "Danny Ocean",
+        "fr": "Maître cambrioleur",
+        "es": "Chorizo temible"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Meisterdieb",
+        "en": "Master Thief",
+        "fr": "Passe-muraille",
+        "es": "Caco"
+      },
       "quantity": 500
     },
     {
+      "name": {
+        "de": "Kleptomane",
+        "en": "Kleptomaniac",
+        "fr": "Arsène Lupin du désert",
+        "es": "Saqueador"
+      },
       "quantity": 1000
     },
     {
+      "name": {
+        "de": "Dein Haus ist mein Haus",
+        "en": "Your home is my home",
+        "fr": "Ta maison est ma maison",
+        "es": "Tu casa es mi casa"
+      },
       "quantity": 2000
     }
   ],
   "r_deco_#00": [
     {
+      "name": {
+        "de": "Ästhet",
+        "en": "Coquette",
+        "fr": "Coquet",
+        "es": "Detallista"
+      },
       "quantity": 100,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Schaufenstergestalter",
+        "en": "Good taste personified",
+        "fr": "Citoyen de bon goût",
+        "es": "Habitante con buen gusto"
+      },
       "quantity": 250,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Innenarchitekt",
+        "en": "Interior designer",
+        "fr": "Architecte d’intérieur",
+        "es": "Decorador de interiores"
+      },
       "quantity": 500
     },
     {
+      "name": {
+        "de": "Möbelgourmet",
+        "en": "Marquee Master",
+        "fr": "Maître-décorateur de tentes",
+        "es": "Decorador con estilo"
+      },
       "quantity": 1000
     },
     {
+      "name": {
+        "de": "Ordnung muss sein!",
+        "en": "Aesthetics Expert",
+        "fr": "Maître Es-thète",
+        "es": "Maestro de la estética"
+      },
       "quantity": 1500
     },
     {
+      "name": {
+        "de": "Ein schöneres Leben",
+        "en": "Style is eternal...",
+        "fr": "Plus belle la vie !",
+        "es": "El estilo es eterno..."
+      },
       "quantity": 2000
     },
     {
+      "name": {
+        "de": "Großer E-KEA Katalog",
+        "en": "Welcome to the palace.",
+        "fr": "Grand Catalogue Kiela",
+        "es": "Bienvenidos al palacio. "
+      },
       "quantity": 2500
     }
   ],
   "r_plundr_#00": [
     {
+      "name": {
+        "de": "Plünderer",
+        "en": "Pillager",
+        "fr": "Pillard",
+        "es": "Robamuertos"
+      },
       "quantity": 30,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Aasgeier",
+        "en": "Plunderer",
+        "fr": "Vautour",
+        "es": "Buitre"
+      },
       "quantity": 60,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Hyäne",
+        "en": "Viking",
+        "fr": "Charognard",
+        "es": "Carroñero"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Wegelagerer post mortem",
+        "en": "Post-mortem Pickpocket",
+        "fr": "Écumeur post-mortem",
+        "es": "Ladrón post-mortem"
+      },
       "quantity": 200
     },
     {
+      "name": {
+        "de": "Hungriger Schakal",
+        "en": "Hungry Jackal",
+        "fr": "Chacal affamé",
+        "es": "Chacal"
+      },
       "quantity": 400
     },
     {
+      "name": {
+        "de": "Kojote der kargen Steppen",
+        "en": "Fleet-footed Coyote",
+        "fr": "Coyote des steppes arides",
+        "es": "Canalla"
+      },
       "quantity": 600
     },
     {
+      "name": {
+        "de": "Fingerschmied",
+        "en": "Solicitor of the World Beyond",
+        "fr": "Notaire de l’Outre-Monde",
+        "es": "Rata Infame"
+      },
       "quantity": 1000
     }
   ],
   "r_cwater_#00": [
     {
+      "name": {
+        "de": "Nein, das Ding fasse ich nicht an.",
+        "en": "Silver Showerer",
+        "fr": "Grand arroseur",
+        "es": "Regador Ocasional"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Leichenhygieniker",
+        "en": "Golden Showerer",
+        "fr": "Mouilleur de cadavres",
+        "es": "¿Un chorrito más señor?"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Ich liebe den Geruch von gewaschenen Leichen am Morgen.",
+        "en": "Platinum Showerer",
+        "fr": "Pasteur du village",
+        "es": "Amo el olor a Cadaver remojado por la mañana"
+      },
       "quantity": 200
     }
   ],
   "r_cgarb_#00": [
     {
+      "name": {
+        "de": "Müllmann",
+        "en": "Corpse Cop",
+        "fr": "Éboueur",
+        "es": "Basurero"
+      },
       "quantity": 60
     },
     {
+      "name": {
+        "de": "Erfahrener Müllmann",
+        "en": "Body Bouncer",
+        "fr": "Sorteur en chef",
+        "es": "Lanzador de cadáveres"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Entsorgungsfachmann",
+        "en": "Stiff Shifter",
+        "fr": "Expulseur de cadavres",
+        "es": "Cañón lanzamuertos"
+      },
       "quantity": 200
     },
     {
+      "name": {
+        "de": "Maccabees-Vertreiber",
+        "en": "Apocalyptic Garbageman",
+        "fr": "Refouleur de macchabées",
+        "es": "Repelente de Macchabees"
+      },
       "quantity": 300
     }
   ],
   "r_maso_#00": [
     {
+      "name": {
+        "de": "SM Anhänger",
+        "en": "Casual S+M Enthusiast",
+        "fr": "Adepte SM",
+        "es": "Adepto del SM"
+      },
       "quantity": 20,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "SM Spezialist",
+        "en": "Whip me harder!",
+        "fr": "Maître du PMV",
+        "es": "Amo de la COSA"
+      },
       "quantity": 40,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Nenn mich Herrin",
+        "en": "Attach the testicle clamps!",
+        "fr": "Appelez-moi Maître",
+        "es": "Apriétame las esposas"
+      },
       "quantity": 60
     },
     {
+      "name": {
+        "de": "Ich möchte dein Objekt sein.",
+        "en": "Bring out the gimp!",
+        "fr": "Fais de moi ton objet",
+        "es": "Quiero ser un objeto"
+      },
       "quantity": 100
     }
   ],
   "r_animal_#00": [
     {
+      "name": {
+        "de": "Stadtmetzger",
+        "en": "Local Butcher",
+        "fr": "30 millions d’ennemis",
+        "es": "Amigo de los animales"
+      },
       "quantity": 30,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Spezialität: Hundesteaks",
+        "en": "Anyone for a fat-cat-kebab?",
+        "fr": "Responsable d'extinctions",
+        "es": "Encargado de extinciones"
+      },
       "quantity": 60,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Miezi? Jaaaa, komm her...",
+        "en": "Scourge of the animal kingdom...",
+        "fr": "Fléau du monde animal",
+        "es": "Amenaza del mundo animal"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Fleisch ist mein Gemüse",
+        "en": "If we're meant to eat vegetables, why are animals so tasty?",
+        "fr": "Spécialité : steak de chaton",
+        "es": "Especialidad: Puré de gato"
+      },
       "quantity": 300
     }
   ],
   "r_guard_#00": [
     {
+      "name": {
+        "de": "Immer ein Auge offen",
+        "en": "One Eye Open",
+        "fr": "Un Oeil ouvert",
+        "es": "Un ojo abierto"
+      },
       "quantity": 20,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Mit offenen Augen schlafen? Kein Problem!",
+        "en": "Both Eyes Open",
+        "fr": "Deux yeux ouverts",
+        "es": "Dos ojos abiertos"
+      },
       "quantity": 40,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Immer alles im Blick",
+        "en": "Long-sighted",
+        "fr": "Longue Vue",
+        "es": "Largavista"
+      },
       "quantity": 80
     },
     {
+      "name": {
+        "de": "Wachsam",
+        "en": "Uber-Aware",
+        "fr": "Aware",
+        "es": "Consciente"
+      },
       "quantity": 120
     },
     {
+      "name": {
+        "de": "Paranoid",
+        "en": "Paranoid and Proud",
+        "fr": "Parano",
+        "es": "Paranoico"
+      },
       "quantity": 200
     },
     {
+      "name": {
+        "de": "Fels in der Brandung",
+        "en": "The Rock!",
+        "fr": "Le Roc !",
+        "es": "La roca!"
+      },
       "quantity": 400
     },
     {
+      "name": {
+        "de": "Uneinnehmbare Festung",
+        "en": "Impenetrable Fortress",
+        "fr": "Forteresse imprenable",
+        "es": "Fortaleza impenetrable"
+      },
       "quantity": 600
     }
   ],
   "r_wondrs_#00": [
     {
+      "name": {
+        "de": "Großer Baumeister",
+        "en": "Master Builder",
+        "fr": "Grand bâtisseur",
+        "es": "Constructor idealista"
+      },
       "quantity": 20,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Großer Architekt",
+        "en": "Great Architect",
+        "fr": "Grand architecte",
+        "es": "Constructor visionario"
+      },
       "quantity": 50,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Freimauer",
+        "en": "Great Mason",
+        "fr": "Franc-maçon",
+        "es": "Arquitecto estrambótico"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Terraformingspezialist",
+        "en": "Terraforming Specialist",
+        "fr": "Spécialiste en terraformation",
+        "es": "Gaudí de Zombinoia"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Allmächtiger Schöpfer",
+        "en": "Great, benevolent, all-powerful creator",
+        "fr": "Grand créateur tout-puissant",
+        "es": "Albañil Dominguero"
+      },
       "quantity": 200
     },
     {
+      "name": {
+        "de": "Archi-Mädlicher Illustrator von Pi",
+        "en": "I can recite pi to infinity!",
+        "fr": "Archi-maid illustrateur de Pi",
+        "es": "Ilustradora archi-maid de Pi"
+      },
       "quantity": 250
     },
     {
+      "name": {
+        "de": "Muad'Dib",
+        "en": "Three rivers dam... That's adorable.",
+        "fr": "Muad'Dib",
+        "es": "Muad'Dib"
+      },
       "quantity": 300
     },
     {
+      "name": {
+        "de": "Am 7. Tag erschuf er den Fleischkäfig",
+        "en": "And on the 7th day, he did not rest!",
+        "fr": "Le 7ème jour, il créa la cage à viande",
+        "es": "¡Y al séptimo día, no descansó!"
+      },
       "quantity": 350
     }
   ],
   "r_ebuild_#00": [
     {
+      "name": {
+        "de": "Bauherr ohne Sinn und Verstand",
+        "en": "Nonsense builder",
+        "fr": "Bâtisseur du non-sens",
+        "es": "Obrero Amateur"
+      },
       "quantity": 1,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Erbauer der verlorenen Zeit",
+        "en": "Founder of Timewasting",
+        "fr": "Fondateur du temps perdu",
+        "es": "Obrero Iluminado"
+      },
       "quantity": 3,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Erleuchteter Baumeister",
+        "en": "Enlightened Builder",
+        "fr": "Édificateur illuminé",
+        "es": "Obrero Optimista"
+      },
       "quantity": 7
     },
     {
+      "name": {
+        "de": "Maurer aus Leidenschaft",
+        "en": "Soul Mason",
+        "fr": "Maçon du coeur",
+        "es": "Top Chef"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Das Unnütze mit dem Angenehmen verbinden",
+        "en": "Chief DIY",
+        "fr": "Joindre l'inutile à l'agréable",
+        "es": "Jefe de Manualidades"
+      },
       "quantity": 15
     },
     {
+      "name": {
+        "de": "Verrückter Architekten-Visionär",
+        "en": "Visionary Architect",
+        "fr": "Architecte visionnaire fou",
+        "es": "Arquitecto visionario"
+      },
       "quantity": 20
     },
     {
+      "name": {
+        "de": "Ich habe einen Plan",
+        "en": "I have a plan",
+        "fr": "J'ai un plan",
+        "es": "Tengo un plan"
+      },
       "quantity": 30
     },
     {
+      "name": {
+        "de": "Hirnverbrannter Baumeister",
+        "en": "Demented Master Builder",
+        "fr": "Maître d'oeuvre dément",
+        "es": "Maestro constructor demente"
+      },
       "quantity": 40
     },
     {
+      "name": {
+        "de": "Meister der Nutzlosigkeit",
+        "en": "Master of futility",
+        "fr": "Maître de l'inutilité",
+        "es": "Maestro de la Inutilidad"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Vereister Ingenieur",
+        "en": "Fruit Loop Engineer",
+        "fr": "Ingénieur complètement givré",
+        "es": "Ingeniero de Fruit Loop"
+      },
       "quantity": 60
     },
     {
+      "name": {
+        "de": "Wundervoll nutzlos",
+        "en": "Wonderfully futile",
+        "fr": "Merveilleusement futile",
+        "es": "Maravillosamente inútil"
+      },
       "quantity": 80
     },
     {
+      "name": {
+        "de": "Der Bruce Lee des Spachtels",
+        "en": "Bruce Lee of the trowel",
+        "fr": "Le Bruce Lee de la truelle",
+        "es": "El Bruce Lee de la Espatula"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Es ist Zeit für Kathedralen",
+        "en": "The time for cathedrals has come",
+        "fr": "Il est venu le temps des cathédrales",
+        "es": "Ha llegado el momento de las catedrales"
+      },
       "quantity": 120
     },
     {
+      "name": {
+        "de": "Hast du nichts besseres zu tun?",
+        "en": "Don't you have better things to do?",
+        "fr": "Z'avez pas mieux à faire ?",
+        "es": "¿No tienes algo mejor que hacer?"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Hohepriesterin des Sonnentempels",
+        "en": "High Priest of the Sun Temple",
+        "fr": "Grand prêtre du temple du soleil",
+        "es": "Templo del Sumo Sacerdote del Sol"
+      },
       "quantity": 200
     }
   ],
   "r_ebpmv_#00": [
     {
+      "name": {
+        "de": "Huldigt den riesigen KVF!",
+        "en": "BRDs for everyone! The people demand BRDs",
+        "fr": "Gloire au PMV !",
+        "es": "¡Gloria a la COSA!"
+      },
       "quantity": 5
     },
     {
+      "name": {
+        "de": "Obelisk der heutigen Zeit!",
+        "en": "Modern obelisk!",
+        "fr": "Obélisque des temps modernes !",
+        "es": "¡Obelisco moderno!"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Lebhafter Tribut",
+        "en": "Standing ovation",
+        "fr": "Vibrant hommage",
+        "es": "Ovación de pie"
+      },
       "quantity": 15
     },
     {
+      "name": {
+        "de": "Wird in die Annalen eingehen",
+        "en": "One for the books",
+        "fr": "Restera dans les annales",
+        "es": "Uno para los libros"
+      },
       "quantity": 20
     },
     {
+      "name": {
+        "de": "Extra viel Liebe",
+        "en": "Extra large love",
+        "fr": "L'amour extra large",
+        "es": "Amor extra grande"
+      },
       "quantity": 25
     },
     {
+      "name": {
+        "de": "Es ist kleiner als im Katalog",
+        "en": "It was smaller on the catalog",
+        "fr": "Ça faisait plus petit sur le catalogue",
+        "es": "Era más pequeño en el catálogo."
+      },
       "quantity": 30
     },
     {
+      "name": {
+        "de": "Freude der Stärke 8",
+        "en": "Happiness of magnitude 8",
+        "fr": "Bonheur de magnitude 8",
+        "es": "Felicidad de magnitud 8"
+      },
       "quantity": 40
     },
     {
+      "name": {
+        "de": "Bewahrer der Freuden",
+        "en": "Keeper of pleasures",
+        "fr": "Gardien des plaisirs",
+        "es": "Guardián de los placeres"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Ein bisschen näher an den Sternen",
+        "en": "A little closer to the stars",
+        "fr": "Un peu plus près des étoiles",
+        "es": "Un poco más cerca de las estrellas"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Himmel! Was werden die Nachbarn sagen?",
+        "en": "Heavens! What will the neighbours say?",
+        "fr": "Ciel ! Que vont dire les voisins ?",
+        "es": "¡Cielos! ¿Qué dirán los vecinos?"
+      },
       "quantity": 100
     }
   ],
   "r_ebcstl_#00": [
     {
+      "name": {
+        "de": "Das hast du nicht wirklich gebaut?",
+        "en": "You really built that?",
+        "fr": "Vous avez vraiment construit ça ?",
+        "es": "¿Realmente has construido eso?"
+      },
       "quantity": 5
     },
     {
+      "name": {
+        "de": "Eimerhalter",
+        "en": "Guard of the seals",
+        "fr": "Garde des seaux",
+        "es": "Guardia de las focas"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Sandverkäufer",
+        "en": "Snake oil salesman",
+        "fr": "Marchand de sable",
+        "es": "Vendedor de Arena"
+      },
       "quantity": 15
     },
     {
+      "name": {
+        "de": "Martinet am Strand",
+        "en": "Martine at the beach",
+        "fr": "Martine à la plage",
+        "es": "Martini en la playa"
+      },
       "quantity": 20
     },
     {
+      "name": {
+        "de": "Ein Spiel für echte Kinder",
+        "en": "A real children's game!",
+        "fr": "Un vrai jeu d'enfants !",
+        "es": "¡Un verdadero juego de niños!"
+      },
       "quantity": 25
     },
     {
+      "name": {
+        "de": "Dauermitglied in Micky's Club",
+        "en": "Permanent member of the Mickey Club",
+        "fr": "Membre permanent du club Mickey",
+        "es": "Miembro permanente del Club de Mickey"
+      },
       "quantity": 30
     },
     {
+      "name": {
+        "de": "Niemals ohne meinen Eimer",
+        "en": "Never without my bucket",
+        "fr": "Jamais sans mon seau",
+        "es": "Nunca sin mi cubo"
+      },
       "quantity": 40
     },
     {
+      "name": {
+        "de": "Ein Korn fehlt noch",
+        "en": "I know I have a grain",
+        "fr": "Je sais, j'ai un grain",
+        "es": "Todavia falta un grano"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Mister Sandman ♫♪",
+        "en": "Mister Sandman ♫♪",
+        "fr": "Mister Sandman ♫♪",
+        "es": "Mister Sandman ♫♪"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Nutzt das Vergängliche",
+        "en": "Exploit the ephemeral",
+        "fr": "Exploit de l'éphèmère",
+        "es": "Proeza de lo efímero"
+      },
       "quantity": 100
     }
   ],
   "r_ebcrow_#00": [
     {
+      "name": {
+        "de": "Huldigt den Raben!",
+        "en": "Glory to the Crow!",
+        "fr": "Gloire au Corbeau !",
+        "es": "¡Gloria al cuervo!"
+      },
       "quantity": 5
     },
     {
+      "name": {
+        "de": "Taube aus der Unterwelt",
+        "en": "Pigeon from the outer world.",
+        "fr": "Pigeon de l'Outre-Monde",
+        "es": "Paloma del Ultramundo"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Corvid-Spezialist",
+        "en": "Corvidæ specialist",
+        "fr": "Spécialiste ès corvidés",
+        "es": "Especialista en córvidos"
+      },
       "quantity": 15
     },
     {
+      "name": {
+        "de": "Phoenix des Unterholzes",
+        "en": "Phoenix of the desert",
+        "fr": "Phoenix des hôtes de ces bois",
+        "es": "Fénix del Ultramundo"
+      },
       "quantity": 20
     },
     {
+      "name": {
+        "de": "Edit Piaf",
+        "en": "Edit Piaf",
+        "fr": "Edit Piaf",
+        "es": "Edit Piaf"
+      },
       "quantity": 25
     },
     {
+      "name": {
+        "de": "Vogel der schlechten Vorzeichen",
+        "en": "Bird of bad omen",
+        "fr": "Oiseau de mauvais augure",
+        "es": "Ave de mal augurio"
+      },
       "quantity": 30
     },
     {
+      "name": {
+        "de": "Kraaaah!",
+        "en": "CroooAAwW!",
+        "fr": "Crôôôaa !",
+        "es": "¡Wraaaaahh!"
+      },
       "quantity": 40
     },
     {
+      "name": {
+        "de": "Er war Leber ...",
+        "en": "He was a liver...",
+        "fr": "Il était un foie...",
+        "es": "Era una calavera..."
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "John Snow",
+        "en": "John Snow",
+        "fr": "John Snow",
+        "es": "John Snow"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Der Rabinator",
+        "en": "The crowinator",
+        "fr": "Le Corbeausier",
+        "es": "El cuervinador"
+      },
       "quantity": 100
     }
   ],
   "r_ebgros_#00": [
     {
+      "name": {
+        "de": "Hey wir können die Zombies von hier oben sehen",
+        "en": "I can see the zeds from here!",
+        "fr": "Oh on voit les zombies d'ici",
+        "es": "¡Puedo ver a los zombies desde aquí arriba!"
+      },
       "quantity": 5
     },
     {
+      "name": {
+        "de": "Fröhlicher Hamster",
+        "en": "Happy hamster",
+        "fr": "Hamster jovial",
+        "es": "Hámster feliz"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Showman aus der Anderen Welt!",
+        "en": "Desert showman!",
+        "fr": "Forain de l'Outre Monde !",
+        "es": "Empresario del Ultramundo!"
+      },
       "quantity": 15
     },
     {
+      "name": {
+        "de": "5. Rad am Wagen",
+        "en": "5th wheel of the caravan",
+        "fr": "5e roue du carrosse",
+        "es": "Quinta rueda de la caravana"
+      },
       "quantity": 20
     },
     {
+      "name": {
+        "de": "Mir ist schwindelig",
+        "en": "I'm dizzy",
+        "fr": "J'ai le vertige",
+        "es": "Estoy mareado"
+      },
       "quantity": 25
     },
     {
+      "name": {
+        "de": "Hier oben",
+        "en": "Up there",
+        "fr": "Là-haut",
+        "es": "Aquí arriba"
+      },
       "quantity": 30
     },
     {
+      "name": {
+        "de": "Auge der Wüste",
+        "en": "Eye of the desert",
+        "fr": "L'œil du désert",
+        "es": "Ojo del Ultramundo"
+      },
       "quantity": 40
     },
     {
+      "name": {
+        "de": "4000 Zombies starren uns an",
+        "en": "4000 zombies gaze at us",
+        "fr": "4000 zombies nous contemplent",
+        "es": "4000 zombies nos miran"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Wir drehen frei!",
+        "en": "Freewheeling",
+        "fr": "En roue libre",
+        "es": "Sin rumbo y desenfadado"
+      },
       "quantity": 75
     }
   ],
   "r_batgun_#00": [
     {
+      "name": {
+        "de": "Durazell",
+        "en": "There's a battery with your name on it...",
+        "fr": "Gardien de la Pile",
+        "es": "Lanzador de Pilas"
+      },
       "quantity": 15
     },
     {
+      "name": {
+        "de": "Hüter der Heiligen Batterie",
+        "en": "Zen-ergizer",
+        "fr": "Détenteur de la Pile Sacrée",
+        "es": "Cañón de Pilas"
+      },
       "quantity": 25
     },
     {
+      "name": {
+        "de": "Der Batterienator",
+        "en": "The batterinator.",
+        "fr": "C’était pas ma guerre",
+        "es": "El generador de batería"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Ist es ein Vogel? Ist es ein Flugzeug? Nein, es ist der super Batteriewerfer!",
+        "en": "Is it a bird? Is it a plane? No, it's the super battery launcher!",
+        "fr": "C’est un oiseau, c’est un avion ? Non, c’est super lance-pile !",
+        "es": "¿Es un pajaro? Es un avion? No, ¡es el súper lanzapilas!"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Aufgeladen und kampfbereit",
+        "en": "Amped up and ready to roll",
+        "fr": "Ampère et contre tous",
+        "es": "Amplificada y lista para rodar"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Hey! Willst du meine... Batterie sehen?",
+        "en": "Hey hey, wanna see my... Battery?",
+        "fr": "Coucou ! Tu veux voir ma pile ?",
+        "es": "Oye, oye, ¿quieres ver mi... pila?"
+      },
       "quantity": 150
     }
   ],
   "r_buildr_#00": [
     {
+      "name": {
+        "de": "Maurerlehrling",
+        "en": "Labourer",
+        "fr": "Ouvrier",
+        "es": "Obrero"
+      },
       "quantity": 100,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Maurer",
+        "en": "Builder",
+        "fr": "Bâtisseur",
+        "es": "Urbanista"
+      },
       "quantity": 200,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Polier",
+        "en": "Site Manager",
+        "fr": "Chef de chantier",
+        "es": "Jefe de construcción"
+      },
       "quantity": 400
     },
     {
+      "name": {
+        "de": "Baustellenleiter",
+        "en": "Architect",
+        "fr": "Architecte",
+        "es": "Maestro constructor"
+      },
       "quantity": 700
     },
     {
+      "name": {
+        "de": "Architekt (title)",
+        "en": "Master Architect",
+        "fr": "Maître-architecte",
+        "es": "Arquitecto"
+      },
       "quantity": 1300
     },
     {
+      "name": {
+        "de": "Meisterarchitekt",
+        "en": "Town Planner",
+        "fr": "Créateur de villes",
+        "es": "Magnate del ladrillo"
+      },
       "quantity": 2000
     },
     {
+      "name": {
+        "de": "Oscar Niemeyer",
+        "en": "Bob the builder",
+        "fr": "Captain Parpaing",
+        "es": "Ramsés del siglo XXI"
+      },
       "quantity": 3000
     },
     {
+      "name": {
+        "de": "Zement & Garfunkel",
+        "en": "Cement & Garfunkle",
+        "fr": "Ciment & Garfunkel",
+        "es": "Cemento y Garfunkle"
+      },
       "quantity": 4000
     },
     {
+      "name": {
+        "de": "Menschliche Ameisenkolonie",
+        "en": "The human ant",
+        "fr": "Colonie de fourmis humaine",
+        "es": "La hormiga humana"
+      },
       "quantity": 5000
     },
     {
+      "name": {
+        "de": "Arbeiterhelm und Kupferstiefel",
+        "en": "The Great Wall of what?",
+        "fr": "Chapeau moellon et bottes de cuivre",
+        "es": "¿La Gran Muralla de qué?"
+      },
       "quantity": 6000
     },
     {
+      "name": {
+        "de": "Arbeit ist Gesundheit",
+        "en": "Pyramid shmyramid",
+        "fr": "Le travail, c'est la santé",
+        "es": "El trabajo es salud"
+      },
       "quantity": 8000
     },
     {
+      "name": {
+        "de": "Bob der Baumeister",
+        "en": "I'm working on the Sagrada",
+        "fr": "L’abbé Tonière",
+        "es": "Bob el constructor"
+      },
       "quantity": 10000
     }
   ],
   "r_brep_#00": [
     {
+      "name": {
+        "de": "Spachtler",
+        "en": "Town plasterer",
+        "fr": "Plâtrier de la ville",
+        "es": "Manitas hábiles"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Gewissenhafter Maurer",
+        "en": "All-round Handyman",
+        "fr": "Briqueteur conscienceux",
+        "es": "Reparador aficionado"
+      },
       "quantity": 250
     },
     {
+      "name": {
+        "de": "Meisterwerke in Gefahr",
+        "en": "Masterpieces in Peril",
+        "fr": "Chef d'oeuvre en péril",
+        "es": "Reparador arriesgado"
+      },
       "quantity": 500
     },
     {
+      "name": {
+        "de": "Ein Flicken und alles ist wie neu",
+        "en": "Get some Duct Tape in there.",
+        "fr": "Une rustine et ça repart.",
+        "es": "Ponga cinta adhesiva allí."
+      },
       "quantity": 1000
     },
     {
+      "name": {
+        "de": "Pisa-Geraderichter",
+        "en": "The Fixer",
+        "fr": "Redresseur de Pise",
+        "es": "El reparador"
+      },
       "quantity": 1500
     },
     {
+      "name": {
+        "de": "Großer Renovator",
+        "en": "Renovator to the stars",
+        "fr": "Grand rénovateur",
+        "es": "Gran Renovador"
+      },
       "quantity": 2000
     },
     {
+      "name": {
+        "de": "Ein Patch, kein Spiel",
+        "en": "Patch-up Specialist",
+        "fr": "Patch-day, no-play",
+        "es": "Especialista en parches"
+      },
       "quantity": 2500
     },
     {
+      "name": {
+        "de": "Ein Riss? Welcher Riss?",
+        "en": "A crack? What crack?",
+        "fr": "Une fissure ? Quelle fissure ?",
+        "es": "¿Una grieta? ¿Qué grieta?"
+      },
       "quantity": 3000
     },
     {
+      "name": {
+        "de": "Das braucht noch 10 Jahre!",
+        "en": "That'll last another 10 years!",
+        "fr": "Ça tiendra encore 10 ans !",
+        "es": "¡Eso llevara otros 10 años!"
+      },
       "quantity": 3500
     }
   ],
   "r_tronco_#00": [
     {
+      "name": {
+        "de": "Kettensägenmassaker",
+        "en": "Chainsaw Massacre",
+        "fr": "Massacre à la tronçonneuse",
+        "es": "Masacre de la motosierra"
+      },
       "quantity": 5
     },
     {
+      "name": {
+        "de": "Fleisch-Schuldner",
+        "en": "There ain't nothing I can't take this chainsaw to...",
+        "fr": "Débiteur de viande",
+        "es": "No hay nada a lo que no me pueda llevar esta motosierra..."
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Bruce Campbell",
+        "en": "Bruce Campbell",
+        "fr": "Bruce Campbell",
+        "es": "Bruce Campbell"
+      },
       "quantity": 30
     }
   ],
   "r_repair_#00": [
     {
+      "name": {
+        "de": "Hobby-Heimwerker",
+        "en": "Home Depot Regular",
+        "fr": "Bricoleur du dimanche",
+        "es": "Reparador Dominguero"
+      },
       "quantity": 15
     },
     {
+      "name": {
+        "de": "Techniker",
+        "en": "Technician",
+        "fr": [
+          "Technicienne",
+          "Technicien",
+          "Technicien"
+        ],
+        "es": "Técnico"
+      },
       "quantity": 30
     },
     {
+      "name": {
+        "de": "Meisterbastler ",
+        "en": "Fitter",
+        "fr": "Maître ingénieur",
+        "es": "Manitas hábiles"
+      },
       "quantity": 60
     },
     {
+      "name": {
+        "de": "Sowas wirft man doch nicht weg!",
+        "en": "Craftsman",
+        "fr": "Ré-assembleur de choses",
+        "es": "Ingeniero Espacial"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Mac Gyver der Außenwelt",
+        "en": "MacGyver of the World beyond",
+        "fr": "Mac Gyver de l'Outre-Monde",
+        "es": "Reparador Supremo"
+      },
       "quantity": 400
     }
   ],
   "r_watgun_#00": [
     {
+      "name": {
+        "de": "Super Soaker",
+        "en": "Super Soaker",
+        "fr": "Pistolereau",
+        "es": "Pistolero de agua"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Wasserwaffen-Spezialist",
+        "en": "H2Operative",
+        "fr": "Spécialiste en pistolets à eau",
+        "es": "Especialista con armas de agua"
+      },
       "quantity": 25
     },
     {
+      "name": {
+        "de": "Hydraulik-Engineering",
+        "en": "Hydraulics Engineer",
+        "fr": "Ingénierie hydraulique",
+        "es": "Ingeniero Hidráulico"
+      },
       "quantity": 35
     },
     {
+      "name": {
+        "de": "Abstieg der Atlanteaner",
+        "en": "Atlantean Ancestry",
+        "fr": "Descendant des atlantes",
+        "es": "Descendiente de los Atlantes"
+      },
       "quantity": 60
     }
   ],
   "r_digger_#00": [
     {
+      "name": {
+        "de": "Archäologielehrling",
+        "en": "Archaeologist",
+        "fr": "Forçat du désert",
+        "es": "Fuerzudo del desierto"
+      },
       "quantity": 50,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Archäologe",
+        "en": "Sand Shifter",
+        "fr": "Ouvrier des sables",
+        "es": "Conan de las arenas"
+      },
       "quantity": 300,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Grabungsleiter",
+        "en": "Ruin Restorer",
+        "fr": "Découvreur de bâtiments",
+        "es": "Hombre Caterpillar"
+      },
       "quantity": 750
     },
     {
+      "name": {
+        "de": "Großer Löcherbuddler",
+        "en": "Indiana Jones",
+        "fr": "Creuseur de grands trous",
+        "es": "Excavadora de agujeros grandes"
+      },
       "quantity": 1000
     },
     {
+      "name": {
+        "de": "Riesenmaulwurf",
+        "en": "Desert Rat",
+        "fr": "Taupe géante",
+        "es": "Rata del desierto"
+      },
       "quantity": 1500
     }
   ],
   "r_cmplst_#00": [
     {
+      "name": {
+        "de": "Furchtloser Camper",
+        "en": "Unshakeable Camper",
+        "fr": "Campeur inébranlable",
+        "es": "Campista inquebrantable"
+      },
       "quantity": 10,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Waisenkind der Wüste",
+        "en": "Desert Orphan",
+        "fr": "Orphelin du désert",
+        "es": "Huérfano del desierto"
+      },
       "quantity": 25,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Unglaubliche Entschlossenheit",
+        "en": "Incredible determination",
+        "fr": "Incroyable détermination",
+        "es": "Increíble determinación"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Der letzte Überlebende",
+        "en": "The Last Survivor",
+        "fr": "Le dernier survivant",
+        "es": "El último superviviente"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Ich gehe alleine.",
+        "en": "I walk alone.",
+        "fr": "Je marche seul.",
+        "es": "Voy solo."
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Neil Armstrong der Außenwelt",
+        "en": "Neil Armstrong of the World Beyond",
+        "fr": "Neil Armstrong de l'Outre Monde",
+        "es": "Neil Armstrong del Ultramundo"
+      },
       "quantity": 200
     }
   ],
   "r_explo2_#00": [
     {
+      "name": {
+        "de": "Lebensmüder Kundschafter",
+        "en": "Extreme Explorer",
+        "fr": "Explorateur vraiment impétueux",
+        "es": "Caminante del Horizonte"
+      },
       "quantity": 5,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Draufgängerischer Expeditionsreisender",
+        "en": "Expedition Expert",
+        "fr": "Expéditionnaire au long cours",
+        "es": "Explorador impetuosísimo"
+      },
       "quantity": 15,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Nervenkitzelsucher",
+        "en": "Horizon traveller",
+        "fr": "Au-delà du réel",
+        "es": "Expedicionario"
+      },
       "quantity": 30
     },
     {
+      "name": {
+        "de": "Christopher Kolumbus",
+        "en": "Desert Shackleton",
+        "fr": "Champollion du désert",
+        "es": "Cristobal Colón"
+      },
       "quantity": 70
     },
     {
+      "name": {
+        "de": "Bis zur Unendlichkeit... und noch viel weiter!",
+        "en": "To infinity and beyond!",
+        "fr": "Vers l'infini et au-delà !",
+        "es": "¡Hasta el infinito y más allá!"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Indiana Jones und die Ruinen der Aussenwelt",
+        "en": "Indiana Jones and the ruins of the World Beyond",
+        "fr": "Indiana jones et les ruines de l'outre-monde",
+        "es": "Indiana Jones y las ruinas del Ultramundo"
+      },
       "quantity": 300
     }
   ],
   "r_ruine_#00": [
     {
+      "name": {
+        "de": "Wenn ich das nur vorher gewusst hätte...",
+        "en": "Sneaky Voyager",
+        "fr": "Si j'aurais su, j'aurais po v'nu",
+        "es": "¡Mamá, no me dejes aquí!"
+      },
       "quantity": 5,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Verwegener Wanderer",
+        "en": "Tunnel Visionary",
+        "fr": "Voyageur téméraire",
+        "es": "Explorador por accidente"
+      },
       "quantity": 10,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Tunnelblicker",
+        "en": "Regularly A-mazed!",
+        "fr": "Apnéiste confirmé",
+        "es": "Explorador de ruinas"
+      },
       "quantity": 20
     },
     {
+      "name": {
+        "de": "Im Irrgarten",
+        "en": "Compass Included",
+        "fr": "J'ai la dé-dale !",
+        "es": "Ruina Man"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Inklusive Kompass",
+        "en": "Buried Voluntarily",
+        "fr": "Boussole sur patte",
+        "es": "Brújula andante"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Begrabener Freiwilliger",
+        "en": "Tombstone Toppler",
+        "fr": "Enterré volontaire",
+        "es": "Voluntario enterrado"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Tomb Raider",
+        "en": "Gollum of the Labyrinths",
+        "fr": "Pilleur de tombeau",
+        "es": "Tomb Raider"
+      },
       "quantity": 200
     },
     {
+      "name": {
+        "de": "Labyrinth-Gollum",
+        "en": "Labyrinth Master PhD",
+        "fr": "Gollum des labyrinthes",
+        "es": "Master del Laberinto"
+      },
       "quantity": 250
     },
     {
+      "name": {
+        "de": "Labyrinth-Meister MB",
+        "en": "Don't call me Junior",
+        "fr": "Labyrinthe master",
+        "es": "No me llames junior"
+      },
       "quantity": 400
     }
   ],
   "r_door_#00": [
     {
+      "name": {
+        "de": "Wo klemmt's?",
+        "en": "Key hee hee!",
+        "fr": "Un p'tit Bricard ?",
+        "es": "Ganzúa"
+      },
       "quantity": 1,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Dietrich",
+        "en": "How about some Chubb-ly?",
+        "fr": "Une petite tranche de Vachette ?",
+        "es": "Hijo de cerrajero"
+      },
       "quantity": 5,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Sesam, öffne dich...",
+        "en": "Sesame, shift your A...",
+        "fr": "Sésame, bouge ton c...",
+        "es": "Con o sin llaves, yo entro"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Türöffner",
+        "en": "Deadbolt Dick",
+        "fr": "Dentiste serrurier",
+        "es": "Ábrete Sésamo"
+      },
       "quantity": 15
     },
     {
+      "name": {
+        "de": "Gentleman-Einbrecher",
+        "en": "Gentleman Robber",
+        "fr": "Gentleman Cambrioleur",
+        "es": "Abridor de puertas"
+      },
       "quantity": 20
     },
     {
+      "name": {
+        "de": "Schlüsseldienst",
+        "en": "Captain Hook",
+        "fr": "Capitaine Crochet",
+        "es": "Terror de las puertas"
+      },
       "quantity": 30
     },
     {
+      "name": {
+        "de": "Zerberus",
+        "en": "Shim Surgeon",
+        "fr": "Cerbère de la porte",
+        "es": "Cerbero"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Meister der Schlüssel",
+        "en": "Grand Key Master",
+        "fr": "Maître des clés",
+        "es": "Gran Maestro de Llaves"
+      },
       "quantity": 100
     }
   ],
   "r_killz_#00": [
     {
+      "name": {
+        "de": "Brutalo",
+        "en": "Mutilator",
+        "fr": "Grosse brute",
+        "es": "Brutal"
+      },
       "quantity": 100,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Verstümmler",
+        "en": "Exterminator",
+        "fr": "Mutilateur",
+        "es": "Mutilador"
+      },
       "quantity": 200,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Killer",
+        "en": "Corpse Crusher",
+        "fr": "Exterminateur",
+        "es": "Exterminador"
+      },
       "quantity": 300,
       "points": 10
     },
     {
+      "name": {
+        "de": "Kadaverentsorger",
+        "en": "The Hitman",
+        "fr": "Broyeur de cadavres",
+        "es": "Descuartizador"
+      },
       "quantity": 800,
       "points": 13
     },
     {
+      "name": {
+        "de": "Vernichter",
+        "en": "The Peacemaker",
+        "fr": "Total annihilation",
+        "es": "Aniquilador"
+      },
       "quantity": 2000
     },
     {
+      "name": {
+        "de": "Schlächter",
+        "en": "Chuck Norris",
+        "fr": "Le Tueur",
+        "es": "Masacrador"
+      },
       "quantity": 4000
     },
     {
+      "name": {
+        "de": "Friedensstifter",
+        "en": "Jean Claude Van Damned",
+        "fr": "Le Pacificateur",
+        "es": "Pacificador"
+      },
       "quantity": 6000
     },
     {
+      "name": {
+        "de": "Alptraum der Traumlosen",
+        "en": "Go ahead, make my day!",
+        "fr": "J'aime les bandes décimées",
+        "es": "Mordedor de muertos"
+      },
       "quantity": 10000
     },
     {
+      "name": {
+        "de": "Du nennst das ein Messer? DAS ist ein Messer!",
+        "en": "Call that a knife? THAT's a knife!",
+        "fr": "T'appelles ça un couteau ? ÇA c'est un couteau !",
+        "es": "¿Llamas a eso un cuchillo? ¡ESTO es un cuchillo!"
+      },
       "quantity": 15000
     }
   ],
   "r_chstxl_#00": [
     {
+      "name": {
+        "de": "Hans im Glück",
+        "en": "The name's Nate Fortu",
+        "fr": "Spécialiste en aubaine",
+        "es": "Golpe de Suerte"
+      },
       "quantity": 5,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Vierklettriges Kleeblatt",
+        "en": "Do you feel lucky, punk?",
+        "fr": "Maître du coup de bol",
+        "es": "Maestro del Azar"
+      },
       "quantity": 10,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Fortuna",
+        "en": "Windfall Catcher",
+        "fr": "Grand veinard en chef",
+        "es": "Afortunado"
+      },
       "quantity": 15
     },
     {
+      "name": {
+        "de": "Gontran Happiness",
+        "en": "Jack Pott",
+        "fr": "Gontran Bonheur",
+        "es": "Bestia salvaje"
+      },
       "quantity": 20
     },
     {
+      "name": {
+        "de": "Lucky 7",
+        "en": "Lucky 7",
+        "fr": "Lucky 7",
+        "es": "7 de la Suerte"
+      },
       "quantity": 30
     },
     {
+      "name": {
+        "de": "Money for Nothing",
+        "en": "Money for Nothing",
+        "fr": "Money for Nothing",
+        "es": "Dinero para Nada"
+      },
       "quantity": 50
     }
   ],
   "r_wrestl_#00": [
     {
+      "name": {
+        "de": "Ultimate Fighter",
+        "en": "Ultimate Fighter",
+        "fr": "Promeneur désespéré",
+        "es": "Golpeador de zombies"
+      },
       "quantity": 20
     },
     {
+      "name": {
+        "de": "Wilde Bestie",
+        "en": "Wild Beast",
+        "fr": "Bête sauvage",
+        "es": "Bestia salvaje"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Rambos Großvater",
+        "en": "Rambo's ancestor",
+        "fr": "Ancêtre de Rambo",
+        "es": "Antepasado de Rambo"
+      },
       "quantity": 200
     },
     {
+      "name": {
+        "de": "Absolut keine Angst!",
+        "en": "Not even afraid!",
+        "fr": "Même pas peur !",
+        "es": "¡No tengas miedo en absoluto!"
+      },
       "quantity": 400
     },
     {
+      "name": {
+        "de": "Barhändiger Stripper",
+        "en": "Bare-handed stripper",
+        "fr": "Étripeur à mains nues",
+        "es": "Stripper con las manos desnudas"
+      },
       "quantity": 600
     }
   ],
   "r_explor_#00": [
     {
+      "name": {
+        "de": "Stürmischer Kundschafter",
+        "en": "Dora the Explorer",
+        "fr": "Explorateur impétueux",
+        "es": "Explorador Impetuoso"
+      },
       "quantity": 15,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Furchtloser Abenteurer",
+        "en": "Fearless adventurer",
+        "fr": "Aventurier sans peur",
+        "es": "Viajero sin miedo"
+      },
       "quantity": 30,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Wagemutiger Trapper",
+        "en": "Guide to the World Beyond",
+        "fr": "Guide de l'Outre-Monde",
+        "es": "Guía del Ultramundo"
+      },
       "quantity": 70
     },
     {
+      "name": {
+        "de": "Wikinger",
+        "en": "Brave Prospector",
+        "fr": "Prospecteur courageux",
+        "es": "Aventurero Temerario"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Außenweltreiseführer",
+        "en": "Tenzing Norgay",
+        "fr": "L’Outre-Monde est mon bac à sable",
+        "es": "Dora la Exploradora"
+      },
       "quantity": 200
     },
     {
+      "name": {
+        "de": "Ich habe die Erde umrundet... zweimal!",
+        "en": "I've been round the world... Twice!",
+        "fr": "J'ai fait le tour du monde... 2 fois !",
+        "es": "He dado la vuelta al mundo ... ¡dos veces!"
+      },
       "quantity": 250
     },
     {
+      "name": {
+        "de": "Internet Explorer",
+        "en": "Internet Explorer",
+        "fr": "Internet Explorer",
+        "es": "Internet Explorer"
+      },
       "quantity": 300
     },
     {
+      "name": {
+        "de": "Ich hab sogar das Klo abgesucht!",
+        "en": "I've even dug through a public toilet!",
+        "fr": "J'ai même fouillé les WC !",
+        "es": "¡Incluso busqué en el baño!"
+      },
       "quantity": 350
     },
     {
+      "name": {
+        "de": "Sind wir schon da?",
+        "en": "Are we there yet?",
+        "fr": "Quand est-ce qu’on arrive ?",
+        "es": "¿Ya llegamos?"
+      },
       "quantity": 400
     }
   ],
   "r_camp_#00": [
     {
+      "name": {
+        "de": "Außenweltschläfer",
+        "en": "Suicide Sleeper",
+        "fr": "Dormeur suicidaire",
+        "es": "Campista suicida"
+      },
       "quantity": 10,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Allein in dieser Welt",
+        "en": "Alone in the Dark",
+        "fr": [
+          "Seule au monde…",
+          "Seul au monde…",
+          "Seul(e) au monde…"
+        ],
+        "es": "Carpa diem"
+      },
       "quantity": 25,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Der mit den Zombies tanzt",
+        "en": "Dances with zombies",
+        "fr": "Danse avec les zombies",
+        "es": "Carnada para zombies"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Ich sehe überall Tote!",
+        "en": "I see dead people - everywhere!",
+        "fr": "Je vois des morts partout",
+        "es": "¡Desafío aceptado!"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Ich komme heute Nacht nicht heim...",
+        "en": "Don't wait up...",
+        "fr": "Je ne rentrerai pas ce soir…",
+        "es": "Todo terreno"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Ein Mann gegen die Außenwelt",
+        "en": "Man vs World Beyond",
+        "fr": "Une fois, au stage d’été…",
+        "es": "¡Fuera de mi camino!"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Stadtallergie",
+        "en": "I'm allergic to something in town.",
+        "fr": "Allergique à la ville",
+        "es": "Soy alérgico a algo en el pueblo."
+      },
       "quantity": 200
     },
     {
+      "name": {
+        "de": "Wo ich hinguck, seh ich Gegend.",
+        "en": "So I guess we're not waiting for Bob?",
+        "fr": "Bah alors on n'attend pas Patrick ?",
+        "es": "¿Entonces supongo que no estamos esperando a Bob?"
+      },
       "quantity": 250
     },
     {
+      "name": {
+        "de": "Runaway Michael",
+        "en": "Bear Grylls",
+        "fr": "Michel Fugueur",
+        "es": "Sin techo ni dientes"
+      },
       "quantity": 300
     },
     {
+      "name": {
+        "de": "Ohne Dach oder Leber",
+        "en": "Without a roof or a tooth.",
+        "fr": "Sans toit ni foie",
+        "es": "Sin techo ni hígado"
+      },
       "quantity": 350
     }
   ],
   "r_rp_#00": [
     {
+      "name": {
+        "de": "Neugieriger Leser",
+        "en": "Curious reader",
+        "fr": "Lecteur curieux",
+        "es": "Lector curioso"
+      },
       "quantity": 5,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Eifriger Leser",
+        "en": "Storyteller",
+        "fr": "Conteur d’histoires",
+        "es": "Cuentacuentos"
+      },
       "quantity": 10,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Wüstenhistoriker",
+        "en": "Desert Historian",
+        "fr": "Historien du désert",
+        "es": "Historiador del desierto"
+      },
       "quantity": 20,
       "points": 10
     },
     {
+      "name": {
+        "de": "Bibliothekar",
+        "en": "Librarian",
+        "fr": "Gardien des archives",
+        "es": "Guardián de los archivos"
+      },
       "quantity": 30,
       "points": 13
     },
     {
+      "name": {
+        "de": "Archivar",
+        "en": "Archivist",
+        "fr": "Maitre rôliste",
+        "es": "Maestro Rolista"
+      },
       "quantity": 40,
       "points": 16.5
     },
     {
+      "name": {
+        "de": "Erinnerungsträger",
+        "en": "Souvenir Collector",
+        "fr": "Porteur du Souvenir",
+        "es": "Coleccionista de Recuerdos"
+      },
       "quantity": 60,
       "points": 20
     },
     {
+      "name": {
+        "de": "Erinnerungen an die Zivilisation",
+        "en": "Memory of civilization",
+        "fr": "Mémoire de la civilisation",
+        "es": "Memoria de la civilización"
+      },
       "quantity": 100
     }
   ],
   "r_nodrug_#00": [
     {
+      "name": {
+        "de": "Twinoid ist tabu",
+        "en": "Twinoid is taboo",
+        "fr": "La twinoïde, c’est tabou",
+        "es": "Me siento bien"
+      },
       "quantity": 20,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Keine Macht den Drogen",
+        "en": "Happy as Larry",
+        "fr": "Bien dans sa peau",
+        "es": "Me basto y me sobro"
+      },
       "quantity": 75,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Sowas fasse ICH nicht an",
+        "en": "Never touch the stuff, me.",
+        "fr": "Je touche pas à ça, MOI.",
+        "es": "Limpio de polvo y paja"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Vorbild für die Jugend",
+        "en": "Just Say No!",
+        "fr": "Exemple pour la jeunesse",
+        "es": "Yo sé cuidar mi cuerpo"
+      },
       "quantity": 500
     },
     {
+      "name": {
+        "de": "Champions nehmen keine Drogen!",
+        "en": "Winners don't use drugs!",
+        "fr": "Winners don’t use drugs !",
+        "es": "Ejemplo para los jóvenes"
+      },
       "quantity": 1000
     }
   ],
   "r_cobaye_#00": [
     {
+      "name": {
+        "de": "Medikamentetester",
+        "en": "Guinea Pig",
+        "fr": "Cobaye de laboratoire",
+        "es": "Conejillo de Indias"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Laborratte",
+        "en": "Lab Rat",
+        "fr": "Expérience dangereuse",
+        "es": "Rata de laboratorio"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Pille palle, 3 Tage wach!",
+        "en": "Product Tester!",
+        "fr": "Testeur de produits",
+        "es": "¡Probador de productos!"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Timothy Leary",
+        "en": "What do you mean these ain't skittles",
+        "fr": "Je n’aurais pas dû gober ça.",
+        "es": "¿Qué quieres decir con que estos no son caramelos?"
+      },
       "quantity": 200
     },
     {
+      "name": {
+        "de": "Ich sehe ein Blauuuuuuues Tal",
+        "en": "The sky is falling!!!",
+        "fr": "Je vois une Vallée Bleuûuue !",
+        "es": "¡¡¡El cielo se está cayendo!!!"
+      },
       "quantity": 250
     }
   ],
   "r_cannib_#00": [
     {
+      "name": {
+        "de": "Menschenfleischliebhaber",
+        "en": "Meat Muncher",
+        "fr": "Amateur de viande humaine",
+        "es": "Devorador de hombres"
+      },
       "quantity": 10,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Hannibalfan",
+        "en": "Dr Death's Dietician",
+        "fr": "Fan d’Hannibal",
+        "es": "Fan de Hannibal"
+      },
       "quantity": 40,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Totmacher",
+        "en": "Check out my skin sombrero!",
+        "fr": "Dévoreur de citoyens",
+        "es": "Creador de la muerte"
+      },
       "quantity": 80
     },
     {
+      "name": {
+        "de": "Jeffrey Dahmer",
+        "en": "Lunches like Lecter",
+        "fr": "Croque-mort",
+        "es": "Jeffrey Dahmer"
+      },
       "quantity": 120
     },
     {
+      "name": {
+        "de": "Fast schon ein Zombie...",
+        "en": "Wannabe Zombie...",
+        "fr": "Zombie en devenir",
+        "es": "Aspirante a zombi..."
+      },
       "quantity": 180
     },
     {
+      "name": {
+        "de": "Schmeckt am besten wenn's noch schreit!",
+        "en": "It's better when they scream.",
+        "fr": "C’est meilleur si ça hurle.",
+        "es": "Es mejor cuando gritan."
+      },
       "quantity": 250
     },
     {
+      "name": {
+        "de": "Die Macht der Proteine",
+        "en": "Full of protein.",
+        "fr": "Le plein de protéines.",
+        "es": "Lleno de proteínas."
+      },
       "quantity": 500
     },
     {
+      "name": {
+        "de": "Nackt und Zerfleischt",
+        "en": "Holocaust cannibals",
+        "fr": "Cannibales Holocauste",
+        "es": "Caníbal del Holocausto"
+      },
       "quantity": 1000
     }
   ],
   "r_surlst_#00": [
     {
+      "name": {
+        "de": "Zombieliebling",
+        "en": "Zombie favourite",
+        "fr": "Favori des zombies",
+        "es": "Favorito de los zombies"
+      },
       "quantity": 10,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Letzter Überlebender",
+        "en": "Last Boy Scout",
+        "fr": "Last man standing",
+        "es": "Último Superviviente"
+      },
       "quantity": 15,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Unzerstörbar",
+        "en": "Dances with Hordes",
+        "fr": "Increvable",
+        "es": "Indestructible"
+      },
       "quantity": 30,
       "points": 10
     },
     {
+      "name": {
+        "de": "Allein gegen die Horde",
+        "en": "Me vs. the Horde!",
+        "fr": "Seul(e) contre les Hordes",
+        "es": "¡Solo contra la Horda!"
+      },
       "quantity": 50,
       "points": 13
     },
     {
+      "name": {
+        "de": "Chuck Norris' Ebenbild",
+        "en": "Equal to Chuck Norris",
+        "fr": "Égal de Chuck Norris",
+        "es": "Igual a Chuck Norris"
+      },
       "quantity": 100,
       "points": 16.5
     }
   ],
   "r_suhard_#00": [
     {
+      "name": {
+        "de": "Ich bin in der Hölle aufgewachsen.",
+        "en": "Hell is a walk in the park.",
+        "fr": "L’enfer, c’est mon quotidien.",
+        "es": "Crecí en el infierno"
+      },
       "quantity": 5,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Es war wirklich zu einfach.",
+        "en": "It's just too easy.",
+        "fr": "C’était vraiment trop facile.",
+        "es": "Es demasiado fácil."
+      },
       "quantity": 10,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Ich fresse Nägel und scheiße Kugeln!",
+        "en": "I eat nails and sh*t bullets!",
+        "fr": "Je mâche le silex !",
+        "es": "¡Como clavos y cago balas!"
+      },
       "quantity": 20,
       "points": 10
     },
     {
+      "name": {
+        "de": "Pandämonium? Hah. Einfach.",
+        "en": "Hardcore? Candy from babies...",
+        "fr": "Le pandémonium ? Pff. Easy.",
+        "es": "¿Pandemonio? Ahh, Facil"
+      },
       "quantity": 40,
       "points": 13
     },
     {
+      "name": {
+        "de": "Apostel des Pandämoniums",
+        "en": "Hardcore Apostle",
+        "fr": "Apôtre du Pandémonium",
+        "es": "Apóstol del Pandemonio"
+      },
       "quantity": 100
     }
   ],
   "r_dinfec_#00": [
     {
+      "name": {
+        "de": "Teilweise verrottet",
+        "en": "Partially Putrified",
+        "fr": "Partiellement putréfié",
+        "es": "Parcialmente putrefacto"
+      },
       "quantity": 20
     },
     {
+      "name": {
+        "de": "Virenschleuder",
+        "en": "Infected with a poison",
+        "fr": "Porteur de la Maladie",
+        "es": "Esparcidor de virus"
+      },
       "quantity": 40
     },
     {
+      "name": {
+        "de": "Gedärmeauskotzer",
+        "en": "Blood 'n' Bile Spitter",
+        "fr": "Vomisseur de tripes",
+        "es": "Escupidor de sangre y bilis"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Seuchenherd",
+        "en": "Harbinger of the Plague",
+        "fr": "Annonciateur du fléau",
+        "es": "Foco Epidémico"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Ich habe Magenschmerzen...",
+        "en": "I've got a sore tummy...",
+        "fr": "J'ai mal au ventre...",
+        "es": "Tengo dolor de estómago..."
+      },
       "quantity": 150
     }
   ],
   "r_doutsd_#00": [
     {
+      "name": {
+        "de": "Verirrter Ausflügler",
+        "en": "Moonlight Stroller",
+        "fr": "Randonneur égaré",
+        "es": "Caminante perdido"
+      },
       "quantity": 20,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Nächtlicher Spaziergänger",
+        "en": "Wild-eyed Wanderer",
+        "fr": "Flâneur nocturne",
+        "es": "Holgazan Nocturno"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Mir ist kalt hier draußen...",
+        "en": "Baby it's cold outside...",
+        "fr": "J'ai froid, dehors...",
+        "es": "Tengo frio aquí..."
+      },
       "quantity": 250
     }
   ],
   "r_winbas_#00": [
     {
+      "name": {
+        "de": "Vertrauenswürdiger Bürger",
+        "en": "Trusted Neighbour",
+        "fr": "Concitoyen de confiance",
+        "es": "Compañero de confianza"
+      },
       "quantity": 2,
       "points": 13
     },
     {
+      "name": {
+        "de": "Sehr erfahrener Bürger",
+        "en": "Inspiration for the people",
+        "fr": "Inspiration pour le peuple",
+        "es": "Inspiración para el pueblo"
+      },
       "quantity": 5,
       "points": 20
     },
     {
+      "name": {
+        "de": "Vorbild für das Volk",
+        "en": "Highly experienced player",
+        "fr": "Joueur très expérimenté",
+        "es": "Jugador experimentado"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Richtwert der Gemeinschaft",
+        "en": "Pillar of the community",
+        "fr": "Référence communautaire",
+        "es": "Modelo para la comunidad"
+      },
       "quantity": 15
     },
     {
+      "name": {
+        "de": "Berühmter Veteran",
+        "en": "Decorated Veteran",
+        "fr": "Illustre vétéran",
+        "es": "Ilustre veterano"
+      },
       "quantity": 20
     }
   ],
   "r_winthi_#00": [
     {
+      "name": {
+        "de": "Anfängerleiche",
+        "en": "Beginner Corpse",
+        "fr": "Cadavre débutant",
+        "es": "Cadáver de principiante"
+      },
       "quantity": 2
     },
     {
+      "name": {
+        "de": "Rabenfreund",
+        "en": "Crows' buddy",
+        "fr": "Copain des corbeaux",
+        "es": "Amigo de los cuervos"
+      },
       "quantity": 5
     },
     {
+      "name": {
+        "de": "Dehydrationskollege",
+        "en": "Dehydrated fellow",
+        "fr": "Concitoyen déshydraté",
+        "es": "Colega de la deshidratación"
+      },
       "quantity": 10
     }
   ],
   "r_wintop_#00": [
     {
+      "name": {
+        "de": "Lebender Mythos",
+        "en": "Myth in the making",
+        "fr": "Mythe vivant",
+        "es": "Héroe urbano"
+      },
       "quantity": 1,
       "points": 20
     },
     {
+      "name": {
+        "de": "Ich bin eine Legende",
+        "en": "I am legend.",
+        "fr": "Je suis une légende.",
+        "es": "El Salvador del Pueblo"
+      },
       "quantity": 2
     },
     {
+      "name": {
+        "de": "Hör auf mich, wenn du überleben möchtest",
+        "en": "If you want to live... Follow me!",
+        "fr": "Suis-moi si tu veux vivre",
+        "es": "Sígueme si quieres sobrevivir"
+      },
       "quantity": 3
     }
   ],
   "r_goodg_#00": [
     {
+      "name": {
+        "de": "Netter Kerl",
+        "en": "Good Guy",
+        "fr": "Good Guy",
+        "es": "Buen chico"
+      },
       "quantity": 1
     }
   ],
   "r_ginfec_#00": [
     {
+      "name": {
+        "de": "Zeuge der großen Verseuchung",
+        "en": "Witness to the Great Contamination",
+        "fr": "Témoin de la Grande Contamination",
+        "es": "Testigo de la Gran Contaminación"
+      },
       "quantity": 1
     }
   ],
   "r_beta_#00": [
     {
+      "name": {
+        "de": "Alter Hase",
+        "en": "In with the bricks",
+        "fr": "Grand ancien",
+        "es": "Probador beta"
+      },
       "quantity": 1
     }
   ],
   "r_bgum_#00": [
     {
+      "name": {
+        "de": "Jedes Los gewinnt",
+        "en": "Community Companion",
+        "fr": "Compagnon de la communauté",
+        "es": "Compañero de comunidad"
+      },
       "quantity": 1
     },
     {
+      "name": {
+        "de": "Zinker",
+        "en": "Community Spirit",
+        "fr": "Animé de bonnes intentions",
+        "es": "Espíritu de la comunidad"
+      },
       "quantity": 5
     },
     {
+      "name": {
+        "de": "Bingo",
+        "en": "Social Animal",
+        "fr": "Animal social",
+        "es": "Bingo"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Sudoku ist anders",
+        "en": "Animated Corpse",
+        "fr": "Défunt animé",
+        "es": "Cadáver animado"
+      },
       "quantity": 15
     },
     {
+      "name": {
+        "de": "Siebenseitiger Würfel",
+        "en": "Community Über-Activist",
+        "fr": "Hyper-activiste communautaire",
+        "es": "Hiperactivista comunitario"
+      },
       "quantity": 20
     },
     {
+      "name": {
+        "de": "Einarmiger Bandit",
+        "en": "Winner at heart!",
+        "fr": "Gagnant dans l’âme !",
+        "es": "¡Ganador de corazón!"
+      },
       "quantity": 30
     },
     {
+      "name": {
+        "de": "Seelenführer der Gemeinschaft",
+        "en": "Community Soul Guide",
+        "fr": "Guide des âmes communautaires",
+        "es": "Guía del alma comunitaria"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Charismatischer Prophet",
+        "en": "Charismatic prophet",
+        "fr": "Prophète charismatique",
+        "es": "Profeta carismático"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Liebling des Raben",
+        "en": "Crow's Favourite",
+        "fr": "Favori du Corbeau",
+        "es": "Favorito del Cuervo"
+      },
       "quantity": 150
     }
   ],
   "r_fjv2_#00": [
     {
+      "name": {
+        "de": "Motivierter Messebesucher",
+        "en": "Motivated Hordian festival-goer",
+        "fr": "Festivalier hordien motivé",
+        "es": "Aficionado motivado al festival de las hordas"
+      },
       "quantity": 1
     }
   ],
   "r_fjvani_#00": [
     {
+      "name": {
+        "de": "Verdammt in Saarbrücken",
+        "en": "Geeks tracker",
+        "fr": "Traqueur de geeks",
+        "es": "Rastreador friki"
+      },
       "quantity": 1
     }
   ],
   "r_fjv_#00": [
     {
+      "name": {
+        "de": "FJV'08 Kanonenfutter",
+        "en": "FJV'08 cannon fodder",
+        "fr": "Chair à canon du FJV'08",
+        "es": "Carne de cañón FJV'08"
+      },
       "quantity": 1
     }
   ],
   "r_rrefer_#00": [
     {
+      "name": {
+        "de": "Kleiner Guru",
+        "en": "Fund re-allocation specialist",
+        "fr": "Détourneur de fonds",
+        "es": "Especialista en reasignación de fondos"
+      },
       "quantity": 1
     },
     {
+      "name": {
+        "de": "Überzeugender Guru",
+        "en": "Citizen trafficker",
+        "fr": "Trafiquant de citoyens",
+        "es": "Traficante de habitantes"
+      },
       "quantity": 3
     },
     {
+      "name": {
+        "de": "Frischfleischhändler",
+        "en": "Fresh flesh peddler",
+        "fr": "Négociant en chair fraîche",
+        "es": "Comerciante de carne fresca"
+      },
       "quantity": 5
     },
     {
+      "name": {
+        "de": "Seelenhändler",
+        "en": "Soul salesman",
+        "fr": "Marchand d'âmes",
+        "es": "Vendedor de almas"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Sehr überzeugender Pate",
+        "en": "Very convincing sponsor",
+        "fr": "Parrain très convaincant",
+        "es": "Patrocinador muy convincente"
+      },
       "quantity": 15
     },
     {
+      "name": {
+        "de": "Wüstenspekulant",
+        "en": "Desert speculator",
+        "fr": "Spéculateur du désert",
+        "es": "Especulador del Ultramundo"
+      },
       "quantity": 20
     },
     {
+      "name": {
+        "de": "Seelentrader",
+        "en": "Top trader",
+        "fr": "Trader très efficace",
+        "es": "Comerciante audaz"
+      },
       "quantity": 25
     },
     {
+      "name": {
+        "de": "Scientologe",
+        "en": "Persuadotron",
+        "fr": "Persuadotron-powa",
+        "es": "Persuadotron"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Komm auf die dunkle Seite der Macht!",
+        "en": "Come to the dark side!",
+        "fr": "Passe du côté obscur !",
+        "es": "¡Ven al lado oscuro!"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Warren Buffet der Außenwelt",
+        "en": "Golden Glaoui",
+        "fr": "Golden Glaouis",
+        "es": "Warren Buffet del Ultramundo"
+      },
       "quantity": 150
     }
   ],
   "r_comu_#00": [
     {
+      "name": {
+        "de": "Held der Community!",
+        "en": "In at the deep end!",
+        "fr": "Dedans jusqu’au cou !",
+        "es": "¡En el fondo!"
+      },
       "quantity": 1
     }
   ],
   "r_comu2_#00": [
     {
+      "name": {
+        "de": "Bringt Sachen ins Rollen!",
+        "en": "Making things happen!",
+        "fr": "Fais bouger les choses!",
+        "es": "¡Hacer que las cosas sucedan!"
+      },
       "quantity": 1
     }
   ],
   "r_share_#00": [
     {
+      "name": {
+        "de": "Nobler Spender",
+        "en": "Noble Heart",
+        "fr": "Âme noble",
+        "es": "Alma noble"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Immer zur Stelle",
+        "en": "Charitable Soul",
+        "fr": "Donateur universel",
+        "es": "Alma caritativa"
+      },
       "quantity": 25
     },
     {
+      "name": {
+        "de": "Samariter",
+        "en": "Social Support",
+        "fr": "Assistant social",
+        "es": "Apoyo social"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Freigiebiger Bürger",
+        "en": "Samaritan",
+        "fr": "Citoyen qui tombe à pic",
+        "es": "Samaritano"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Messias",
+        "en": "All you need is love... and Hero days",
+        "fr": "Messie",
+        "es": "Mesías"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Mein Körper ist bereit!",
+        "en": "Take my body!",
+        "fr": "Prenez mon corps !",
+        "es": "¡Mi cuerpo está listo!"
+      },
       "quantity": 250
     },
     {
+      "name": {
+        "de": "Ultimatives Opfer",
+        "en": "Ultimate Sacrifice",
+        "fr": "Sacrifice ultime",
+        "es": "El último sacrificio"
+      },
       "quantity": 400
     }
   ],
   "r_santac_#00": [
     {
+      "name": {
+        "de": "Der Weihnachtsmann ist ein Schlawiner",
+        "en": "Father Christmas is a little rascal",
+        "fr": "Le Père Noël est un coquin",
+        "es": "Santa es un pillo"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Santa Klaus ist ein Schummler",
+        "en": "Santa is a crook",
+        "fr": "Le Père Noël est un filou",
+        "es": "Santa es un ladrón"
+      },
       "quantity": 25
     },
     {
+      "name": {
+        "de": "Santa Klaus ist Abfall",
+        "en": "Old Saint Nick is a little **it",
+        "fr": "Le Père Noël est une ordure",
+        "es": "Santa es basura"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Santa Klaus ist Abschaum",
+        "en": "Santa Claus is a thieving b*****d",
+        "fr": "Le Père Noël est une raclure",
+        "es": "Santa es Escoria"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Hängt Santa Klaus!",
+        "en": "Prepare the gallows - we're hanging Santa!",
+        "fr": "Pendez le Père Noël !",
+        "es": "Preparen la horca, ¡vamos a colgar a Santa!"
+      },
       "quantity": 100
     }
   ],
   "r_collec_#00": [
     {
+      "name": {
+        "de": "Treffen der 4. Art",
+        "en": "Type 4 Encounter",
+        "fr": "Rencontre du 4ème type",
+        "es": "Encuentros de otro mundo"
+      },
       "quantity": 2
     },
     {
+      "name": {
+        "de": "Hast Du mal Feuer?",
+        "en": "Have you got a light?",
+        "fr": "Vous avez du feu ?",
+        "es": "¿Tienes fuego?"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Medium mit Preisnachlass",
+        "en": "Psychic for rent",
+        "fr": "Médium au rabais",
+        "es": "Medium principiante"
+      },
       "quantity": 20
     },
     {
+      "name": {
+        "de": "Amophilis Psychotropes",
+        "en": "Amophilis psychotropia",
+        "fr": "Amophilis psychotropes",
+        "es": "Medium profesional"
+      },
       "quantity": 30
     },
     {
+      "name": {
+        "de": "Blauer Feuerspucker",
+        "en": "Blue Fire-breather",
+        "fr": "Cracheur de flamme bleue",
+        "es": "Pescador de Almas"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "I see dead people 0_0",
+        "en": "I see dead people 0_0",
+        "fr": "I see dead people 0_0",
+        "es": "Veo gente muerta"
+      },
       "quantity": 80
     },
     {
+      "name": {
+        "de": "Soul Man",
+        "en": "Who you gonna call?",
+        "fr": "Aspi-rituel",
+        "es": "Hombre de Alma"
+      },
       "quantity": 120
     },
     {
+      "name": {
+        "de": "Lebenssammler",
+        "en": "Don't cross the streams",
+        "fr": "Collectionneur de vie",
+        "es": "No cruces los arroyos"
+      },
       "quantity": 180
     },
     {
+      "name": {
+        "de": "Schnitter der Aussenwelt",
+        "en": "I ain't afraid of no ghost",
+        "fr": "Faucheur de l'outre-monde",
+        "es": "No le tengo miedo a ningún fantasma"
+      },
       "quantity": 300
     }
   ],
   "r_ptame_#00": [
     {
+      "name": {
+        "de": "Bei meiner Seel",
+        "en": "O Soul-e Mio",
+        "fr": "Leerd’âmeur nauséabond",
+        "es": "Carne débil"
+      },
       "quantity": 100,
       "points": 13
     },
     {
+      "name": {
+        "de": "Für immer und seelich",
+        "en": "Tin-soul town",
+        "fr": "Fan-tomme râpé",
+        "es": "Simple Mortal"
+      },
       "quantity": 500,
       "points": 33
     },
     {
+      "name": {
+        "de": "Noble Seele",
+        "en": "Noble Soul",
+        "fr": "Âme digne",
+        "es": "Alma digna"
+      },
       "quantity": 1000,
       "points": 66
     },
     {
+      "name": {
+        "de": "Beseelt",
+        "en": "Soul-dier",
+        "fr": "Spider-Âme",
+        "es": "Inspirado"
+      },
       "quantity": 2000,
       "points": 132
     },
     {
+      "name": {
+        "de": "Reinkarnator",
+        "en": "Reincarnator",
+        "fr": "Réincarnator",
+        "es": "Reencarnator X"
+      },
       "quantity": 3000,
       "points": 198
     },
     {
+      "name": {
+        "de": "Göttliche Seele",
+        "en": "Divine Soul",
+        "fr": "Âme divine",
+        "es": "Alma Divina"
+      },
       "quantity": 5000
     },
     {
+      "name": {
+        "de": "Open-chakra",
+        "en": "Open-chakra",
+        "fr": "Open-chakra",
+        "es": "Chakra-Man"
+      },
       "quantity": 7000
     },
     {
+      "name": {
+        "de": "Tausend-und-ein-Leben",
+        "en": "Thousand I-lived",
+        "fr": "Les mille et une vies",
+        "es": "Mil y Una Vidas"
+      },
       "quantity": 9000
     },
     {
+      "name": {
+        "de": "Buddha",
+        "en": "Buddha",
+        "fr": "Bouddha",
+        "es": "El Inmortal"
+      },
       "quantity": 12000
     }
   ],
   "r_ermwin_#00": [
     {
+      "name": {
+        "de": "Ich bin ein Gott! Ich werde ewig leben!",
+        "en": "I am a god! I will live forever!",
+        "fr": "Chef-Ascète",
+        "es": "¡Soy un dios! ¡Viviré por siempre!"
+      },
       "quantity": 1
     }
   ],
   "r_cott_#00": [
     {
+      "name": {
+        "de": "Eine Stadt sie zu knechten!",
+        "en": "One town to rule them all!",
+        "fr": "Une ville pour les gouverner tous !",
+        "es": "¡Un pueblo para gobernarlos!"
+      },
       "quantity": 1
     }
   ],
   "r_mystic_#00": [
     {
+      "name": {
+        "de": "Verrückter Skeptiker",
+        "en": "Keen Sceptic",
+        "fr": "Septicis-mite aïgu",
+        "es": "Capataz"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Seelenknipser",
+        "en": "Soul Calipers",
+        "fr": "Agnos-tic",
+        "es": "Capataz Espiritista"
+      },
       "quantity": 25
     },
     {
+      "name": {
+        "de": "Wächter der Seelen",
+        "en": "Watches with Scouts",
+        "fr": "Veille avec les Scouts",
+        "es": "Guardian de las Almas"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Die Wahrheit ist irgendwo da draußen",
+        "en": "The truth is elsewhere",
+        "fr": "La vérité est ailleurs",
+        "es": "La verdad está ahí fuera en algún lugar"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Ich glaube!",
+        "en": "I'm a believer",
+        "fr": "I’m a believer",
+        "es": "¡Yo Creo!"
+      },
       "quantity": 300
     },
     {
+      "name": {
+        "de": "Sektenmitglied",
+        "en": "Sect Member",
+        "fr": "Membre de la secte",
+        "es": "Miembro de la secta"
+      },
       "quantity": 800
     },
     {
+      "name": {
+        "de": "Kosmischer Anführer",
+        "en": "Cosmic Sponsor",
+        "fr": "Parrain cosmique",
+        "es": "Lider cósmico"
+      },
       "quantity": 1500
     }
   ],
   "r_dnucl_#00": [
     {
+      "name": {
+        "de": "Rauch? Welcher Rauch?",
+        "en": "Smoke? What smoke?",
+        "fr": "De la fumée ? Quelle fumée ?",
+        "es": "¿Humo? ¿Qué humo?"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Leckstopper",
+        "en": "Leak Plugger",
+        "fr": "Colmateur de fuites",
+        "es": "Taponador de fugas"
+      },
       "quantity": 20
     },
     {
+      "name": {
+        "de": "Licht in der Nacht",
+        "en": "Light in the night",
+        "fr": "Lumière dans la nuit",
+        "es": "Luz en la noche"
+      },
       "quantity": 30
     },
     {
+      "name": {
+        "de": "RadioactiveMan",
+        "en": "RadioactiveMan",
+        "fr": "RadioactiveMan",
+        "es": "Hombre radiactivo"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Strahlender Bürger",
+        "en": "Radiant citizen",
+        "fr": "Citoyen rayonnant",
+        "es": "Habitante radiante"
+      },
       "quantity": 60
     },
     {
+      "name": {
+        "de": "Kabum! Der Reaktor mach KABUM!!!",
+        "en": "Boom! When the reactor goes BOOM!!!",
+        "fr": "Boum ! Quand notre réacteur fait Boum !",
+        "es": "¡Kaboom! Cuando nuestro reactor hace ¡Kaboom!"
+      },
       "quantity": 80
     },
     {
+      "name": {
+        "de": "Atompilzsammler",
+        "en": "Atomic mushroom muncher",
+        "fr": "Cueilleur de champignons atomiques",
+        "es": "Recolector de hongos atómicos"
+      },
       "quantity": 90
     },
     {
+      "name": {
+        "de": "Bis auf die Seele verstrahlt",
+        "en": "Irradiated right to the soul",
+        "fr": "Irradié jusque dans l'âme",
+        "es": "Irradiado hasta el alma"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Ich steh auf Fusion!",
+        "en": "I fricken love fission",
+        "fr": "La fission ça m'éclate !",
+        "es": "¡La fisión me encanta!"
+      },
       "quantity": 120
     },
     {
+      "name": {
+        "de": "Kung-Fu-Sion",
+        "en": "Fiiii-ssion",
+        "fr": "Fiiii-ssion",
+        "es": "King-Fu-Sión"
+      },
       "quantity": 150
     }
   ],
   "r_pande_#00": [
     {
+      "name": {
+        "de": "Hölle, das esse ich jeden Morgen.",
+        "en": "Hell? I eat a little bit of it for breakfast",
+        "fr": "L’enfer, j’en mange un peu chaque matin",
+        "es": "¿Infierno? Desayuno esto todas las mañanas"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Abonnent der Pandämoniumsauna",
+        "en": "Regular at the Pandemonium Sauna",
+        "fr": "Abonné au sauna du Pandémonium",
+        "es": "Suscriptor en el Sauna Pandemonio"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Pandämonium ist meine Liebe!",
+        "en": "Hardcore my love!",
+        "fr": "Pandémonium mon amour !",
+        "es": "¡Pandemonio mi amor!"
+      },
       "quantity": 300
     },
     {
+      "name": {
+        "de": "Luzifers Tanzpartner",
+        "en": "Lucifer's dance partner",
+        "fr": "Partenaire de danse de Lucifer",
+        "es": "La pareja de baile de Lucifer"
+      },
       "quantity": 500
     },
     {
+      "name": {
+        "de": "Ultimativer Horden-Erkunder",
+        "en": "Ultimate Hordian Explorer",
+        "fr": "Ultime explorateur hordien",
+        "es": "Explorador hordiano definitivo"
+      },
       "quantity": 1000
     }
   ],
   "r_lepre_#00": [
     {
+      "name": {
+        "de": "Irische Taschen sind prall gefüllt!",
+        "en": "Irish pockets are bulging!",
+        "fr": "Les poches irlandaises sont blindées !",
+        "es": "¡Los bolsillos irlandeses están llenos hasta el tope!"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Wo ist mein Topf voll Gold, diebische Elster!",
+        "en": "Where's my pot of gold, thieving pikey!",
+        "fr": "Où est mon pot d’or, maudit voleur ?",
+        "es": "¿Dónde está mi olla de oro, escurridizo ladrón?"
+      },
       "quantity": 25
     },
     {
+      "name": {
+        "de": "Dieser Kobold ist unaufhaltbar.",
+        "en": "This leprechaun is unstoppable.",
+        "fr": "Ce lutin est imparable !",
+        "es": "Este duende es imparable."
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Verbrennt ihn! Sieh nach ob seine Asche grün wird!",
+        "en": "Burn him, see if his ashes turn green!",
+        "fr": "Brûlez-le, voyez si ses cendres deviennent vertes !",
+        "es": "¡Quémalo, mira si sus cenizas se vuelven verdes!"
+      },
       "quantity": 75
     },
     {
+      "name": {
+        "de": "Ein Wohnwagen ohne Räder???",
+        "en": "A caravan with no wheels???",
+        "fr": "Une caravane sans roues ???",
+        "es": "¿¿¿Una caravana sin ruedas???"
+      },
       "quantity": 100
     }
   ],
   "r_paques_#00": [
     {
+      "name": {
+        "de": "Mitglied des Roten Kreuzes",
+        "en": "Member of the Red Cross",
+        "fr": "Membre de la Croix Rouge",
+        "es": "Miembro de la Cruz Roja"
+      },
       "quantity": 1
     }
   ],
   "r_gsp_#00": [
     {
+      "name": {
+        "de": "Ich bin geheilt",
+        "en": "I am healed",
+        "fr": "Je suis guéri(e)",
+        "es": "Estoy curado"
+      },
       "quantity": 1
     }
   ],
   "r_ripflash_#00": [
     {
+      "name": {
+        "de": "Keine Fehler hi&e%12;r",
+        "en": "No bugs h&e%12;re",
+        "fr": "Plus d&​apos;erreurs ici",
+        "es": "Sin bugs a&q%12;uí"
+      },
       "quantity": 1
     }
   ],
   "r_beta2_#00": [
     {
+      "name": {
+        "de": "Patient Null",
+        "en": "Patient Zero",
+        "fr": "Patient Zéro",
+        "es": "Paciente cero"
+      },
       "quantity": 1
     }
   ],
   "r_derwin_#00": [
     {
+      "name": {
+        "de": "Es ist der Tod der mich fürchten sollte!",
+        "en": "It is death that should be afraid of me!",
+        "fr": "La mort a peur de moi !",
+        "es": "¡Es la muerte la que debería tenerme miedo!"
+      },
       "quantity": 1
     }
   ],
   "r_sandb_#00": [
     {
+      "name": {
+        "de": "Sandmann",
+        "en": "Sandman",
+        "fr": "Ensableur",
+        "es": "Hombre de la arena"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Sandy Maverick",
+        "en": "Sandy Maverick",
+        "fr": "Franc-tireur sablonneux",
+        "es": "Sandy Maverick"
+      },
       "quantity": 50
     },
     {
+      "name": {
+        "de": "Sandsteiniger",
+        "en": "Christmas Stonings... over here!",
+        "fr": "Lapidations de Noël",
+        "es": "Decoración navideña"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Sandkasten-Scharfschütze",
+        "en": "Sandstorm Sniper",
+        "fr": "Sniper des bacs à sable",
+        "es": "Francotirador aislado"
+      },
       "quantity": 250
     }
   ],
   "r_guide_#00": [
     {
+      "name": {
+        "de": "Wegweiser",
+        "en": "Daylight Lantern",
+        "fr": "Lanterne de jour",
+        "es": "Linterna de luz diurna"
+      },
       "quantity": 300,
       "points": 3.5
     },
     {
+      "name": {
+        "de": "Praktischer Begleiter",
+        "en": "Pocket Companion",
+        "fr": "Compagnon de poche",
+        "es": "Compañero de bolsillo"
+      },
       "quantity": 1000,
       "points": 6.5
     },
     {
+      "name": {
+        "de": "Erleuchteter Anführer",
+        "en": "Illuminated Guide",
+        "fr": "Guide éclairé",
+        "es": "Guía iluminado"
+      },
       "quantity": 2500
     },
     {
+      "name": {
+        "de": "Erleuchteter Prediger",
+        "en": "Enlightened Preacher",
+        "fr": "Prêcheur illuminé",
+        "es": "Predicador iluminado"
+      },
       "quantity": 5000
     },
     {
+      "name": {
+        "de": "Guru der Liebe",
+        "en": "Love guru",
+        "fr": "Love Gourou",
+        "es": "Gurú del amor"
+      },
       "quantity": 8000
     },
     {
+      "name": {
+        "de": "Höret meine Stimme",
+        "en": "Listen to my voice",
+        "fr": "Écoutez ma voix",
+        "es": "Escucha mi voz"
+      },
       "quantity": 15000
     },
     {
+      "name": {
+        "de": "Universelle Muse",
+        "en": "Mr Motivator",
+        "fr": "Inspirateur universel",
+        "es": "Sr. Inspirador"
+      },
       "quantity": 30000
     }
   ],
   "r_armag_#00": [
     {
+      "name": {
+        "de": "Zeuge des Armageddon",
+        "en": "Armageddon Witness",
+        "fr": "Témoin de l'Armageddon",
+        "es": "Testigo de Armagedón"
+      },
       "quantity": 1
     }
   ],
   "r_surgrp_#00": [
     {
+      "name": {
+        "de": "Ewiger Zweiter",
+        "en": "Eternally second",
+        "fr": "Éternel second",
+        "es": "Eterno segundo"
+      },
       "quantity": 5
     },
     {
+      "name": {
+        "de": "Ein Wächter stirbt, aber gibt niemals auf",
+        "en": "The guard may perish, but he never gives up!",
+        "fr": "La garde meurt, mais ne se rend pas !",
+        "es": "La guardia puede morir, ¡pero nunca se rinde!"
+      },
       "quantity": 10
     },
     {
+      "name": {
+        "de": "Der Zweitletzte Mohikaner",
+        "en": "The second last of the Mohicans",
+        "fr": "L'avant-dernier des Mohicans",
+        "es": "El segundo último de los mohicanos"
+      },
       "quantity": 20
     },
     {
+      "name": {
+        "de": "Faaaaaaaast, ach verdammt",
+        "en": "Allllllmooooooost, ah nope, damn it!",
+        "fr": "Eeeeeeeet ben non",
+        "es": "Casi!!!, ah no, ¡maldita sea!"
+      },
       "quantity": 30
     },
     {
+      "name": {
+        "de": "Bis zum Ende und einen Schritt weiter",
+        "en": "All the way to the end and a bit further",
+        "fr": "Jusqu'au bout, et même un peu moins loin",
+        "es": "Todo el camino hasta el final y un poco más lejos"
+      },
       "quantity": 40
     },
     {
+      "name": {
+        "de": "Schließt die Ränke und haltet durch",
+        "en": "Close ranks and hold on!",
+        "fr": "Serrez les rangs... et les fesses...",
+        "es": "¡Cierra filas y aguanta!"
+      },
       "quantity": 60
     },
     {
+      "name": {
+        "de": "Hallo... ist da draußen jemand?",
+        "en": "Hello... Is there anybody out there?",
+        "fr": "Vous êtes là les copains ?",
+        "es": "¿Hola, hay alguien ahí afuera?"
+      },
       "quantity": 100
     },
     {
+      "name": {
+        "de": "Haltet eure Position!",
+        "en": "Hold your positions!",
+        "fr": "Tenez vos positions !",
+        "es": "¡Mantenga sus posiciones!"
+      },
       "quantity": 150
     }
   ],
   "r_alcool_#00": [
     {
+      "name": {
+        "de": "Nur ein Finger",
+        "en": "Just one finger!",
+        "fr": "Juste un doigt !",
+        "es": "¡Solo un dedo!"
+      },
       "quantity": 30
     },
     {
+      "name": {
+        "de": "Plünderer der Schnapsläden",
+        "en": "Pilager of the liquor store.",
+        "fr": "Pilier de comptoir",
+        "es": "Ladron de la licorería."
+      },
       "quantity": 60
     },
     {
+      "name": {
+        "de": "Hennessy Highwayman",
+        "en": "Tavern robber",
+        "fr": "Routier du rhum",
+        "es": "Salteador de tabernas"
+      },
       "quantity": 150
     },
     {
+      "name": {
+        "de": "Barney Gumble der Außenwelt",
+        "en": "Barney Gumble of the world beyond",
+        "fr": "Barney Gumble de l'Outre-Monde",
+        "es": "Barney Gumble del Ultramundo"
+      },
       "quantity": 300
     },
     {
+      "name": {
+        "de": "Fass das Saufen lieber sein",
+        "en": "Absinthe from drinking next time eh?!",
+        "fr": "Absinthe toi la prochaine fois",
+        "es": "Absenta de beber la próxima vez, ¿eh?"
+      },
       "quantity": 400
     },
     {
+      "name": {
+        "de": "Gib mir was zu saufen oder es knallt!",
+        "en": "Gimme a drink or the dog gets it!",
+        "fr": "A boire ou j'tue le chien !",
+        "es": "¡Dame un trago o el perro sufrira las consecuencias!"
+      },
       "quantity": 500
     },
     {
+      "name": {
+        "de": "Alles unter 55% ist Wasser",
+        "en": "If it's under 55 proof it's water!",
+        "fr": "Avant 55°, c'est de l'eau",
+        "es": "Si son menos de 55 tragos, ¡es agua!"
+      },
       "quantity": 600
     },
     {
+      "name": {
+        "de": "Dialyse",
+        "en": "Dialysis",
+        "fr": "Sans Foie ni Loi",
+        "es": "Diálisis"
+      },
       "quantity": 800
     }
   ],
   "r_defwin_#00": [
     {
+      "name": {
+        "de": "Chef der Mauer",
+        "en": "Rampart Chief",
+        "fr": "Chef-Rempart",
+        "es": "Jefe de muralla"
+      },
       "quantity": 1
     }
   ],
   "r_cdhwin_#00": [
     {
+      "name": {
+        "de": "Schaufelführer",
+        "en": "Head Shoveler",
+        "fr": "Chef-Pelleteur",
+        "es": "Pala de cabeza"
+      },
       "quantity": 1
     }
   ],
   "r_tamwin_#00": [
     {
+      "name": {
+        "de": "Ich bin ein Biest!",
+        "en": "Chief Tamer",
+        "fr": "Chef-Bêbête",
+        "es": "¡Soy una fiera!"
+      },
       "quantity": 1
     }
   ],
   "r_scaddh_#00": [
     {
+      "name": {
+        "de": "DdA Beste Buddler",
+        "en": "DoE Winning Scavenger",
+        "fr": "Fwinneur du DDH",
+        "es": "DdO Mejor Excavador"
+      },
       "quantity": 1
     }
   ],
   "r_rangwin_#00": [
     {
+      "name": {
+        "de": "Tarnexperte",
+        "en": "Camo Chief",
+        "fr": "Chef-Camouflage",
+        "es": "Amo del Camuflaje"
+      },
       "quantity": 1
     }
   ],
   "r_techwin_#00": [
     {
+      "name": {
+        "de": "Meisteringenieur",
+        "en": "Handyman Chief",
+        "fr": "Chef-Bricoleur",
+        "es": "Jefe de Manitas"
+      },
       "quantity": 1
     }
   ]

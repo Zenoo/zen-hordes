@@ -514,7 +514,7 @@ export type Recipe = {
   type: RecipeType;
   in: RecipeItem[];
   out: RecipeItem[];
-  pictos?: PictoId[];
+  rewards?: RewardId[];
 };
 
 export enum BuildingId {
@@ -706,7 +706,7 @@ export type Building = {
   }[];
 };
 
-export enum PictoId {
+export enum RewardId {
   HEROAC = "r_heroac_#00",
   ALCOOL = "r_alcool_#00",
   HOMEUP = "r_homeup_#00",
@@ -823,8 +823,8 @@ export enum PictoId {
   TECHWIN = "r_techwin_#00"
 }
 
-export type Picto = {
-  id: PictoId;
+export type Reward = {
+  id: RewardId;
   numericalId: number;
   name: Record<Lang, string>;
   description: Record<Lang, string>;
@@ -832,6 +832,7 @@ export type Picto = {
   community: boolean;
   rare: boolean;
   titles?: {
+    name: Record<Lang, string | string[]>;
     quantity: number;
     points?: number;
   }[];

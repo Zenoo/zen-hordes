@@ -223,7 +223,7 @@ export const overwriteItemData = (items: Record<string, Item>) => {
           conditions: [],
           effects: [
             {
-              type: ItemActionEffectType.GetPicto,
+              type: ItemActionEffectType.GetReward,
               value: "r_decofeist_#00",
             },
           ],
@@ -262,7 +262,7 @@ export const overwriteItemData = (items: Record<string, Item>) => {
           conditions: [],
           effects: [
             {
-              type: ItemActionEffectType.GetPicto,
+              type: ItemActionEffectType.GetReward,
               value: "r_lepre_#00",
             },
           ],
@@ -463,7 +463,7 @@ export const overwriteItemData = (items: Record<string, Item>) => {
           conditions: [],
           effects: [
             {
-              type: ItemActionEffectType.GetPicto,
+              type: ItemActionEffectType.GetReward,
               value: "r_sandb_#00",
             },
           ],
@@ -507,7 +507,7 @@ export const overwriteItemData = (items: Record<string, Item>) => {
           conditions: [],
           effects: [
             {
-              type: ItemActionEffectType.GetPicto,
+              type: ItemActionEffectType.GetReward,
               value: "r_santac_#00",
             },
           ],
@@ -635,13 +635,15 @@ export const overwriteItemData = (items: Record<string, Item>) => {
       }
       case "digger_#00": {
         // Excavation distinction
-        const digAction = item.actions.find(
-          (action) => action.effects.some((effect) => effect.type === ItemActionEffectType.RemoveRuinDebris)
+        const digAction = item.actions.find((action) =>
+          action.effects.some(
+            (effect) => effect.type === ItemActionEffectType.RemoveRuinDebris
+          )
         );
 
         if (digAction) {
           digAction.effects.splice(0, 0, {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_digger_#00",
           });
         }
@@ -694,7 +696,7 @@ export const overwriteItemData = (items: Record<string, Item>) => {
           conditions: [],
           effects: [
             {
-              type: ItemActionEffectType.GetPicto,
+              type: ItemActionEffectType.GetReward,
               value: "r_chstxl_#00",
             },
           ],

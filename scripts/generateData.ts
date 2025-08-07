@@ -17,7 +17,7 @@ import { exportTitles } from "./exportTitles";
 
 let types = "";
 
-enum Lang {
+export enum Lang {
   EN = "en",
   FR = "fr",
   ES = "es",
@@ -66,7 +66,7 @@ export enum ItemActionEffectType {
   Infect,
   CreateItem,
   ReduceGhoulHunger,
-  GetPicto,
+  GetReward,
   AddWaterToWell,
   Defense,
   UnlockBuilding,
@@ -199,12 +199,12 @@ const sanitizeItemId = (item?: Item | string) => {
   return sanitize(item.id);
 };
 
-const sanitizePictoId = (picto?: Picto) => {
-  if (!picto) {
-    throw new Error("Picto is undefined");
+const sanitizeRewardId = (reward?: Reward) => {
+  if (!reward) {
+    throw new Error("Reward is undefined");
   }
 
-  return picto.id
+  return reward.id
     .replace(/^r_/, "")
     .replace("_#00", "")
     .replace(/_#(\d+)/, "_$1")
@@ -760,14 +760,14 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
               ? [effectsData[effectName].data]
               : (effectsData[effectName].data as string[]);
 
-          data.forEach((picto) => {
-            if (!picto.includes("'")) return;
+          data.forEach((reward) => {
+            if (!reward.includes("'")) return;
 
-            // Check if the picto is already in the list
+            // Check if the reward is already in the list
             const existingEffect = effects.find(
               (effect) =>
-                effect.type === ItemActionEffectType.GetPicto &&
-                effect.value === picto.replace(/'/g, "")
+                effect.type === ItemActionEffectType.GetReward &&
+                effect.value === reward.replace(/'/g, "")
             );
 
             if (existingEffect) {
@@ -778,8 +778,8 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
             }
 
             effects.push({
-              type: ItemActionEffectType.GetPicto,
-              value: picto.replace(/'/g, ""),
+              type: ItemActionEffectType.GetReward,
+              value: reward.replace(/'/g, ""),
               ...odds,
             });
           });
@@ -892,7 +892,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
           break;
         }
         case "addsStatus": {
-          // If array, we have [status, picto]
+          // If array, we have [status, reward]
           const statusData = effectsData[effectName].data;
           if (Array.isArray(statusData)) {
             effects.push({
@@ -901,10 +901,10 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
               ...odds,
             });
 
-            // Check if the picto is already in the list
+            // Check if the reward is already in the list
             const existingEffect = effects.find(
               (effect) =>
-                effect.type === ItemActionEffectType.GetPicto &&
+                effect.type === ItemActionEffectType.GetReward &&
                 effect.value === String(statusData[1]).slice(1, -1)
             );
 
@@ -914,7 +914,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
               );
             } else {
               effects.push({
-                type: ItemActionEffectType.GetPicto,
+                type: ItemActionEffectType.GetReward,
                 value: String(statusData[1]).slice(1, -1),
                 ...odds,
               });
@@ -962,7 +962,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
         }
         case "find_rp": {
           effects.push({
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_rp_#00",
             ...odds,
           });
@@ -1427,7 +1427,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
       item.actions.some((action) =>
         action.effects.some(
           (effect) =>
-            effect.type === ItemActionEffectType.GetPicto &&
+            effect.type === ItemActionEffectType.GetReward &&
             effect.value === "r_animal_#00"
         )
       )
@@ -1449,7 +1449,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
       item.actions.some((action) =>
         action.effects.some(
           (effect) =>
-            effect.type === ItemActionEffectType.GetPicto &&
+            effect.type === ItemActionEffectType.GetReward &&
             effect.value === "r_rp_#00"
         )
       )
@@ -1494,7 +1494,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
       item.actions.some((action) =>
         action.effects.some(
           (effect) =>
-            effect.type === ItemActionEffectType.GetPicto &&
+            effect.type === ItemActionEffectType.GetReward &&
             effect.value === "r_broken_#00"
         )
       )
@@ -1517,17 +1517,17 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
     // Order item action effects
     item.actions.forEach((action) => {
       action.effects.sort((a, b) => {
-        // Pictos first
+        // Rewards first
         if (
-          a.type === ItemActionEffectType.GetPicto &&
-          b.type !== ItemActionEffectType.GetPicto
+          a.type === ItemActionEffectType.GetReward &&
+          b.type !== ItemActionEffectType.GetReward
         ) {
           return -1;
         }
 
         if (
-          a.type !== ItemActionEffectType.GetPicto &&
-          b.type === ItemActionEffectType.GetPicto
+          a.type !== ItemActionEffectType.GetReward &&
+          b.type === ItemActionEffectType.GetReward
         ) {
           return 1;
         }
@@ -2021,7 +2021,7 @@ export type Recipe = {
   type: RecipeType;
   in: RecipeItem[];
   out: RecipeItem[];
-  pictos?: string[];
+  rewards?: string[];
 };
 
 const generateRecipes = (items: Record<number, Item>) => {
@@ -2118,7 +2118,7 @@ export type Recipe = {
   type: RecipeType;
   in: RecipeItem[];
   out: RecipeItem[];
-  pictos?: PictoId[];
+  rewards?: RewardId[];
 };
 
 `;
@@ -2152,9 +2152,9 @@ export type Recipe = {
         )
         .join(",\n      ")}
     ],${
-      recipe.pictos
-        ? `\n    pictos: [${recipe.pictos
-            .map((p) => `PictoId.${sanitizePictoId({ id: p } as Picto)}`)
+      recipe.rewards
+        ? `\n    rewards: [${recipe.rewards
+            .map((r) => `RewardId.${sanitizeRewardId({ id: r } as Reward)}`)
             .join(", ")}],`
         : ""
     }
@@ -2163,7 +2163,7 @@ export type Recipe = {
     .join(",\n  ")}
 ];`;
 
-  const output = `import { ItemId, PictoId, Recipe } from './types';
+  const output = `import { ItemId, RewardId, Recipe } from './types';
 
 ${recipesArray}`;
 
@@ -2363,7 +2363,7 @@ ${buildingsObject}`;
   console.log("buildings.ts file has been generated.");
 };
 
-type Picto = {
+type Reward = {
   id: string;
   numericalId: number;
   name: Record<Lang, string>;
@@ -2372,60 +2372,61 @@ type Picto = {
   community: boolean;
   rare: boolean;
   titles: {
+    name: Record<Lang, string | string[]>;
     quantity: number;
     points?: number;
   }[];
 };
 
-const generatePictos = async () => {
-  const pictos: Record<string, Picto> = {};
+const generateRewards = async () => {
+  const rewards: Record<string, Reward> = {};
 
   const titles = await exportTitles();
-  const filePath = path.join(__dirname, "data", "pictos.json");
+  const filePath = path.join(__dirname, "data", "rewards.json");
   const data = JSON.parse(fs.readFileSync(filePath, "utf-8")) as Record<
     string,
     Required<JSONPictoPrototypeObject>
   >;
 
-  Object.entries(data).forEach(([id, pictoData]) => {
+  Object.entries(data).forEach(([id, rewardData]) => {
     // All languages are available
     if (
-      typeof pictoData.name !== "object" ||
-      typeof pictoData.desc !== "object"
+      typeof rewardData.name !== "object" ||
+      typeof rewardData.desc !== "object"
     ) {
-      throw new Error(`Picto with id ${id} is missing translations`);
+      throw new Error(`Reward with id ${id} is missing translations`);
     }
 
-    pictos[id] = {
+    rewards[id] = {
       id,
-      numericalId: pictoData.id,
-      icon: /pictos\/(.+)\..+\.gif/.exec(pictoData.img)?.[1] ?? "",
+      numericalId: rewardData.id,
+      icon: /pictos\/(.+)\..+\.gif/.exec(rewardData.img)?.[1] ?? "",
       name: {
-        [Lang.EN]: pictoData.name.en ?? "",
-        [Lang.FR]: pictoData.name.fr ?? "",
-        [Lang.DE]: pictoData.name.de ?? "",
-        [Lang.ES]: pictoData.name.es ?? "",
+        [Lang.EN]: rewardData.name.en ?? "",
+        [Lang.FR]: rewardData.name.fr ?? "",
+        [Lang.DE]: rewardData.name.de ?? "",
+        [Lang.ES]: rewardData.name.es ?? "",
       },
       description: {
-        [Lang.EN]: pictoData.desc.en ?? "",
-        [Lang.FR]: pictoData.desc.fr ?? "",
-        [Lang.DE]: pictoData.desc.de ?? "",
-        [Lang.ES]: pictoData.desc.es ?? "",
+        [Lang.EN]: rewardData.desc.en ?? "",
+        [Lang.FR]: rewardData.desc.fr ?? "",
+        [Lang.DE]: rewardData.desc.de ?? "",
+        [Lang.ES]: rewardData.desc.es ?? "",
       },
-      community: pictoData.community,
-      rare: pictoData.rare,
+      community: rewardData.community,
+      rare: rewardData.rare,
       titles: titles[id] ?? [],
     };
   });
 
-  types += `export enum PictoId {
-  ${Object.values(pictos)
-    .map((picto) => `${sanitizePictoId(picto)} = "${picto.id}"`)
+  types += `export enum RewardId {
+  ${Object.values(rewards)
+    .map((reward) => `${sanitizeRewardId(reward)} = "${reward.id}"`)
     .join(",\n  ")}
 }
 
-export type Picto = {
-  id: PictoId;
+export type Reward = {
+  id: RewardId;
   numericalId: number;
   name: Record<Lang, string>;
   description: Record<Lang, string>;
@@ -2433,22 +2434,23 @@ export type Picto = {
   community: boolean;
   rare: boolean;
   titles?: {
+    name: Record<Lang, string | string[]>;
     quantity: number;
     points?: number;
   }[];
 };`;
 
-  const pictosObject = `export const pictos: Readonly<Record<PictoId, Picto>> = {
-  ${Object.values(pictos)
+  const rewardsObject = `export const rewards: Readonly<Record<RewardId, Reward>> = {
+  ${Object.values(rewards)
     .map(
-      (picto) => `[PictoId.${sanitizePictoId(picto)}]: {
-    id: PictoId.${sanitizePictoId(picto)},
-    numericalId: ${picto.numericalId},
+      (reward) => `[RewardId.${sanitizeRewardId(reward)}]: {
+    id: RewardId.${sanitizeRewardId(reward)},
+    numericalId: ${reward.numericalId},
     name: {
       ${languages
         .map(
           (lang) =>
-            `[Lang.${lang.toUpperCase()}]: "${sanitizeText(picto.name[lang])}"`
+            `[Lang.${lang.toUpperCase()}]: "${sanitizeText(reward.name[lang])}"`
         )
         .join(",\n      ")}
     },
@@ -2457,20 +2459,32 @@ export type Picto = {
         .map(
           (lang) =>
             `[Lang.${lang.toUpperCase()}]: "${sanitizeText(
-              picto.description[lang]
+              reward.description[lang]
             )}"`
         )
         .join(",\n      ")}
     },
-    icon: "${picto.icon}",
-    community: ${picto.community},
-    rare: ${picto.rare}${
-        picto.titles.length > 0
+    icon: "${reward.icon}",
+    community: ${reward.community},
+    rare: ${reward.rare}${
+        reward.titles.length > 0
           ? `,
     titles: [
-      ${picto.titles
+      ${reward.titles
         .map(
           (title) => `{
+        name: {
+          ${Object.entries(title.name)
+            .map(
+              ([lang, name]) =>
+                `[Lang.${lang.toUpperCase()}]: ${
+                  Array.isArray(name)
+                    ? `["${name.join('", "')}"]`
+                    : `"${sanitizeText(name)}"`
+                }`
+            )
+            .join(",\n          ")}
+        },
         quantity: ${title.quantity}${
             title.points !== undefined
               ? `,
@@ -2489,16 +2503,16 @@ export type Picto = {
 
 };`;
 
-  const output = `import { Picto, PictoId } from './types';
+  const output = `import { Reward, RewardId } from './types';
 
-${pictosObject}`;
+${rewardsObject}`;
 
   fs.writeFileSync(
-    path.join(__dirname, "..", "src", "data", "pictos.ts"),
+    path.join(__dirname, "..", "src", "data", "rewards.ts"),
     output,
     "utf-8"
   );
-  console.log("pictos.ts file has been generated.");
+  console.log("rewards.ts file has been generated.");
 };
 
 const generateTypes = () => {
@@ -2579,17 +2593,17 @@ const generateTypes = () => {
       "utf-8"
     );
 
-    // Fetch pictos
-    const pictosResponse = await api.json.pictosList({
+    // Fetch rewards
+    const rewardsResponse = await api.json.pictosList({
       fields: "id,img,name,desc,community,rare",
     });
 
-    const pictos = pictosResponse.data;
+    const rewards = rewardsResponse.data;
 
-    // Save pictos to a file
+    // Save rewards to a file
     fs.writeFileSync(
-      path.join(__dirname, "data", "pictos.json"),
-      JSON.stringify(pictos, null, 2),
+      path.join(__dirname, "data", "rewards.json"),
+      JSON.stringify(rewards, null, 2),
       "utf-8"
     );
 
@@ -2612,7 +2626,7 @@ const generateTypes = () => {
   await generateRuins(items);
   generateRecipes(items);
   await generateBuildings(items);
-  await generatePictos();
+  await generateRewards();
   generateTypes();
 
   // Update game version file

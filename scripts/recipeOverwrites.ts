@@ -51,7 +51,7 @@ export const overwriteRecipeData = (
   );
 
   if (soulYellowRecipe) {
-    soulYellowRecipe.pictos = ["r_mystic2_#00"];
+    soulYellowRecipe.rewards = ["r_mystic2_#00"];
   }
 
   // Prints recipe
@@ -86,7 +86,10 @@ export const overwriteRecipeData = (
   recipes.push({
     type: RecipeType.Workshop,
     in: [{ item: "saw_tool_temp_#00" }],
-    out: [{ item: "saw_tool_temp_#00", odds: 85}, { item: "saw_tool_temp_#00", odds: 15, broken: true }],
+    out: [
+      { item: "saw_tool_temp_#00", odds: 85 },
+      { item: "saw_tool_temp_#00", odds: 15, broken: true },
+    ],
   });
 
   // Add picto to CHAINSAW_EMPTY recipe
@@ -98,7 +101,7 @@ export const overwriteRecipeData = (
   );
 
   if (chainsawRecipe) {
-    chainsawRecipe.pictos = ["r_tronco_#00"];
+    chainsawRecipe.rewards = ["r_tronco_#00"];
   }
 
   // Add picto to WATERGUN_OPT_EMPTY recipe
@@ -110,7 +113,7 @@ export const overwriteRecipeData = (
   );
 
   if (watergunRecipe) {
-    watergunRecipe.pictos = ["r_watgun_#00"];
+    watergunRecipe.rewards = ["r_watgun_#00"];
   }
 
   // Add picto to PILEGUN_UP_EMPTY recipe
@@ -122,7 +125,7 @@ export const overwriteRecipeData = (
   );
 
   if (pilegunRecipe) {
-    pilegunRecipe.pictos = ["r_batgun_#00"];
+    pilegunRecipe.rewards = ["r_batgun_#00"];
   }
 
   // Add picto to BIG_PGUN_EMPTY recipe
@@ -133,6 +136,6 @@ export const overwriteRecipeData = (
       recipe.out[0]?.item === "big_pgun_empty_#00"
   );
   if (bigPilegunRecipe) {
-    bigPilegunRecipe.pictos = ["r_batgun_#00"];
+    bigPilegunRecipe.rewards = ["r_batgun_#00"];
   }
 };

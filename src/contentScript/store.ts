@@ -27,6 +27,7 @@ export const store = {
   "shaman-souls-button": true,
   wiki: true,
   "camping-calculator": true,
+  "better-reward-titles": true,
   // Bank tracker state
   "bank-last-items-taken": [] as {
     item: ItemId;

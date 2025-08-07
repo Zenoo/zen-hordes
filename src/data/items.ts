@@ -393,7 +393,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 20
           },
@@ -433,7 +433,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 20
           },
@@ -478,7 +478,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 40
           },
@@ -578,7 +578,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 33
           },
@@ -625,7 +625,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 25
           },
@@ -669,7 +669,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 45
           },
@@ -717,7 +717,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 50
           },
@@ -766,7 +766,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 70
           },
@@ -844,7 +844,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00"
           },
           {
@@ -955,7 +955,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_drug_#00"
           },
           {
@@ -1032,7 +1032,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_rp_#00"
           }
         ]
@@ -1372,7 +1372,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_animal_#00"
           },
           {
@@ -1390,7 +1390,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_animal_#00"
           },
           {
@@ -1432,7 +1432,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_animal_#00"
           },
           {
@@ -1450,7 +1450,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_animal_#00"
           },
           {
@@ -1492,7 +1492,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_animal_#00"
           },
           {
@@ -1510,7 +1510,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_animal_#00"
           },
           {
@@ -1552,7 +1552,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_animal_#00"
           },
           {
@@ -1570,7 +1570,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_animal_#00",
             odds: 10
           },
@@ -1615,7 +1615,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_animal_#00"
           },
           {
@@ -1633,7 +1633,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_animal_#00",
             odds: 20
           },
@@ -1681,7 +1681,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_animal_#00"
           },
           {
@@ -1699,7 +1699,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_animal_#00"
           },
           {
@@ -1741,7 +1741,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_maso_#00"
           },
           {
@@ -1784,7 +1784,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_drug_#00"
           },
           {
@@ -2299,7 +2299,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_alcool_#00"
           },
           {
@@ -2447,7 +2447,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_cannib_#00"
           },
           {
@@ -2467,7 +2467,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_cannib_#00"
           },
           {
@@ -2804,7 +2804,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_drug_#00"
           },
           {
@@ -2888,7 +2888,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_chstxl_#00"
           }
         ]
@@ -3084,7 +3084,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_alcool_#00"
           },
           {
@@ -3303,7 +3303,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_drug_#00"
           },
           {
@@ -3547,7 +3547,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_repair_#00"
           },
           {
@@ -3926,7 +3926,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_maso_#00"
           },
           {
@@ -4188,7 +4188,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 50
           },
@@ -4341,7 +4341,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 50
           },
@@ -4381,11 +4381,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_cobaye_#00"
           },
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_drug_#00",
             odds: 100
           },
@@ -4454,7 +4454,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_drug_#00"
           },
           {
@@ -4504,7 +4504,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_digger_#00"
           },
           {
@@ -5196,7 +5196,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_cannib_#00"
           },
           {
@@ -5224,7 +5224,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_cannib_#00"
           },
           {
@@ -5271,7 +5271,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 80
           },
@@ -6032,7 +6032,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_repair_#00"
           },
           {
@@ -6102,7 +6102,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 40
           },
@@ -6145,7 +6145,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 43
           },
@@ -6188,7 +6188,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 40
           },
@@ -6231,7 +6231,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_rp_#00"
           }
         ]
@@ -6266,7 +6266,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_rp_#00"
           }
         ]
@@ -6301,7 +6301,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_rp_#00"
           }
         ]
@@ -6336,7 +6336,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_rp_#00"
           }
         ]
@@ -6371,7 +6371,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_rp_#00"
           }
         ]
@@ -6406,7 +6406,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_rp_#00"
           }
         ]
@@ -6441,7 +6441,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 25
           },
@@ -6572,7 +6572,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_hbuild_#00"
           },
           {
@@ -6614,7 +6614,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_hbuild_#00"
           },
           {
@@ -6657,7 +6657,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_hbuild_#00"
           },
           {
@@ -7750,7 +7750,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 75
           },
@@ -7853,7 +7853,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 50
           },
@@ -7993,7 +7993,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_rp_#00"
           }
         ]
@@ -8270,16 +8270,16 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_cobaye_#00"
           },
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_drug_#00",
             odds: 100
           },
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_alcool_#00",
             odds: 25
           },
@@ -8578,7 +8578,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_solban_#00"
           },
           {
@@ -8887,7 +8887,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_santac_#00"
           }
         ]
@@ -9122,7 +9122,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_cannib_#00"
           },
           {
@@ -9150,7 +9150,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_cannib_#00"
           },
           {
@@ -9258,7 +9258,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_sandb_#00"
           }
         ]
@@ -10821,11 +10821,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_collec_#00"
           },
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_mystic_#00"
           },
           {
@@ -10902,11 +10902,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_collec_#00"
           },
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_mystic_#00"
           },
           {
@@ -10945,11 +10945,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_collec_#00"
           },
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_mystic_#00"
           },
           {
@@ -10988,7 +10988,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_alcool_#00"
           },
           {
@@ -11072,7 +11072,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_animal_#00"
           },
           {
@@ -11090,7 +11090,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_animal_#00",
             odds: 15
           },
@@ -11448,7 +11448,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_animal_#00"
           },
           {
@@ -11466,7 +11466,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_animal_#00"
           },
           {
@@ -11595,11 +11595,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_cobaye_#00"
           },
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_drug_#00",
             odds: 100
           },
@@ -11950,7 +11950,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_rp_#00"
           }
         ]
@@ -12045,7 +12045,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_alcool_#00"
           },
           {
@@ -12533,7 +12533,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_rp_#00"
           }
         ]
@@ -12946,7 +12946,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_repair_#00"
           },
           {
@@ -13251,7 +13251,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_alcool_#00"
           },
           {
@@ -13597,7 +13597,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_lepre_#00"
           }
         ]
@@ -13786,11 +13786,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_cobaye_#00"
           },
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_drug_#00",
             odds: 18
           },
@@ -13939,7 +13939,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_broken_#00",
             odds: 15
           },
@@ -13988,7 +13988,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_alcool_#00"
           },
           {
@@ -14041,7 +14041,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_drug_#00"
           },
           {
@@ -14246,7 +14246,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.GetPicto,
+            type: ItemActionEffectType.GetReward,
             value: "r_decofeist_#00"
           }
         ]
