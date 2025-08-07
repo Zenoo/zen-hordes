@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.10.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.10.0...zen-hordes-v1.10.1) (2025-08-07)
+
+
+### Bug Fixes
+
+* Add hidden titles to the dataset ([0043437](https://github.com/Zenoo/zen-hordes/commit/00434376e9c52a0a7fb6dca4b5cf92dcd8a3e9db))
+* Remove duplicate reward titles ([42456b4](https://github.com/Zenoo/zen-hordes/commit/42456b4bd99a1326e6e979198d356512237e0a85))
+
 ## [1.10.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.9.6...zen-hordes-v1.10.0) (2025-08-07)
 
 
