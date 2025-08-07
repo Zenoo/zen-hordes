@@ -33,6 +33,8 @@ const T: Translations = {
     "better-tooltips": "Better tooltips",
     "camping-calculator": "Camping calculator",
     "shopping-list": "Shopping list",
+    "better-reward-titles": "Better reward titles",
+    "max-ap-investment": "Max AP investment in buildings",
     "external-city-links": "External city history links",
     "update-sites": "External sites to update",
     "user-key": "User key",
@@ -45,6 +47,8 @@ const T: Translations = {
     "better-tooltips": "Meilleures infobulles",
     "camping-calculator": "Calculateur de camping",
     "shopping-list": "Liste de courses",
+    "better-reward-titles": "Meilleurs titres de distinctions",
+    "max-ap-investment": "PA max investis dans les bâtiments",
     "external-city-links": "Liens externes des historiques des villes",
     "update-sites": "Sites externes à mettre à jour",
     "user-key": "Clé utilisateur",
@@ -57,6 +61,8 @@ const T: Translations = {
     "better-tooltips": "Bessere Tooltips",
     "camping-calculator": "Camping-Rechner",
     "shopping-list": "Einkaufsliste",
+    "better-reward-titles": "Bessere Belohnungstitel",
+    "max-ap-investment": "Maximale AP-Investition in Gebäude",
     "external-city-links": "Externe Stadtverlauf-Links",
     "update-sites": "Externe Sites aktualisieren",
     "user-key": "Benutzerschlüssel",
@@ -69,6 +75,8 @@ const T: Translations = {
     "better-tooltips": "Mejores tooltips",
     "camping-calculator": "Calculadora de camping",
     "shopping-list": "Lista de compras",
+    "better-reward-titles": "Mejores títulos de recompensas",
+    "max-ap-investment": "Máxima inversión de AP en edificios",
     "external-city-links": "Enlaces externos de historiales de ciudades",
     "update-sites": "Sitios externos para actualizar",
     "user-key": "Clave de usuario",
@@ -116,6 +124,8 @@ const Popup = () => {
   const [betterTooltips, setBetterTooltips] = useState(true);
   const [campingCalculator, setCampingCalculator] = useState(true);
   const [shoppingList, setShoppingList] = useState(true);
+  const [betterRewardTitles, setBetterRewardTitles] = useState(true);
+  const [maxApInvestment, setMaxApInvestment] = useState(true);
   const [externalSiteLinks, setExternalSiteLinks] = useState([
     ExternalSiteName.BBH,
   ]);
@@ -157,6 +167,16 @@ const Popup = () => {
           : true
       );
       setShoppingList(typeof data["shopping-list"] === "string");
+      setBetterRewardTitles(
+        typeof data["better-reward-titles"] === "boolean"
+          ? data["better-reward-titles"]
+          : true
+      );
+      setMaxApInvestment(
+        typeof data["max-ap-investment"] === "boolean"
+          ? data["max-ap-investment"]
+          : true
+      );
       setExternalSiteLinks(
         (data["external-city-links"] as ExternalSiteName[] | undefined) ?? [
           ExternalSiteName.BBH,
@@ -248,6 +268,20 @@ const Popup = () => {
   ) => {
     setShoppingList(event.target.checked);
     await setFeature("shopping-list", event.target.checked);
+  };
+
+  const handleBetterRewardTitlesChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setBetterRewardTitles(event.target.checked);
+    await setFeature("better-reward-titles", event.target.checked);
+  };
+
+  const handleMaxApInvestmentChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setMaxApInvestment(event.target.checked);
+    await setFeature("max-ap-investment", event.target.checked);
   };
 
   const handleExternalSiteLinksChange =
@@ -400,6 +434,36 @@ const Popup = () => {
           label={
             <Typography variant="body2" sx={{ ml: 0.5 }}>
               {t("shopping-list")}
+            </Typography>
+          }
+          sx={{ mx: 1 }}
+        />
+        <FormControlLabel
+          control={
+            <Switch
+              checked={betterRewardTitles}
+              onChange={handleBetterRewardTitlesChange}
+              size="small"
+            />
+          }
+          label={
+            <Typography variant="body2" sx={{ ml: 0.5 }}>
+              {t("better-reward-titles")}
+            </Typography>
+          }
+          sx={{ mx: 1 }}
+        />
+        <FormControlLabel
+          control={
+            <Switch
+              checked={maxApInvestment}
+              onChange={handleMaxApInvestmentChange}
+              size="small"
+            />
+          }
+          label={
+            <Typography variant="body2" sx={{ ml: 0.5 }}>
+              {t("max-ap-investment")}
             </Typography>
           }
           sx={{ mx: 1 }}

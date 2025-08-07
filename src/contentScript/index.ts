@@ -26,6 +26,7 @@ import { onEvent } from "./hooks/onEvent";
 import { onKey } from "./hooks/onKey";
 import { onMount } from "./hooks/onMount";
 import { displayMapPreview, insertMapPreviewTooltip } from "./mapPreview";
+import { prefillApPromptWithMaxAp } from "./maxApInvestment";
 import { listenToBackgroundMessages } from "./messageListener";
 import { displayPlayerTag, insertPlayerInfo } from "./playerInfo";
 import { displayShamanSoulsButton } from "./shamanSoulsButton";
@@ -95,6 +96,7 @@ import { insertWiki, openItemInWiki } from "./wiki";
     displayMissingTitles(node);
     displayRewardTitlePoints(node);
     displayMissingPointsTitlesButton(node);
+    prefillApPromptWithMaxAp(node);
   });
 
   // Actions that need to be performed on hover

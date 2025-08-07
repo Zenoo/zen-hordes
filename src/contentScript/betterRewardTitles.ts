@@ -25,11 +25,12 @@ const T: Translations = {
 };
 
 const findRewardByTitle = (
-  data: {
-    name: Record<Lang, string | string[]>;
-  },
+  data: Reward | NonNullable<Reward["titles"]>[number],
   title: string
 ) => {
+  // Ignore RewardId.CHAMAN, it seems like a dupe
+  if ("id" in data && data.id === RewardId.CHAMAN) return false;
+
   if (typeof data.name[store["hordes-lang"]] === "string") {
     return data.name[store["hordes-lang"]] === title;
   }
@@ -46,39 +47,13 @@ const getTitleName = (title: NonNullable<Reward["titles"]>[number]) => {
   const lastName = titleName[titleName.length - 1];
 
   if (!lastName) {
-    console.warn(`No name found for title: ${titleName}`);
+    console.warn(
+      `No name found for title: ${titleName.map((t) => t).join(", ")}`
+    );
     return "";
   }
 
   return lastName;
-};
-
-const addRewardTitlePoints = (
-  li: Element,
-  currentReward: RewardId,
-  displayedTitle: string
-) => {
-  // Find the corresponding point value
-  const rewardTitle = rewards[currentReward].titles?.find((title) =>
-    findRewardByTitle(title, displayedTitle)
-  );
-
-  if (!rewardTitle) {
-    console.warn(
-      `${rewards[currentReward].name.en}: Unknown title: ${displayedTitle}`
-    );
-    return;
-  }
-
-  const pointValue = rewardTitle.points;
-
-  if (!pointValue) return;
-
-  const pointSpan = document.createElement("span");
-  pointSpan.classList.add("zen-title-points");
-  pointSpan.textContent = `+${pointValue}`;
-  li.appendChild(pointSpan);
-  li.setAttribute("data-points", String(pointValue));
 };
 
 export const displayRewardTitlePoints = (node: HTMLElement) => {
@@ -108,7 +83,28 @@ export const displayRewardTitlePoints = (node: HTMLElement) => {
 
     if (!currentReward) continue;
 
-    addRewardTitlePoints(li, currentReward, displayedTitle);
+    // Find the corresponding point value
+    const rewardTitle = rewards[currentReward].titles?.find((title) =>
+      findRewardByTitle(title, displayedTitle)
+    );
+
+    if (!rewardTitle) {
+      console.warn(
+        `${rewards[currentReward].name.en}: Unknown title: ${displayedTitle}`
+      );
+      console.log(currentReward, rewards[currentReward].titles, displayedTitle);
+      continue;
+    }
+
+    const pointValue = rewardTitle.points;
+
+    if (!pointValue) continue;
+
+    const pointSpan = document.createElement("span");
+    pointSpan.classList.add("zen-title-points", "zen-added");
+    pointSpan.textContent = `+${pointValue}`;
+    li.appendChild(pointSpan);
+    li.setAttribute("data-points", String(pointValue));
   }
 };
 
@@ -133,7 +129,7 @@ export const displayMissingTitles = (node: HTMLElement) => {
     // If the reward is not displayed, create a new list item for it
     if (!rewardTitleElement) {
       rewardTitleElement = document.createElement("li");
-      rewardTitleElement.classList.add("chapter", "locked");
+      rewardTitleElement.classList.add("chapter", "locked", "zen-added");
 
       const icon = document.createElement("img");
       icon.src = `${ASSETS}/pictos/${reward.icon}.gif`;
@@ -173,7 +169,7 @@ export const displayMissingTitles = (node: HTMLElement) => {
 
       if (!isAlreadyDisplayed) {
         const li = document.createElement("li");
-        li.classList.add("locked");
+        li.classList.add("locked", "zen-added");
         li.textContent = `"${getTitleName(title)}"`;
 
         // Insert before the next chapter
@@ -207,7 +203,7 @@ export const displayMissingPointsTitlesButton = (node: HTMLElement) => {
 
   const button = document.createElement("button");
   button.textContent = t(T, "missingPointsOnly");
-  button.classList.add("missing-points-titles-button");
+  button.classList.add("missing-points-titles-button", "zen-added");
   button.dataset.state = "all";
 
   button.addEventListener("click", () => {

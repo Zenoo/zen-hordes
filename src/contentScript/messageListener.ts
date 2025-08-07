@@ -6,6 +6,11 @@ import {
   handleItemTaken,
 } from "./bankTracker";
 import {
+  displayMissingPointsTitlesButton,
+  displayMissingTitles,
+  displayRewardTitlePoints,
+} from "./betterRewardTitles";
+import {
   insertBetterItemTooltips,
   insertBetterRuinTooltips,
 } from "./betterTooltips";
@@ -215,6 +220,31 @@ export const listenToBackgroundMessages = async () => {
                   )
                   ?.classList.add("hidden");
               }
+              break;
+            }
+            case "better-reward-titles": {
+              setStore("better-reward-titles", !!value.enabled);
+
+              if (value.enabled) {
+                const titlesList =
+                  document.querySelector<HTMLElement>(".title-list");
+
+                // Trigger better reward titles display
+                if (titlesList) {
+                  displayMissingTitles(titlesList);
+                  displayRewardTitlePoints(titlesList);
+                  displayMissingPointsTitlesButton(titlesList);
+                }
+              } else {
+                // Remove better reward titles
+                document
+                  .querySelectorAll(".title-list .zen-added")
+                  .forEach((node) => node.remove());
+              }
+              break;
+            }
+            case "max-ap-investment": {
+              setStore("max-ap-investment", !!value.enabled);
               break;
             }
             default: {

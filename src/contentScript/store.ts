@@ -28,6 +28,7 @@ export const store = {
   wiki: true,
   "camping-calculator": true,
   "better-reward-titles": true,
+  "max-ap-investment": true,
   // Bank tracker state
   "bank-last-items-taken": [] as {
     item: ItemId;
