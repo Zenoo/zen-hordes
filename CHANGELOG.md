@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.10.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.9.6...zen-hordes-v1.10.0) (2025-08-07)
+
+
+### Features
+
+* Display missing titles filter ([95ec3bf](https://github.com/Zenoo/zen-hordes/commit/95ec3bf9a6d6fe2cf645ba3f1f62626439acc737))
+* Max AP investment for buildings ([ba07dbc](https://github.com/Zenoo/zen-hordes/commit/ba07dbc348ba5c23f300cd1c8cec7748b65399f1))
+
+
+### Bug Fixes
+
+* Display title rewards ([58ccf32](https://github.com/Zenoo/zen-hordes/commit/58ccf3246be402978ddc57dbc10434d8071fbe5a))
+
 ## [1.9.6](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.9.5...zen-hordes-v1.9.6) (2025-08-02)
 
 
