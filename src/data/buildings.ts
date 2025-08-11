@@ -3050,7 +3050,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Enfermería"
     },
     description: {
-      [Lang.EN]: "In the event of minor accidents or major trauma, the infirmery will welcome you with open arms. Well, on the condition that youre able to carry out any procedures yourself, as the facility doesnt come with medical personnel.",
+      [Lang.EN]: "In the event of minor accidents or major trauma, the infirmary will welcome you with open arms. Well, on the condition that you're able to carry out any procedures yourself as the facility doesn't come with medical personnel.",
       [Lang.FR]: "En cas de petit bobo ou de gros traumatisme irréparable, l’infirmerie vous accueillera à bras ouverts. Enfin, à condition que vous soyez capable de vous recoudre tout seul car le personnel médical n’est pas fourni avec le chantier.",
       [Lang.DE]: "Egal ob kleines Wehwehchen oder irreparables Trauma - die Krankenstation empfängt dich mit offenen Armen. Zumindst solange du noch imstande bist, dich selbst zu verarzten, denn diese Einrichtung kommt ganz ohne medizinisches Personal daher.",
       [Lang.ES]: "En caso de pequeñas heridas o los traumatismos irreparables, podrás acudir aquí. Pero tendrás que coserte para cerrar tus heridas tú mismo porque el personal no está incluido."

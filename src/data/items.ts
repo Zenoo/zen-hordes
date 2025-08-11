@@ -11430,7 +11430,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Gatito furioso (digerido parcialmente)"
     },
     description: {
-      [Lang.EN]: "A kitten which surely belonged a now-dead citizen. It seems pretty aggravated, maybe you shouldn't annoy it any more.",
+      [Lang.EN]: "A kitten which surely belonged to a now-dead citizen. It seems pretty aggravated, maybe you shouldn't annoy it anymore.",
       [Lang.FR]: "Le chat d'un concitoyen surement mort à l'heure qu'il est. Il semble partiellement en colère, mieux vaut ne pas l'énerver davantage.",
       [Lang.DE]: "Das Kätzchen sieht ein wenig angefressen aus. Du solltest es besser nicht noch mehr reizen, es faucht ja jetzt schon.",
       [Lang.ES]: "Seguramente una mascota engullida que logró escapar antes de ser totalmente digerida. Parece encolerizada, mejor mantener distancia."
@@ -12314,7 +12314,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Discurso motivador"
     },
     description: {
-      [Lang.EN]: "We don't know if it's the LSD or it's just that Chuck Norris is so hard, he drinks napalm to cure his heartburn, but this speech certainly has a positive effect on the watchman!",
+      [Lang.EN]: "We don't know if it's the LSD or it's just that Chuck Norris is so badass, he drinks napalm to cure his heartburn, but this speech certainly has a positive effect on the watchmen!",
       [Lang.FR]: "On ne sait pas si c'est l'effet du LSD ou le fait que Chuck Norris est le mec le plus badass au monde, mais ce discours enflammé a son effet sur les troupes des veilleurs !",
       [Lang.DE]: "Keine Ahnung, ob es am LSD liegt oder daran, dass Chuck Norris so hart ist, er trinkt Napalm gegen Sodbrennen - aber diese Rede hat definitiv einen positiven Einfluss auf unsere Nachtwächter!",
       [Lang.ES]: "No sabemos si es por el efecto del LSD o de Chuck Norris, ¡pero este discurso motiva mucho a los centinelas!"
