@@ -87,6 +87,12 @@ Zen Hordes enhances the reward titles by displaying locked titles and the points
 
 Zen Hordes allows players to invest their maximum available Action Points (AP) into buildings, without needing to manually allocate points one by one. This feature streamlines the building process and helps players optimize their resource management.
 
+### Buried ruin information
+
+Zen Hordes provides detailed information about buried ruins, including their bury count, possible ruins at the current location, and the resources they may contain.
+
+![Buried ruin information](.github/media/buried-ruin-data.png)
+
 ### Translations
 
 Zen Hordes supports multiple languages, including English, French, German, and Spanish. The extension automatically detects your preferred language and provides translations for various elements on the MyHordes game website. This ensures that you can navigate and use the site comfortably in your preferred language.
