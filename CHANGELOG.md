@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.11.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.10.1...zen-hordes-v1.11.0) (2025-08-22)
+
+
+### Features
+
+* Display possible buried ruins ([163d245](https://github.com/Zenoo/zen-hordes/commit/163d245ed5c343a8f2dd5250bc744d8685fb0bd5))
+
+
+### Bug Fixes
+
+* MH v4.0.13 data ([4c544f3](https://github.com/Zenoo/zen-hordes/commit/4c544f353417b5b24bb9dc3b85dfdc02058cb601))
+
 ## [1.10.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.10.0...zen-hordes-v1.10.1) (2025-08-07)
 
 
