@@ -120,6 +120,18 @@ body.zen-enhanced {
   .zone-camp {
     padding-bottom: 5px;
     overflow: unset;
+
+    &>input+label {
+      &:checked {
+        &+.zone-camp-info {
+          overflow: unset;
+        }
+      }
+
+      &+.zone-camp-info {
+        overflow: hidden;
+      }
+    }
   }
 
   // Citizen list avatar size
@@ -1155,6 +1167,7 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
 
 // Camping calculator
 .zen-camping-calculator {
+  position: relative;
   padding: 4px;
   margin: 8px;
   box-shadow: 1px 1px 4px 0px black;
@@ -1243,7 +1256,7 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
           z-index: 1000;
 
           &.active {
-            display: block;
+            display: block !important;
           }
 
           li.heroic_action {
@@ -1316,6 +1329,12 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
+  }
+
+  .settings {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
   }
 
   .zen-reset-button {
@@ -1429,6 +1448,49 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
       padding-left: 4px;
       color: #ddab76;
       font-style: italic;
+    }
+  }
+}
+
+// Possible ruins
+.zen-possible-ruins-title {
+  color: #e5bc52;
+  font-size: .9em;
+  font-variant: small-caps;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.zen-possible-ruins-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding-left: 0;
+  background: #996739;
+  border: 1px solid #ddab76;
+  margin: 0;
+  padding: 4px;
+
+  li {
+    img {
+      height: 26px;
+    }
+  }
+}
+
+.zen-ruin-camping-stats {
+  display: flex;
+  gap: 4px;
+  font-weight: bold;
+
+  .zen-ruin-camping-spots {
+    padding-right: 8px;
+  }
+
+  .zen-ruin-camping-chances {
+    img {
+      margin-right: 4px;
     }
   }
 }

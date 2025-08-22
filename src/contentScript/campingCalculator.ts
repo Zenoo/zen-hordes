@@ -965,12 +965,9 @@ const createLine = (
       if (!open) return;
 
       // Position the selector (centered on top of the ruin icon)
-      const closestRelative = ruinIcon.closest<HTMLElement>(".cell, .zen-wiki");
-      if (!closestRelative) return;
-
       positionElement({
         element: ruinSelector,
-        relativeTo: closestRelative,
+        relativeTo: calculator,
         anchor: ruinIcon,
         yPosition: inWiki ? "bottom" : "top",
       });
@@ -1096,12 +1093,9 @@ const createLine = (
       if (!open) return;
 
       // Position the selector
-      const closestRelative = jobIcon.closest<HTMLElement>(".cell, .zen-wiki");
-      if (!closestRelative) return;
-
       positionElement({
         element: jobSelector,
-        relativeTo: closestRelative,
+        relativeTo: calculator,
         anchor: jobIcon,
         yPosition: inWiki ? "bottom" : "top",
       });
@@ -1212,6 +1206,8 @@ export const displayCampingCalculator = (node: HTMLElement) => {
     totalDesc.textContent = t(T, "campingChances.0");
   }
   calculator.appendChild(totalDesc);
+
+  // TODO: Settings button
 
   // Reset button
   const resetButton = document.createElement("button");

@@ -545,7 +545,7 @@ const updateWiki = (state: Partial<WikiState>, resetSearch?: boolean) => {
 /**
  * @param content Can include html tags like \<em\>...\</em\> or \<strong>...\</strong\>
  */
-const setTextContent = (node: HTMLElement, content: string) => {
+export const setTextContent = (node: HTMLElement, content: string) => {
   // Split description by tags
   const regex = /(<([^>]+)>)/gi;
   const parts = content.split(regex);

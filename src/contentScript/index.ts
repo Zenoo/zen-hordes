@@ -39,6 +39,7 @@ import {
   autoOpenBagOutside,
   autoOpenBagWhenMovingItems,
   autoSelectGlobalMapSetting,
+  displayPossibleBuriedRuin,
   displayRuinBuryCount,
   enhanceUI,
 } from "./UIEnhancer";
@@ -49,7 +50,6 @@ import { insertWiki, openItemInWiki } from "./wiki";
 // ex: drag & drop, images, etc
 // TODO: Add a note-taking feature
 // TODO: Add distinctions linked to some action tooltips (throw out someone, etc)
-// TODO: Prefill building AP investment input with max values
 
 (async () => {
   // Do nothing on asset URLs
@@ -97,6 +97,7 @@ import { insertWiki, openItemInWiki } from "./wiki";
     displayRewardTitlePoints(node);
     displayMissingPointsTitlesButton(node);
     prefillApPromptWithMaxAp(node);
+    displayPossibleBuriedRuin(node);
   });
 
   // Actions that need to be performed on hover
