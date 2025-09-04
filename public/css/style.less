@@ -1169,6 +1169,7 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
 .zen-camping-calculator {
   position: relative;
   padding: 4px;
+  padding-bottom: 34px;
   margin: 8px;
   box-shadow: 1px 1px 4px 0px black;
   background: url(https://zenoo.github.io/zen-hordes/game-bar/panel_tl.png) 0 0 no-repeat,
@@ -1328,18 +1329,58 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
   .total-desc {
     margin-top: 0;
     margin-bottom: 0;
+    padding-bottom: 4px;
     text-align: center;
   }
 
-  .settings {
+  .zen-calculator-settings-button {
     position: absolute;
-    bottom: 4px;
-    right: 4px;
+    bottom: 6px;
+    right: 8px;
+    width: auto;
+    min-height: auto;
+    padding: 2px 2px;
+
+    img {
+      float: none;
+      margin-right: 0;
+    }
   }
 
-  .zen-reset-button {
+  .zen-calculator-settings {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+
+    &.visible {
+      max-height: 100px;
+    }
+  }
+
+  .zen-settings-button {
     width: auto;
-    margin: 4px auto;
+    min-height: auto;
+    padding: 2px 2px;
+    margin-top: 0 !important;
+
+    img {
+      float: none;
+      margin-right: 0;
+    }
+
+    &.text {
+      width: 21px;
+      text-align: center;
+    }
+
+    &.active {
+      border-color: #f0d79e;
+      color: #fff;
+    }
   }
 }
 

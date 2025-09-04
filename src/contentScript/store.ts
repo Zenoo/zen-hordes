@@ -38,6 +38,8 @@ export const store = {
   // Camping state
   "camping-day": null as number | null,
   "previous-campings": 0,
+  "calculator-selected-slot": 1,
+  "calculator-slots": [null, null, null] as (string | null)[],
   // Shopping list
   "shopping-list": DEFAULT_SHOPPING_LIST as string | null,
   "default-shopping-list": DEFAULT_SHOPPING_LIST,

@@ -45,7 +45,6 @@ import {
 } from "./UIEnhancer";
 import { insertWiki, openItemInWiki } from "./wiki";
 
-// TODO: Add a way to store/share camping calculations
 // TODO: Add more detailed instructions to the guide
 // ex: drag & drop, images, etc
 // TODO: Add a note-taking feature

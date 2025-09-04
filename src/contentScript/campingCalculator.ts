@@ -4,6 +4,8 @@ import { ItemId, Ruin, RuinId } from "../data/types";
 import { ASSETS } from "../utils/constants";
 import { findItemFromInventory } from "../utils/itemUtils";
 import { positionElement } from "../utils/position";
+import { tooltip } from "../utils/tooltip";
+import { notify, Severity } from "./notify";
 import { setStore, store } from "./store";
 import { t } from "./translate";
 
@@ -53,6 +55,18 @@ const T: Translations = {
       "You reckon your chances of surviving here are optimal. Nobody would see you, even if they were looking straight at you.",
     reset: "Reset",
     close: "Close",
+    settings: "Settings",
+    save: "Save current settings to this slot",
+    saveSuccess: "Settings saved successfully.",
+    slot1: "First save slot",
+    slot2: "Second save slot",
+    slot3: "Third save slot",
+    import: "Import calculator settings",
+    export: "Export calculator settings",
+    importPrompt: "Paste your calculator code here...",
+    importSuccess: "Calculator code imported successfully.",
+    importError: "Failed to import calculator code.",
+    exportSuccess: "Calculator code copied to clipboard.",
   },
   fr: {
     campingCalculator: "calculateur de camping",
@@ -99,6 +113,18 @@ const T: Translations = {
       "Vous estimez que vos chances de survie ici sont optimales : personne ne vous verrait même en vous pointant du doigt.",
     reset: "Réinitialiser",
     close: "Fermer",
+    settings: "Paramètres",
+    save: "Sauvegarder les paramètres actuels dans cet emplacement",
+    saveSuccess: "Paramètres sauvegardés avec succès.",
+    slot1: "Premier emplacement de sauvegarde",
+    slot2: "Second emplacement de sauvegarde",
+    slot3: "Troisième emplacement de sauvegarde",
+    import: "Importer les paramètres du calculateur",
+    export: "Exporter les paramètres du calculateur",
+    importPrompt: "Collez votre code de calculateur ici…",
+    importSuccess: "Code du calculateur importé avec succès.",
+    importError: "Échec de l'importation du code du calculateur.",
+    exportSuccess: "Code du calculateur copié dans le presse-papiers.",
   },
   de: {
     campingCalculator: "camping rechner",
@@ -145,6 +171,18 @@ const T: Translations = {
       "Du schätzt, dass deine Überlebenschancen hier optimal sind. Niemand wird dich sehen - selbst wenn man mit dem Finger auf dich zeigt.",
     reset: "Zurücksetzen",
     close: "Schließen",
+    settings: "Einstellungen",
+    save: "Aktuelle Einstellungen in diesem Slot speichern",
+    saveSuccess: "Einstellungen erfolgreich gespeichert.",
+    slot1: "Erster Speicherplatz",
+    slot2: "Zweiter Speicherplatz",
+    slot3: "Dritter Speicherplatz",
+    import: "Importieren des Rechner-Codes",
+    export: "Exportieren des Rechner-Codes",
+    importPrompt: "Füge hier deinen Rechner-Code ein...",
+    importSuccess: "Import des Rechner-Codes erfolgreich.",
+    importError: "Import des Rechner-Codes fehlgeschlagen.",
+    exportSuccess: "Rechner-Code in die Zwischenablage kopiert.",
   },
   es: {
     campingCalculator: "calculadora de camping",
@@ -191,6 +229,18 @@ const T: Translations = {
       "Crees que tus posibilidades de sobrevivir aquí son óptimas. Nadie te verá, ni señalándote con el dedo",
     reset: "Reiniciar",
     close: "Cerrar",
+    settings: "Ajustes",
+    save: "Guardar los ajustes actuales en esta ranura",
+    saveSuccess: "Ajustes guardados con éxito.",
+    slot1: "Primer espacio de guardado",
+    slot2: "Segundo espacio de guardado",
+    slot3: "Tercer espacio de guardado",
+    import: "Importar los parámetros del calculador",
+    export: "Exportar los parámetros del calculador",
+    importPrompt: "Pega tu código de la calculadora aquí...",
+    importSuccess: "Código de la calculadora importado con éxito.",
+    importError: "Error al importar el código de la calculadora.",
+    exportSuccess: "Código de la calculadora copiado al portapapeles.",
   },
 };
 
@@ -241,6 +291,78 @@ const result = {
   lighthouseBuilt: 0,
   devastatedTown: 0,
   tomb: 0,
+};
+
+const paramOrder: (keyof CampingParams)[] = [
+  "alreadyHiddenCitizens",
+  "defenseObjects",
+  "manualImprovements",
+  "kmDistance",
+  "zombies",
+  "previousCampings",
+  "campingItems",
+  "reclusiveLevel",
+  "ruin",
+  "camouflaged",
+  "night",
+  "lighthouseBuilt",
+  "devastatedTown",
+  "tomb",
+  "pandemonium",
+  "job",
+];
+
+/**
+ * Generate a unique code representing the current camping parameters.
+ * @param params Current camping parameters
+ * @returns Unique code as a string
+ */
+const getCalculatorCode = (params: CampingParams) => {
+  const decodedString = paramOrder
+    .map((key) => {
+      const val = params[key];
+      // For booleans, use T/F
+      if (typeof val === "boolean") return val ? "T" : "F";
+
+      // For ruin, use R<ID> or R0 for undefined
+      if (key === "ruin") return val ? `R${(val as Ruin).id}` : "R0";
+
+      // Shouldn't happen, but just in case
+      return String(val ?? "");
+    })
+    .join(",");
+
+  return btoa(decodedString);
+};
+
+const decodeCalculatorCode = (code: string): CampingParams | null => {
+  try {
+    const decodedString = atob(code.trim());
+    const values = decodedString.split(",").map((val) => {
+      // For booleans, use T/F
+      if (val === "T") return true;
+      if (val === "F") return false;
+
+      // For ruin, use R<ID> or R0 for undefined
+      if (/^R(\d+)$/.test(val)) {
+        const match = val.match(/^R(\d+)$/);
+        const value = match ? +(match[1] ?? 0) : 0;
+
+        if (value === 0) return undefined;
+        return ruins[value as RuinId] ?? undefined;
+      }
+
+      // Shouldn't happen, but just in case
+      return Number(val);
+    });
+
+    return paramOrder.reduce((acc, key, index) => {
+      acc[key] = values[index];
+      return acc;
+    }, {} as Record<string, unknown>) as CampingParams;
+  } catch {
+    return null;
+  }
 };
 
 const updateCampingResult = () => {
@@ -1207,18 +1329,203 @@ export const displayCampingCalculator = (node: HTMLElement) => {
   }
   calculator.appendChild(totalDesc);
 
-  // TODO: Settings button
+  // Settings button
+  const settingsButton = document.createElement("button");
+  settingsButton.classList.add("zen-calculator-settings-button");
+
+  const settingsIcon = document.createElement("img");
+  settingsIcon.src = `${ASSETS}/icons/item/item_screw.gif`;
+  const settingsLabel = t(T, "settings");
+  settingsIcon.alt = settingsLabel;
+  settingsButton.setAttribute("aria-label", settingsLabel);
+  settingsButton.appendChild(settingsIcon);
+  calculator.appendChild(settingsButton);
+
+  tooltip({
+    id: "zen-camping-calculator-settings-tooltip",
+    target: settingsButton,
+    content: settingsLabel,
+  });
+
+  // Settings section
+  const settings = document.createElement("div");
+  settings.classList.add("zen-calculator-settings");
+  calculator.appendChild(settings);
+
+  settingsButton.addEventListener("click", () => {
+    settings.classList.toggle("visible");
+  });
+
+  // Slots
+  for (let i = 1; i <= 3; i++) {
+    const slot = document.createElement("button");
+    slot.classList.add("zen-settings-button", "text");
+    slot.textContent = String(i);
+    settings.appendChild(slot);
+
+    if (store["calculator-selected-slot"] === i) {
+      slot.classList.add("active");
+    }
+
+    tooltip({
+      id: `zen-camping-calculator-slot-${i}-tooltip`,
+      target: slot,
+      content: t(T, `slot${i}`),
+    });
+
+    slot.addEventListener("click", () => {
+      // Update active class
+      settings
+        .querySelectorAll(".zen-settings-button.text")
+        .forEach((button) => button.classList.remove("active"));
+      slot.classList.add("active");
+
+      // Update selected slot
+      setStore("calculator-selected-slot", i);
+
+      // Load params from the selected slot
+      const newCode = store["calculator-slots"][i - 1];
+
+      if (!newCode) {
+        // Reset params
+        params.ruin = undefined;
+        updateCampingCalculatorWithCurrentParams(undefined, calculator);
+        return;
+      }
+
+      const newParams = decodeCalculatorCode(newCode);
+      if (newParams) {
+        Object.assign(params, newParams);
+      }
+
+      updateView(calculator);
+    });
+  }
+
+  // Save button
+  const saveButton = document.createElement("button");
+  saveButton.classList.add("zen-settings-button");
+  const saveLabel = t(T, "save");
+  saveButton.setAttribute("aria-label", saveLabel);
+
+  const saveIcon = document.createElement("img");
+  saveIcon.src = `${ASSETS}/forum/done.png`;
+  saveIcon.alt = saveLabel;
+  saveButton.appendChild(saveIcon);
+
+  tooltip({
+    id: "zen-camping-calculator-save-tooltip",
+    target: saveButton,
+    content: saveLabel,
+  });
+
+  saveButton.addEventListener("click", () => {
+    // Save to slot
+    const code = getCalculatorCode(params);
+    setStore(
+      "calculator-slots",
+      store["calculator-slots"].map((slot, index) =>
+        index + 1 === store["calculator-selected-slot"] ? code : slot
+      )
+    );
+    notify(t(T, "saveSuccess"));
+  });
+  settings.appendChild(saveButton);
+
+  // Import button
+  const importButton = document.createElement("button");
+  importButton.classList.add("zen-settings-button");
+  const importLabel = t(T, "import");
+  importButton.setAttribute("aria-label", importLabel);
+
+  const importIcon = document.createElement("img");
+  importIcon.src = `${ASSETS}/icons/small_caret_down.gif`;
+  importIcon.alt = importLabel;
+  importButton.appendChild(importIcon);
+
+  tooltip({
+    id: "zen-camping-calculator-import-tooltip",
+    target: importButton,
+    content: importLabel,
+  });
+
+  importButton.addEventListener("click", () => {
+    // Get code from prompt
+    const code = prompt(t(T, "importPrompt"));
+    if (!code) return;
+
+    const newParams = decodeCalculatorCode(code);
+    if (newParams) {
+      // Update params
+      Object.assign(params, newParams);
+      updateView(calculator);
+
+      // Save to slot
+      setStore(
+        "calculator-slots",
+        store["calculator-slots"].map((slot, index) =>
+          index + 1 === store["calculator-selected-slot"] ? code : slot
+        )
+      );
+      notify(t(T, "importSuccess"));
+      return;
+    }
+
+    // Error
+    notify(t(T, "importError"), Severity.ERROR);
+  });
+  settings.appendChild(importButton);
+
+  // Export button
+  const exportButton = document.createElement("button");
+  exportButton.classList.add("zen-settings-button");
+
+  const exportLabel = t(T, "export");
+  exportButton.setAttribute("aria-label", exportLabel);
+
+  const exportIcon = document.createElement("img");
+  exportIcon.src = `${ASSETS}/icons/small_caret_up.gif`;
+  exportIcon.alt = exportLabel;
+  exportButton.appendChild(exportIcon);
+
+  tooltip({
+    id: "zen-camping-calculator-export-tooltip",
+    target: exportButton,
+    content: exportLabel,
+  });
+
+  exportButton.addEventListener("click", () => {
+    const code = getCalculatorCode(params);
+    navigator.clipboard.writeText(code).then(() => {
+      notify(t(T, "exportSuccess"));
+    });
+  });
+  settings.appendChild(exportButton);
 
   // Reset button
   const resetButton = document.createElement("button");
-  resetButton.classList.add("zen-reset-button");
-  resetButton.textContent = t(T, "reset");
+  resetButton.classList.add("zen-settings-button");
+
+  const resetLabel = t(T, "reset");
+  resetButton.setAttribute("aria-label", resetLabel);
+
+  const resetIcon = document.createElement("img");
+  resetIcon.src = `${ASSETS}/icons/small_prev.gif`;
+  resetIcon.alt = resetLabel;
+  resetButton.appendChild(resetIcon);
+
+  tooltip({
+    id: "zen-camping-calculator-reset-tooltip",
+    target: resetButton,
+    content: resetLabel,
+  });
+
   resetButton.addEventListener("click", () => {
     // Reset params
     params.ruin = undefined;
     updateCampingCalculatorWithCurrentParams(undefined, calculator);
   });
-  calculator.appendChild(resetButton);
+  settings.appendChild(resetButton);
 
   node.after(calculator);
 };
