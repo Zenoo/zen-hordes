@@ -35,6 +35,7 @@ const T: Translations = {
     "shopping-list": "Shopping list",
     "better-reward-titles": "Better reward titles",
     "max-ap-investment": "Max AP investment in buildings",
+    "full-logs": "Show full logs",
     "external-city-links": "External city history links",
     "update-sites": "External sites to update",
     "user-key": "User key",
@@ -49,6 +50,7 @@ const T: Translations = {
     "shopping-list": "Liste de courses",
     "better-reward-titles": "Meilleurs titres de distinctions",
     "max-ap-investment": "PA max investis dans les bâtiments",
+    "full-logs": "Afficher les journaux complets",
     "external-city-links": "Liens externes des historiques des villes",
     "update-sites": "Sites externes à mettre à jour",
     "user-key": "Clé utilisateur",
@@ -63,6 +65,7 @@ const T: Translations = {
     "shopping-list": "Einkaufsliste",
     "better-reward-titles": "Bessere Belohnungstitel",
     "max-ap-investment": "Maximale AP-Investition in Gebäude",
+    "full-logs": "Vollständige Protokolle anzeigen",
     "external-city-links": "Externe Stadtverlauf-Links",
     "update-sites": "Externe Sites aktualisieren",
     "user-key": "Benutzerschlüssel",
@@ -77,6 +80,7 @@ const T: Translations = {
     "shopping-list": "Lista de compras",
     "better-reward-titles": "Mejores títulos de recompensas",
     "max-ap-investment": "Máxima inversión de AP en edificios",
+    "full-logs": "Mostrar registros completos",
     "external-city-links": "Enlaces externos de historiales de ciudades",
     "update-sites": "Sitios externos para actualizar",
     "user-key": "Clave de usuario",
@@ -126,6 +130,7 @@ const Popup = () => {
   const [shoppingList, setShoppingList] = useState(true);
   const [betterRewardTitles, setBetterRewardTitles] = useState(true);
   const [maxApInvestment, setMaxApInvestment] = useState(true);
+  const [fullLogs, setFullLogs] = useState(true);
   const [externalSiteLinks, setExternalSiteLinks] = useState([
     ExternalSiteName.BBH,
   ]);
@@ -176,6 +181,9 @@ const Popup = () => {
         typeof data["max-ap-investment"] === "boolean"
           ? data["max-ap-investment"]
           : true
+      );
+      setFullLogs(
+        typeof data["full-logs"] === "boolean" ? data["full-logs"] : true
       );
       setExternalSiteLinks(
         (data["external-city-links"] as ExternalSiteName[] | undefined) ?? [
@@ -282,6 +290,13 @@ const Popup = () => {
   ) => {
     setMaxApInvestment(event.target.checked);
     await setFeature("max-ap-investment", event.target.checked);
+  };
+
+  const handleFullLogsChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setFullLogs(event.target.checked);
+    await setFeature("full-logs", event.target.checked);
   };
 
   const handleExternalSiteLinksChange =
@@ -464,6 +479,21 @@ const Popup = () => {
           label={
             <Typography variant="body2" sx={{ ml: 0.5 }}>
               {t("max-ap-investment")}
+            </Typography>
+          }
+          sx={{ mx: 1 }}
+        />
+        <FormControlLabel
+          control={
+            <Switch
+              checked={fullLogs}
+              onChange={handleFullLogsChange}
+              size="small"
+            />
+          }
+          label={
+            <Typography variant="body2" sx={{ ml: 0.5 }}>
+              {t("full-logs")}
             </Typography>
           }
           sx={{ mx: 1 }}

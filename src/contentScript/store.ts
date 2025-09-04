@@ -12,13 +12,8 @@ export const store = {
   "enhance-css": true,
   "bank-tracker": true,
   "map-preview": true,
-  "external-city-links": [
-    ExternalSiteName.BBH,
-    ExternalSiteName.FM,
-    ExternalSiteName.GH,
-  ],
+  "external-city-links": [ExternalSiteName.FM, ExternalSiteName.GH],
   "external-sites-to-update": [
-    ExternalSiteName.BBH,
     ExternalSiteName.FM,
     ExternalSiteName.GH,
     ExternalSiteName.MHO,
@@ -29,6 +24,7 @@ export const store = {
   "camping-calculator": true,
   "better-reward-titles": true,
   "max-ap-investment": true,
+  "full-logs": true,
   // Bank tracker state
   "bank-last-items-taken": [] as {
     item: ItemId;

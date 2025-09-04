@@ -247,6 +247,10 @@ export const listenToBackgroundMessages = async () => {
               setStore("max-ap-investment", !!value.enabled);
               break;
             }
+            case "full-logs": {
+              setStore("full-logs", !!value.enabled);
+              break;
+            }
             default: {
               console.error("Unknown feature:", value.feature);
             }

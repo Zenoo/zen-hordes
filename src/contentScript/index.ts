@@ -39,6 +39,7 @@ import {
   autoOpenBagOutside,
   autoOpenBagWhenMovingItems,
   autoSelectGlobalMapSetting,
+  displayFullLogs,
   displayPossibleBuriedRuin,
   displayRuinBuryCount,
   enhanceUI,
@@ -97,6 +98,7 @@ import { insertWiki, openItemInWiki } from "./wiki";
     displayMissingPointsTitlesButton(node);
     prefillApPromptWithMaxAp(node);
     displayPossibleBuriedRuin(node);
+    displayFullLogs(node);
   });
 
   // Actions that need to be performed on hover

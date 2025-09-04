@@ -213,3 +213,10 @@ export const displayPossibleBuriedRuin = (node: HTMLElement) => {
 
   node.parentElement?.appendChild(ruinsList);
 };
+
+export const displayFullLogs = (node: HTMLElement) => {
+  if (!store["full-logs"]) return;
+  if (!node.classList.contains("log-complete-link")) return;
+
+  node.click();
+};
