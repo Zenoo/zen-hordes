@@ -234,11 +234,6 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
   };
   let updateParams: RequestInit = {};
 
-  const position = getPosition();
-  const deadZombies = getDeadZombies();
-  const scoutRadar = getScoutRadar();
-  const scavRadar = getScavRadar();
-
   switch (site) {
     case ExternalSiteName.BBH: {
       updateParams = {
@@ -251,6 +246,10 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
       break;
     }
     case ExternalSiteName.FM: {
+      const position = getPosition();
+      const deadZombies = getDeadZombies();
+      const scoutRadar = getScoutRadar();
+      const scavRadar = getScavRadar();
       const playerList = getPresentPlayers();
 
       // Final request params
@@ -272,6 +271,10 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
       break;
     }
     case ExternalSiteName.GH: {
+      const position = getPosition();
+      const deadZombies = getDeadZombies();
+      const scoutRadar = getScoutRadar();
+      const scavRadar = getScavRadar();
       const items = getDesertItems();
       const scoutLevel = getScoutLevel();
 
