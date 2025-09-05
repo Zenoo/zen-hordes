@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.12.0...zen-hordes-v1.12.1) (2025-09-05)
+
+
+### Bug Fixes
+
+* Optimize data retrieval from MH ([7ea6e7f](https://github.com/Zenoo/zen-hordes/commit/7ea6e7f130f0bfa09f8d3ca642fe2ba31cdb0ada))
+
 ## [1.12.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.11.0...zen-hordes-v1.12.0) (2025-09-05)
 
 
