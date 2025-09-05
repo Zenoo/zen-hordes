@@ -1,4 +1,5 @@
 import { ASSETS } from "../utils/constants";
+import { findItemFromInventory } from "../utils/itemUtils";
 import { tooltip } from "../utils/tooltip";
 import { ExternalSite, ExternalSiteName } from "./externalSites";
 import { store } from "./store";
@@ -43,6 +44,142 @@ const T = {
     settings: "Ajustes",
     updateExternalApps: "Actualizar aplicaciones externas",
   },
+};
+
+// Current game state helpers
+const getDeadZombies = () => {
+  return document.querySelectorAll(".actor.splatter").length;
+};
+
+const getPresentPlayers = () => {
+  return Array.from(
+    document.querySelectorAll(".beyond-escort-off .username[x-user-id]")
+  )
+    .map((el) => +(el.getAttribute("x-user-id") ?? "0"))
+    .filter((id) => id > 0);
+};
+
+const getPosition = () => {
+  const position = {
+    x: 0,
+    y: 0,
+  };
+
+  const displayedPosition = document.querySelector(".map .current-location");
+
+  if (displayedPosition) {
+    const [x, y] = displayedPosition.textContent
+      ?.split(":")
+      .pop()
+      ?.split("/")
+      .map((coord) => Number(coord.trim())) ?? [0, 0];
+    position.x = x ?? 0;
+    position.y = y ?? 0;
+  }
+
+  return position;
+};
+
+const getScoutRadar = () => {
+  const isScout = !!document.querySelector(
+    "hordes-passive-inventory .item img[src^='/build/images/item/item_vest']"
+  );
+
+  const scoutRadar: ScoutRadar = {};
+
+  if (!isScout) {
+    return;
+  }
+
+  document
+    .querySelectorAll(".zone-plane-controls .scout-sense")
+    .forEach((element) => {
+      const direction = Array.from(element.classList)
+        .find((className) => className.startsWith("scout-sense-"))
+        ?.replace("scout-sense-", "");
+      if (direction) {
+        const estimate = element.querySelector("text")?.textContent;
+
+        if (estimate) {
+          scoutRadar[direction as keyof ScoutRadar] = +estimate;
+        }
+      }
+    });
+
+  return scoutRadar;
+};
+
+const getScavRadar = () => {
+  const isScavenger = !!document.querySelector(
+    "hordes-passive-inventory .item img[src^='/build/images/item/item_pelle']"
+  );
+
+  if (!isScavenger) {
+    return;
+  }
+
+  const scavengerDepletedZones: ScavengerDepletedZones = {};
+
+  document
+    .querySelectorAll(".zone-plane-controls .scavenger-sense")
+    .forEach((element) => {
+      const classes = Array.from(element.classList);
+      const direction = classes
+        .find((className) =>
+          className.match(/scavenger-sense-(east|west|north|south)/)
+        )
+        ?.replace("scavenger-sense-", "");
+      if (direction) {
+        const estimate = classes
+          .find((className) => className.match(/scavenger-sense-\d+/))
+          ?.replace("scavenger-sense-", "");
+
+        if (!estimate) return;
+
+        scavengerDepletedZones[
+          direction as keyof typeof scavengerDepletedZones
+        ] = estimate === "0";
+      }
+    });
+
+  return scavengerDepletedZones;
+};
+
+const getDesertItems = () => {
+  // Group by id and broken status
+  const groupedItems: { id: number; broken: boolean; quantity: number }[] = [];
+
+  Array.from(
+    document.querySelectorAll<HTMLElement>(".inventory.desert .item")
+  ).forEach((itemElement) => {
+    const item = findItemFromInventory(itemElement);
+
+    if (!item) {
+      return;
+    }
+
+    const broken = itemElement.classList.contains("broken");
+
+    const existing = groupedItems.find(
+      (g) => g.id === item.numericalId && g.broken === broken
+    );
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      groupedItems.push({ id: item.numericalId, broken, quantity: 1 });
+    }
+  });
+
+  return groupedItems;
+};
+
+const getScoutLevel = () => {
+  const level = document
+    .querySelector(".zone-scout img")
+    ?.getAttribute("src")
+    ?.match(/scout_lv(\d+)\.png/)?.[1];
+
+  return level ? +level : null;
 };
 
 /**
@@ -97,6 +234,11 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
   };
   let updateParams: RequestInit = {};
 
+  const position = getPosition();
+  const deadZombies = getDeadZombies();
+  const scoutRadar = getScoutRadar();
+  const scavRadar = getScavRadar();
+
   switch (site) {
     case ExternalSiteName.BBH: {
       updateParams = {
@@ -109,85 +251,7 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
       break;
     }
     case ExternalSiteName.FM: {
-      // Dead zombies
-      const deadZombies = document.querySelectorAll(".actor.splatter").length;
-
-      // Players present
-      const playerList = Array.from(
-        document.querySelectorAll(".beyond-escort-off .username[x-user-id]")
-      )
-        .map((el) => +(el.getAttribute("x-user-id") ?? "0"))
-        .filter((id) => id > 0);
-
-      // Player position
-      const position = {
-        x: 0,
-        y: 0,
-      };
-
-      const displayedPosition = document.querySelector(
-        ".map .current-location"
-      );
-
-      if (displayedPosition) {
-        const [x, y] = displayedPosition.textContent
-          ?.split(":")
-          .pop()
-          ?.split("/")
-          .map((coord) => Number(coord.trim())) ?? [0, 0];
-        position.x = x ?? 0;
-        position.y = y ?? 0;
-      }
-
-      // Scout information
-      const isScout = !!document.querySelector(
-        "hordes-passive-inventory .item img[src^='/build/images/item/item_vest']"
-      );
-      const scoutRadar: ScoutRadar = {};
-
-      document
-        .querySelectorAll(".zone-plane-controls .scout-sense")
-        .forEach((element) => {
-          const direction = Array.from(element.classList)
-            .find((className) => className.startsWith("scout-sense-"))
-            ?.replace("scout-sense-", "");
-          if (direction) {
-            const estimate = element.querySelector("text")?.textContent;
-
-            if (estimate) {
-              scoutRadar[direction as keyof ScoutRadar] = +estimate;
-            }
-          }
-        });
-
-      // Scavenger information
-      const isScavenger = !!document.querySelector(
-        "hordes-passive-inventory .item img[src^='/build/images/item/item_pelle']"
-      );
-
-      const scavengerDepletedZones: ScavengerDepletedZones = {};
-
-      document
-        .querySelectorAll(".zone-plane-controls .scavenger-sense")
-        .forEach((element) => {
-          const classes = Array.from(element.classList);
-          const direction = classes
-            .find((className) =>
-              className.match(/scavenger-sense-(east|west|north|south)/)
-            )
-            ?.replace("scavenger-sense-", "");
-          if (direction) {
-            const estimate = classes
-              .find((className) => className.match(/scavenger-sense-\d+/))
-              ?.replace("scavenger-sense-", "");
-
-            if (!estimate) return;
-
-            scavengerDepletedZones[
-              direction as keyof typeof scavengerDepletedZones
-            ] = estimate === "0";
-          }
-        });
+      const playerList = getPresentPlayers();
 
       // Final request params
       updateParams = {
@@ -200,20 +264,42 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
           nbrKill: deadZombies,
           x: position.x,
           y: position.y,
-          scoutRadar: isScout ? scoutRadar : undefined,
-          scavRadar: isScavenger ? scavengerDepletedZones : undefined,
+          scoutRadar,
+          scavRadar,
           playerList: playerList.length ? playerList : undefined,
         }),
       };
       break;
     }
     case ExternalSiteName.GH: {
+      const items = getDesertItems();
+      const scoutLevel = getScoutLevel();
+
       updateParams = {
-        method: "GET",
+        method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
           "X-Source": "Zen-Hordes",
         },
+        body: JSON.stringify({
+          key: store["user-key"],
+          x: position.x,
+          y: position.y,
+          zombieKill: deadZombies,
+          balisageLvl: scoutLevel,
+          // campingZone: {
+          //   simple: 0,
+          //   objetDef: 0,
+          // },
+          campingZone: null,
+          estimationZombie: scoutRadar,
+          regenerationZone: scavRadar,
+          items: items.map((item) => ({
+            itemId: item.id,
+            nombre: item.quantity,
+            broken: item.broken,
+          })),
+        }),
       };
       break;
     }

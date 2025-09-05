@@ -31,7 +31,7 @@ export const ExternalSite: Readonly<
     id: 4,
     name: "Gest'Hordes",
     townUrl: "https://gest-hordes2.eragaming.fr/carte/{{townId}}",
-    updateUrl: "https://gest-hordes2.eragaming.fr/majScript?key={{userKey}}",
+    updateUrl: "https://gest-hordes2.eragaming.fr/majScript",
   },
   [ExternalSiteName.MHO]: {
     id: 22,
