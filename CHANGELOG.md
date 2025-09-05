@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.12.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.11.0...zen-hordes-v1.12.0) (2025-09-05)
+
+
+### Features
+
+* Display full logs ([56b2ed3](https://github.com/Zenoo/zen-hordes/commit/56b2ed399cf512510692b633c2e7c262f059e448))
+* Store/Share camping calculator params ([9241101](https://github.com/Zenoo/zen-hordes/commit/9241101f1c0b3413ad81b2ee999183e7f57afc88))
+
+
+### Bug Fixes
+
+* MH v4.0.14 data ([d99538e](https://github.com/Zenoo/zen-hordes/commit/d99538e938008dba8f5a5fb0e4c66a5ed6a62a26))
+* Send additionnal data to GH ([9907f48](https://github.com/Zenoo/zen-hordes/commit/9907f48a1c3e5fb9ae42c9524cc71b911a2fc784))
+
 ## [1.11.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.10.1...zen-hordes-v1.11.0) (2025-08-22)
 
 
