@@ -4489,7 +4489,8 @@
             "label": "Reinigen (Wasser)",
             "meta": [
                 "must_be_outside_or_exploring",
-                "must_have_micropur"
+                "must_have_micropur",
+                "must_not_be_banished"
             ],
             "result": [
                 "consume_micropur",

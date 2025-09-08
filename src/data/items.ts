@@ -12745,7 +12745,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.EN]: "Well fed Labradoodle",
       [Lang.FR]: "Bichon maltais bien nourri",
       [Lang.DE]: "Gut gefüttertes Malteser Hündchen",
-      [Lang.ES]: "Cachorro maltés bien alimentado"
+      [Lang.ES]: "Bichón maltés bien alimentado"
     },
     description: {
       [Lang.EN]: "Now that you’ve given your Labradoodle a tasty treat to boost his strength, he can carry even the heaviest and bulkiest objects. You can’t help but notice the incessant drooling, and he seems poised to jump at you at any moment...",
@@ -14266,7 +14266,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.EN]: "You left your doggie <em>at home</em>... I hope it's not offended.",
       [Lang.FR]: "Vous <em>avez laissé votre bichon chez vous</em>... J'espère qu'il ne s'en offusquera pas.",
       [Lang.DE]: "Du hast dein Hündchen <em>in deinem Haus zurückgelassen</em>... Hoffentlich nimmt es dir das nicht übel.",
-      [Lang.ES]: "<em>Dejaste a tu cachorro en casa</em>... Espero que no se ofenda."
+      [Lang.ES]: "<em>Dejaste a tu perrito en casa</em>... Espero que no se ofenda."
     },
     categories: [ItemCategory.Miscellaneous],
     icon: "item_tamed_pet_gone",
