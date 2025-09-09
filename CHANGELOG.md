@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.12.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.12.1...zen-hordes-v1.12.2) (2025-09-09)
+
+
+### Bug Fixes
+
+* Find camping object improvement count ([c598ed1](https://github.com/Zenoo/zen-hordes/commit/c598ed1c566de1dfab174b5d7e3c819abea04135))
+* MH v4.0.15 data ([d14da85](https://github.com/Zenoo/zen-hordes/commit/d14da85bf11e233428ac4cbf629cee0c00578ff8))
+* Status names ([f33a672](https://github.com/Zenoo/zen-hordes/commit/f33a672f8443fef5202ed4c17260cb565f2a3eb1))
+
 ## [1.12.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.12.0...zen-hordes-v1.12.1) (2025-09-05)
 
 
