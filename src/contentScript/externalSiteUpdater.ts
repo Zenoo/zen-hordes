@@ -183,6 +183,42 @@ const getScoutLevel = () => {
 };
 
 /**
+ * Count the number of logs of a specific template ID for the current day
+ */
+const countLogs = (templateId: number) => {
+  let count = 0;
+  let daysCounter = 0;
+  for (const entry of document.querySelector("#beyond-log .log-content")
+    ?.children ?? []) {
+    if (entry.classList.contains("log-day-header")) {
+      daysCounter++;
+
+      // Only count logs from the current day
+      if (daysCounter > 1) {
+        break;
+      }
+      continue;
+    }
+
+    if (entry.classList.contains("log-entry")) {
+      if (entry.getAttribute("data-template-id") === String(templateId)) {
+        count++;
+      }
+    }
+  }
+
+  return count;
+};
+
+const getCampingManualImprovements = () => {
+  return countLogs(75);
+};
+
+const getCampingObjectImprovements = () => {
+  return countLogs(76);
+};
+
+/**
  * Update the status of an external app in the update button
  */
 const updateAppStatus = (wrapper: Element, status: string) => {
@@ -277,6 +313,8 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
       const scavRadar = getScavRadar();
       const items = getDesertItems();
       const scoutLevel = getScoutLevel();
+      const campingManualImprovements = getCampingManualImprovements();
+      const campingObjectImprovements = getCampingObjectImprovements();
 
       updateParams = {
         method: "POST",
@@ -290,11 +328,10 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
           y: position.y,
           zombieKill: deadZombies,
           balisageLvl: scoutLevel,
-          // campingZone: {
-          //   simple: 0,
-          //   objetDef: 0,
-          // },
-          campingZone: null,
+          campingZone: {
+            simple: campingManualImprovements,
+            objetDef: campingObjectImprovements,
+          },
           estimationZombie: scoutRadar,
           regenerationZone: scavRadar,
           items: items.map((item) => ({
