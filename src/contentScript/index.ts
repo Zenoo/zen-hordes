@@ -53,7 +53,10 @@ import { insertWiki, openItemInWiki } from "./wiki";
 
 (async () => {
   // Do nothing on asset URLs
-  if (location.href.includes("/build/images/")) {
+  if (
+    location.href.includes("/build/images/") ||
+    location.href.includes("/cdn/avatars/")
+  ) {
     return;
   }
 
