@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.12.3](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.12.2...zen-hordes-v1.12.3) (2025-10-07)
+
+
+### Bug Fixes
+
+* Don't load script on avatar urls ([a65b4ec](https://github.com/Zenoo/zen-hordes/commit/a65b4ec25c8d34b62af8c821e545be28d58c5e39))
+* MH v4.0.17 data ([fde2eca](https://github.com/Zenoo/zen-hordes/commit/fde2eca9f31a71a7b89f008700a2c902446f5650))
+
 ## [1.12.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.12.1...zen-hordes-v1.12.2) (2025-09-09)
 
 
