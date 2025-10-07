@@ -442,7 +442,7 @@
     },
     "desc": {
       "fr": "Nombre de petits cachets rigolos que vous avez avalés (ou placés ailleurs…).",
-      "en": "The number of funny little pills you have swallowed (or hidden elsewhere...)..",
+      "en": "The number of funny little pills you have swallowed (or hidden elsewhere...).",
       "de": "Anzahl kleiner lustiger Pillen, die du geschluckt oder sonstwie eingenommen hast.",
       "es": "Cantidad de pequeñas pildoritas de colores que has tragado (o colocado en otra parte...)"
     },
@@ -676,7 +676,7 @@
     },
     "desc": {
       "fr": "Gloire au PMV géant !",
-      "en": "BRDs for everyone! The people demand BRDs",
+      "en": "BRDs for everyone! The people demand BRDs!",
       "de": "Huldigt den Riesigen KVF!",
       "es": "¡Gloria a la gran COSA!"
     },
@@ -1162,7 +1162,7 @@
     },
     "desc": {
       "fr": "Nombre de puissants lance-piles que vous avez fabriqués.",
-      "en": "The number of Battery launchers you have built.",
+      "en": "The number of battery launchers you have built.",
       "de": "Anzahl der Batteriewerfer, die du gebaut hast.",
       "es": "Cantidad de lanza-pilas que has fabricado."
     },
@@ -1809,10 +1809,10 @@
       "es": "Recolector de Almas"
     },
     "desc": {
-      "fr": "Nombres d’âmes de citoyens décédés collectées dans l’Outre-Monde",
-      "en": "The number of dead citizens' souls collected in the World Beyond",
+      "fr": "Nombres d’âmes de citoyens décédés collectées dans l’Outre-Monde.",
+      "en": "The number of dead citizens' souls collected in the World Beyond.",
       "de": "Anzahl der im Ausland gesammelten Seelen verstorbener Bürger",
-      "es": "Cantidad de almas recolectadas de habitantes fallecidos en el Ultramundo"
+      "es": "Cantidad de almas recolectadas de habitantes fallecidos en el Ultramundo."
     },
     "community": false,
     "rare": false
@@ -1990,7 +1990,7 @@
     },
     "desc": {
       "fr": "Hé, tu aurais dû penser à ton savon !",
-      "en": "Hey, you should have thought about your soap!",
+      "en": "Hey, you should have brought your soap!",
       "de": "Hey, du hättest an deine Seife denken sollen!",
       "es": "¡Oye, deberías haber previsto jabón!"
     },
@@ -2008,7 +2008,7 @@
     },
     "desc": {
       "fr": "Nombre de rituels funéraires effectués sur les cadavres des citoyens",
-      "en": "Performed fiery burial rituals on the corpses of citizens",
+      "en": "Performed fiery burial rituals on the corpses of citizens.",
       "de": "Durchgeführte feurige Begräbnisrituale an den Leichen von Bürgern",
       "es": "Realizaron rituales funerarios ardientes con los cuerpos de los habitantes"
     },

@@ -335,7 +335,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Sierra eléctrica (cargada)"
     },
     description: {
-      [Lang.EN]: "With this bad boy, you know there's going to be a wholesale zombie chop-fest. Know, however, that even though you may be victorious, you won't be entirely unscathed... This diabolical machine has been modified to work (somewhat incredibly) with a simple battery !",
+      [Lang.EN]: "With this bad boy, you know there's going to be a wholesale zombie chop-fest. Know, however, that even though you may be victorious, you won't be entirely unscathed... This diabolical machine has been modified to work (somewhat incredibly) with a simple battery!",
       [Lang.FR]: "Avec ça, vous allez faire un vrai massacre. Mais sachez qu'on en ressort peut-être victorieux mais pas tout à fait indemne... Cette machine infernale a été modifiée et fonctionne (chose incroyable) avec une simple pile !",
       [Lang.DE]: "Damit richtest du ein wahres Massaker an. Ob du das aber zu 100% unversehrt überstehst ist eine andere Frage... Diese umgebaute Höllenmaschine funktioniert - man glaubt es kaum - mit einer gewöhnlichen Batterie!",
       [Lang.ES]: "Con eso puedes darte el gusto de masacrar a tus atacantes. Recuerda que puedes salir victorioso pero no siempre ileso... Esta máquina infernal ha sido modificada y funciona (increíblemente) ¡con una sola pila!"
@@ -1723,7 +1723,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Pequeño vibrador (cargado)"
     },
     description: {
-      [Lang.EN]: "It vibrates, tickles and titillates you and even makes you forget all your worries for a short while. (Requires 1 battery).",
+      [Lang.EN]: "It vibrates, tickles, and titillates, making you forget all your worries for a little while (requires 1 battery).",
       [Lang.FR]: "Il vibre, vous titille et vous chatouille et vous fait oublier tous vos soucis pendant quelques instants (nécessite 1 pile par utilisation).",
       [Lang.DE]: "Er vibriert und kitzelt dich am ganzen Körper und lässt dich für einen Augenblick all deine Sorgen vergessen (benötigt 1 Batterie).",
       [Lang.ES]: "Vibra, hace cosquillas y te hace olvidar tus problemas por unos instantes (necesita 1 pila)."
@@ -3332,7 +3332,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Radio casetera apagada"
     },
     description: {
-      [Lang.EN]: "An old transistor radio with a Belle and Sebastian cassette stuck in it. The radio itself is useless as it doesn't pick anything up these days... It's always better to be able to listen to some good music at home than to listen to your neighbours screams as they are devoured by zombies. You just need to find a battery for it...",
+      [Lang.EN]: "An old transistor radio with a Belle and Sebastian cassette stuck in it. The radio itself is useless as it doesn't pick anything up these days... It's always better to be able to listen to some good music at home than to listen to your neighbours' screams as they are devoured by zombies. You just need to find a battery for it...",
       [Lang.FR]: "Un ancien transistor sans pile avec une cassette de blues dedans. La radio elle-même est inutile car on ne capte plus rien de nos jours.. Mais avoir un peu de musique chez soi pour couvrir les hurlements de ses voisins en train de se faire dévorer est toujours appréciable. Reste à trouver une pile.",
       [Lang.DE]: "Ein altes Transistorradio mit Kassettenfach. Es ist ein Blues-Klasette drin. Mit dem Radio wirst du nicht viel anfangen können, da du hier sowieso nichts empfängst, aber du kannst ein bisschen Musik hören. Das übertönt das Geschrei deiner Nachbarn... Jetzt brauchst du nur noch eine Batterie.",
       [Lang.ES]: "Un viejo aparato con un cassette de tangos en el interior. La radio no capta nada, pero sería mejor escuchar a Gardel que a un montón de gente haciéndose devorar. Solo queda encontrar una pila."
@@ -3762,7 +3762,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Sierra eléctrica (apagada)"
     },
     description: {
-      [Lang.EN]: "With this bad boy, you know there's going to be a wholesale zombie chop-fest. Know, however, that even though you may be victorious, you won't be entirely unscathed... This diabolical machine has been modified to work (somewhat incredibly) with a simple battery !",
+      [Lang.EN]: "With this bad boy, you know there's going to be a wholesale zombie chop-fest. Know, however, that even though you may be victorious, you won't be entirely unscathed... This diabolical machine has been modified to work (somewhat incredibly) with a simple battery!",
       [Lang.FR]: "Avec ça, vous allez faire un vrai massacre. Mais sachez qu'on en ressort peut-être victorieux mais pas tout à fait indemne... Cette machine infernale a été modifiée et fonctionne (chose incroyable) avec une simple pile !",
       [Lang.DE]: "Damit richtest du ein wahres Massaker an. Ob du das aber zu 100% unversehrt überstehst ist eine andere Frage... Diese umgebaute Höllenmaschine funktioniert - man glaubt es kaum - mit einer gewöhnlichen Batterie!",
       [Lang.ES]: "Con eso puedes darte el gusto de masacrar a tus atacantes. Recuerda que puedes salir victorioso pero no siempre ileso... Esta máquina infernal ha sido modificada y funciona (increíblemente) ¡con una sola pila!"
@@ -3955,7 +3955,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Devastador (vacío)"
     },
     description: {
-      [Lang.EN]: "The military version of the Battery Launcher 1-ITF. It's massively powerful piston can launch a battery at a phenomenal speed and allow it to pierce pretty much anything. In short, this thing will make a hole the size of a fist in 2 zombies, if they're lined up right...",
+      [Lang.EN]: "The military version of the Battery Launcher 1-ITF. Its massively powerful piston can launch a battery at a phenomenal speed and allow it to pierce pretty much anything. In short, this thing will make a hole the size of a fist in 2 zombies, if they're lined up right...",
       [Lang.FR]: "La version militaire du Lance-Pile 1-PDTG. Son piston surpuissant peut projeter une pile à une vitesse phénoménale et percer à peu près n'importe quelle matière. Cette version peut faire un trou gros comme un poing dans 2 zombies, s'ils sont alignés.",
       [Lang.DE]: "Die militärische Ausführung des Batteriewerfers 1-PDTG. Sein übermächtiger Kolben ist in der Lage, eine Batterie derart schnell zu beschleunigen, dass sie fast jedes Material durchstößt. Das Gerät reißt faustgroße Löcher in bis zu zwei Zombies, vorausgesetzt sie stehen hintereinander.",
       [Lang.ES]: "La versión militar del lanza-pilas 1-PDTG. Su pistón ultrapoderoso puede disparar una pila con una velocidad fenomenal y perforar prácticamente cualquier material. Esta maquinilla puede hacer un agujero del tamaño de un puño en 2 zombies al mismo tiempo, si están alineados."
@@ -3990,7 +3990,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Devastador (cargado)"
     },
     description: {
-      [Lang.EN]: "The military version of the Battery Launcher 1-ITF. It's massively powerful piston can launch a battery at a phenomenal speed and allow it to pierce pretty much anything. In short, this thing will make a hole the size of a fist in 2 zombies, if they're lined up right...",
+      [Lang.EN]: "The military version of the Battery Launcher 1-ITF. Its massively powerful piston can launch a battery at a phenomenal speed and allow it to pierce pretty much anything. In short, this thing will make a hole the size of a fist in 2 zombies, if they're lined up right...",
       [Lang.FR]: "La version militaire du Lance-Pile 1-PDTG. Son piston surpuissant peut projeter une pile à une vitesse phénoménale et percer à peu près n'importe quelle matière. Cette version peut faire un trou gros comme un poing dans 2 zombies, s'ils sont alignés.",
       [Lang.DE]: "Die militärische Ausführung des Batteriewerfers 1-PDGT. Sein übermächtiger Kolben ist in der Lage ein Batterie derart schnell zu beschleunigen, dass sie fast jedes Material durchstößt. Das Gerät reißt faustgroße Löcher in bis zu zwei Zombies, vorausgesetzt sie stehen hintereinander.",
       [Lang.ES]: "La versión militar del lanza-pilas 1-PDTG. Su pistón ultrapoderoso puede disparar una pila con una velocidad fenomenal y perforar prácticamente cualquier material. Esta maquinilla puede hacer un agujero del tamaño de un puño en 2 zombies al mismo tiempo, si están alineados."
@@ -4040,7 +4040,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Devastador incompleto"
     },
     description: {
-      [Lang.EN]: "The military version of the Battery Launcher 1-ITF. It's massively powerful piston can launch a battery at a phenomenal speed and allow it to pierce pretty much anything. In short, this thing will make a hole the size of a fist in 2 zombies, if they're lined up right...",
+      [Lang.EN]: "The military version of the Battery Launcher 1-ITF. Its massively powerful piston can launch a battery at a phenomenal speed and allow it to pierce pretty much anything. In short, this thing will make a hole the size of a fist in 2 zombies, if they're lined up right...",
       [Lang.FR]: "La version militaire du Lance-Pile 1-PDTG. Son piston surpuissant peut projeter une pile à une vitesse phénoménale et percer à peu près n'importe quelle matière. Cette version peut faire un trou gros comme un poing dans 2 zombies, s'ils sont alignés.",
       [Lang.DE]: "Die militärische Ausführung des Batteriewerfers 1-PDTG. Sein übermächtiger Kolben ist in der Lage, eine Batterie derart schnell zu beschleunigen, dass sie fast jedes Material durchstößt. Das Gerät reißt faustgroße Löcher in bis zu zwei Zombies, vorausgesetzt sie stehen hintereinander.",
       [Lang.ES]: "La versión militar del lanza-pilas 1-PDTG. Su pistón ultrapoderoso puede disparar una pila con una velocidad fenomenal y perforar prácticamente cualquier material. Esta maquinilla puede hacer un agujero del tamaño de un puño en 2 zombies al mismo tiempo, si están alineados."
@@ -5134,7 +5134,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Pequeño vibrador (apagado)"
     },
     description: {
-      [Lang.EN]: "It vibrates, tickles and titillates you and even makes you forget all your worries for a short while. (Requires 1 battery).",
+      [Lang.EN]: "It vibrates, tickles, and titillates, making you forget all your worries for a little while (requires 1 battery).",
       [Lang.FR]: "Il vibre, vous titille et vous chatouille et vous fait oublier tous vos soucis pendant quelques instants (nécessite 1 pile par utilisation).",
       [Lang.DE]: "Er vibriert und kitzelt dich am ganzen Körper und lässt dich für einen Augenblick all deine Sorgen vergessen (benötigt 1 Batterie).",
       [Lang.ES]: "Vibra, hace cosquillas y te hace olvidar tus problemas por unos instantes (necesita 1 pila)."
@@ -11016,7 +11016,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Pretzel arenoso"
     },
     description: {
-      [Lang.EN]: "A tasty and edible snack... even after hanging around the ground for months. It tastes as if it was soaked in petrol (unfortunately too little to be used for the tank to the southwest of the city...) Beyond making you full, it can also amuse: it strongly reminds you of the hat of Princess Beatrice's wedding.",
+      [Lang.EN]: "A tasty and edible snack... even after hanging around the ground for months. It tastes as if it was soaked in petrol (unfortunately too little to be used for the tank to the southwest of town...) Beyond making you full, it can also amuse: it strongly reminds you of the hat of Princess Beatrice's wedding.",
       [Lang.FR]: "Une collation savoureuse et comestible... même après avoir traîné partout au sol des mois durant. Il sent comme s'il était imbibé d'essence (malheureusement trop peu pour être utilisé pour le réservoir au sud-ouest de la ville...) Au delà de rendre rassasié, il peut aussi amuser : il vous rappelle fortement le chapeau de mariage de la princesse Béatrice.",
       [Lang.DE]: "Ein leckerer, essbarer Snack... zumindest war es das einmal. Auf dieser Brezel wurde herumgetreten, sie riecht, als würde sie in Benzin getränkt (leider zu wenig, um sie für den Panzer im Südwesten der Stadt zu verwenden - schade) und es scheint, als wäre sie als Hammer oder als Zuhause für einen Holzwurm verwendet zu sein. Auf jedenfall erinnert sie dich jetzt stark an Prinzessin Beatrices Hochzeitshut.",
       [Lang.ES]: "Un delicioso bollo, o al menos lo fue una vez. Fue pisado, lamido y escupido y hasta usado para rascarse la espalda (algunos vellos pegados hacen pensar eso). Las larvas que le rodean se agitan, tan malo no debe ser. Alguna utilidad le encontrarás."
@@ -11496,7 +11496,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Mina antipersonal"
     },
     description: {
-      [Lang.EN]: "We still find mines in the desert, but in general it's more common for careless citizens to step them than zombies.",
+      [Lang.EN]: "We still find mines in the desert, but in general it’s more common for careless citizens to step on them than for zombies.",
       [Lang.FR]: "On trouve encore des mines dans le désert, en général, ce sont plus les citoyens imprudents que les zombies qui marchent dessus.",
       [Lang.DE]: "Irgendwer hat sie mal in der Wüste vergraben, vermutlich um die Zombies aufzuhalten… Bisher haben sie sich nur als effektiv gegen unvorsichtige Mitbürger erwiesen.",
       [Lang.ES]: "Aún quedan minas en el desierto. En general, son más los humanos que los zombies quienes caminan sobre ellas. ¿Quién es el ser inferior en este caso?"
@@ -12697,7 +12697,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Bichón maltés de 3 patas"
     },
     description: {
-      [Lang.EN]: "He follows you everywhere, smelling of wet dog and drooling constantly. And he yaps. Often. Once a day though, you can ask him to take the contents of your rucksack back to the town from anywhere in the desert.",
+      [Lang.EN]: "It follows you everywhere, smells of wet dog, limps, and drools excessively. Oh, and it barks. A lot. You can ask it to take the contents of your rucksack back to town once a day, no matter where you are in the World Beyond.",
       [Lang.FR]: "Il vous suit partout, sent le poil mouillé, claudique et bave abondamment. Et il jappe également. Souvent. Vous pouvez lui demander, une fois par jour, de ramener le contenu de votre sac à dos en ville, depuis n'importe quel coin du désert.",
       [Lang.DE]: "Der kleine kläffende Malteser stinkt nach nassem Fell, humpelt und sabbert ohne Ende. Einmal pro Tag kannst du ihn mit deinem Rucksackinhalt in die Stadt schicken. Dabei spielt es keine Rolle, wo du dich gerade befindest... Dein treuer Begleiter schlägt sich.",
       [Lang.ES]: "Te sigue por todas partes, huele a perro mojado, cojea y babea en abundancia. Y por supuesto, ladra demasiado. Una vez al día puedes pedirle que lleve el contenido de tu mochila al pueblo, desde cualquier lugar del desierto."

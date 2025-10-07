@@ -616,7 +616,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Valla de madera"
     },
     description: {
-      [Lang.EN]: "Wooden fences built upstream of the wall to slow down (at least try) the zombies marching towards the city.",
+      [Lang.EN]: "Wooden fences built upstream of the wall to slow down (at least try) the zombies marching towards the town.",
       [Lang.FR]: "Des clotures en bois construites en amont de la muraille pour ralentir (du moins essayer) les zombies en marche vers la ville.",
       [Lang.DE]: "Holzzäune, die vor der Mauer errichtet wurden, um die auf die Stadt zustürmenden Zombies zu verlangsamen (oder es zumindest zu versuchen).",
       [Lang.ES]: "Vallas de madera construidas río arriba de la muralla para frenar (o al menos intentarlo) a los zombies que marchan hacia el pueblo."
@@ -652,7 +652,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Empalizadas"
     },
     description: {
-      [Lang.EN]: "Reinforcing the barriers and raising them a bit will greatly increase their impact on the city's defenses.",
+      [Lang.EN]: "Reinforcing the barriers and raising them a bit will greatly increase their impact on the town's defenses.",
       [Lang.FR]: "En renforçant les barrières et en les élevant un peu, on augmentera considérablement leur impact sur les défenses de la ville.",
       [Lang.DE]: "Verstärken wir die Barrieren und erhöhen sie ein wenig, um ihre Wirkung auf die Verteidigung der Stadt zu verbessern.",
       [Lang.ES]: "Reforzar las barreras y elevarlas un poco aumentará mucho su impacto en las defensas del pueblo"
@@ -796,7 +796,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Contrachapado"
     },
     description: {
-      [Lang.EN]: "Plywood. You only picked up the thing because you had nothing better to do. You know its useless, but you did it anyway. Lets go...",
+      [Lang.EN]: "Plywood. You only picked up the thing because you had nothing better to do. You know it is useless, but you did it anyway. Let's go...",
       [Lang.FR]: "Du contreplaqué. Vous montez ce truc parce que vous n’avez sûrement rien de mieux à faire. Vous savez que c’est inutile, mais vous le faites quand même. Allons…",
       [Lang.DE]: "Sperrholz. Du hast es nur genommen, weil du wirklich nichts besseres zu tun hattest. Dir war klar, dass es unnütz sein würde, aber das hat dich trotzdem nicht davon abgehalten. Na dann mal los...",
       [Lang.ES]: "Lo colocaste porque no tenías nada mejor que hacer, sabiendo que será inútil, pero insistes. Bueno pues, adelante..."
@@ -832,7 +832,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Muro extra"
     },
     description: {
-      [Lang.EN]: "Protect the heart of the city with an additional wall. You didn't have to be a light to have the idea, but it can't hurt.",
+      [Lang.EN]: "Protect the heart of the town with an extra wall. You don’t have to be a genius to think of it, but it can’t hurt.",
       [Lang.FR]: "Protéger le coeur de la ville avec un mur supplémentaire. Il ne fallait pas être une lumière pour avoir lʼidée, mais ça ne peut pas faire de tort.",
       [Lang.DE]: "Schützt das Herz der Stadt mit einer zusätzlichen Mauer. Man muss keine helle Leuchte sein, um auf diese Idee zu kommen, aber es kann auch nicht schaden.",
       [Lang.ES]: "Protege el corazón del pueblo con un nuevo muro adicional. No hacía falta que fueses un iluminado para tener ese tipo de idea, pero nunca está de más."
@@ -868,7 +868,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Muralla enjabonada"
     },
     description: {
-      [Lang.EN]: "Why hadn't anyone thought of that before? Rather than taking care of your personal hygiene, use your soap to make the walls of the city slippery.",
+      [Lang.EN]: "Why didn’t anyone think of that sooner? Instead of taking care of your personal hygiene, use your soap to make the town walls slippery.",
       [Lang.FR]: "Pourquoi personne nʼy avait pensé avant ? Plutôt que de soigner votre hygiène personnelle, utilisez votre savon pour rendre les parois de la ville glissantes.",
       [Lang.DE]: "Warum ist das nicht schon früher jemandem eingefallen? Anstatt sich um die persönliche Hygiene zu kümmern, benutzen wir Seife, um die Wälle der Stadt rutschig zu machen.",
       [Lang.ES]: "¿Por qué no se le había ocurrido antes a nadie? En lugar de ocuparte de tu higiene personal, utiliza tu jabón para hacer resbaladizas las paredes del pueblo."
@@ -916,7 +916,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Cañón aspirina"
     },
     description: {
-      [Lang.EN]: "Many choose to forget this, but zombies have brains of their own. Sometimes two, if theyre lucky. This is handy: the concentrate projected by this gun has an astonishing capacity for turning brains to sludge. You're just a little afraid that the product will fall on your watchmen... but when you have to go, you have to go!",
+      [Lang.EN]: "Many tend to forget, but zombies do have brains of their own. Sometimes two, if they’re lucky. Conveniently, the concentrate fired by this gun has an astonishing ability to turn brains into sludge. You just worry it might splash onto your watchmen… but when you’ve got to go, you’ve got to go!",
       [Lang.FR]: "Beaucoup l'ignorent, mais les zombies ont un cerveau. Même parfois deux, s'ils sont chanceux. Ça tombe bien : le concentré projeté par ce canon a l'étonnante capacité de faire suinter la cervelle. Vous avez juste un peu peur que le produit ne tombe sur vos veilleurs... mais quand il faut y aller, il faut y aller !",
       [Lang.DE]: "Oft wird vergessen, dass Zombies ein Gehirn haben. Manchmal sogar zwei, wenn sie Glück haben. Trifft sich gut: Das mit dieser Kanone geschossene Konzentrat hat die erstaunliche Fähigkeit, Gehirne in Matsch zu verwandeln. Es könnte allerdings sein, dass sie auf eure Wächter herunterfällt... aber wo gehobelt wird, da fallen Späne.",
       [Lang.ES]: "Muchos prefieren olvidarlo, pero los zombies tienen cerebro propio. A veces dos, si tienen suerte. Esto es práctico: el concentrado que proyecta esta pistola tiene una capacidad asombrosa para convertir los cerebros en barro. Sólo tienes un poco de miedo de que el producto caiga sobre tus centinelas... ¡Pero cuando hay que ir, hay que ir!"
@@ -968,7 +968,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Pulverizador de ácido"
     },
     description: {
-      [Lang.EN]: "Adding some chemicals to the projected water will definitely not improve the pretty face of the zombies in front of the city.",
+      [Lang.EN]: "Adding chemicals to the sprayed water will definitely not improve the zombies’ pretty faces in front of town.",
       [Lang.FR]: "En ajoutant quelques produits chimiques dans l'eau projetée, ça ne va certainement pas améliorer le joli minoi des zombies devant la ville",
       [Lang.DE]: "Das Hinzufügen einiger Chemikalien zum verwendeten Wasser wird das hübsche Gesicht der Zombies vor der Stadt definitiv nicht verschönern.",
       [Lang.ES]: "Añadir algunos productos químicos al agua proyectada definitivamente no mejorará la cara bonita de los zombies frente a al pueblo."
@@ -1056,7 +1056,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Muralla"
     },
     description: {
-      [Lang.EN]: "Putting walls around the city, you had to think about it! This is the beginning of the fortifications.",
+      [Lang.EN]: "Putting walls around town, you had to think about it! This is the beginning of the fortifications.",
       [Lang.FR]: "Mettre des murs autour de la ville, il fallait y penser ! cʼest le début des fortifications.",
       [Lang.DE]: "Mauern um die Stadt zu errichten, darüber müsste man nachdenken! Dies ist der Anfang der Befestigungsanlagen.",
       [Lang.ES]: "Poner murallas alrededor del pueblo, ¡había que pensarlo! Este es el comienzo de las fortificaciones."
@@ -1631,7 +1631,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Red hidráulica"
     },
     description: {
-      [Lang.EN]: "By connecting the entire city with a whole network of pipes, you can build strong water-based defenses in the city... And, who knows, improve your personal hygiene along the way?",
+      [Lang.EN]: "By connecting the whole town with an entire network of pipes, you can build strong water-based defenses around it... And, who knows, improve your personal hygiene along the way?",
       [Lang.FR]: "En reliant l'entièreté de la ville avec tout un réseau de tuyaux, vous pourrez construire de solide défense à base d'eau en ville... Et, qui sait, améliorer votre hygiène personnelle au passage ?",
       [Lang.DE]: "Indem du die ganze Stadt mit einem ganzen Netz von Rohren verbindest, kannst du starke wasserbasierte Verteidigungsanlagen in der Stadt aufbauen... Und wer weiß, vielleicht verbessern Sie nebenbei auch noch die Körperhygiene?",
       [Lang.ES]: "Al conectar toda el pueblo con una red de tuberías, puedes construir fuertes defensas a base de agua en el pueblo... Y, quién sabe, ¿mejorar tu higiene personal por el camino?"
@@ -2258,7 +2258,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Lanza láminas"
     },
     description: {
-      [Lang.EN]: "The Plate Gun fires heavy shards of steel plate straight towards the battlefield. It is butchery the likes of which you hope to never see again, but it is undeniably effective...",
+      [Lang.EN]: "The Plate Gun hurls heavy shards of steel into the battlefield. It’s butchery you pray never to witness again, yet its effectiveness is undeniable.",
       [Lang.FR]: "Projetez de lourdes plaques de tôle en ligne droite dans le champ de bataille. Une boucherie qu’on espère ne jamais revoir, mais c’est efficace.",
       [Lang.DE]: "Der Blechplattenwerfer schleudert schwere Blechplatten aufs Schlachtfeld. Die angerichtete Schweinerei willst du garantiert kein zweites Mal sehen...",
       [Lang.ES]: "Lanza pesadas láminas de metal en línea recta hacia el campo de batalla: una masacre asegurada, muy eficaz."
@@ -2718,7 +2718,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Defensa post-mortem"
     },
     description: {
-      [Lang.EN]: "Bring out your dead! For once, theyre going to be useful. Use them to summarily improve our defences. Each dead citizen brought to the cemetary gives +10 defence points to the town. Note: How and where the victim died makes no nevermind...",
+      [Lang.EN]: "Bring out your dead! For once, they’re going to be useful. Use them to quickly improve our defences. Each dead citizen brought to the cemetery gives +10 defence points to the town. Note: How and where the victim died makes no difference…",
       [Lang.FR]: "Apportez vos morts ! Pour une fois, ils vont se rendre utiles ; profitez de leur existence pour renforcer sommairement vos défenses. Chaque citoyen mort rapporte +10 points de défense à la ville. Note : le lieu et la raison de la mort du citoyen n’ont aucune importance.",
       [Lang.DE]: "Bringt eure Toten! Denn diesmal werden sie sich noch als nützlich erweisen. Macht das beste aus ihnen und verbessert damit gemeinsam eure Verteidigung. Jeder zum Friedhof gebrachte tote Mitbürger bringt +10 Verteidigungspunkte für die Gesamtverteidigung der Stadt. Hinweis: Es spielt keine Rolle, wo und woran ein Mitbürger verstarb.",
       [Lang.ES]: "¡Traed aquí todos vuestros muertos! Usad sus cuerpos para reforzar las defensas. Cada cadáver da +10 puntos de defensa al pueblo. ¡Ja! Algunos compañeros son más útiles muertos que vivos."
@@ -4225,7 +4225,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Torre de guardia"
     },
     description: {
-      [Lang.EN]: "The installation of a large tower dedicated to the Guardians in the middle of the Battlements to improve their efficiency. From now on, the heroes Guardians will be able to spend there during their rest times to improve the defenses of the city against a little of their energy.",
+      [Lang.EN]: "The construction of a large tower dedicated to the Guardians in the middle of the Battlements to improve their effectiveness. From now on, Guardian heroes will be able to stop there during their rest time to strengthen the town's defenses in exchange for a bit of their energy.",
       [Lang.FR]: "L'installation d'une grande tour dédiée aux Gardiens au milieu du Chemin de Ronde pour en améliorer lʼefficacité. Désormais, les héros Gardiens pourront y passer durant leurs temps de repos pour améliorer les défenses de la ville contre un peu de leur énergie.",
       [Lang.DE]: "Die Installation eines großen Turms, der den Wächtern gewidmet ist, in der Mitte der Festungsmauern, um ihre Effizienz zu verbessern. Von nun an werden die heldenhaften Wächter in der Lage sein, dort während ihrer Ruhezeiten die Verteidigung der Stadt gegen ein wenig von ihrer Energie zu verbessern.",
       [Lang.ES]: "La instalación de una gran torre dedicada a los Guardianes en medio de las Almenas para mejorar su eficacia. A partir de ahora, los héroes Guardianes podrán pasar allí sus horas de descanso para mejorar las defensas del pueblo con un poco de esfuerzo."
@@ -4269,7 +4269,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Retiro de los Exploradores"
     },
     description: {
-      [Lang.EN]: "The Scouts have always fascinated you and have never revealed what they hide under their hoods... But perhaps it is better to leave them alone. Thanks to this special lair, they can finally plan their route without having to leave the city, having better marked areas will brings more luck for searchs in the desert.",
+      [Lang.EN]: "The Scouts have always fascinated you and have never revealed what they hide under their hoods... But perhaps it is better to leave them alone. Thanks to this special lair, they can finally plan their route without having to leave the town, having better marked areas should bring more luck to desert exploration.",
       [Lang.FR]: "Les Éclaireurs vous ont toujours fasciné et n'ont jamais révélé ce qu'ils cachent sous leur capuche... Mais peut-être vaut-il mieux les laisser tranquilles. Grâce à ce repaire spécial, ils peuvent enfin planifier leur trajet sans avoir à quitter la ville, voir des zones mieux repérées apportera plus de chance pour les fouilles dans le désert..",
       [Lang.DE]: "Die Aufklärer haben dich schon immer fasziniert und nie verraten, was sie unter ihrer Haube verbergen... Aber vielleicht ist es das Beste, sie in Ruhe zu lassen. Mit diesem speziellen Rückzugsort können sie sich endlich an die Arbeit machen, ohne die Stadt verlassen zu müssen, in besser kartographierten Zonen der Wüste ist es leichter, Gegenstände zu finden.",
       [Lang.ES]: "Los exploradores siempre te han fascinado y nunca han revelado lo que esconden bajo sus capuchas... Pero tal vez sea mejor dejarlos solos. Gracias a este escondite especial, por fin pueden planear su ruta sin tener que salir del pueblo."
@@ -5552,7 +5552,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Estatua del cuervo"
     },
     description: {
-      [Lang.EN]: "Glory to the Crow! Glory be to their lenience and benevolence! Deliver us from spam and pardon our trolling as we forgive those who have trolled against us. This wonder shines by the light of its uselessness alone: its construction earns a rare distinction for all the citizens still in town.",
+      [Lang.EN]: "Glory to the Crow! Glory be to their lenience and benevolence! Deliver us from spam and pardon our trolling as we forgive those who have trolled against us. This wonder shines by the light of its uselessness alone: its construction earns a rare distinction for all citizens still alive.",
       [Lang.FR]: "Gloire au Corbeau ! Gloire à ta mansuétude et à ton aura bienfaisante ! Délivre-nous du spam et pardonne nos trolls comme nous pardonnons à ceux que nous avons trollés. Cette Merveille brille par son inutilité la plus totale : sa construction rapporte une distinction rarissime à tous les citoyens en ville.",
       [Lang.DE]: "Huldigt den Raben! Gelobt sei deine Milde und deine erhabene Austrahlung! Befreie uns vom Spam und vergib uns unsere Trollenbeiträge so wie auch wir vergeben anderen Trollen. Dieses Wunderwerk strahlt im Glanze seiner Nutzlosigkeit: Seine Errichtung bringt allen Bürgern der Stadt eine seltene Auszeichnung ein.",
       [Lang.ES]: "¡Gloria al Cuervo! Gloria a su benevolencia. Líbranos del spam y perdona a los trolls como nosotros perdonamos a quienes nos han trolleado. Esta maravilla brilla por su gran inutilidad, pero su construcción otorga una Distinción rarísima a todos los habitantes del pueblo."
@@ -6510,7 +6510,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Pueblo subterráneo"
     },
     description: {
-      [Lang.EN]: "By burying a large part of the city under the ground, you will free up new space for the defenses above your heads. Look on the bright side, you will be protected from the sun.",
+      [Lang.EN]: "By burying a large part of the town under the ground, you will free up new space for the defenses above your heads. Look on the bright side, you will be safe from the sun.",
       [Lang.FR]: "En enterrant une grande partie de la ville sous le sol, vous libèrerez un nouvel espace pour les défenses au-dessus de vos têtes. Voyez le bon côté des choses, vous serez protégés du soleil.",
       [Lang.DE]: "Indem wir einen großen Teil der Stadt unter der Erde vergraben, schaffen wir neuen Platz für die Verteidigungsanlagen über unseren Köpfen. Sehr es positiv: wir sind dann vor der Sonne geschützt.",
       [Lang.ES]: "Al enterrar gran parte del pueblo bajo tierra, liberarás nuevo espacio para las defensas sobre tus cabezas. Míralo por el lado bueno: estarás protegido del sol."

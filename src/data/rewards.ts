@@ -1951,7 +1951,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
       [Lang.ES]: "Estimulantes"
     },
     description: {
-      [Lang.EN]: "The number of funny little pills you have swallowed (or hidden elsewhere...)..",
+      [Lang.EN]: "The number of funny little pills you have swallowed (or hidden elsewhere...).",
       [Lang.FR]: "Nombre de petits cachets rigolos que vous avez avalés (ou placés ailleurs…).",
       [Lang.DE]: "Anzahl kleiner lustiger Pillen, die du geschluckt oder sonstwie eingenommen hast.",
       [Lang.ES]: "Cantidad de pequeñas pildoritas de colores que has tragado (o colocado en otra parte...)"
@@ -2981,7 +2981,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
       [Lang.ES]: "Maravilla: gran COSA"
     },
     description: {
-      [Lang.EN]: "BRDs for everyone! The people demand BRDs",
+      [Lang.EN]: "BRDs for everyone! The people demand BRDs!",
       [Lang.FR]: "Gloire au PMV géant !",
       [Lang.DE]: "Huldigt den Riesigen KVF!",
       [Lang.ES]: "¡Gloria a la gran COSA!"
@@ -2993,7 +2993,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
       {
         name: {
           [Lang.DE]: "Huldigt den riesigen KVF!",
-          [Lang.EN]: "BRDs for everyone! The people demand BRDs",
+          [Lang.EN]: "BRDs for everyone! The people demand BRDs!",
           [Lang.FR]: "Gloire au PMV !",
           [Lang.ES]: "¡Gloria a la COSA!"
         },
@@ -4958,7 +4958,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
       [Lang.ES]: "Super lanzapilas"
     },
     description: {
-      [Lang.EN]: "The number of Battery launchers you have built.",
+      [Lang.EN]: "The number of battery launchers you have built.",
       [Lang.FR]: "Nombre de puissants lance-piles que vous avez fabriqués.",
       [Lang.DE]: "Anzahl der Batteriewerfer, die du gebaut hast.",
       [Lang.ES]: "Cantidad de lanza-pilas que has fabricado."
@@ -6622,10 +6622,10 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
       [Lang.ES]: "Recolector de Almas"
     },
     description: {
-      [Lang.EN]: "The number of dead citizens' souls collected in the World Beyond",
-      [Lang.FR]: "Nombres d’âmes de citoyens décédés collectées dans l’Outre-Monde",
+      [Lang.EN]: "The number of dead citizens' souls collected in the World Beyond.",
+      [Lang.FR]: "Nombres d’âmes de citoyens décédés collectées dans l’Outre-Monde.",
       [Lang.DE]: "Anzahl der im Ausland gesammelten Seelen verstorbener Bürger",
-      [Lang.ES]: "Cantidad de almas recolectadas de habitantes fallecidos en el Ultramundo"
+      [Lang.ES]: "Cantidad de almas recolectadas de habitantes fallecidos en el Ultramundo."
     },
     icon: "r_collec2",
     community: false,
@@ -6903,7 +6903,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
       [Lang.ES]: "Maravilla: Baños Termales de Oro Azul"
     },
     description: {
-      [Lang.EN]: "Hey, you should have thought about your soap!",
+      [Lang.EN]: "Hey, you should have brought your soap!",
       [Lang.FR]: "Hé, tu aurais dû penser à ton savon !",
       [Lang.DE]: "Hey, du hättest an deine Seife denken sollen!",
       [Lang.ES]: "¡Oye, deberías haber previsto jabón!"
@@ -6960,7 +6960,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
       [Lang.ES]: "Cremación de cuerpos"
     },
     description: {
-      [Lang.EN]: "Performed fiery burial rituals on the corpses of citizens",
+      [Lang.EN]: "Performed fiery burial rituals on the corpses of citizens.",
       [Lang.FR]: "Nombre de rituels funéraires effectués sur les cadavres des citoyens",
       [Lang.DE]: "Durchgeführte feurige Begräbnisrituale an den Leichen von Bürgern",
       [Lang.ES]: "Realizaron rituales funerarios ardientes con los cuerpos de los habitantes"

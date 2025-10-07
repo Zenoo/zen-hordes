@@ -1652,7 +1652,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       [Lang.ES]: "Muebles Kiela"
     },
     description: {
-      [Lang.EN]: "PI-KEYA: These enormous stores used to be in every city (always rather annoyingly situated on the outskirts). They specialised in the manufacture and sale of cheap furniture, usually with one bolt / screw / fastener missing. It is said that the poor quality of their products was one of the reasons for society going to ruin...",
+      [Lang.EN]: "PI-KEYA: These enormous stores used to be in every town (always rather annoyingly situated on the outskirts). They specialised in the manufacture and sale of cheap furniture, usually with one bolt, screw or fastener missing. It is said that the poor quality of their products was one of the reasons for society to fall into ruin...",
       [Lang.FR]: "La chaîne de magasins Kiela était autrefois spécialisée dans la fabrication et la vente de meubles bon marché. On dit que la piètre qualité de leurs produits serait l’une des raisons qui a poussé le monde à sa perte…",
       [Lang.DE]: "E-KEA: Diese riesigen Geschäfte gab es früher in jeder Stadt (immer ziemlich ärgerlich am Stadtrand gelegen). Sie spezialisierten sich auf die Herstellung und den Verkauf von Billigmöbeln, denen meist ein Bolzen / Schraube / Verbindungselement fehlte. Es wird gesagt, dass die schlechte Qualität ihrer Produkte einer der Gründe für den Niedergang der Gesellschaft war...",
       [Lang.ES]: "Estas enormes tiendas solían estar en todos los pueblos (siempre a las afueras, en el peor lugar posible). Se especializaron en la fabricación y venta de muebles baratos, que en su mayoría carecían de tornillos. Se dice que la mala calidad de sus productos fue una de las razones del declive de la sociedad..."
@@ -2812,7 +2812,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       [Lang.ES]: "Tanque averiado"
     },
     description: {
-      [Lang.EN]: "This military vehicle is like the metaphorical food can. The soldier is inside, playing the role of a sardine, and a hundred zombies outside are playing the hungry citizen. The citizen wins...",
+      [Lang.EN]: "This military vehicle is like a metaphorical food can. The soldier inside plays the role of a sardine in the hands of a hundred hungry zombies… By the end, there is nothing left of the sardine.",
       [Lang.FR]: "Ce char militaire est un peu une métaphore de la <strong>boîte de conserve</strong>, avec le soldat dans le rôle de la sardine et la centaine de zombies dans le rôle du citoyen affamé. C’est le citoyen qui a gagné.",
       [Lang.DE]: "Dieses militärische Vehikel ist wie die metaphorische Konservendose. Der Soldat ist drinnen und spielt die Rolle einer Sardine, und hundert Zombies draußen spielen den hungrigen Bürger. Der Bürger gewinnt...",
       [Lang.ES]: "Metafóricamente sería: <strong>Una lata de sardinas</strong> en manos de una centena de zombies hambrientos. Y de la sardina no quedó nada..."
@@ -2901,7 +2901,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
       [Lang.ES]: "Hostal «Hollywood Inn»"
     },
     description: {
-      [Lang.EN]: "You ask yourself what kind of person would enjoy spending a night in a shabby hole like this motel. No doubt some sleazy sales rep whose dodgy past will catch up with him sooner or later. I really must check out room 215, you think to yourself, without really knowing why'.",
+      [Lang.EN]: "You ask yourself what kind of person would enjoy spending a night in a shabby hole like this motel. No doubt some sleazy sales rep whose dodgy past will catch up with him sooner or later. \"I really must check out room 215\", you think to yourself, without really knowing why.",
       [Lang.FR]: "Vous vous demandez quel genre de personne pouvait bien venir passer sa nuit dans un trou aussi paumé que ce motel miteux. Sans doute le genre : représentant pour une obscure société de livraison fuyant un passé qui le rattrapera tôt ou tard. « Faudra que je pense à vérifier la chambre 215, au cas où », pensez-vous, sans trop savoir pourquoi.",
       [Lang.DE]: "Beim Anblick des Gebäudes stellst du dir die Frage, wer in diesem schäbigen Motel früher übernachtet hat. Bilder und Szenen verschiedener Roadmovies schießen dir durch den Kopf: Thelma&Louise, Natural Born Killers... Du denkst dir: 'Vielleicht sollte ich als Erstes Zimmer 215 kontrollieren. Man weiß ja nie...'.",
       [Lang.ES]: "Te preguntas a quién se le podría ocurrir venir a alojarse en un hostal tan lejano y miserable... Mirando el registro de huéspedes, sí hay alguien: Un tal Valedres, en la habitación 215. Tal vez valga la pena explorar..."
