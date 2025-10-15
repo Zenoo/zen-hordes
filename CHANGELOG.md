@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.12.4](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.12.3...zen-hordes-v1.12.4) (2025-10-15)
+
+
+### Bug Fixes
+
+* Remove unused import ([57bcf9c](https://github.com/Zenoo/zen-hordes/commit/57bcf9ca9ac2ded44370bfe5205aff7f0ad75ec8))
+* Thirst/Dehydration handler in item action effects ([1e482d6](https://github.com/Zenoo/zen-hordes/commit/1e482d60e46f06652c4001d43d2606a42bbc1530))
+
 ## [1.12.3](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.12.2...zen-hordes-v1.12.3) (2025-10-07)
 
 
