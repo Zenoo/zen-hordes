@@ -37,6 +37,15 @@ export const exportActionEffects = async () => {
         return;
       }
 
+      // morphStatus exception
+      if (method === "morphsStatus") {
+        acc[effectName] = {
+          type: "addsStatus",
+          data: params?.split(",").pop()?.trim() ?? "",
+        };
+        return;
+      }
+
       // String array
       if (params?.includes("[")) {
         if (acc[effectName]) {

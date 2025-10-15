@@ -589,6 +589,12 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
     if (action?.meta.includes("role_shaman")) {
       conditions.push(ItemActionConditionEnum.Shaman);
     }
+    if (action?.meta.includes("drink_tl1")) {
+      conditions.push(ItemActionConditionEnum.Thirsty);
+    }
+    if (action?.meta.includes("drink_tl2")) {
+      conditions.push(ItemActionConditionEnum.Dehydrated);
+    }
 
     return conditions;
   };

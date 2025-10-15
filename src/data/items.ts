@@ -31,9 +31,33 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.AP,
             value: 6
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [
+          ItemActionConditionEnum.Thirsty
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
           },
           {
             type: ItemActionEffectType.RemoveStatus,
+            value: "thirst1"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [
+          ItemActionConditionEnum.Dehydrated
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
             value: "thirst1"
           }
         ]
@@ -3299,7 +3323,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       {
         type: ItemActionType.Drink,
         conditions: [
-          
+          ItemActionConditionEnum.Thirsty
         ],
         effects: [
           {
@@ -3316,6 +3340,30 @@ export const items: Readonly<Record<ItemId, Item>> = {
           },
           {
             type: ItemActionEffectType.RemoveStatus,
+            value: "thirst1"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [
+          ItemActionConditionEnum.Dehydrated
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.GetReward,
+            value: "r_drug_#00"
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "clean"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "drugged"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
             value: "thirst1"
           }
         ]
@@ -8087,10 +8135,42 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_can_empty_#00"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [
+          ItemActionConditionEnum.Thirsty
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
           },
           {
             type: ItemActionEffectType.RemoveStatus,
             value: "thirst1"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_can_empty_#00"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [
+          ItemActionConditionEnum.Dehydrated
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "thirst1"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_can_empty_#00"
           }
         ]
       },
@@ -8158,10 +8238,42 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_can_1_#00"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [
+          ItemActionConditionEnum.Thirsty
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
           },
           {
             type: ItemActionEffectType.RemoveStatus,
             value: "thirst1"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_can_1_#00"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [
+          ItemActionConditionEnum.Dehydrated
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "thirst1"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_can_1_#00"
           }
         ]
       },
@@ -8217,10 +8329,42 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CreateItem,
             value: "water_can_2_#00"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [
+          ItemActionConditionEnum.Thirsty
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
           },
           {
             type: ItemActionEffectType.RemoveStatus,
             value: "thirst1"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_can_2_#00"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [
+          ItemActionConditionEnum.Dehydrated
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "thirst1"
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "water_can_2_#00"
           }
         ]
       },
@@ -8623,9 +8767,33 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.AP,
             value: 6
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [
+          ItemActionConditionEnum.Thirsty
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
           },
           {
             type: ItemActionEffectType.RemoveStatus,
+            value: "thirst1"
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [
+          ItemActionConditionEnum.Dehydrated
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
             value: "thirst1"
           }
         ]
@@ -13304,10 +13472,44 @@ export const items: Readonly<Record<ItemId, Item>> = {
             type: ItemActionEffectType.AddStatus,
             value: "tg_shaman_immune",
             odds: 98
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [
+          ItemActionConditionEnum.Thirsty
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 6
           },
           {
             type: ItemActionEffectType.RemoveStatus,
             value: "thirst1"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_shaman_immune",
+            odds: 98
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Drink,
+        conditions: [
+          ItemActionConditionEnum.Dehydrated
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "thirst1"
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "tg_shaman_immune",
+            odds: 98
           }
         ]
       },
@@ -14739,6 +14941,12 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "\"Mach den Sprung... genieße eine Quantum!\" Der Slogan auf der Flasche ist verlockend, die leuchtend blaue Farbe jedoch nicht...",
       [Lang.ES]: "\"¡Atrévete... disfruta de un Quantum!\" El eslogan de la botella es tentador, pero el color azul fosforescente te hace dudar..."
     },
+    info: {
+      [Lang.EN]: "Will not reset the step counter (if you walk 6 steps in the desert and take a {{item:quantum}} Quantum Energy. You will still get {{status:thirst1}} Thirsty at the 11th step).",
+      [Lang.FR]: "Ne réinitialisera pas le compteur de pas (si vous marchez 6 pas dans le désert et que vous prenez un {{item:quantum}} Quantum Energy. Vous aurez toujours {{status:thirst1}} Soif au 11ème pas).",
+      [Lang.DE]: "Setzt den Schrittzähler nicht zurück (wenn Sie 6 Schritte in der Wüste gehen und ein {{item:quantum}} Quantum Energy nehmen. Sie werden immer {{status:thirst1}} Durstig beim 11. Schritt).",
+      [Lang.ES]: "No reiniciará el contador de pasos (si caminas 6 pasos en el desierto y tomas un {{item:quantum}} Quantum Energy. Aún tendrás {{status:thirst1}} Sed en el 11º paso)."
+    },
     categories: [ItemCategory.Food],
     icon: "item_quantum",
     decoration: 0,
@@ -14786,6 +14994,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.EP,
             value: 8
+          },
+          {
+            type: ItemActionEffectType.AddStatus,
+            value: "thirst2"
           }
         ]
       }

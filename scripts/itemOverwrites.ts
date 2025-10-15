@@ -67,35 +67,13 @@ export const overwriteItemData = (items: Record<string, Item>) => {
         break;
       }
       case "quantum_#00": {
-        // Use
-        item.actions.push(
-          ...[
-            {
-              type: ItemActionType.Use,
-              conditions: [ItemActionConditionEnum.Thirsty],
-              effects: [
-                {
-                  type: ItemActionEffectType.EP,
-                  value: 8,
-                },
-                {
-                  type: ItemActionEffectType.AddStatus,
-                  value: "thirst2",
-                },
-              ],
-            },
-            {
-              type: ItemActionType.Use,
-              conditions: [ItemActionConditionEnum.Dehydrated],
-              effects: [
-                {
-                  type: ItemActionEffectType.EP,
-                  value: 8,
-                },
-              ],
-            },
-          ]
-        );
+        // info
+        item.info = {
+          en: "Will not reset the step counter (if you walk 6 steps in the desert and take a {{item:quantum}} Quantum Energy. You will still get {{status:thirst1}} Thirsty at the 11th step).",
+          fr: "Ne réinitialisera pas le compteur de pas (si vous marchez 6 pas dans le désert et que vous prenez un {{item:quantum}} Quantum Energy. Vous aurez toujours {{status:thirst1}} Soif au 11ème pas).",
+          de: "Setzt den Schrittzähler nicht zurück (wenn Sie 6 Schritte in der Wüste gehen und ein {{item:quantum}} Quantum Energy nehmen. Sie werden immer {{status:thirst1}} Durstig beim 11. Schritt).",
+          es: "No reiniciará el contador de pasos (si caminas 6 pasos en el desierto y tomas un {{item:quantum}} Quantum Energy. Aún tendrás {{status:thirst1}} Sed en el 11º paso).",
+        };
         break;
       }
       case "soccer_#00": {

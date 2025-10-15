@@ -681,11 +681,8 @@
     "data": "'thirst1'"
   },
   "drink_no_ap": {
-    "type": "morphsStatus",
-    "data": [
-      null,
-      null
-    ]
+    "type": "addsStatus",
+    "data": "'thirst1'"
   },
   "terrorize": {
     "type": "addsStatus",
@@ -902,11 +899,8 @@
     "data": "'thirst1'"
   },
   "get_dehydrated": {
-    "type": "morphsStatus",
-    "data": [
-      null,
-      null
-    ]
+    "type": "addsStatus",
+    "data": "'thirst2'"
   },
   "status_flag_today": {
     "type": "addsStatus",
