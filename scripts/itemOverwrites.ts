@@ -1,12 +1,7 @@
 // These overwrites are needed since
 // the source does not contain accurate data
 
-import {
-  Item,
-  ItemActionConditionEnum,
-  ItemActionEffectType,
-  ItemActionType,
-} from "./generateData";
+import { Item, ItemActionEffectType, ItemActionType } from "./generateData";
 
 const survivalistBookChances = [
   { period: "1-4", odds: 100 },
