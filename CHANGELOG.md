@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.12.5](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.12.4...zen-hordes-v1.12.5) (2025-10-23)
+
+
+### Bug Fixes
+
+* Camping zone overflow issue when opening the ruin list ([6c9c3e2](https://github.com/Zenoo/zen-hordes/commit/6c9c3e2e40d26e628abffee036cb26856136c754))
+* Display camouflaged status depending on player job ([141ecda](https://github.com/Zenoo/zen-hordes/commit/141ecda73455f1ae0a519712afb6aa4f44dfecf1))
+* Move FF only style inside the main style file ([5896d7f](https://github.com/Zenoo/zen-hordes/commit/5896d7ffc90243c0d12e757b713b3ee64c60a845))
+* Scrollbar padding to not overlay content on FF ([cdd4d32](https://github.com/Zenoo/zen-hordes/commit/cdd4d324cb6390301cbcc91fee1203dd007ad145))
+
 ## [1.12.4](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.12.3...zen-hordes-v1.12.4) (2025-10-15)
 
 
