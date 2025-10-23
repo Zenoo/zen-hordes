@@ -1,5 +1,3 @@
-@import "firefox-fixes.less";
-
 @priority-high: #FF4C4C;
 @priority-medium: #FFD700;
 @priority-low: #4CAF50;
@@ -1247,6 +1245,10 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
       &[data-param="job"] {
         .crossed::before {
           right: 20px;
+        }
+
+        &.hidden {
+          display: none;
         }
 
         .zen-ruin-selector,

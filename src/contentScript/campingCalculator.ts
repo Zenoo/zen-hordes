@@ -819,6 +819,16 @@ const updateView = (calculator: HTMLElement) => {
           jobIcon.setAttribute("aria-label", jobTitle);
         }
       }
+
+      // Update camouflaged visibility based on job
+      if (paramKey === "camouflaged") {
+        const job = getJob();
+        if (job !== Job.Scout) {
+          li.classList.add("hidden");
+        } else {
+          li.classList.remove("hidden");
+        }
+      }
     }
   });
 
@@ -928,7 +938,7 @@ const createLine = (
       // Don't display camouflaged if not scout
       const job = getJob();
       if (key === "camouflaged" && job !== Job.Scout) {
-        return;
+        li.classList.add("hidden");
       }
 
       const icons = document.createElement("div");
@@ -1642,6 +1652,8 @@ export const updateCampingCalculatorWithCurrentParams = (
 
   // Job
   params.job = getJob();
+
+  console.log("current job:", Job[params.job]);
 
   const calculatorElements = calculator
     ? [calculator]
