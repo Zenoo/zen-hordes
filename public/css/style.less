@@ -121,14 +121,14 @@ body.zen-enhanced {
     padding-bottom: 5px;
     overflow: unset;
 
-    &>input+label {
+    &>input {
       &:checked {
-        &+.zone-camp-info {
+        &+label+.zone-camp-info {
           overflow: unset;
         }
       }
 
-      &+.zone-camp-info {
+      &+label+.zone-camp-info {
         overflow: hidden;
       }
     }
