@@ -1537,3 +1537,17 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
     }
   }
 }
+
+// Firefox fixes
+@supports (-moz-appearance: none) {
+
+  .zen-ruin-selector,
+  .zen-job-selector {
+    padding-right: 12px;
+
+    .zen-ruin-close,
+    .zen-job-close {
+      right: 12px;
+    }
+  }
+}
