@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.7](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.12.6...zen-hordes-v1.12.7) (2025-10-26)
+
+
+### Bug Fixes
+
+* Scary mask as an event item ([d87e35c](https://github.com/Zenoo/zen-hordes/commit/d87e35c26e19ccd1efa0fbc18b2ebb4a2eea9ed0))
+
 ## [1.12.6](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.12.5...zen-hordes-v1.12.6) (2025-10-26)
 
 
