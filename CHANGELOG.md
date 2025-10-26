@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.12.6](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.12.5...zen-hordes-v1.12.6) (2025-10-26)
+
+
+### Bug Fixes
+
+* MH v4.1.0 data ([cb4dfa8](https://github.com/Zenoo/zen-hordes/commit/cb4dfa8a589777deed18e3e5372e388feb6425bb))
+* Remove logs ([328d3eb](https://github.com/Zenoo/zen-hordes/commit/328d3eb95367eeda648661293b4d445a493577a3))
+
 ## [1.12.5](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.12.4...zen-hordes-v1.12.5) (2025-10-23)
 
 
