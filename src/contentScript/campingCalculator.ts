@@ -1653,8 +1653,6 @@ export const updateCampingCalculatorWithCurrentParams = (
   // Job
   params.job = getJob();
 
-  console.log("current job:", Job[params.job]);
-
   const calculatorElements = calculator
     ? [calculator]
     : document.querySelectorAll<HTMLElement>(".zen-camping-calculator");

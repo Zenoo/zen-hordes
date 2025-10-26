@@ -50,6 +50,9 @@ import { insertWiki, openItemInWiki } from "./wiki";
 // ex: drag & drop, images, etc
 // TODO: Add a note-taking feature
 // TODO: Add distinctions linked to some action tooltips (throw out someone, etc)
+// TODO: Analyze citizen registers to compare with clairvoyance results
+// TODO: Display ruin stats in wiki + outside when on a ruin
+// TODO: Display ruin drops on ruin search button hover
 
 (async () => {
   // Do nothing on asset URLs
