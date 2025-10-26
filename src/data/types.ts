@@ -384,7 +384,8 @@ export enum ItemId {
   MOLDY_FOOD_SUBPART = "moldy_food_subpart_#00",
   MOLDY_FOOD_SPICY = "moldy_food_spicy_#00",
   MOLDY_FOOD_PART = "moldy_food_part_#00",
-  MOLDY_FOOD = "moldy_food_#00"
+  MOLDY_FOOD = "moldy_food_#00",
+  SCARY_MASK = "scary_mask_#00"
 };
 
 export enum DropLocation {

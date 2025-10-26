@@ -6263,7 +6263,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "A mini-catapult placed on the ramparts and garnished with explosive grapefruits, all you have to do is wait and shoot! By working on it a little, we could automate it to improve its performance.",
-      [Lang.FR]: "Une mini-catapulte placée sur les remparts et garnies de pamplemousses explosifs, il nʼy a plus qu'à attendre et à tirer ! En y travaillant un peu, on pourrait l'automatiser pour améliorer son rendement.",
+      [Lang.FR]: "Une mini-catapulte placée sur les remparts et garnie de pamplemousses explosifs, il nʼy a plus qu'à attendre et à tirer ! En y travaillant un peu, on pourrait l'automatiser pour améliorer son rendement.",
       [Lang.DE]: "Ein Mini-Katapult auf der Stadtmauer, garniert mit explosiven Pampelmusen. Alles, was ihr tun müsst, ist warten und schießen! Mit ein wenig extra Arbeit können wir ihn sogar automatisieren und seine Leistung verbessern.",
       [Lang.ES]: "Una minicatapulta colocada en las murallas y adornada con pomelos explosivos, ¡solo hay que esperar y disparar! Trabajando un poco en ella, podríamos automatizarla para mejorar su rendimiento."
     },

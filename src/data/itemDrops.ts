@@ -150,7 +150,8 @@ export const itemDrops: Record<DropLocation, ItemDrop[]> = {
     { id: ItemId.HURLING_STICK, odds: 25, event: GameEvent.StPatrick},
     { id: ItemId.LEPRECHAUN_SUIT, odds: 7, event: GameEvent.StPatrick},
     { id: ItemId.GUINESS, odds: 20, event: GameEvent.StPatrick},
-    { id: ItemId.PUMPKIN_RAW, odds: 5, event: GameEvent.Halloween}
+    { id: ItemId.PUMPKIN_RAW, odds: 5, event: GameEvent.Halloween},
+    { id: ItemId.SCARY_MASK, odds: 7, event: GameEvent.Halloween}
   ],
   [DropLocation.Trash]: [
     { id: ItemId.FENCE, odds: 1250},

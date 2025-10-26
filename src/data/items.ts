@@ -320,7 +320,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "It's a (really powerful) whisk and it's electric, what else is there to say? Well, the good part is that it only needs one battery, and only has limited chance of running down.",
-      [Lang.FR]: "Il bat (très fort) et il est électrique, que dire de plus ? Le bon point, c'est qu'il ne nécessite qu'une pile et a une certaine chance de l'épuiser.",
+      [Lang.FR]: "Il bat (très fort) et il est électrique, que dire de plus ? Le bon point, c'est qu'il ne nécessite qu'une pile et a une certaine chance de ne pas l'épuiser.",
       [Lang.DE]: "Rührt elektrisch und sehr schnell - was gibt's sonst noch zu sagen? Er hat den Vorteil, dass er nur eine Batterie braucht, die sich nicht mal mit Sicherheit entlädt.",
       [Lang.ES]: "Tan sencillo como eso. La buena noticia es que sólo necesitas una batería y tienes cierta posibilidad de agotarla."
     },
@@ -400,7 +400,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "You like it when it's nice and clean, when it smells of freshly cut grass ? In this instance, forget it - when you use it, it won't be like that at all.",
-      [Lang.FR]: "Vous aimez quand c'est propre droit et que ça sent le frais ? En l'occurrence, oubliez tout ça ! Quand vous l'utiliserez ça ne sera pas le cas.",
+      [Lang.FR]: "Vous aimez quand c’est propre, droit, et que ça sent le frais ? En l’occurrence, oubliez tout ça ! Quand vous l’utiliserez, ça ne sera pas le cas.",
       [Lang.DE]: "Du magst es wenn es sauber ist und frisch nach Gras duftet? Vergiss das mal lieber ganz schnell. Wenn du ihn verwendest, wird es ganz anders riechen...",
       [Lang.ES]: "¿Te gusta que quede parejo, limpio y que huela a jardín primaveral? Olvídalo, cuando lo utilices será todo lo contrario."
     },
@@ -434,13 +434,13 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 11,
     name: {
       [Lang.EN]: "Adjustable Spanner",
-      [Lang.FR]: "Clé à Molette",
+      [Lang.FR]: "Clé à molette",
       [Lang.DE]: "Verstellbarer Schraubenschlüssel",
       [Lang.ES]: "Llave inglesa"
     },
     description: {
       [Lang.EN]: "With an adjustable spanner, you can choose between building something and breaking something. Something might not necessarily be an object...",
-      [Lang.FR]: "Avec une clé à Molette, vous pouvez au choix bricoler un objet ou détruire quelque chose. Pas forcément un objet d'ailleurs…",
+      [Lang.FR]: "Avec une clé à molette, vous pouvez au choix bricoler un objet ou détruire quelque chose. Pas forcément un objet d’ailleurs…",
       [Lang.DE]: "Mit einem verstellbaren Schraubenschlüssel kannst du wahlweise an einem Gegenstand herumbasteln oder etwas zerstören (muss nicht unbedingt ein Gegenstand sein...)",
       [Lang.ES]: "Con ella puedes armar un objeto o destruir lo que quieras. No necesariamente tiene que ser un objeto..."
     },
@@ -724,7 +724,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "The Swiss Army Knife can pretty much be used to take care of any minor job, except perhaps decapitating a horde of zombies.",
-      [Lang.FR]: "Le Couteau Suisse pourra sans soucis vous dépanner pour tous les petits travaux manuels, sauf peut-être découper une horde de mort-vivants.",
+      [Lang.FR]: "Le couteau suisse pourra sans soucis vous dépanner pour tous les petits travaux manuels, sauf peut-être découper une horde de morts-vivants.",
       [Lang.DE]: "Das Schweizer Taschenmesser ist für viele kleinere Arbeiten nützlich. Für eine Horde lebender Untoter reicht es allerdings nicht ganz aus.",
       [Lang.ES]: "Siempre útil para pequeños trabajos manuales, pero no ante una turba de muertos vivientes."
     },
@@ -956,7 +956,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 23,
     name: {
       [Lang.EN]: "Valium Shot",
-      [Lang.FR]: "Piqure de calmant",
+      [Lang.FR]: "Piqûre de calmant",
       [Lang.DE]: "Beruhigungsspritze",
       [Lang.ES]: "Inyección calmante"
     },
@@ -1113,7 +1113,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 27,
     name: {
       [Lang.EN]: "Bedside Lamp",
-      [Lang.FR]: "Lampe de chevet éteinte",
+      [Lang.FR]: "Lampe de chevet (éteinte)",
       [Lang.DE]: "Ausgeschaltete Nachttischlampe",
       [Lang.ES]: "Lámpara de mesa apagada"
     },
@@ -1175,13 +1175,13 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 29,
     name: {
       [Lang.EN]: "Mini HI-Fi (Broken)",
-      [Lang.FR]: "Petite chaîne Hi-Fi en panne",
+      [Lang.FR]: "Petite chaîne hi-fi en panne",
       [Lang.DE]: "Mini Hi-Fi Anlage (defekt)",
       [Lang.ES]: "Equipo de sonido malogrado"
     },
     description: {
       [Lang.EN]: "A busted low-budget stereo system. Nonetheless, it's a shame when all it needs is a battery...",
-      [Lang.FR]: "Un chaîne HiFi \"petit budget\", mais on ne va pas faire les difficiles... Dommage qu'il lui manque une pile pour fonctionner.",
+      [Lang.FR]: "Une chaîne hi-fi « petit budget », mais on ne va pas faire les difficiles… Dommage qu’il lui manque une pile pour fonctionner.",
       [Lang.DE]: "Eine kleine Hi-Fi Anlage vom Discounter nebenan. Schade, dass keine Batterien mehr drin sind, aber vielleicht kannst du ja welche auftreiben...",
       [Lang.ES]: "De los baratos... pero necesita una pila para funcionar."
     },
@@ -1202,7 +1202,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 30,
     name: {
       [Lang.EN]: "Padlock and Chain",
-      [Lang.FR]: "Chaîne de Porte + cadenas",
+      [Lang.FR]: "Chaîne de porte avec cadenas",
       [Lang.DE]: "Kette + Vorhängeschloss",
       [Lang.ES]: "Cadena + candado"
     },
@@ -1785,7 +1785,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 43,
     name: {
       [Lang.EN]: "Anabolic Steroids",
-      [Lang.FR]: "Stéroïdes Anabolisants",
+      [Lang.FR]: "Stéroïdes anabolisants",
       [Lang.DE]: "Anaboles Steroid",
       [Lang.ES]: "Esteroides anabólicos"
     },
@@ -1841,7 +1841,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "It's a bit rubbery, and smells a bit fishy... You ask yourself what kind of meat it could be, but decide that it's got to be full of vitamins (and nothing else, you hope).",
-      [Lang.FR]: "C'est un peu élastique et ça sent même le poisson… On se demande bien ce que ça peut être, mais c'est surement plein de vitamines (et pas d'autres choses, espérez-vous).",
+      [Lang.FR]: "C’est un peu élastique et ça sent même le poisson… On se demande bien ce que ça peut être, mais c’est sûrement plein de vitamines (et pas d’autres choses, espérez-vous).",
       [Lang.DE]: "Es ist labbrig wie weiches Gummi und es riecht nach Fisch ... Was das wohl für ein Fleisch ist? Jedenfalls hat es bestimmt viele Vitamine und Proteine (und sonst hoffentlich nichts).",
       [Lang.ES]: "Tiene muchas proteínas, pero parece ser más duro que una suela de zapato, más vale que tengas buena dentadura."
     },
@@ -2198,7 +2198,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "There's nothing like a bit of rusty sheet metal to stop zombies from getting to you... Note: Defensive items give better bonuses if they are installed in town as opposed to in your home.",
-      [Lang.FR]: "Rien ne vaut une plaque de tôle rouillée pour empêcher les zombies de vous atteindre… Note : les défenses comptent double si elles sont installées en ville plutôt que chez soi.",
+      [Lang.FR]: "Rien ne vaut une plaque de tôle rouillée pour empêcher les zombies de vous atteindre…",
       [Lang.DE]: "Fast nichts ist besser als eine rostige Blechplatte, um die Zombies am Eindringen zu hindern... Anmerkung: Verteidigungsgegenstände zählen mehr Punkte, wenn sie in der Bank aufbewahrt werden anstatt daheim.",
       [Lang.ES]: "Muy buena para protegerte de los zombies... Nota: Las defensas valen más puntos si son instaladas en el pueblo en vez de en tu casa."
     },
@@ -2234,7 +2234,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 53,
     name: {
       [Lang.EN]: "Jerrycan Gun (unattached)",
-      [Lang.FR]: "Pompe à Jerrycan (démontée)",
+      [Lang.FR]: "Pompe à jerrycan (démontée)",
       [Lang.DE]: "Kanisterpumpe (zerlegt)",
       [Lang.ES]: "Bomba para cantimplora incompleta"
     },
@@ -2306,7 +2306,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "After spending forever under the sun, this bottle is completely discolored. You have the intuition that it must have been green in the past. Ah, here's the label!... okay, just a pale lager. \"Keep away from light and all sources of heat\", well, let's try... (You take a huge sip and release a giant burp shortly after!) - \"Cheers, Pap Finn!\"",
-      [Lang.FR]: "Après avoir passé une éternité au soleil, cette bouteille s'est complètement décolorée. Vous avez l'intuition qu'elle devait être verte par le passé. Ah, voilà l'étiquette! ...d'accord, une simple blonde. \"À conserver à l'écart de la lumière et de toute source de chaleur\", eh bien, tentons... (Vous avalez une énorme gorgée et relâchez un rot géant peu de temps après!) - \"À la tienne, Étienne!\"",
+      [Lang.FR]: "Après avoir passé une éternité au soleil, cette bouteille s’est complètement décolorée. Vous avez l’intuition qu’elle devait être verte par le passé. Ah, voilà l’étiquette ! Une simple blonde… « À conserver à l’écart de la lumière et de toute source de chaleur » ? Eh bien, ça se tente…(Vous avalez une énorme gorgée et relâchez un rot géant peu de temps après!) - \"À la tienne, Étienne!\"",
       [Lang.DE]: "Das Glas dieser gut erhaltenen Bierflasche ist ziemlich verfärbt. Du vermutest, dass es früher mal grün war. Ah, da, das Etikett! Roter Rand...\"Welcome to the Feck's experience\"... okay, ein Pils. Na dann lass uns doch mal das \"Experiment\" wagen... .(Mit einem kräftigen Schluck kippst du dir den Saft hinter die Binde und lässt kurz darauf einen Riesenrülpser los!) - \"Prost Kameraden!\"",
       [Lang.ES]: "Un buen trago que quema la garganta y te quita el cansancio, ¡recuperando además puntos de Acción!... 85° de alcohol puro, con algunos bichos flotando en el fondo. ¡Salud camarada!"
     },
@@ -2343,7 +2343,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 56,
     name: {
       [Lang.EN]: "Jerrycan Gun (empty)",
-      [Lang.FR]: "Pompe à Jerrycan (vide)",
+      [Lang.FR]: "Pompe à jerrycan (vide)",
       [Lang.DE]: "Kanisterpumpe (leer)",
       [Lang.ES]: "Bomba para cantimplora (vacía)"
     },
@@ -2811,7 +2811,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "A combination of caffeine, theine, various chemicals and boiled bull's testicles (taurine?), this is a great pick-me-up for the end of the day, or for when you want to flee from a horde of zombies who want your liver.",
-      [Lang.FR]: "Un concentré de caféïne, de théine, de diverses drogues chimiques et de testicules de taureau broyées. La drogue idéale pour les coups de fouets en fin de journée, ou quand il s'agit de fuir face à une horde de zombies qui en veulent à votre foie.",
+      [Lang.FR]: "Un concentré de caféine, de théine, de diverses drogues chimiques et de testicules de taureau broyées. La drogue idéale pour les coups de fouet en fin de journée, ou quand il s’agit de fuir face à une horde de zombies qui en veulent à votre foie.",
       [Lang.DE]: "Eine Mischung aus konzentriertem Koffein, verschiedenen chemischen Drogen und zermahlenen Stierhoden. Die ideale Droge für den kleinen Energieschub am Abend, wenn du vor einer Zombiemeute flüchten musst, die es auf deine Leber abgesehen hat.",
       [Lang.ES]: "Un concentrado de cafeína, teína, diversas sustancias multicolores y testículos de toro en polvo. Una dosis permite empezar el día con energía o huir rápidamente de una turba de zombies."
     },
@@ -2976,7 +2976,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 74,
     name: {
       [Lang.EN]: "Bedside Lamp (on)",
-      [Lang.FR]: "Lampe de chevet (Allumée)",
+      [Lang.FR]: "Lampe de chevet (allumée)",
       [Lang.DE]: "Nachttischlampe (an)",
       [Lang.ES]: "Lámpara encendida"
     },
@@ -3006,7 +3006,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 75,
     name: {
       [Lang.EN]: "Mini Hi-Fi (on)",
-      [Lang.FR]: "Petite chaîne HiFi (Allumée)",
+      [Lang.FR]: "Petite chaîne hi-fi (allumée)",
       [Lang.DE]: "Mini Hi-Fi Anlage (an)",
       [Lang.ES]: "Pequeño equipo de sonido encendido"
     },
@@ -3776,7 +3776,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "It's a (really powerful) whisk and it's electric, what else is there to say? Well, the good part is that it only needs one battery, and only has limited chance of running down.",
-      [Lang.FR]: "Il bat (très fort) et il est électrique, que dire de plus ? Le bon point, c'est qu'il ne nécessite qu'une pile et a une certaine chance de l'épuiser.",
+      [Lang.FR]: "Il bat (très fort) et il est électrique, que dire de plus ? Le bon point, c'est qu'il ne nécessite qu'une pile et a une certaine chance de ne pas l'épuiser.",
       [Lang.DE]: "Rührt elektrisch und sehr schnell - was gibt's sonst noch zu sagen? Er hat den Vorteil, dass er nur eine Batterie braucht, die sich nicht mal mit Sicherheit entlädt.",
       [Lang.ES]: "Tan sencillo como eso. La buena noticia es que sólo necesitas una batería y tienes cierta posibilidad de agotarla."
     },
@@ -4294,7 +4294,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "A modified, more compact version of the AK-47, probably destined to \"civilian\" use... not the most accurate gun though... watch out for \"friendly fire\"!",
-      [Lang.FR]: "Une version peu courante du M16. Plus compacte, probablement destiné à un usage \"civil\"... La chasse à la Galinette Cendrée diront certains.",
+      [Lang.FR]: "Une version peu courante du M16 : plus compacte, probablement destinée à un usage « civil »… La chasse à la galinette cendrée, diront certains.",
       [Lang.DE]: "Eine umgebaute Version des AK-47. Dieses Gewehr ist kompakter und wahrscheinlich für den \"zivilen\" Einsatz entworfen worden... Manche sagen man könne damit sehr gut 'Problembären' kalt machen.",
       [Lang.ES]: "Una versión modificada del AK-47, más compacta, probablemente diseñada para un uso \"civil\"..."
     },
@@ -4406,7 +4406,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 114,
     name: {
       [Lang.EN]: "Unlabelled Drug",
-      [Lang.FR]: "Médicament sans étiquette",
+      [Lang.FR]: "Médicaments sans étiquette",
       [Lang.DE]: "Etikettenloses Medikament",
       [Lang.ES]: "Medicamento sin etiqueta"
     },
@@ -4939,7 +4939,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Part of a sandwich which tastes nothing like you had expected, or hoped...",
-      [Lang.FR]: "Un reste de casse-croute qui n'a d'appétissant que son souvenir...",
+      [Lang.FR]: "Un reste de casse-croûte qui n’a d’appétissant que son souvenir…",
       [Lang.DE]: "Der Rest eines Schinkenbrötchens. Die grünlich-weiß verschimmelten Schinkenecken lassen sich kurzerhand unter dem Brot verstecken und dann nichts wie runter damit...",
       [Lang.ES]: "Está muy viejo. No se sabe si lo que tiene dentro son los restos de una hamburguesa o los de una rata que murió allí dentro... ¿Eso blanco, es mayonesa?"
     },
@@ -5400,7 +5400,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Rusty scraps of metal, wire mesh and screws... Nothing immediately useful, but if you take it back to the town maybe it can be recycled.",
-      [Lang.FR]: "Des bouts de ferrailles rouillées, du grillage, des vis… Rien d'utilisable tel quel, il faudrait d'abord retaper ça en ville.",
+      [Lang.FR]: "Des bouts de ferraille rouillés, du grillage, des vis… Rien d’utilisable tel quel, il faudrait d’abord retaper ça en ville.",
       [Lang.DE]: "Ein paar verrostete Metallstangen, ein Gitter, ein paar Schrauben... Nichts, was du sofort benutzen könntest. Du musst es erst in der Stadt ein wenig bearbeiten.",
       [Lang.ES]: "Pedazos de metal oxidado, mallas, tornillos... Nada útil en ese estado, habrá que transformarlos en el taller."
     },
@@ -5490,7 +5490,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "A decent log which could be used as a stool. Look - it's better than nothing...",
-      [Lang.FR]: "Une belle buche qui pourrait tout à fait servir de tabouret à la maison. Après tout… C'est mieux que rien.",
+      [Lang.FR]: "Une belle bûche qui pourrait tout à fait servir de tabouret à la maison. Après tout… c’est mieux que rien.",
       [Lang.DE]: "Ein schöner Holzscheit, den du als Hocker für deine Einrichtung verwenden kannst. Was willst du mehr? Ist doch besser als nichts.",
       [Lang.ES]: "Un buen pedazo de madera que puede servir de taburete en tu casa. Después de todo, es mejor que nada."
     },
@@ -5706,7 +5706,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "When added to water, these disinfectant capsules make water safe to drink. These were previously used for cleaning toilets. You start to imagine how the water is going to taste afterwards... (NOTE: The yield of this product is much lower than that of the Industrial Purifier).",
-      [Lang.FR]: "Une capsule de produit désinfectant à mettre dans de l'eau pour la nettoyer. Avant, c'était utilisé pour récurer les toilettes. Vous imaginez aisément le goût de l'eau après... (ATTENTION: le rendement de ce produit est faible en comparaison d'un Purificateur industriel)",
+      [Lang.FR]: "Une capsule de produit désinfectant à mettre dans de l’eau pour la nettoyer. Avant, c’était utilisé pour récurer les toilettes. Vous imaginez aisément le goût de l’eau après… (ATTENTION : le rendement de ce produit est faible comparé à celui d’un purificateur industriel !)",
       [Lang.DE]: "Eine desinfizierende Brausetablette, mit der man Wasser reinigen kann. Eigentlich handelt es sich um ein Reinigungstab für Toiletten. Den Geschmack kannst du dir ja ausmalen... (ACHTUNG: Die Ausbeute dieses Produkts ist im Vergleich zum industriellen Reiniger wesentlich geringer.)",
       [Lang.ES]: "Purifica el agua. Antes se usaba para desinfectar los inodoros, ya sabes el sabor que tendrá el agua... (Atención: El rendimiento de este objeto es inferior al de un Purificador Industrial)"
     },
@@ -5733,7 +5733,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Normally, the intestine melon grows in the stomachs of corpses, near the large colon. However, it seems that your vegetable garden is doing surprisingly well... maybe you built it on the site of an ancient Indian graveyard?",
-      [Lang.FR]: "Habituellement le Melon d'intestin pousse dans le ventre des cadavres, au niveau du gros colon. Il semblerait pourtant que votre potager en ait donné de très jolis… Peut-être avez-vous cultivé sur un vieux cimetière indien ?",
+      [Lang.FR]: "Habituellement, le melon d’intestin pousse dans le ventre des cadavres, au niveau du gros côlon. Il semblerait pourtant que votre potager en ait donné de très jolis… Peut-être avez-vous cultivé sur un vieux cimetière indien ?",
       [Lang.DE]: "Normalerweise \"wächst\" die Darmmelone im Grimmdarm von Kadavern, doch es sieht so aus, als ob dein Gemüsebeet dir ein paar hübsche Exemplare beschert hätte. Kann es vielleicht sein, dass dein Gemüsebeet auf einem alten Indianerfriedhof liegt?",
       [Lang.ES]: "Se sabe que crece en el intestino de los cadáveres, cerca del colon. Sin embargo, tu huerta presenta varios de estos frutos... ¿Los habrás cultivado en algún antiguo cementerio?"
     },
@@ -5830,7 +5830,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "A small plush teddy bear which would have been a child's pride and joy... once upon a time...",
-      [Lang.FR]: "Un petit doudou en peluche qui a dû faire le bonheur d'un enfant… Un jour…",
+      [Lang.FR]: "Un petit doudou en peluche qui a dû faire le bonheur d'un enfant… un jour...",
       [Lang.DE]: "Ein kleines Stoffkuscheltier, das einem Kind vor langer Zeit viel Freude bereitet hat...",
       [Lang.ES]: "Un peluche que habrá dado mucha felicidad a un niño... o tal vez no."
     },
@@ -6219,7 +6219,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "A magical box which keeps the Britneys cool. I suppose it could also be used for other things though. It doesn't work any more, but maybe if you take it apart you might find something of use...",
-      [Lang.FR]: "Une grosse machine pour garder les choses fraiches et les empêcher de pourrir trop vite. Elle ne fonctionne plus mais on doit bien pouvoir en tirer quelque chose.",
+      [Lang.FR]: "Une grosse machine pour garder les choses fraîches et les empêcher de pourrir trop vite. Elle ne fonctionne plus, mais on doit bien pouvoir en tirer quelque chose.",
       [Lang.DE]: "Leider enthält dieser kleine Kühlschrank keinen Alkohol mehr. Zudem funktioniert er nicht mehr. Allerdings könnte er ein gutes Wurfgeschoss abgeben.",
       [Lang.ES]: "Aún tiene la foto de una pareja de novios pegada con un imán. Ya no funciona pero algún uso le has de encontrar."
     },
@@ -6645,7 +6645,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Some cardboard boxes previously from domestic appliances. Even if they're partially rotten and clearly smell of mould, they can still be used in your home... as furniture.",
-      [Lang.FR]: "Quelques cartons qui devaient autrefois être des boîtes de rangement pour des appareils électroménagers. Même s'ils sont à moitié pourris et sentent le moisi à plein nez, ils pourront toujours servir chez vous... comme meuble.",
+      [Lang.FR]: "Quelques cartons qui devaient autrefois être des boîtes de rangement pour des appareils électroménagers. Même s’ils sont à moitié pourris et sentent le moisi à plein nez, ils pourront toujours servir chez vous… comme meubles.",
       [Lang.DE]: "Ein paar Haushaltsgerätekartons, die stark nach Schimmel riechen. Du kannst sie aber immer noch verwenden - als Möbel zum Beispiel.",
       [Lang.ES]: "Diversas cajas de artefactos eléctricos y muebles. Podrían servir en tu casa como muebles."
     },
@@ -6849,7 +6849,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "A small rusty piece of mesh. It's seen better days...",
-      [Lang.FR]: "Une petite partie d'une clôture grillagée, rouillée et abimée.",
+      [Lang.FR]: "Une petite partie d’une clôture grillagée, rouillée et abîmée.",
       [Lang.DE]: "Ein kleines, verrostetes Stück Maschendrahtzaun.",
       [Lang.ES]: "Oxidada y torcida, puede servir para algo."
     },
@@ -7147,7 +7147,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "This upgraded version of the Battery Launcher 1-ITF features a PDTT Mark II Calibrator. By precisely regulating the firepower, this feature sometimes allows batteries which have already been fired to be recovered.",
-      [Lang.FR]: "Cette version améliorée du Lance-pile comporte un canon équipé d'un Calibrateur PDTT Mark II. En dosant précisément la puissance de tir, ce canon permet (parfois) de récupérer la pile qui a été tirée.",
+      [Lang.FR]: "Cette version améliorée du Lance-Pile 1-PDTG comporte un canon équipé d’un calibrateur PDTT Mark II. En dosant précisément la puissance de tir, ce canon permet (parfois) de récupérer la pile qui a été tirée.",
       [Lang.DE]: "Bei dieser verbesserten Version des normalen Batteriewerfers 1-PDTG ist der PDTT Mark II-Druckregler schon eingebaut. Durch Feinjustierung der Schusskraft ist es manchmal sogar möglich die verschossene Batterie wieder einzusammeln.",
       [Lang.ES]: "Esta versión mejorada del temible lanza-pilas lleva un cañón equipado con el Calibrador PDTT Mark II. Ajustando la potencia del tiro, el cañón permite, a veces, recuperar la pila disparada."
     },
@@ -7182,7 +7182,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "This upgraded version of the Battery Launcher 1-ITF features a PDTT Mark II Calibrator. By precisely regulating the firepower, this feature sometimes allows batteries which have already been fired to be recovered.",
-      [Lang.FR]: "Cette version améliorée du Lance-pile comporte un canon équipé d'un Calibrateur PDTT Mark II. En dosant précisément la puissance de tir, ce canon permet (parfois) de récupérer la pile qui a été tirée.",
+      [Lang.FR]: "Cette version améliorée du Lance-Pile 1-PDTG comporte un canon équipé d’un calibrateur PDTT Mark II. En dosant précisément la puissance de tir, ce canon permet (parfois) de récupérer la pile qui a été tirée.",
       [Lang.DE]: "Bei dieser verbesserten Version des normalen Batteriewerfers 1-PDTG ist der PDTT Mark II-Druckregler schon eingebaut. Durch Feinjustierung der Schusskraft ist es manchmal sogar möglich die verschossene Batterie wieder einzusammeln.",
       [Lang.ES]: "Esta versión mejorada del temible lanza-pilas lleva un cañón equipado con el Calibrador PDTT Mark II. Ajustando la potencia del tiro, el cañón permite, a veces, recuperar la pila disparada."
     },
@@ -7611,7 +7611,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "In the absence of a proper meal, sat round a nicely-set table with friends, you'll have to make do with this emergency lunch box which you hid under the bed some time ago...",
-      [Lang.FR]: "À défaut d'un vrai repas autour d'une table, avec des couverts et des amis, vous avez cette boite-déjeuner Armaggedon que vous aviez caché il y a un bon moment sous votre lit…",
+      [Lang.FR]: "À défaut d’un vrai repas autour d’une table, avec des couverts et des amis, vous avez cette boîte-déjeuner Armageddon que vous aviez cachée il y a un bon moment sous votre lit…",
       [Lang.DE]: "Da Du hier kein richtiges Dinner mit Freunden erleben kannst, hast du dir ein paar leckere Happen beiseite gelegt und in dieser Lunch-Box aufbewahrt. Ab und zu muss man sich mal was gönnen ...",
       [Lang.ES]: "A falta de una buena comida en una mesa. con cubiertos y amigos, tienes esta lonchera Armagedón que habías escondido hace un tiempo bajo tu cama..."
     },
@@ -7684,6 +7684,11 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.AP,
             value: 7
+          },
+          {
+            type: ItemActionEffectType.RemoveStatus,
+            value: "terror",
+            odds: 75
           }
         ]
       }
@@ -7931,7 +7936,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Who could even hazard a guess as to what the safe may contain? Not you in any case, not unless you know the secret combination...",
-      [Lang.FR]: "Qui peut bien dire ce que ce lourd coffre-fort contient ? Sûrement pas vous en tous cas, à moins que vous ne connaissiez la combinaison secrète d'ouverture.",
+      [Lang.FR]: "Qui peut bien dire ce que ce lourd coffre-fort contient ? Sûrement pas vous en tout cas, à moins que vous ne connaissiez la combinaison secrète d’ouverture.",
       [Lang.DE]: "Toll... und wie findest du jetzt raus, was da drin ist? Ohne die Geheimkombination dürfte das etwas schwierig werden.",
       [Lang.ES]: "¿Qué tendrá dentro? Ah, claro, necesitas conocer la clave secreta para averiguarlo."
     },
@@ -8397,7 +8402,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "The effects of this little pill are mysterious to say the least... On the box, it states: \"not to be taken by testers under 18 years of age\". Strange...",
-      [Lang.FR]: "Ce petit cachet a un effet pour le moins mystérieux... Sur la boîte, il est écrit : « ne pas donner à un testeur de moins de 18 ans ». Étrange.",
+      [Lang.FR]: "Ce petit cachet a un effet pour le moins mystérieux... Sur la boîte, il est écrit : « Ne pas donner à un testeur de moins de 18 ans ». Étrange...",
       [Lang.DE]: "Die Wirkung dieser Tablette ist höchst zweifelhaft... Auf der Schachtel steht: \"Für BETA-Tester unter 18 Jahren nicht geeignet\". Seltsam...",
       [Lang.ES]: "Tiene un efecto misterioso... En la caja dice: \"No recomendado para beta-testers menores de 18 años\". Extraño."
     },
@@ -8653,7 +8658,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Oh my god this smells vile! It's made from \"fleshroom berries\" which grow on corpses. If you're not worried about dying from a virulent infection, it just might stop you being hungry... maybe permanently.",
-      [Lang.FR]: "Ça sent vraiment très mauvais. Cette boule est un agrégat de “Baies charognardes” qui ont poussé sur un cadavre quelconque. Si vous n'avez pas peur de mourir d'une infection virulente, peut-être qu'elle pourrait vous rassasier si vous la mangiez ?",
+      [Lang.FR]: "Ça sent vraiment très mauvais. Cette boule est un agrégat de baies charognardes, qui ont poussé sur un cadavre quelconque. Si vous n’avez pas peur de mourir d’une infection virulente, peut-être que la manger pourrait vous rassasier ?",
       [Lang.DE]: "Dieser Brei stinkt wie die Pest, da die dafür verarbeiteten Beeren für gewöhnlich auf Kadavern wachsen. Wenn du vor einer akuten Infektion keine Angst hast könntest du ihn ja mal vorsichtig probieren. Vielleicht macht er ja satt?",
       [Lang.ES]: "Realmente esto apesta. Es una bola aplastada de hongos que crecieron en algún cadáver. Si no le tienes miedo a nada, ¿crees que esto podrá calmar tu hambre?"
     },
@@ -8877,7 +8882,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "A small plush teddy bear which would have been a child's pride and joy... or not...",
-      [Lang.FR]: "Un petit doudou en peluche qui a dû faire le petit bonheur d'un enfant... Ou pas...",
+      [Lang.FR]: "Un petit doudou en peluche qui a dû faire le bonheur d’un enfant… ou pas…",
       [Lang.DE]: "Das alleinige Ansehen des Teddys macht dich verrückt.Vielleicht solltest du ihn aus dem Fenster werfen? Immerhin befindest du dich in einem verlassenen Hotel...",
       [Lang.ES]: "Un peluche que habrá dado mucha \"felicidad\" a un niño... o pudo haberlo poseído..."
     },
@@ -8912,7 +8917,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "A slice of meat, covered in sawdust and wood chippings... Only they're not chips, but rather woodworm, which is logical enough seeing as the thing won't stop moving.",
-      [Lang.FR]: "Une tranche de viande recouverte de sciure et de copeaux de bois... À moins que ce ne soit pas des copeaux, mais des vers à bois, ce qui semblerait logique puisque ça n'arrête pas de bouger.",
+      [Lang.FR]: "Une tranche de viande recouverte de sciure et de copeaux de bois… à moins que ce ne soit pas des copeaux, mais des vers à bois, ce qui semblerait logique puisque ça n’arrête pas de bouger.",
       [Lang.DE]: "Man nehme eine Scheibe Fleisch, paniere das Ganze mit Sägemehl und streue anschließend einige Holzstücke darüber... et Voilà! Im Holz scheinen auch einige Holzwürmer gewesen zu sein, denn das Ding hört nicht auf sich zu bewegen.",
       [Lang.ES]: "Una rebanada de carne cubierta con serrín y viruta de madera... Pero tal vez no sean virutas, sino gusanos, lo que parece más lógico porque no dejan de moverse."
     },
@@ -9073,7 +9078,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "This antique gadget was a very well known model. Right up until the point where they all exploded, killing millions of people and wiping great cities off the map. This should surely make a quality grenade!",
-      [Lang.FR]: "Cet antique appareil était un modèle de téléphone très réputé. C'était jusqu'à ce qu'il cause la mort de millions de personnes en explosant et rayant de la carte plusieurs grandes villes, à travers le monde. Ça fera sûrement une bonne grenade.",
+      [Lang.FR]: "Cet antique appareil était un modèle de téléphone très réputé. En tout cas, jusqu'à ce qu'il explose, causant la mort de millions de personnes et rayant plusieurs grandes villes de la carte. Ça fera sûrement une bonne grenade.",
       [Lang.DE]: "Dieses uralte Modell, war mal ein ziemlich angesagtes Handy. Eines Tages jedoch fingen die Dinger urplötzlich zu explodieren an... Da das Handy weit verbreitet war, sind Millionen Menschen bei diesen Explosionen gestorben. Ganze Städte wurden von der Landkarte ausgelöscht. Hhmmm... Das gibt bestimmt eine gute Granate ab.",
       [Lang.ES]: "Es un modelo muy famoso... por haber explotado causando la muerte de miles de personas y borrando del mapa muchas ciudades en todo el mundo. Servirá como granada."
     },
@@ -9999,7 +10004,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "An Architect's Chest. Not that kind of chest.",
-      [Lang.FR]: "Ce coffre contient nombre de documents obscurs et d'ustensiles désuets (crayons, compas, règles en plastique...). Rien qui ne vous servira à survivre dans le désert... À première vue.",
+      [Lang.FR]: "Ce coffre contient nombre de documents obscurs et d’ustensiles désuets (crayons, compas, règles en plastique…). Rien qui ne vous servira à survivre dans le désert… à première vue.",
       [Lang.DE]: "Dieser Koffer enthält mehrere Dokumente und obskure Gegenstände (Bleistift, Kompass, Plastiklineale,...). Nichts was dir irgendwie helfen würde, in der Wüste zu überleben. ...zumindest auf den ersten Blick.",
       [Lang.ES]: "Contiene documentos y artículos de escritorio (lápices, compás, reglas...). Nada útil para sobrevivir en el desierto... O eso parece."
     },
@@ -10399,13 +10404,13 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 255,
     name: {
       [Lang.EN]: "Ghoul Vaccine",
-      [Lang.FR]: "Sérum pour Goule",
+      [Lang.FR]: "Sérum pour goule",
       [Lang.DE]: "Ghul-Serum",
       [Lang.ES]: "Vacuna para mutante"
     },
     description: {
       [Lang.EN]: "This extremely rare serum has been developed from the DNA of an almost immune specimen that has withstood an infectious bite for more than 3 days. It allows a ghoul to return to its normal human state.",
-      [Lang.FR]: "Ce Sérum extrêmement rare a été mis au point à partir de l'ADN d'un spécimen presque immunisé ayant résisté plus de 3 jours à une morsure infectieuse, il permet de rendre à une goule son état d'être humain normal.",
+      [Lang.FR]: "Ce sérum extrêmement rare a été mis au point à partir de l’ADN d'un spécimen presque immunisé ayant résisté plus de 3 jours à une morsure infectieuse : il permet de rendre à une goule son état d’être humain normal.",
       [Lang.DE]: "Dieses extrem seltene Serum wurde durch der Untersuchung der DNA eines fast immunen Wesens gewonnen. Es hatte zuvor 3 Tage überlebt, obwohl es von einem Infizierten gebissen wurde. Mit dem Serum kann man einen Ghul wieder in einen normalen Menschen verwandeln.",
       [Lang.ES]: "Este suero extremadamente raro se ha desarrollado a partir del ADN de una muestra casi inmune que ha resistido una picadura infecciosa durante más de 3 días. Permite que un mutante vuelva a su estado humano normal."
     },
@@ -11289,7 +11294,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "A stake launcher can be used to reinforce barricades or to defend against any manner of creature. Unfortunately there is only one stake left in the launcher.",
-      [Lang.FR]: "Un lance-pieux qui a dû servir pour renforcer les barricades sommaires des hôtels, des bunkers ou encore à lutter contre n'importe quel type de créatures. Il ne reste malheureusement qu'un seul pieu dans l'appareil.",
+      [Lang.FR]: "Un lance-pieu qui a dû servir pour renforcer les barricades sommaires des hôtels ou des bunkers, ou encore à lutter contre n’importe quel type de créatures. Il ne reste malheureusement qu’un seul pieu dans l’appareil.",
       [Lang.DE]: "Der Pfahlwerfer kann dazu verwendet werden, Barrikaden zu verstärken oder jede Art von Gegner abzuwehren. Leider ist nur noch ein Pfahl übrig...",
       [Lang.ES]: "Esta arma debió ser construida por algún maniático de las armas y el bricolage. Solo queda un dardo dentro del aparato."
     },
@@ -11545,7 +11550,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "From time to time we find empty oil cans in the desert, often accompanied by a corpse. When will citizens learn that motor oil is undrinkable...",
-      [Lang.FR]: "On trouve de temps en temps des bidons d'huile vides dans le désert, souvent accompagné d'un cadavre. Quand est-ce que les citoyens comprendront que l'huile, ça ne se boit pas…",
+      [Lang.FR]: "On trouve de temps en temps des bidons d’huile vides dans le désert, souvent accompagnés d’un cadavre. Quand est-ce que les citoyens comprendront que l’huile, ça ne se boit pas…",
       [Lang.DE]: "Ab und an finden wir diese Behälter leer in der Wüste - meistens an der Seite einer Leiche. Wann lernen die Leute endlich, dass man Motoröl nicht trinken kann?",
       [Lang.ES]: "Estos bidones provienen de antiguos restaurantes de comida chatarra, otra de las causas por las que se acabó el mundo... Siempre junto a ellos hay un cadáver. ¿Cuándo entenderán algunos que el aceite no se bebe?"
     },
@@ -11599,7 +11604,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "A kitten which surely belonged to a now-dead citizen. It seems pretty aggravated, maybe you shouldn't annoy it anymore.",
-      [Lang.FR]: "Le chat d'un concitoyen surement mort à l'heure qu'il est. Il semble partiellement en colère, mieux vaut ne pas l'énerver davantage.",
+      [Lang.FR]: "Le chat d’un concitoyen sûrement mort à l’heure qu’il est. Il semble partiellement en colère, mieux vaut ne pas l’énerver davantage.",
       [Lang.DE]: "Das Kätzchen sieht ein wenig angefressen aus. Du solltest es besser nicht noch mehr reizen, es faucht ja jetzt schon.",
       [Lang.ES]: "Seguramente una mascota engullida que logró escapar antes de ser totalmente digerida. Parece encolerizada, mejor mantener distancia."
     },
@@ -11659,7 +11664,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 283,
     name: {
       [Lang.EN]: "Claymore Mine",
-      [Lang.FR]: "Mine Antipersonnelle",
+      [Lang.FR]: "Mine antipersonnel",
       [Lang.DE]: "Tretmine",
       [Lang.ES]: "Mina antipersonal"
     },
@@ -11716,7 +11721,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Once great for seducing the ladies while sitting in front of the campfire, they remain really popular despite the asexualization of the townsfolk. Far from a custom Les Paul '58 it may be, but it still brings joy and hope to the town. Who doesn't enjoy a sing-a-long?",
-      [Lang.FR]: "Idéale pour draguer lors de nuit de feu de camp, elle reste très appréciée même depuis l'asexualisation des citoyens. Elle saura rendre joie et gaïté dans la ville.",
+      [Lang.FR]: "Idéale pour draguer lors des soirées feu de camp, elle reste très appréciée même dans ce monde désolé. Elle saura rendre joie et gaieté dans la ville.",
       [Lang.DE]: "Früher konnte man damit die Damenwelt beeindrucken... Diese Zeiten sind vorbei, doch beliebt ist die Gitarre immer noch. Sie kommt zwar nicht an eine echte Les Paul '58 heran, aber die Stadt kann ein wenig Auflockerung gebrauchen. Wer hätte denn keinen Spaß an ein bisschen Musik?",
       [Lang.ES]: "Todo indica que perteneció al trío de \"Los Panchos\". Sus cuerdas están intactas, te servirá para cantar tus desgracias en alegres melodías."
     },
@@ -11806,7 +11811,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Banned throughout the world since someone advanced in years tried to cross the streams of two of these objects, it'll be good for slicing through putrefied flesh though!",
-      [Lang.FR]: "Interdit dans le monde après qu'une personne d'âge avancé ait perdu la vue en croisant le faisceau de ce petit objet, il saura être utile pour trancher de la chair putréfiée !",
+      [Lang.FR]: "Interdit dans le monde après qu’une personne d’âge avancé eut perdu la vue en croisant son faisceau, ce petit objet saura être utile pour trancher de la chair putréfiée !",
       [Lang.DE]: "In der alten Welt war er verboten.In den Jahren wurde er weiter verbessert und die Strahlen gebündelt. Heute eignet er sich gut, um durch verrottetes Fleisch zu schneiden.",
       [Lang.ES]: "Prohibido en las universidades desde que un profesor le quitó la vista a media clase cuando hizo un gesto con las manos. ¡Ahora te servirá para rebanar carne putrefacta!"
     },
@@ -11845,7 +11850,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Banned throughout the world since someone advanced in years tried to cross the streams of two of these objects, it'll be good for slicing through putrefied flesh though!",
-      [Lang.FR]: "Interdit dans le monde après qu'une personne d'âge avancé ait perdu la vue en croisant le faisceau de ce petit objet, il saura être utile pour trancher de la chair putréfiée !",
+      [Lang.FR]: "Interdit dans le monde après qu’une personne d’âge avancé eut perdu la vue en croisant son faisceau, ce petit objet saura être utile pour trancher de la chair putréfiée !",
       [Lang.DE]: "In der alten Welt war er verboten.In den Jahren wurde er weiter verbessert und die Strahlen gebündelt. Heute eignet er sich gut, um durch verrottetes Fleisch zu schneiden.",
       [Lang.ES]: "Prohibido en las universidades desde que un profesor le quitó la vista a media clase cuando hizo un gesto con las manos. ¡Ahora te servirá para rebanar carne putrefacta!"
     },
@@ -11884,7 +11889,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Banned throughout the world since someone advanced in years tried to cross the streams of two of these objects, it'll be good for slicing through putrefied flesh though!",
-      [Lang.FR]: "Interdit dans le monde après qu'une personne d'âge avancé ait perdu la vue en croisant le faisceau de ce petit objet, il saura être utile pour trancher de la chair putréfiée !",
+      [Lang.FR]: "Interdit dans le monde après qu’une personne d’âge avancé eut perdu la vue en croisant son faisceau, ce petit objet saura être utile pour trancher de la chair putréfiée !",
       [Lang.DE]: "In der alten Welt war er verboten.In den Jahren wurde er weiter verbessert und die Strahlen gebündelt. Heute eignet er sich gut, um durch verrottetes Fleisch zu schneiden.",
       [Lang.ES]: "Prohibido en las universidades desde que un profesor le quitó la vista a media clase cuando hizo un gesto con las manos. ¡Ahora te servirá para rebanar carne putrefacta!"
     },
@@ -11923,7 +11928,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Banned throughout the world since someone advanced in years tried to cross the streams of two of these objects, it'll be good for slicing through putrefied flesh though!",
-      [Lang.FR]: "Interdit dans le monde après qu'une personne d'âge avancé ait perdu la vue en croisant le faisceau de ce petit objet, il saura être utile pour trancher de la chair putréfiée !",
+      [Lang.FR]: "Interdit dans le monde après qu’une personne d’âge avancé eut perdu la vue en croisant son faisceau, ce petit objet saura être utile pour trancher de la chair putréfiée !",
       [Lang.DE]: "In der alten Welt war er verboten.In den Jahren wurde er weiter verbessert und die Strahlen gebündelt. Heute eignet er sich gut, um durch verrottetes Fleisch zu schneiden.",
       [Lang.ES]: "Prohibido en las universidades desde que un profesor le quitó la vista a media clase cuando hizo un gesto con las manos. ¡Ahora te servirá para rebanar carne putrefacta!"
     },
@@ -11962,7 +11967,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Banned throughout the world since someone advanced in years tried to cross the streams of two of these objects, it'll be good for slicing through putrefied flesh though!",
-      [Lang.FR]: "Interdit dans le monde après qu'une personne d'âge avancé ait perdu la vue en croisant le faisceau de ce petit objet, il saura être utile pour trancher de la chair putréfiée ! Maintenant il ne vous manque plus qu'une pile...",
+      [Lang.FR]: "Interdit dans le monde après qu’une personne d’âge avancé eut perdu la vue en croisant son faisceau, ce petit objet saura être utile pour trancher de la chair putréfiée ! Maintenant il ne vous manque plus qu’une pile...",
       [Lang.DE]: "In der alten Welt war er verboten.In den Jahren wurde er weiter verbessert und die Strahlen gebündelt. Heute eignet er sich gut, um durch verrottetes Fleisch zu schneiden. Jetzt brauchst du nur noch eine Batterie...",
       [Lang.ES]: "Prohibido en las universidades desde que un profesor le quitó la vista a media clase cuando hizo un gesto con las manos. Pero las cabezas no ruedan solas, necesitas una pila..."
     },
@@ -12038,7 +12043,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "A great way to make someone feel really unwelcome, a bomb under the doormat! Why didn't we think of this before!",
-      [Lang.FR]: "Une bien belle manière d'inviter les invités comme les non invités chez soi, une bombe sous le paillasson, pourquoi n'y avons-nous pas pensé plus tôt !",
+      [Lang.FR]: "Une bien belle manière d’accueillir les invités comme les non invités chez soi : une bombe sous le paillasson. Comment ne pas y avoir pensé plus tôt !",
       [Lang.DE]: "Nichts sagt \"Willkommen zuhause\" mehr als eine spontane Fußamputation.",
       [Lang.ES]: "Una excelente manera de hacer que alguien se sienta realmente mal acogido, ¡Una bomba debajo del felpudo! ¿Por qué no pensamos en esto antes?"
     },
@@ -12139,7 +12144,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Although it appears to be nothing but hay in the making, there must be another use for this herb apart from very disappointing cigarettes.",
-      [Lang.FR]: "Puisqu'on vous dit que c'est de l'herbe banale, il y a surement une autre utilité à cette herbe qu'une simple cigarette roulée.",
+      [Lang.FR]: "Puisqu’on vous dit que c’est de l’herbe banale, il y a sûrement une autre utilité à cette herbe qu’une simple cigarette roulée.",
       [Lang.DE]: "Scheint nicht viel besser als Heu zu sein, aber es wird sicher für irgendwas verwendbar sein. Außer ziemlich enttäuschenden Zigaretten.",
       [Lang.ES]: "Hierba común y corriente, debe tener otra utilidad, además de ser enrollada y fumada."
     },
@@ -12160,13 +12165,13 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 297,
     name: {
       [Lang.EN]: "Ergot Fungus",
-      [Lang.FR]: "Claviceps Purpurea",
+      [Lang.FR]: "Claviceps purpurea",
       [Lang.DE]: "Mutterkorn",
       [Lang.ES]: "Claviceps Purpurea"
     },
     description: {
       [Lang.EN]: "Sometimes we find mushrooms growing on corpses which make us say funny things, and they say that the effects on the brain are irreversible, and the state you're already in may just confirm it...",
-      [Lang.FR]: "Sur les cadavres, parfois, il y a des champignons qui font dire des trucs marrants, il paraît que les effets sur le cerveau sont irréversibles, ma foi au point où vous en êtes...",
+      [Lang.FR]: "Sur les cadavres, parfois, il y a des champignons qui font dire des trucs marrants. Il paraît que les effets sur le cerveau sont irréversibles ; ma foi, au point où vous en êtes…",
       [Lang.DE]: "Manchmal finden wir Pilze auf Leichen nach deren Genuss man die merkwürdigsten Sachen von sich gibt. Es heißt, die Schäden am Gehirn seien irreparabel und dein aktueller Zustand könnte das sogar bestätigen...",
       [Lang.ES]: "Sobre los cadáveres suelen crecer hongos que provocan delirios muy graciosos. Dicen que su efecto es irreversible. Madre mía, a qué extremo has llegado..."
     },
@@ -12184,13 +12189,13 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 298,
     name: {
       [Lang.EN]: "Ergot Homebrew",
-      [Lang.FR]: "Cidre Claviceps Artisanal",
+      [Lang.FR]: "Cidre claviceps artisanal",
       [Lang.DE]: "Korn-Bräu",
       [Lang.ES]: "Cidra claviceps artesanal"
     },
     description: {
       [Lang.EN]: "The dream of warriors, the blend of kings, the cocktail of the gods! If you doubt its strength, let one of your neighbors taste it.",
-      [Lang.FR]: "Le mélange des guerriers, le cercueil des rois, le cocktail des dieux ! Si vous doutez de son effet, faîtes le goûter par un de vos voisins.",
+      [Lang.FR]: "Le mélange des guerriers, le cercueil des rois, le cocktail des dieux ! Si vous doutez de son effet, faites-le goûter par un de vos voisins.",
       [Lang.DE]: "Gesöff der Krieger, Trank der Könige, Cocktail der Götter! Zweifelst Du an der Stärke dieses Getränkes, dann lass ruhig erst einmal Deine Nachbarn probieren.",
       [Lang.ES]: "\"Saltapatrás\", \"7 pecados\", \"Nos vemos en el suelo\"... Un licor exótico más, si quieres comprobar sus efectos, invítale un trago a un vecino."
     },
@@ -12233,7 +12238,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 299,
     name: {
       [Lang.EN]: "Cursed HiFi",
-      [Lang.FR]: "Chaine Hifi maudite",
+      [Lang.FR]: "Chaîne hi-fi maudite",
       [Lang.DE]: "Verfluchte HiFi",
       [Lang.ES]: "Equipo de música maldito"
     },
@@ -12263,7 +12268,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Nothing beats a little 80s retro music to liven up your tented evenings! If you're an evil b******d, open the window, turn it up LOUD and play it all night long!",
-      [Lang.FR]: "Rien ne vaut le charme retro d'un artiste des années 90 pour égayer vos soirées sous tente !",
+      [Lang.FR]: "Rien ne vaut le charme rétro d’un artiste des années 90 pour égayer vos soirées sous la tente !",
       [Lang.DE]: "Nichts ist besser, als mit ein wenig 80er Jahre Retro-Musik den Abend zu beleben! Dreh den Regler hoch und mach das Fenster auf!",
       [Lang.ES]: "Nada mejor que un poco de música ochentera para callar los gritos. ¡Sube el volumen y abre la ventana!"
     },
@@ -12290,7 +12295,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Had enough of the chitchat outside your door, townspeople insulting one another after too much Ergot Homebrew, citizens screaming in fear for their lives? These earplugs are your best friend!",
-      [Lang.FR]: "Vous ne supportez plus les commérages à vos portes, les insultes à votre porte, les citoyens hurlant à la mort ? Les boules quiès seront vos meilleures amies !",
+      [Lang.FR]: "Vous ne supportez plus les commérages, les insultes à votre porte, les citoyens hurlant à la mort ? Les boules Quies seront vos meilleures amies !",
       [Lang.DE]: "Hast du genug von dem Gequassel vor deiner Tür, den Streitereien nach zu viel Korn-Bräu oder Bürgern, die verzweifelt um ihr Leben schreien? Diese Ohrstöpsel sind genau das Richtige für dich!",
       [Lang.ES]: "Si ya no soportas el parloteo de tus vecinos, los insultos hacia tu persona o los gritos de moribundos infelices, estos tapones te harán sentir mejor."
     },
@@ -12342,7 +12347,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Despite an innocuous appearance, leading you to believe this is music for little girls, this is a serious defensive measure. As soon as the first waves from disk emanate from a HIFI, no normal person will be able to approach your home. That said, if our zombies were normal, MyHordes would be available on Facebook, so don't put all your faith in it...",
-      [Lang.FR]: "Malgré une apparence trompeuse pouvant laisser croire à un passe-temps de petite fille, il s'agit d'une véritable arme défensive. Dès que les premières ondes sonores de cet objet maudit sortent d'une chaine HIFI, aucune personne normalement constituée ne peut approcher votre habitation. Mais bon, si les zombies étaient normalement constitués, Hordes serait disponible sur Facebook, donc méfiez-vous quand même...",
+      [Lang.FR]: "Malgré une apparence trompeuse pouvant laisser croire à un passe-temps de petite fille, il s’agit d'une véritable arme défensive. Dès que les premières ondes sonores de cet objet maudit sortent d’une chaîne hi-fi, aucune personne normalement constituée ne peut approcher votre habitation. Mais bon, si les zombies étaient normalement constitués, ça se saurait… donc méfiez-vous quand même.",
       [Lang.DE]: "Trotz dass Du glaubst, dies ist Musik für kleine Mädchen , ist das eine ernsthafte Verteidigungsmaßnahme . Sobald die ersten Töne von der Mini Hi-Fi Anlage erklingen, wird kein normaler Mensch in der Lage sein, sich deinem Haus zu nähern. Vorrausgesetzt unsere Zombies waren mal normal und kennen Facebook ....",
       [Lang.ES]: "A pesar de su inofensiva aparencia, que te lleva a creer que esto es música para niñas, esta es una seria medida defensiva. Tan pronto como las primeras ondas del disco emanen de un HIFI, ninguna persona normal podrá acercarse a tu casa. Dicho esto, si nuestros zombies fueran normales, MyHordes estaría disponible en Facebook, así que no pongas toda tu fe en ello..."
     },
@@ -12369,7 +12374,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Ready to shake these hips to a little rock n' roll? This compilation from the true king of rock will kick-start the party!",
-      [Lang.FR]: "Prêt à bouger votre corps suintant au rythme du rock n' roll ? Cette compilation du légendaire King of rock va mettre le feu à la scène !",
+      [Lang.FR]: "Prêt(e) à bouger votre corps suintant au rythme du rock’n’roll ? Cette compilation du légendaire « King of Rock » va mettre le feu à la scène !",
       [Lang.DE]: "Bereit deine Hüften zu ein wenig Rock 'n' Roll zu schwingen? Diese Sammlung der besten Songs des King of Rock wird Stimmung in jede Party bringen.",
       [Lang.ES]: "¡A mover las caderas con El Rey del Rock and Roll!"
     },
@@ -12390,7 +12395,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 305,
     name: {
       [Lang.EN]: "Rock n Roll HiFi",
-      [Lang.FR]: "Chaîne HI-FI Rock n'Roll",
+      [Lang.FR]: "Chaîne hi-fi rock’n’roll",
       [Lang.DE]: "Rock n Roll HiFi",
       [Lang.ES]: "Equipo de música maldito"
     },
@@ -12414,13 +12419,13 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 306,
     name: {
       [Lang.EN]: "Anti-personnel HiFi",
-      [Lang.FR]: "Chaîne Hi-Fi défensive",
+      [Lang.FR]: "Chaîne hi-fi défensive",
       [Lang.DE]: "Verteidigende HiFi",
       [Lang.ES]: "Equipo Hi-Fi defensivo"
     },
     description: {
       [Lang.EN]: "The right CD and some good ear protection make this a powerful weapon which allows you to rest peacefully while others are kept at a safe distance!",
-      [Lang.FR]: "Combiné à un CD de musique, et des boules quiès, vous serez épargné par la toute puissance de cette arme fatale pour quiconque approchera de votre domicile",
+      [Lang.FR]: "Avec des boules Quies, vous serez épargné(e) par la toute-puissance de cette arme, fatale pour quiconque approchera de votre domicile.",
       [Lang.DE]: "Mit der richtigen CD und ein paar guten Ohrstöpseln wird diese HiFi zu einer gefährlichen Waffe, die dich und deine Mitbürger sicher schlafen lässt (zumindest in einiger Distanz)",
       [Lang.ES]: "El CD adecuado y unos buenos protectores auditivos forman esta poderosa arma que te permite descansar tranquilamente mientras otros se mantienen a una distancia segura."
     },
@@ -12659,7 +12664,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "This carefully sealed vial contains plum juice. Seems suspicious if you ask me. Especially when you conside that the label reads : 'in case of ingestion, contact the nearest poisons unit'. You're not going to drink it anyway, are you? Really?",
-      [Lang.FR]: "Cette fiole soigneusement scellée contient du jus de mirabelle. C'est vraiment suspect. D'autant qu'elle porte une étiquette : 'en cas d'ingestion, contacter le centre anti-poison le plus proche de chez vous'. Vous n'allez quand même pas boire ça ? Si ?",
+      [Lang.FR]: "Cette fiole soigneusement scellée contient du jus de mirabelle. C’est vraiment suspect. D’autant qu’elle porte une étiquette : « en cas d’ingestion, contacter le centre anti-poison le plus proche de chez vous ». Vous n’allez quand même pas boire ça ? Si ?",
       [Lang.DE]: "Dieses gut versiegelte Fläschen enthält Traubensaft. Das ist wirklich komisch... Warum sollte jemand Traubensaft versiegeln? Zumal ein Etikett angebracht wurde: 'Bei versehentlichen Verschlucken, bitte schnellstens die nächste Ambulanz aufsuchen'. Das willste doch nicht trinken? Oder etwa doch?!",
       [Lang.ES]: "Esta botella bien sellada contiene mosto. Extraño... ¿por qué alguien sellaría mosto? Tiene adjunta una etiqueta: \"Si se engiere, llame a una ambulancia lo antes posible\"."
     },
@@ -13184,7 +13189,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Depending on the era, this powder was used sequentially as a detonator for various artillery pieces, then as a cheap drug for needy citizens and finally as the main component of fireworks. In all three cases, many people have not survived.",
-      [Lang.FR]: "Selon les époques, cette poudre a tour à tour servi de détonateur pour divers pièces d'artillerie, puis comme drogue bas de gamme pour citoyen en manque avant d'être utilisée comme ingrédient principal dans les feux d'artifice. Dans les 3 cas, beaucoup de gens n'y ont pas survécu.",
+      [Lang.FR]: "Selon les époques, cette poudre a tour à tour servi de détonateur pour diverses pièces d’artillerie, puis comme drogue bas de gamme pour citoyens en manque, avant d’être utilisée comme ingrédient principal dans les feux d’artifice. Dans les 3 cas, beaucoup de gens n’y ont pas survécu.",
       [Lang.DE]: "Je nach Epoche wurde dieses Pulver nacheinander als Zünder für verschiedene Artilleriegeschütze, dann als billige Droge für bedürftige Bürger und schließlich als Hauptbestandteil von Feuerwerkskörpern verwendet. In allen drei Fällen haben viele Menschen nicht überlebt.",
       [Lang.ES]: "Dependiendo de la era, este polvo fue usado esencialmente como detonador para varias piezas de artillería, luego como una droga barata para los habitantes necesitados y, finalmente como el principal componente de los fuegos artificiales. En los tres casos, muchas personas no han sobrevivido."
     },
@@ -14109,7 +14114,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       
     ],
     drops: {
-      [DropLocation.Zone]: 0.43
+      [DropLocation.Zone]: 0.42
     },
   },
   [ItemId.HURLING_STICK]: {
@@ -14172,7 +14177,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Nothing beats a pint of the black stuff to inspire poetry, laughter and erm, fight the zombies... *Approved by Charlie Sheen",
-      [Lang.FR]: "Rien de mieux qu’une pinte d'un breuvage noir pour inspirer la poésie, le rire et le combat contre les zombies... *Approuvé par Charlie Sheen",
+      [Lang.FR]: "Rien de mieux qu’une pinte d’un breuvage noir pour inspirer la poésie, le rire et le combat contre les zombies… Approuvé par Charlie Sheen.",
       [Lang.DE]: "Nichts ist besser als ein Pint des schwarzen Zeugs, um Poesie, Lachen und ähm, den Kampf gegen die Zombies zu inspirieren... *Genehmigt von Charlie Sheen",
       [Lang.ES]: "No hay nada mejor como una pinta de cerveza oscura para inspirar poesía, risas y lucha de zombies... *Aprobado por Charlie Sheen"
     },
@@ -14342,7 +14347,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Where possible, don't waste bandages. Once they're cut, that's them done. However, the pills are always useful.",
-      [Lang.FR]: "Si possible, ne vous encombrez pas de bandages. Une fois que c'est coupé, c'est coupé. Par contre les petites pillules ça sert toujours.",
+      [Lang.FR]: "Si possible, ne vous encombrez pas de bandages. Une fois que c'est coupé, c'est coupé. Par contre les petites pilules ça sert toujours.",
       [Lang.DE]: "Was willst du mit diesen ganzen Verbänden? Was abgerissen wurde ist weg. Die kleine Pillen hingegen sind immer von Nutzen.",
       [Lang.ES]: "No lo llenes de tantos vendajes, disfrazarte de momia no servirá, en cambio, las pastillas siempre pueden ser útiles."
     },
@@ -14625,7 +14630,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "This high-tech key print was molded from a mixture of dehydrated noodles and a slime. You can really do ANYTHING with it!",
-      [Lang.FR]: "Cette empreinte de clé high-tech a été moulée dans un mélange de nouilles déshydratées et une substance gluante. On peut vraiment TOUT faire avec !",
+      [Lang.FR]: "Cette empreinte de clé high-tech a été moulée dans un mélange de nouilles déshydratées et d'une substance gluante. On peut vraiment TOUT faire avec !",
       [Lang.DE]: "Dieser Hightech-Schlüsselabdruck wurde aus einer Mischung von dehydrierten Nudeln und Schleim geformt. Damit kann man wirklich ALLES machen!",
       [Lang.ES]: "Esta impresión de llave de alta tecnología fue moldeada a partir de una mezcla de fideos deshidratados y una sustancia pegajosa. ¡Realmente puedes hacer CUALQUIER COSA con él!"
     },
@@ -14695,7 +14700,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "We don't really know how this is possible, but it looks solid regardless. The noodle agglomerate PERFECTLY forms the shape of a bottle opener!",
-      [Lang.FR]: "On ne sait pas trop comment c'est possible, mais ça a l'air solide malgré tout. L'agglomérat de nouille forme PARFAITEMENT la forme d'un décapsuleur !",
+      [Lang.FR]: "On ne sait pas trop comment c'est possible, mais ça a l'air solide malgré tout. L'agglomérat de nouilles dessine PARFAITEMENT la forme d'un décapsuleur !",
       [Lang.DE]: "Wir wissen nicht wirklich, wie das möglich ist, aber es sieht auf jeden Fall solide aus. Das Nudelagglomerat hat die perfekte Form eines Flaschenöffners!",
       [Lang.ES]: "No estamos seguros de cómo es posible esto, pero de todos modos parece sólido. ¡El aglomerado de fideos tiene PERFECTAMENTE la forma de un abridor de botellas!"
     },
@@ -15145,7 +15150,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "When one of these landed on Sir Newton's head, surely the first thing to cross his mind wasn't the first Universal Law of Gravity... having said that, there should be a few vitamins in there for the munching.",
-      [Lang.FR]: "Si Newton avait reçu une pomme comme celle-ci sur la tête, il aurait surement pensé à autre chose qu'à la loi de la Gravitation Universelle... Cela étant dit, il doit bien y avoir quelques vitamines là-dedans.",
+      [Lang.FR]: "Si Newton avait reçu une pomme comme celle-ci sur la tête, il aurait sûrement pensé à autre chose qu’à la loi de la gravitation universelle… Cela étant dit, il doit bien y avoir quelques vitamines là-dedans.",
       [Lang.DE]: "Als einer davon auf Sir Newton's Kopf fiel dachte er mit Sicherheit nicht zuerst an das erste universelle Gesetz der Schwerkraft... aber es sollten immerhin ein paar Vitamine enthalten sein.",
       [Lang.ES]: "Si haces que te caiga en la cabeza, tal vez te vengan ideas como a Newton... En todo caso, debe tener algunas vitaminas."
     },
@@ -15310,7 +15315,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "A delicious protein dessert! Apparently, it's better when it's moving...",
-      [Lang.FR]: "Un succulent dessert protéiné ! Il parait que c'est meilleur quand ça bouge...",
+      [Lang.FR]: "Un succulent dessert protéiné ! Il paraît que c'est meilleur quand ça bouge...",
       [Lang.DE]: "Ein köstliches Protein-Dessert! Anscheinend ist es besser, wenn es sich noch bewegt...",
       [Lang.ES]: "¡Un delicioso postre proteico! Al parecer es mejor cuando se mueve..."
     },
@@ -15333,5 +15338,32 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ]
       }
     ],
+  },
+  [ItemId.SCARY_MASK]: {
+    id: ItemId.SCARY_MASK,
+    numericalId: 383,
+    name: {
+      [Lang.EN]: "Creepy Mask",
+      [Lang.FR]: "Masque effrayant",
+      [Lang.DE]: "Schaurige Maske",
+      [Lang.ES]: "Mascará Escalofriante"
+    },
+    description: {
+      [Lang.EN]: "Somehow this mask reminds you of someone...",
+      [Lang.FR]: "D'une certaine manière, ce masque vous rappelle quelqu'un...",
+      [Lang.DE]: "Irgendwie erinnert diese Maske dich an jemanden...",
+      [Lang.ES]: "De alguna manera, esta máscara te recuerda a alguien… en todo caso, te pone los pelos en punta."
+    },
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Decoration],
+    icon: "item_scary_mask",
+    decoration: 5,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ],
+    drops: {
+      [DropLocation.Zone]: 0.6
+    },
   }
 };

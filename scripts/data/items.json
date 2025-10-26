@@ -195,7 +195,7 @@
       "es": "Batidora eléctrica (cargada)"
     },
     "desc": {
-      "fr": "Il bat (très fort) et il est électrique, que dire de plus ? Le bon point, c'est qu'il ne nécessite qu'une pile et a une certaine chance de l'épuiser.",
+      "fr": "Il bat (très fort) et il est électrique, que dire de plus ? Le bon point, c'est qu'il ne nécessite qu'une pile et a une certaine chance de ne pas l'épuiser.",
       "en": "It's a (really powerful) whisk and it's electric, what else is there to say? Well, the good part is that it only needs one battery, and only has limited chance of running down.",
       "de": "Rührt elektrisch und sehr schnell - was gibt's sonst noch zu sagen? Er hat den Vorteil, dass er nur eine Batterie braucht, die sich nicht mal mit Sicherheit entlädt.",
       "es": "Tan sencillo como eso. La buena noticia es que sólo necesitas una batería y tienes cierta posibilidad de agotarla."
@@ -247,7 +247,7 @@
       "es": "Cortacésped"
     },
     "desc": {
-      "fr": "Vous aimez quand c'est propre droit et que ça sent le frais ? En l'occurrence, oubliez tout ça ! Quand vous l'utiliserez ça ne sera pas le cas.",
+      "fr": "Vous aimez quand c’est propre, droit, et que ça sent le frais ? En l’occurrence, oubliez tout ça ! Quand vous l’utiliserez, ça ne sera pas le cas.",
       "en": "You like it when it's nice and clean, when it smells of freshly cut grass ? In this instance, forget it - when you use it, it won't be like that at all.",
       "de": "Du magst es wenn es sauber ist und frisch nach Gras duftet? Vergiss das mal lieber ganz schnell. Wenn du ihn verwendest, wird es ganz anders riechen...",
       "es": "¿Te gusta que quede parejo, limpio y que huela a jardín primaveral? Olvídalo, cuando lo utilices será todo lo contrario."
@@ -267,13 +267,13 @@
     "deco": 0,
     "guard": 5,
     "name": {
-      "fr": "Clé à Molette",
+      "fr": "Clé à molette",
       "en": "Adjustable Spanner",
       "de": "Verstellbarer Schraubenschlüssel",
       "es": "Llave inglesa"
     },
     "desc": {
-      "fr": "Avec une clé à Molette, vous pouvez au choix bricoler un objet ou détruire quelque chose. Pas forcément un objet d'ailleurs…",
+      "fr": "Avec une clé à molette, vous pouvez au choix bricoler un objet ou détruire quelque chose. Pas forcément un objet d’ailleurs…",
       "en": "With an adjustable spanner, you can choose between building something and breaking something. Something might not necessarily be an object...",
       "de": "Mit einem verstellbaren Schraubenschlüssel kannst du wahlweise an einem Gegenstand herumbasteln oder etwas zerstören (muss nicht unbedingt ein Gegenstand sein...)",
       "es": "Con ella puedes armar un objeto o destruir lo que quieras. No necesariamente tiene que ser un objeto..."
@@ -429,7 +429,7 @@
       "es": "Navaja suiza"
     },
     "desc": {
-      "fr": "Le Couteau Suisse pourra sans soucis vous dépanner pour tous les petits travaux manuels, sauf peut-être découper une horde de mort-vivants.",
+      "fr": "Le couteau suisse pourra sans soucis vous dépanner pour tous les petits travaux manuels, sauf peut-être découper une horde de morts-vivants.",
       "en": "The Swiss Army Knife can pretty much be used to take care of any minor job, except perhaps decapitating a horde of zombies.",
       "de": "Das Schweizer Taschenmesser ist für viele kleinere Arbeiten nützlich. Für eine Horde lebender Untoter reicht es allerdings nicht ganz aus.",
       "es": "Siempre útil para pequeños trabajos manuales, pero no ante una turba de muertos vivientes."
@@ -579,7 +579,7 @@
     "deco": 0,
     "guard": 0,
     "name": {
-      "fr": "Piqure de calmant",
+      "fr": "Piqûre de calmant",
       "en": "Valium Shot",
       "de": "Beruhigungsspritze",
       "es": "Inyección calmante"
@@ -683,7 +683,7 @@
     "deco": 1,
     "guard": 5,
     "name": {
-      "fr": "Lampe de chevet éteinte",
+      "fr": "Lampe de chevet (éteinte)",
       "en": "Bedside Lamp",
       "de": "Ausgeschaltete Nachttischlampe",
       "es": "Lámpara de mesa apagada"
@@ -735,13 +735,13 @@
     "deco": 1,
     "guard": 0,
     "name": {
-      "fr": "Petite chaîne Hi-Fi en panne",
+      "fr": "Petite chaîne hi-fi en panne",
       "en": "Mini HI-Fi (Broken)",
       "de": "Mini Hi-Fi Anlage (defekt)",
       "es": "Equipo de sonido malogrado"
     },
     "desc": {
-      "fr": "Un chaîne HiFi \"petit budget\", mais on ne va pas faire les difficiles... Dommage qu'il lui manque une pile pour fonctionner.",
+      "fr": "Une chaîne hi-fi « petit budget », mais on ne va pas faire les difficiles… Dommage qu’il lui manque une pile pour fonctionner.",
       "en": "A busted low-budget stereo system. Nonetheless, it's a shame when all it needs is a battery...",
       "de": "Eine kleine Hi-Fi Anlage vom Discounter nebenan. Schade, dass keine Batterien mehr drin sind, aber vielleicht kannst du ja welche auftreiben...",
       "es": "De los baratos... pero necesita una pila para funcionar."
@@ -761,7 +761,7 @@
     "deco": 0,
     "guard": 0,
     "name": {
-      "fr": "Chaîne de Porte + cadenas",
+      "fr": "Chaîne de porte avec cadenas",
       "en": "Padlock and Chain",
       "de": "Kette + Vorhängeschloss",
       "es": "Cadena + candado"
@@ -1099,7 +1099,7 @@
     "deco": 0,
     "guard": 0,
     "name": {
-      "fr": "Stéroïdes Anabolisants",
+      "fr": "Stéroïdes anabolisants",
       "en": "Anabolic Steroids",
       "de": "Anaboles Steroid",
       "es": "Esteroides anabólicos"
@@ -1131,7 +1131,7 @@
       "es": "Bistec jugoso"
     },
     "desc": {
-      "fr": "C'est un peu élastique et ça sent même le poisson… On se demande bien ce que ça peut être, mais c'est surement plein de vitamines (et pas d'autres choses, espérez-vous).",
+      "fr": "C’est un peu élastique et ça sent même le poisson… On se demande bien ce que ça peut être, mais c’est sûrement plein de vitamines (et pas d’autres choses, espérez-vous).",
       "en": "It's a bit rubbery, and smells a bit fishy... You ask yourself what kind of meat it could be, but decide that it's got to be full of vitamins (and nothing else, you hope).",
       "de": "Es ist labbrig wie weiches Gummi und es riecht nach Fisch ... Was das wohl für ein Fleisch ist? Jedenfalls hat es bestimmt viele Vitamine und Proteine (und sonst hoffentlich nichts).",
       "es": "Tiene muchas proteínas, pero parece ser más duro que una suela de zapato, más vale que tengas buena dentadura."
@@ -1339,7 +1339,7 @@
       "es": "Lámina de metal"
     },
     "desc": {
-      "fr": "Rien ne vaut une plaque de tôle rouillée pour empêcher les zombies de vous atteindre… Note : les défenses comptent double si elles sont installées en ville plutôt que chez soi.",
+      "fr": "Rien ne vaut une plaque de tôle rouillée pour empêcher les zombies de vous atteindre…",
       "en": "There's nothing like a bit of rusty sheet metal to stop zombies from getting to you... Note: Defensive items give better bonuses if they are installed in town as opposed to in your home.",
       "de": "Fast nichts ist besser als eine rostige Blechplatte, um die Zombies am Eindringen zu hindern... Anmerkung: Verteidigungsgegenstände zählen mehr Punkte, wenn sie in der Bank aufbewahrt werden anstatt daheim.",
       "es": "Muy buena para protegerte de los zombies... Nota: Las defensas valen más puntos si son instaladas en el pueblo en vez de en tu casa."
@@ -1359,7 +1359,7 @@
     "deco": 0,
     "guard": 0,
     "name": {
-      "fr": "Pompe à Jerrycan (démontée)",
+      "fr": "Pompe à jerrycan (démontée)",
       "en": "Jerrycan Gun (unattached)",
       "de": "Kanisterpumpe (zerlegt)",
       "es": "Bomba para cantimplora incompleta"
@@ -1417,7 +1417,7 @@
       "es": "Vodka Rosquetoff"
     },
     "desc": {
-      "fr": "Après avoir passé une éternité au soleil, cette bouteille s'est complètement décolorée. Vous avez l'intuition qu'elle devait être verte par le passé. Ah, voilà l'étiquette! ...d'accord, une simple blonde. \"À conserver à l'écart de la lumière et de toute source de chaleur\", eh bien, tentons... (Vous avalez une énorme gorgée et relâchez un rot géant peu de temps après!) - \"À la tienne, Étienne!\"",
+      "fr": "Après avoir passé une éternité au soleil, cette bouteille s’est complètement décolorée. Vous avez l’intuition qu’elle devait être verte par le passé. Ah, voilà l’étiquette ! Une simple blonde… « À conserver à l’écart de la lumière et de toute source de chaleur » ? Eh bien, ça se tente…(Vous avalez une énorme gorgée et relâchez un rot géant peu de temps après!) - \"À la tienne, Étienne!\"",
       "en": "After spending forever under the sun, this bottle is completely discolored. You have the intuition that it must have been green in the past. Ah, here's the label!... okay, just a pale lager. \"Keep away from light and all sources of heat\", well, let's try... (You take a huge sip and release a giant burp shortly after!) - \"Cheers, Pap Finn!\"",
       "de": "Das Glas dieser gut erhaltenen Bierflasche ist ziemlich verfärbt. Du vermutest, dass es früher mal grün war. Ah, da, das Etikett! Roter Rand...\"Welcome to the Feck's experience\"... okay, ein Pils. Na dann lass uns doch mal das \"Experiment\" wagen... .(Mit einem kräftigen Schluck kippst du dir den Saft hinter die Binde und lässt kurz darauf einen Riesenrülpser los!) - \"Prost Kameraden!\"",
       "es": "Un buen trago que quema la garganta y te quita el cansancio, ¡recuperando además puntos de Acción!... 85° de alcohol puro, con algunos bichos flotando en el fondo. ¡Salud camarada!"
@@ -1437,7 +1437,7 @@
     "deco": 0,
     "guard": 0,
     "name": {
-      "fr": "Pompe à Jerrycan (vide)",
+      "fr": "Pompe à jerrycan (vide)",
       "en": "Jerrycan Gun (empty)",
       "de": "Kanisterpumpe (leer)",
       "es": "Bomba para cantimplora (vacía)"
@@ -1807,7 +1807,7 @@
       "es": "Twinoid 500mg"
     },
     "desc": {
-      "fr": "Un concentré de caféïne, de théine, de diverses drogues chimiques et de testicules de taureau broyées. La drogue idéale pour les coups de fouets en fin de journée, ou quand il s'agit de fuir face à une horde de zombies qui en veulent à votre foie.",
+      "fr": "Un concentré de caféine, de théine, de diverses drogues chimiques et de testicules de taureau broyées. La drogue idéale pour les coups de fouet en fin de journée, ou quand il s’agit de fuir face à une horde de zombies qui en veulent à votre foie.",
       "en": "A combination of caffeine, theine, various chemicals and boiled bull's testicles (taurine?), this is a great pick-me-up for the end of the day, or for when you want to flee from a horde of zombies who want your liver.",
       "de": "Eine Mischung aus konzentriertem Koffein, verschiedenen chemischen Drogen und zermahlenen Stierhoden. Die ideale Droge für den kleinen Energieschub am Abend, wenn du vor einer Zombiemeute flüchten musst, die es auf deine Leber abgesehen hat.",
       "es": "Un concentrado de cafeína, teína, diversas sustancias multicolores y testículos de toro en polvo. Una dosis permite empezar el día con energía o huir rápidamente de una turba de zombies."
@@ -1905,7 +1905,7 @@
     "deco": 3,
     "guard": 5,
     "name": {
-      "fr": "Lampe de chevet (Allumée)",
+      "fr": "Lampe de chevet (allumée)",
       "en": "Bedside Lamp (on)",
       "de": "Nachttischlampe (an)",
       "es": "Lámpara encendida"
@@ -1931,7 +1931,7 @@
     "deco": 10,
     "guard": -30,
     "name": {
-      "fr": "Petite chaîne HiFi (Allumée)",
+      "fr": "Petite chaîne hi-fi (allumée)",
       "en": "Mini Hi-Fi (on)",
       "de": "Mini Hi-Fi Anlage (an)",
       "es": "Pequeño equipo de sonido encendido"
@@ -2483,7 +2483,7 @@
       "es": "Batidora eléctrica (apagada)"
     },
     "desc": {
-      "fr": "Il bat (très fort) et il est électrique, que dire de plus ? Le bon point, c'est qu'il ne nécessite qu'une pile et a une certaine chance de l'épuiser.",
+      "fr": "Il bat (très fort) et il est électrique, que dire de plus ? Le bon point, c'est qu'il ne nécessite qu'une pile et a une certaine chance de ne pas l'épuiser.",
       "en": "It's a (really powerful) whisk and it's electric, what else is there to say? Well, the good part is that it only needs one battery, and only has limited chance of running down.",
       "de": "Rührt elektrisch und sehr schnell - was gibt's sonst noch zu sagen? Er hat den Vorteil, dass er nur eine Batterie braucht, die sich nicht mal mit Sicherheit entlädt.",
       "es": "Tan sencillo como eso. La buena noticia es que sólo necesitas una batería y tienes cierta posibilidad de agotarla."
@@ -2847,7 +2847,7 @@
       "es": "Fusil de asalto (vacío)"
     },
     "desc": {
-      "fr": "Une version peu courante du M16. Plus compacte, probablement destiné à un usage \"civil\"... La chasse à la Galinette Cendrée diront certains.",
+      "fr": "Une version peu courante du M16 : plus compacte, probablement destinée à un usage « civil »… La chasse à la galinette cendrée, diront certains.",
       "en": "A modified, more compact version of the AK-47, probably destined to \"civilian\" use... not the most accurate gun though... watch out for \"friendly fire\"!",
       "de": "Eine umgebaute Version des AK-47. Dieses Gewehr ist kompakter und wahrscheinlich für den \"zivilen\" Einsatz entworfen worden... Manche sagen man könne damit sehr gut 'Problembären' kalt machen.",
       "es": "Una versión modificada del AK-47, más compacta, probablemente diseñada para un uso \"civil\"..."
@@ -2945,7 +2945,7 @@
     "deco": 0,
     "guard": 0,
     "name": {
-      "fr": "Médicament sans étiquette",
+      "fr": "Médicaments sans étiquette",
       "en": "Unlabelled Drug",
       "de": "Etikettenloses Medikament",
       "es": "Medicamento sin etiqueta"
@@ -3263,7 +3263,7 @@
       "es": "Sandwich misterioso"
     },
     "desc": {
-      "fr": "Un reste de casse-croute qui n'a d'appétissant que son souvenir...",
+      "fr": "Un reste de casse-croûte qui n’a d’appétissant que son souvenir…",
       "en": "Part of a sandwich which tastes nothing like you had expected, or hoped...",
       "de": "Der Rest eines Schinkenbrötchens. Die grünlich-weiß verschimmelten Schinkenecken lassen sich kurzerhand unter dem Brot verstecken und dann nichts wie runter damit...",
       "es": "Está muy viejo. No se sabe si lo que tiene dentro son los restos de una hamburguesa o los de una rata que murió allí dentro... ¿Eso blanco, es mayonesa?"
@@ -3575,7 +3575,7 @@
       "es": "Restos de metal"
     },
     "desc": {
-      "fr": "Des bouts de ferrailles rouillées, du grillage, des vis… Rien d'utilisable tel quel, il faudrait d'abord retaper ça en ville.",
+      "fr": "Des bouts de ferraille rouillés, du grillage, des vis… Rien d’utilisable tel quel, il faudrait d’abord retaper ça en ville.",
       "en": "Rusty scraps of metal, wire mesh and screws... Nothing immediately useful, but if you take it back to the town maybe it can be recycled.",
       "de": "Ein paar verrostete Metallstangen, ein Gitter, ein paar Schrauben... Nichts, was du sofort benutzen könntest. Du musst es erst in der Stadt ein wenig bearbeiten.",
       "es": "Pedazos de metal oxidado, mallas, tornillos... Nada útil en ese estado, habrá que transformarlos en el taller."
@@ -3653,7 +3653,7 @@
       "es": "Leña en buen estado"
     },
     "desc": {
-      "fr": "Une belle buche qui pourrait tout à fait servir de tabouret à la maison. Après tout… C'est mieux que rien.",
+      "fr": "Une belle bûche qui pourrait tout à fait servir de tabouret à la maison. Après tout… c’est mieux que rien.",
       "en": "A decent log which could be used as a stool. Look - it's better than nothing...",
       "de": "Ein schöner Holzscheit, den du als Hocker für deine Einrichtung verwenden kannst. Was willst du mehr? Ist doch besser als nichts.",
       "es": "Un buen pedazo de madera que puede servir de taburete en tu casa. Después de todo, es mejor que nada."
@@ -3835,7 +3835,7 @@
       "es": "Desinfectante efervescente"
     },
     "desc": {
-      "fr": "Une capsule de produit désinfectant à mettre dans de l'eau pour la nettoyer. Avant, c'était utilisé pour récurer les toilettes. Vous imaginez aisément le goût de l'eau après... (ATTENTION: le rendement de ce produit est faible en comparaison d'un Purificateur industriel)",
+      "fr": "Une capsule de produit désinfectant à mettre dans de l’eau pour la nettoyer. Avant, c’était utilisé pour récurer les toilettes. Vous imaginez aisément le goût de l’eau après… (ATTENTION : le rendement de ce produit est faible comparé à celui d’un purificateur industriel !)",
       "en": "When added to water, these disinfectant capsules make water safe to drink. These were previously used for cleaning toilets. You start to imagine how the water is going to taste afterwards... (NOTE: The yield of this product is much lower than that of the Industrial Purifier).",
       "de": "Eine desinfizierende Brausetablette, mit der man Wasser reinigen kann. Eigentlich handelt es sich um ein Reinigungstab für Toiletten. Den Geschmack kannst du dir ja ausmalen... (ACHTUNG: Die Ausbeute dieses Produkts ist im Vergleich zum industriellen Reiniger wesentlich geringer.)",
       "es": "Purifica el agua. Antes se usaba para desinfectar los inodoros, ya sabes el sabor que tendrá el agua... (Atención: El rendimiento de este objeto es inferior al de un Purificador Industrial)"
@@ -3861,7 +3861,7 @@
       "es": "Melón de intestino"
     },
     "desc": {
-      "fr": "Habituellement le Melon d'intestin pousse dans le ventre des cadavres, au niveau du gros colon. Il semblerait pourtant que votre potager en ait donné de très jolis… Peut-être avez-vous cultivé sur un vieux cimetière indien ?",
+      "fr": "Habituellement, le melon d’intestin pousse dans le ventre des cadavres, au niveau du gros côlon. Il semblerait pourtant que votre potager en ait donné de très jolis… Peut-être avez-vous cultivé sur un vieux cimetière indien ?",
       "en": "Normally, the intestine melon grows in the stomachs of corpses, near the large colon. However, it seems that your vegetable garden is doing surprisingly well... maybe you built it on the site of an ancient Indian graveyard?",
       "de": "Normalerweise \"wächst\" die Darmmelone im Grimmdarm von Kadavern, doch es sieht so aus, als ob dein Gemüsebeet dir ein paar hübsche Exemplare beschert hätte. Kann es vielleicht sein, dass dein Gemüsebeet auf einem alten Indianerfriedhof liegt?",
       "es": "Se sabe que crece en el intestino de los cadáveres, cerca del colon. Sin embargo, tu huerta presenta varios de estos frutos... ¿Los habrás cultivado en algún antiguo cementerio?"
@@ -3939,7 +3939,7 @@
       "es": "Osito cariñosito"
     },
     "desc": {
-      "fr": "Un petit doudou en peluche qui a dû faire le bonheur d'un enfant… Un jour…",
+      "fr": "Un petit doudou en peluche qui a dû faire le bonheur d'un enfant… un jour...",
       "en": "A small plush teddy bear which would have been a child's pride and joy... once upon a time...",
       "de": "Ein kleines Stoffkuscheltier, das einem Kind vor langer Zeit viel Freude bereitet hat...",
       "es": "Un peluche que habrá dado mucha felicidad a un niño... o tal vez no."
@@ -4225,7 +4225,7 @@
       "es": "Frigorífico"
     },
     "desc": {
-      "fr": "Une grosse machine pour garder les choses fraiches et les empêcher de pourrir trop vite. Elle ne fonctionne plus mais on doit bien pouvoir en tirer quelque chose.",
+      "fr": "Une grosse machine pour garder les choses fraîches et les empêcher de pourrir trop vite. Elle ne fonctionne plus, mais on doit bien pouvoir en tirer quelque chose.",
       "en": "A magical box which keeps the Britneys cool. I suppose it could also be used for other things though. It doesn't work any more, but maybe if you take it apart you might find something of use...",
       "de": "Leider enthält dieser kleine Kühlschrank keinen Alkohol mehr. Zudem funktioniert er nicht mehr. Allerdings könnte er ein gutes Wurfgeschoss abgeben.",
       "es": "Aún tiene la foto de una pareja de novios pegada con un imán. Ya no funciona pero algún uso le has de encontrar."
@@ -4511,7 +4511,7 @@
       "es": "Cajas de cartón"
     },
     "desc": {
-      "fr": "Quelques cartons qui devaient autrefois être des boîtes de rangement pour des appareils électroménagers. Même s'ils sont à moitié pourris et sentent le moisi à plein nez, ils pourront toujours servir chez vous... comme meuble.",
+      "fr": "Quelques cartons qui devaient autrefois être des boîtes de rangement pour des appareils électroménagers. Même s’ils sont à moitié pourris et sentent le moisi à plein nez, ils pourront toujours servir chez vous… comme meubles.",
       "en": "Some cardboard boxes previously from domestic appliances. Even if they're partially rotten and clearly smell of mould, they can still be used in your home... as furniture.",
       "de": "Ein paar Haushaltsgerätekartons, die stark nach Schimmel riechen. Du kannst sie aber immer noch verwenden - als Möbel zum Beispiel.",
       "es": "Diversas cajas de artefactos eléctricos y muebles. Podrían servir en tu casa como muebles."
@@ -4615,7 +4615,7 @@
       "es": "Pedazo de rejilla"
     },
     "desc": {
-      "fr": "Une petite partie d'une clôture grillagée, rouillée et abimée.",
+      "fr": "Une petite partie d’une clôture grillagée, rouillée et abîmée.",
       "en": "A small rusty piece of mesh. It's seen better days...",
       "de": "Ein kleines, verrostetes Stück Maschendrahtzaun.",
       "es": "Oxidada y torcida, puede servir para algo."
@@ -4823,7 +4823,7 @@
       "es": "Lanza-pilas Mark II (vacío)"
     },
     "desc": {
-      "fr": "Cette version améliorée du Lance-pile comporte un canon équipé d'un Calibrateur PDTT Mark II. En dosant précisément la puissance de tir, ce canon permet (parfois) de récupérer la pile qui a été tirée.",
+      "fr": "Cette version améliorée du Lance-Pile 1-PDTG comporte un canon équipé d’un calibrateur PDTT Mark II. En dosant précisément la puissance de tir, ce canon permet (parfois) de récupérer la pile qui a été tirée.",
       "en": "This upgraded version of the Battery Launcher 1-ITF features a PDTT Mark II Calibrator. By precisely regulating the firepower, this feature sometimes allows batteries which have already been fired to be recovered.",
       "de": "Bei dieser verbesserten Version des normalen Batteriewerfers 1-PDTG ist der PDTT Mark II-Druckregler schon eingebaut. Durch Feinjustierung der Schusskraft ist es manchmal sogar möglich die verschossene Batterie wieder einzusammeln.",
       "es": "Esta versión mejorada del temible lanza-pilas lleva un cañón equipado con el Calibrador PDTT Mark II. Ajustando la potencia del tiro, el cañón permite, a veces, recuperar la pila disparada."
@@ -4849,7 +4849,7 @@
       "es": "Lanza-pilas Mark II (cargado)"
     },
     "desc": {
-      "fr": "Cette version améliorée du Lance-pile comporte un canon équipé d'un Calibrateur PDTT Mark II. En dosant précisément la puissance de tir, ce canon permet (parfois) de récupérer la pile qui a été tirée.",
+      "fr": "Cette version améliorée du Lance-Pile 1-PDTG comporte un canon équipé d’un calibrateur PDTT Mark II. En dosant précisément la puissance de tir, ce canon permet (parfois) de récupérer la pile qui a été tirée.",
       "en": "This upgraded version of the Battery Launcher 1-ITF features a PDTT Mark II Calibrator. By precisely regulating the firepower, this feature sometimes allows batteries which have already been fired to be recovered.",
       "de": "Bei dieser verbesserten Version des normalen Batteriewerfers 1-PDTG ist der PDTT Mark II-Druckregler schon eingebaut. Durch Feinjustierung der Schusskraft ist es manchmal sogar möglich die verschossene Batterie wieder einzusammeln.",
       "es": "Esta versión mejorada del temible lanza-pilas lleva un cañón equipado con el Calibrador PDTT Mark II. Ajustando la potencia del tiro, el cañón permite, a veces, recuperar la pila disparada."
@@ -5135,7 +5135,7 @@
       "es": "Lonchera"
     },
     "desc": {
-      "fr": "À défaut d'un vrai repas autour d'une table, avec des couverts et des amis, vous avez cette boite-déjeuner Armaggedon que vous aviez caché il y a un bon moment sous votre lit…",
+      "fr": "À défaut d’un vrai repas autour d’une table, avec des couverts et des amis, vous avez cette boîte-déjeuner Armageddon que vous aviez cachée il y a un bon moment sous votre lit…",
       "en": "In the absence of a proper meal, sat round a nicely-set table with friends, you'll have to make do with this emergency lunch box which you hid under the bed some time ago...",
       "de": "Da Du hier kein richtiges Dinner mit Freunden erleben kannst, hast du dir ein paar leckere Happen beiseite gelegt und in dieser Lunch-Box aufbewahrt. Ab und zu muss man sich mal was gönnen ...",
       "es": "A falta de una buena comida en una mesa. con cubiertos y amigos, tienes esta lonchera Armagedón que habías escondido hace un tiempo bajo tu cama..."
@@ -5343,7 +5343,7 @@
       "es": "Caja fuerte"
     },
     "desc": {
-      "fr": "Qui peut bien dire ce que ce lourd coffre-fort contient ? Sûrement pas vous en tous cas, à moins que vous ne connaissiez la combinaison secrète d'ouverture.",
+      "fr": "Qui peut bien dire ce que ce lourd coffre-fort contient ? Sûrement pas vous en tout cas, à moins que vous ne connaissiez la combinaison secrète d’ouverture.",
       "en": "Who could even hazard a guess as to what the safe may contain? Not you in any case, not unless you know the secret combination...",
       "de": "Toll... und wie findest du jetzt raus, was da drin ist? Ohne die Geheimkombination dürfte das etwas schwierig werden.",
       "es": "¿Qué tendrá dentro? Ah, claro, necesitas conocer la clave secreta para averiguarlo."
@@ -5499,7 +5499,7 @@
       "es": "Betapropín 5mg vencido"
     },
     "desc": {
-      "fr": "Ce petit cachet a un effet pour le moins mystérieux... Sur la boîte, il est écrit : « ne pas donner à un testeur de moins de 18 ans ». Étrange.",
+      "fr": "Ce petit cachet a un effet pour le moins mystérieux... Sur la boîte, il est écrit : « Ne pas donner à un testeur de moins de 18 ans ». Étrange...",
       "en": "The effects of this little pill are mysterious to say the least... On the box, it states: \"not to be taken by testers under 18 years of age\". Strange...",
       "de": "Die Wirkung dieser Tablette ist höchst zweifelhaft... Auf der Schachtel steht: \"Für BETA-Tester unter 18 Jahren nicht geeignet\". Seltsam...",
       "es": "Tiene un efecto misterioso... En la caja dice: \"No recomendado para beta-testers menores de 18 años\". Extraño."
@@ -5681,7 +5681,7 @@
       "es": "Puré de hongos carroñeros"
     },
     "desc": {
-      "fr": "Ça sent vraiment très mauvais. Cette boule est un agrégat de “Baies charognardes” qui ont poussé sur un cadavre quelconque. Si vous n'avez pas peur de mourir d'une infection virulente, peut-être qu'elle pourrait vous rassasier si vous la mangiez ?",
+      "fr": "Ça sent vraiment très mauvais. Cette boule est un agrégat de baies charognardes, qui ont poussé sur un cadavre quelconque. Si vous n’avez pas peur de mourir d’une infection virulente, peut-être que la manger pourrait vous rassasier ?",
       "en": "Oh my god this smells vile! It's made from \"fleshroom berries\" which grow on corpses. If you're not worried about dying from a virulent infection, it just might stop you being hungry... maybe permanently.",
       "de": "Dieser Brei stinkt wie die Pest, da die dafür verarbeiteten Beeren für gewöhnlich auf Kadavern wachsen. Wenn du vor einer akuten Infektion keine Angst hast könntest du ihn ja mal vorsichtig probieren. Vielleicht macht er ja satt?",
       "es": "Realmente esto apesta. Es una bola aplastada de hongos que crecieron en algún cadáver. Si no le tienes miedo a nada, ¿crees que esto podrá calmar tu hambre?"
@@ -5811,7 +5811,7 @@
       "es": "Osito cariñosito maldito"
     },
     "desc": {
-      "fr": "Un petit doudou en peluche qui a dû faire le petit bonheur d'un enfant... Ou pas...",
+      "fr": "Un petit doudou en peluche qui a dû faire le bonheur d’un enfant… ou pas…",
       "en": "A small plush teddy bear which would have been a child's pride and joy... or not...",
       "de": "Das alleinige Ansehen des Teddys macht dich verrückt.Vielleicht solltest du ihn aus dem Fenster werfen? Immerhin befindest du dich in einem verlassenen Hotel...",
       "es": "Un peluche que habrá dado mucha \"felicidad\" a un niño... o pudo haberlo poseído..."
@@ -5837,7 +5837,7 @@
       "es": "Bistec de serrín"
     },
     "desc": {
-      "fr": "Une tranche de viande recouverte de sciure et de copeaux de bois... À moins que ce ne soit pas des copeaux, mais des vers à bois, ce qui semblerait logique puisque ça n'arrête pas de bouger.",
+      "fr": "Une tranche de viande recouverte de sciure et de copeaux de bois… à moins que ce ne soit pas des copeaux, mais des vers à bois, ce qui semblerait logique puisque ça n’arrête pas de bouger.",
       "en": "A slice of meat, covered in sawdust and wood chippings... Only they're not chips, but rather woodworm, which is logical enough seeing as the thing won't stop moving.",
       "de": "Man nehme eine Scheibe Fleisch, paniere das Ganze mit Sägemehl und streue anschließend einige Holzstücke darüber... et Voilà! Im Holz scheinen auch einige Holzwürmer gewesen zu sein, denn das Ding hört nicht auf sich zu bewegen.",
       "es": "Una rebanada de carne cubierta con serrín y viruta de madera... Pero tal vez no sean virutas, sino gusanos, lo que parece más lógico porque no dejan de moverse."
@@ -5967,7 +5967,7 @@
       "es": "Teléfono móvil"
     },
     "desc": {
-      "fr": "Cet antique appareil était un modèle de téléphone très réputé. C'était jusqu'à ce qu'il cause la mort de millions de personnes en explosant et rayant de la carte plusieurs grandes villes, à travers le monde. Ça fera sûrement une bonne grenade.",
+      "fr": "Cet antique appareil était un modèle de téléphone très réputé. En tout cas, jusqu'à ce qu'il explose, causant la mort de millions de personnes et rayant plusieurs grandes villes de la carte. Ça fera sûrement une bonne grenade.",
       "en": "This antique gadget was a very well known model. Right up until the point where they all exploded, killing millions of people and wiping great cities off the map. This should surely make a quality grenade!",
       "de": "Dieses uralte Modell, war mal ein ziemlich angesagtes Handy. Eines Tages jedoch fingen die Dinger urplötzlich zu explodieren an... Da das Handy weit verbreitet war, sind Millionen Menschen bei diesen Explosionen gestorben. Ganze Städte wurden von der Landkarte ausgelöscht. Hhmmm... Das gibt bestimmt eine gute Granate ab.",
       "es": "Es un modelo muy famoso... por haber explotado causando la muerte de miles de personas y borrando del mapa muchas ciudades en todo el mundo. Servirá como granada."
@@ -6305,7 +6305,7 @@
       "es": "Maletín de arquitecto"
     },
     "desc": {
-      "fr": "Ce coffre contient nombre de documents obscurs et d'ustensiles désuets (crayons, compas, règles en plastique...). Rien qui ne vous servira à survivre dans le désert... À première vue.",
+      "fr": "Ce coffre contient nombre de documents obscurs et d’ustensiles désuets (crayons, compas, règles en plastique…). Rien qui ne vous servira à survivre dans le désert… à première vue.",
       "en": "An Architect's Chest. Not that kind of chest.",
       "de": "Dieser Koffer enthält mehrere Dokumente und obskure Gegenstände (Bleistift, Kompass, Plastiklineale,...). Nichts was dir irgendwie helfen würde, in der Wüste zu überleben. ...zumindest auf den ersten Blick.",
       "es": "Contiene documentos y artículos de escritorio (lápices, compás, reglas...). Nada útil para sobrevivir en el desierto... O eso parece."
@@ -6611,13 +6611,13 @@
     "deco": 0,
     "guard": 0,
     "name": {
-      "fr": "Sérum pour Goule",
+      "fr": "Sérum pour goule",
       "en": "Ghoul Vaccine",
       "de": "Ghul-Serum",
       "es": "Vacuna para mutante"
     },
     "desc": {
-      "fr": "Ce Sérum extrêmement rare a été mis au point à partir de l'ADN d'un spécimen presque immunisé ayant résisté plus de 3 jours à une morsure infectieuse, il permet de rendre à une goule son état d'être humain normal.",
+      "fr": "Ce sérum extrêmement rare a été mis au point à partir de l’ADN d'un spécimen presque immunisé ayant résisté plus de 3 jours à une morsure infectieuse : il permet de rendre à une goule son état d’être humain normal.",
       "en": "This extremely rare serum has been developed from the DNA of an almost immune specimen that has withstood an infectious bite for more than 3 days. It allows a ghoul to return to its normal human state.",
       "de": "Dieses extrem seltene Serum wurde durch der Untersuchung der DNA eines fast immunen Wesens gewonnen. Es hatte zuvor 3 Tage überlebt, obwohl es von einem Infizierten gebissen wurde. Mit dem Serum kann man einen Ghul wieder in einen normalen Menschen verwandeln.",
       "es": "Este suero extremadamente raro se ha desarrollado a partir del ADN de una muestra casi inmune que ha resistido una picadura infecciosa durante más de 3 días. Permite que un mutante vuelva a su estado humano normal."
@@ -7033,7 +7033,7 @@
       "es": "Lanzadardos"
     },
     "desc": {
-      "fr": "Un lance-pieux qui a dû servir pour renforcer les barricades sommaires des hôtels, des bunkers ou encore à lutter contre n'importe quel type de créatures. Il ne reste malheureusement qu'un seul pieu dans l'appareil.",
+      "fr": "Un lance-pieu qui a dû servir pour renforcer les barricades sommaires des hôtels ou des bunkers, ou encore à lutter contre n’importe quel type de créatures. Il ne reste malheureusement qu’un seul pieu dans l’appareil.",
       "en": "A stake launcher can be used to reinforce barricades or to defend against any manner of creature. Unfortunately there is only one stake left in the launcher.",
       "de": "Der Pfahlwerfer kann dazu verwendet werden, Barrikaden zu verstärken oder jede Art von Gegner abzuwehren. Leider ist nur noch ein Pfahl übrig...",
       "es": "Esta arma debió ser construida por algún maniático de las armas y el bricolage. Solo queda un dardo dentro del aparato."
@@ -7267,7 +7267,7 @@
       "es": "Bidón de aceite vacío"
     },
     "desc": {
-      "fr": "On trouve de temps en temps des bidons d'huile vides dans le désert, souvent accompagné d'un cadavre. Quand est-ce que les citoyens comprendront que l'huile, ça ne se boit pas…",
+      "fr": "On trouve de temps en temps des bidons d’huile vides dans le désert, souvent accompagnés d’un cadavre. Quand est-ce que les citoyens comprendront que l’huile, ça ne se boit pas…",
       "en": "From time to time we find empty oil cans in the desert, often accompanied by a corpse. When will citizens learn that motor oil is undrinkable...",
       "de": "Ab und an finden wir diese Behälter leer in der Wüste - meistens an der Seite einer Leiche. Wann lernen die Leute endlich, dass man Motoröl nicht trinken kann?",
       "es": "Estos bidones provienen de antiguos restaurantes de comida chatarra, otra de las causas por las que se acabó el mundo... Siempre junto a ellos hay un cadáver. ¿Cuándo entenderán algunos que el aceite no se bebe?"
@@ -7319,7 +7319,7 @@
       "es": "Gatito furioso (digerido parcialmente)"
     },
     "desc": {
-      "fr": "Le chat d'un concitoyen surement mort à l'heure qu'il est. Il semble partiellement en colère, mieux vaut ne pas l'énerver davantage.",
+      "fr": "Le chat d’un concitoyen sûrement mort à l’heure qu’il est. Il semble partiellement en colère, mieux vaut ne pas l’énerver davantage.",
       "en": "A kitten which surely belonged to a now-dead citizen. It seems pretty aggravated, maybe you shouldn't annoy it anymore.",
       "de": "Das Kätzchen sieht ein wenig angefressen aus. Du solltest es besser nicht noch mehr reizen, es faucht ja jetzt schon.",
       "es": "Seguramente una mascota engullida que logró escapar antes de ser totalmente digerida. Parece encolerizada, mejor mantener distancia."
@@ -7339,7 +7339,7 @@
     "deco": 0,
     "guard": 40,
     "name": {
-      "fr": "Mine Antipersonnelle",
+      "fr": "Mine antipersonnel",
       "en": "Claymore Mine",
       "de": "Tretmine",
       "es": "Mina antipersonal"
@@ -7397,7 +7397,7 @@
       "es": "Guitarra artesanal"
     },
     "desc": {
-      "fr": "Idéale pour draguer lors de nuit de feu de camp, elle reste très appréciée même depuis l'asexualisation des citoyens. Elle saura rendre joie et gaïté dans la ville.",
+      "fr": "Idéale pour draguer lors des soirées feu de camp, elle reste très appréciée même dans ce monde désolé. Elle saura rendre joie et gaieté dans la ville.",
       "en": "Once great for seducing the ladies while sitting in front of the campfire, they remain really popular despite the asexualization of the townsfolk. Far from a custom Les Paul '58 it may be, but it still brings joy and hope to the town. Who doesn't enjoy a sing-a-long?",
       "de": "Früher konnte man damit die Damenwelt beeindrucken... Diese Zeiten sind vorbei, doch beliebt ist die Gitarre immer noch. Sie kommt zwar nicht an eine echte Les Paul '58 heran, aber die Stadt kann ein wenig Auflockerung gebrauchen. Wer hätte denn keinen Spaß an ein bisschen Musik?",
       "es": "Todo indica que perteneció al trío de \"Los Panchos\". Sus cuerdas están intactas, te servirá para cantar tus desgracias en alegres melodías."
@@ -7449,7 +7449,7 @@
       "es": "Puntero láser potente (4 cargas)"
     },
     "desc": {
-      "fr": "Interdit dans le monde après qu'une personne d'âge avancé ait perdu la vue en croisant le faisceau de ce petit objet, il saura être utile pour trancher de la chair putréfiée !",
+      "fr": "Interdit dans le monde après qu’une personne d’âge avancé eut perdu la vue en croisant son faisceau, ce petit objet saura être utile pour trancher de la chair putréfiée !",
       "en": "Banned throughout the world since someone advanced in years tried to cross the streams of two of these objects, it'll be good for slicing through putrefied flesh though!",
       "de": "In der alten Welt war er verboten.In den Jahren wurde er weiter verbessert und die Strahlen gebündelt. Heute eignet er sich gut, um durch verrottetes Fleisch zu schneiden.",
       "es": "Prohibido en las universidades desde que un profesor le quitó la vista a media clase cuando hizo un gesto con las manos. ¡Ahora te servirá para rebanar carne putrefacta!"
@@ -7475,7 +7475,7 @@
       "es": "Puntero láser potente (3 cargas)"
     },
     "desc": {
-      "fr": "Interdit dans le monde après qu'une personne d'âge avancé ait perdu la vue en croisant le faisceau de ce petit objet, il saura être utile pour trancher de la chair putréfiée !",
+      "fr": "Interdit dans le monde après qu’une personne d’âge avancé eut perdu la vue en croisant son faisceau, ce petit objet saura être utile pour trancher de la chair putréfiée !",
       "en": "Banned throughout the world since someone advanced in years tried to cross the streams of two of these objects, it'll be good for slicing through putrefied flesh though!",
       "de": "In der alten Welt war er verboten.In den Jahren wurde er weiter verbessert und die Strahlen gebündelt. Heute eignet er sich gut, um durch verrottetes Fleisch zu schneiden.",
       "es": "Prohibido en las universidades desde que un profesor le quitó la vista a media clase cuando hizo un gesto con las manos. ¡Ahora te servirá para rebanar carne putrefacta!"
@@ -7501,7 +7501,7 @@
       "es": "Puntero láser potente (2 cargas)"
     },
     "desc": {
-      "fr": "Interdit dans le monde après qu'une personne d'âge avancé ait perdu la vue en croisant le faisceau de ce petit objet, il saura être utile pour trancher de la chair putréfiée !",
+      "fr": "Interdit dans le monde après qu’une personne d’âge avancé eut perdu la vue en croisant son faisceau, ce petit objet saura être utile pour trancher de la chair putréfiée !",
       "en": "Banned throughout the world since someone advanced in years tried to cross the streams of two of these objects, it'll be good for slicing through putrefied flesh though!",
       "de": "In der alten Welt war er verboten.In den Jahren wurde er weiter verbessert und die Strahlen gebündelt. Heute eignet er sich gut, um durch verrottetes Fleisch zu schneiden.",
       "es": "Prohibido en las universidades desde que un profesor le quitó la vista a media clase cuando hizo un gesto con las manos. ¡Ahora te servirá para rebanar carne putrefacta!"
@@ -7527,7 +7527,7 @@
       "es": "Puntero láser potente (1 carga)"
     },
     "desc": {
-      "fr": "Interdit dans le monde après qu'une personne d'âge avancé ait perdu la vue en croisant le faisceau de ce petit objet, il saura être utile pour trancher de la chair putréfiée !",
+      "fr": "Interdit dans le monde après qu’une personne d’âge avancé eut perdu la vue en croisant son faisceau, ce petit objet saura être utile pour trancher de la chair putréfiée !",
       "en": "Banned throughout the world since someone advanced in years tried to cross the streams of two of these objects, it'll be good for slicing through putrefied flesh though!",
       "de": "In der alten Welt war er verboten.In den Jahren wurde er weiter verbessert und die Strahlen gebündelt. Heute eignet er sich gut, um durch verrottetes Fleisch zu schneiden.",
       "es": "Prohibido en las universidades desde que un profesor le quitó la vista a media clase cuando hizo un gesto con las manos. ¡Ahora te servirá para rebanar carne putrefacta!"
@@ -7553,7 +7553,7 @@
       "es": "Puntero láser potente descargado"
     },
     "desc": {
-      "fr": "Interdit dans le monde après qu'une personne d'âge avancé ait perdu la vue en croisant le faisceau de ce petit objet, il saura être utile pour trancher de la chair putréfiée ! Maintenant il ne vous manque plus qu'une pile...",
+      "fr": "Interdit dans le monde après qu’une personne d’âge avancé eut perdu la vue en croisant son faisceau, ce petit objet saura être utile pour trancher de la chair putréfiée ! Maintenant il ne vous manque plus qu’une pile...",
       "en": "Banned throughout the world since someone advanced in years tried to cross the streams of two of these objects, it'll be good for slicing through putrefied flesh though!",
       "de": "In der alten Welt war er verboten.In den Jahren wurde er weiter verbessert und die Strahlen gebündelt. Heute eignet er sich gut, um durch verrottetes Fleisch zu schneiden. Jetzt brauchst du nur noch eine Batterie...",
       "es": "Prohibido en las universidades desde que un profesor le quitó la vista a media clase cuando hizo un gesto con las manos. Pero las cabezas no ruedan solas, necesitas una pila..."
@@ -7605,7 +7605,7 @@
       "es": "Felpudo explosivo"
     },
     "desc": {
-      "fr": "Une bien belle manière d'inviter les invités comme les non invités chez soi, une bombe sous le paillasson, pourquoi n'y avons-nous pas pensé plus tôt !",
+      "fr": "Une bien belle manière d’accueillir les invités comme les non invités chez soi : une bombe sous le paillasson. Comment ne pas y avoir pensé plus tôt !",
       "en": "A great way to make someone feel really unwelcome, a bomb under the doormat! Why didn't we think of this before!",
       "de": "Nichts sagt \"Willkommen zuhause\" mehr als eine spontane Fußamputation.",
       "es": "Una excelente manera de hacer que alguien se sienta realmente mal acogido, ¡Una bomba debajo del felpudo! ¿Por qué no pensamos en esto antes?"
@@ -7683,7 +7683,7 @@
       "es": "Costal de hierba fresca"
     },
     "desc": {
-      "fr": "Puisqu'on vous dit que c'est de l'herbe banale, il y a surement une autre utilité à cette herbe qu'une simple cigarette roulée.",
+      "fr": "Puisqu’on vous dit que c’est de l’herbe banale, il y a sûrement une autre utilité à cette herbe qu’une simple cigarette roulée.",
       "en": "Although it appears to be nothing but hay in the making, there must be another use for this herb apart from very disappointing cigarettes.",
       "de": "Scheint nicht viel besser als Heu zu sein, aber es wird sicher für irgendwas verwendbar sein. Außer ziemlich enttäuschenden Zigaretten.",
       "es": "Hierba común y corriente, debe tener otra utilidad, además de ser enrollada y fumada."
@@ -7703,13 +7703,13 @@
     "deco": 0,
     "guard": 0,
     "name": {
-      "fr": "Claviceps Purpurea",
+      "fr": "Claviceps purpurea",
       "en": "Ergot Fungus",
       "de": "Mutterkorn",
       "es": "Claviceps Purpurea"
     },
     "desc": {
-      "fr": "Sur les cadavres, parfois, il y a des champignons qui font dire des trucs marrants, il paraît que les effets sur le cerveau sont irréversibles, ma foi au point où vous en êtes...",
+      "fr": "Sur les cadavres, parfois, il y a des champignons qui font dire des trucs marrants. Il paraît que les effets sur le cerveau sont irréversibles ; ma foi, au point où vous en êtes…",
       "en": "Sometimes we find mushrooms growing on corpses which make us say funny things, and they say that the effects on the brain are irreversible, and the state you're already in may just confirm it...",
       "de": "Manchmal finden wir Pilze auf Leichen nach deren Genuss man die merkwürdigsten Sachen von sich gibt. Es heißt, die Schäden am Gehirn seien irreparabel und dein aktueller Zustand könnte das sogar bestätigen...",
       "es": "Sobre los cadáveres suelen crecer hongos que provocan delirios muy graciosos. Dicen que su efecto es irreversible. Madre mía, a qué extremo has llegado..."
@@ -7729,13 +7729,13 @@
     "deco": 0,
     "guard": 0,
     "name": {
-      "fr": "Cidre Claviceps Artisanal",
+      "fr": "Cidre claviceps artisanal",
       "en": "Ergot Homebrew",
       "de": "Korn-Bräu",
       "es": "Cidra claviceps artesanal"
     },
     "desc": {
-      "fr": "Le mélange des guerriers, le cercueil des rois, le cocktail des dieux ! Si vous doutez de son effet, faîtes le goûter par un de vos voisins.",
+      "fr": "Le mélange des guerriers, le cercueil des rois, le cocktail des dieux ! Si vous doutez de son effet, faites-le goûter par un de vos voisins.",
       "en": "The dream of warriors, the blend of kings, the cocktail of the gods! If you doubt its strength, let one of your neighbors taste it.",
       "de": "Gesöff der Krieger, Trank der Könige, Cocktail der Götter! Zweifelst Du an der Stärke dieses Getränkes, dann lass ruhig erst einmal Deine Nachbarn probieren.",
       "es": "\"Saltapatrás\", \"7 pecados\", \"Nos vemos en el suelo\"... Un licor exótico más, si quieres comprobar sus efectos, invítale un trago a un vecino."
@@ -7755,7 +7755,7 @@
     "deco": 0,
     "guard": 0,
     "name": {
-      "fr": "Chaine Hifi maudite",
+      "fr": "Chaîne hi-fi maudite",
       "en": "Cursed HiFi",
       "de": "Verfluchte HiFi",
       "es": "Equipo de música maldito"
@@ -7787,7 +7787,7 @@
       "es": "CD de Phil Collins"
     },
     "desc": {
-      "fr": "Rien ne vaut le charme retro d'un artiste des années 90 pour égayer vos soirées sous tente !",
+      "fr": "Rien ne vaut le charme rétro d’un artiste des années 90 pour égayer vos soirées sous la tente !",
       "en": "Nothing beats a little 80s retro music to liven up your tented evenings! If you're an evil b******d, open the window, turn it up LOUD and play it all night long!",
       "de": "Nichts ist besser, als mit ein wenig 80er Jahre Retro-Musik den Abend zu beleben! Dreh den Regler hoch und mach das Fenster auf!",
       "es": "Nada mejor que un poco de música ochentera para callar los gritos. ¡Sube el volumen y abre la ventana!"
@@ -7813,7 +7813,7 @@
       "es": "Tapones de oído"
     },
     "desc": {
-      "fr": "Vous ne supportez plus les commérages à vos portes, les insultes à votre porte, les citoyens hurlant à la mort ? Les boules quiès seront vos meilleures amies !",
+      "fr": "Vous ne supportez plus les commérages, les insultes à votre porte, les citoyens hurlant à la mort ? Les boules Quies seront vos meilleures amies !",
       "en": "Had enough of the chitchat outside your door, townspeople insulting one another after too much Ergot Homebrew, citizens screaming in fear for their lives? These earplugs are your best friend!",
       "de": "Hast du genug von dem Gequassel vor deiner Tür, den Streitereien nach zu viel Korn-Bräu oder Bürgern, die verzweifelt um ihr Leben schreien? Diese Ohrstöpsel sind genau das Richtige für dich!",
       "es": "Si ya no soportas el parloteo de tus vecinos, los insultos hacia tu persona o los gritos de moribundos infelices, estos tapones te harán sentir mejor."
@@ -7865,7 +7865,7 @@
       "es": "CD de Britney Spears"
     },
     "desc": {
-      "fr": "Malgré une apparence trompeuse pouvant laisser croire à un passe-temps de petite fille, il s'agit d'une véritable arme défensive. Dès que les premières ondes sonores de cet objet maudit sortent d'une chaine HIFI, aucune personne normalement constituée ne peut approcher votre habitation. Mais bon, si les zombies étaient normalement constitués, Hordes serait disponible sur Facebook, donc méfiez-vous quand même...",
+      "fr": "Malgré une apparence trompeuse pouvant laisser croire à un passe-temps de petite fille, il s’agit d'une véritable arme défensive. Dès que les premières ondes sonores de cet objet maudit sortent d’une chaîne hi-fi, aucune personne normalement constituée ne peut approcher votre habitation. Mais bon, si les zombies étaient normalement constitués, ça se saurait… donc méfiez-vous quand même.",
       "en": "Despite an innocuous appearance, leading you to believe this is music for little girls, this is a serious defensive measure. As soon as the first waves from disk emanate from a HIFI, no normal person will be able to approach your home. That said, if our zombies were normal, MyHordes would be available on Facebook, so don't put all your faith in it...",
       "de": "Trotz dass Du glaubst, dies ist Musik für kleine Mädchen , ist das eine ernsthafte Verteidigungsmaßnahme . Sobald die ersten Töne von der Mini Hi-Fi Anlage erklingen, wird kein normaler Mensch in der Lage sein, sich deinem Haus zu nähern. Vorrausgesetzt unsere Zombies waren mal normal und kennen Facebook ....",
       "es": "A pesar de su inofensiva aparencia, que te lleva a creer que esto es música para niñas, esta es una seria medida defensiva. Tan pronto como las primeras ondas del disco emanen de un HIFI, ninguna persona normal podrá acercarse a tu casa. Dicho esto, si nuestros zombies fueran normales, MyHordes estaría disponible en Facebook, así que no pongas toda tu fe en ello..."
@@ -7891,7 +7891,7 @@
       "es": "Hits de Elvis"
     },
     "desc": {
-      "fr": "Prêt à bouger votre corps suintant au rythme du rock n' roll ? Cette compilation du légendaire King of rock va mettre le feu à la scène !",
+      "fr": "Prêt(e) à bouger votre corps suintant au rythme du rock’n’roll ? Cette compilation du légendaire « King of Rock » va mettre le feu à la scène !",
       "en": "Ready to shake these hips to a little rock n' roll? This compilation from the true king of rock will kick-start the party!",
       "de": "Bereit deine Hüften zu ein wenig Rock 'n' Roll zu schwingen? Diese Sammlung der besten Songs des King of Rock wird Stimmung in jede Party bringen.",
       "es": "¡A mover las caderas con El Rey del Rock and Roll!"
@@ -7911,7 +7911,7 @@
     "deco": 10,
     "guard": 0,
     "name": {
-      "fr": "Chaîne HI-FI Rock n'Roll",
+      "fr": "Chaîne hi-fi rock’n’roll",
       "en": "Rock n Roll HiFi",
       "de": "Rock n Roll HiFi",
       "es": "Equipo de música maldito"
@@ -7937,13 +7937,13 @@
     "deco": 10,
     "guard": 0,
     "name": {
-      "fr": "Chaîne Hi-Fi défensive",
+      "fr": "Chaîne hi-fi défensive",
       "en": "Anti-personnel HiFi",
       "de": "Verteidigende HiFi",
       "es": "Equipo Hi-Fi defensivo"
     },
     "desc": {
-      "fr": "Combiné à un CD de musique, et des boules quiès, vous serez épargné par la toute puissance de cette arme fatale pour quiconque approchera de votre domicile",
+      "fr": "Avec des boules Quies, vous serez épargné(e) par la toute-puissance de cette arme, fatale pour quiconque approchera de votre domicile.",
       "en": "The right CD and some good ear protection make this a powerful weapon which allows you to rest peacefully while others are kept at a safe distance!",
       "de": "Mit der richtigen CD und ein paar guten Ohrstöpseln wird diese HiFi zu einer gefährlichen Waffe, die dich und deine Mitbürger sicher schlafen lässt (zumindest in einiger Distanz)",
       "es": "El CD adecuado y unos buenos protectores auditivos forman esta poderosa arma que te permite descansar tranquilamente mientras otros se mantienen a una distancia segura."
@@ -8125,7 +8125,7 @@
       "es": "Mosto sospechoso"
     },
     "desc": {
-      "fr": "Cette fiole soigneusement scellée contient du jus de mirabelle. C'est vraiment suspect. D'autant qu'elle porte une étiquette : 'en cas d'ingestion, contacter le centre anti-poison le plus proche de chez vous'. Vous n'allez quand même pas boire ça ? Si ?",
+      "fr": "Cette fiole soigneusement scellée contient du jus de mirabelle. C’est vraiment suspect. D’autant qu’elle porte une étiquette : « en cas d’ingestion, contacter le centre anti-poison le plus proche de chez vous ». Vous n’allez quand même pas boire ça ? Si ?",
       "en": "This carefully sealed vial contains plum juice. Seems suspicious if you ask me. Especially when you conside that the label reads : 'in case of ingestion, contact the nearest poisons unit'. You're not going to drink it anyway, are you? Really?",
       "de": "Dieses gut versiegelte Fläschen enthält Traubensaft. Das ist wirklich komisch... Warum sollte jemand Traubensaft versiegeln? Zumal ein Etikett angebracht wurde: 'Bei versehentlichen Verschlucken, bitte schnellstens die nächste Ambulanz aufsuchen'. Das willste doch nicht trinken? Oder etwa doch?!",
       "es": "Esta botella bien sellada contiene mosto. Extraño... ¿por qué alguien sellaría mosto? Tiene adjunta una etiqueta: \"Si se engiere, llame a una ambulancia lo antes posible\"."
@@ -8489,7 +8489,7 @@
       "es": "Polvo Súper-Fuzz"
     },
     "desc": {
-      "fr": "Selon les époques, cette poudre a tour à tour servi de détonateur pour divers pièces d'artillerie, puis comme drogue bas de gamme pour citoyen en manque avant d'être utilisée comme ingrédient principal dans les feux d'artifice. Dans les 3 cas, beaucoup de gens n'y ont pas survécu.",
+      "fr": "Selon les époques, cette poudre a tour à tour servi de détonateur pour diverses pièces d’artillerie, puis comme drogue bas de gamme pour citoyens en manque, avant d’être utilisée comme ingrédient principal dans les feux d’artifice. Dans les 3 cas, beaucoup de gens n’y ont pas survécu.",
       "en": "Depending on the era, this powder was used sequentially as a detonator for various artillery pieces, then as a cheap drug for needy citizens and finally as the main component of fireworks. In all three cases, many people have not survived.",
       "de": "Je nach Epoche wurde dieses Pulver nacheinander als Zünder für verschiedene Artilleriegeschütze, dann als billige Droge für bedürftige Bürger und schließlich als Hauptbestandteil von Feuerwerkskörpern verwendet. In allen drei Fällen haben viele Menschen nicht überlebt.",
       "es": "Dependiendo de la era, este polvo fue usado esencialmente como detonador para varias piezas de artillería, luego como una droga barata para los habitantes necesitados y, finalmente como el principal componente de los fuegos artificiales. En los tres casos, muchas personas no han sobrevivido."
@@ -9165,7 +9165,7 @@
       "es": "Pinta pegajosa"
     },
     "desc": {
-      "fr": "Rien de mieux qu’une pinte d'un breuvage noir pour inspirer la poésie, le rire et le combat contre les zombies... *Approuvé par Charlie Sheen",
+      "fr": "Rien de mieux qu’une pinte d’un breuvage noir pour inspirer la poésie, le rire et le combat contre les zombies… Approuvé par Charlie Sheen.",
       "en": "Nothing beats a pint of the black stuff to inspire poetry, laughter and erm, fight the zombies... *Approved by Charlie Sheen",
       "de": "Nichts ist besser als ein Pint des schwarzen Zeugs, um Poesie, Lachen und ähm, den Kampf gegen die Zombies zu inspirieren... *Genehmigt von Charlie Sheen",
       "es": "No hay nada mejor como una pinta de cerveza oscura para inspirar poesía, risas y lucha de zombies... *Aprobado por Charlie Sheen"
@@ -9269,7 +9269,7 @@
       "es": "Estuche de medicamentos"
     },
     "desc": {
-      "fr": "Si possible, ne vous encombrez pas de bandages. Une fois que c'est coupé, c'est coupé. Par contre les petites pillules ça sert toujours.",
+      "fr": "Si possible, ne vous encombrez pas de bandages. Une fois que c'est coupé, c'est coupé. Par contre les petites pilules ça sert toujours.",
       "en": "Where possible, don't waste bandages. Once they're cut, that's them done. However, the pills are always useful.",
       "de": "Was willst du mit diesen ganzen Verbänden? Was abgerissen wurde ist weg. Die kleine Pillen hingegen sind immer von Nutzen.",
       "es": "No lo llenes de tantos vendajes, disfrazarte de momia no servirá, en cambio, las pastillas siempre pueden ser útiles."
@@ -9425,7 +9425,7 @@
       "es": "Molde instantáneo para llave magnética"
     },
     "desc": {
-      "fr": "Cette empreinte de clé high-tech a été moulée dans un mélange de nouilles déshydratées et une substance gluante. On peut vraiment TOUT faire avec !",
+      "fr": "Cette empreinte de clé high-tech a été moulée dans un mélange de nouilles déshydratées et d'une substance gluante. On peut vraiment TOUT faire avec !",
       "en": "This high-tech key print was molded from a mixture of dehydrated noodles and a slime. You can really do ANYTHING with it!",
       "de": "Dieser Hightech-Schlüsselabdruck wurde aus einer Mischung von dehydrierten Nudeln und Schleim geformt. Damit kann man wirklich ALLES machen!",
       "es": "Esta impresión de llave de alta tecnología fue moldeada a partir de una mezcla de fideos deshidratados y una sustancia pegajosa. ¡Realmente puedes hacer CUALQUIER COSA con él!"
@@ -9477,7 +9477,7 @@
       "es": "Molde instantáneo para abrebotellas"
     },
     "desc": {
-      "fr": "On ne sait pas trop comment c'est possible, mais ça a l'air solide malgré tout. L'agglomérat de nouille forme PARFAITEMENT la forme d'un décapsuleur !",
+      "fr": "On ne sait pas trop comment c'est possible, mais ça a l'air solide malgré tout. L'agglomérat de nouilles dessine PARFAITEMENT la forme d'un décapsuleur !",
       "en": "We don't really know how this is possible, but it looks solid regardless. The noodle agglomerate PERFECTLY forms the shape of a bottle opener!",
       "de": "Wir wissen nicht wirklich, wie das möglich ist, aber es sieht auf jeden Fall solide aus. Das Nudelagglomerat hat die perfekte Form eines Flaschenöffners!",
       "es": "No estamos seguros de cómo es posible esto, pero de todos modos parece sólido. ¡El aglomerado de fideos tiene PERFECTAMENTE la forma de un abridor de botellas!"
@@ -9737,7 +9737,7 @@
       "es": "Manzana"
     },
     "desc": {
-      "fr": "Si Newton avait reçu une pomme comme celle-ci sur la tête, il aurait surement pensé à autre chose qu'à la loi de la Gravitation Universelle... Cela étant dit, il doit bien y avoir quelques vitamines là-dedans.",
+      "fr": "Si Newton avait reçu une pomme comme celle-ci sur la tête, il aurait sûrement pensé à autre chose qu’à la loi de la gravitation universelle… Cela étant dit, il doit bien y avoir quelques vitamines là-dedans.",
       "en": "When one of these landed on Sir Newton's head, surely the first thing to cross his mind wasn't the first Universal Law of Gravity... having said that, there should be a few vitamins in there for the munching.",
       "de": "Als einer davon auf Sir Newton's Kopf fiel dachte er mit Sicherheit nicht zuerst an das erste universelle Gesetz der Schwerkraft... aber es sollten immerhin ein paar Vitamine enthalten sein.",
       "es": "Si haces que te caiga en la cabeza, tal vez te vengan ideas como a Newton... En todo caso, debe tener algunas vitaminas."
@@ -9867,7 +9867,7 @@
       "es": "Crumble rastrero"
     },
     "desc": {
-      "fr": "Un succulent dessert protéiné ! Il parait que c'est meilleur quand ça bouge...",
+      "fr": "Un succulent dessert protéiné ! Il paraît que c'est meilleur quand ça bouge...",
       "en": "A delicious protein dessert! Apparently, it's better when it's moving...",
       "de": "Ein köstliches Protein-Dessert! Anscheinend ist es besser, wenn es sich noch bewegt...",
       "es": "¡Un delicioso postre proteico! Al parecer es mejor cuando se mueve..."
@@ -9877,6 +9877,32 @@
       "en": "Food",
       "de": "Grundnahrungsmittel",
       "es": "Provisiones"
+    }
+  },
+  "scary_mask_#00": {
+    "id": 383,
+    "uid": "scary_mask",
+    "img": "item/item_scary_mask.48bcd2ad.gif",
+    "heavy": false,
+    "deco": 5,
+    "guard": 0,
+    "name": {
+      "fr": "Masque effrayant",
+      "en": "Creepy Mask",
+      "de": "Schaurige Maske",
+      "es": "Mascará Escalofriante"
+    },
+    "desc": {
+      "fr": "D'une certaine manière, ce masque vous rappelle quelqu'un...",
+      "en": "Somehow this mask reminds you of someone...",
+      "de": "Irgendwie erinnert diese Maske dich an jemanden...",
+      "es": "De alguna manera, esta máscara te recuerda a alguien… en todo caso, te pone los pelos en punta."
+    },
+    "cat": {
+      "fr": "Divers",
+      "en": "Miscellaneous",
+      "de": "Sonstiges",
+      "es": "Varios"
     }
   }
 }

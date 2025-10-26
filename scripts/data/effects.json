@@ -1006,6 +1006,10 @@
     "type": "effectIndex",
     "data": 22
   },
+  "scary_mask": {
+    "type": "effectIndex",
+    "data": 23
+  },
   "hero_bia": {
     "type": "effectIndex",
     "data": 70
