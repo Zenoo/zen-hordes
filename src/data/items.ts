@@ -15354,16 +15354,17 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Irgendwie erinnert diese Maske dich an jemanden...",
       [Lang.ES]: "De alguna manera, esta máscara te recuerda a alguien… en todo caso, te pone los pelos en punta."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.Decoration],
+    categories: [ItemCategory.Miscellaneous, ItemCategory.Decoration, ItemCategory.Event],
     icon: "item_scary_mask",
     decoration: 5,
     heavy: false,
     watchPoints: 0,
+    event: GameEvent.Halloween,
     actions: [
       
     ],
     drops: {
-      [DropLocation.Zone]: 0.6
+      [DropLocation.Zone]: 0.59
     },
   }
 };

@@ -1302,6 +1302,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
       case "pumpkin_raw_#00":
       case "pumpkin_off_#00":
       case "pumpkin_on_#00":
+      case "scary_mask_#00":
         item.event = "Halloween";
         break;
       case "wood_xmas_#00":
