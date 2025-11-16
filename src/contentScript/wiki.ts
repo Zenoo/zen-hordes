@@ -4,9 +4,13 @@ import { ruins } from "../data/ruins";
 import { Building, BuildingId, Item, Ruin } from "../data/types";
 import { ASSETS, DEFAULT_SHOPPING_LIST } from "../utils/constants";
 import { tooltip } from "../utils/tooltip";
-import { insertBetterItemTooltips } from "./betterTooltips";
+import {
+  buildBaseItemTooltip,
+  insertBetterItemTooltips,
+} from "./betterTooltips";
 import { displayCampingCalculator } from "./campingCalculator";
 import { notify, Severity } from "./notify";
+import { buildRuinTooltip } from "./ruins";
 import {
   generateShoppingListMessage,
   getShoppingList,
@@ -81,12 +85,6 @@ const T: Translations = {
     "item.category.22": "Event items",
     "item.category.23": "Breakable items",
     "item.category.24": "Poisonable items",
-    "item.tag.heavy": "Heavy item",
-    "item.tag.deco": "Home decoration",
-    "item.tag.defense": "Defense item",
-    "item.tag.weapon": "Weapon",
-    "item.tag.guard-weapon": "Guard weapon",
-    "item.tag.guard-weapon.points": "({{value}} attack pts)",
     "priority.1": "Important",
     "priority.2": "Useful",
     "priority.3": "Supplementary",
@@ -106,6 +104,8 @@ const T: Translations = {
     "shortcut.highlightShoppingList":
       "(Hold on the shopping cart in the bottom right of the page) Highlight the items from the shopping list",
     temporaryBuilding: "Temporary building",
+    spotsAvailable: "Available camping spots",
+    campingChances: "Camping chances",
   },
   fr: {
     wiki: "Wiki",
@@ -143,12 +143,6 @@ const T: Translations = {
     "item.category.22": "Objets d'événements",
     "item.category.23": "Objets cassables",
     "item.category.24": "Objets empoisonnables",
-    "item.tag.heavy": "Objet encombrant",
-    "item.tag.deco": "Aménagement de maison",
-    "item.tag.defense": "Objet de défense",
-    "item.tag.weapon": "Arme",
-    "item.tag.guard-weapon": "Arme de veille",
-    "item.tag.guard-weapon.points": "({{value}} pts attaque)",
     "priority.1": "Important",
     "priority.2": "Utile",
     "priority.3": "Supplémentaire",
@@ -169,6 +163,8 @@ const T: Translations = {
     "shortcut.highlightShoppingList":
       "(Maintenir sur le chariot en bas à droite de la page) Mettre en surbrillance les objets de la liste de courses",
     temporaryBuilding: "Bâtiment temporaire",
+    spotsAvailable: "Emplacements de camping disponibles",
+    campingChances: "Chances de camping",
   },
   de: {
     wiki: "Wiki",
@@ -206,12 +202,6 @@ const T: Translations = {
     "item.category.22": "Event-Gegenstände",
     "item.category.23": "Zerbrechliche Gegenstände",
     "item.category.24": "Vergiftbare Gegenstände",
-    "item.tag.heavy": "Schwerer Gegenstand",
-    "item.tag.deco": "Hausdekoration",
-    "item.tag.defense": "Verteidigungsgegenstand",
-    "item.tag.weapon": "Waffe",
-    "item.tag.guard-weapon": "Wachwaffe",
-    "item.tag.guard-weapon.points": "({{value}} Angriffspunkte)",
     "priority.1": "Wichtig",
     "priority.2": "Nützlich",
     "priority.3": "Ergänzend",
@@ -233,6 +223,8 @@ const T: Translations = {
     "shortcut.highlightShoppingList":
       "(Halten Sie den Einkaufswagen in der unteren rechten Ecke der Seite) Mettre en surbrillance les éléments de la liste de courses",
     temporaryBuilding: "Temporäres Gebäude",
+    spotsAvailable: "Verfügbare Campingplätze",
+    campingChances: "Camping-Chancen",
   },
   es: {
     wiki: "Wiki",
@@ -270,12 +262,6 @@ const T: Translations = {
     "item.category.22": "Objetos de evento",
     "item.category.23": "Objetos rompibles",
     "item.category.24": "Objetos envenenables",
-    "item.tag.heavy": "Objeto pesado",
-    "item.tag.deco": "Decoración del hogar",
-    "item.tag.defense": "Objeto de defensa",
-    "item.tag.weapon": "Arma",
-    "item.tag.guard-weapon": "Arma de guardia",
-    "item.tag.guard-weapon.points": "({{value}} puntos de ataque)",
     "priority.1": "Importante",
     "priority.2": "Útil",
     "priority.3": "Suplementario",
@@ -296,6 +282,8 @@ const T: Translations = {
     "shortcut.highlightShoppingList":
       "(Halten Sie den Einkaufswagen in der unteren rechten Ecke der Seite) Mettre en surbrillance les éléments de la liste de courses",
     temporaryBuilding: "Edificio temporal",
+    spotsAvailable: "Lugares de camping disponibles",
+    campingChances: "Posibilidades de acampar",
   },
 };
 
@@ -1070,67 +1058,8 @@ export const insertWiki = () => {
           .forEach((item) => {
             const li = document.createElement("li");
             li.classList.add("zen-wiki-item", "visible");
-            li.setAttribute("data-id", item.id);
-            li.setAttribute("data-type", "item");
 
-            const title = document.createElement("h4");
-            li.appendChild(title);
-
-            const icon = document.createElement("img");
-            icon.src = `${ASSETS}/icons/item/${item.icon}.gif`;
-            icon.alt = item.name[store["hordes-lang"]];
-            title.appendChild(icon);
-
-            const name = document.createElement("span");
-            name.textContent = item.name[store["hordes-lang"]];
-            title.appendChild(name);
-
-            const description = document.createElement("div");
-            setTextContent(description, item.description[store["hordes-lang"]]);
-            li.appendChild(description);
-
-            // Item tags
-            if (item.heavy) {
-              const tag = document.createElement("div");
-              tag.classList.add("item-tag", "item-tag-heavy");
-              tag.textContent = t(T, "item.tag.heavy");
-              li.appendChild(tag);
-            }
-
-            if (item.decoration) {
-              const tag = document.createElement("div");
-              tag.classList.add("item-tag", "item-tag-deco");
-              tag.textContent = t(T, "item.tag.deco");
-              li.appendChild(tag);
-            }
-
-            if (item.categories.includes(ItemCategory.Defences)) {
-              const tag = document.createElement("div");
-              tag.classList.add("item-tag", "item-tag-defense");
-              tag.textContent = t(T, "item.tag.defense");
-              li.appendChild(tag);
-            }
-
-            if (item.categories.includes(ItemCategory.Armoury)) {
-              const tag = document.createElement("div");
-              tag.classList.add("item-tag", "item-tag-weapon");
-              tag.textContent = t(T, "item.tag.weapon");
-              li.appendChild(tag);
-            }
-
-            if (item.categories.includes(ItemCategory.GuardWeapon)) {
-              const tag = document.createElement("div");
-              tag.classList.add("item-tag", "item-tag-weapon");
-              tag.textContent = t(T, "item.tag.guard-weapon");
-
-              const value = document.createElement("em");
-              value.textContent = t(T, "item.tag.guard-weapon.points", {
-                value: item.watchPoints,
-              });
-              tag.appendChild(value);
-              li.appendChild(tag);
-            }
-
+            buildBaseItemTooltip(item, li);
             insertBetterItemTooltips(li, true);
 
             itemList.appendChild(li);
@@ -1189,66 +1118,8 @@ export const insertWiki = () => {
           .forEach((ruin) => {
             const li = document.createElement("li");
             li.classList.add("zen-wiki-item", "visible", "zen-better-tooltip");
-            li.setAttribute("data-type", "ruin");
-            li.setAttribute("data-id", ruin.id.toString());
 
-            const title = document.createElement("h4");
-            li.appendChild(title);
-
-            const icon = document.createElement("img");
-            icon.src = `${ASSETS}/ruin/${ruin.icon}.gif`;
-            icon.alt = ruin.name[store["hordes-lang"]];
-            title.appendChild(icon);
-
-            const name = document.createElement("span");
-            name.textContent = ruin.name[store["hordes-lang"]];
-            title.appendChild(name);
-
-            const description = document.createElement("p");
-            setTextContent(description, ruin.description[store["hordes-lang"]]);
-            li.appendChild(description);
-
-            // TODO: Add ruin stats
-
-            // Drops
-            const table = document.createElement("table");
-            const tbody = document.createElement("tbody");
-            table.append(tbody);
-            const line = document.createElement("tr");
-            tbody.append(line);
-            const cell = document.createElement("td");
-            cell.classList.add("output");
-            line.append(cell);
-
-            const totalOdds = ruin.drops.reduce((acc, d) => acc + d.odds, 0);
-
-            ruin.drops
-              .sort((a, b) => b.odds / totalOdds - a.odds / totalOdds)
-              .forEach((drop) => {
-                const wrapper = document.createElement("div");
-
-                // Icon
-                const dropImg = document.createElement("img");
-                dropImg.src = `${ASSETS}/icons/item/${
-                  items[drop.item].icon
-                }.gif`;
-                dropImg.title = items[drop.item].name[store["hordes-lang"]];
-                dropImg.setAttribute("data-type", "item");
-                dropImg.setAttribute("data-id", drop.item);
-
-                // Odds
-                wrapper.setAttribute(
-                  "data-text",
-                  drop.odds
-                    ? `${Math.round((drop.odds / totalOdds) * 100)}%`
-                    : "?%"
-                );
-
-                wrapper.append(dropImg);
-                cell.append(wrapper);
-              });
-
-            li.append(table);
+            buildRuinTooltip(li, ruin);
 
             ruinList.appendChild(li);
           });
@@ -1466,7 +1337,8 @@ export const insertWiki = () => {
 
 export const openItemInWiki = (node: HTMLElement) => {
   if (!store["wiki"]) return;
-  if (!node.closest(".item-icon")) return;
+  if (!node.closest(".item-icon") && node.getAttribute("data-type") !== "item")
+    return;
 
   // Open wiki
   const backdrop = document.querySelector(".zen-wiki-backdrop");
@@ -1487,27 +1359,35 @@ export const openItemInWiki = (node: HTMLElement) => {
     true
   );
 
-  // Find item
-  const item = Object.values(items).find((item) => {
-    return (
-      item.name[store["hordes-lang"]] === node.getAttribute("alt")?.trim() &&
-      (/item\/(.+)\..+\.gif/.exec(node.getAttribute("src") ?? "")?.[1] ??
-        "") === item.icon
-    );
-  });
+  let itemId = node.getAttribute("data-id");
 
-  if (!item) {
-    notify(t(T, "wikiMissing"), Severity.ERROR);
-    return;
+  if (!itemId) {
+    // Find item
+    const item = Object.values(items).find((item) => {
+      if (item.id === itemId) return true;
+
+      return (
+        item.name[store["hordes-lang"]] === node.getAttribute("alt")?.trim() &&
+        (/item\/(.+)\..+\.gif/.exec(node.getAttribute("src") ?? "")?.[1] ??
+          "") === item.icon
+      );
+    });
+
+    if (!item) {
+      notify(t(T, "wikiMissing"), Severity.ERROR);
+      return;
+    }
+
+    itemId = item.id;
   }
 
   // Scroll to the item
   const scrollable = backdrop.querySelector(".zen-wiki") as HTMLElement | null;
   const itemElement = scrollable?.querySelector(
-    `.zen-wiki-item[data-type="item"][data-id="${item.id}"]`
+    `.zen-wiki-item[data-type="item"][data-id="${itemId}"]`
   ) as HTMLElement | null;
   if (!itemElement) {
-    console.error("Item not found in wiki", item.id);
+    console.error("Item not found in wiki", itemId);
     return;
   }
   itemElement.classList.add("clicked");

@@ -1,7 +1,11 @@
-import { items } from "../data/items";
 import { ruins } from "../data/ruins";
 import { ASSETS } from "../utils/constants";
 import { tooltip } from "../utils/tooltip";
+import {
+  buildRuinTooltip,
+  buildRuinCampingStats,
+  buildRuinDrops,
+} from "./ruins";
 import { store } from "./store";
 import { t } from "./translate";
 import { setTextContent } from "./wiki";
@@ -135,77 +139,17 @@ export const displayPossibleBuriedRuin = (node: HTMLElement) => {
     const description = document.createElement("p");
     setTextContent(description, ruin.description[store["hordes-lang"]]);
 
-    // Spots
-    const campingStats = document.createElement("div");
-    campingStats.classList.add("zen-ruin-camping-stats");
-
-    const spots = document.createElement("span");
-    spots.classList.add("zen-ruin-camping-spots");
-
-    const spotIcon = document.createElement("img");
-    spotIcon.src = `${ASSETS}/icons/small_human.gif`;
-    spots.appendChild(spotIcon);
-
-    const spotText = document.createElement("span");
-    spotText.textContent = ruin.camping.spots.toString();
-    spots.appendChild(spotText);
-    campingStats.appendChild(spots);
-
-    // Camping chances
-    const campingChances = document.createElement("span");
-    campingChances.classList.add("zen-ruin-camping-chances");
-
-    const campingIcon = document.createElement("img");
-    campingIcon.src = `${ASSETS}/status/status_camper.gif`;
-    campingChances.appendChild(campingIcon);
-
-    const campingText = document.createElement("span");
-    campingText.textContent = `${ruin.camping.baseValue >= 0 ? "+" : ""}${
-      ruin.camping.baseValue
-    }% `;
-    campingChances.appendChild(campingText);
-    campingStats.appendChild(campingChances);
+    // Camping stats
+    const campingStats = buildRuinCampingStats(ruin);
 
     // Ruin drops
-    const table = document.createElement("table");
-    table.classList.add("zen-added");
-    const tbody = document.createElement("tbody");
-    table.append(tbody);
-    const line = document.createElement("tr");
-    tbody.append(line);
-    const cell = document.createElement("td");
-    cell.classList.add("output");
-    line.append(cell);
-
-    const totalOdds = ruin.drops.reduce((acc, d) => acc + d.odds, 0);
-
-    ruin.drops
-      .sort((a, b) => b.odds / totalOdds - a.odds / totalOdds)
-      .forEach((drop) => {
-        const wrapper = document.createElement("div");
-
-        // Icon
-        const dropImg = document.createElement("img");
-        dropImg.src = `${ASSETS}/icons/item/${items[drop.item].icon}.gif`;
-        dropImg.title = items[drop.item].name[store["hordes-lang"]];
-        dropImg.setAttribute("data-type", "item");
-        dropImg.setAttribute("data-id", drop.item);
-
-        // Odds
-        wrapper.setAttribute(
-          "data-text",
-          drop.odds ? `${Math.round((drop.odds / totalOdds) * 100)}%` : "?%"
-        );
-
-        wrapper.append(dropImg);
-        cell.append(wrapper);
-      });
+    const drops = buildRuinDrops(ruin);
 
     tooltip({
       target: icon,
       id: `possible-ruin-${ruin.id}`,
-      content: [title, description, campingStats, table],
-      classes: ["zen-better-tooltip", "item"],
+      content: [title, description, campingStats, drops],
+      classes: ["zen-ruin-tooltip", "zen-better-tooltip", "item"],
     });
 
     ruinsList.appendChild(listItem);
@@ -214,9 +158,32 @@ export const displayPossibleBuriedRuin = (node: HTMLElement) => {
   node.parentElement?.appendChild(ruinsList);
 };
 
-export const displayFullLogs = (node: HTMLElement) => {
-  if (!store["full-logs"]) return;
-  if (!node.classList.contains("log-complete-link")) return;
+export const displayRuinDropsOnHover = (node: HTMLElement) => {
+  if (node.id !== "dig_ruin_button") return;
+  if (node.hasAttribute("disabled")) return;
 
-  node.click();
+  // Get current ruin
+  const ruin = node.querySelector("strong");
+  if (!ruin) return;
+
+  const ruinName = ruin.textContent?.trim();
+  const ruinData = Object.values(ruins).find(
+    (r) => r.name[store["hordes-lang"]] === ruinName
+  );
+
+  if (!ruinData) {
+    console.error(`Ruin "${ruinName}" not found in ruins data.`);
+    return;
+  }
+
+  const tooltipContent = document.createElement("div");
+
+  buildRuinTooltip(tooltipContent, ruinData);
+
+  tooltip({
+    target: node,
+    id: "ruin-dig-tooltip",
+    content: [tooltipContent],
+    classes: ["item", "zen-ruin-tooltip", "zen-better-tooltip"],
+  });
 };

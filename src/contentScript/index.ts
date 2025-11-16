@@ -7,7 +7,6 @@ import {
 import {
   insertBetterItemTooltips,
   insertBetterMapZoneTooltips,
-  insertBetterRuinTooltips,
   rebuildZoneTooltipAfterClear,
   storeBankState,
   toggleItemActions,
@@ -18,6 +17,10 @@ import {
   updateCampingCalculatorWithCurrentParams,
   updatePreviousCampings,
 } from "./campingCalculator";
+import {
+  displayClairvoyanceAnalysis,
+  displayClairvoyanceInstructions,
+} from "./clairvoyance";
 import { displayExternalCityLinks } from "./externalCityLink";
 import { displayUpdateButton } from "./externalSiteUpdater";
 import { offKey } from "./hooks/offKey";
@@ -25,10 +28,12 @@ import { onClick } from "./hooks/onClick";
 import { onEvent } from "./hooks/onEvent";
 import { onKey } from "./hooks/onKey";
 import { onMount } from "./hooks/onMount";
+import { displayFullLogs } from "./logEntries";
 import { displayMapPreview, insertMapPreviewTooltip } from "./mapPreview";
 import { prefillApPromptWithMaxAp } from "./maxApInvestment";
 import { listenToBackgroundMessages } from "./messageListener";
 import { displayPlayerTag, insertPlayerInfo } from "./playerInfo";
+import { displayRuinDetails, insertBetterMapRuinTooltips } from "./ruins";
 import { displayShamanSoulsButton } from "./shamanSoulsButton";
 import {
   insertShoppingListToggle,
@@ -39,9 +44,9 @@ import {
   autoOpenBagOutside,
   autoOpenBagWhenMovingItems,
   autoSelectGlobalMapSetting,
-  displayFullLogs,
   displayPossibleBuriedRuin,
   displayRuinBuryCount,
+  displayRuinDropsOnHover,
   enhanceUI,
 } from "./UIEnhancer";
 import { insertWiki, openItemInWiki } from "./wiki";
@@ -50,9 +55,6 @@ import { insertWiki, openItemInWiki } from "./wiki";
 // ex: drag & drop, images, etc
 // TODO: Add a note-taking feature
 // TODO: Add distinctions linked to some action tooltips (throw out someone, etc)
-// TODO: Analyze citizen registers to compare with clairvoyance results
-// TODO: Display ruin stats in wiki + outside when on a ruin
-// TODO: Display ruin drops on ruin search button hover
 
 (async () => {
   // Do nothing on asset URLs
@@ -83,7 +85,7 @@ import { insertWiki, openItemInWiki } from "./wiki";
     displayExternalCityLinks(node);
     displayUpdateButton(node);
     insertBetterItemTooltips(node);
-    insertBetterRuinTooltips(node);
+    insertBetterMapRuinTooltips(node);
     insertBetterMapZoneTooltips(node);
     displayShamanSoulsButton(node);
     displayCampingCalculator(node);
@@ -105,6 +107,10 @@ import { insertWiki, openItemInWiki } from "./wiki";
     prefillApPromptWithMaxAp(node);
     displayPossibleBuriedRuin(node);
     displayFullLogs(node);
+    displayRuinDropsOnHover(node);
+    displayRuinDetails(node);
+    displayClairvoyanceInstructions(node);
+    displayClairvoyanceAnalysis(node);
   });
 
   // Actions that need to be performed on hover

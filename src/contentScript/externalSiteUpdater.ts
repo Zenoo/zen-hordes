@@ -2,6 +2,7 @@ import { ASSETS } from "../utils/constants";
 import { findItemFromInventory } from "../utils/itemUtils";
 import { tooltip } from "../utils/tooltip";
 import { ExternalSite, ExternalSiteName } from "./externalSites";
+import { LogEntryType } from "./logEntries";
 import { store } from "./store";
 import { replaceString, t } from "./translate";
 
@@ -19,7 +20,7 @@ type ScavengerDepletedZones = {
   south?: boolean;
 };
 
-const T = {
+const T: Translations = {
   en: {
     noUserKey:
       "You need to set your user key in the extension options to update external sites. You can find your user key here, in the Advanced section:",
@@ -211,11 +212,11 @@ const countLogs = (templateId: number) => {
 };
 
 const getCampingManualImprovements = () => {
-  return countLogs(75);
+  return countLogs(LogEntryType.CAMPING_UPGRADE_MANUAL);
 };
 
 const getCampingObjectImprovements = () => {
-  return countLogs(76);
+  return countLogs(LogEntryType.CAMPING_UPGRADE_OBJECT);
 };
 
 /**

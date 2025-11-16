@@ -1,19 +1,21 @@
 import { buildings } from "../data/buildings";
 import { items } from "../data/items";
-import { rewards } from "../data/rewards";
 import { recipes } from "../data/recipes";
+import { rewards } from "../data/rewards";
 import { ruins } from "../data/ruins";
 import {
   BuildingId,
   DropLocation,
   Item,
   ItemId,
-  RewardId,
   Recipe,
+  RewardId,
 } from "../data/types";
 import { ASSETS } from "../utils/constants";
+import { insertBetterMapRuinTooltips } from "./ruins";
 import { store } from "./store";
 import { t } from "./translate";
+import { setTextContent } from "./wiki";
 
 // Track mouse position globally
 let mouseX = 0;
@@ -102,6 +104,11 @@ const T: Translations = {
     bankCount: "{{count}} in bank {{time}}",
     canOpen: "Can open",
     openableBy: "Can be opened by",
+    "item.tag.heavy": "Heavy item",
+    "item.tag.defense": "Defense item",
+    "item.tag.weapon": "Weapon",
+    "item.tag.guard-weapon": "Guard weapon",
+    "item.tag.guard-weapon.points": "({{value}} attack pts)",
   },
   fr: {
     [`action-type.${ItemActionType.Eat}`]: "Manger",
@@ -182,88 +189,11 @@ const T: Translations = {
     bankCount: "{{count}} en banque {{time}}",
     canOpen: "Peut ouvrir",
     openableBy: "Peut être ouvert par",
-  },
-  es: {
-    [`action-type.${ItemActionType.Eat}`]: "Comer",
-    [`action-type.${ItemActionType.Drink}`]: "Beber",
-    [`action-type.${ItemActionType.Open}`]: "Abrir",
-    [`action-type.${ItemActionType.Use}`]: "Usar",
-    [`action-type.${ItemActionType.Death}`]: "Muerte",
-    [`action-type.${ItemActionType.Steal}`]: "Robar",
-    [`action-type.${ItemActionType.Butcher}`]: "Desollar",
-    [`action-type.${ItemActionType.Find}`]: "Encontrar",
-    [`recipe-type.${RecipeType.ManualAnywhere}`]: "Ensamblar",
-    [`recipe-type.${RecipeType.ManualInside}`]: "Ensamblar (interior)",
-    [`recipe-type.${RecipeType.ManualOutside}`]: "Ensamblar (exterior)",
-    [`recipe-type.${RecipeType.Workshop}`]: "Taller",
-    [`recipe-type.${RecipeType.WorkshopShaman}`]: "Taller (chamán)",
-    [`recipe-type.${RecipeType.WorkshopTech}`]: "Taller (técnico)",
-    [`recipe-type.${RecipeType.ExplorableRuinDoor}`]: "Puerta de ruina",
-    [`event.${GameEvent.StPatrick}`]: "Día de San Patricio",
-    [`event.${GameEvent.AprilFools}`]: "Día de los Inocentes",
-    [`event.${GameEvent.Easter}`]: "Pascua",
-    [`event.${GameEvent.Halloween}`]: "Halloween",
-    [`event.${GameEvent.Christmas}`]: "Navidad",
-    [`event.${GameEvent.NewYear}`]: "Año Nuevo",
-    [`condition.${ItemActionConditionEnum.Ghoul}`]: "Ghoul",
-    [`condition.${ItemActionConditionEnum.Technician}`]: "Técnico",
-    [`condition.${ItemActionConditionEnum.OnARuin}`]: "En un edificio",
-    [`condition.${ItemActionConditionEnum.Thirsty}`]: "Sediento",
-    [`condition.${ItemActionConditionEnum.Dehydrated}`]: "Deshidratado",
-    [`condition.${ItemActionConditionEnum.Shaman}`]: "Chaman",
-    [`condition.${ItemActionConditionEnum.Inside}`]: "Dentro",
-    [`dropLocation.${DropLocation.DepletedZone}`]: "una zona agotada",
-    [`dropLocation.${DropLocation.Zone}`]: "una zona",
-    [`dropLocation.${DropLocation.Trash}`]: "la basura",
-    [`effect-type.${ItemActionEffectType.AP}`]: "AP",
-    [`effect-type.${ItemActionEffectType.SP}`]: "SP",
-    [`effect-type.${ItemActionEffectType.MP}`]: "MP",
-    [`effect-type.${ItemActionEffectType.CP}`]: "CP",
-    [`effect-type.${ItemActionEffectType.Ghoulify}`]: "Convertirse en Ghoul",
-    [`effect-type.${ItemActionEffectType.UnGhoulify}`]: "Des-ghoulificar",
-    [`effect-type.${ItemActionEffectType.Infect}`]: "Infectado",
-    [`effect-type.${ItemActionEffectType.ReduceGhoulHunger}`]:
-      "Reducir la voracidad de ghoul",
-    [`effect-type.${ItemActionEffectType.AddWaterToWell}`]:
-      "Agregar agua al pozo",
-    [`effect-type.${ItemActionEffectType.Defense}`]: "Defensa",
-    [`effect-type.${ItemActionEffectType.RemoveRuinDebris}`]:
-      "Despejar escombros",
-    [`effect-type.${ItemActionEffectType.GetEscapeTime}`]: "Escape",
-    [`effect-type.${ItemActionEffectType.Kill}`]: "Zombis muertos",
-    [`effect-type.${ItemActionEffectType.HomeDefense}`]: "Defensa de casa",
-    [`effect-type.${ItemActionEffectType.HomeStorage}`]:
-      "Almacenamiento de casa",
-    [`effect-type.${ItemActionEffectType.Death}`]: "Muerte",
-    [`effect-type.${ItemActionEffectType.CampingChances}`]:
-      "Oportunidades de camping",
-    "status.clean": "Clean",
-    "status.drugged": "Drogado",
-    "status.infection": "Infectado",
-    "status.immune": "Inmunizado",
-    "status.tg_meta_wound": "Herido",
-    "status.terror": "Terrorizado",
-    "status.healed": "Curado",
-    "status.drunk": "Ebrio",
-    "status.thirst1": "Sediento",
-    "status.thirst2": "Deshidratado",
-    "status.addict": "Adicto",
-    "status.hasdrunk": "Ha bebido",
-    "status.haseaten": "Ha comido",
-    "status.tg_shaman_immune": "Inmunizado contra almas rojas",
-    "status.tg_april_ooze": "Infectado al día siguiente",
-    "status.tamer_watch_1": "Vigilar",
-    foundIn: "Encontrado en",
-    foundWhenSearching: "Encontrado al buscar",
-    usedInBuildings_one: "Usado en {{count}} edificio",
-    usedInBuildings_other: "Usado en {{count}} edificios",
-    unavailable: "Ya no disponible",
-    privateTownOnly: "Solo se puede encontrar en ciudades privadas",
-    poisonable: "Puede ser envenenado",
-    "item.tag.deco": "Hausdekoration",
-    bankCount: "{{count}} en el banco {{time}}",
-    canOpen: "Puede abrir",
-    openableBy: "Puede ser abierto por",
+    "item.tag.heavy": "Objet encombrant",
+    "item.tag.defense": "Objet de défense",
+    "item.tag.weapon": "Arme",
+    "item.tag.guard-weapon": "Arme de veille",
+    "item.tag.guard-weapon.points": "({{value}} pts attaque)",
   },
   de: {
     [`action-type.${ItemActionType.Eat}`]: "Essen",
@@ -344,7 +274,164 @@ const T: Translations = {
     bankCount: "{{count}} in der Bank {{time}}",
     canOpen: "Kann öffnen",
     openableBy: "Kann geöffnet werden von",
+    "item.tag.heavy": "Schwerer Gegenstand",
+    "item.tag.defense": "Verteidigungsgegenstand",
+    "item.tag.weapon": "Waffe",
+    "item.tag.guard-weapon": "Wachwaffe",
+    "item.tag.guard-weapon.points": "({{value}} Angriffspunkte)",
   },
+  es: {
+    [`action-type.${ItemActionType.Eat}`]: "Comer",
+    [`action-type.${ItemActionType.Drink}`]: "Beber",
+    [`action-type.${ItemActionType.Open}`]: "Abrir",
+    [`action-type.${ItemActionType.Use}`]: "Usar",
+    [`action-type.${ItemActionType.Death}`]: "Muerte",
+    [`action-type.${ItemActionType.Steal}`]: "Robar",
+    [`action-type.${ItemActionType.Butcher}`]: "Desollar",
+    [`action-type.${ItemActionType.Find}`]: "Encontrar",
+    [`recipe-type.${RecipeType.ManualAnywhere}`]: "Ensamblar",
+    [`recipe-type.${RecipeType.ManualInside}`]: "Ensamblar (interior)",
+    [`recipe-type.${RecipeType.ManualOutside}`]: "Ensamblar (exterior)",
+    [`recipe-type.${RecipeType.Workshop}`]: "Taller",
+    [`recipe-type.${RecipeType.WorkshopShaman}`]: "Taller (chamán)",
+    [`recipe-type.${RecipeType.WorkshopTech}`]: "Taller (técnico)",
+    [`recipe-type.${RecipeType.ExplorableRuinDoor}`]: "Puerta de ruina",
+    [`event.${GameEvent.StPatrick}`]: "Día de San Patricio",
+    [`event.${GameEvent.AprilFools}`]: "Día de los Inocentes",
+    [`event.${GameEvent.Easter}`]: "Pascua",
+    [`event.${GameEvent.Halloween}`]: "Halloween",
+    [`event.${GameEvent.Christmas}`]: "Navidad",
+    [`event.${GameEvent.NewYear}`]: "Año Nuevo",
+    [`condition.${ItemActionConditionEnum.Ghoul}`]: "Ghoul",
+    [`condition.${ItemActionConditionEnum.Technician}`]: "Técnico",
+    [`condition.${ItemActionConditionEnum.OnARuin}`]: "En un edificio",
+    [`condition.${ItemActionConditionEnum.Thirsty}`]: "Sediento",
+    [`condition.${ItemActionConditionEnum.Dehydrated}`]: "Deshidratado",
+    [`condition.${ItemActionConditionEnum.Shaman}`]: "Chaman",
+    [`condition.${ItemActionConditionEnum.Inside}`]: "Dentro",
+    [`dropLocation.${DropLocation.DepletedZone}`]: "una zona agotada",
+    [`dropLocation.${DropLocation.Zone}`]: "una zona",
+    [`dropLocation.${DropLocation.Trash}`]: "la basura",
+    [`effect-type.${ItemActionEffectType.AP}`]: "AP",
+    [`effect-type.${ItemActionEffectType.SP}`]: "SP",
+    [`effect-type.${ItemActionEffectType.MP}`]: "MP",
+    [`effect-type.${ItemActionEffectType.CP}`]: "CP",
+    [`effect-type.${ItemActionEffectType.Ghoulify}`]: "Convertirse en Ghoul",
+    [`effect-type.${ItemActionEffectType.UnGhoulify}`]: "Des-ghoulificar",
+    [`effect-type.${ItemActionEffectType.Infect}`]: "Infectado",
+    [`effect-type.${ItemActionEffectType.ReduceGhoulHunger}`]:
+      "Reducir la voracidad de ghoul",
+    [`effect-type.${ItemActionEffectType.AddWaterToWell}`]:
+      "Agregar agua al pozo",
+    [`effect-type.${ItemActionEffectType.Defense}`]: "Defensa",
+    [`effect-type.${ItemActionEffectType.RemoveRuinDebris}`]:
+      "Despejar escombros",
+    [`effect-type.${ItemActionEffectType.GetEscapeTime}`]: "Escape",
+    [`effect-type.${ItemActionEffectType.Kill}`]: "Zombis muertos",
+    [`effect-type.${ItemActionEffectType.HomeDefense}`]: "Defensa de casa",
+    [`effect-type.${ItemActionEffectType.HomeStorage}`]:
+      "Almacenamiento de casa",
+    [`effect-type.${ItemActionEffectType.Death}`]: "Muerte",
+    [`effect-type.${ItemActionEffectType.CampingChances}`]:
+      "Oportunidades de camping",
+    "status.clean": "Clean",
+    "status.drugged": "Drogado",
+    "status.infection": "Infectado",
+    "status.immune": "Inmunizado",
+    "status.tg_meta_wound": "Herido",
+    "status.terror": "Terrorizado",
+    "status.healed": "Curado",
+    "status.drunk": "Ebrio",
+    "status.thirst1": "Sediento",
+    "status.thirst2": "Deshidratado",
+    "status.addict": "Adicto",
+    "status.hasdrunk": "Ha bebido",
+    "status.haseaten": "Ha comido",
+    "status.tg_shaman_immune": "Inmunizado contra almas rojas",
+    "status.tg_april_ooze": "Infectado al día siguiente",
+    "status.tamer_watch_1": "Vigilar",
+    foundIn: "Encontrado en",
+    foundWhenSearching: "Encontrado al buscar",
+    usedInBuildings_one: "Usado en {{count}} edificio",
+    usedInBuildings_other: "Usado en {{count}} edificios",
+    unavailable: "Ya no disponible",
+    privateTownOnly: "Solo se puede encontrar en ciudades privadas",
+    poisonable: "Puede ser envenenado",
+    "item.tag.deco": "Decoración del hogar",
+    bankCount: "{{count}} en el banco {{time}}",
+    canOpen: "Puede abrir",
+    openableBy: "Puede ser abierto por",
+    "item.tag.heavy": "Objeto pesado",
+    "item.tag.defense": "Objeto de defensa",
+    "item.tag.weapon": "Arma",
+    "item.tag.guard-weapon": "Arma de guardia",
+    "item.tag.guard-weapon.points": "({{value}} puntos de ataque)",
+  },
+};
+
+export const buildBaseItemTooltip = (item: Item, element: HTMLElement) => {
+  element.setAttribute("data-id", item.id);
+  element.setAttribute("data-type", "item");
+
+  const title = document.createElement("h4");
+  element.appendChild(title);
+
+  const name = document.createElement("span");
+  name.textContent = item.name[store["hordes-lang"]];
+  title.appendChild(name);
+
+  const icon = document.createElement("img");
+  icon.src = `${ASSETS}/icons/item/${item.icon}.gif`;
+  icon.alt = item.name[store["hordes-lang"]];
+  title.appendChild(icon);
+
+  const description = document.createElement("div");
+  setTextContent(description, item.description[store["hordes-lang"]]);
+  element.appendChild(description);
+
+  // Item tags
+  if (item.heavy) {
+    const tag = document.createElement("div");
+    tag.classList.add("item-tag", "item-tag-heavy");
+    tag.textContent = t(T, "item.tag.heavy");
+    element.appendChild(tag);
+  }
+
+  if (item.decoration) {
+    const tag = document.createElement("div");
+    tag.classList.add("item-tag", "item-tag-deco");
+    tag.textContent = t(T, "item.tag.deco");
+    element.appendChild(tag);
+  }
+
+  if (item.categories.includes(ItemCategory.Defences)) {
+    const tag = document.createElement("div");
+    tag.classList.add("item-tag", "item-tag-defense");
+    tag.textContent = t(T, "item.tag.defense");
+    element.appendChild(tag);
+  }
+
+  if (item.categories.includes(ItemCategory.Armoury)) {
+    const tag = document.createElement("div");
+    tag.classList.add("item-tag", "item-tag-weapon");
+    tag.textContent = t(T, "item.tag.weapon");
+    element.appendChild(tag);
+  }
+
+  if (item.categories.includes(ItemCategory.GuardWeapon)) {
+    const tag = document.createElement("div");
+    tag.classList.add("item-tag", "item-tag-weapon");
+    tag.textContent = t(T, "item.tag.guard-weapon");
+
+    const value = document.createElement("em");
+    value.textContent = t(T, "item.tag.guard-weapon.points", {
+      value: item.watchPoints,
+    });
+    tag.appendChild(value);
+    element.appendChild(tag);
+  }
+
+  return element;
 };
 
 const getStatusIcon = (status: string) => {
@@ -361,10 +448,7 @@ const getStatusIcon = (status: string) => {
 };
 
 const findItem = (node: HTMLElement) => {
-  if (
-    node.classList.contains("zen-wiki-item") &&
-    node.getAttribute("data-type") === "item"
-  ) {
+  if (node.getAttribute("data-type") === "item") {
     const itemId = node.getAttribute("data-id") as ItemId;
     return items[itemId];
   }
@@ -1129,6 +1213,7 @@ export const insertBetterItemTooltips = (
   if (!force && !store["better-tooltips"]) return;
 
   if (
+    force ||
     node.classList.contains("zen-wiki-item") ||
     (node.classList.contains("tooltip") && node.classList.contains("item"))
   ) {
@@ -1447,73 +1532,6 @@ export const insertBetterItemTooltips = (
   }
 };
 
-export const insertBetterRuinTooltips = (
-  node: HTMLElement,
-  force?: boolean
-) => {
-  if (!store["better-tooltips"]) return;
-  if (!node.classList.contains("tooltip-map")) return;
-
-  // Check if the tooltip has already been processed
-  const processed = node.classList.contains("zen-better-ruin-tooltip");
-  if (!force && processed) return;
-
-  // Check if the node is a ruin tooltip
-  const ruinTitle = node.querySelector(".cell.bold");
-  if (!ruinTitle) return;
-
-  // Ignore city tooltip
-  if (node.children[1]?.children[1]?.textContent === "[0 / 0]") return;
-
-  // Find the ruin
-  const ruin = Object.values(ruins).find(
-    (ruin) => ruin.name[store["hordes-lang"]] === ruinTitle.textContent
-  );
-  if (!ruin) {
-    // Probably a buried building
-    return;
-  }
-
-  node.classList.add("zen-better-tooltip", "zen-better-ruin-tooltip");
-
-  // Ruin drops
-  const table = document.createElement("table");
-  table.classList.add("clear", "zen-ruin-drops", "zen-added");
-  const tbody = document.createElement("tbody");
-  table.append(tbody);
-  const line = document.createElement("tr");
-  tbody.append(line);
-  const cell = document.createElement("td");
-  cell.classList.add("output");
-  line.append(cell);
-
-  const target = node.children[0];
-  const totalOdds = ruin.drops.reduce((acc, d) => acc + d.odds, 0);
-
-  ruin.drops
-    .sort((a, b) => b.odds / totalOdds - a.odds / totalOdds)
-    .forEach((drop) => {
-      const wrapper = document.createElement("div");
-
-      // Icon
-      const dropImg = document.createElement("img");
-      dropImg.src = `${ASSETS}/icons/item/${items[drop.item].icon}.gif`;
-      dropImg.title = items[drop.item].name[store["hordes-lang"]];
-      dropImg.setAttribute("data-type", "item");
-      dropImg.setAttribute("data-id", drop.item);
-
-      // Odds
-      wrapper.setAttribute(
-        "data-text",
-        drop.odds ? `${Math.round((drop.odds / totalOdds) * 100)}%` : "?%"
-      );
-
-      wrapper.append(dropImg);
-      cell.append(wrapper);
-    });
-  target?.append(table);
-};
-
 export const insertBetterMapZoneTooltips = (
   node: HTMLElement,
   force?: boolean
@@ -1598,7 +1616,7 @@ export const rebuildZoneTooltipAfterClear = (event: Event) => {
       kmRow.remove();
     }
 
-    insertBetterRuinTooltips(tooltip, true);
+    insertBetterMapRuinTooltips(tooltip, true);
     insertBetterMapZoneTooltips(tooltip, true);
   }, 200);
 };

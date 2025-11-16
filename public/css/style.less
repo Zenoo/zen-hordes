@@ -86,6 +86,75 @@
   .zen-utils();
 }
 
+.zen-table() {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 4px;
+
+  td {
+    border: 1px solid #7e4d2a;
+    padding: 4px;
+  }
+
+  td {
+    background: #5c2b20;
+
+    &.action {
+      width: 16px;
+    }
+
+    &.input,
+    &.output {
+      div {
+        display: inline-block;
+        .zen-utils();
+
+        img {
+          position: relative;
+          display: inline-block;
+          margin: 0 1px;
+          cursor: pointer;
+
+          &.highlight {
+            filter: drop-shadow(0 0 2px #f86);
+          }
+        }
+
+        &[data-text] {
+          margin-bottom: 10px;
+
+          &::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #98a675;
+            font-size: 7px;
+            text-align: center;
+            white-space: nowrap;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &.clear {
+    border: none;
+    background: transparent;
+
+    td {
+      border: none;
+      background: transparent;
+    }
+  }
+}
+
+.zen-table {
+  .zen-table();
+}
+
 // UI enhancements
 body.zen-enhanced {
 
@@ -526,6 +595,15 @@ body.zen-map-preview-enabled {
 
 // Better tooltips
 .zen-better-tooltip {
+  &.item {
+    h4 {
+      border-bottom: 1px solid #fff;
+      color: #fff;
+      text-align: right;
+      font-variant: small-caps;
+      margin: 4px;
+    }
+  }
 
   // Bank count
   .bank-count {
@@ -691,72 +769,29 @@ body.zen-map-preview-enabled {
 
   // Recipes/Actions
   table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 4px;
-
-    td {
-      border: 1px solid #7e4d2a;
-      padding: 4px;
-    }
-
-    td {
-      background: #5c2b20;
-
-      &.action {
-        width: 16px;
-      }
-
-      &.input,
-      &.output {
-        div {
-          display: inline-block;
-          .zen-utils();
-
-          img {
-            position: relative;
-            display: inline-block;
-            margin: 0 1px;
-
-            &.highlight {
-              filter: drop-shadow(0 0 2px #f86);
-            }
-          }
-
-          &[data-text] {
-            margin-bottom: 10px;
-
-            &::after {
-              content: attr(data-text);
-              position: absolute;
-              top: 100%;
-              left: 50%;
-              transform: translateX(-50%);
-              color: #98a675;
-              font-size: 7px;
-              text-align: center;
-              white-space: nowrap;
-              z-index: 1;
-            }
-          }
-        }
-      }
-    }
-
-    &.clear {
-      border: none;
-      background: transparent;
-
-      td {
-        border: none;
-        background: transparent;
-      }
-    }
+    .zen-table();
   }
 
   .zen-km {
     font-size: 8px;
     font-style: italic;
+  }
+
+  &.zen-ruin-tooltip {
+    h4 {
+      border-bottom: 1px solid #fff;
+      font-size: 1.2rem;
+      font-variant: small-caps;
+      font-weight: 700;
+      margin: 4px;
+      padding: 0;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -1538,6 +1573,18 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
       margin-right: 4px;
     }
   }
+}
+
+.tooltip-map {
+  .zen-ruin-camping-stats {
+    float: left;
+    margin-top: 4px;
+  }
+}
+
+.clairvoyance-analysis {
+  padding-left: 0;
+  list-style-type: none;
 }
 
 // Firefox fixes

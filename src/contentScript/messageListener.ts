@@ -10,10 +10,7 @@ import {
   displayMissingTitles,
   displayRewardTitlePoints,
 } from "./betterRewardTitles";
-import {
-  insertBetterItemTooltips,
-  insertBetterRuinTooltips,
-} from "./betterTooltips";
+import { insertBetterItemTooltips } from "./betterTooltips";
 import {
   displayCampingCalculator,
   updateCampingCalculatorWithCurrentParams,
@@ -21,6 +18,7 @@ import {
 import { displayExternalCityLinks } from "./externalCityLink";
 import { ExternalSiteName } from "./externalSites";
 import { displayUpdateButton } from "./externalSiteUpdater";
+import { insertBetterMapRuinTooltips } from "./ruins";
 import { displayShamanSoulsButton } from "./shamanSoulsButton";
 import { insertShoppingListToggle } from "./shoppingList";
 import { setStore, Store, store } from "./store";
@@ -142,7 +140,7 @@ export const listenToBackgroundMessages = async () => {
                   .querySelectorAll<HTMLElement>(".tooltip-map")
                   .forEach((target) => {
                     // Insert better tooltips
-                    insertBetterRuinTooltips(target);
+                    insertBetterMapRuinTooltips(target);
                   });
               } else {
                 // Get all item tooltips
