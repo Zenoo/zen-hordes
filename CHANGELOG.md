@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.12.7...zen-hordes-v1.13.0) (2025-11-16)
+
+
+### Features
+
+* Clairvoyance hints ([85a3378](https://github.com/Zenoo/zen-hordes/commit/85a3378befbbaf9e9ba658ead8bf1aea35bf9936))
+
 ## [1.12.7](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.12.6...zen-hordes-v1.12.7) (2025-10-26)
 
 
