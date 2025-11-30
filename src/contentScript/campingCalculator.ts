@@ -20,6 +20,7 @@ const T: Translations = {
     kmDistance: "Distance (km)",
     zombies: "Zombies",
     camouflaged: "Camouflaged (reduces zombies malus)",
+    ruinDebris: "Still to clear",
     night: "Night",
     lighthouseBuilt: "Lighthouse built",
     devastatedTown: "Devastated town",
@@ -78,6 +79,7 @@ const T: Translations = {
     kmDistance: "Distance (km)",
     zombies: "Zombies",
     camouflaged: "Camouflé (réduit le malus zombies)",
+    ruinDebris: "Reste à déblayer",
     night: "Nuit",
     lighthouseBuilt: "Phare construit",
     devastatedTown: "Ville dévastée",
@@ -136,6 +138,7 @@ const T: Translations = {
     kmDistance: "Entfernung (km)",
     zombies: "Zombies",
     camouflaged: "Getarnt (reduziert Zombies-Malus)",
+    ruinDebris: "Es muss noch aufgeräumt werden",
     night: "Nacht",
     lighthouseBuilt: "Leuchtturm gebaut",
     devastatedTown: "Verwüstete Stadt",
@@ -195,6 +198,7 @@ const T: Translations = {
     zombies: "Zombis",
     camouflaged: "Camuflado (reduce el malus de zombis)",
     night: "Noche",
+    ruinDebris: "Zona aún no descubierta",
     lighthouseBuilt: "Faro construido",
     devastatedTown: "Ciudad devastada",
     tomb: "Tumba",
@@ -264,6 +268,7 @@ const params = {
   campingItems: 0,
   reclusiveLevel: 1,
   ruin: undefined as Ruin | undefined,
+  ruinDebris: 0,
   camouflaged: false,
   night: true,
   lighthouseBuilt: false,
@@ -286,6 +291,7 @@ const result = {
   previousCampings: 0,
   campingItems: 0,
   ruin: 0,
+  ruinDebris: 0,
   camouflaged: 0,
   night: 0,
   lighthouseBuilt: 0,
@@ -310,6 +316,7 @@ const paramOrder: (keyof CampingParams)[] = [
   "tomb",
   "pandemonium",
   "job",
+  "ruinDebris",
 ];
 
 /**
@@ -369,11 +376,33 @@ const updateCampingResult = () => {
   let total = 0;
 
   // Camping spots
-  const spots = params.ruin ? params.ruin.camping.spots : 0;
+  let spots = 0;
+
+  if (params.ruin) {
+    if (params.ruin.id === RuinId.BURIED_BUILDING) {
+      if (params.ruinDebris < 3) {
+        spots = 0;
+      } else if (params.ruinDebris < 6) {
+        spots = 1;
+      } else if (params.ruinDebris < 9) {
+        spots = 2;
+      } else {
+        spots = 3;
+      }
+    } else {
+      spots = params.ruin.camping.spots;
+    }
+  }
 
   // Campsite base value (-25% without a ruin)
   // Only applied if a spot is available
-  const ruinBaseValue = params.ruin ? params.ruin.camping.baseValue : -25;
+  const ruinBaseValue = params.ruin
+    ? params.ruin.id === RuinId.BURIED_BUILDING
+      ? spots > 0
+        ? params.ruin.camping.baseValue
+        : -25
+      : params.ruin.camping.baseValue
+    : -25;
   result.ruin = ruinBaseValue;
   result.alreadyHiddenCitizens = 0;
   if (params.alreadyHiddenCitizens < spots) {
@@ -689,6 +718,10 @@ const paramsData: Record<
   ruin: {
     icon: "",
   },
+  ruinDebris: {
+    icon: "icons/buried.gif",
+    min: 0,
+  },
   alreadyHiddenCitizens: {
     icon: "emotes/human.gif",
     min: 0,
@@ -760,7 +793,8 @@ const updateView = (calculator: HTMLElement) => {
       if (
         paramKey !== "job" &&
         paramKey !== "reclusiveLevel" &&
-        paramKey !== "pandemonium"
+        paramKey !== "pandemonium" &&
+        paramKey !== "ruinDebris"
       ) {
         const text = li.querySelector("p");
         if (text) {
@@ -827,6 +861,15 @@ const updateView = (calculator: HTMLElement) => {
           li.classList.add("hidden");
         } else {
           li.classList.remove("hidden");
+        }
+      }
+
+      // Update ruin debris visibility based on ruin
+      if (paramKey === "ruinDebris") {
+        if (params.ruin?.id === RuinId.BURIED_BUILDING) {
+          li.classList.remove("hidden");
+        } else {
+          li.classList.add("hidden");
         }
       }
     }
@@ -925,7 +968,11 @@ const createLine = (
       );
 
       // Some params don't need the text
-      if (key !== "reclusiveLevel" && key !== "pandemonium") {
+      if (
+        key !== "reclusiveLevel" &&
+        key !== "pandemonium" &&
+        key !== "ruinDebris"
+      ) {
         // Text
         text.textContent = `${result[key]}%`;
       }
@@ -1617,6 +1664,16 @@ export const updateCampingCalculatorWithCurrentParams = (
       params.ruin = ruinData;
     } else {
       console.error(`Ruin "${ruinName}" not found in ruins data.`);
+    }
+  } else {
+    // Buried ruin
+    const buriedCount = document.querySelectorAll(
+      ".ruin-bury-count .sand"
+    ).length;
+
+    if (buriedCount > 0) {
+      params.ruin = ruins[RuinId.BURIED_BUILDING];
+      params.ruinDebris = buriedCount;
     }
   }
 
