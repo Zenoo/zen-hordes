@@ -1651,6 +1651,9 @@ export const updateCampingCalculatorWithCurrentParams = (
   params.campingItems = campingItems.length;
 
   // Ruin
+  params.ruin = undefined;
+  params.ruinDebris = 0;
+
   const ruin = document.querySelector(
     ".ambiant-zone-desc .ruin-info .ruin-name b"
   );
