@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.13.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.13.0...zen-hordes-v1.13.1) (2025-11-30)
+
+
+### Bug Fixes
+
+* Add buried ruin ([a41180b](https://github.com/Zenoo/zen-hordes/commit/a41180b10ae6deb5c3283dea287936e30bb71744))
+* Handle buried ruin debris in camping calculation ([1587601](https://github.com/Zenoo/zen-hordes/commit/15876015e41ec132e3583168699a9a3dd1e3b9c1))
+* Toggle to auto open bag ([1094880](https://github.com/Zenoo/zen-hordes/commit/1094880104a64fdab3cc9b1f199c61139edff332))
+
 ## [1.13.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.12.7...zen-hordes-v1.13.0) (2025-11-16)
 
 
