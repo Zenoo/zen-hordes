@@ -53,7 +53,7 @@ export const autoSelectGlobalMapSetting = (node: HTMLElement) => {
 };
 
 export const autoOpenBagOutside = (node: HTMLElement) => {
-  if (!store["enhance-css"]) return;
+  if (!store["auto-open-bag"]) return;
   if (node.getAttribute("x-load-from") !== "/jx/beyond/partial/desert/actions")
     return;
 
@@ -64,7 +64,7 @@ export const autoOpenBagOutside = (node: HTMLElement) => {
 };
 
 export const autoOpenBagWhenMovingItems = (node: HTMLElement) => {
-  if (!store["enhance-css"]) return;
+  if (!store["auto-open-bag"]) return;
   if (node.id !== "beyond-inventory") return;
 
   // Listen to items click

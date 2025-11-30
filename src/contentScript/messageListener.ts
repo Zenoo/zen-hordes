@@ -249,6 +249,10 @@ export const listenToBackgroundMessages = async () => {
               setStore("full-logs", !!value.enabled);
               break;
             }
+            case "auto-open-bag": {
+              setStore("auto-open-bag", !!value.enabled);
+              break;
+            }
             default: {
               console.error("Unknown feature:", value.feature);
             }

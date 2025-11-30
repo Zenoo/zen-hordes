@@ -36,6 +36,7 @@ const T: Translations = {
     "better-reward-titles": "Better reward titles",
     "max-ap-investment": "Max AP investment in buildings",
     "full-logs": "Show full logs",
+    "auto-open-bag": "Auto open bag outside",
     "external-city-links": "External city history links",
     "update-sites": "External sites to update",
     "user-key": "User key",
@@ -51,6 +52,7 @@ const T: Translations = {
     "better-reward-titles": "Meilleurs titres de distinctions",
     "max-ap-investment": "PA max investis dans les bâtiments",
     "full-logs": "Afficher les journaux complets",
+    "auto-open-bag": "Ouverture automatique du sac à l'extérieur",
     "external-city-links": "Liens externes des historiques des villes",
     "update-sites": "Sites externes à mettre à jour",
     "user-key": "Clé utilisateur",
@@ -66,6 +68,7 @@ const T: Translations = {
     "better-reward-titles": "Bessere Belohnungstitel",
     "max-ap-investment": "Maximale AP-Investition in Gebäude",
     "full-logs": "Vollständige Protokolle anzeigen",
+    "auto-open-bag": "Rucksack im Freien automatisch öffnen",
     "external-city-links": "Externe Stadtverlauf-Links",
     "update-sites": "Externe Sites aktualisieren",
     "user-key": "Benutzerschlüssel",
@@ -81,6 +84,7 @@ const T: Translations = {
     "better-reward-titles": "Mejores títulos de recompensas",
     "max-ap-investment": "Máxima inversión de AP en edificios",
     "full-logs": "Mostrar registros completos",
+    "auto-open-bag": "Abrir bolsa automáticamente afuera",
     "external-city-links": "Enlaces externos de historiales de ciudades",
     "update-sites": "Sitios externos para actualizar",
     "user-key": "Clave de usuario",
@@ -131,6 +135,7 @@ const Popup = () => {
   const [betterRewardTitles, setBetterRewardTitles] = useState(true);
   const [maxApInvestment, setMaxApInvestment] = useState(true);
   const [fullLogs, setFullLogs] = useState(true);
+  const [autoOpenBag, setAutoOpenBag] = useState(true);
   const [externalSiteLinks, setExternalSiteLinks] = useState([
     ExternalSiteName.BBH,
   ]);
@@ -184,6 +189,11 @@ const Popup = () => {
       );
       setFullLogs(
         typeof data["full-logs"] === "boolean" ? data["full-logs"] : true
+      );
+      setAutoOpenBag(
+        typeof data["auto-open-bag"] === "boolean"
+          ? data["auto-open-bag"]
+          : true
       );
       setExternalSiteLinks(
         (data["external-city-links"] as ExternalSiteName[] | undefined) ?? [
@@ -297,6 +307,13 @@ const Popup = () => {
   ) => {
     setFullLogs(event.target.checked);
     await setFeature("full-logs", event.target.checked);
+  };
+
+  const handleAutoOpenBagChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setAutoOpenBag(event.target.checked);
+    await setFeature("auto-open-bag", event.target.checked);
   };
 
   const handleExternalSiteLinksChange =
@@ -494,6 +511,21 @@ const Popup = () => {
           label={
             <Typography variant="body2" sx={{ ml: 0.5 }}>
               {t("full-logs")}
+            </Typography>
+          }
+          sx={{ mx: 1 }}
+        />
+        <FormControlLabel
+          control={
+            <Switch
+              checked={autoOpenBag}
+              onChange={handleAutoOpenBagChange}
+              size="small"
+            />
+          }
+          label={
+            <Typography variant="body2" sx={{ ml: 0.5 }}>
+              {t("auto-open-bag")}
             </Typography>
           }
           sx={{ mx: 1 }}
