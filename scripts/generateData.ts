@@ -1789,6 +1789,36 @@ const sanitizeRuinId = (building: Ruin) => {
 const generateRuins = async (items: Record<number, Item>) => {
   const ruins: Record<number, Ruin> = {};
 
+  // Add buried ruin
+  ruins[9999] = {
+    id: 9999,
+    name: {
+      en: "Buried building",
+      fr: "Bâtiment non déterré",
+      de: "Verschüttete Ruine",
+      es: "Sector inexplotable",
+    },
+    description: {
+      en: "",
+      fr: "",
+      de: "",
+      es: "",
+    },
+    icon: "burried",
+    camping: {
+      baseValue: 15,
+      spots: 0,
+    },
+    spawnChance: 0,
+    emptyChance: 0,
+    km: {
+      min: 0,
+      max: 0,
+    },
+    explorable: false,
+    drops: [],
+  };
+
   // Parse MH API ruin data
   const mhRuinsData = JSON.parse(
     fs.readFileSync(path.join(__dirname, "data", "ruins.json"), "utf-8")

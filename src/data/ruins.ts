@@ -5017,5 +5017,35 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
         odds: 5,
       }
     ]
+  },
+  [RuinId.BURIED_BUILDING]: {
+    id: RuinId.BURIED_BUILDING,
+    name: {
+      [Lang.EN]: "Buried building",
+      [Lang.FR]: "Bâtiment non déterré",
+      [Lang.DE]: "Verschüttete Ruine",
+      [Lang.ES]: "Sector inexplotable"
+    },
+    description: {
+      [Lang.EN]: "",
+      [Lang.FR]: "",
+      [Lang.DE]: "",
+      [Lang.ES]: ""
+    },
+    icon: "burried",
+    camping: {
+      baseValue: 15,
+      spots: 0
+    },
+    spawnChance: 0,
+    emptyChance: 0,
+    km: {
+      min: 0,
+      max: 0
+    },
+    explorable: false,
+    drops: [
+      
+    ]
   }
 };

@@ -477,7 +477,8 @@ export enum RuinId {
   ABANDONED_BUNKER = 61,
   ABANDONED_HOTEL = 62,
   ABANDONED_HOSPITAL = 63,
-  CROWS_FIT_GYM = 64
+  CROWS_FIT_GYM = 64,
+  BURIED_BUILDING = 9999
 }
 
 export type Ruin = {

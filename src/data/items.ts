@@ -15346,7 +15346,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.EN]: "Creepy Mask",
       [Lang.FR]: "Masque effrayant",
       [Lang.DE]: "Schaurige Maske",
-      [Lang.ES]: "Mascará Escalofriante"
+      [Lang.ES]: "Máscara Escalofriante"
     },
     description: {
       [Lang.EN]: "Somehow this mask reminds you of someone...",
