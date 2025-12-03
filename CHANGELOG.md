@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.13.1...zen-hordes-v1.13.2) (2025-11-30)
+
+
+### Bug Fixes
+
+* Reset ruin & ruin debris on camping calculator display ([34987f8](https://github.com/Zenoo/zen-hordes/commit/34987f8f275f5076c7ed80042f006bf326716e4a))
+
 ## [1.13.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.13.0...zen-hordes-v1.13.1) (2025-11-30)
 
 
