@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.13.3](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.13.2...zen-hordes-v1.13.3) (2025-12-07)
+
+
+### Bug Fixes
+
+* Remove ugly padding when blocked by zombies ([5b85c97](https://github.com/Zenoo/zen-hordes/commit/5b85c9723058d7a69286750de6e8d66237e4a16b))
+* Wrong camping calculation when hidden ([62c115b](https://github.com/Zenoo/zen-hordes/commit/62c115bfe7bfd9991664764a93edf89002c20c6d))
+
 ## [1.13.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.13.1...zen-hordes-v1.13.2) (2025-11-30)
 
 
