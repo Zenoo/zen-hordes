@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.4](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.13.3...zen-hordes-v1.13.4) (2025-12-07)
+
+
+### Bug Fixes
+
+* Retrigger publication ([2c2a568](https://github.com/Zenoo/zen-hordes/commit/2c2a5680c01f9569b452073b889a8e6620afed96))
+
 ## [1.13.3](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.13.2...zen-hordes-v1.13.3) (2025-12-07)
 
 
