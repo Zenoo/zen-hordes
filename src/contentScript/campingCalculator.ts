@@ -496,56 +496,56 @@ const updateCampingResult = () => {
             ? 65
             : 80
           : params.reclusiveLevel
-          ? 10
-          : 20;
+            ? 10
+            : 20;
       case 2:
         return params.pandemonium
           ? params.reclusiveLevel
             ? 70
             : 90
           : params.reclusiveLevel
-          ? 20
-          : 45;
+            ? 20
+            : 45;
       case 3:
         return params.pandemonium
           ? params.reclusiveLevel
             ? 80
             : 100
           : params.reclusiveLevel
-          ? 40
-          : 65;
+            ? 40
+            : 65;
       case 4:
         return params.pandemonium
           ? params.reclusiveLevel
             ? 90
             : 110
           : params.reclusiveLevel
-          ? 50
-          : 80;
+            ? 50
+            : 80;
       case 5:
         return params.pandemonium
           ? params.reclusiveLevel
             ? 100
             : 160
           : params.reclusiveLevel
-          ? 60
-          : 130;
+            ? 60
+            : 130;
       case 6:
         return params.pandemonium
           ? params.reclusiveLevel > 1
             ? 110
             : 210
           : params.reclusiveLevel > 1
-          ? 80
-          : 180;
+            ? 80
+            : 180;
       case 7:
         return params.pandemonium
           ? params.reclusiveLevel > 1
             ? 160
             : 310
           : params.reclusiveLevel > 1
-          ? 130
-          : 280;
+            ? 130
+            : 280;
       default:
         return params.pandemonium ? 510 : 480;
     }
@@ -590,8 +590,8 @@ const updateCampingResult = () => {
     params.job === Job.Survivalist
       ? 999
       : params.reclusiveLevel === 4
-      ? 99
-      : 90;
+        ? 99
+        : 90;
 
   total = Math.min(max, total);
   result.total = total;
@@ -616,7 +616,7 @@ const getJob = () => {
   let job: Job = Job.Resident;
   const items = [
     ...document.querySelectorAll<HTMLElement>(
-      "hordes-passive-inventory li.item"
+      "hordes-inventory#beyond-inventory li.item"
     ),
   ].reverse();
 
@@ -856,8 +856,7 @@ const updateView = (calculator: HTMLElement) => {
 
       // Update camouflaged visibility based on job
       if (paramKey === "camouflaged") {
-        const job = getJob();
-        if (job !== Job.Scout) {
+        if (params.job !== Job.Scout) {
           li.classList.add("hidden");
         } else {
           li.classList.remove("hidden");
@@ -1589,21 +1588,24 @@ export const displayCampingCalculator = (node: HTMLElement) => {
 
 export const updateCampingCalculatorWithCurrentParams = (
   node?: HTMLElement,
-  calculator?: HTMLElement
+  calculator?: HTMLElement,
+  foundJob?: Job
 ) => {
   if (!store["camping-calculator"]) return;
-  if (
-    node?.getAttribute("for") !== "zone-camp" &&
-    !node?.classList.contains("zone-dist") &&
-    !calculator
-  )
-    return;
 
-  // Check if calculator was already updated
-  const existing = node?.nextElementSibling?.classList.contains(
-    "zen-camping-calculator"
-  );
-  if (existing && !calculator) return;
+  let shouldGoThrough = false;
+
+  if (foundJob) {
+    shouldGoThrough = true;
+  } else if (node?.getAttribute("for") === "zone-camp") { // Load/click on camping inspection
+    shouldGoThrough = true;
+  } else if (node?.classList.contains("zone-dist")) { // Load distance info
+    shouldGoThrough = true;
+  } else if (calculator) { // Manual trigger via code
+    shouldGoThrough = true;
+  }
+
+  if (!shouldGoThrough) return;
 
   const inventoryItems = document.querySelectorAll<HTMLElement>(
     "hordes-passive-inventory li.item"
@@ -1711,7 +1713,7 @@ export const updateCampingCalculatorWithCurrentParams = (
   );
 
   // Job
-  params.job = getJob();
+  params.job = foundJob ?? getJob();
 
   const calculatorElements = calculator
     ? [calculator]
@@ -1724,6 +1726,37 @@ export const updateCampingCalculatorWithCurrentParams = (
     // Set calculator as updated
     calculatorElement.setAttribute("data-updated", "true");
   }
+};
+
+export const triggerCampingCalculatorUpdateOnJobLoad = (e: Event) => {
+  if (!store["camping-calculator"]) return;
+  if (location.pathname !== "/jx/beyond/desert/cached") return;
+
+  const eventDetails = (e as CustomEvent<{
+    data: {
+      id: number;
+    }[]
+  }>).detail;
+  if (!eventDetails || !eventDetails.data || !Array.isArray(eventDetails.data)) return;
+
+  const potentialJobs: Job[] = [];
+
+  for (const item of eventDetails.data) {
+    // Check if the item is a job item
+    for (const [currentJob, itemIds] of Object.entries(jobItems)) {
+      if (itemIds.some((id) => items[id].numericalId === item.id) ) {
+        potentialJobs.push(+currentJob as Job);
+      }
+    }
+  }
+
+  if (potentialJobs.length === 0) return;
+
+  const finalJob = potentialJobs.reduce((prev, curr) =>
+    prev > curr ? prev : curr
+  );
+
+  updateCampingCalculatorWithCurrentParams(undefined, undefined, finalJob);
 };
 
 export const updatePreviousCampings = (node: HTMLElement) => {

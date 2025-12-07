@@ -14,6 +14,7 @@ import {
 } from "./betterTooltips";
 import {
   displayCampingCalculator,
+  triggerCampingCalculatorUpdateOnJobLoad,
   updateCampingCalculatorWithCurrentParams,
   updatePreviousCampings,
 } from "./campingCalculator";
@@ -147,4 +148,5 @@ import { insertWiki, openItemInWiki } from "./wiki";
   // should be handled here
   onEvent("sig-item-transfer", onItemTransfer);
   onEvent("sig-horror-message-cleared", rebuildZoneTooltipAfterClear);
+  onEvent("vaultUpdate", triggerCampingCalculatorUpdateOnJobLoad);
 })();
