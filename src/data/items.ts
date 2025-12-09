@@ -11493,7 +11493,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Una poderosa arma de agua contra zombies. Como sea, no mata a mucha gente estando vacío..."
     },
     categories: [ItemCategory.Armoury],
-    icon: "item_kalach",
+    icon: "item_kalach_0",
     decoration: 0,
     heavy: false,
     watchPoints: 0,

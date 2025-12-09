@@ -7203,8 +7203,8 @@
   },
   "kalach_#01": {
     "id": 278,
-    "uid": "kalach",
-    "img": "item/item_kalach.b3c80cbc.gif",
+    "uid": "kalach_0",
+    "img": "item/item_kalach_0.021cb55c.gif",
     "heavy": false,
     "deco": 0,
     "guard": 0,
