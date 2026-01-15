@@ -457,6 +457,9 @@ export const displayUpdateButton = (node: HTMLElement) => {
   const existing = document.querySelector(".zen-update-button");
   if (existing) return;
 
+  // Don't display it in explorable ruins
+  if (document.querySelector(".ruin_map_area")) return;
+
   // Create update button
   const button = document.createElement("button");
   button.classList.add("zen-update-button");

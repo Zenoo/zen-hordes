@@ -126,7 +126,7 @@ const checkers = {
     );
     if (!registryBuilt) return ClairvoyanceStatus.MAYBE;
 
-    return hasLogEntry(LogEntryType.WORK_ON_BUILDING);
+    return hasLogEntry(LogEntryType.WORK_ON_BUILDING) || hasLogEntry(LogEntryType.REPAIRED_BUILDING);
   },
   lookedAtForum: () => {
     return ClairvoyanceStatus.MAYBE;
