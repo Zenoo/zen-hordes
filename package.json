@@ -1,6 +1,6 @@
 {
   "name": "zen-hordes",
-  "version": "1.13.5",
+  "version": "1.13.6",
   "description": "An extension that enhances the user experience of the MyHordes website.",
   "main": "index.js",
   "scripts": {

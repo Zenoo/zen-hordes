@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.6](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.13.5...zen-hordes-v1.13.6) (2026-01-15)
+
+
+### Bug Fixes
+
+* Count building repair towards clairvoyance stars ([161a79c](https://github.com/Zenoo/zen-hordes/commit/161a79c48571cb2e48769111d1770d64a9588310))
+
 ## [1.13.5](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.13.4...zen-hordes-v1.13.5) (2025-12-09)
 
 
