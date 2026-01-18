@@ -100,6 +100,10 @@ chrome.webRequest.onErrorOccurred.addListener(
 // Take action after the request is completed
 chrome.webRequest.onCompleted.addListener(
   (details) => {
+    if (details.statusCode >= 400) {
+      return;
+    }
+
     log("onCompleted", details.url, details);
 
     const message = queue[details.requestId];
