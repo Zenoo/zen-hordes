@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.7](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.13.6...zen-hordes-v1.13.7) (2026-01-18)
+
+
+### Bug Fixes
+
+* Wrong well ration result ([3f1a8d2](https://github.com/Zenoo/zen-hordes/commit/3f1a8d2bb8fd7db607b68cd1e74a1989e6ea0b41))
+
 ## [1.13.6](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.13.5...zen-hordes-v1.13.6) (2026-01-15)
 
 
