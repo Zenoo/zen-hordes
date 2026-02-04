@@ -8,7 +8,6 @@ import {
   insertBetterItemTooltips,
   insertBetterMapZoneTooltips,
   rebuildZoneTooltipAfterClear,
-  storeBankState,
   toggleItemActions,
   updateItemBankCountPeriodically,
 } from "./betterTooltips";
@@ -29,8 +28,13 @@ import { onClick } from "./hooks/onClick";
 import { onEvent } from "./hooks/onEvent";
 import { onKey } from "./hooks/onKey";
 import { onMount } from "./hooks/onMount";
+import {
+  displayInternalMapButton,
+  updateTownDataPeriodically,
+  updateZHMap,
+} from "./internalMap";
 import { displayFullLogs } from "./logEntries";
-import { displayMapPreview, insertMapPreviewTooltip } from "./mapPreview";
+import { displayMapPreview, enableMapPreview } from "./mapPreview";
 import { prefillApPromptWithMaxAp } from "./maxApInvestment";
 import { listenToBackgroundMessages } from "./messageListener";
 import { displayPlayerTag, insertPlayerInfo } from "./playerInfo";
@@ -73,7 +77,7 @@ import { insertWiki, openItemInWiki } from "./wiki";
   // Actions that can be performed immediately
   // should be handled here
   enhanceUI();
-  insertMapPreviewTooltip();
+  enableMapPreview();
   insertWiki();
   insertShoppingListToggle();
   updateItemBankCountPeriodically();
@@ -90,7 +94,6 @@ import { insertWiki, openItemInWiki } from "./wiki";
     displayShamanSoulsButton(node);
     displayCampingCalculator(node);
     resetOnDeath(node);
-    storeBankState(node);
     autoSelectGlobalMapSetting(node);
     autoOpenBagOutside(node);
     autoOpenBagWhenMovingItems(node);
@@ -111,6 +114,9 @@ import { insertWiki, openItemInWiki } from "./wiki";
     displayRuinDetails(node);
     displayClairvoyanceInstructions(node);
     displayClairvoyanceAnalysis(node);
+    displayInternalMapButton(node);
+    updateTownDataPeriodically(node);
+    updateZHMap(node);
   });
 
   // Actions that need to be performed on hover

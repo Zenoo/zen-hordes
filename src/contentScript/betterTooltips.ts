@@ -13,7 +13,7 @@ import {
 } from "../data/types";
 import { ASSETS } from "../utils/constants";
 import { insertBetterMapRuinTooltips } from "./ruins";
-import { store } from "./store";
+import { memory, store } from "./store";
 import { t } from "./translate";
 import { setTextContent } from "./wiki";
 
@@ -1235,9 +1235,11 @@ export const insertBetterItemTooltips = (
     node.setAttribute("data-tooltip-item-id", item.id);
 
     // Bank count
-    const bankStateTimestamp = localStorage.getItem("bankStateTimestamp");
-    if (bankStateTimestamp) {
-      const count = localStorage.getItem(`bankItem_${item.id}`);
+    if (memory.town) {
+      const count =
+        memory.town.bank.find((bankItem) => bankItem.id === item.numericalId)
+          ?.quantity ?? 0;
+      const timestamp = new Date(memory.town.lastUpdate).getTime();
 
       const bankCountTarget = node.querySelector("h1, h4")?.nextSibling;
 
@@ -1249,8 +1251,8 @@ export const insertBetterItemTooltips = (
       const bankCount = document.createElement("div");
       bankCount.classList.add("bank-count", "zen-added");
       bankCount.textContent = t(T, "bankCount", {
-        count: +(count ?? 0),
-        time: getRelativeTime(+bankStateTimestamp),
+        count,
+        time: getRelativeTime(timestamp),
       });
 
       node.insertBefore(bankCount, bankCountTarget.nextSibling);
@@ -1621,66 +1623,30 @@ export const rebuildZoneTooltipAfterClear = (event: Event) => {
   }, 200);
 };
 
-export const resetBankState = () => {
-  // Remove all bank items from local storage
-  Object.keys(localStorage).forEach((key) => {
-    if (key.startsWith("bankItem_")) {
-      localStorage.removeItem(key);
-    }
-  });
-};
-
-export const storeBankState = (node: HTMLElement) => {
-  if (node.id !== "bank-inventory") return;
-
-  // Wait for pending items to load
-  const interval = setInterval(() => {
-    const pendingItems = node.querySelectorAll(".bank .item.pending");
-    if (pendingItems.length === 0) {
-      clearInterval(interval);
-      resetBankState();
-
-      // Get items
-      node.querySelectorAll<HTMLElement>(".bank .item").forEach((itemNode) => {
-        const item = findItem(itemNode);
-
-        if (!item) {
-          console.error("Item not found in bank:", itemNode);
-          return;
-        }
-
-        const count =
-          itemNode.querySelector("span:not(.item-icon)")?.textContent ?? "1";
-
-        // Store the item count in local storage
-        localStorage.setItem(`bankItem_${item.id}`, count);
-      });
-
-      localStorage.setItem("bankStateTimestamp", Date.now().toString());
-    }
-  }, 250);
-};
-
 export const updateItemBankCountPeriodically = () => {
   setInterval(() => {
-    const bankStateTimestamp = localStorage.getItem("bankStateTimestamp");
-    if (!bankStateTimestamp) return;
+    if (!memory.town) return;
 
     // Get all item counts in tooltips
     document
       .querySelectorAll(".zen-better-tooltip .bank-count")
       .forEach((bankCountTarget) => {
+        if (!memory.town) return;
+
         const itemId = bankCountTarget
           .closest(".zen-better-tooltip")
           ?.getAttribute("data-tooltip-item-id");
 
         if (!itemId) return;
 
-        const count = localStorage.getItem(`bankItem_${itemId}`);
+        const count =
+          memory.town.bank.find((bankItem) => bankItem.id === Number(itemId))
+            ?.quantity ?? 0;
+        const timestamp = new Date(memory.town.lastUpdate).getTime();
 
         bankCountTarget.textContent = t(T, "bankCount", {
           count: +(count ?? 0),
-          time: getRelativeTime(+bankStateTimestamp),
+          time: getRelativeTime(timestamp),
         });
       });
   }, 1000 * 60 * 5); // Update every 5 minutes

@@ -1,4 +1,7 @@
+import { ASSETS } from "../utils/constants";
+
 export enum ExternalSiteName {
+  ZH = "ZH",
   BBH = "BBH",
   FM = "FM",
   GH = "GH",
@@ -10,11 +13,18 @@ export type ExternalSiteData = Readonly<{
   name: string;
   townUrl?: string;
   updateUrl?: string;
+  logo?: string;
 }>;
 
 export const ExternalSite: Readonly<
   Record<ExternalSiteName, ExternalSiteData>
 > = {
+  [ExternalSiteName.ZH]: {
+    id: 43,
+    name: "Zen Hordes",
+    updateUrl: "http://localhost:3000/update",
+    logo: `${ASSETS}/icons/zen-icon.png`,
+  },
   [ExternalSiteName.BBH]: {
     id: 1,
     name: "BigBroth'Hordes",

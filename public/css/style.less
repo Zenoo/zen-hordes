@@ -512,27 +512,43 @@ body.zen-enhanced {
   }
 }
 
-#zen-map-preview-tooltip {
-  position: fixed;
-  display: none;
-  background: #5c2b20;
-  border: 1px solid #efdba8;
-  color: #f86;
-  font-variant: small-caps;
-  font-weight: 700;
-  padding: 2px;
-  z-index: 1000;
-
-  &.visible {
-    display: block;
-  }
-}
-
 body.zen-map-preview-enabled {
   .town-row[data-town-id] {
     &>.cell:first-child img {
       animation: pulse 1s infinite;
       cursor: pointer;
+    }
+
+    .zen-map-preview-tooltip {
+      position: fixed;
+      display: none;
+      background: #5c2b20;
+      border: 1px solid #efdba8;
+      color: #f86;
+      font-variant: small-caps;
+      font-weight: 700;
+      padding: 2px;
+      z-index: 1000;
+
+      &.visible {
+        display: block;
+      }
+
+      .zen-simple-map {
+        width: 300px;
+
+        .citizen-icon {
+          position: absolute;
+          width: 30% !important;
+          height: 30% !important;
+          bottom: 5%;
+          right: 5%;
+          top: auto !important;
+          left: auto !important;
+          background-color: #ffe96c;
+          z-index: 2 !important;
+        }
+      }
     }
   }
 }
@@ -1590,6 +1606,96 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
 .clairvoyance-analysis {
   padding-left: 0;
   list-style-type: none;
+}
+
+
+.zen-zombie-count-wrapper,
+.zen-citizen-count-wrapper {
+  display: none !important;
+}
+
+hordes-map.zen-internal-map-active.selector-weight div.react_map_area div.map>.scroll-plane {
+  .zone {
+    &.past {
+      .icon {
+        background: none;
+      }
+
+      &.ruin:not(.buried) {
+        .icon {
+          background: url(https://zenoo.github.io/zen-hordes/icons/map/map_zone_ruin.svg) 50%/contain no-repeat;
+        }
+      }
+    }
+
+    &.zen-depleted {
+      .icon {
+        background: url(https://zenoo.github.io/zen-hordes/icons/map/map_zone_past.svg) 50%/contain no-repeat;
+        transform: rotate(90deg);
+        filter: hue-rotate(317deg);
+      }
+
+      &.ruin:not(.buried) {
+        .icon {
+          background: url(https://zenoo.github.io/zen-hordes/icons/map/map_zone_ruin_past.svg) 50%/contain no-repeat;
+        }
+      }
+    }
+
+    &.zen-danger-0 {
+      background: none;
+    }
+
+    &.zen-danger-1 {
+      background: #5e6507;
+    }
+
+    &.zen-danger-2 {
+      background: #947726;
+    }
+
+    &.zen-danger-3 {
+      background: #cc0a0a;
+    }
+
+    .citizen_marker {
+      display: none;
+    }
+
+    .zen-citizen-count-wrapper {
+      display: flex !important;
+      align-items: center;
+      position: absolute;
+      top: -3%;
+      left: 10%;
+      font-size: 6px;
+      width: auto;
+      height: auto;
+
+      .zen-citizen-icon {
+        width: 11px;
+        margin-left: -2px;
+      }
+    }
+
+    .zen-zombie-count-wrapper {
+      display: flex !important;
+      align-items: center;
+      position: absolute;
+      top: auto;
+      left: auto;
+      bottom: 2%;
+      right: -8%;
+      font-size: 6px;
+      width: auto;
+      height: auto;
+
+      .zen-zombie-icon {
+        width: 11px;
+        margin-left: -2px;
+      }
+    }
+  }
 }
 
 // Firefox fixes

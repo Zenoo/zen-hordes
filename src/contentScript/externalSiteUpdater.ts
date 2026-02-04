@@ -1,3 +1,4 @@
+import { ruins } from "../data/ruins";
 import { ASSETS } from "../utils/constants";
 import { findItemFromInventory } from "../utils/itemUtils";
 import { tooltip } from "../utils/tooltip";
@@ -48,8 +49,30 @@ const T: Translations = {
 };
 
 // Current game state helpers
+export const getUserId = () => {
+  const mercureAuthJson = JSON.parse(
+    document.documentElement.getAttribute("data-mercure-auth") ?? "{}"
+  ) as Record<string, unknown>;
+  return mercureAuthJson.u ? Number(mercureAuthJson.u) : 0;
+};
+
+export const getTownId = () => {
+  const townId = document
+    .querySelector(".town-name")
+    ?.getAttribute("data-town-id");
+
+  return townId ? Number(townId) : 0;
+};
+
 const getDeadZombies = () => {
   return document.querySelectorAll(".actor.splatter").length;
+};
+const getZombies = () => {
+  return document.querySelectorAll(".actor.zombie").length;
+};
+
+const isZoneDepleted = () => {
+  return !!document.querySelector("#mgd-empty-zone-note");
 };
 
 const getPresentPlayers = () => {
@@ -183,6 +206,20 @@ const getScoutLevel = () => {
   return level ? +level : null;
 };
 
+const getCurrentRuinId = () => {
+  const ruin = document.querySelector(
+    ".ambiant-zone-desc .ruin-info .ruin-name b"
+  );
+  if (!ruin) return;
+
+  const ruinName = ruin.textContent?.trim();
+  const ruinData = Object.values(ruins).find(
+    (r) => r.name[store["hordes-lang"]] === ruinName
+  );
+
+  return ruinData?.id;
+};
+
 /**
  * Count the number of logs of a specific template ID for the current day
  */
@@ -272,6 +309,38 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
   let updateParams: RequestInit = {};
 
   switch (site) {
+    case ExternalSiteName.ZH: {
+      const userId = getUserId();
+      const townId = getTownId();
+      const position = getPosition();
+      const scoutRadar = getScoutRadar();
+      const scavRadar = getScavRadar();
+      const items = getDesertItems();
+      const zombies = getZombies();
+      const ruinId = getCurrentRuinId();
+      const depleted = isZoneDepleted();
+
+      updateParams = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          key: store["user-key"],
+          townId,
+          userId,
+          x: position.x,
+          y: position.y,
+          scoutRadar,
+          scavRadar,
+          items,
+          zombies,
+          buildingId: ruinId,
+          depleted,
+        }),
+      };
+      break;
+    }
     case ExternalSiteName.BBH: {
       updateParams = {
         method: "POST",
@@ -346,17 +415,10 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
     }
     case ExternalSiteName.MHO: {
       // Get user ID
-      const mercureAuthJson = JSON.parse(
-        document.documentElement.getAttribute("data-mercure-auth") ?? "{}"
-      ) as Record<string, unknown>;
-      const userId = mercureAuthJson.u ? Number(mercureAuthJson.u) : 0;
-
-      urlVariables.userId = String(userId);
+      urlVariables.userId = String(getUserId());
 
       // Get town ID
-      const townId = document
-        .querySelector(".town-name")
-        ?.getAttribute("data-town-id");
+      const townId = getTownId();
 
       if (!townId) {
         throw new Error("No town ID found");
@@ -396,6 +458,15 @@ const readExternalAppResponse = async (
   response: Response
 ) => {
   switch (site) {
+    case ExternalSiteName.ZH: {
+      const body = (await response.json()) as Record<string, unknown>;
+      if (!body.success) {
+        console.log(body.details);
+        displayError(wrapper, `${site}: ${body.error as string}`);
+        return false;
+      }
+      return true;
+    }
     case ExternalSiteName.BBH: {
       const body = await response.text();
       const parser = new DOMParser();
@@ -478,7 +549,7 @@ export const displayUpdateButton = (node: HTMLElement) => {
     siteWrapper.setAttribute("data-id", site);
 
     const siteImage = document.createElement("img");
-    siteImage.src = logo?.getAttribute("src") ?? "";
+    siteImage.src = siteData.logo ?? logo?.getAttribute("src") ?? "";
     siteImage.alt = site;
 
     const statusImage = document.createElement("img");

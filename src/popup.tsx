@@ -137,10 +137,11 @@ const Popup = () => {
   const [fullLogs, setFullLogs] = useState(true);
   const [autoOpenBag, setAutoOpenBag] = useState(true);
   const [externalSiteLinks, setExternalSiteLinks] = useState([
-    ExternalSiteName.BBH,
+    ExternalSiteName.FM,
+    ExternalSiteName.GH,
   ]);
   const [externalSitesToUpdate, setExternalSitesToUpdate] = useState([
-    ExternalSiteName.BBH,
+    ExternalSiteName.ZH,
     ExternalSiteName.FM,
     ExternalSiteName.GH,
     ExternalSiteName.MHO,
@@ -197,14 +198,15 @@ const Popup = () => {
       );
       setExternalSiteLinks(
         (data["external-city-links"] as ExternalSiteName[] | undefined) ?? [
-          ExternalSiteName.BBH,
+          ExternalSiteName.FM,
+          ExternalSiteName.GH,
         ]
       );
       setExternalSitesToUpdate(
         (data["external-sites-to-update"] as
           | ExternalSiteName[]
           | undefined) ?? [
-          ExternalSiteName.BBH,
+          ExternalSiteName.ZH,
           ExternalSiteName.FM,
           ExternalSiteName.GH,
           ExternalSiteName.MHO,

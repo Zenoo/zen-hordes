@@ -1,6 +1,6 @@
 import { ItemId } from "../data/types";
 import { DEFAULT_SHOPPING_LIST } from "../utils/constants";
-import { resetBankState } from "./betterTooltips";
+import { TownResponse } from "../utils/server";
 import { ExternalSiteName } from "./externalSites";
 
 /**
@@ -14,6 +14,7 @@ export const store = {
   "map-preview": true,
   "external-city-links": [ExternalSiteName.FM, ExternalSiteName.GH],
   "external-sites-to-update": [
+    ExternalSiteName.ZH,
     ExternalSiteName.FM,
     ExternalSiteName.GH,
     ExternalSiteName.MHO,
@@ -103,12 +104,18 @@ export const resetOnDeath = (node: HTMLElement) => {
     setStore("last-water-ration-taken", new Date(0).getTime());
     setStore("bank-last-items-taken", []);
 
-    // Reset bank state
-    resetBankState();
-    localStorage.removeItem("bankStateTimestamp");
+    // Reset town data
+    memory.town = null;
 
     // Reset camping variables
     setStore("camping-day", null);
     setStore("previous-campings", 0);
   }
+};
+
+/** Memory storage to avoid redundant JSON.parse calls on localStorage */
+export const memory: {
+  town: TownResponse["town"];
+} = {
+  town: null,
 };
