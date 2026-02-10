@@ -22,7 +22,7 @@ export const ExternalSite: Readonly<
   [ExternalSiteName.ZH]: {
     id: 43,
     name: "Zen Hordes",
-    updateUrl: "http://localhost:3000/update",
+    updateUrl: "https://zenhordes.eternaltwin.org/update",
     logo: `${ASSETS}/icons/zen-icon.png`,
   },
   [ExternalSiteName.BBH]: {

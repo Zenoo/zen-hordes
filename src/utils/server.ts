@@ -1,7 +1,7 @@
 import { getTownId, getUserId } from "../contentScript/externalSiteUpdater";
 import { store } from "../contentScript/store";
 
-const SERVER_URL = "http://localhost:3000";
+const SERVER_URL = "https://zenhordes.eternaltwin.org";
 
 type Job =
   | "RESIDENT"
