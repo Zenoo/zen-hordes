@@ -1,5 +1,7 @@
+import { items } from "../data/items";
 import { ASSETS } from "../utils/constants";
 import { Server } from "../utils/server";
+import { getRelativeTime } from "./betterTooltips";
 import { getTownId } from "./externalSiteUpdater";
 import { memory } from "./store";
 import { t } from "./translate";
@@ -7,15 +9,19 @@ import { t } from "./translate";
 const T: Translations = {
   en: {
     ZHMap: "ZH Map",
+    lastUpdate: "Updated {{relativeTime}}",
   },
   fr: {
     ZHMap: "Carte ZH",
+    lastUpdate: "Mis à jour {{relativeTime}}",
   },
   de: {
     ZHMap: "ZH-Karte",
+    lastUpdate: "Aktualisiert {{relativeTime}}",
   },
   es: {
     ZHMap: "Mapa ZH",
+    lastUpdate: "Actualizado {{relativeTime}}",
   },
 };
 
@@ -31,9 +37,9 @@ export const updateZHMap = (node?: HTMLElement) => {
     if (citizen.dead) return map;
 
     const key = `${citizen.x - memory.town.x},${-citizen.y + memory.town.y}`;
-    map.set(key, (map.get(key) ?? 0) + 1);
+    map.set(key, [...(map.get(key) ?? []), citizen.name]);
     return map;
-  }, new Map<string, number>());
+  }, new Map<string, string[]>());
 
   for (const zone of zones) {
     const [_y, _x] = zone.style.gridArea.replace(/ /g, "").split("/");
@@ -43,10 +49,7 @@ export const updateZHMap = (node?: HTMLElement) => {
     const x = +_x - memory.town.x - 1;
     const y = -(+_y - memory.town.y - 1);
 
-    const zoneData = memory.town.zones.find(
-      (z) =>
-        z.x - (memory.town?.x ?? 0) === x && -z.y + (memory.town?.y ?? 0) === y
-    );
+    const zoneData = memory.town.zones.find((z) => z.x === x && z.y === y);
     if (!zoneData) continue;
 
     // Depleted
@@ -59,57 +62,126 @@ export const updateZHMap = (node?: HTMLElement) => {
 
     // Citizens
     const key = `${x},${y}`;
-    const citizenCount = hasCitizens.get(key) ?? 0;
+    const citizenList = hasCitizens.get(key) ?? [];
 
-    if (citizenCount > 0) {
-      const existingCitizenCount = zone.querySelector(".zen-citizen-count");
-      if (existingCitizenCount) {
-        existingCitizenCount.textContent = citizenCount.toString();
-      } else {
-        const citizenCountWrapper = document.createElement("div");
-        citizenCountWrapper.classList.add("zen-citizen-count-wrapper");
-
-        const citizenCountDiv = document.createElement("div");
-        citizenCountDiv.classList.add("zen-citizen-count");
-        citizenCountDiv.textContent = citizenCount.toString();
-        citizenCountWrapper.appendChild(citizenCountDiv);
-
-        const citizenIcon = document.createElement("img");
-        citizenIcon.classList.add("zen-citizen-icon");
-        citizenIcon.src = `${ASSETS}/icons/map/map_icon_citizen.png`;
-        citizenCountWrapper.appendChild(citizenIcon);
-        zone.appendChild(citizenCountWrapper);
+    if (citizenList.length > 0) {
+      // Add citizen_marker if not already present
+      if (
+        !zone.querySelector(".citizen_marker") &&
+        !zone.querySelector(".zen-citizen_marker")
+      ) {
+        const marker = document.createElement("div");
+        marker.classList.add("zen-citizen_marker");
+        zone.appendChild(marker);
       }
     }
 
     // Zombies
-    if (zoneData.dangerLevel || zoneData.zombies) {
-      const count =
-        zoneData.zombies || zoneData.dangerLevel === 3
-          ? "6+"
-          : zoneData.dangerLevel === 2
-          ? "3-5"
-          : "1-2";
+    const zombiesCount =
+      zoneData.zombies || zoneData.dangerLevel === 3
+        ? "6+"
+        : zoneData.dangerLevel === 2
+        ? "3-5"
+        : zoneData.dangerLevel === 1
+        ? "1-2"
+        : "0";
 
-      const existingZombieCount = zone.querySelector(".zen-zombie-count");
-      if (existingZombieCount) {
-        existingZombieCount.textContent = count;
-      } else {
-        const zombieCountWrapper = document.createElement("div");
-        zombieCountWrapper.classList.add("zen-zombie-count-wrapper");
+    // TODO: Update items, last update in tooltip
+    // Update tooltip data
+    const tooltip = document.querySelector<HTMLElement>(
+      `.zen-better-zone-tooltip[data-x="${x}"][data-y="${y}"]`
+    );
 
-        const zombieCountDiv = document.createElement("div");
-        zombieCountDiv.classList.add("zen-zombie-count");
-        zombieCountDiv.textContent = count;
-        zombieCountWrapper.appendChild(zombieCountDiv);
+    if (!tooltip) continue;
 
-        const zombieIcon = document.createElement("img");
-        zombieIcon.classList.add("zen-zombie-icon");
-        zombieIcon.src = `${ASSETS}/icons/map/map_icon_zombie.png`;
-        zombieCountWrapper.appendChild(zombieIcon);
-        zone.appendChild(zombieCountWrapper);
-      }
+    let tooltipMapDataWrapper = tooltip.querySelector<HTMLElement>(
+      ".zen-tooltip-map-data"
+    );
+    if (tooltipMapDataWrapper) {
+      tooltipMapDataWrapper.remove();
     }
+
+    tooltipMapDataWrapper = document.createElement("div");
+    tooltipMapDataWrapper.classList.add("zen-tooltip-map-data");
+
+    const header = document.createElement("div");
+    header.classList.add("zen-tooltip-map-data-header");
+
+    // Citizens
+    const citizenCountWrapper = document.createElement("div");
+    citizenCountWrapper.classList.add("zen-citizen-count-wrapper");
+
+    const citizenCountText = document.createElement("span");
+    citizenCountText.classList.add("zen-citizen-count");
+    citizenCountText.textContent = `${citizenList.length}`;
+    citizenCountWrapper.appendChild(citizenCountText);
+
+    const citizenIcon = document.createElement("img");
+    citizenIcon.classList.add("zen-citizen-icon");
+    citizenIcon.src = `${ASSETS}/icons/map/map_icon_citizen.png`;
+    citizenCountWrapper.appendChild(citizenIcon);
+    header.appendChild(citizenCountWrapper);
+
+    // Zombies
+    const zombieCountWrapper = document.createElement("div");
+    zombieCountWrapper.classList.add("zen-zombie-count-wrapper");
+
+    const zombieCountText = document.createElement("span");
+    zombieCountText.classList.add("zen-zombie-count");
+    zombieCountText.textContent = `${zombiesCount}`;
+    zombieCountWrapper.appendChild(zombieCountText);
+
+    const zombieIcon = document.createElement("img");
+    zombieIcon.classList.add("zen-zombie-icon");
+    zombieIcon.src = `${ASSETS}/icons/map/map_icon_zombie.png`;
+    zombieCountWrapper.appendChild(zombieIcon);
+    header.appendChild(zombieCountWrapper);
+
+    tooltipMapDataWrapper.appendChild(header);
+
+    // Citizen names
+    if (citizenList.length > 0) {
+      const names = document.createElement("div");
+      names.classList.add("zen-citizen-names");
+      names.textContent = citizenList.join(", ");
+      tooltipMapDataWrapper.appendChild(names);
+    }
+
+    // Items
+    if (zoneData.items && zoneData.items.length > 0) {
+      const itemsWrapper = document.createElement("div");
+      itemsWrapper.classList.add("zen-items-wrapper");
+
+      for (const item of zoneData.items) {
+        for (let i = 0; i < item.quantity; i++) {
+          const itemData = Object.values(items).find(
+            (it) => it.numericalId === item.id
+          );
+
+          if (!itemData) continue;
+
+          const itemIcon = document.createElement("img");
+          itemIcon.classList.add("zen-item-icon");
+          itemIcon.src = `${ASSETS}/icons/item/${itemData.icon}.gif`;
+          itemsWrapper.appendChild(itemIcon);
+        }
+      }
+
+      tooltipMapDataWrapper.appendChild(itemsWrapper);
+    }
+
+    // Last update
+    if (zoneData.updatedAt) {
+      const lastUpdate = document.createElement("div");
+      lastUpdate.classList.add("zen-last-update");
+      const date = new Date(zoneData.updatedAt);
+      lastUpdate.textContent = t(T, "lastUpdate", {
+        relativeTime: getRelativeTime(date.getTime()),
+      });
+      tooltipMapDataWrapper.appendChild(lastUpdate);
+    }
+
+    tooltip.appendChild(tooltipMapDataWrapper);
   }
 };
 
@@ -143,7 +215,7 @@ export const displayInternalMapButton = (_node: HTMLElement) => {
 
     // Disable map markers if enabled
     const mapMarkersButton = document.querySelector<HTMLButtonElement>(
-      ".map_button.show-tags:not(.zen-internal-map-button,.zen-shaman-souls-button)"
+      ".map_button:not([class*='tag'])+.map_button.show-tags:not(.zen-internal-map-button,.zen-shaman-souls-button)"
     );
 
     if (mapMarkersButton) {
@@ -161,7 +233,7 @@ export const displayInternalMapButton = (_node: HTMLElement) => {
 
 let townUpdaterInitialized = false;
 
-const fetchTownData = async () => {
+export const fetchTownData = async () => {
   try {
     const townId = getTownId();
     if (!townId) return;

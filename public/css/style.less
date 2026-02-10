@@ -814,6 +814,55 @@ body.zen-map-preview-enabled {
       text-transform: uppercase;
     }
   }
+
+  &.zen-better-zone-tooltip {
+    .zen-tooltip-map-data {
+      border: 1px solid #b4da4c;
+      padding: 4px;
+
+      .zen-tooltip-map-data-header {
+        display: flex;
+        justify-content: space-between;
+
+        .zen-citizen-count-wrapper {
+          display: flex;
+          align-items: center;
+
+          .zen-citizen-icon {
+            width: 16px;
+            height: 16px;
+          }
+        }
+
+        .zen-zombie-count-wrapper {
+          display: flex;
+          align-items: center;
+
+          .zen-zombie-icon {
+            height: 16px;
+            height: 16px;
+          }
+        }
+      }
+
+      .zen-items-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      .zen-last-update {
+        text-align: right;
+        font-size: 8px;
+        font-style: italic;
+      }
+    }
+  }
 }
 
 // Hide item actions
@@ -1608,13 +1657,11 @@ body.zen-item-actions-hidden .zen-better-tooltip table.zen-added {
   list-style-type: none;
 }
 
-
-.zen-zombie-count-wrapper,
-.zen-citizen-count-wrapper {
-  display: none !important;
-}
-
 hordes-map.zen-internal-map-active.selector-weight div.react_map_area div.map>.scroll-plane {
+  .zone-grid {
+    container-type: inline-size;
+  }
+
   .zone {
     &.past {
       .icon {
@@ -1659,40 +1706,29 @@ hordes-map.zen-internal-map-active.selector-weight div.react_map_area div.map>.s
     }
 
     .citizen_marker {
-      display: none;
+      display: block;
     }
 
-    .zen-citizen-count-wrapper {
-      display: flex !important;
-      align-items: center;
+    .zen-citizen_marker {
+      display: block;
+      height: 100%;
+      left: 0;
       position: absolute;
-      top: -3%;
-      left: 10%;
-      font-size: 6px;
-      width: auto;
-      height: auto;
+      top: 0;
+      width: 100%;
+      z-index: 1;
 
-      .zen-citizen-icon {
-        width: 11px;
-        margin-left: -2px;
-      }
-    }
-
-    .zen-zombie-count-wrapper {
-      display: flex !important;
-      align-items: center;
-      position: absolute;
-      top: auto;
-      left: auto;
-      bottom: 2%;
-      right: -8%;
-      font-size: 6px;
-      width: auto;
-      height: auto;
-
-      .zen-zombie-icon {
-        width: 11px;
-        margin-left: -2px;
+      &:before {
+        background: #ff0;
+        border: 1px solid red;
+        border-radius: 50%;
+        bottom: 35%;
+        content: " ";
+        display: block;
+        left: 35%;
+        position: absolute;
+        right: 35%;
+        top: 35%;
       }
     }
   }

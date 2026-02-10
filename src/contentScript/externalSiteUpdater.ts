@@ -3,6 +3,7 @@ import { ASSETS } from "../utils/constants";
 import { findItemFromInventory } from "../utils/itemUtils";
 import { tooltip } from "../utils/tooltip";
 import { ExternalSite, ExternalSiteName } from "./externalSites";
+import { fetchTownData } from "./internalMap";
 import { LogEntryType } from "./logEntries";
 import { store } from "./store";
 import { replaceString, t } from "./translate";
@@ -465,6 +466,9 @@ const readExternalAppResponse = async (
         displayError(wrapper, `${site}: ${body.error as string}`);
         return false;
       }
+
+      // Fetch ZH map data to update it immediately
+      await fetchTownData();
       return true;
     }
     case ExternalSiteName.BBH: {

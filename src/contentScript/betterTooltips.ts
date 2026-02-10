@@ -1180,7 +1180,7 @@ const setTextWithIcons = (node: HTMLElement, content: string) => {
   });
 };
 
-const getRelativeTime = (timestamp: number): string => {
+export const getRelativeTime = (timestamp: number): string => {
   const now = Date.now();
   const diffInSeconds = Math.floor((timestamp - now) / 1000);
 

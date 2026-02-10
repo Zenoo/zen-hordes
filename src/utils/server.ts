@@ -100,6 +100,7 @@ export const Server = {
       }[];
       citizens: {
         userId: number;
+        name: string;
         job: Job | null;
         x: number;
         y: number;
