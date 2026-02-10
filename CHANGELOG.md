@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.14.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.13.7...zen-hordes-v1.14.0) (2026-02-10)
+
+
+### Features
+
+* Map previews + update bank data periodically + basic ZH map ([3b5d808](https://github.com/Zenoo/zen-hordes/commit/3b5d80818d7d5c394e23d5a5ec5525507dc7581b))
+
+
+### Bug Fixes
+
+* Display zone data in zone tooltip ([c88cd1c](https://github.com/Zenoo/zen-hordes/commit/c88cd1c2251841ecfe8f3a08b906207589070fa3))
+* Update GH url ([7aa9290](https://github.com/Zenoo/zen-hordes/commit/7aa92906a923a4a0a690d59440c91b379e89e3e1))
+* Update README ([e7af1d7](https://github.com/Zenoo/zen-hordes/commit/e7af1d7e18c64f5957bd18f0e209f83cc6c10233))
+* Update ZH server URL ([87c56a1](https://github.com/Zenoo/zen-hordes/commit/87c56a1db8d815eee7972c372ff5ad4bd9f68d24))
+
 ## [1.13.7](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.13.6...zen-hordes-v1.13.7) (2026-01-18)
 
 
