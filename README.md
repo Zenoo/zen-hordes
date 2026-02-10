@@ -17,6 +17,20 @@ Zen Hordes is available as a browser extension for Google Chrome and Mozilla Fir
 
 Zen Hordes offers several UI enhancements to make your experience on the MyHordes game website more enjoyable. These enhancements include improved layouts, better visibility of important information, and overall a more streamlined interface. They also automatically select the map `Global` setting, and automatically open your bag outside.
 
+### Internal Map
+
+The internal map feature enhances the in-game map with detailed real-time information. By clicking the "ZH Map" button on the map controls, you can view:
+
+- **Citizen locations**: See which citizens are on each zone with their names displayed in tooltips
+- **Zombie counts**: View zombie density on each zone with danger level color coding
+- **Items**: See all items discovered on each zone
+- **Zone status**: Instantly identify depleted zones
+- **Last update time**: Know when each zone was last explored
+
+The map data automatically syncs every 5 minutes, keeping you updated with the latest exploration information from your town. This feature is particularly useful for coordinating with other players and planning your exploration routes efficiently.
+
+![Internal Map](.github/media/internal-map.png)
+
 ### Better tooltips
 
 Zen Hordes provides better tooltips for various elements on the MyHordes game website. These tooltips offer additional information and context about items, ruins, and other game elements, making it easier to understand their functions and uses. You can press `Q` while hovering over an item to hide their actions, if the tooltip gets too big.
@@ -31,7 +45,7 @@ One of the standout features of Zen Hordes is the Bank Tracker. This feature hel
 
 Zen Hordes provides a map preview feature that allows you to see the map of available cities in the game. This feature gives you a visual representation of the cities and their locations, making it easier to plan your strategies and jump more efficiently.
 
-![Map Preview](.github/media/map-preview.jpeg)
+![Map Preview](.github/media/map-preview.png)
 
 ### External City Links
 
@@ -76,6 +90,10 @@ Zen Hordes includes a shopping list feature that allows you to keep track of the
 Zen Hordes provides a player info feature that allows you to add a custom tag and custom notes to every player. This feature is useful for players who want to keep track of their interactions with other players and remember important details about them. You can add tags and notes to each player by clicking on their name in the game. The tags and notes are stored locally in your browser and are not shared with other players.
 
 ![Player info](.github/media/player-info.png)
+
+### Clairvoyance Analysis
+
+Zen Hordes enhances the clairvoyance power by providing detailed analysis of citizen activity. When viewing a citizen's profile with clairvoyance active, the extension analyzes their activity log and displays a detailed breakdown.
 
 ### Better reward titles
 
