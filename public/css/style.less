@@ -1673,6 +1673,12 @@ hordes-map.zen-internal-map-active.selector-weight div.react_map_area div.map>.s
           background: url(https://zenoo.github.io/zen-hordes/icons/map/map_zone_ruin.svg) 50%/contain no-repeat;
         }
       }
+
+      &.ruin.buried {
+        .icon {
+          background: url(https://zenoo.github.io/zen-hordes/icons/map/map_zone_buried.svg) 50%/contain no-repeat;
+        }
+      }
     }
 
     &.zen-depleted {
@@ -1685,6 +1691,12 @@ hordes-map.zen-internal-map-active.selector-weight div.react_map_area div.map>.s
       &.ruin:not(.buried) {
         .icon {
           background: url(https://zenoo.github.io/zen-hordes/icons/map/map_zone_ruin_past.svg) 50%/contain no-repeat;
+        }
+      }
+
+      &.ruin.buried {
+        .icon {
+          background: url(https://zenoo.github.io/zen-hordes/icons/map/map_zone_buried_past.svg) 50%/contain no-repeat;
         }
       }
     }
