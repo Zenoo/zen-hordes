@@ -47,6 +47,7 @@ export const Server = {
       },
       body: JSON.stringify({
         townIds,
+        userId: getUserId(),
         key: store["user-key"],
       }),
     });
