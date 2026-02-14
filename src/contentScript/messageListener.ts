@@ -299,7 +299,7 @@ export const listenToBackgroundMessages = async () => {
         case Action.Camp: {
           if (message.value === true) {
             const day = document
-              .querySelector(".town-name+li")
+              .querySelector(".town-day .day-number")
               ?.textContent?.replace(/\D/g, "");
             setStore("camping-day", day ? +day : null);
           } else {

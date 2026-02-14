@@ -59,7 +59,7 @@ export const getUserId = () => {
 
 export const getTownId = () => {
   const townId = document
-    .querySelector(".town-name")
+    .querySelector(".game-clock")
     ?.getAttribute("data-town-id");
 
   return townId ? Number(townId) : 0;
