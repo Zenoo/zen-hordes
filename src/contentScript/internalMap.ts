@@ -3,7 +3,7 @@ import { ASSETS } from "../utils/constants";
 import { Server } from "../utils/server";
 import { getRelativeTime } from "./betterTooltips";
 import { getTownId } from "./externalSiteUpdater";
-import { memory } from "./store";
+import { memory, store } from "./store";
 import { t } from "./translate";
 
 const T: Translations = {
@@ -214,8 +214,17 @@ export const displayInternalMapButton = (_node: HTMLElement) => {
     if (!mapWrapper) return;
 
     // Disable map markers if enabled
-    const mapMarkersButton = document.querySelector<HTMLButtonElement>(
-      ".map_button:not([class*='tag'])+.map_button.show-tags:not(.zen-internal-map-button,.zen-shaman-souls-button)"
+    const markerLabel: Record<Lang, string> = {
+      [Lang.EN]: "Mark.",
+      [Lang.FR]: "Marqu.",
+      [Lang.DE]: "Mark.",
+      [Lang.ES]: "Marca.",
+    };
+    const mapButtons = document.querySelectorAll<HTMLButtonElement>(
+      ".map_button.show-tags"
+    );
+    const mapMarkersButton = Array.from(mapButtons).find(
+      (btn) => btn.textContent?.trim() === markerLabel[store["hordes-lang"]]
     );
 
     if (mapMarkersButton) {
