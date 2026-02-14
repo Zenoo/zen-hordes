@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.3](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.14.2...zen-hordes-v1.14.3) (2026-02-14)
+
+
+### Bug Fixes
+
+* Town ID getter ([a33695f](https://github.com/Zenoo/zen-hordes/commit/a33695f4a876a6851eb519955e194381960018b6))
+
 ## [1.14.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.14.1...zen-hordes-v1.14.2) (2026-02-14)
 
 
