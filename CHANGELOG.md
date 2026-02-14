@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.4](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.14.3...zen-hordes-v1.14.4) (2026-02-14)
+
+
+### Bug Fixes
+
+* Internal map zombies count display ([b8e6c92](https://github.com/Zenoo/zen-hordes/commit/b8e6c927941efebeae85f4660880cac9d765842a))
+
 ## [1.14.3](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.14.2...zen-hordes-v1.14.3) (2026-02-14)
 
 
