@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.14.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.14.0...zen-hordes-v1.14.1) (2026-02-14)
+
+
+### Bug Fixes
+
+* Allow local server dev ([9711723](https://github.com/Zenoo/zen-hordes/commit/97117233985707c2ea1e0abd5d0a1ea047223510))
+* Buried ruin ZH map background ([40295e7](https://github.com/Zenoo/zen-hordes/commit/40295e7b53bf4ceb5708292c06cac378bfe844b1))
+* Enable ZH update by default ([b230d1e](https://github.com/Zenoo/zen-hordes/commit/b230d1ea043f055ed608dede26a11773c916f771))
+* Extension popup not working after latest Chrome update ([30edf90](https://github.com/Zenoo/zen-hordes/commit/30edf90385a58d0ae0ec6d3b4fbe6c63ec26bfc4))
+* MH v5.0.1 data ([f18972a](https://github.com/Zenoo/zen-hordes/commit/f18972aafc78836d92bc94db06754009d459a226))
+
 ## [1.14.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.13.7...zen-hordes-v1.14.0) (2026-02-10)
 
 

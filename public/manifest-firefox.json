@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Zen Hordes",
   "description": "An extension that enhances the user experience of the MyHordes website.",
-  "version": "1.14.0",
+  "version": "1.14.1",
   "action": {
     "default_icon": {
       "16": "icon-16.png",
@@ -28,14 +28,23 @@
         "https://myhordes.de/*",
         "https://myhord.es/*"
       ],
-      "js": ["js/content_script.js"],
-      "css": ["css/style.min.css"]
+      "js": [
+        "js/content_script.js"
+      ],
+      "css": [
+        "css/style.min.css"
+      ]
     }
   ],
   "background": {
-    "scripts": ["js/background.js"]
+    "scripts": [
+      "js/background.js"
+    ]
   },
-  "permissions": ["storage", "webRequest"],
+  "permissions": [
+    "storage",
+    "webRequest"
+  ],
   "host_permissions": [
     "https://myhordes.eu/*",
     "https://myhordes.fr/*",
