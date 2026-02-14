@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.5](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.14.4...zen-hordes-v1.14.5) (2026-02-14)
+
+
+### Bug Fixes
+
+* Add userId to ZH maps request ([b95945a](https://github.com/Zenoo/zen-hordes/commit/b95945a8ca06539e1b7cb62ed35ef0222fa7138c))
+
 ## [1.14.4](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.14.3...zen-hordes-v1.14.4) (2026-02-14)
 
 
