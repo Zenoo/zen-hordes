@@ -55,9 +55,17 @@ export const updateZHMap = (node?: HTMLElement) => {
     // Depleted
     if (zoneData.depleted) {
       zone.classList.add("zen-depleted");
+    } else {
+      zone.classList.remove("zen-depleted");
     }
 
     // Danger color
+    zone.classList.remove(
+      "zen-danger-0",
+      "zen-danger-1",
+      "zen-danger-2",
+      "zen-danger-3"
+    );
     zone.classList.add(`zen-danger-${zoneData.dangerLevel}`);
 
     // Citizens
@@ -74,19 +82,25 @@ export const updateZHMap = (node?: HTMLElement) => {
         marker.classList.add("zen-citizen_marker");
         zone.appendChild(marker);
       }
+    } else {
+      // Remove citizen_marker if no citizens present
+      const existingMarker = zone.querySelector(".zen-citizen_marker");
+      if (existingMarker) {
+        existingMarker.remove();
+      }
     }
 
     // Zombies
-    const zombiesCount =
-      zoneData.zombies || zoneData.dangerLevel === 3
-        ? "6+"
-        : zoneData.dangerLevel === 2
-        ? "3-5"
-        : zoneData.dangerLevel === 1
-        ? "1-2"
-        : "0";
+    const zombiesCount = zoneData.zombies
+      ? zoneData.zombies
+      : zoneData.dangerLevel === 3
+      ? "6+"
+      : zoneData.dangerLevel === 2
+      ? "3-5"
+      : zoneData.dangerLevel === 1
+      ? "1-2"
+      : "0";
 
-    // TODO: Update items, last update in tooltip
     // Update tooltip data
     const tooltip = document.querySelector<HTMLElement>(
       `.zen-better-zone-tooltip[data-x="${x}"][data-y="${y}"]`
