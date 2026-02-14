@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.14.1...zen-hordes-v1.14.2) (2026-02-14)
+
+
+### Bug Fixes
+
+* Map marker disable when opening ZH map ([1850cd4](https://github.com/Zenoo/zen-hordes/commit/1850cd4c76292dc0d4df6a9bc5423fe2f4cb1c9d))
+
 ## [1.14.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.14.0...zen-hordes-v1.14.1) (2026-02-14)
 
 
