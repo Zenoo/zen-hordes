@@ -544,16 +544,12 @@ export const displayUpdateButton = (node: HTMLElement) => {
     const siteData = ExternalSite[site];
     if (!siteData.updateUrl) continue;
 
-    const logo = document.querySelector(
-      `.app-directory[data-id="${siteData.id}"] img`
-    );
-
     const siteWrapper = document.createElement("div");
     siteWrapper.classList.add("site");
     siteWrapper.setAttribute("data-id", site);
 
     const siteImage = document.createElement("img");
-    siteImage.src = siteData.logo ?? logo?.getAttribute("src") ?? "";
+    siteImage.src = siteData.logo;
     siteImage.alt = site;
 
     const statusImage = document.createElement("img");

@@ -55,9 +55,9 @@
     "tsx": "^4.19.3",
     "typescript": "^5.0.4",
     "typescript-eslint": "^8.26.1",
-    "webpack": "^5.104.1",
-    "webpack-cli": "^4.0.0",
-    "webpack-merge": "^5.0.0",
+    "webpack": "^5.105.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-merge": "^6.0.1",
     "yaml": "^2.8.1"
   },
   "pnpm": {
