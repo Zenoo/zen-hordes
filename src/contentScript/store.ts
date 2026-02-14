@@ -40,6 +40,8 @@ export const store = {
   "hordes-lang": (document.documentElement.lang ?? Lang.EN) as Lang,
   // Updater settings
   "user-key": "",
+  // Extension meta
+  "zh-update-added": false,
 };
 
 export type Store = typeof store;
@@ -64,7 +66,8 @@ export const initStore = async () => {
     setStore("hordes-lang", store["hordes-lang"]);
   }
 
-  const data = await chrome.storage.sync.get();
+  const data = (await chrome.storage.sync.get()) as Partial<Store> &
+    Record<string, unknown>;
 
   // Clear old storage
   if (typeof data["lang"] !== "undefined") {
@@ -86,6 +89,23 @@ export const initStore = async () => {
   if (typeof data["last-bank-item-taken"] === "undefined") {
     await chrome.storage.sync.remove("last-bank-item-taken");
     delete data["last-bank-item-taken"];
+  }
+
+  // ZH is a newly added external site, we need to add it to existing users without overwriting their settings
+  if (
+    !data["zh-update-added"] &&
+    data["external-sites-to-update"] &&
+    !data["external-sites-to-update"].includes(ExternalSiteName.ZH)
+  ) {
+    data["zh-update-added"] = true;
+    data["external-sites-to-update"] = [
+      ExternalSiteName.ZH,
+      ...data["external-sites-to-update"],
+    ];
+    await chrome.storage.sync.set({
+      "zh-update-added": true,
+      "external-sites-to-update": data["external-sites-to-update"],
+    });
   }
 
   Object.assign(store, data);
