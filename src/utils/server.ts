@@ -1,7 +1,10 @@
 import { getTownId, getUserId } from "../contentScript/externalSiteUpdater";
 import { store } from "../contentScript/store";
 
-const SERVER_URL = "https://zenhordes.eternaltwin.org";
+// This value will be replaced at build time by webpack's DefinePlugin
+declare const __ZEN_SERVER_URL__: string;
+
+export const SERVER_URL = __ZEN_SERVER_URL__;
 
 type Job =
   | "RESIDENT"

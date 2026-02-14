@@ -1,4 +1,5 @@
 import { ASSETS } from "../utils/constants";
+import { SERVER_URL } from "../utils/server";
 
 export enum ExternalSiteName {
   ZH = "ZH",
@@ -22,7 +23,7 @@ export const ExternalSite: Readonly<
   [ExternalSiteName.ZH]: {
     id: 43,
     name: "Zen Hordes",
-    updateUrl: "https://zenhordes.eternaltwin.org/update",
+    updateUrl: `${SERVER_URL}/update`,
     logo: `${ASSETS}/icons/zen-icon.png`,
   },
   [ExternalSiteName.BBH]: {

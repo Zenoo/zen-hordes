@@ -46,5 +46,12 @@ module.exports = {
       patterns: [{ from: ".", to: "../", context: "public" }],
       options: {},
     }),
+    new webpack.DefinePlugin({
+      __ZEN_SERVER_URL__: JSON.stringify(
+        process.env.ZEN_LOCAL_SERVER === "true"
+          ? "http://localhost:3000"
+          : "https://zenhordes.eternaltwin.org"
+      ),
+    }),
   ],
 };

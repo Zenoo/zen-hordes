@@ -545,7 +545,7 @@ export const displayUpdateButton = (node: HTMLElement) => {
     if (!siteData.updateUrl) continue;
 
     const logo = document.querySelector(
-      `.app-external[data-id="${siteData.id}"] img`
+      `.app-directory[data-id="${siteData.id}"] img`
     );
 
     const siteWrapper = document.createElement("div");
