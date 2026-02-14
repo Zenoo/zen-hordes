@@ -92,16 +92,29 @@ export const overwriteRecipeData = (
     ],
   });
 
-  // Add picto to CHAINSAW_EMPTY recipe
+  // Replace duplicated CHAINSAW_EMPTY with a single ManualAnywhere recipe
   const chainsawRecipe = recipes.find(
     (recipe) =>
-      recipe.type === RecipeType.ManualAnywhere &&
       recipe.in[0]?.item === "chainsaw_part_#00" &&
       recipe.out[0]?.item === "chainsaw_empty_#00"
   );
 
   if (chainsawRecipe) {
-    chainsawRecipe.rewards = ["r_tronco_#00"];
+    recipes = recipes.filter(
+      (recipe) =>
+        !(
+          recipe.in[0]?.item === "chainsaw_part_#00" &&
+          recipe.out[0]?.item === "chainsaw_empty_#00"
+        )
+    );
+
+    recipes.push({
+      type: RecipeType.ManualAnywhere,
+      in: chainsawRecipe.in,
+      out: chainsawRecipe.out,
+      // Add picto to CHAINSAW_EMPTY recipe
+      rewards: ["r_tronco_#00"],
+    });
   }
 
   // Add picto to WATERGUN_OPT_EMPTY recipe
@@ -138,4 +151,6 @@ export const overwriteRecipeData = (
   if (bigPilegunRecipe) {
     bigPilegunRecipe.rewards = ["r_batgun_#00"];
   }
+
+  return recipes;
 };

@@ -485,20 +485,6 @@ export const recipes: Readonly<Recipe>[] = [
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.CHAINSAW_PART },
-      { item: ItemId.ENGINE },
-      { item: ItemId.MECA_PARTS },
-      { item: ItemId.COURROIE },
-      { item: ItemId.RUSTINE }
-    ],
-    out: [
-      { item: ItemId.CHAINSAW_EMPTY}
-    ],
-    rewards: [RewardId.TRONCO],
-  },
-  {
-    type: RecipeType.ManualAnywhere,
-    in: [
       { item: ItemId.EXPLO },
       { item: ItemId.GRENADE_EMPTY },
       { item: ItemId.DETO },
@@ -889,8 +875,7 @@ export const recipes: Readonly<Recipe>[] = [
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.SOCCER_PART },
-      { item: ItemId.RUSTINE }
+      { item: ItemId.SOCCER_PART }
     ],
     out: [
       { item: ItemId.SOCCER}
@@ -924,6 +909,18 @@ export const recipes: Readonly<Recipe>[] = [
     ],
     out: [
       { item: ItemId.MOLDY_FOOD_SPICY}
+    ],
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.BROKEN },
+      { item: ItemId.BROKEN },
+      { item: ItemId.BROKEN },
+      { item: ItemId.RUSTINE }
+    ],
+    out: [
+      { item: ItemId.BROKEN_BALL}
     ],
   },
   {
@@ -1425,5 +1422,19 @@ export const recipes: Readonly<Recipe>[] = [
       { item: ItemId.SAW_TOOL_TEMP, odds: 85},
       { item: ItemId.SAW_TOOL_TEMP, odds: 15, broken: true}
     ],
+  },
+  {
+    type: RecipeType.ManualAnywhere,
+    in: [
+      { item: ItemId.CHAINSAW_PART },
+      { item: ItemId.ENGINE },
+      { item: ItemId.MECA_PARTS },
+      { item: ItemId.COURROIE },
+      { item: ItemId.RUSTINE }
+    ],
+    out: [
+      { item: ItemId.CHAINSAW_EMPTY}
+    ],
+    rewards: [RewardId.TRONCO],
   }
 ];

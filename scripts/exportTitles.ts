@@ -39,10 +39,13 @@ export const exportTitles = async () => {
         points?: number;
       }[]
     >
-  >((acc, [, germanTitle, quantity, picto]) => {
-    if (!germanTitle || !quantity || !picto) {
+  >((acc, [, germanTitle, quantity, _picto]) => {
+    if (!germanTitle || !quantity || !_picto) {
       throw new Error("Title, quantity or picto not found");
     }
+
+    // There is an error in the source for this picto
+    const picto = _picto === "r_explot_#01" ? "r_explot_#00" : _picto;
 
     if (!acc[picto]) {
       acc[picto] = [];
@@ -85,8 +88,9 @@ export const exportTitles = async () => {
             `No translation found for ${getTitleName(
               title.name,
               Lang.DE
-            )} in ${lang}`
+            )} in ${lang}. Using German title as fallback.`
           );
+          title.name[lang] = getTitleName(title.name, Lang.DE);
         }
       });
     });

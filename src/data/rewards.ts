@@ -2321,10 +2321,10 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
       [Lang.ES]: "Generosidad"
     },
     description: {
-      [Lang.EN]: "The number of Hero days/Heroic actions that you have given to another citizen in need.",
-      [Lang.FR]: "Nombre de journées de mode héros/actions héroïques que vous avez offertes à un autre citoyen dans le besoin.",
-      [Lang.DE]: "Anzahl der Heldentage, die du einem anderem Bürger in Not geschenkt hast.",
-      [Lang.ES]: "Cantidad de días de Modo Héroe/Acciones Heroicas que regalaste a otro habitante necesitado."
+      [Lang.EN]: "Number of your acts of selflessness towards other citizens in need.",
+      [Lang.FR]: "Nombre de vos actes d'altruisme envers d'autres citoyens dans le besoin.",
+      [Lang.DE]: "Anzahl deiner Akte von Selbstlosigkeit gegenüber anderen Bürgern in Not.",
+      [Lang.ES]: "Número de tus actos de altruismo hacia otros ciudadanos necesitados."
     },
     icon: "r_share",
     community: false,
@@ -4236,7 +4236,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
       {
         name: {
           [Lang.DE]: "Seelenknipser",
-          [Lang.EN]: "Soul Calipers",
+          [Lang.EN]: "Soul Callipers",
           [Lang.FR]: "Agnos-tic",
           [Lang.ES]: "Capataz Espiritista"
         },
@@ -6961,9 +6961,9 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
     },
     description: {
       [Lang.EN]: "Performed fiery burial rituals on the corpses of citizens.",
-      [Lang.FR]: "Nombre de rituels funéraires effectués sur les cadavres des citoyens",
+      [Lang.FR]: "Nombre de rituels funéraires effectués sur les cadavres des citoyens.",
       [Lang.DE]: "Durchgeführte feurige Begräbnisrituale an den Leichen von Bürgern",
-      [Lang.ES]: "Realizaron rituales funerarios ardientes con los cuerpos de los habitantes"
+      [Lang.ES]: "Rituales funerarios ardientes realizados con los cuerpos de habitantes."
     },
     icon: "r_cburn",
     community: false,
@@ -7046,6 +7046,74 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
           [Lang.ES]: "Jefe de Manitas"
         },
         quantity: 1
+      }
+    ]
+  },
+  [RewardId.EXPLOT]: {
+    id: RewardId.EXPLOT,
+    numericalId: 116,
+    name: {
+      [Lang.EN]: "Total Exploration",
+      [Lang.FR]: "Exploration Totale",
+      [Lang.DE]: "Vollständige Erkundung",
+      [Lang.ES]: "Exploración Total"
+    },
+    description: {
+      [Lang.EN]: "The number of times you have seen a map fully revealed, and each of its initial ruins and e-ruins searched or explored at least once.",
+      [Lang.FR]: "Nombre de fois où le désert n'a plus eu aucun secret pour votre ville.",
+      [Lang.DE]: "Anzahl der Karten, die du vollständig aufgedeckt erlebt hast und auf der sämtliche initialen Ruinen und begehbaren Ruinen zumindest einmal besucht oder betreten worden.",
+      [Lang.ES]: "Número de veces que has explorado completamente el mapa y en los que todas las ruinas iniciales y las ruinas accesibles han sido al menos visitadas o recorridas una vez."
+    },
+    icon: "r_explot",
+    community: false,
+    rare: true,
+    titles: [
+      {
+        name: {
+          [Lang.DE]: "Leidenschaftlicher Entdecker",
+          [Lang.EN]: "Totally impetuous explorer",
+          [Lang.FR]: "Explorateur totalement impétueux",
+          [Lang.ES]: "Explorador totalmente impetuoso"
+        },
+        quantity: 5,
+        points: 6.5
+      },
+      {
+        name: {
+          [Lang.DE]: "Kartograph",
+          [Lang.EN]: "Cartographer",
+          [Lang.FR]: "Cartographe",
+          [Lang.ES]: "Cartógrafo"
+        },
+        quantity: 10
+      },
+      {
+        name: {
+          [Lang.DE]: "100%",
+          [Lang.EN]: "100%",
+          [Lang.FR]: "100%",
+          [Lang.ES]: "100%"
+        },
+        quantity: 15
+      },
+      {
+        name: {
+          [Lang.DE]: "TBD",
+          [Lang.EN]: "TBD",
+          [Lang.FR]: "TBD",
+          [Lang.ES]: "TBD"
+        },
+        quantity: 20
+      },
+      {
+        name: {
+          [Lang.DE]: "Total Exploration",
+          [Lang.EN]: "Total Exploration",
+          [Lang.FR]: "Total Exploration",
+          [Lang.ES]: "Total Exploration"
+        },
+        quantity: 1,
+        points: 3.5
       }
     ]
   }

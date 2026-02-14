@@ -5073,7 +5073,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Juego de cartas incompleto"
     },
     description: {
-      [Lang.EN]: "What should be a 54 card deck is, well, not. The missing cards don't stop you playing with them though, because every moment of enjoyment is to be treasured in this hellhole... Go big or go broke !",
+      [Lang.EN]: "What should be a 54 card deck is, well, not. The missing cards don't stop you playing with them though, because every moment of enjoyment is to be treasured in this hellhole... Go big or go broke!",
       [Lang.FR]: "Un jeu de 54 cartes tout écorné auquel il manque quelques cartes… Rien qui vous empêcherait de jouer avec, tant les moments de détente sont rares dans ce monde… Voyez grand ou faites faillite !",
       [Lang.DE]: "Ein Kartenset mit 54 abgegriffenen Karten, die ein paar Eselsohren haben... Du solltest gleich mal eine Runde zocken, denn oft wirst du hier nicht zum Spielen kommen. Groß rauskommen oder Pleite gehen!",
       [Lang.ES]: "A pesar de la ausencia de algunas cartas, te ayudará a distraerte en el pueblo... ¡Hazlo a lo grande o arruinate!"
@@ -8951,7 +8951,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Chaqueta roja usada"
     },
     description: {
-      [Lang.EN]: "It's a bit big for you: it seems to have been previously owned by someone with a big belly and bad taste, as can clearly be seen from the white for on the collar and cuffs...",
+      [Lang.EN]: "It's a bit big for you: it seems to have been previously owned by someone with a big belly and bad taste, as can clearly be seen from the white fur on the collar and cuffs...",
       [Lang.FR]: "C'est un peu large pour vous : cette veste a, semble-t-il, été taillée pour une personne bedonnante et au mauvais goût certain, comme en atteste la moumoute blanche au col et aux manches...",
       [Lang.DE]: "Ein wenig zu gross für dich. Sieht so aus als waren seine Vorbesitzer ein wenig beleibter und hatten schlechten Geschmack...was man ohne Zweifel erkennen kann.",
       [Lang.ES]: "Es un poco grande para ti: parece haber pertenecido a alguien con una gran barriga y mal gusto, como se puede ver claramente en el blanco del cuello y los puños."
@@ -9698,10 +9698,6 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.UnlockBuilding,
             value: "small_saw_#00"
-          },
-          {
-            type: ItemActionEffectType.UnlockBuilding,
-            value: "small_cemetery_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10479,6 +10475,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.UnlockBuilding,
             value: "small_wallimprove_#02"
+          },
+          {
+            type: ItemActionEffectType.UnlockBuilding,
+            value: "small_wallimprove_#01"
           }
         ]
       }
@@ -10545,7 +10545,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_court_#00"
+            value: "small_gallery_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -10824,7 +10824,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_cemetery_#00"
+            value: "small_armor_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
@@ -11190,7 +11190,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "A tasty and edible snack... even after hanging around the ground for months. It tastes as if it was soaked in petrol (unfortunately too little to be used for the tank to the southwest of town...) Beyond making you full, it can also amuse: it strongly reminds you of the hat of Princess Beatrice's wedding.",
-      [Lang.FR]: "Une collation savoureuse et comestible... même après avoir traîné partout au sol des mois durant. Il sent comme s'il était imbibé d'essence (malheureusement trop peu pour être utilisé pour le réservoir au sud-ouest de la ville...) Au delà de rendre rassasié, il peut aussi amuser : il vous rappelle fortement le chapeau de mariage de la princesse Béatrice.",
+      [Lang.FR]: "Une collation savoureuse et comestible... même après avoir traîné au sol des mois durant. Il sent comme s'il était imbibé d'essence (malheureusement trop peu pour être utilisé pour le char au sud-ouest de la ville...). Il semble qu'il a été utilisé comme marteau et comme nurserie par des vers de farine. En tout cas, il vous rappelle fortement le chapeau de mariage de la princesse Beatrice.",
       [Lang.DE]: "Ein leckerer, essbarer Snack... zumindest war es das einmal. Auf dieser Brezel wurde herumgetreten, sie riecht, als würde sie in Benzin getränkt (leider zu wenig, um sie für den Panzer im Südwesten der Stadt zu verwenden - schade) und es scheint, als wäre sie als Hammer oder als Zuhause für einen Holzwurm verwendet zu sein. Auf jedenfall erinnert sie dich jetzt stark an Prinzessin Beatrices Hochzeitshut.",
       [Lang.ES]: "Un delicioso bollo, o al menos lo fue una vez. Fue pisado, lamido y escupido y hasta usado para rascarse la espalda (algunos vellos pegados hacen pensar eso). Las larvas que le rodean se agitan, tan malo no debe ser. Alguna utilidad le encontrarás."
     },
@@ -12945,6 +12945,10 @@ export const items: Readonly<Record<ItemId, Item>> = {
           {
             type: ItemActionEffectType.CampingChances,
             value: "+5%"
+          },
+          {
+            type: ItemActionEffectType.HomeDefense,
+            value: 2
           }
         ]
       }
@@ -13140,18 +13144,29 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.ES]: "Escudo antidisturbios"
     },
     description: {
-      [Lang.EN]: "It's big and it's zombie-proof. In this world who could ask for more... It allows you to face 2 additional zombies in the desert..",
-      [Lang.FR]: "Dans le désert, il retient 4 zombies au lieu de 2 (pour un citoyen normal)",
-      [Lang.DE]: "Ein großer Schutzschild, der keine Wünsche offen lässt, ermöglicht es dir, in der Wüste bis zu 2 zusätzliche Zombies auf Distanz zu halten.",
-      [Lang.ES]: "Grande y a prueba de zombies. No se puede pedir más... Te protege de 2 zombies más en el desierto y aumenta las defensas si estás en el pueblo."
+      [Lang.EN]: "It's big and it's zombie-proof. In this world who could ask for more... It allows you to face 2 additional zombies in the desert, but it's also heavy... Maybe if you carried it some other way you could grab more things?",
+      [Lang.FR]: "Dans le désert, il retient 4 zombies au lieu de 2 (pour un citoyen normal). Mais il est assez lourd... Peut-être seriez-vous moins encombré en trouvant un moyen plus pratique pour le transporter ?",
+      [Lang.DE]: "Ein großer Schutzschild, der keine Wünsche offen lässt, ermöglicht es dir, in der Wüste bis zu 2 zusätzliche Zombies auf Distanz zu halten. Dabei ist er aber ganz schön schwer... vielleicht könntest du mehr schwere Dinge bei dir tragen, wenn du den Schild senken würdest?",
+      [Lang.ES]: "En el desierto, retiene a 4 zombies en lugar de 2 (para un habitante normal). Pero es bastante pesado… ¿Quizás estarías menos cargado si encontraras una forma más práctica de transportarlo?"
     },
-    categories: [ItemCategory.Miscellaneous],
+    categories: [ItemCategory.Miscellaneous, ItemCategory.GuardWeapon],
     icon: "item_shield",
     decoration: 0,
     heavy: false,
-    watchPoints: 0,
+    watchPoints: 15,
     actions: [
-      
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "shield_off_#00"
+          }
+        ]
+      }
     ],
   },
   [ItemId.SHAMAN]: {
@@ -14864,13 +14879,13 @@ export const items: Readonly<Record<ItemId, Item>> = {
     id: ItemId.SOCCER,
     numericalId: 372,
     name: {
-      [Lang.EN]: "Soccer ball",
+      [Lang.EN]: "Football",
       [Lang.FR]: "Ballon de foot",
       [Lang.DE]: "Fußball",
       [Lang.ES]: "Balón de fútbol"
     },
     description: {
-      [Lang.EN]: "For a little kick in between.",
+      [Lang.EN]: "There have been wars fought over the name of this godforsaken thing. Bouncy ball, spotted kicking balloon, and poorly drawn zebra circle. Some weirdo even called it a \"soccer ball\", which is a dead giveaway that he was using too much twinoid. So to settle it, we just called it a football because we use the foot on the ball.",
       [Lang.FR]: "Pour un petit coup de pied entre les deux.",
       [Lang.DE]: "Für den kleinen Kick zwischendurch.",
       [Lang.ES]: "Para una pequeña patada entre los dos."
@@ -14881,7 +14896,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Einmal täglich verwendbar. Nicht verwendbar, wenn erschöpft.",
       [Lang.ES]: "Utilizable una vez al día. No utilizable si está agotado."
     },
-    categories: [ItemCategory.Miscellaneous, ItemCategory.APSource],
+    categories: [ItemCategory.Miscellaneous],
     icon: "item_soccer",
     decoration: 0,
     heavy: false,
@@ -14894,7 +14909,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         ],
         effects: [
           {
-            type: ItemActionEffectType.AP,
+            type: ItemActionEffectType.EP,
             value: 1,
             odds: 15
           },
@@ -14911,7 +14926,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     id: ItemId.SOCCER_PART,
     numericalId: 373,
     name: {
-      [Lang.EN]: "Burst Soccer ball",
+      [Lang.EN]: "Burst Football",
       [Lang.FR]: "Ballon crevé",
       [Lang.DE]: "Geplatzter Fußball",
       [Lang.ES]: "Balón de fútbol reventado"
@@ -15295,13 +15310,24 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.DE]: "Ein köstlicher Insektenbrei, der sehr nahrhaft ist. Er ist knusprig und gleichzeitig wirklich saftig!",
       [Lang.ES]: "Una deliciosa papilla de insectos, muy nutritiva. ¡Es crujiente bajo los dientes y es realmente suculento!"
     },
-    categories: [ItemCategory.Food],
+    categories: [ItemCategory.Food, ItemCategory.APSource],
     icon: "item_moldy_food_part",
     decoration: 0,
     heavy: false,
     watchPoints: 0,
     actions: [
-      
+      {
+        type: ItemActionType.Eat,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.AP,
+            value: 5
+          }
+        ]
+      }
     ],
   },
   [ItemId.MOLDY_FOOD]: {
@@ -15366,5 +15392,53 @@ export const items: Readonly<Record<ItemId, Item>> = {
     drops: {
       [DropLocation.Zone]: 0.59
     },
+  },
+  [ItemId.SHIELD_OFF]: {
+    id: ItemId.SHIELD_OFF,
+    numericalId: 386,
+    name: {
+      [Lang.EN]: "Riot Shield (strapped)",
+      [Lang.FR]: "Bouclier Anti-émeutes (sanglé)",
+      [Lang.DE]: "Schutzschild (abgelegt)",
+      [Lang.ES]: "Escudo Antidisturbios (bajado)"
+    },
+    description: {
+      [Lang.EN]: "It's big and it's zombie-proof. Or it would be, if you didn't strap it on your back. Normally, it allows you to face 2 additional zombies in the desert. Currently, it serves only as a stylish accessory.",
+      [Lang.FR]: "Il est grand et à l'épreuve des zombies. Ou du moins, il le serait si vous ne l'aviez pas sanglé aussi fort. Porté à la main, il vous permettrait d'affronter 2 zombies supplémentaires dans le désert. Actuellement, il ne sert que d'accessoire stylé.",
+      [Lang.DE]: "Ein großer Schutzschild. Wenn du ihn vor dich halten würdest, könntest du damit 2 zusätzliche Zombies auf Distanz zu halten. Aktuell fungiert er nur als kleidsames Accessoire.",
+      [Lang.ES]: "Es grande y resistente a los zombies. O al menos lo sería si no lo hubieras asegurado tan firmemente. Sosteniéndolo en brazo, te permitiría enfrentarte a 2 zombies adicionales en el desierto. Actualmente, solo sirve como un accesorio de estilo."
+    },
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_shield_off",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ],
+  },
+  [ItemId.BROKEN_BALL]: {
+    id: ItemId.BROKEN_BALL,
+    numericalId: 387,
+    name: {
+      [Lang.EN]: "Ball of debris",
+      [Lang.FR]: "Boule de débris",
+      [Lang.DE]: "Trümmerkugel",
+      [Lang.ES]: "Bola de escombros"
+    },
+    description: {
+      [Lang.EN]: "A spherical object cobbled together from random pieces of debris. Not much use... except perhaps to catapult it at high speed into a horde of zombies!",
+      [Lang.FR]: "Une sorte d'objet sphérique assemblé à partir de débris aléatoires. Il ne sert pas à grand-chose... sauf peut-être à être catapulté à grande vitesse sur une horde de zombies !",
+      [Lang.DE]: "Ein kugelförmiges Etwas, das aus zufälligen Trümmerstücken zusammengeklebt wurde. Viel kann man damit nicht anfangen... außer vielleicht, es mit hoher Geschwindigkeit in eine Zombiemeute zu katapultieren!",
+      [Lang.ES]: "Un objeto esférico hecho de fragmentos de escombros pegados al azar. No se puede hacer mucho con él… ¡Excepto, tal vez, catapultarlo a gran velocidad contra una horda de zombies!"
+    },
+    categories: [ItemCategory.Miscellaneous],
+    icon: "item_broken_ball",
+    decoration: 0,
+    heavy: false,
+    watchPoints: 0,
+    actions: [
+      
+    ],
   }
 };

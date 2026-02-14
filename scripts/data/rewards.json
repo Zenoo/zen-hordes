@@ -531,10 +531,10 @@
       "es": "Generosidad"
     },
     "desc": {
-      "fr": "Nombre de journées de mode héros/actions héroïques que vous avez offertes à un autre citoyen dans le besoin.",
-      "en": "The number of Hero days/Heroic actions that you have given to another citizen in need.",
-      "de": "Anzahl der Heldentage, die du einem anderem Bürger in Not geschenkt hast.",
-      "es": "Cantidad de días de Modo Héroe/Acciones Heroicas que regalaste a otro habitante necesitado."
+      "fr": "Nombre de vos actes d'altruisme envers d'autres citoyens dans le besoin.",
+      "en": "Number of your acts of selflessness towards other citizens in need.",
+      "de": "Anzahl deiner Akte von Selbstlosigkeit gegenüber anderen Bürgern in Not.",
+      "es": "Número de tus actos de altruismo hacia otros ciudadanos necesitados."
     },
     "community": false,
     "rare": false
@@ -2007,10 +2007,10 @@
       "es": "Cremación de cuerpos"
     },
     "desc": {
-      "fr": "Nombre de rituels funéraires effectués sur les cadavres des citoyens",
+      "fr": "Nombre de rituels funéraires effectués sur les cadavres des citoyens.",
       "en": "Performed fiery burial rituals on the corpses of citizens.",
       "de": "Durchgeführte feurige Begräbnisrituale an den Leichen von Bürgern",
-      "es": "Realizaron rituales funerarios ardientes con los cuerpos de los habitantes"
+      "es": "Rituales funerarios ardientes realizados con los cuerpos de habitantes."
     },
     "community": false,
     "rare": false
@@ -2047,6 +2047,24 @@
       "en": "Victory as a Technician during the Shock of Heroes!",
       "de": "Sieg für die Techniker beim Shock of Heroes Event!",
       "es": "¡Victoria como Técnico durante el Choque de Héroes!"
+    },
+    "community": false,
+    "rare": true
+  },
+  "r_explot_#00": {
+    "id": 116,
+    "img": "pictos/r_explot.077f69f8.gif",
+    "name": {
+      "fr": "Exploration Totale",
+      "en": "Total Exploration",
+      "de": "Vollständige Erkundung",
+      "es": "Exploración Total"
+    },
+    "desc": {
+      "fr": "Nombre de fois où le désert n'a plus eu aucun secret pour votre ville.",
+      "en": "The number of times you have seen a map fully revealed, and each of its initial ruins and e-ruins searched or explored at least once.",
+      "de": "Anzahl der Karten, die du vollständig aufgedeckt erlebt hast und auf der sämtliche initialen Ruinen und begehbaren Ruinen zumindest einmal besucht oder betreten worden.",
+      "es": "Número de veces que has explorado completamente el mapa y en los que todas las ruinas iniciales y las ruinas accesibles han sido al menos visitadas o recorridas una vez."
     },
     "community": false,
     "rare": true

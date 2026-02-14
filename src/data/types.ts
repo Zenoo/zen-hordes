@@ -385,7 +385,9 @@ export enum ItemId {
   MOLDY_FOOD_SPICY = "moldy_food_spicy_#00",
   MOLDY_FOOD_PART = "moldy_food_part_#00",
   MOLDY_FOOD = "moldy_food_#00",
-  SCARY_MASK = "scary_mask_#00"
+  SCARY_MASK = "scary_mask_#00",
+  SHIELD_OFF = "shield_off_#00",
+  BROKEN_BALL = "broken_ball_#00"
 };
 
 export enum DropLocation {
@@ -478,6 +480,7 @@ export enum RuinId {
   ABANDONED_HOTEL = 62,
   ABANDONED_HOSPITAL = 63,
   CROWS_FIT_GYM = 64,
+  STRANGE_BARN = 65,
   BURIED_BUILDING = 9999
 }
 
@@ -684,7 +687,8 @@ export enum BuildingId {
   SMALL_GRINDER2 = "small_grinder2_#00",
   SMALL_ANIMFENCE = "small_animfence_#00",
   SMALL_SEWERS = "small_sewers_#00",
-  SMALL_PET = "small_pet_#00"
+  SMALL_PET = "small_pet_#00",
+  SMALL_PYRE = "small_pyre_#00"
 }
 
 export type Building = {
@@ -822,7 +826,8 @@ export enum RewardId {
   THERMAL = "r_thermal_#00",
   CBURN = "r_cburn_#00",
   DECOFEIST = "r_decofeist_#00",
-  TECHWIN = "r_techwin_#00"
+  TECHWIN = "r_techwin_#00",
+  EXPLOT = "r_explot_#00"
 }
 
 export type Reward = {

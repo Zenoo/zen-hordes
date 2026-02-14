@@ -2336,6 +2336,55 @@
       "quantity": 300
     }
   ],
+  "r_explot_#00": [
+    {
+      "name": {
+        "de": "Leidenschaftlicher Entdecker",
+        "en": "Totally impetuous explorer",
+        "fr": "Explorateur totalement impétueux",
+        "es": "Explorador totalmente impetuoso"
+      },
+      "quantity": 5,
+      "points": 6.5
+    },
+    {
+      "name": {
+        "de": "Kartograph",
+        "en": "Cartographer",
+        "fr": "Cartographe",
+        "es": "Cartógrafo"
+      },
+      "quantity": 10
+    },
+    {
+      "name": {
+        "de": "100%",
+        "en": "100%",
+        "fr": "100%",
+        "es": "100%"
+      },
+      "quantity": 15
+    },
+    {
+      "name": {
+        "de": "TBD",
+        "en": "TBD",
+        "fr": "TBD",
+        "es": "TBD"
+      },
+      "quantity": 20
+    },
+    {
+      "name": {
+        "de": "Total Exploration",
+        "en": "Total Exploration",
+        "fr": "Total Exploration",
+        "es": "Total Exploration"
+      },
+      "quantity": 1,
+      "points": 3.5
+    }
+  ],
   "r_ruine_#00": [
     {
       "name": {
@@ -3984,7 +4033,7 @@
     {
       "name": {
         "de": "Seelenknipser",
-        "en": "Soul Calipers",
+        "en": "Soul Callipers",
         "fr": "Agnos-tic",
         "es": "Capataz Espiritista"
       },

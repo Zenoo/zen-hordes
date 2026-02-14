@@ -1080,10 +1080,27 @@
       "es": "El Cuervo deportivo"
     },
     "desc": {
-      "fr": "La tombe des anciens sportifs...",
+      "fr": "Une affiche sur la devanture de ce magasin de sport en ruine indique : \"Le Corbeau Sportif : pour avoir un corps beau et sportif !\".Les quelques \"clients\" qu'on y trouve parfois n'ont pourtant pas l'air très en forme.",
       "en": "The grave of former athletes...",
       "de": "Das Grab der ehemaligen Sportler...",
       "es": "Un antiguo polideportivo yace ante ti. La arena reina en las antiguas canchas de baloncesto y únicamente encuentras grietas, polvo y arena en los campos de fútbol. Te preguntas, ¿que habrá sido de los grandes deportistas que tanto practicaban aquí a diario?..."
+    },
+    "explorable": false
+  },
+  "65": {
+    "id": 65,
+    "img": "ruin/crop_circles.8d5b403f.png",
+    "name": {
+      "fr": "Grange étrange",
+      "en": "Strange Barn",
+      "de": "Verdächtige Scheune",
+      "es": "Granero extraño"
+    },
+    "desc": {
+      "fr": "Cette grange vous avait complètement échappé, elle semblait sans intérêt au milieu du désert. Cependant, les étranges dessins à moitié effacés dans les environs, que vous avez découverts depuis la montgolfière, vous ont convaincu de son intérêt... En y regardant de plus près, vous constatez que la grange a servi d'abri à un groupe de survivants ! Leurs provisions restantes se trouvent toujours à l'intérieur, mais une chose est sûre : ils n'en auront plus besoin.",
+      "en": "This barn had gone completely unnoticed by you because it seemed so uninteresting in the middle of the desert, but the strange, half-erased drawings in the surrounding area, which you discovered from the hot air balloon, convinced you of its interest... Closer examination reveals that the barn served as a shelter for a group of survivors. Their remaining supplies are still inside — if one thing is sure : they won't be needing them anymore.",
+      "de": "Diese Scheune ist dir bisher völlig entgangen, weil sie mitten in der Wüste so uninteressant wirkte; aber die seltsamen, halb verwischten Zeichnungen in der Umgebung, die die Bürger vom Heißluftballon aus entdeckt hatten, überzeugten dich von ihrer Bedeutung... Bei näherer Betrachtung stellt sich heraus, dass die Scheune einer Gruppe von Überlebenden als Unterschlupf diente. Ihre verbliebenen Vorräte befinden sich noch immer darin – und wenn eines sicher ist: Sie werden sie nicht mehr brauchen.",
+      "es": "Este granero te había pasado completamente desapercibido hasta ahora, porque en medio del desierto parecía totalmente insignificante; pero los extraños dibujos parcialmente borrados en los alrededores, que los habitantes han descubierto desde el globo, te convencieron de su importancia… Al observarlo más de cerca, descubres que el granero sirvió como refugio para un grupo de supervivientes. Sus provisiones restantes todavía se encuentran allí... y si algo es seguro es que ya no les darán uso."
     },
     "explorable": false
   }

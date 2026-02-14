@@ -4453,7 +4453,7 @@
     "hasUpgrade": false,
     "rarity": 0,
     "temporary": false,
-    "parent": 156,
+    "parent": 157,
     "order": 4,
     "resources": [
       {
@@ -4800,19 +4800,19 @@
       "es": "Defensa post-mortem"
     },
     "desc": {
-      "fr": "Apportez vos morts ! Pour une fois, ils vont se rendre utiles ; profitez de leur existence pour renforcer sommairement vos défenses. Chaque citoyen mort rapporte +10 points de défense à la ville. Note : le lieu et la raison de la mort du citoyen n’ont aucune importance.",
-      "en": "Bring out your dead! For once, they’re going to be useful. Use them to quickly improve our defences. Each dead citizen brought to the cemetery gives +10 defence points to the town. Note: How and where the victim died makes no difference…",
-      "de": "Bringt eure Toten! Denn diesmal werden sie sich noch als nützlich erweisen. Macht das beste aus ihnen und verbessert damit gemeinsam eure Verteidigung. Jeder zum Friedhof gebrachte tote Mitbürger bringt +10 Verteidigungspunkte für die Gesamtverteidigung der Stadt. Hinweis: Es spielt keine Rolle, wo und woran ein Mitbürger verstarb.",
-      "es": "¡Traed aquí todos vuestros muertos! Usad sus cuerpos para reforzar las defensas. Cada cadáver da +10 puntos de defensa al pueblo. ¡Ja! Algunos compañeros son más útiles muertos que vivos."
+      "fr": "Apportez vos morts ! Pour une fois, ils vont se rendre utiles ; profitez de leur existence pour renforcer sommairement vos défenses. Note : le lieu et la raison de la mort du citoyen n’ont aucune importance.",
+      "en": "Bring out your dead! For once, they’re going to be useful. Use them to quickly improve our defences. Note: How and where the victim died makes no difference…",
+      "de": "Bringt eure Toten! Denn diesmal werden sie sich noch als nützlich erweisen. Macht das beste aus ihnen und verbessert damit gemeinsam eure Verteidigung. Hinweis: Es spielt keine Rolle, wo und woran ein Mitbürger verstarb.",
+      "es": "¡Traed aquí todos vuestros muertos! Usad sus cuerpos para reforzar las defensas. ¡Ja! Algunos compañeros son más útiles muertos que vivos."
     },
     "pa": 42,
     "maxLife": 42,
     "breakable": true,
     "def": 0,
-    "hasUpgrade": false,
-    "rarity": 2,
+    "hasUpgrade": true,
+    "rarity": 0,
     "temporary": false,
-    "parent": 156,
+    "parent": 157,
     "order": 2,
     "resources": [
       {
@@ -5477,7 +5477,7 @@
     "hasUpgrade": false,
     "rarity": 3,
     "temporary": false,
-    "parent": 156,
+    "parent": 157,
     "order": 3,
     "resources": [
       {
@@ -6637,7 +6637,7 @@
     "hasUpgrade": false,
     "rarity": 0,
     "temporary": true,
-    "parent": 156,
+    "parent": 157,
     "order": 10,
     "resources": [
       {
@@ -6720,7 +6720,7 @@
     "hasUpgrade": false,
     "rarity": 0,
     "temporary": false,
-    "parent": 156,
+    "parent": 157,
     "order": 7,
     "resources": [
       {
@@ -6817,7 +6817,7 @@
     "hasUpgrade": false,
     "rarity": 0,
     "temporary": false,
-    "parent": 156,
+    "parent": 157,
     "order": 9,
     "resources": [
       {
@@ -6900,7 +6900,7 @@
     "hasUpgrade": false,
     "rarity": 0,
     "temporary": false,
-    "parent": 156,
+    "parent": 157,
     "order": 8,
     "resources": [
       {
@@ -7018,7 +7018,7 @@
   },
   "item_courroie_#01": {
     "id": 95,
-    "img": "building/item_courroie.dbcc30bf.gif",
+    "img": "building/small_catapult2.e1e36eec.gif",
     "name": {
       "fr": "Catapulte calibrée",
       "en": "Upgraded Catapult",
@@ -7129,7 +7129,7 @@
   },
   "item_courroie_#00": {
     "id": 96,
-    "img": "building/item_courroie.dbcc30bf.gif",
+    "img": "building/small_catapult1.62584080.gif",
     "name": {
       "fr": "Catapulte primitive",
       "en": "Catapult",
@@ -7656,7 +7656,7 @@
   },
   "small_watchmen_#00": {
     "id": 101,
-    "img": "building/small_watchmen.b10cd3ab.gif",
+    "img": "building/small_watchmen.d9f949a5.gif",
     "name": {
       "fr": "Tour des Gardiens",
       "en": "Guard Tower",
@@ -8527,20 +8527,6 @@
       {
         "amount": 1,
         "rsc": {
-          "id": 147,
-          "uid": "table",
-          "img": "item/item_table.88bcfc3a.gif",
-          "name": {
-            "fr": "Table Järpen",
-            "en": "Järpen Table",
-            "de": "Järpen-Tisch",
-            "es": "Mesa Järpen"
-          }
-        }
-      },
-      {
-        "amount": 1,
-        "rsc": {
           "id": 279,
           "uid": "wire",
           "img": "item/item_wire.f104f926.gif",
@@ -8666,7 +8652,7 @@
       "de": "Ermöglicht die fachgerechte Entsorgung von Holz auf der Müllhalde.",
       "es": "Permite la destrucción de madera en el vertedero."
     },
-    "pa": 30,
+    "pa": 0,
     "maxLife": 30,
     "breakable": true,
     "def": 0,
@@ -8675,50 +8661,7 @@
     "temporary": false,
     "parent": 120,
     "order": 4,
-    "resources": [
-      {
-        "amount": 1,
-        "rsc": {
-          "id": 35,
-          "uid": "meca_parts",
-          "img": "item/item_meca_parts.db36bd1c.gif",
-          "name": {
-            "fr": "Poignée de vis et écrous",
-            "en": "Handful of nuts and bolts",
-            "de": "Handvoll Schrauben und Muttern",
-            "es": "Puñado de tornillos y tuercas"
-          }
-        }
-      },
-      {
-        "amount": 5,
-        "rsc": {
-          "id": 49,
-          "uid": "wood2",
-          "img": "item/item_wood2.6518ead2.gif",
-          "name": {
-            "fr": "Planche tordue",
-            "en": "Twisted Plank",
-            "de": "Krummes Holzbrett",
-            "es": "Tabla torcida"
-          }
-        }
-      },
-      {
-        "amount": 5,
-        "rsc": {
-          "id": 50,
-          "uid": "metal",
-          "img": "item/item_metal.003369df.gif",
-          "name": {
-            "fr": "Ferraille",
-            "en": "Wrought Iron",
-            "de": "Alteisen",
-            "es": "Chatarra"
-          }
-        }
-      }
-    ]
+    "resources": []
   },
   "small_trash_#02": {
     "id": 113,
@@ -8735,7 +8678,7 @@
       "de": "Ermöglicht die fachgerechte Entsorgung von Metall auf der Müllhalde.",
       "es": "Permite la destrucción de metal en el vertedero."
     },
-    "pa": 30,
+    "pa": 0,
     "maxLife": 30,
     "breakable": true,
     "def": 0,
@@ -8744,36 +8687,7 @@
     "temporary": false,
     "parent": 120,
     "order": 5,
-    "resources": [
-      {
-        "amount": 5,
-        "rsc": {
-          "id": 49,
-          "uid": "wood2",
-          "img": "item/item_wood2.6518ead2.gif",
-          "name": {
-            "fr": "Planche tordue",
-            "en": "Twisted Plank",
-            "de": "Krummes Holzbrett",
-            "es": "Tabla torcida"
-          }
-        }
-      },
-      {
-        "amount": 5,
-        "rsc": {
-          "id": 50,
-          "uid": "metal",
-          "img": "item/item_metal.003369df.gif",
-          "name": {
-            "fr": "Ferraille",
-            "en": "Wrought Iron",
-            "de": "Alteisen",
-            "es": "Chatarra"
-          }
-        }
-      }
-    ]
+    "resources": []
   },
   "small_howlingbait_#00": {
     "id": 114,
@@ -8790,7 +8704,7 @@
       "de": "Ermöglicht das fachgerechte Massakrieren unschuldiger Tiere auf der Müllhalde.",
       "es": "Permite sacrificar animales inocentes en el vertedero."
     },
-    "pa": 30,
+    "pa": 0,
     "maxLife": 30,
     "breakable": true,
     "def": 0,
@@ -8799,22 +8713,7 @@
     "temporary": false,
     "parent": 120,
     "order": 6,
-    "resources": [
-      {
-        "amount": 10,
-        "rsc": {
-          "id": 136,
-          "uid": "wood_beam",
-          "img": "item/item_wood_beam.11f0d448.gif",
-          "name": {
-            "fr": "Poutre rafistolée",
-            "en": "Patchwork Beam",
-            "de": "Zusammengeschusterter Holzbalken",
-            "es": "Viga reforzada"
-          }
-        }
-      }
-    ]
+    "resources": []
   },
   "small_trashclean_#00": {
     "id": 115,
@@ -8928,7 +8827,7 @@
       "de": "Ermöglicht die fachgerechte Entsorgung von Waffen auf der Müllhalde.",
       "es": "Permite la destrucción de armas en el vertedero."
     },
-    "pa": 20,
+    "pa": 0,
     "maxLife": 20,
     "breakable": true,
     "def": 0,
@@ -8937,36 +8836,7 @@
     "temporary": false,
     "parent": 120,
     "order": 2,
-    "resources": [
-      {
-        "amount": 1,
-        "rsc": {
-          "id": 35,
-          "uid": "meca_parts",
-          "img": "item/item_meca_parts.db36bd1c.gif",
-          "name": {
-            "fr": "Poignée de vis et écrous",
-            "en": "Handful of nuts and bolts",
-            "de": "Handvoll Schrauben und Muttern",
-            "es": "Puñado de tornillos y tuercas"
-          }
-        }
-      },
-      {
-        "amount": 8,
-        "rsc": {
-          "id": 50,
-          "uid": "metal",
-          "img": "item/item_metal.003369df.gif",
-          "name": {
-            "fr": "Ferraille",
-            "en": "Wrought Iron",
-            "de": "Alteisen",
-            "es": "Chatarra"
-          }
-        }
-      }
-    ]
+    "resources": []
   },
   "small_trash_#04": {
     "id": 117,
@@ -8983,7 +8853,7 @@
       "de": "Ermöglicht die fachgerechte Entsorgung von Nahrung auf der Müllhalde.",
       "es": "Permite la destrucción de comida en el vertedero."
     },
-    "pa": 20,
+    "pa": 0,
     "maxLife": 20,
     "breakable": true,
     "def": 0,
@@ -8992,22 +8862,7 @@
     "temporary": false,
     "parent": 120,
     "order": 3,
-    "resources": [
-      {
-        "amount": 15,
-        "rsc": {
-          "id": 49,
-          "uid": "wood2",
-          "img": "item/item_wood2.6518ead2.gif",
-          "name": {
-            "fr": "Planche tordue",
-            "en": "Twisted Plank",
-            "de": "Krummes Holzbrett",
-            "es": "Tabla torcida"
-          }
-        }
-      }
-    ]
+    "resources": []
   },
   "small_trash_#05": {
     "id": 118,
@@ -9024,7 +8879,7 @@
       "de": "Steigert die Ausbeute jedes auf den Müll geworfenen Verteidigungs-Gegenstandes.",
       "es": "Aumenta el rendimiento de los objetos de defensa tirados al vertedero."
     },
-    "pa": 40,
+    "pa": 0,
     "maxLife": 40,
     "breakable": true,
     "def": 0,
@@ -9033,36 +8888,7 @@
     "temporary": false,
     "parent": 120,
     "order": 1,
-    "resources": [
-      {
-        "amount": 3,
-        "rsc": {
-          "id": 137,
-          "uid": "metal_beam",
-          "img": "item/item_metal_beam.e79854b7.gif",
-          "name": {
-            "fr": "Structures métalliques",
-            "en": "Metal Support",
-            "de": "Metallstruktur",
-            "es": "Estructuras metálicas"
-          }
-        }
-      },
-      {
-        "amount": 5,
-        "rsc": {
-          "id": 50,
-          "uid": "metal",
-          "img": "item/item_metal.003369df.gif",
-          "name": {
-            "fr": "Ferraille",
-            "en": "Wrought Iron",
-            "de": "Alteisen",
-            "es": "Chatarra"
-          }
-        }
-      }
-    ]
+    "resources": []
   },
   "small_trash_#06": {
     "id": 119,
@@ -9176,8 +9002,8 @@
       "de": "Der Eckpfeiler einer jeden großen Stadt: eine riesige, stinkende Müllhalde, die die ganze Stadt umgibt. Zugegeben, das ist nicht gerade ästhetisch, aber immerhin könnt ihr so Alltagsgegenstände in eine effektive Verteidigung verwandeln (nur eine Nacht haltbar).",
       "es": "Montañas y montañas de desechos alrededor del pueblo. No será muy agradable para los turistas, pero te permite transformar objetos simples en defensas temporales (válidas por una sola noche)."
     },
-    "pa": 80,
-    "maxLife": 80,
+    "pa": 50,
+    "maxLife": 50,
     "breakable": true,
     "def": 0,
     "hasUpgrade": true,
@@ -9187,7 +9013,7 @@
     "order": 4,
     "resources": [
       {
-        "amount": 5,
+        "amount": 3,
         "rsc": {
           "id": 49,
           "uid": "wood2",
@@ -9201,7 +9027,7 @@
         }
       },
       {
-        "amount": 15,
+        "amount": 10,
         "rsc": {
           "id": 136,
           "uid": "wood_beam",
@@ -9215,7 +9041,7 @@
         }
       },
       {
-        "amount": 10,
+        "amount": 5,
         "rsc": {
           "id": 50,
           "uid": "metal",
@@ -9229,7 +9055,7 @@
         }
       },
       {
-        "amount": 15,
+        "amount": 10,
         "rsc": {
           "id": 137,
           "uid": "metal_beam",
@@ -9257,7 +9083,7 @@
         }
       },
       {
-        "amount": 3,
+        "amount": 2,
         "rsc": {
           "id": 113,
           "uid": "concrete_wall",
@@ -10123,7 +9949,7 @@
     "hasUpgrade": false,
     "rarity": 4,
     "temporary": false,
-    "parent": 156,
+    "parent": 157,
     "order": 5,
     "resources": [
       {
@@ -10381,7 +10207,7 @@
     },
     "pa": 80,
     "maxLife": 80,
-    "breakable": true,
+    "breakable": false,
     "def": 0,
     "hasUpgrade": false,
     "rarity": 4,
@@ -10486,7 +10312,7 @@
     },
     "desc": {
       "fr": "Parce qu’un derrick ne peut pas forcément percer toutes les roches, la foreuse creuse plus pour boire plus. Ce chantier rapporte +100 rations d’eau au puits.",
-      "en": "Because the drilling rig obviously cannot break though all rocks, it is sometimes necessary to send small animals strapped with dynamite down the holes. This project adds +100 water rations to the well.",
+      "en": "Because the drilling rig obviously cannot break through all rocks, it is sometimes necessary to send small animals strapped with dynamite down the holes. This project adds +100 water rations to the well.",
       "de": "Da selbst der Bohrer des Bohrturms nicht durch jede Schicht durchkommt, muss man hin und wieder kleine und mit Dynamit bestückte Tiere in die Tiefe schicken. Dieses Projekt fügt den städtischen Wasserreserven +100 Rationen hinzu.",
       "es": "Porque el extractor de agua no puede atravesar algunas rocas, es a veces útil enviar pequeños animales con dinamita por los conductos. Esta construcción aporta +100 raciones de agua al pozo."
     },
@@ -11021,7 +10847,7 @@
     "hasUpgrade": false,
     "rarity": 2,
     "temporary": false,
-    "parent": 157,
+    "parent": 156,
     "order": 0,
     "resources": [
       {
@@ -11236,7 +11062,7 @@
   },
   "small_gallery_#00": {
     "id": 147,
-    "img": "building/small_gallery.ec2d03ec.gif",
+    "img": "building/small_gallery.f6a6e17b.gif",
     "name": {
       "fr": "Galeries des Fouineurs",
       "en": "Scavenger's Gallery",
@@ -11388,7 +11214,7 @@
   },
   "item_boomfruit_#00": {
     "id": 149,
-    "img": "building/item_boomfruit.a9ba2ba9.gif",
+    "img": "building/small_grenadelauncher.ad7a9650.gif",
     "name": {
       "fr": "Lance-grenades",
       "en": "Grenade Launcher",
@@ -11513,7 +11339,7 @@
   },
   "item_boomfruit_#01": {
     "id": 150,
-    "img": "building/item_boomfruit.a9ba2ba9.gif",
+    "img": "building/small_vitamines.8ce23286.gif",
     "name": {
       "fr": "Vita-Mines",
       "en": "Vita-Mines",
@@ -11886,14 +11712,14 @@
       {
         "amount": 1,
         "rsc": {
-          "id": 281,
-          "uid": "lens",
-          "img": "item/item_lens.093c99c5.gif",
+          "id": 137,
+          "uid": "metal_beam",
+          "img": "item/item_metal_beam.e79854b7.gif",
           "name": {
-            "fr": "Lentille convexe",
-            "en": "Convex Lens",
-            "de": "Konvexlinse",
-            "es": "Lente convexa"
+            "fr": "Structures métalliques",
+            "en": "Metal Support",
+            "de": "Metallstruktur",
+            "es": "Estructuras metálicas"
           }
         }
       }
@@ -12129,8 +11955,8 @@
     "hasUpgrade": false,
     "rarity": 0,
     "temporary": false,
-    "parent": 0,
-    "order": 5,
+    "parent": 157,
+    "order": 0,
     "resources": [
       {
         "amount": 2,
@@ -12198,8 +12024,8 @@
     "hasUpgrade": true,
     "rarity": 0,
     "temporary": false,
-    "parent": 156,
-    "order": 0,
+    "parent": 0,
+    "order": 5,
     "resources": [
       {
         "amount": 1,
@@ -12246,20 +12072,6 @@
       {
         "amount": 1,
         "rsc": {
-          "id": 281,
-          "uid": "lens",
-          "img": "item/item_lens.093c99c5.gif",
-          "name": {
-            "fr": "Lentille convexe",
-            "en": "Convex Lens",
-            "de": "Konvexlinse",
-            "es": "Lente convexa"
-          }
-        }
-      },
-      {
-        "amount": 1,
-        "rsc": {
           "id": 280,
           "uid": "oilcan",
           "img": "item/item_oilcan.ff96b0bd.gif",
@@ -12295,11 +12107,11 @@
     "hasUpgrade": false,
     "rarity": 4,
     "temporary": false,
-    "parent": 156,
+    "parent": 157,
     "order": 1,
     "resources": [
       {
-        "amount": 18,
+        "amount": 10,
         "rsc": {
           "id": 49,
           "uid": "wood2",
@@ -12341,7 +12153,7 @@
         }
       },
       {
-        "amount": 20,
+        "amount": 5,
         "rsc": {
           "id": 1,
           "uid": "water",
@@ -12420,7 +12232,7 @@
     "hasUpgrade": false,
     "rarity": 4,
     "temporary": false,
-    "parent": 156,
+    "parent": 157,
     "order": 6,
     "resources": [
       {
@@ -12622,7 +12434,7 @@
   },
   "small_watchmen_#02": {
     "id": 161,
-    "img": "building/small_watchmen.b10cd3ab.gif",
+    "img": "building/small_watchmen.d9f949a5.gif",
     "name": {
       "fr": "Salle de garde",
       "en": "Guardroom",
@@ -13198,6 +13010,89 @@
             "en": "Anabolic Steroids",
             "de": "Anaboles Steroid",
             "es": "Esteroides anabólicos"
+          }
+        }
+      }
+    ]
+  },
+  "small_pyre_#00": {
+    "id": 166,
+    "img": "building/small_pyre.fb78aab8.gif",
+    "name": {
+      "fr": "Brasier Sacrificiel",
+      "en": "Sacrificial Blaze",
+      "de": "Opferfeuer",
+      "es": "Brasero Sacrificial"
+    },
+    "desc": {
+      "fr": "Ce feu cérémoniel répand non seulement beaucoup de fumée, mais aussi un pouvoir mystique sur la ville : lorsqu'il brûle, la ville peut effectuer deux améliorations par jour.",
+      "en": "This ceremonial fire spreads not only a great deal of smoke but also a mystical power over the city—when it burns, the city can perform two improvements per day.",
+      "de": "Dieses zeremonielle Feuer verteilt neben einer ganzen Menge Rauch auch eine mystische Kraft über der Stadt - wenn es brennt, kann die Stadt zwei Verbesserungen des Tages ausführen.",
+      "es": "Este fuego ceremonial no solo desprende mucho humo, sino también un poder místico sobre el pueblo: mientras arde, los habitantes pueden realizar dos mejoras al día."
+    },
+    "pa": 20,
+    "maxLife": 20,
+    "breakable": true,
+    "def": 0,
+    "hasUpgrade": false,
+    "rarity": 0,
+    "temporary": true,
+    "parent": 157,
+    "order": 1,
+    "resources": [
+      {
+        "amount": 1,
+        "rsc": {
+          "id": 266,
+          "uid": "soul_red",
+          "img": "item/item_soul_red.6f63c0fd.gif",
+          "name": {
+            "fr": "Âme torturée",
+            "en": "Tortured Soul",
+            "de": "Gequälte Seele",
+            "es": "Alma torturada"
+          }
+        }
+      },
+      {
+        "amount": 1,
+        "rsc": {
+          "id": 146,
+          "uid": "trestle",
+          "img": "item/item_trestle.f4dcf9c2.gif",
+          "name": {
+            "fr": "Tréteau",
+            "en": "Trestle",
+            "de": "Holzbock",
+            "es": "Caballete"
+          }
+        }
+      },
+      {
+        "amount": 3,
+        "rsc": {
+          "id": 49,
+          "uid": "wood2",
+          "img": "item/item_wood2.6518ead2.gif",
+          "name": {
+            "fr": "Planche tordue",
+            "en": "Twisted Plank",
+            "de": "Krummes Holzbrett",
+            "es": "Tabla torcida"
+          }
+        }
+      },
+      {
+        "amount": 1,
+        "rsc": {
+          "id": 201,
+          "uid": "torch",
+          "img": "item/item_torch.265b53bb.gif",
+          "name": {
+            "fr": "Torche",
+            "en": "Torch",
+            "de": "Fackel",
+            "es": "Antorcha"
           }
         }
       }

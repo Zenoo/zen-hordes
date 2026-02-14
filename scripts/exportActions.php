@@ -57,6 +57,15 @@ class ItemTargetDefinition
     const int ItemFriendshipXPType = 10;
     const int ItemCitizenOnZoneSMType = 11;
 }
+
+class ActionCatapultProvider
+{
+    public static function create(): array
+    {
+        return [];
+    }
+}
+
 enum CitizenProperties: string
 {
     //<editor-fold desc="Enabled Features">

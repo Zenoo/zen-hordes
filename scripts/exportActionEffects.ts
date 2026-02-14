@@ -11,7 +11,7 @@ export const exportActionEffects = async () => {
   // Get various effects
   // https://regex101.com/r/IPNnu1/3
   const effectsRegex =
-    /effects_container->add\(\)->identifier\('([^)]+)'\)\s*(?:->add\(\s*\(new (?:(?!Message)\w+)Effect\((?:\w+::\w+\(\))?\)\)->(\w+)\(([^)]*)\)(?:->\w+\([^)]+\))?\)\s*)(?:->add\(\s*\(new (?:(?!Message)\w+)Effect\(\)\)->(\w+)\(([^)]*)\)(?:->\w+\([^)]+\))?\)\s*)?/gm;
+    /effects_container->add\(\)->identifier\('([^)]+)'\s*\)\s*(?:->add\(\s*new (?:(?!Message)\w+)Effect\((?:\w+::\w+\(\))?\)\s*->(\w+)\(([^)]*)\)(?:\s*->\w+\([^)]+\))?(?:\s*->\w+\([^)]+\))?\s*\)\s*)(?:->add\(\s*new (?:(?!Message)\w+)Effect\((?:\w+::\w+\(\))?\)\s*->(\w+)\(([^)]*)\)(?:\s*->\w+\([^)]+\))?(?:\s*->\w+\([^)]+\))?\s*\)\s*)?/gm;
   const effectsList = [...text.matchAll(effectsRegex)].reduce<
     Record<
       string,

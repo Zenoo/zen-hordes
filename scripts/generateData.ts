@@ -14,6 +14,7 @@ import { overwriteRecipeData } from "./recipeOverwrites";
 import { overwriteRuinData } from "./ruinOverwrites";
 import dotenv from "dotenv";
 import { addHiddenRewardTitles, exportTitles } from "./exportTitles";
+import { exportRules, RulesConfig } from "./exportRules";
 
 let types = "";
 
@@ -349,7 +350,10 @@ ${itemDropObject}`;
   return drops;
 };
 
-const generateItems = async (drops: Record<string, ItemDrop[]>) => {
+const generateItems = async (
+  rules: RulesConfig,
+  drops: Record<string, ItemDrop[]>
+) => {
   const openers = {
     melee: [
       "chair_basic_#00",
@@ -815,13 +819,28 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
           break;
         }
         case "unlockBlueprint": {
-          const buildings = Array.isArray(effectsData[effectName].data)
-            ? effectsData[effectName].data.map((b) => String(b))
-            : Object.keys(buildingsData).filter(
-                (buildingId) =>
-                  buildingsData[buildingId]?.rarity ===
-                  effectsData[effectName]?.data
-              );
+          const data = effectsData[effectName].data;
+          let buildings: string[] = [];
+
+          // If [xxx, yyy], we have the building ids directly in the data
+          if (Array.isArray(data)) {
+            buildings = data.map((b) => String(b));
+          } else if (/'(.+)'/.test(String(data))) {
+            // If 'xxx', we have to find the buildings from the rules
+            buildings =
+              rules.parameters?.rules?.default?.explorable_ruin_params
+                ?.plan_limits?.lists?.[
+                String(data).match(/'(.+)'/)?.[1] ?? ""
+              ] ?? [];
+          } else {
+            // If xxx, it's the rarity of the building to unlock
+            buildings = Object.keys(buildingsData).filter(
+              (buildingId) =>
+                buildingsData[buildingId]?.rarity ===
+                effectsData[effectName]?.data
+            );
+          }
+
           effects.push(
             ...buildings.map((building) => ({
               type: ItemActionEffectType.UnlockBuilding,
@@ -849,7 +868,8 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
           });
           break;
         }
-        case "defense": {
+        case "defense":
+        case "temporaryDefense": {
           effects.push({
             type: ItemActionEffectType.HomeDefense,
             value: Number(effectsData[effectName].data),
@@ -1085,6 +1105,7 @@ const generateItems = async (drops: Record<string, ItemDrop[]>) => {
         case "effectIndex":
         case "point":
         case "setsTag":
+        case "stopDigTimers":
           // Nothing to add, or not linked to an item
           break;
         default: {
@@ -2062,7 +2083,7 @@ export type Recipe = {
 };
 
 const generateRecipes = (items: Record<number, Item>) => {
-  const recipes: Recipe[] = [];
+  let recipes: Recipe[] = [];
 
   // Export recipes data from the main repo
   execSync("php scripts/exportRecipes.php", { stdio: "inherit" });
@@ -2141,7 +2162,7 @@ const generateRecipes = (items: Record<number, Item>) => {
     });
   });
 
-  overwriteRecipeData(recipes, items);
+  recipes = overwriteRecipeData(recipes, items);
 
   types += `export type RecipeItem = {
   item: ItemId;
@@ -2660,8 +2681,9 @@ const generateTypes = () => {
     );
   }
 
+  const rules = await exportRules();
   const drops = generateItemDrops();
-  const items = await generateItems(drops);
+  const items = await generateItems(rules, drops);
   await generateRuins(items);
   generateRecipes(items);
   await generateBuildings(items);

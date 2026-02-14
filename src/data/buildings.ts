@@ -2527,7 +2527,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parent: BuildingId.SMALL_SPA4SOULS_01,
+    parent: BuildingId.ITEM_SOUL_BLUE_STATIC,
     order: 4,
     resources: [
       {
@@ -2718,20 +2718,20 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Defensa post-mortem"
     },
     description: {
-      [Lang.EN]: "Bring out your dead! For once, they’re going to be useful. Use them to quickly improve our defences. Each dead citizen brought to the cemetery gives +10 defence points to the town. Note: How and where the victim died makes no difference…",
-      [Lang.FR]: "Apportez vos morts ! Pour une fois, ils vont se rendre utiles ; profitez de leur existence pour renforcer sommairement vos défenses. Chaque citoyen mort rapporte +10 points de défense à la ville. Note : le lieu et la raison de la mort du citoyen n’ont aucune importance.",
-      [Lang.DE]: "Bringt eure Toten! Denn diesmal werden sie sich noch als nützlich erweisen. Macht das beste aus ihnen und verbessert damit gemeinsam eure Verteidigung. Jeder zum Friedhof gebrachte tote Mitbürger bringt +10 Verteidigungspunkte für die Gesamtverteidigung der Stadt. Hinweis: Es spielt keine Rolle, wo und woran ein Mitbürger verstarb.",
-      [Lang.ES]: "¡Traed aquí todos vuestros muertos! Usad sus cuerpos para reforzar las defensas. Cada cadáver da +10 puntos de defensa al pueblo. ¡Ja! Algunos compañeros son más útiles muertos que vivos."
+      [Lang.EN]: "Bring out your dead! For once, they’re going to be useful. Use them to quickly improve our defences. Note: How and where the victim died makes no difference…",
+      [Lang.FR]: "Apportez vos morts ! Pour une fois, ils vont se rendre utiles ; profitez de leur existence pour renforcer sommairement vos défenses. Note : le lieu et la raison de la mort du citoyen n’ont aucune importance.",
+      [Lang.DE]: "Bringt eure Toten! Denn diesmal werden sie sich noch als nützlich erweisen. Macht das beste aus ihnen und verbessert damit gemeinsam eure Verteidigung. Hinweis: Es spielt keine Rolle, wo und woran ein Mitbürger verstarb.",
+      [Lang.ES]: "¡Traed aquí todos vuestros muertos! Usad sus cuerpos para reforzar las defensas. ¡Ja! Algunos compañeros son más útiles muertos que vivos."
     },
     icon: "small_cemetery",
     apNeeded: 42,
     hp: 42,
     breakable: true,
     defense: 0,
-    hasUpgrade: false,
-    rarity: 2,
+    hasUpgrade: true,
+    rarity: 0,
     temporary: false,
-    parent: BuildingId.SMALL_SPA4SOULS_01,
+    parent: BuildingId.ITEM_SOUL_BLUE_STATIC,
     order: 2,
     resources: [
       {
@@ -3063,7 +3063,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parent: BuildingId.SMALL_SPA4SOULS_01,
+    parent: BuildingId.ITEM_SOUL_BLUE_STATIC,
     order: 3,
     resources: [
       {
@@ -3718,7 +3718,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: true,
-    parent: BuildingId.SMALL_SPA4SOULS_01,
+    parent: BuildingId.ITEM_SOUL_BLUE_STATIC,
     order: 10,
     resources: [
       {
@@ -3762,7 +3762,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parent: BuildingId.SMALL_SPA4SOULS_01,
+    parent: BuildingId.ITEM_SOUL_BLUE_STATIC,
     order: 7,
     resources: [
       {
@@ -3810,7 +3810,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parent: BuildingId.SMALL_SPA4SOULS_01,
+    parent: BuildingId.ITEM_SOUL_BLUE_STATIC,
     order: 9,
     resources: [
       {
@@ -3854,7 +3854,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    parent: BuildingId.SMALL_SPA4SOULS_01,
+    parent: BuildingId.ITEM_SOUL_BLUE_STATIC,
     order: 8,
     resources: [
       {
@@ -3926,7 +3926,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.DE]: "Dieses erheblich verbesserte Katapult ist einfacher zu bedienen und benötigt weniger AP, um mit einem Gegenstand beladen zu werden!",
       [Lang.ES]: "Algunas mejoras técnicas reducen el costo en PA para lanzar un objeto."
     },
-    icon: "item_courroie",
+    icon: "small_catapult2",
     apNeeded: 30,
     hp: 30,
     breakable: true,
@@ -3978,7 +3978,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.DE]: "Das Katapult ist ein äußerst mächtiges Werkzeug, mit dem die Stadt jede Art von Gegenstand in die Wüste schießen kann. Das ist sehr nützlich, wenn man weit entfernte Bürger versorgen möchte (Lebensmittel, Wasser, Waffen etc...).",
       [Lang.ES]: "Sirve para lanzar un montón de cosas al Ultramundo. Ideal para abastecer las expediciones en el desierto."
     },
-    icon: "item_courroie",
+    icon: "small_catapult1",
     apNeeded: 40,
     hp: 40,
     breakable: true,
@@ -4665,10 +4665,6 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
         amount: 10
       },
       {
-        id: ItemId.TABLE,
-        amount: 1
-      },
-      {
         id: ItemId.WIRE,
         amount: 1
       },
@@ -4738,7 +4734,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Permite la destrucción de madera en el vertedero."
     },
     icon: "small_trash",
-    apNeeded: 30,
+    apNeeded: 0,
     hp: 30,
     breakable: true,
     defense: 0,
@@ -4748,18 +4744,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     parent: BuildingId.SMALL_TRASH,
     order: 4,
     resources: [
-      {
-        id: ItemId.MECA_PARTS,
-        amount: 1
-      },
-      {
-        id: ItemId.WOOD2,
-        amount: 5
-      },
-      {
-        id: ItemId.METAL,
-        amount: 5
-      }
+      
     ]
   },
   [BuildingId.SMALL_TRASH_02]: {
@@ -4778,7 +4763,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Permite la destrucción de metal en el vertedero."
     },
     icon: "small_trash",
-    apNeeded: 30,
+    apNeeded: 0,
     hp: 30,
     breakable: true,
     defense: 0,
@@ -4788,14 +4773,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     parent: BuildingId.SMALL_TRASH,
     order: 5,
     resources: [
-      {
-        id: ItemId.WOOD2,
-        amount: 5
-      },
-      {
-        id: ItemId.METAL,
-        amount: 5
-      }
+      
     ]
   },
   [BuildingId.SMALL_HOWLINGBAIT]: {
@@ -4814,7 +4792,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Permite sacrificar animales inocentes en el vertedero."
     },
     icon: "small_howlingbait",
-    apNeeded: 30,
+    apNeeded: 0,
     hp: 30,
     breakable: true,
     defense: 0,
@@ -4824,10 +4802,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     parent: BuildingId.SMALL_TRASH,
     order: 6,
     resources: [
-      {
-        id: ItemId.WOOD_BEAM,
-        amount: 10
-      }
+      
     ]
   },
   [BuildingId.SMALL_TRASHCLEAN]: {
@@ -4894,7 +4869,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Permite la destrucción de armas en el vertedero."
     },
     icon: "small_trash",
-    apNeeded: 20,
+    apNeeded: 0,
     hp: 20,
     breakable: true,
     defense: 0,
@@ -4904,14 +4879,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     parent: BuildingId.SMALL_TRASH,
     order: 2,
     resources: [
-      {
-        id: ItemId.MECA_PARTS,
-        amount: 1
-      },
-      {
-        id: ItemId.METAL,
-        amount: 8
-      }
+      
     ]
   },
   [BuildingId.SMALL_TRASH_04]: {
@@ -4930,7 +4898,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Permite la destrucción de comida en el vertedero."
     },
     icon: "small_trash",
-    apNeeded: 20,
+    apNeeded: 0,
     hp: 20,
     breakable: true,
     defense: 0,
@@ -4940,10 +4908,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     parent: BuildingId.SMALL_TRASH,
     order: 3,
     resources: [
-      {
-        id: ItemId.WOOD2,
-        amount: 15
-      }
+      
     ]
   },
   [BuildingId.SMALL_TRASH_05]: {
@@ -4962,7 +4927,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Aumenta el rendimiento de los objetos de defensa tirados al vertedero."
     },
     icon: "small_trash",
-    apNeeded: 40,
+    apNeeded: 0,
     hp: 40,
     breakable: true,
     defense: 0,
@@ -4972,14 +4937,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     parent: BuildingId.SMALL_TRASH,
     order: 1,
     resources: [
-      {
-        id: ItemId.METAL_BEAM,
-        amount: 3
-      },
-      {
-        id: ItemId.METAL,
-        amount: 5
-      }
+      
     ]
   },
   [BuildingId.SMALL_TRASH_06]: {
@@ -5046,8 +5004,8 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Montañas y montañas de desechos alrededor del pueblo. No será muy agradable para los turistas, pero te permite transformar objetos simples en defensas temporales (válidas por una sola noche)."
     },
     icon: "small_trash",
-    apNeeded: 80,
-    hp: 80,
+    apNeeded: 50,
+    hp: 50,
     breakable: true,
     defense: 0,
     hasUpgrade: true,
@@ -5058,19 +5016,19 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     resources: [
       {
         id: ItemId.WOOD2,
-        amount: 5
+        amount: 3
       },
       {
         id: ItemId.WOOD_BEAM,
-        amount: 15
-      },
-      {
-        id: ItemId.METAL,
         amount: 10
       },
       {
+        id: ItemId.METAL,
+        amount: 5
+      },
+      {
         id: ItemId.METAL_BEAM,
-        amount: 15
+        amount: 10
       },
       {
         id: ItemId.MECA_PARTS,
@@ -5078,7 +5036,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       },
       {
         id: ItemId.CONCRETE_WALL,
-        amount: 3
+        amount: 2
       }
     ]
   },
@@ -5565,7 +5523,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 4,
     temporary: false,
-    parent: BuildingId.SMALL_SPA4SOULS_01,
+    parent: BuildingId.ITEM_SOUL_BLUE_STATIC,
     order: 5,
     resources: [
       {
@@ -5696,7 +5654,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     icon: "small_balloon",
     apNeeded: 80,
     hp: 80,
-    breakable: true,
+    breakable: false,
     defense: 0,
     hasUpgrade: false,
     rarity: 4,
@@ -5740,7 +5698,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Extractor con poder animal"
     },
     description: {
-      [Lang.EN]: "Because the drilling rig obviously cannot break though all rocks, it is sometimes necessary to send small animals strapped with dynamite down the holes. This project adds +100 water rations to the well.",
+      [Lang.EN]: "Because the drilling rig obviously cannot break through all rocks, it is sometimes necessary to send small animals strapped with dynamite down the holes. This project adds +100 water rations to the well.",
       [Lang.FR]: "Parce qu’un derrick ne peut pas forcément percer toutes les roches, la foreuse creuse plus pour boire plus. Ce chantier rapporte +100 rations d’eau au puits.",
       [Lang.DE]: "Da selbst der Bohrer des Bohrturms nicht durch jede Schicht durchkommt, muss man hin und wieder kleine und mit Dynamit bestückte Tiere in die Tiefe schicken. Dieses Projekt fügt den städtischen Wasserreserven +100 Rationen hinzu.",
       [Lang.ES]: "Porque el extractor de agua no puede atravesar algunas rocas, es a veces útil enviar pequeños animales con dinamita por los conductos. Esta construcción aporta +100 raciones de agua al pozo."
@@ -6063,7 +6021,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 2,
     temporary: false,
-    parent: BuildingId.ITEM_SOUL_BLUE_STATIC,
+    parent: BuildingId.SMALL_SPA4SOULS_01,
     order: 0,
     resources: [
       {
@@ -6267,7 +6225,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.DE]: "Ein Mini-Katapult auf der Stadtmauer, garniert mit explosiven Pampelmusen. Alles, was ihr tun müsst, ist warten und schießen! Mit ein wenig extra Arbeit können wir ihn sogar automatisieren und seine Leistung verbessern.",
       [Lang.ES]: "Una minicatapulta colocada en las murallas y adornada con pomelos explosivos, ¡solo hay que esperar y disparar! Trabajando un poco en ella, podríamos automatizarla para mejorar su rendimiento."
     },
-    icon: "item_boomfruit",
+    icon: "small_grenadelauncher",
     apNeeded: 60,
     hp: 60,
     breakable: true,
@@ -6323,7 +6281,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.DE]: "Wenn wir ein paar explosive Pampelmusen in der Nähe der Stadtmauer in den Boden stecken, sollten wir heute Abend ein schönes Leichenfeuerwerk sehen. Aber morgen müssen wir wieder ganz von vorne anfangen...",
       [Lang.ES]: "Empujando unos cuantos pomelos explosivos en el suelo cerca de las murallas, deberíamos ver un hermoso fuego artificial de cadáveres esta noche. Pero tendremos que empezar de nuevo mañana..."
     },
-    icon: "item_boomfruit",
+    icon: "small_vitamines",
     apNeeded: 40,
     hp: 40,
     breakable: true,
@@ -6495,7 +6453,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
         amount: 1
       },
       {
-        id: ItemId.LENS,
+        id: ItemId.METAL_BEAM,
         amount: 1
       }
     ]
@@ -6623,7 +6581,8 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 0,
     temporary: false,
-    order: 5,
+    parent: BuildingId.ITEM_SOUL_BLUE_STATIC,
+    order: 0,
     resources: [
       {
         id: ItemId.WOOD2,
@@ -6662,8 +6621,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: true,
     rarity: 0,
     temporary: false,
-    parent: BuildingId.SMALL_SPA4SOULS_01,
-    order: 0,
+    order: 5,
     resources: [
       {
         id: ItemId.METAL,
@@ -6676,10 +6634,6 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       {
         id: ItemId.RYEBAG,
         amount: 2
-      },
-      {
-        id: ItemId.LENS,
-        amount: 1
       },
       {
         id: ItemId.OILCAN,
@@ -6710,12 +6664,12 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 4,
     temporary: false,
-    parent: BuildingId.SMALL_SPA4SOULS_01,
+    parent: BuildingId.ITEM_SOUL_BLUE_STATIC,
     order: 1,
     resources: [
       {
         id: ItemId.WOOD2,
-        amount: 18
+        amount: 10
       },
       {
         id: ItemId.PLATE,
@@ -6727,7 +6681,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       },
       {
         id: ItemId.WATER,
-        amount: 20
+        amount: 5
       },
       {
         id: ItemId.MECA_PARTS,
@@ -6766,7 +6720,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 4,
     temporary: false,
-    parent: BuildingId.SMALL_SPA4SOULS_01,
+    parent: BuildingId.ITEM_SOUL_BLUE_STATIC,
     order: 6,
     resources: [
       {
@@ -7111,6 +7065,50 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       },
       {
         id: ItemId.DRUG,
+        amount: 1
+      }
+    ]
+  },
+  [BuildingId.SMALL_PYRE]: {
+    id: BuildingId.SMALL_PYRE,
+    numericalId: 166,
+    name: {
+      [Lang.EN]: "Sacrificial Blaze",
+      [Lang.FR]: "Brasier Sacrificiel",
+      [Lang.DE]: "Opferfeuer",
+      [Lang.ES]: "Brasero Sacrificial"
+    },
+    description: {
+      [Lang.EN]: "This ceremonial fire spreads not only a great deal of smoke but also a mystical power over the city—when it burns, the city can perform two improvements per day.",
+      [Lang.FR]: "Ce feu cérémoniel répand non seulement beaucoup de fumée, mais aussi un pouvoir mystique sur la ville : lorsqu'il brûle, la ville peut effectuer deux améliorations par jour.",
+      [Lang.DE]: "Dieses zeremonielle Feuer verteilt neben einer ganzen Menge Rauch auch eine mystische Kraft über der Stadt - wenn es brennt, kann die Stadt zwei Verbesserungen des Tages ausführen.",
+      [Lang.ES]: "Este fuego ceremonial no solo desprende mucho humo, sino también un poder místico sobre el pueblo: mientras arde, los habitantes pueden realizar dos mejoras al día."
+    },
+    icon: "small_pyre",
+    apNeeded: 20,
+    hp: 20,
+    breakable: true,
+    defense: 0,
+    hasUpgrade: false,
+    rarity: 0,
+    temporary: true,
+    parent: BuildingId.ITEM_SOUL_BLUE_STATIC,
+    order: 1,
+    resources: [
+      {
+        id: ItemId.SOUL_RED,
+        amount: 1
+      },
+      {
+        id: ItemId.TRESTLE,
+        amount: 1
+      },
+      {
+        id: ItemId.WOOD2,
+        amount: 3
+      },
+      {
+        id: ItemId.TORCH,
         amount: 1
       }
     ]
