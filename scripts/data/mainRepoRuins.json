@@ -39,7 +39,7 @@
             "food_bag_#00": 3,
             "door_carpet_#00": 3,
             "lights_#00": 3,
-            "shoe_#00": 25
+            "chest_citizen_#00": 25
         },
         "desc": "Einer der vielen Albi Supermarkt, die um das Jahr 2010 herum aus dem Boden schossen und später dann verschwanden... spezialisiert darauf, Dinge so billig wie möglich zu verscherbeln. Hier findest du alles finden, was du brauchst - egal ob du einfach pleite bist oder eisern auf ein neues Stück Seife sparst, kaufe bei ALBI ein!"
     },
@@ -292,7 +292,7 @@
             "pet_rat_#00": 18,
             "table_#00": 1,
             "oilcan_#00": 1,
-            "shoe_#00": 16
+            "chest_citizen_#00": 16
         },
         "desc": "Früher wäre dies sicherlich einer der trendigsten Joints auf der M25 gewesen, mit verwässerten Getränken, dem Aroma von abgestandener Pisse und toten Ratten auf der Bar. Sie müssen seit Jahren der erste Mensch sein, der hier einen Fuß hinein gesetzt hat."
     },
@@ -319,7 +319,7 @@
             "chest_#00": 9,
             "engine_part_#00": 1,
             "oilcan_#00": 6,
-            "shoe_#00": 19
+            "chest_citizen_#00": 19
         },
         "desc": "Ein Kombi, der sich in einen Kleintransporter verkeilt hat. Der großen Anzahl an verkohlten Leichen nach zu urteilen, hat hier ein Unfall eine richtig große Karambolage verursacht."
     },
@@ -482,7 +482,7 @@
             "plate_raw_#00": 5,
             "ryebag_#00": 6,
             "pet_snake2_#00": 4,
-            "shoe_#00": 38
+            "chest_citizen_#00": 38
         },
         "desc": "Die verbrannten Überreste eines kleinen Waldes. Es war wahrscheinlich vorher eine schöne Gegend... Jetzt hoffen Sie nur noch, dass Sie hier nicht übernachten müssen."
     },
@@ -676,7 +676,7 @@
             "ryebag_#00": 4,
             "angryc_#00": 2,
             "soccer_#00": 4,
-            "shoe_#00": 14
+            "chest_citizen_#00": 14
         },
         "desc": "Mitten auf einem völlig verfallenen Platz befindet sich ein großer Gartenschuppen. Die Tür gibt leicht nach und gibt den Blick frei auf einen riesigen Raum voller Regale und allerlei Werkzeug."
     },
@@ -1079,7 +1079,7 @@
             "bgrenade_empty_#00": 10,
             "gun_#00": 5,
             "machine_gun_#00": 3,
-            "shoe_#00": 11
+            "chest_citizen_#00": 11
         },
         "desc": "Dieser von Einschusskratern und schwarzen getrockneten Blutlachen übersäte Schützengraben lässt erahnen, was sich hier abgespielt hat. Der größte Teil des Grabens ist in sich zusammengestürzt, doch hier und dort erblickst du noch ein paar begehbare Stellen, die sich nach nutzbaren Gegenständen absuchen lassen."
     },
@@ -1131,7 +1131,7 @@
             "food_candies_#00": 2,
             "chama_#00": 2,
             "diode_#00": 5,
-            "shoe_#00": 16
+            "chest_citizen_#00": 16
         },
         "desc": "In diesem Geschäft konnte man früher allerlei Produkte des täglichen Bedarfs kaufen: Lebensmittel, Getränke, Reinigungsmittel... An der Tür steht: Rund um die Uhr geöffnet (auch am Wochenende). In der Tat, das klaffenden Loch in der Mauer bestätigt dies."
     },
@@ -1178,7 +1178,7 @@
             "radius_mk2_part_#00": 5,
             "mecanism_#00": 1,
             "wire_#00": 3,
-            "shoe_#00": 25
+            "chest_citizen_#00": 25
         },
         "desc": "Es handelt sich um einen Transportlaster der sowjetischen Firma Transtwinï. Die Fahrerkabine hat sich komplett in einem Baum verkeilt. Der aufgeschlitzte Fahrersitz, sowie die großflächigen Blutspuren an den Wänden, lassen darauf schließen, dass der Unfall nicht die Todesursache war..."
     },
@@ -1201,7 +1201,7 @@
             "game_box_#00": 10,
             "cyanure_#00": 5,
             "lens_#00": 4,
-            "shoe_#00": 23
+            "chest_citizen_#00": 23
         },
         "desc": "Die fröhlichen Kinderzeichnungen an den Wänden stehen im starken Kontrast zu den nicht identifizierbaren menschlichen Überresten am Boden. Du hast das Gefühl, ein dunkles Kichern aus dem Bauschutt zu hören."
     },

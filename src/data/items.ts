@@ -10478,7 +10478,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_wallimprove_#01"
+            value: "small_eden_#00"
           }
         ]
       }
@@ -10824,7 +10824,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
           },
           {
             type: ItemActionEffectType.UnlockBuilding,
-            value: "small_armor_#00"
+            value: "item_shield_#00"
           },
           {
             type: ItemActionEffectType.UnlockBuilding,

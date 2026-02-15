@@ -126,7 +126,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
         odds: 3,
       },
       {
-        item: ItemId.SHOE,
+        item: ItemId.CHEST_CITIZEN,
         odds: 25,
       }
     ]
@@ -896,7 +896,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
         odds: 1,
       },
       {
-        item: ItemId.SHOE,
+        item: ItemId.CHEST_CITIZEN,
         odds: 16,
       }
     ]
@@ -977,7 +977,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
         odds: 6,
       },
       {
-        item: ItemId.SHOE,
+        item: ItemId.CHEST_CITIZEN,
         odds: 19,
       }
     ]
@@ -1487,7 +1487,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
         odds: 4,
       },
       {
-        item: ItemId.SHOE,
+        item: ItemId.CHEST_CITIZEN,
         odds: 38,
       }
     ]
@@ -2059,7 +2059,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
         odds: 4,
       },
       {
-        item: ItemId.SHOE,
+        item: ItemId.CHEST_CITIZEN,
         odds: 14,
       }
     ]
@@ -3209,7 +3209,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
         odds: 3,
       },
       {
-        item: ItemId.SHOE,
+        item: ItemId.CHEST_CITIZEN,
         odds: 11,
       }
     ]
@@ -3371,7 +3371,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
         odds: 5,
       },
       {
-        item: ItemId.SHOE,
+        item: ItemId.CHEST_CITIZEN,
         odds: 16,
       }
     ]
@@ -3505,7 +3505,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
         odds: 3,
       },
       {
-        item: ItemId.SHOE,
+        item: ItemId.CHEST_CITIZEN,
         odds: 25,
       }
     ]
@@ -3574,7 +3574,7 @@ export const ruins: Readonly<Record<RuinId, Ruin>> = {
         odds: 4,
       },
       {
-        item: ItemId.SHOE,
+        item: ItemId.CHEST_CITIZEN,
         odds: 23,
       }
     ]
