@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.7](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.14.6...zen-hordes-v1.14.7) (2026-02-16)
+
+
+### Bug Fixes
+
+* Map preview data ([2d1d316](https://github.com/Zenoo/zen-hordes/commit/2d1d3160baef00c30020ad85f375ea12a17e63a4))
+
 ## [1.14.6](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.14.5...zen-hordes-v1.14.6) (2026-02-15)
 
 
