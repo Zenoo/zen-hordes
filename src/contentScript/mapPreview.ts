@@ -55,7 +55,9 @@ export const displayMapPreview = async (node: HTMLElement) => {
 
     for (let x = 0; x < town.width; x++) {
       for (let y = 0; y < town.height; y++) {
-        const zone = town.zones.find((z) => z.x === x && z.y === y);
+        const zone = town.zones.find(
+          (z) => x - town.x === z.x && -y + town.y === z.y
+        );
 
         const zoneElement = document.createElement("div");
         zoneElement.classList.add("zone");
@@ -78,7 +80,7 @@ export const displayMapPreview = async (node: HTMLElement) => {
         const citizenHere = town.citizens.find((c) => c.x === x && c.y === y);
         if (citizenHere) {
           const citizenIcon = document.createElement("div");
-          citizenIcon.classList.add("citizen-icon");
+          citizenIcon.classList.add("citizen_marker");
           zoneElement.appendChild(citizenIcon);
         }
 
