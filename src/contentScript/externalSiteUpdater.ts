@@ -73,7 +73,7 @@ const getZombies = () => {
 };
 
 const isZoneDepleted = () => {
-  return !!document.querySelector("#mgd-empty-zone-note");
+  return !!document.querySelector("#mgd-zone-note");
 };
 
 const getPresentPlayers = () => {
