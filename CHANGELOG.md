@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.8](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.14.7...zen-hordes-v1.14.8) (2026-02-18)
+
+
+### Bug Fixes
+
+* Zone update depletion detection ([1d8445c](https://github.com/Zenoo/zen-hordes/commit/1d8445cd7bc67427561ade6b1ac77e7f7170c27f))
+
 ## [1.14.7](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.14.6...zen-hordes-v1.14.7) (2026-02-16)
 
 
