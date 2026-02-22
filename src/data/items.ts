@@ -14929,13 +14929,13 @@ export const items: Readonly<Record<ItemId, Item>> = {
       [Lang.EN]: "Burst Football",
       [Lang.FR]: "Ballon crevé",
       [Lang.DE]: "Geplatzter Fußball",
-      [Lang.ES]: "Balón de fútbol reventado"
+      [Lang.ES]: "Balón de fútbol pinchado"
     },
     description: {
       [Lang.EN]: "A ball to have fun with, if only it wasn't burst...",
       [Lang.FR]: "Un ballon avec lequel on pourrait s'amuser. Si seulement il n'était pas crevé...",
       [Lang.DE]: "Ein Ball, mit dem wir einiges an Spaß haben könnten. Wenn er nur nicht schon geplatzt wäre...",
-      [Lang.ES]: "Una pelota con la que podríamos divertirnos mucho. Si no hubiera reventado ya..."
+      [Lang.ES]: "Un balón con el que podríamos divertirnos mucho. Si no hubiera pinchado ya..."
     },
     categories: [ItemCategory.Miscellaneous],
     icon: "item_soccer_part",

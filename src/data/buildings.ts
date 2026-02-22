@@ -2162,7 +2162,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Cañón de rocas"
     },
     description: {
-      [Lang.EN]: "An automatic turret which launches rocks towards the town gates at high velocity! It is activated at midnight and fires continuously for several minutes (if you were counting on sleeping in silence, youre going to be disappointed)!",
+      [Lang.EN]: "An automatic turret which launches rocks towards the town gates at high velocity! It is activated at midnight and fires continuously for several minutes (if you were counting on sleeping in silence, you're going to be disappointed)!",
       [Lang.FR]: "Une tourelle automatisée qui projette des rochers à grande vitesse en direction de la porte. Elle s’active à minuit et tire sans discontinuer pendant plusieurs minutes. (Si vous comptiez dormir dans le silence, c'est loupé !)",
       [Lang.DE]: "Dieser automatisierte Wachturm verschießt um Mitternacht minutenlang Felsen mit hoher Geschwindigkeit in Richtung Stadttor. Solltest du vorgehabt haben zu schlafen, kannst du das hiermit vergessen!",
       [Lang.ES]: "Una torre mecánica que lanza rocas a gran velocidad en dirección al portal. Se activa a la hora del ataque y dispara sin cesar durante varios minutos. Si pensabas dormir en silencio, olvídalo."
@@ -4282,7 +4282,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     hasUpgrade: false,
     rarity: 3,
     temporary: false,
-    parent: BuildingId.ITEM_SCOPE,
+    parent: BuildingId.ITEM_TAGGER,
     order: 2,
     resources: [
       {
@@ -6816,7 +6816,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.DE]: "Ein alter Raum, der nach Kaffee und Tabak riecht, in dem man sich aber viel besser auf die langen Nächte vorbereiten kann, die die Bürger auf der Stadtmauer erwarten.",
       [Lang.ES]: "Una vieja habitación que huele a café y tabaco, pero en la que te preparas mucho mejor para las largas noches que te esperan en las murallas."
     },
-    icon: "small_watchmen",
+    icon: "small_guardroom",
     apNeeded: 50,
     hp: 50,
     breakable: true,
@@ -7079,7 +7079,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Brasero Sacrificial"
     },
     description: {
-      [Lang.EN]: "This ceremonial fire spreads not only a great deal of smoke but also a mystical power over the city—when it burns, the city can perform two improvements per day.",
+      [Lang.EN]: "This ceremonial fire spreads not only a great deal of smoke but also a mystical power all over town; when it burns, the town will manage to perform two upgrades at once.",
       [Lang.FR]: "Ce feu cérémoniel répand non seulement beaucoup de fumée, mais aussi un pouvoir mystique sur la ville : lorsqu'il brûle, la ville peut effectuer deux améliorations par jour.",
       [Lang.DE]: "Dieses zeremonielle Feuer verteilt neben einer ganzen Menge Rauch auch eine mystische Kraft über der Stadt - wenn es brennt, kann die Stadt zwei Verbesserungen des Tages ausführen.",
       [Lang.ES]: "Este fuego ceremonial no solo desprende mucho humo, sino también un poder místico sobre el pueblo: mientras arde, los habitantes pueden realizar dos mejoras al día."

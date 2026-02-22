@@ -3778,7 +3778,7 @@
     },
     "desc": {
       "fr": "Une tourelle automatisée qui projette des rochers à grande vitesse en direction de la porte. Elle s’active à minuit et tire sans discontinuer pendant plusieurs minutes. (Si vous comptiez dormir dans le silence, c'est loupé !)",
-      "en": "An automatic turret which launches rocks towards the town gates at high velocity! It is activated at midnight and fires continuously for several minutes (if you were counting on sleeping in silence, youre going to be disappointed)!",
+      "en": "An automatic turret which launches rocks towards the town gates at high velocity! It is activated at midnight and fires continuously for several minutes (if you were counting on sleeping in silence, you're going to be disappointed)!",
       "de": "Dieser automatisierte Wachturm verschießt um Mitternacht minutenlang Felsen mit hoher Geschwindigkeit in Richtung Stadttor. Solltest du vorgehabt haben zu schlafen, kannst du das hiermit vergessen!",
       "es": "Una torre mecánica que lanza rocas a gran velocidad en dirección al portal. Se activa a la hora del ataque y dispara sin cesar durante varios minutos. Si pensabas dormir en silencio, olvídalo."
     },
@@ -7759,7 +7759,7 @@
     "hasUpgrade": false,
     "rarity": 3,
     "temporary": false,
-    "parent": 153,
+    "parent": 103,
     "order": 2,
     "resources": [
       {
@@ -12434,7 +12434,7 @@
   },
   "small_watchmen_#02": {
     "id": 161,
-    "img": "building/small_watchmen.d9f949a5.gif",
+    "img": "building/small_guardroom.b10cd3ab.gif",
     "name": {
       "fr": "Salle de garde",
       "en": "Guardroom",
@@ -13026,7 +13026,7 @@
     },
     "desc": {
       "fr": "Ce feu cérémoniel répand non seulement beaucoup de fumée, mais aussi un pouvoir mystique sur la ville : lorsqu'il brûle, la ville peut effectuer deux améliorations par jour.",
-      "en": "This ceremonial fire spreads not only a great deal of smoke but also a mystical power over the city—when it burns, the city can perform two improvements per day.",
+      "en": "This ceremonial fire spreads not only a great deal of smoke but also a mystical power all over town; when it burns, the town will manage to perform two upgrades at once.",
       "de": "Dieses zeremonielle Feuer verteilt neben einer ganzen Menge Rauch auch eine mystische Kraft über der Stadt - wenn es brennt, kann die Stadt zwei Verbesserungen des Tages ausführen.",
       "es": "Este fuego ceremonial no solo desprende mucho humo, sino también un poder místico sobre el pueblo: mientras arde, los habitantes pueden realizar dos mejoras al día."
     },

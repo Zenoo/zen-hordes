@@ -2321,10 +2321,10 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
       [Lang.ES]: "Generosidad"
     },
     description: {
-      [Lang.EN]: "Number of your acts of selflessness towards other citizens in need.",
+      [Lang.EN]: "Number of acts of selflessness towards other citizens in need.",
       [Lang.FR]: "Nombre de vos actes d'altruisme envers d'autres citoyens dans le besoin.",
       [Lang.DE]: "Anzahl deiner Akte von Selbstlosigkeit gegenüber anderen Bürgern in Not.",
-      [Lang.ES]: "Número de tus actos de altruismo hacia otros ciudadanos necesitados."
+      [Lang.ES]: "Cantidad de actos de altruismo hacia otros habitantes en necesidad."
     },
     icon: "r_share",
     community: false,
@@ -7054,7 +7054,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
     numericalId: 116,
     name: {
       [Lang.EN]: "Total Exploration",
-      [Lang.FR]: "Exploration Totale",
+      [Lang.FR]: "Explorations totales",
       [Lang.DE]: "Vollständige Erkundung",
       [Lang.ES]: "Exploración Total"
     },
@@ -7062,7 +7062,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
       [Lang.EN]: "The number of times you have seen a map fully revealed, and each of its initial ruins and e-ruins searched or explored at least once.",
       [Lang.FR]: "Nombre de fois où le désert n'a plus eu aucun secret pour votre ville.",
       [Lang.DE]: "Anzahl der Karten, die du vollständig aufgedeckt erlebt hast und auf der sämtliche initialen Ruinen und begehbaren Ruinen zumindest einmal besucht oder betreten worden.",
-      [Lang.ES]: "Número de veces que has explorado completamente el mapa y en los que todas las ruinas iniciales y las ruinas accesibles han sido al menos visitadas o recorridas una vez."
+      [Lang.ES]: "Número de veces que has visto un mapa completamente revelado en el que todas sus ruinas y ruinas explorables iniciales han sido exploradas al menos una vez."
     },
     icon: "r_explot",
     community: false,

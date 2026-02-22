@@ -532,9 +532,9 @@
     },
     "desc": {
       "fr": "Nombre de vos actes d'altruisme envers d'autres citoyens dans le besoin.",
-      "en": "Number of your acts of selflessness towards other citizens in need.",
+      "en": "Number of acts of selflessness towards other citizens in need.",
       "de": "Anzahl deiner Akte von Selbstlosigkeit gegenüber anderen Bürgern in Not.",
-      "es": "Número de tus actos de altruismo hacia otros ciudadanos necesitados."
+      "es": "Cantidad de actos de altruismo hacia otros habitantes en necesidad."
     },
     "community": false,
     "rare": false
@@ -2055,7 +2055,7 @@
     "id": 116,
     "img": "pictos/r_explot.077f69f8.gif",
     "name": {
-      "fr": "Exploration Totale",
+      "fr": "Explorations totales",
       "en": "Total Exploration",
       "de": "Vollständige Erkundung",
       "es": "Exploración Total"
@@ -2064,7 +2064,7 @@
       "fr": "Nombre de fois où le désert n'a plus eu aucun secret pour votre ville.",
       "en": "The number of times you have seen a map fully revealed, and each of its initial ruins and e-ruins searched or explored at least once.",
       "de": "Anzahl der Karten, die du vollständig aufgedeckt erlebt hast und auf der sämtliche initialen Ruinen und begehbaren Ruinen zumindest einmal besucht oder betreten worden.",
-      "es": "Número de veces que has explorado completamente el mapa y en los que todas las ruinas iniciales y las ruinas accesibles han sido al menos visitadas o recorridas una vez."
+      "es": "Número de veces que has visto un mapa completamente revelado en el que todas sus ruinas y ruinas explorables iniciales han sido exploradas al menos una vez."
     },
     "community": false,
     "rare": true
