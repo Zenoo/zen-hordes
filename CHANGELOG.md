@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.14.9...zen-hordes-v1.15.0) (2026-02-23)
+
+
+### Features
+
+* add image source change observer and update tooltips on change ([346b633](https://github.com/Zenoo/zen-hordes/commit/346b63303733751843be5bc2213c4f613015391a))
+
 ## [1.14.9](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.14.8...zen-hordes-v1.14.9) (2026-02-22)
 
 
