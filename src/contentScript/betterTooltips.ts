@@ -1213,325 +1213,346 @@ export const insertBetterItemTooltips = (
   if (!force && !store["better-tooltips"]) return;
 
   if (
-    force ||
-    node.classList.contains("zen-wiki-item") ||
-    (node.classList.contains("tooltip") && node.classList.contains("item"))
+    !force &&
+    !node.classList.contains("zen-wiki-item") &&
+    !(node.classList.contains("tooltip") && node.classList.contains("item"))
   ) {
-    const processed = node.classList.contains("zen-better-tooltip");
-    if (processed) return;
-
-    node.classList.add("zen-better-tooltip");
-
-    // Ignore status tooltips
-    if (!node.querySelector("h1 img, h4 img")) return;
-
-    const item = findItem(node);
-    if (!item) {
-      console.error("Item not found in tooltip:", node);
-      return;
-    }
-
-    // Set item id as data-tooltip-item-id for later use
-    node.setAttribute("data-tooltip-item-id", item.id);
-
-    // Bank count
-    if (memory.town) {
-      const count =
-        memory.town.bank.find((bankItem) => bankItem.id === item.numericalId)
-          ?.quantity ?? 0;
-      const timestamp = new Date(memory.town.lastUpdate).getTime();
-
-      const bankCountTarget = node.querySelector("h1, h4")?.nextSibling;
-
-      if (!bankCountTarget) {
-        console.error("Bank count target not found in tooltip:", node);
-        return;
-      }
-
-      const bankCount = document.createElement("div");
-      bankCount.classList.add("bank-count", "zen-added");
-      bankCount.textContent = t(T, "bankCount", {
-        count,
-        time: getRelativeTime(timestamp),
-      });
-
-      node.insertBefore(bankCount, bankCountTarget.nextSibling);
-    }
-
-    // Additional info
-    if (item.info) {
-      // Create an info tag
-      const infoTag = document.createElement("div");
-      infoTag.classList.add("item-tag", "item-tag-info", "zen-added");
-      setTextWithIcons(infoTag, item.info[store["hordes-lang"]]);
-      node.append(infoTag);
-    }
-
-    // Unavailable items
-    if (item.available === false) {
-      // Create an info tag
-      const tag = document.createElement("div");
-      tag.classList.add("item-tag", "item-tag-info", "zen-added");
-      tag.textContent = t(T, "unavailable");
-      node.append(tag);
-    }
-
-    // Poisonable
-    if (item.categories.includes(ItemCategory.Poisonable)) {
-      // Create an info tag
-      const tag = document.createElement("div");
-      tag.classList.add("item-tag", "item-tag-poison", "zen-added");
-      tag.textContent = t(T, "poisonable");
-      node.append(tag);
-    }
-
-    // Private town only
-    if (item.categories.includes(ItemCategory.PrivateTown)) {
-      // Create an info tag
-      const tag = document.createElement("div");
-      tag.classList.add("item-tag", "item-tag-private", "zen-added");
-      tag.textContent = t(T, "privateTownOnly");
-      node.append(tag);
-    }
-
-    // Decoration
-    if (item.decoration) {
-      let decorationNode = node.querySelector(".item-tag-deco");
-
-      if (!decorationNode) {
-        // Since S18, decoration nodes don't seem to show up every time
-        // So we create a new one if it doesn't exist
-        decorationNode = document.createElement("div");
-        decorationNode.classList.add("item-tag", "item-tag-deco");
-        decorationNode.textContent = t(T, "item.tag.deco");
-        node.append(decorationNode);
-      }
-
-      const span = document.createElement("span");
-      span.classList.add("zen-item-decoration", "zen-added");
-      const startText = document.createTextNode(`(${item.decoration} `);
-      const icon = document.createElement("img");
-      icon.src = `${ASSETS}/icons/deco.gif`;
-      const endText = document.createTextNode(")");
-      span.append(startText, icon, endText);
-      decorationNode.append(span);
-    }
-
-    // Event
-    if (typeof item.event !== "undefined") {
-      // Create an event tag
-      const eventTag = document.createElement("div");
-      eventTag.classList.add("item-tag", "item-tag-event", "zen-added");
-      eventTag.setAttribute("data-event", item.event.toString());
-      eventTag.textContent = t(T, `event.${item.event}`);
-      node.append(eventTag);
-    }
-
-    // Opens
-    if (item.opens?.length) {
-      // Create an info tag
-      const openTag = document.createElement("div");
-      openTag.classList.add("item-tag", "item-tag-open", "zen-added");
-      openTag.textContent = `${t(T, `canOpen`)}: `;
-
-      item.opens.forEach((itemId) => {
-        const item = items[itemId];
-
-        const inputImg = document.createElement("img");
-        inputImg.src = `${ASSETS}/icons/item/${item.icon}.gif`;
-        inputImg.title = item.name[store["hordes-lang"]];
-        inputImg.setAttribute("data-type", "item");
-        inputImg.setAttribute("data-id", item.id);
-        openTag.append(inputImg);
-      });
-      node.append(openTag);
-    }
-
-    // Openable by
-    if (item.openableBy?.length) {
-      // Create an info tag
-      const openableTag = document.createElement("div");
-      openableTag.classList.add("item-tag", "item-tag-openable", "zen-added");
-      openableTag.textContent = `${t(T, `openableBy`)}: `;
-
-      item.openableBy.forEach((itemId) => {
-        const item = items[itemId];
-
-        const inputImg = document.createElement("img");
-        inputImg.src = `${ASSETS}/icons/item/${item.icon}.gif`;
-        inputImg.title = item.name[store["hordes-lang"]];
-        inputImg.setAttribute("data-type", "item");
-        inputImg.setAttribute("data-id", item.id);
-        openableTag.append(inputImg);
-      });
-      node.append(openableTag);
-    }
-
-    // Drops
-    if (item.drops) {
-      // Create an info tag
-      const dropTag = document.createElement("div");
-      dropTag.classList.add("item-tag", "item-tag-drop", "zen-added");
-      dropTag.textContent = `${t(T, `foundWhenSearching`)}: ${Object.entries(
-        item.drops
-      )
-        .map(([key, value]) => `${t(T, `dropLocation.${key}`)} (${value}%)`)
-        .join(", ")}`;
-      node.append(dropTag);
-    }
-
-    // Ruin drops
-    const ruinDrops = findRuinDrops(item);
-    if (ruinDrops.length) {
-      // Create an ruin drop tag
-      const ruinDropTag = document.createElement("div");
-      ruinDropTag.classList.add("item-tag", "item-tag-ruin-drop", "zen-added");
-
-      const foundIn = document.createElement("span");
-      foundIn.textContent = `${t(T, `foundIn`)}: `;
-      ruinDropTag.append(foundIn);
-
-      ruinDrops
-        .sort((a, b) => {
-          const aTotal = a.drops.reduce((acc, drop) => acc + drop.odds, 0);
-          const bTotal = b.drops.reduce((acc, drop) => acc + drop.odds, 0);
-          const aOdds =
-            a.drops.find((drop) => drop.item === item.id)?.odds ?? 0;
-          const bOdds =
-            b.drops.find((drop) => drop.item === item.id)?.odds ?? 0;
-          return bOdds / bTotal - aOdds / aTotal;
-        })
-        .forEach((ruin) => {
-          const span = document.createElement("span");
-          span.setAttribute("data-type", "ruin");
-          span.setAttribute("data-id", ruin.id.toString());
-
-          // 0 = unknown
-          const odds =
-            ruin.drops.find((drop) => drop.item === item.id)?.odds ?? 0;
-          if (odds === 0) {
-            span.textContent = `${ruin.name[store["hordes-lang"]]} (?%)`;
-          } else {
-            const total = ruin.drops.reduce((acc, drop) => acc + drop.odds, 0);
-
-            span.textContent = `${ruin.name[store["hordes-lang"]]} (${+(
-              (odds / total) *
-              100
-            ).toFixed(1)}%)`;
-          }
-
-          ruinDropTag.append(span);
-          ruinDropTag.append(", ");
-        });
-
-      // Remove the last comma and space
-      ruinDropTag.childNodes[ruinDropTag.childNodes.length - 1]?.remove();
-
-      node.append(ruinDropTag);
-    }
-
-    // Buildings that can be built with this item
-    const relatedBuildings = findRelatedBuildings(item);
-    if (relatedBuildings.length) {
-      // Create a buildings tag
-      const buildingsTag = document.createElement("div");
-      buildingsTag.classList.add("item-tag", "item-tag-buildings", "zen-added");
-      buildingsTag.textContent = `${t(T, "usedInBuildings", {
-        count: relatedBuildings.length,
-      })}: `;
-
-      // Limit to 3 buildings outside the wiki
-      const inWiki = node.classList.contains("zen-wiki-item");
-      const displayedBuildings = inWiki
-        ? relatedBuildings
-        : relatedBuildings.slice(0, 3);
-
-      displayedBuildings.forEach((building) => {
-        const icon = document.createElement("img");
-        icon.src = `${ASSETS}/building/${building.icon}.gif`;
-        icon.title = building.name[store["hordes-lang"]];
-        icon.alt = building.name[store["hordes-lang"]];
-        icon.setAttribute("data-type", "building");
-        icon.setAttribute("data-id", building.id);
-        buildingsTag.append(icon);
-      });
-
-      // Add ellipsis if there are more than 3 buildings outside the wiki
-      if (!inWiki && relatedBuildings.length > 3) {
-        const ellipsis = document.createElement("span");
-        ellipsis.textContent = " ...";
-        buildingsTag.append(ellipsis);
-      }
-
-      node.append(buildingsTag);
-    }
-
-    // Recipes/Actions
-    const isBroken = !!node.querySelector("h1 span.broken");
-    const itemRecipes = findRecipes(item, isBroken);
-    const relatedItems = findItemsWithRelatedActions(item, isBroken);
-    if (!itemRecipes.length && !item.actions.length && !relatedItems.length) {
-      return;
-    }
-
-    const table = document.createElement("table");
-    table.classList.add("zen-added");
-    const tbody = document.createElement("tbody");
-    table.append(tbody);
-
-    // Add a row for each recipe
-    itemRecipes.forEach((recipe) => {
-      tbody.append(createLine(item.id, item, recipe));
-    });
-
-    // Special actions for broken items
-    const itemActions: ItemAction[] = isBroken
-      ? [
-          {
-            type: ItemActionType.Use,
-            conditions: [{ item: ItemId.REPAIR_ONE }],
-            effects: [
-              { type: ItemActionEffectType.AP, value: -1 },
-              { type: ItemActionEffectType.CreateItem, value: item.id },
-            ],
-          },
-          {
-            type: ItemActionType.Use,
-            conditions: [{ item: ItemId.REPAIR_KIT }],
-            effects: [
-              { type: ItemActionEffectType.AP, value: -1 },
-              {
-                type: ItemActionEffectType.CreateItem,
-                value: ItemId.REPAIR_KIT_PART,
-              },
-              { type: ItemActionEffectType.CreateItem, value: item.id },
-            ],
-          },
-          {
-            type: ItemActionType.Use,
-            conditions: [ItemActionConditionEnum.Technician],
-            effects: [
-              { type: ItemActionEffectType.CP, value: -3 },
-              { type: ItemActionEffectType.CreateItem, value: item.id },
-            ],
-          },
-        ]
-      : item.actions;
-
-    // Add a row for each action
-    itemActions.forEach((action) => {
-      tbody.append(createLine(item.id, item, action, isBroken || undefined));
-    });
-
-    // Add a row for each related action
-    relatedItems.forEach((otherItem) => {
-      otherItem.actions.forEach((action) => {
-        tbody.append(createLine(item.id, otherItem, action));
-      });
-    });
-
-    node.append(table);
+    // Not an item tooltip, ignore
+    return;
   }
+
+  const processed = node.classList.contains("zen-better-tooltip");
+  if (processed) return;
+
+  node.classList.add("zen-better-tooltip");
+
+  // Ignore status tooltips
+  if (!node.querySelector("h1 img, h4 img")) return;
+
+  const item = findItem(node);
+  if (!item) {
+    console.error("Item not found in tooltip:", node);
+    return;
+  }
+
+  // Set item id as data-tooltip-item-id for later use
+  node.setAttribute("data-tooltip-item-id", item.id);
+
+  // Bank count
+  if (memory.town) {
+    const count =
+      memory.town.bank.find((bankItem) => bankItem.id === item.numericalId)
+        ?.quantity ?? 0;
+    const timestamp = new Date(memory.town.lastUpdate).getTime();
+
+    const bankCountTarget = node.querySelector("h1, h4")?.nextSibling;
+
+    if (!bankCountTarget) {
+      console.error("Bank count target not found in tooltip:", node);
+      return;
+    }
+
+    const bankCount = document.createElement("div");
+    bankCount.classList.add("bank-count", "zen-added");
+    bankCount.textContent = t(T, "bankCount", {
+      count,
+      time: getRelativeTime(timestamp),
+    });
+
+    node.insertBefore(bankCount, bankCountTarget.nextSibling);
+  }
+
+  // Additional info
+  if (item.info) {
+    // Create an info tag
+    const infoTag = document.createElement("div");
+    infoTag.classList.add("item-tag", "item-tag-info", "zen-added");
+    setTextWithIcons(infoTag, item.info[store["hordes-lang"]]);
+    node.append(infoTag);
+  }
+
+  // Unavailable items
+  if (item.available === false) {
+    // Create an info tag
+    const tag = document.createElement("div");
+    tag.classList.add("item-tag", "item-tag-info", "zen-added");
+    tag.textContent = t(T, "unavailable");
+    node.append(tag);
+  }
+
+  // Poisonable
+  if (item.categories.includes(ItemCategory.Poisonable)) {
+    // Create an info tag
+    const tag = document.createElement("div");
+    tag.classList.add("item-tag", "item-tag-poison", "zen-added");
+    tag.textContent = t(T, "poisonable");
+    node.append(tag);
+  }
+
+  // Private town only
+  if (item.categories.includes(ItemCategory.PrivateTown)) {
+    // Create an info tag
+    const tag = document.createElement("div");
+    tag.classList.add("item-tag", "item-tag-private", "zen-added");
+    tag.textContent = t(T, "privateTownOnly");
+    node.append(tag);
+  }
+
+  // Decoration
+  if (item.decoration) {
+    let decorationNode = node.querySelector(".item-tag-deco");
+
+    if (!decorationNode) {
+      // Since S18, decoration nodes don't seem to show up every time
+      // So we create a new one if it doesn't exist
+      decorationNode = document.createElement("div");
+      decorationNode.classList.add("item-tag", "item-tag-deco");
+      decorationNode.textContent = t(T, "item.tag.deco");
+      node.append(decorationNode);
+    }
+
+    const span = document.createElement("span");
+    span.classList.add("zen-item-decoration", "zen-added");
+    const startText = document.createTextNode(`(${item.decoration} `);
+    const icon = document.createElement("img");
+    icon.src = `${ASSETS}/icons/deco.gif`;
+    const endText = document.createTextNode(")");
+    span.append(startText, icon, endText);
+    decorationNode.append(span);
+  }
+
+  // Event
+  if (typeof item.event !== "undefined") {
+    // Create an event tag
+    const eventTag = document.createElement("div");
+    eventTag.classList.add("item-tag", "item-tag-event", "zen-added");
+    eventTag.setAttribute("data-event", item.event.toString());
+    eventTag.textContent = t(T, `event.${item.event}`);
+    node.append(eventTag);
+  }
+
+  // Opens
+  if (item.opens?.length) {
+    // Create an info tag
+    const openTag = document.createElement("div");
+    openTag.classList.add("item-tag", "item-tag-open", "zen-added");
+    openTag.textContent = `${t(T, `canOpen`)}: `;
+
+    item.opens.forEach((itemId) => {
+      const item = items[itemId];
+
+      const inputImg = document.createElement("img");
+      inputImg.src = `${ASSETS}/icons/item/${item.icon}.gif`;
+      inputImg.title = item.name[store["hordes-lang"]];
+      inputImg.setAttribute("data-type", "item");
+      inputImg.setAttribute("data-id", item.id);
+      openTag.append(inputImg);
+    });
+    node.append(openTag);
+  }
+
+  // Openable by
+  if (item.openableBy?.length) {
+    // Create an info tag
+    const openableTag = document.createElement("div");
+    openableTag.classList.add("item-tag", "item-tag-openable", "zen-added");
+    openableTag.textContent = `${t(T, `openableBy`)}: `;
+
+    item.openableBy.forEach((itemId) => {
+      const item = items[itemId];
+
+      const inputImg = document.createElement("img");
+      inputImg.src = `${ASSETS}/icons/item/${item.icon}.gif`;
+      inputImg.title = item.name[store["hordes-lang"]];
+      inputImg.setAttribute("data-type", "item");
+      inputImg.setAttribute("data-id", item.id);
+      openableTag.append(inputImg);
+    });
+    node.append(openableTag);
+  }
+
+  // Drops
+  if (item.drops) {
+    // Create an info tag
+    const dropTag = document.createElement("div");
+    dropTag.classList.add("item-tag", "item-tag-drop", "zen-added");
+    dropTag.textContent = `${t(T, `foundWhenSearching`)}: ${Object.entries(
+      item.drops
+    )
+      .map(([key, value]) => `${t(T, `dropLocation.${key}`)} (${value}%)`)
+      .join(", ")}`;
+    node.append(dropTag);
+  }
+
+  // Ruin drops
+  const ruinDrops = findRuinDrops(item);
+  if (ruinDrops.length) {
+    // Create an ruin drop tag
+    const ruinDropTag = document.createElement("div");
+    ruinDropTag.classList.add("item-tag", "item-tag-ruin-drop", "zen-added");
+
+    const foundIn = document.createElement("span");
+    foundIn.textContent = `${t(T, `foundIn`)}: `;
+    ruinDropTag.append(foundIn);
+
+    ruinDrops
+      .sort((a, b) => {
+        const aTotal = a.drops.reduce((acc, drop) => acc + drop.odds, 0);
+        const bTotal = b.drops.reduce((acc, drop) => acc + drop.odds, 0);
+        const aOdds = a.drops.find((drop) => drop.item === item.id)?.odds ?? 0;
+        const bOdds = b.drops.find((drop) => drop.item === item.id)?.odds ?? 0;
+        return bOdds / bTotal - aOdds / aTotal;
+      })
+      .forEach((ruin) => {
+        const span = document.createElement("span");
+        span.setAttribute("data-type", "ruin");
+        span.setAttribute("data-id", ruin.id.toString());
+
+        // 0 = unknown
+        const odds =
+          ruin.drops.find((drop) => drop.item === item.id)?.odds ?? 0;
+        if (odds === 0) {
+          span.textContent = `${ruin.name[store["hordes-lang"]]} (?%)`;
+        } else {
+          const total = ruin.drops.reduce((acc, drop) => acc + drop.odds, 0);
+
+          span.textContent = `${ruin.name[store["hordes-lang"]]} (${+(
+            (odds / total) *
+            100
+          ).toFixed(1)}%)`;
+        }
+
+        ruinDropTag.append(span);
+        ruinDropTag.append(", ");
+      });
+
+    // Remove the last comma and space
+    ruinDropTag.childNodes[ruinDropTag.childNodes.length - 1]?.remove();
+
+    node.append(ruinDropTag);
+  }
+
+  // Buildings that can be built with this item
+  const relatedBuildings = findRelatedBuildings(item);
+  if (relatedBuildings.length) {
+    // Create a buildings tag
+    const buildingsTag = document.createElement("div");
+    buildingsTag.classList.add("item-tag", "item-tag-buildings", "zen-added");
+    buildingsTag.textContent = `${t(T, "usedInBuildings", {
+      count: relatedBuildings.length,
+    })}: `;
+
+    // Limit to 3 buildings outside the wiki
+    const inWiki = node.classList.contains("zen-wiki-item");
+    const displayedBuildings = inWiki
+      ? relatedBuildings
+      : relatedBuildings.slice(0, 3);
+
+    displayedBuildings.forEach((building) => {
+      const icon = document.createElement("img");
+      icon.src = `${ASSETS}/building/${building.icon}.gif`;
+      icon.title = building.name[store["hordes-lang"]];
+      icon.alt = building.name[store["hordes-lang"]];
+      icon.setAttribute("data-type", "building");
+      icon.setAttribute("data-id", building.id);
+      buildingsTag.append(icon);
+    });
+
+    // Add ellipsis if there are more than 3 buildings outside the wiki
+    if (!inWiki && relatedBuildings.length > 3) {
+      const ellipsis = document.createElement("span");
+      ellipsis.textContent = " ...";
+      buildingsTag.append(ellipsis);
+    }
+
+    node.append(buildingsTag);
+  }
+
+  // Recipes/Actions
+  const isBroken = !!node.querySelector("h1 span.broken");
+  const itemRecipes = findRecipes(item, isBroken);
+  const relatedItems = findItemsWithRelatedActions(item, isBroken);
+  if (!itemRecipes.length && !item.actions.length && !relatedItems.length) {
+    return;
+  }
+
+  const table = document.createElement("table");
+  table.classList.add("zen-added");
+  const tbody = document.createElement("tbody");
+  table.append(tbody);
+
+  // Add a row for each recipe
+  itemRecipes.forEach((recipe) => {
+    tbody.append(createLine(item.id, item, recipe));
+  });
+
+  // Special actions for broken items
+  const itemActions: ItemAction[] = isBroken
+    ? [
+        {
+          type: ItemActionType.Use,
+          conditions: [{ item: ItemId.REPAIR_ONE }],
+          effects: [
+            { type: ItemActionEffectType.AP, value: -1 },
+            { type: ItemActionEffectType.CreateItem, value: item.id },
+          ],
+        },
+        {
+          type: ItemActionType.Use,
+          conditions: [{ item: ItemId.REPAIR_KIT }],
+          effects: [
+            { type: ItemActionEffectType.AP, value: -1 },
+            {
+              type: ItemActionEffectType.CreateItem,
+              value: ItemId.REPAIR_KIT_PART,
+            },
+            { type: ItemActionEffectType.CreateItem, value: item.id },
+          ],
+        },
+        {
+          type: ItemActionType.Use,
+          conditions: [ItemActionConditionEnum.Technician],
+          effects: [
+            { type: ItemActionEffectType.CP, value: -3 },
+            { type: ItemActionEffectType.CreateItem, value: item.id },
+          ],
+        },
+      ]
+    : item.actions;
+
+  // Add a row for each action
+  itemActions.forEach((action) => {
+    tbody.append(createLine(item.id, item, action, isBroken || undefined));
+  });
+
+  // Add a row for each related action
+  relatedItems.forEach((otherItem) => {
+    otherItem.actions.forEach((action) => {
+      tbody.append(createLine(item.id, otherItem, action));
+    });
+  });
+
+  node.append(table);
+};
+
+/** The item tooltips are now updated on the fly, so we need to recalculate everything ... */
+export const updateBetterItemTooltips = (
+  img: HTMLImageElement,
+  oldSrc: string | null,
+  newSrc: string | null
+) => {
+  if (!store["better-tooltips"]) return;
+  if (oldSrc === newSrc) return;
+
+  const tooltip = img.parentElement?.parentElement;
+  if (!tooltip?.classList.contains("zen-better-tooltip")) return;
+
+  // Cleanup old tooltip
+  tooltip.querySelectorAll(".zen-added").forEach((node) => node.remove());
+  tooltip.classList.remove("zen-better-tooltip");
+
+  // Re-insert tooltip with new item
+  insertBetterItemTooltips(tooltip, true);
 };
 
 export const insertBetterMapZoneTooltips = (

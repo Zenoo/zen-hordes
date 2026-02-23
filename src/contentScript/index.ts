@@ -9,6 +9,7 @@ import {
   insertBetterMapZoneTooltips,
   rebuildZoneTooltipAfterClear,
   toggleItemActions,
+  updateBetterItemTooltips,
   updateItemBankCountPeriodically,
 } from "./betterTooltips";
 import {
@@ -26,6 +27,7 @@ import { displayUpdateButton } from "./externalSiteUpdater";
 import { offKey } from "./hooks/offKey";
 import { onClick } from "./hooks/onClick";
 import { onEvent } from "./hooks/onEvent";
+import { onImgSrcChange } from "./hooks/onImgSrcChange";
 import { onKey } from "./hooks/onKey";
 import { onMount } from "./hooks/onMount";
 import {
@@ -117,6 +119,12 @@ import { insertWiki, openItemInWiki } from "./wiki";
     displayInternalMapButton(node);
     updateTownDataPeriodically(node);
     updateZHMap(node);
+  });
+
+  // Actions that need to be performed on img src change
+  // should be handled here
+  onImgSrcChange((img, oldSrc, newSrc) => {
+    updateBetterItemTooltips(img, oldSrc, newSrc);
   });
 
   // Actions that need to be performed on hover
