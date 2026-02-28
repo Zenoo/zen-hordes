@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.15.0...zen-hordes-v1.15.1) (2026-02-28)
+
+
+### Bug Fixes
+
+* Handle new well URL ([173827a](https://github.com/Zenoo/zen-hordes/commit/173827a7a4f70088fd6c935c829bd346f18f6856))
+
 ## [1.15.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.14.9...zen-hordes-v1.15.0) (2026-02-23)
 
 
