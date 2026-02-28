@@ -49,7 +49,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     log("onBeforeRequest", details.url, details);
 
     if (
-      details.url.endsWith("/rest/v1/town/facilities/well") &&
+      details.url.endsWith("/rest/v1/game/town/facilities/well") &&
       details.method === "GET"
     ) {
       // Take ration from the well
