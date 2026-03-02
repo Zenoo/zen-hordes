@@ -2666,10 +2666,10 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Lanza Muertos"
     },
     description: {
-      [Lang.EN]: "Between two corpses, the one thats moving has the best chance of eating you, trick the enemy by catapulting your corpses into the carnivorous crowd of shuffling scum! Each body earns +20 defence points instead of +10.",
-      [Lang.FR]: "Entre deux morts, celui qui bouge a plus de chances de vous bouffer ; trompez l’ennemi en éjectant vos morts dans la masse de zombies ! Chaque mort rapporte +20 points de défense au lieu de +10.",
-      [Lang.DE]: "Von 2 Toten hat derjenige, der sich bewegt, die besten Chancen, dich zu verspeisen. Trickst eure Feinde aus, indem ihr eure Leichen in die herankommende Zombiehorde schleudert. Jeder Tote bringt +20 anstelle von +10 Verteidigungspunkten.",
-      [Lang.ES]: "En una competición entre dos cadáveres, el que se mueve es el que tiene la mejor oportunidad de comerte, ¡engaña al enemigo catapultando vuestros cadáveres hacia la multitud carnívora de escoria putrefacta! Cada cuerpo gana +20 puntos de defensa en lugar de sólo +10."
+      [Lang.EN]: "Between two corpses, the one thats moving has the best chance of eating you, trick the enemy by catapulting your corpses into the carnivorous crowd of shuffling scum! Each body adds +10 defence points.",
+      [Lang.FR]: "Entre deux morts, celui qui bouge a plus de chances de vous bouffer ; trompez l’ennemi en éjectant vos morts dans la masse de zombies ! Chaque mort rapporte +10 points de défense.",
+      [Lang.DE]: "Von 2 Toten hat derjenige, der sich bewegt, die besten Chancen, dich zu verspeisen. Trickst eure Feinde aus, indem ihr eure Leichen in die herankommende Zombiehorde schleudert. Jeder Tote bringt +10 Verteidigungspunkte zusätzlich.",
+      [Lang.ES]: "En una competición entre dos cadáveres, el que se mueve es el que tiene la mejor oportunidad de comerte, ¡engaña al enemigo catapultando vuestros cadáveres hacia la multitud carnívora de escoria putrefacta! Cada cuerpo añade +10 puntos de defensa."
     },
     icon: "small_coffin",
     apNeeded: 85,
@@ -7029,18 +7029,18 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     id: BuildingId.SMALL_PET,
     numericalId: 165,
     name: {
-      [Lang.EN]: "Tamer Experiment Center",
-      [Lang.FR]: "Centre d'essai des Apprivoiseurs",
-      [Lang.DE]: "Experimentelle Klinik der Dompteure",
-      [Lang.ES]: "Centro de pruebas de Domadores"
+      [Lang.EN]: "Tamer's Trap System",
+      [Lang.FR]: "Système de Pièges des Apprivoiseurs",
+      [Lang.DE]: "Fallensystem der Dompteuere",
+      [Lang.ES]: "Sistema de Trampas de Domadores"
     },
     description: {
-      [Lang.EN]: "Some innocently call it a 'veterinary clinic'. But every night the animals' cries wake up the entire South Quarter. In any case, it works: our pets are playful, clean, happy, and, thanks to their training, they can attack zombies that weigh thirty times their weight.",
-      [Lang.FR]: "Certains l'appellent innocemment « clinique vétérinaire ». Mais chaque nuit, les cris des animaux réveillent tout le quartier sud. En tout cas, ça marche : nos animaux sont joueurs, propres, joyeux et, grâce à leur dressage, ils peuvent attaquer des zombies qui pèsent trente fois leur poids.",
-      [Lang.DE]: "Manche nennen es unschuldig eine \"Tierklinik\". Aber jeden Abend wecken die Schreie der Tiere das gesamte Südviertel auf. Auf jeden Fall funktioniert es: Unsere Haustiere sind verspielt, sauber, fröhlich und stürzen sich durch ihr Training routiniert auf Zombies, die dreißigmal so schwer sind wie sie.",
-      [Lang.ES]: "Algunos lo llaman inocentemente «clínica veterinaria». Pero cada noche, los gritos de los animales despiertan a todo el barrio sur. En todo caso, funciona. Nuestras mascotas son más juguetonas, limpias, felices y, gracias a su adiestramiento, pueden atacar a zombies que pesan treinta veces su peso."
+      [Lang.EN]: "No one believed Japhy when he said he could catch a big cat with chewing gum. Yet the feline is here and proving useful: tomorrow's expedition should be calmer with bait like that by your side.This building lets you lure animals into town with food and gives you a space to train them, making them more effective in combat.",
+      [Lang.FR]: "Personne n'y croyait quand Japhy a dit qu'il capturerait un gros chat avec des chewing-gums. Pourtant, le félin est là et il nous rend service : la promenade de demain devrait être plus sereine avec un appât pareil à vos côtés.Ce bâtiment attire des animaux en ville en les piégeant avec de la nourriture et vous donne un espace où les entraîner, ce qui les rend plus efficaces au combat.",
+      [Lang.DE]: "Niemand glaubte Japhy, als er sagte, er würde mit Kaugummi eine Großkatze fangen. Und doch ist das Tier da und leistet uns gute Dienste: Der morgige Ausflug dürfte mit einem solchen Köder an eurer Seite ruhiger verlaufen.\n\nDieses Gebäude lockt Tiere mit Nahrung in die Stadtfalle und bietet euch einen Platz, um sie zu trainieren, wodurch sie im Kampf wirksamer werden.",
+      [Lang.ES]: "Nadie creyó a Japhy cuando dijo que atraparía un gran felino con un simple chicle. Sin embargo, el animal está aquí y nos resulta útil: el paseo de mañana debería ser más tranquilo con este cebo a vuestro lado.Esta construcción permite atraer animales al pueblo usando comida y os ofrece un espacio para entrenarlos, lo que los hará más eficaces en combate."
     },
-    icon: "caged_animal",
+    icon: "tamer_trap",
     apNeeded: 40,
     hp: 40,
     breakable: true,

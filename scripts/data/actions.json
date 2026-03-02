@@ -2239,7 +2239,7 @@
             "meta": [
                 "not_tired",
                 "not_yet_soccer",
-                "no_bonus_ap",
+                "no_bonus_sp",
                 "not_drunk_hide",
                 "is_not_wounded_foot"
             ],
@@ -2278,7 +2278,7 @@
             "meta": [
                 "not_tired",
                 "not_yet_soccer",
-                "no_bonus_ap",
+                "no_bonus_sp",
                 "must_be_drunk",
                 "is_not_wounded_foot"
             ],
@@ -8837,6 +8837,7 @@
         "water_purification_impossible": "Um dieses Wasser trinkbar zu machen, brauchst du <strong>irgendein Reinigungsmittel<\/strong> oder deine Stadt muss über einen <strong>Wasserreiniger<\/strong> verfügen. Die zweite Variante ist nicht verfügbar, wenn Du verbannt bist.",
         "once_a_day": "Du kannst diesen Gegenstand nur <strong>einmal am Tag<\/strong> verwenden...",
         "already_full_ap": "Du hast bereits volle AP.",
+        "already_full_sp": "Du hast bereits volle EP.",
         "already_full_ap_drink": "Du brauchst im Moment <strong>nichts trinken<\/strong>, da du nicht müde bist und noch alle deine Aktionspunkte hast.",
         "pt_required": "Hierfür brauchst du mindestens {pt_min} {pt_name}.",
         "eat_human_meat": "<nt-stat-up-infection><nt-role-up-ghoul>Nach ein paar Sekunden spürst du den furchtbaren Nachgeschmack...<\/nt-role-up-ghoul><\/nt-stat-up-infection>",
