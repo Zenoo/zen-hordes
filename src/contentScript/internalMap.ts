@@ -276,6 +276,8 @@ export const fetchTownData = async () => {
   }
 };
 
+let townDataInterval: number | null = null;
+
 export const updateTownDataPeriodically = (node: HTMLElement) => {
   if (townUpdaterInitialized) return;
   if (!node.classList.contains("town-name")) return;
@@ -286,6 +288,10 @@ export const updateTownDataPeriodically = (node: HTMLElement) => {
     localStorage.getItem("zen-hordes-town-data") || "null"
   );
 
-  setInterval(fetchTownData, 5 * 60 * 1000);
+  if (townDataInterval) {
+    clearInterval(townDataInterval);
+  }
+
+  townDataInterval = window.setInterval(fetchTownData, 5 * 60 * 1000);
   fetchTownData();
 };
