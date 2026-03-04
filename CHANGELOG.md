@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.3](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.15.2...zen-hordes-v1.15.3) (2026-03-04)
+
+
+### Bug Fixes
+
+* prevent multiple intervals for town data fetching ([224cd7c](https://github.com/Zenoo/zen-hordes/commit/224cd7c29cc4313440df602b7c3a31d1f065bcb7))
+
 ## [1.15.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.15.1...zen-hordes-v1.15.2) (2026-03-02)
 
 
