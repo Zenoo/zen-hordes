@@ -1,4 +1,4 @@
-import { ExternalSite } from "./externalSites";
+import { ExternalSite, ExternalSiteData } from "./externalSites";
 import { store } from "./store";
 import { t } from "./translate";
 
@@ -17,14 +17,18 @@ const T: Translations = {
   },
 };
 
-const buildButton = (logo: Element | null, text: string, link: string) => {
+const buildButton = (
+  siteData: ExternalSiteData,
+  text: string,
+  link: string
+) => {
   const button = document.createElement("a");
   button.classList.add("button", "zen-external-link", "center");
   button.href = link;
   button.target = "_blank";
 
   const image = document.createElement("img");
-  image.src = logo?.getAttribute("src") ?? "";
+  image.src = siteData.logo;
   image.alt = text;
   button.appendChild(image);
 
@@ -50,12 +54,9 @@ export const displayExternalCityLinks = (node: HTMLElement) => {
     if (!siteData.townUrl) continue;
 
     const translation = t(T, "link", { site: siteData.name });
-    const logo = document.querySelector(
-      `.app-external[data-id="${siteData.id}"] img`
-    );
     const link = siteData.townUrl.replace("{{townId}}", townId);
 
-    const button = buildButton(logo, translation, link);
+    const button = buildButton(siteData, translation, link);
 
     node
       .querySelector('button[x-ajax-href="/jx/soul/game_history"]')
