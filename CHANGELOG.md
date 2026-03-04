@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.4](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.15.3...zen-hordes-v1.15.4) (2026-03-04)
+
+
+### Bug Fixes
+
+* External city link icon broken ([7bfabc6](https://github.com/Zenoo/zen-hordes/commit/7bfabc69fde88e85df7cc4056f0cd66b4242a44e))
+
 ## [1.15.3](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.15.2...zen-hordes-v1.15.3) (2026-03-04)
 
 
