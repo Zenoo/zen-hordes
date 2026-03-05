@@ -3,7 +3,7 @@ import { ASSETS } from "../utils/constants";
 import { tooltip } from "../utils/tooltip";
 import { notify } from "./notify";
 import { setStore, store } from "./store";
-import { t } from "./translate";
+import { t } from "../utils/translate";
 import { updateShoppingList } from "./wiki";
 
 const T: Translations = {
@@ -89,7 +89,8 @@ ${[1, 2, 3]
       `priority.${priority}`
     )}]
 ${(store["shopping-list"] ?? "||")
-  .split("|")[priority - 1]?.split(",")
+  .split("|")
+  [priority - 1]?.split(",")
   .map((numericalId) => {
     const item = Object.values(items).find(
       (item) => item.numericalId === +numericalId

@@ -6,7 +6,7 @@ import { ExternalSite, ExternalSiteName } from "./externalSites";
 import { fetchTownData } from "./internalMap";
 import { LogEntryType } from "./logEntries";
 import { store } from "./store";
-import { replaceString, t } from "./translate";
+import { replaceString, t } from "../utils/translate";
 
 type ScoutRadar = {
   east?: number;

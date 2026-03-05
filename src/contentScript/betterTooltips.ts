@@ -14,7 +14,7 @@ import {
 import { ASSETS } from "../utils/constants";
 import { insertBetterMapRuinTooltips } from "./ruins";
 import { memory, store } from "./store";
-import { t } from "./translate";
+import { t } from "../utils/translate";
 import { setTextContent } from "./wiki";
 
 // Track mouse position globally

@@ -11,18 +11,21 @@ import {
   FormGroup,
   FormLabel,
   GlobalStyles,
-  Switch,
   TextField,
   ThemeProvider,
   Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
+import { Toggle } from "./components/Toggle";
 import { ExternalSite, ExternalSiteName } from "./contentScript/externalSites";
-import { Version } from "./utils/Version";
-import { theme } from "./utils/theme";
-import { websiteUrls } from "./utils/constants";
+import { store, Store } from "./contentScript/store";
 import gameVersion from "./data/game-version.json";
+import { Version } from "./utils/Version";
+import { setFeature } from "./utils/popup/setFeature";
+import { theme } from "./utils/theme";
+import { t as _t } from "./utils/translate";
+import { sendMessage } from "./utils/popup/sendMessage";
 
 const T: Translations = {
   en: {
@@ -37,6 +40,7 @@ const T: Translations = {
     "max-ap-investment": "Max AP investment in buildings",
     "full-logs": "Show full logs",
     "auto-open-bag": "Auto open bag outside",
+    "default-internal-map": "Open Zen Hordes map by default",
     "external-city-links": "External city history links",
     "update-sites": "External sites to update",
     "user-key": "User key",
@@ -53,6 +57,7 @@ const T: Translations = {
     "max-ap-investment": "PA max investis dans les bâtiments",
     "full-logs": "Afficher les journaux complets",
     "auto-open-bag": "Ouverture automatique du sac à l'extérieur",
+    "default-internal-map": "Ouvrir la carte Zen Hordes par défaut",
     "external-city-links": "Liens externes des historiques des villes",
     "update-sites": "Sites externes à mettre à jour",
     "user-key": "Clé utilisateur",
@@ -69,6 +74,7 @@ const T: Translations = {
     "max-ap-investment": "Maximale AP-Investition in Gebäude",
     "full-logs": "Vollständige Protokolle anzeigen",
     "auto-open-bag": "Rucksack im Freien automatisch öffnen",
+    "default-internal-map": "Zen Hordes-Karte standardmäßig öffnen",
     "external-city-links": "Externe Stadtverlauf-Links",
     "update-sites": "Externe Sites aktualisieren",
     "user-key": "Benutzerschlüssel",
@@ -85,247 +91,60 @@ const T: Translations = {
     "max-ap-investment": "Máxima inversión de AP en edificios",
     "full-logs": "Mostrar registros completos",
     "auto-open-bag": "Abrir bolsa automáticamente afuera",
+    "default-internal-map": "Abrir el mapa de Zen Hordes por defecto",
     "external-city-links": "Enlaces externos de historiales de ciudades",
     "update-sites": "Sitios externos para actualizar",
     "user-key": "Clave de usuario",
   },
 };
 
-const sendMessage = async (message: Message) => {
-  try {
-    const tabs = await chrome.tabs.query({
-      url: websiteUrls,
-    });
-
-    tabs.forEach((tab) => {
-      if (!tab.id) return;
-
-      chrome.tabs.sendMessage<Message>(tab.id, message);
-    });
-  } catch (error) {
-    console.error(error);
-
-    // Interact with the store directly
-    switch (message.action) {
-      case Action.ToggleFeature: {
-        const value = message.value as { feature: string; enabled: unknown };
-        await chrome.storage.sync.set({ [value.feature]: value.enabled });
-        break;
-      }
-      case Action.SetStorage: {
-        const value = message.value as { name: string; value: unknown };
-        await chrome.storage.sync.set({ [value.name]: value.value });
-        break;
-      }
-      default: {
-        console.error("Unknown action:", message.action);
-      }
-    }
-  }
-};
+const toggles: (keyof Store)[] = [
+  "enhance-css",
+  "bank-tracker",
+  "map-preview",
+  "shaman-souls-button",
+  "better-tooltips",
+  "camping-calculator",
+  "shopping-list",
+  "better-reward-titles",
+  "max-ap-investment",
+  "full-logs",
+  "auto-open-bag",
+  "default-internal-map",
+];
 
 const Popup = () => {
-  const [enhanceCss, setEnhanceCss] = useState(true);
-  const [bankTracker, setBankTracker] = useState(true);
-  const [mapPreview, setMapPreview] = useState(true);
-  const [shamanSoulsButton, setShamanSoulsButton] = useState(true);
-  const [betterTooltips, setBetterTooltips] = useState(true);
-  const [campingCalculator, setCampingCalculator] = useState(true);
-  const [shoppingList, setShoppingList] = useState(true);
-  const [betterRewardTitles, setBetterRewardTitles] = useState(true);
-  const [maxApInvestment, setMaxApInvestment] = useState(true);
-  const [fullLogs, setFullLogs] = useState(true);
-  const [autoOpenBag, setAutoOpenBag] = useState(true);
-  const [externalSiteLinks, setExternalSiteLinks] = useState([
-    ExternalSiteName.FM,
-    ExternalSiteName.GH,
-  ]);
-  const [externalSitesToUpdate, setExternalSitesToUpdate] = useState([
-    ExternalSiteName.ZH,
-    ExternalSiteName.FM,
-    ExternalSiteName.GH,
-    ExternalSiteName.MHO,
-  ]);
-  const [userKey, setUserKey] = useState("");
-  const [lang, setLang] = useState<Lang>(Lang.EN);
+  const [storeData, setStoreData] = useState<Store>(structuredClone(store));
 
   // Fetch lang
   useEffect(() => {
     const syncStorage = async () => {
       const data = await chrome.storage.sync.get();
-      setEnhanceCss(
-        typeof data["enhance-css"] === "boolean" ? data["enhance-css"] : true
+      setStoreData(
+        (prev) =>
+          ({
+            ...prev,
+            ...data,
+          } as Store)
       );
-      setBankTracker(
-        typeof data["bank-tracker"] === "boolean" ? data["bank-tracker"] : true
-      );
-      setMapPreview(
-        typeof data["map-preview"] === "boolean" ? data["map-preview"] : true
-      );
-      setShamanSoulsButton(
-        typeof data["shaman-souls-button"] === "boolean"
-          ? data["shaman-souls-button"]
-          : true
-      );
-      setBetterTooltips(
-        typeof data["better-tooltips"] === "boolean"
-          ? data["better-tooltips"]
-          : true
-      );
-      setCampingCalculator(
-        typeof data["camping-calculator"] === "boolean"
-          ? data["camping-calculator"]
-          : true
-      );
-      setShoppingList(typeof data["shopping-list"] === "string");
-      setBetterRewardTitles(
-        typeof data["better-reward-titles"] === "boolean"
-          ? data["better-reward-titles"]
-          : true
-      );
-      setMaxApInvestment(
-        typeof data["max-ap-investment"] === "boolean"
-          ? data["max-ap-investment"]
-          : true
-      );
-      setFullLogs(
-        typeof data["full-logs"] === "boolean" ? data["full-logs"] : true
-      );
-      setAutoOpenBag(
-        typeof data["auto-open-bag"] === "boolean"
-          ? data["auto-open-bag"]
-          : true
-      );
-      setExternalSiteLinks(
-        (data["external-city-links"] as ExternalSiteName[] | undefined) ?? [
-          ExternalSiteName.FM,
-          ExternalSiteName.GH,
-        ]
-      );
-      setExternalSitesToUpdate(
-        (data["external-sites-to-update"] as
-          | ExternalSiteName[]
-          | undefined) ?? [
-          ExternalSiteName.ZH,
-          ExternalSiteName.FM,
-          ExternalSiteName.GH,
-          ExternalSiteName.MHO,
-        ]
-      );
-      setUserKey(data["user-key"] ? String(data["user-key"]) : "");
-      setLang((data["hordes-lang"] as Lang | undefined) ?? Lang.EN);
     };
 
     syncStorage().catch(console.error);
   }, []);
 
-  const t = (key: string, replacements?: Record<string, string>) => {
-    let translation = T[lang]?.[key] ?? key;
-
-    if (replacements) {
-      for (const [placeholder, value] of Object.entries(replacements)) {
-        translation = translation.replace(
-          new RegExp(`{{${placeholder}}}`, "g"),
-          value
-        );
-      }
-    }
-
-    return translation;
-  };
-
-  const setFeature = async (feature: string, value: unknown) => {
-    await sendMessage({
-      action: Action.ToggleFeature,
-      value: { feature, enabled: value },
-    });
-  };
-
-  const handleEnhanceCssChange = async (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setEnhanceCss(event.target.checked);
-    await setFeature("enhance-css", event.target.checked);
-  };
-
-  const handleBankTrackerChange = async (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setBankTracker(event.target.checked);
-    await setFeature("bank-tracker", event.target.checked);
-  };
-
-  const handleMapPreviewChange = async (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setMapPreview(event.target.checked);
-    await setFeature("map-preview", event.target.checked);
-  };
-
-  const handleShamanSoulsButtonChange = async (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setShamanSoulsButton(event.target.checked);
-    await setFeature("shaman-souls-button", event.target.checked);
-  };
-
-  const handleBetterTooltipsChange = async (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setBetterTooltips(event.target.checked);
-    await setFeature("better-tooltips", event.target.checked);
-  };
-
-  const handleCampingCalculatorChange = async (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setCampingCalculator(event.target.checked);
-    await setFeature("camping-calculator", event.target.checked);
-  };
-
-  const handleShoppingListChange = async (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setShoppingList(event.target.checked);
-    await setFeature("shopping-list", event.target.checked);
-  };
-
-  const handleBetterRewardTitlesChange = async (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setBetterRewardTitles(event.target.checked);
-    await setFeature("better-reward-titles", event.target.checked);
-  };
-
-  const handleMaxApInvestmentChange = async (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setMaxApInvestment(event.target.checked);
-    await setFeature("max-ap-investment", event.target.checked);
-  };
-
-  const handleFullLogsChange = async (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setFullLogs(event.target.checked);
-    await setFeature("full-logs", event.target.checked);
-  };
-
-  const handleAutoOpenBagChange = async (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setAutoOpenBag(event.target.checked);
-    await setFeature("auto-open-bag", event.target.checked);
-  };
+  const t = (key: string) => _t(T, key, undefined, storeData["hordes-lang"]);
 
   const handleExternalSiteLinksChange =
     (name: ExternalSiteName) =>
     async (event: React.ChangeEvent<HTMLInputElement>) => {
       const updatedExternalSiteLinks = event.target.checked
-        ? [...externalSiteLinks, name]
-        : externalSiteLinks.filter((link) => link !== name);
+        ? [...storeData["external-city-links"], name]
+        : storeData["external-city-links"].filter((link) => link !== name);
 
-      setExternalSiteLinks(updatedExternalSiteLinks);
+      setStoreData((prev) => ({
+        ...prev,
+        "external-city-links": updatedExternalSiteLinks,
+      }));
       await setFeature("external-city-links", updatedExternalSiteLinks);
     };
 
@@ -333,10 +152,13 @@ const Popup = () => {
     (name: ExternalSiteName) =>
     async (event: React.ChangeEvent<HTMLInputElement>) => {
       const updatedExternalSitesToUpdate = event.target.checked
-        ? [...externalSitesToUpdate, name]
-        : externalSitesToUpdate.filter((site) => site !== name);
+        ? [...storeData["external-sites-to-update"], name]
+        : storeData["external-sites-to-update"].filter((site) => site !== name);
 
-      setExternalSitesToUpdate(updatedExternalSitesToUpdate);
+      setStoreData((prev) => ({
+        ...prev,
+        "external-sites-to-update": updatedExternalSitesToUpdate,
+      }));
       await setFeature(
         "external-sites-to-update",
         updatedExternalSitesToUpdate
@@ -346,7 +168,10 @@ const Popup = () => {
   const handleUserKeyChange = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    setUserKey(event.target.value);
+    setStoreData((prev) => ({
+      ...prev,
+      "user-key": event.target.value,
+    }));
     await sendMessage({
       action: Action.SetStorage,
       value: { name: "user-key", value: event.target.value },
@@ -367,171 +192,25 @@ const Popup = () => {
         Zen Hordes
       </Typography>
       <FormGroup>
-        <FormControlLabel
-          control={
-            <Switch
-              checked={enhanceCss}
-              onChange={handleEnhanceCssChange}
-              size="small"
-            />
-          }
-          label={
-            <Typography variant="body2" sx={{ ml: 0.5 }}>
-              {t("enhance-css")}
-            </Typography>
-          }
-          sx={{ mx: 1 }}
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={bankTracker}
-              onChange={handleBankTrackerChange}
-              size="small"
-            />
-          }
-          label={
-            <Typography variant="body2" sx={{ ml: 0.5 }}>
-              {t("bank-tracker")}
-            </Typography>
-          }
-          sx={{ mx: 1 }}
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={mapPreview}
-              onChange={handleMapPreviewChange}
-              size="small"
-            />
-          }
-          label={
-            <Typography variant="body2" sx={{ ml: 0.5 }}>
-              {t("map-preview")}
-            </Typography>
-          }
-          sx={{ mx: 1 }}
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={shamanSoulsButton}
-              onChange={handleShamanSoulsButtonChange}
-              size="small"
-            />
-          }
-          label={
-            <Typography variant="body2" sx={{ ml: 0.5 }}>
-              {t("shaman-souls-button")}
-            </Typography>
-          }
-          sx={{ mx: 1 }}
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={betterTooltips}
-              onChange={handleBetterTooltipsChange}
-              size="small"
-            />
-          }
-          label={
-            <Typography variant="body2" sx={{ ml: 0.5 }}>
-              {t("better-tooltips")}
-            </Typography>
-          }
-          sx={{ mx: 1 }}
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={campingCalculator}
-              onChange={handleCampingCalculatorChange}
-              size="small"
-            />
-          }
-          label={
-            <Typography variant="body2" sx={{ ml: 0.5 }}>
-              {t("camping-calculator")}
-            </Typography>
-          }
-          sx={{ mx: 1 }}
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={shoppingList}
-              onChange={handleShoppingListChange}
-              size="small"
-            />
-          }
-          label={
-            <Typography variant="body2" sx={{ ml: 0.5 }}>
-              {t("shopping-list")}
-            </Typography>
-          }
-          sx={{ mx: 1 }}
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={betterRewardTitles}
-              onChange={handleBetterRewardTitlesChange}
-              size="small"
-            />
-          }
-          label={
-            <Typography variant="body2" sx={{ ml: 0.5 }}>
-              {t("better-reward-titles")}
-            </Typography>
-          }
-          sx={{ mx: 1 }}
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={maxApInvestment}
-              onChange={handleMaxApInvestmentChange}
-              size="small"
-            />
-          }
-          label={
-            <Typography variant="body2" sx={{ ml: 0.5 }}>
-              {t("max-ap-investment")}
-            </Typography>
-          }
-          sx={{ mx: 1 }}
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={fullLogs}
-              onChange={handleFullLogsChange}
-              size="small"
-            />
-          }
-          label={
-            <Typography variant="body2" sx={{ ml: 0.5 }}>
-              {t("full-logs")}
-            </Typography>
-          }
-          sx={{ mx: 1 }}
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={autoOpenBag}
-              onChange={handleAutoOpenBagChange}
-              size="small"
-            />
-          }
-          label={
-            <Typography variant="body2" sx={{ ml: 0.5 }}>
-              {t("auto-open-bag")}
-            </Typography>
-          }
-          sx={{ mx: 1 }}
-        />
+        {toggles.map((feature) => (
+          <Toggle
+            key={feature}
+            data={storeData}
+            feature={feature}
+            getter={
+              feature === "shopping-list"
+                ? (data) => typeof data[feature] === "string"
+                : undefined
+            }
+            setter={setStoreData}
+            setterFormatter={
+              feature === "shopping-list"
+                ? (value) => (value ? "" : undefined)
+                : undefined
+            }
+            label={t(feature)}
+          />
+        ))}
         <Divider sx={{ my: 1 }} />
         <FormControl component="fieldset" size="small" sx={{ mx: 1 }}>
           <FormLabel component="legend" sx={{ typography: "body2" }}>
@@ -546,7 +225,9 @@ const Popup = () => {
                     value={name}
                     control={
                       <Checkbox
-                        checked={externalSiteLinks.includes(name)}
+                        checked={storeData["external-city-links"].includes(
+                          name
+                        )}
                         onChange={handleExternalSiteLinksChange(name)}
                         size="small"
                       />
@@ -574,7 +255,9 @@ const Popup = () => {
                     value={name}
                     control={
                       <Checkbox
-                        checked={externalSitesToUpdate.includes(name)}
+                        checked={storeData["external-sites-to-update"].includes(
+                          name
+                        )}
                         onChange={handleExternalSitesToUpdateChange(name)}
                         size="small"
                       />
@@ -592,7 +275,7 @@ const Popup = () => {
         <Divider sx={{ my: 1 }} />
         <TextField
           label={t("user-key")}
-          value={userKey}
+          value={storeData["user-key"]}
           onChange={handleUserKeyChange}
           size="small"
           sx={{ m: 1 }}

@@ -17,7 +17,7 @@ import {
   setShoppingList,
 } from "./shoppingList";
 import { setStore, store } from "./store";
-import { t } from "./translate";
+import { t } from "../utils/translate";
 
 const itemCategories = [
   { type: "all", icon: "icons/small_move.gif" },

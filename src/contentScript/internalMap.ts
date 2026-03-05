@@ -4,7 +4,7 @@ import { Server } from "../utils/server";
 import { getRelativeTime } from "./betterTooltips";
 import { getTownId } from "./externalSiteUpdater";
 import { memory, store } from "./store";
-import { t } from "./translate";
+import { t } from "../utils/translate";
 
 const T: Translations = {
   en: {
@@ -252,6 +252,10 @@ export const displayInternalMapButton = (_node: HTMLElement) => {
     button.classList.toggle("hide-tags");
     button.classList.toggle("show-tags");
   });
+
+  if (store["default-internal-map"]) {
+    button.click();
+  }
 };
 
 let townUpdaterInitialized = false;

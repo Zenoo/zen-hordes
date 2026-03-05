@@ -7,7 +7,7 @@ import { positionElement } from "../utils/position";
 import { tooltip } from "../utils/tooltip";
 import { notify, Severity } from "./notify";
 import { setStore, store } from "./store";
-import { t } from "./translate";
+import { t } from "../utils/translate";
 
 const T: Translations = {
   en: {
@@ -496,56 +496,56 @@ const updateCampingResult = () => {
             ? 65
             : 80
           : params.reclusiveLevel
-            ? 10
-            : 20;
+          ? 10
+          : 20;
       case 2:
         return params.pandemonium
           ? params.reclusiveLevel
             ? 70
             : 90
           : params.reclusiveLevel
-            ? 20
-            : 45;
+          ? 20
+          : 45;
       case 3:
         return params.pandemonium
           ? params.reclusiveLevel
             ? 80
             : 100
           : params.reclusiveLevel
-            ? 40
-            : 65;
+          ? 40
+          : 65;
       case 4:
         return params.pandemonium
           ? params.reclusiveLevel
             ? 90
             : 110
           : params.reclusiveLevel
-            ? 50
-            : 80;
+          ? 50
+          : 80;
       case 5:
         return params.pandemonium
           ? params.reclusiveLevel
             ? 100
             : 160
           : params.reclusiveLevel
-            ? 60
-            : 130;
+          ? 60
+          : 130;
       case 6:
         return params.pandemonium
           ? params.reclusiveLevel > 1
             ? 110
             : 210
           : params.reclusiveLevel > 1
-            ? 80
-            : 180;
+          ? 80
+          : 180;
       case 7:
         return params.pandemonium
           ? params.reclusiveLevel > 1
             ? 160
             : 310
           : params.reclusiveLevel > 1
-            ? 130
-            : 280;
+          ? 130
+          : 280;
       default:
         return params.pandemonium ? 510 : 480;
     }
@@ -590,8 +590,8 @@ const updateCampingResult = () => {
     params.job === Job.Survivalist
       ? 999
       : params.reclusiveLevel === 4
-        ? 99
-        : 90;
+      ? 99
+      : 90;
 
   total = Math.min(max, total);
   result.total = total;
@@ -1597,11 +1597,14 @@ export const updateCampingCalculatorWithCurrentParams = (
 
   if (foundJob) {
     shouldGoThrough = true;
-  } else if (node?.getAttribute("for") === "zone-camp") { // Load/click on camping inspection
+  } else if (node?.getAttribute("for") === "zone-camp") {
+    // Load/click on camping inspection
     shouldGoThrough = true;
-  } else if (node?.classList.contains("zone-dist")) { // Load distance info
+  } else if (node?.classList.contains("zone-dist")) {
+    // Load distance info
     shouldGoThrough = true;
-  } else if (calculator) { // Manual trigger via code
+  } else if (calculator) {
+    // Manual trigger via code
     shouldGoThrough = true;
   }
 
@@ -1732,19 +1735,22 @@ export const triggerCampingCalculatorUpdateOnJobLoad = (e: Event) => {
   if (!store["camping-calculator"]) return;
   if (location.pathname !== "/jx/beyond/desert/cached") return;
 
-  const eventDetails = (e as CustomEvent<{
-    data: {
-      id: number;
-    }[]
-  }>).detail;
-  if (!eventDetails || !eventDetails.data || !Array.isArray(eventDetails.data)) return;
+  const eventDetails = (
+    e as CustomEvent<{
+      data: {
+        id: number;
+      }[];
+    }>
+  ).detail;
+  if (!eventDetails || !eventDetails.data || !Array.isArray(eventDetails.data))
+    return;
 
   const potentialJobs: Job[] = [];
 
   for (const item of eventDetails.data) {
     // Check if the item is a job item
     for (const [currentJob, itemIds] of Object.entries(jobItems)) {
-      if (itemIds.some((id) => items[id].numericalId === item.id) ) {
+      if (itemIds.some((id) => items[id].numericalId === item.id)) {
         potentialJobs.push(+currentJob as Job);
       }
     }

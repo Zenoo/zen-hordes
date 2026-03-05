@@ -8,7 +8,7 @@ import {
   insertBetterItemTooltips,
 } from "./betterTooltips";
 import { store } from "./store";
-import { t } from "./translate";
+import { t } from "../utils/translate";
 import { openItemInWiki, setTextContent } from "./wiki";
 
 const T: Translations = {

@@ -1,4 +1,4 @@
-import { t } from "./translate";
+import { t } from "../utils/translate";
 
 const T: Translations = {
   en: {

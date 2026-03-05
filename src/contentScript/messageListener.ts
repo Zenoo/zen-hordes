@@ -253,6 +253,27 @@ export const listenToBackgroundMessages = async () => {
               setStore("auto-open-bag", !!value.enabled);
               break;
             }
+            case "default-internal-map": {
+              const newValue = !!value.enabled;
+
+              setStore("default-internal-map", newValue);
+
+              const mapButton = document.querySelector<HTMLButtonElement>(
+                ".zen-internal-map-button"
+              );
+
+              if (mapButton) {
+                if (newValue && !mapButton.classList.contains("show-tags")) {
+                  mapButton.click();
+                } else if (
+                  !newValue &&
+                  mapButton.classList.contains("show-tags")
+                ) {
+                  mapButton.click();
+                }
+              }
+              break;
+            }
             default: {
               console.error("Unknown feature:", value.feature);
             }

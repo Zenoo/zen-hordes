@@ -22,6 +22,7 @@ export const store = {
   "max-ap-investment": true,
   "full-logs": true,
   "auto-open-bag": true,
+  "default-internal-map": true,
   // Bank tracker state
   "bank-last-items-taken": [] as {
     item: ItemId;

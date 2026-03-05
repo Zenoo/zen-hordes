@@ -2,7 +2,7 @@ import { items } from "../data/items";
 import { ItemId } from "../data/types";
 import { ASSETS } from "../utils/constants";
 import { setStore, store } from "./store";
-import { t } from "./translate";
+import { t } from "../utils/translate";
 
 const MAX_ITEMS_TAKEN = 5;
 const MAX_ITEMS_TAKEN_CHAOS = 10;

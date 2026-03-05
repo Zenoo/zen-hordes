@@ -1,4 +1,4 @@
-import { store } from "./store";
+import { store } from "../contentScript/store";
 
 export const replaceString = (
   str: string,
@@ -13,9 +13,10 @@ export const replaceString = (
 export const t = (
   T: Translations,
   key: string,
-  replacements?: Partial<Record<string, string | number>>
+  replacements?: Partial<Record<string, string | number>>,
+  language?: Lang
 ) => {
-  const lang = store["hordes-lang"];
+  const lang = language ?? store["hordes-lang"];
   let translationKey = key;
 
   // Handle pluralization if "count" is present in replacements

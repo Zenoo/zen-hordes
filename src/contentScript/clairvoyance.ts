@@ -3,7 +3,7 @@ import { BuildingId } from "../data/types";
 import { ASSETS } from "../utils/constants";
 import { LogEntryType } from "./logEntries";
 import { store } from "./store";
-import { t } from "./translate";
+import { t } from "../utils/translate";
 
 const T: Translations = {
   en: {
@@ -126,7 +126,10 @@ const checkers = {
     );
     if (!registryBuilt) return ClairvoyanceStatus.MAYBE;
 
-    return hasLogEntry(LogEntryType.WORK_ON_BUILDING) || hasLogEntry(LogEntryType.REPAIRED_BUILDING);
+    return (
+      hasLogEntry(LogEntryType.WORK_ON_BUILDING) ||
+      hasLogEntry(LogEntryType.REPAIRED_BUILDING)
+    );
   },
   lookedAtForum: () => {
     return ClairvoyanceStatus.MAYBE;

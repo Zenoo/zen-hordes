@@ -3,7 +3,7 @@ import { Reward, RewardId } from "../data/types";
 import { ASSETS } from "../utils/constants";
 import { tooltip } from "../utils/tooltip";
 import { store } from "./store";
-import { t } from "./translate";
+import { t } from "../utils/translate";
 
 const T: Translations = {
   en: {

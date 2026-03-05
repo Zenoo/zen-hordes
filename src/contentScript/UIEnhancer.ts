@@ -7,7 +7,7 @@ import {
   buildRuinDrops,
 } from "./ruins";
 import { store } from "./store";
-import { t } from "./translate";
+import { t } from "../utils/translate";
 import { setTextContent } from "./wiki";
 
 const T: Translations = {
