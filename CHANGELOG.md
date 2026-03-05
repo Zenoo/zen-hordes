@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.5](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.15.4...zen-hordes-v1.15.5) (2026-03-05)
+
+
+### Bug Fixes
+
+* Toggle to open ZH map by default + Popup refactoring ([5fc303d](https://github.com/Zenoo/zen-hordes/commit/5fc303dd179425cfe0e7a2755638e0ded5e35da2))
+
 ## [1.15.4](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.15.3...zen-hordes-v1.15.4) (2026-03-04)
 
 
