@@ -25,6 +25,7 @@ import {
 import { displayExternalCityLinks } from "./externalCityLink";
 import { displayUpdateButton } from "./externalSiteUpdater";
 import { offKey } from "./hooks/offKey";
+import { onClassChange } from "./hooks/onClassChange";
 import { onClick } from "./hooks/onClick";
 import { onEvent } from "./hooks/onEvent";
 import { onImgSrcChange } from "./hooks/onImgSrcChange";
@@ -32,6 +33,7 @@ import { onKey } from "./hooks/onKey";
 import { onMount } from "./hooks/onMount";
 import {
   displayInternalMapButton,
+  updateInternalMapZonesOnMove,
   updateTownDataPeriodically,
   updateZHMap,
 } from "./internalMap";
@@ -126,6 +128,10 @@ import { insertWiki, openItemInWiki } from "./wiki";
   onImgSrcChange((img, oldSrc, newSrc) => {
     updateBetterItemTooltips(img, oldSrc, newSrc);
   });
+
+  // Actions that need to be performed on class change
+  // should be handled here
+  onClassChange("zone", updateInternalMapZonesOnMove);
 
   // Actions that need to be performed on hover
   // should be handled here

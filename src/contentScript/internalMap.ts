@@ -1,6 +1,6 @@
 import { items } from "../data/items";
 import { ASSETS } from "../utils/constants";
-import { Server } from "../utils/server";
+import { Server, TownResponse } from "../utils/server";
 import { getRelativeTime } from "./betterTooltips";
 import { getTownId } from "./externalSiteUpdater";
 import { memory, store } from "./store";
@@ -25,14 +25,181 @@ const T: Translations = {
   },
 };
 
-export const updateZHMap = (node?: HTMLElement) => {
+const updateZone = (
+  zone: HTMLElement,
+  citizenLocations: Map<string, string[]>
+) => {
   if (!memory.town) return;
-  if (node && !node.classList.contains("zone-grid")) return;
 
-  const zones = (node ?? document).querySelectorAll<HTMLElement>(".zone");
+  const [_y, _x] = zone.style.gridArea.replace(/ /g, "").split("/");
 
-  // Citizen locations
-  const hasCitizens = memory.town.citizens.reduce((map, citizen) => {
+  if (!_x || !_y) return;
+
+  const x = +_x - memory.town.x - 1;
+  const y = -(+_y - memory.town.y - 1);
+
+  const zoneData = memory.town.zones.find((z) => z.x === x && z.y === y);
+  if (!zoneData) return;
+
+  // Depleted
+  if (zoneData.depleted) {
+    zone.classList.add("zen-depleted");
+  } else {
+    zone.classList.remove("zen-depleted");
+  }
+
+  // Not visited today
+  if (zoneData.zombies === null && zoneData.dangerLevel === null) {
+    if (!zoneData.visitedToday) {
+      zone.classList.add("zen-past");
+    } else {
+      zone.classList.remove("zen-past");
+    }
+  }
+
+  // Danger color
+  zone.classList.remove(
+    "zen-danger-0",
+    "zen-danger-1",
+    "zen-danger-2",
+    "zen-danger-3"
+  );
+  zone.classList.add(`zen-danger-${zoneData.dangerLevel}`);
+
+  // Citizens
+  const key = `${x},${y}`;
+  const citizenList = citizenLocations.get(key) ?? [];
+
+  if (citizenList.length > 0) {
+    // Add citizen_marker if not already present
+    if (
+      !zone.querySelector(".citizen_marker") &&
+      !zone.querySelector(".zen-citizen_marker")
+    ) {
+      const marker = document.createElement("div");
+      marker.classList.add("zen-citizen_marker");
+      zone.appendChild(marker);
+    }
+  } else {
+    // Remove citizen_marker if no citizens present
+    const existingMarker = zone.querySelector(".zen-citizen_marker");
+    if (existingMarker) {
+      existingMarker.remove();
+    }
+  }
+
+  // Zombies
+  const zombiesCount = zoneData.zombies
+    ? zoneData.zombies
+    : zoneData.dangerLevel === 3
+    ? "6+"
+    : zoneData.dangerLevel === 2
+    ? "3-5"
+    : zoneData.dangerLevel === 1
+    ? "1-2"
+    : zoneData.dangerLevel === 0
+    ? "0"
+    : "?";
+
+  // Update tooltip data
+  const tooltip = document.querySelector<HTMLElement>(
+    `.zen-better-zone-tooltip[data-x="${x}"][data-y="${y}"]`
+  );
+
+  if (!tooltip) return;
+
+  let tooltipMapDataWrapper = tooltip.querySelector<HTMLElement>(
+    ".zen-tooltip-map-data"
+  );
+  if (tooltipMapDataWrapper) {
+    tooltipMapDataWrapper.remove();
+  }
+
+  tooltipMapDataWrapper = document.createElement("div");
+  tooltipMapDataWrapper.classList.add("zen-tooltip-map-data");
+
+  const header = document.createElement("div");
+  header.classList.add("zen-tooltip-map-data-header");
+
+  // Citizens
+  const citizenCountWrapper = document.createElement("div");
+  citizenCountWrapper.classList.add("zen-citizen-count-wrapper");
+
+  const citizenCountText = document.createElement("span");
+  citizenCountText.classList.add("zen-citizen-count");
+  citizenCountText.textContent = `${citizenList.length}`;
+  citizenCountWrapper.appendChild(citizenCountText);
+
+  const citizenIcon = document.createElement("img");
+  citizenIcon.classList.add("zen-citizen-icon");
+  citizenIcon.src = `${ASSETS}/icons/map/map_icon_citizen.png`;
+  citizenCountWrapper.appendChild(citizenIcon);
+  header.appendChild(citizenCountWrapper);
+
+  // Zombies
+  const zombieCountWrapper = document.createElement("div");
+  zombieCountWrapper.classList.add("zen-zombie-count-wrapper");
+
+  const zombieCountText = document.createElement("span");
+  zombieCountText.classList.add("zen-zombie-count");
+  zombieCountText.textContent = `${zombiesCount}`;
+  zombieCountWrapper.appendChild(zombieCountText);
+
+  const zombieIcon = document.createElement("img");
+  zombieIcon.classList.add("zen-zombie-icon");
+  zombieIcon.src = `${ASSETS}/icons/map/map_icon_zombie.png`;
+  zombieCountWrapper.appendChild(zombieIcon);
+  header.appendChild(zombieCountWrapper);
+
+  tooltipMapDataWrapper.appendChild(header);
+
+  // Citizen names
+  if (citizenList.length > 0) {
+    const names = document.createElement("div");
+    names.classList.add("zen-citizen-names");
+    names.textContent = citizenList.join(", ");
+    tooltipMapDataWrapper.appendChild(names);
+  }
+
+  // Items
+  if (zoneData.items && zoneData.items.length > 0) {
+    const itemsWrapper = document.createElement("div");
+    itemsWrapper.classList.add("zen-items-wrapper");
+
+    for (const item of zoneData.items) {
+      for (let i = 0; i < item.quantity; i++) {
+        const itemData = Object.values(items).find(
+          (it) => it.numericalId === item.id
+        );
+
+        if (!itemData) continue;
+
+        const itemIcon = document.createElement("img");
+        itemIcon.classList.add("zen-item-icon");
+        itemIcon.src = `${ASSETS}/icons/item/${itemData.icon}.gif`;
+        itemsWrapper.appendChild(itemIcon);
+      }
+    }
+
+    tooltipMapDataWrapper.appendChild(itemsWrapper);
+  }
+
+  // Last update
+  if (zoneData.updatedAt) {
+    const lastUpdate = document.createElement("div");
+    lastUpdate.classList.add("zen-last-update");
+    const date = new Date(zoneData.updatedAt);
+    lastUpdate.textContent = t(T, "lastUpdate", {
+      relativeTime: getRelativeTime(date.getTime()),
+    });
+    tooltipMapDataWrapper.appendChild(lastUpdate);
+  }
+
+  tooltip.appendChild(tooltipMapDataWrapper);
+};
+
+const getCitizenLocations = (town: NonNullable<TownResponse["town"]>) => {
+  return town.citizens.reduce((map, citizen) => {
     if (!memory.town) return map;
     if (citizen.dead) return map;
 
@@ -40,173 +207,19 @@ export const updateZHMap = (node?: HTMLElement) => {
     map.set(key, [...(map.get(key) ?? []), citizen.name]);
     return map;
   }, new Map<string, string[]>());
+};
+
+export const updateZHMap = (node?: HTMLElement) => {
+  if (!memory.town) return;
+  if (node && !node.classList.contains("zone-grid")) return;
+
+  const zones = (node ?? document).querySelectorAll<HTMLElement>(".zone");
+
+  // Citizen locations
+  const citizenLocations = getCitizenLocations(memory.town);
 
   for (const zone of zones) {
-    const [_y, _x] = zone.style.gridArea.replace(/ /g, "").split("/");
-
-    if (!_x || !_y) continue;
-
-    const x = +_x - memory.town.x - 1;
-    const y = -(+_y - memory.town.y - 1);
-
-    const zoneData = memory.town.zones.find((z) => z.x === x && z.y === y);
-    if (!zoneData) continue;
-
-    // Depleted
-    if (zoneData.depleted) {
-      zone.classList.add("zen-depleted");
-    } else {
-      zone.classList.remove("zen-depleted");
-    }
-
-    // Not visited today
-    if (zoneData.zombies === null && zoneData.dangerLevel === null) {
-      if (!zoneData.visitedToday) {
-        zone.classList.add("zen-past");
-      } else {
-        zone.classList.remove("zen-past");
-      }
-    }
-
-    // Danger color
-    zone.classList.remove(
-      "zen-danger-0",
-      "zen-danger-1",
-      "zen-danger-2",
-      "zen-danger-3"
-    );
-    zone.classList.add(`zen-danger-${zoneData.dangerLevel}`);
-
-    // Citizens
-    const key = `${x},${y}`;
-    const citizenList = hasCitizens.get(key) ?? [];
-
-    if (citizenList.length > 0) {
-      // Add citizen_marker if not already present
-      if (
-        !zone.querySelector(".citizen_marker") &&
-        !zone.querySelector(".zen-citizen_marker")
-      ) {
-        const marker = document.createElement("div");
-        marker.classList.add("zen-citizen_marker");
-        zone.appendChild(marker);
-      }
-    } else {
-      // Remove citizen_marker if no citizens present
-      const existingMarker = zone.querySelector(".zen-citizen_marker");
-      if (existingMarker) {
-        existingMarker.remove();
-      }
-    }
-
-    // Zombies
-    const zombiesCount = zoneData.zombies
-      ? zoneData.zombies
-      : zoneData.dangerLevel === 3
-      ? "6+"
-      : zoneData.dangerLevel === 2
-      ? "3-5"
-      : zoneData.dangerLevel === 1
-      ? "1-2"
-      : zoneData.dangerLevel === 0
-      ? "0"
-      : "?";
-
-    // Update tooltip data
-    const tooltip = document.querySelector<HTMLElement>(
-      `.zen-better-zone-tooltip[data-x="${x}"][data-y="${y}"]`
-    );
-
-    if (!tooltip) continue;
-
-    let tooltipMapDataWrapper = tooltip.querySelector<HTMLElement>(
-      ".zen-tooltip-map-data"
-    );
-    if (tooltipMapDataWrapper) {
-      tooltipMapDataWrapper.remove();
-    }
-
-    tooltipMapDataWrapper = document.createElement("div");
-    tooltipMapDataWrapper.classList.add("zen-tooltip-map-data");
-
-    const header = document.createElement("div");
-    header.classList.add("zen-tooltip-map-data-header");
-
-    // Citizens
-    const citizenCountWrapper = document.createElement("div");
-    citizenCountWrapper.classList.add("zen-citizen-count-wrapper");
-
-    const citizenCountText = document.createElement("span");
-    citizenCountText.classList.add("zen-citizen-count");
-    citizenCountText.textContent = `${citizenList.length}`;
-    citizenCountWrapper.appendChild(citizenCountText);
-
-    const citizenIcon = document.createElement("img");
-    citizenIcon.classList.add("zen-citizen-icon");
-    citizenIcon.src = `${ASSETS}/icons/map/map_icon_citizen.png`;
-    citizenCountWrapper.appendChild(citizenIcon);
-    header.appendChild(citizenCountWrapper);
-
-    // Zombies
-    const zombieCountWrapper = document.createElement("div");
-    zombieCountWrapper.classList.add("zen-zombie-count-wrapper");
-
-    const zombieCountText = document.createElement("span");
-    zombieCountText.classList.add("zen-zombie-count");
-    zombieCountText.textContent = `${zombiesCount}`;
-    zombieCountWrapper.appendChild(zombieCountText);
-
-    const zombieIcon = document.createElement("img");
-    zombieIcon.classList.add("zen-zombie-icon");
-    zombieIcon.src = `${ASSETS}/icons/map/map_icon_zombie.png`;
-    zombieCountWrapper.appendChild(zombieIcon);
-    header.appendChild(zombieCountWrapper);
-
-    tooltipMapDataWrapper.appendChild(header);
-
-    // Citizen names
-    if (citizenList.length > 0) {
-      const names = document.createElement("div");
-      names.classList.add("zen-citizen-names");
-      names.textContent = citizenList.join(", ");
-      tooltipMapDataWrapper.appendChild(names);
-    }
-
-    // Items
-    if (zoneData.items && zoneData.items.length > 0) {
-      const itemsWrapper = document.createElement("div");
-      itemsWrapper.classList.add("zen-items-wrapper");
-
-      for (const item of zoneData.items) {
-        for (let i = 0; i < item.quantity; i++) {
-          const itemData = Object.values(items).find(
-            (it) => it.numericalId === item.id
-          );
-
-          if (!itemData) continue;
-
-          const itemIcon = document.createElement("img");
-          itemIcon.classList.add("zen-item-icon");
-          itemIcon.src = `${ASSETS}/icons/item/${itemData.icon}.gif`;
-          itemsWrapper.appendChild(itemIcon);
-        }
-      }
-
-      tooltipMapDataWrapper.appendChild(itemsWrapper);
-    }
-
-    // Last update
-    if (zoneData.updatedAt) {
-      const lastUpdate = document.createElement("div");
-      lastUpdate.classList.add("zen-last-update");
-      const date = new Date(zoneData.updatedAt);
-      lastUpdate.textContent = t(T, "lastUpdate", {
-        relativeTime: getRelativeTime(date.getTime()),
-      });
-      tooltipMapDataWrapper.appendChild(lastUpdate);
-    }
-
-    tooltip.appendChild(tooltipMapDataWrapper);
+    updateZone(zone, citizenLocations);
   }
 };
 
@@ -309,4 +322,22 @@ export const updateTownDataPeriodically = (node: HTMLElement) => {
 
   townDataInterval = window.setInterval(fetchTownData, 5 * 60 * 1000);
   fetchTownData();
+};
+
+/**
+ * When moving between zones, the game overwrites our custom classes on the zone elements, so we need to reapply them based on the current town data. This function is called on every class change for zone elements, but it will only do something if the "active" class is added or removed, which indicates a zone change.
+ */
+export const updateInternalMapZonesOnMove = (
+  zone: HTMLElement,
+  oldClass: string | null,
+  newClass: string | null
+) => {
+  const wasActive = oldClass?.split(" ").includes("active") ?? false;
+  const isActive = newClass?.split(" ").includes("active") ?? false;
+  if (wasActive === isActive) {
+    return;
+  }
+  if (!memory.town) return;
+  const citizenLocations = getCitizenLocations(memory.town);
+  updateZone(zone, citizenLocations);
 };
