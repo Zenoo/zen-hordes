@@ -1689,6 +1689,26 @@ hordes-map.zen-internal-map-active.selector-weight div.react_map_area div.map>.s
       }
     }
 
+    &.zen-past {
+      div.icon {
+        background: url(https://zenoo.github.io/zen-hordes/icons/map/map_zone_past.svg) 50%/contain no-repeat;
+        transform: none !important;
+        filter: none !important;
+      }
+
+      &.ruin:not(.buried) {
+        div.icon {
+          background: url(https://zenoo.github.io/zen-hordes/icons/map/map_zone_ruin_past.svg) 50%/contain no-repeat;
+        }
+      }
+
+      &.ruin.buried {
+        div.icon {
+          background: url(https://zenoo.github.io/zen-hordes/icons/map/map_zone_buried_past.svg) 50%/contain no-repeat;
+        }
+      }
+    }
+
     &.zen-danger-0 {
       background: none;
     }

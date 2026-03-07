@@ -31,7 +31,7 @@ export const Server = {
         x: number;
         y: number;
         visitedToday: boolean;
-        dangerLevel: number;
+        dangerLevel: number | null;
         buildingId: number | null;
       }[];
       citizens: {
@@ -90,10 +90,10 @@ export const Server = {
         x: number;
         y: number;
         visitedToday: boolean;
-        dangerLevel: number;
+        dangerLevel: number | null;
         buildingId: number | null;
         depleted: boolean;
-        zombies: number;
+        zombies: number | null;
         updatedAt: string | null;
         updatedById: number | null;
         items: {

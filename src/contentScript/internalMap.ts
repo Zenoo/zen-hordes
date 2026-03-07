@@ -59,6 +59,15 @@ export const updateZHMap = (node?: HTMLElement) => {
       zone.classList.remove("zen-depleted");
     }
 
+    // Not visited today
+    if (zoneData.zombies === null && zoneData.dangerLevel === null) {
+      if (!zoneData.visitedToday) {
+        zone.classList.add("zen-past");
+      } else {
+        zone.classList.remove("zen-past");
+      }
+    }
+
     // Danger color
     zone.classList.remove(
       "zen-danger-0",
@@ -99,7 +108,9 @@ export const updateZHMap = (node?: HTMLElement) => {
       ? "3-5"
       : zoneData.dangerLevel === 1
       ? "1-2"
-      : "0";
+      : zoneData.dangerLevel === 0
+      ? "0"
+      : "?";
 
     // Update tooltip data
     const tooltip = document.querySelector<HTMLElement>(
