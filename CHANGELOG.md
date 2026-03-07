@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.6](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.15.5...zen-hordes-v1.15.6) (2026-03-07)
+
+
+### Bug Fixes
+
+* Display outdated zones + auto zone update times ([30b8057](https://github.com/Zenoo/zen-hordes/commit/30b8057ac032ee7f9359ebb0c591c49de4915dff))
+
 ## [1.15.5](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.15.4...zen-hordes-v1.15.5) (2026-03-05)
 
 
