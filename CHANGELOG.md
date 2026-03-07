@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.15.6...zen-hordes-v1.16.0) (2026-03-07)
+
+
+### Features
+
+* Add onClassChange utility and update internal map zones on class change ([545b4f9](https://github.com/Zenoo/zen-hordes/commit/545b4f9e520d6855c6bf75173e7fc39347946133))
+
 ## [1.15.6](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.15.5...zen-hordes-v1.15.6) (2026-03-07)
 
 
