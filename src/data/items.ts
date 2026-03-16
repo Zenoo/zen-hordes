@@ -4587,7 +4587,76 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: true,
     watchPoints: 0,
     actions: [
-      
+      {
+        type: ItemActionType.Open,
+        conditions: [
+          ItemActionConditionEnum.BoxOpener
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "hmeat_#00",
+            odds: 28
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "can_#00",
+            odds: 23
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "food_bag_#00",
+            odds: 17
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "vegetable_#00",
+            odds: 17
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meat_#00",
+            odds: 15
+          }
+        ]
+      },
+      {
+        type: ItemActionType.Open,
+        conditions: [
+          ItemActionConditionEnum.Technician
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "hmeat_#00",
+            odds: 28
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "can_#00",
+            odds: 23
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "food_bag_#00",
+            odds: 17
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "vegetable_#00",
+            odds: 17
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "meat_#00",
+            odds: 15
+          },
+          {
+            type: ItemActionEffectType.CP,
+            value: -1
+          }
+        ]
+      }
     ],
     drops: {
       [DropLocation.Zone]: 0.34

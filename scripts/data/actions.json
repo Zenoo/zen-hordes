@@ -2573,29 +2573,13 @@
             ],
             "message_key": "container_open_weapon"
         },
-        "open_foodbox_out": {
+        "open_foodbox": {
             "label": "Öffnen",
             "at00": true,
             "meta": [
                 "not_profession_tech",
                 "have_parcel_opener",
-                "is_not_wounded_hands",
-                "must_be_outside_or_exploring"
-            ],
-            "result": [
-                "consume_item",
-                "spawn_foodbox"
-            ],
-            "message_key": "container_open_weapon"
-        },
-        "open_foodbox_in": {
-            "label": "Öffnen",
-            "at00": true,
-            "meta": [
-                "not_profession_tech",
-                "have_parcel_opener_home",
-                "is_not_wounded_hands",
-                "must_be_inside"
+                "is_not_wounded_hands"
             ],
             "result": [
                 "consume_item",
@@ -2659,29 +2643,13 @@
             ],
             "message_key": "container_open_weapon"
         },
-        "open_foodbox_out_t1": {
+        "open_foodbox_t1": {
             "label": "Öffnen",
             "at00": true,
             "meta": [
                 "profession_tech",
                 "have_parcel_opener_hd",
-                "is_not_wounded_hands",
-                "must_be_outside_or_exploring"
-            ],
-            "result": [
-                "consume_item",
-                "spawn_foodbox"
-            ],
-            "message_key": "container_open_weapon"
-        },
-        "open_foodbox_in_t1": {
-            "label": "Öffnen",
-            "at00": true,
-            "meta": [
-                "profession_tech",
-                "have_parcel_opener_home_hd",
-                "is_not_wounded_hands",
-                "must_be_inside"
+                "is_not_wounded_hands"
             ],
             "result": [
                 "consume_item",
@@ -2749,30 +2717,13 @@
             ],
             "message_key": "container_open"
         },
-        "open_foodbox_out_t2": {
+        "open_foodbox_t2": {
             "label": "Öffnen (1 BP)",
             "at00": true,
             "meta": [
                 "profession_tech",
                 "not_have_parcel_opener_hd",
-                "min_1_cp",
-                "must_be_outside_or_exploring"
-            ],
-            "result": [
-                "minus_1cp",
-                "consume_item",
-                "spawn_foodbox"
-            ],
-            "message_key": "container_open"
-        },
-        "open_foodbox_in_t2": {
-            "label": "Öffnen (1 BP)",
-            "at00": true,
-            "meta": [
-                "profession_tech",
-                "not_have_parcel_opener_home_hd",
-                "min_1_cp",
-                "must_be_inside"
+                "min_1_cp"
             ],
             "result": [
                 "minus_1cp",
@@ -8093,12 +8044,9 @@
             "open_toolbox_t2"
         ],
         "chest_food_#00": [
-            "open_foodbox_in",
-            "open_foodbox_out",
-            "open_foodbox_in_t1",
-            "open_foodbox_out_t1",
-            "open_foodbox_in_t2",
-            "open_foodbox_out_t2"
+            "open_foodbox",
+            "open_foodbox_t1",
+            "open_foodbox_t2"
         ],
         "safe_#00": [
             "open_safe"
