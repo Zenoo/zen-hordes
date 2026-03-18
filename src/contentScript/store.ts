@@ -54,6 +54,8 @@ export const setStore = <K extends keyof Store>(
   key: K,
   value: (typeof store)[K]
 ) => {
+  if (store[key] === value) return;
+
   // eslint-disable-next-line no-restricted-syntax
   store[key] = value;
 
@@ -122,6 +124,7 @@ export const resetOnDeath = (node: HTMLElement) => {
 
     // Reset town data
     memory.town = null;
+    localStorage.removeItem("zen-hordes-town-data");
 
     // Reset camping variables
     setStore("camping-day", null);

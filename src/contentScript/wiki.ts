@@ -4,6 +4,7 @@ import { ruins } from "../data/ruins";
 import { Building, BuildingId, Item, Ruin } from "../data/types";
 import { ASSETS, DEFAULT_SHOPPING_LIST } from "../utils/constants";
 import { tooltip } from "../utils/tooltip";
+import { t } from "../utils/translate";
 import {
   buildBaseItemTooltip,
   insertBetterItemTooltips,
@@ -17,7 +18,6 @@ import {
   setShoppingList,
 } from "./shoppingList";
 import { setStore, store } from "./store";
-import { t } from "../utils/translate";
 
 const itemCategories = [
   { type: "all", icon: "icons/small_move.gif" },
@@ -55,6 +55,7 @@ const T: Translations = {
     wikiMissing: "Couldn't reach the wiki",
     menu: "Menu",
     guide: "Guide",
+    bank: "Bank",
     calculator: "Calculator",
     shoppingList: "Shopping list",
     items: "Items",
@@ -113,6 +114,7 @@ const T: Translations = {
     wikiMissing: "Impossible d'atteindre le wiki",
     menu: "Menu",
     guide: "Guide",
+    bank: "Banque",
     calculator: "Calculateur",
     shoppingList: "Liste de courses",
     items: "Objets",
@@ -172,6 +174,7 @@ const T: Translations = {
     wikiMissing: "Wiki nicht erreichbar",
     menu: "Menü",
     guide: "Leitfaden",
+    bank: "Bank",
     calculator: "Rechner",
     shoppingList: "Einkaufsliste",
     items: "Gegenstände",
@@ -232,6 +235,7 @@ const T: Translations = {
     wikiMissing: "No se pudo acceder a la wiki",
     menu: "Menú",
     guide: "Guía",
+    bank: "Banco",
     calculator: "Calculadora",
     shoppingList: "Lista de compras",
     items: "Objetos",
@@ -297,6 +301,10 @@ const wikiTabs = [
     icon: "roles/guide.gif",
   },
   {
+    type: "bank",
+    icon: "icons/item/item_distri.gif",
+  },
+  {
     type: "calculator",
     icon: "pictos/r_camp.gif",
   },
@@ -324,7 +332,7 @@ type WikiState = {
   category: (typeof itemCategories)[number]["type"];
 };
 
-const WIKI_STATE: WikiState = {
+export const WIKI_STATE: WikiState = {
   search: "",
   tab: "items",
   category: "all",
@@ -420,7 +428,9 @@ const updateWiki = (state: Partial<WikiState>, resetSearch?: boolean) => {
 
   const search = WIKI_STATE.search.toLowerCase();
   const targets =
-    WIKI_STATE.tab === "items" || WIKI_STATE.tab === "shoppingList"
+    WIKI_STATE.tab === "items" ||
+    WIKI_STATE.tab === "shoppingList" ||
+    WIKI_STATE.tab === "bank"
       ? items
       : WIKI_STATE.tab === "buildings"
       ? buildings
@@ -784,10 +794,8 @@ export const insertWiki = () => {
     const target = event.target as HTMLElement;
 
     // Click on item
-    if (
-      target.tagName === "IMG" &&
-      target.getAttribute("data-type") === "item"
-    ) {
+    const itemTarget = target.closest("[data-type='item']");
+    if (itemTarget) {
       updateWiki(
         {
           search: "",
@@ -800,12 +808,15 @@ export const insertWiki = () => {
       // Scroll to the item
       const scrollable = target.closest(".zen-wiki") as HTMLElement | null;
       const item = scrollable?.querySelector(
-        `.zen-wiki-item[data-type="item"][data-id="${target.getAttribute(
+        `.zen-wiki-item[data-type="item"][data-id="${itemTarget.getAttribute(
           "data-id"
         )}"]`
       ) as HTMLElement | null;
       if (!item) {
-        console.error("Item not found in wiki", target.getAttribute("data-id"));
+        console.error(
+          "Item not found in wiki",
+          itemTarget.getAttribute("data-id")
+        );
         return;
       }
 
@@ -947,6 +958,10 @@ export const insertWiki = () => {
       li.classList.add("hidden");
     }
     if (tab.type === "calculator" && !store["camping-calculator"]) {
+      li.classList.add("hidden");
+    }
+    // Bank hidden by default, only shown when we detect a town
+    if (tab.type === "bank") {
       li.classList.add("hidden");
     }
 
@@ -1324,6 +1339,18 @@ export const insertWiki = () => {
         tab.appendChild(anchor);
 
         displayCampingCalculator(anchor);
+        break;
+      }
+      case "bank": {
+        const bank = document.createElement("ul");
+        bank.classList.add(
+          "zen-wiki-bank",
+          "inventory",
+          "inventory-react",
+          "bank"
+        );
+
+        tab.appendChild(bank);
         break;
       }
       default: {

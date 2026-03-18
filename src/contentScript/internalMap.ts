@@ -5,6 +5,7 @@ import { getRelativeTime } from "./betterTooltips";
 import { getTownId } from "./externalSiteUpdater";
 import { memory, store } from "./store";
 import { t } from "../utils/translate";
+import { updateBankInWiki } from "./bankAnywhere";
 
 const T: Translations = {
   en: {
@@ -299,6 +300,7 @@ export const fetchTownData = async () => {
     memory.town = townData.town;
 
     updateZHMap();
+    updateBankInWiki();
   } catch (error) {
     console.error("Failed to update town data:", error);
   }
