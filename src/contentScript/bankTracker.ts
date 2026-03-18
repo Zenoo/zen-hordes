@@ -1,11 +1,13 @@
 import { items } from "../data/items";
-import { ItemId } from "../data/types";
+import { BuildingId, ItemId } from "../data/types";
 import { ASSETS } from "../utils/constants";
 import { setStore, store } from "./store";
 import { t } from "../utils/translate";
+import { buildings } from "../data/buildings";
 
-const MAX_ITEMS_TAKEN = 5;
-const MAX_ITEMS_TAKEN_CHAOS = 10;
+const ALLOWED_ITEMS = 5;
+const CHAOS_ALLOWED_ITEMS = 5;
+const PEOPLE_COURT_ALLOWED_ITEMS = 5;
 const BLOCK_DURATION = 15 * 60 * 1000; // 15 minutes
 
 const T: Translations = {
@@ -35,7 +37,18 @@ const getMaxItems = () => {
   const isChaos = !!document.querySelector(
     "body[data-theme-secondary-modifier='chaos']"
   );
-  return isChaos ? MAX_ITEMS_TAKEN_CHAOS : MAX_ITEMS_TAKEN;
+  const hasPeopleCourt = !!document.querySelector(
+    `.town-buildings li.cell img.symbol[src*="building/${
+      buildings[BuildingId.SMALL_COURT].icon
+    }"]`
+  );
+
+  let total = ALLOWED_ITEMS;
+
+  if (isChaos) total += CHAOS_ALLOWED_ITEMS;
+  if (hasPeopleCourt) total += PEOPLE_COURT_ALLOWED_ITEMS;
+
+  return total;
 };
 
 export const cleanupBankNotification = () => {
