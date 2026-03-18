@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.17.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.16.0...zen-hordes-v1.17.0) (2026-03-18)
+
+
+### Features
+
+* Bank in the wiki ([50739d2](https://github.com/Zenoo/zen-hordes/commit/50739d26b167eedb9a2f0956ec94bad3c55be080))
+
+
+### Bug Fixes
+
+* Allow 5 more items from the bank when the People's Court is built ([f7d0ecb](https://github.com/Zenoo/zen-hordes/commit/f7d0ecb3290ad842c5088da7d9cee50849c5388a))
+* MH v5.0.5 data ([c6384d2](https://github.com/Zenoo/zen-hordes/commit/c6384d204970879c6b4a024346bf73275a724109))
+* MH v5.0.6 data ([7150cb0](https://github.com/Zenoo/zen-hordes/commit/7150cb0b25fb306b36e703b7a6163ac52cadc514))
+
 ## [1.16.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.15.6...zen-hordes-v1.16.0) (2026-03-07)
 
 
