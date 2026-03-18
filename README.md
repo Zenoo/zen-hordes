@@ -71,6 +71,14 @@ Zen Hordes includes a button in the bottom right corner of the page that allows 
 
 ![Wiki](.github/media/wiki.jpeg)
 
+### Wiki Bank
+
+Zen Hordes adds a bank tab to the in-game wiki, allowing you to view the full contents of your city's bank at any time—even while outside the city. The bank is organized by item category and displays all items currently stored, including their quantities and broken status. This feature makes it easy to plan your actions and coordinate with other players, as you always have up-to-date information about your town's resources, no matter where you are.
+
+To access the bank, open the wiki using the Zen Hordes button in the bottom right corner, then select the "Bank" tab. The bank will be hidden if you are not in a town.
+
+![Wiki Bank](.github/media/wiki-bank.png)
+
 ### Camping calculator
 
 Zen Hordes provides a camping calculator that helps you determine the chances of surviving a night in the desert. This feature is particularly useful for players who want to plan their camping strategies and maximize their chances of survival. The calculator takes into account various factors such as the number of players, the time of day, and muche more.
