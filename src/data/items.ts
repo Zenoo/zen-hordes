@@ -3268,12 +3268,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
         effects: [
           {
             type: ItemActionEffectType.CreateItem,
-            value: "pile_#00",
-            odds: 25
-          },
-          {
-            type: ItemActionEffectType.CreateItem,
-            value: "radio_off_#00",
+            value: "lights_#00",
             odds: 25
           },
           {
@@ -3283,8 +3278,18 @@ export const items: Readonly<Record<ItemId, Item>> = {
           },
           {
             type: ItemActionEffectType.CreateItem,
-            value: "lights_#00",
-            odds: 25
+            value: "pile_#00",
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "radio_off_#00",
+            odds: 20
+          },
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "shoe_#00",
+            odds: 10
           }
         ]
       }

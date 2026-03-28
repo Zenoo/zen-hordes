@@ -191,10 +191,11 @@ export const exportActionEffects = async () => {
     spawn_c_chest: {
       type: "spawn",
       data: [
-        {
-          items: ["pile_#00", "radio_off_#00", "pharma_#00", "lights_#00"],
-          odds: null,
-        },
+        { items: ["shoe_#00"], odds: 10 },
+        { items: ["pile_#00"], odds: 20 },
+        { items: ["lights_#00"], odds: 25 },
+        { items: ["pharma_#00"], odds: 25 },
+        { items: ["radio_off_#00"], odds: 20 },
       ],
     },
     spawn_h_chest: {
