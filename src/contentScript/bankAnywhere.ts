@@ -2,6 +2,7 @@ import { items } from "../data/items";
 import { Item } from "../data/types";
 import { ASSETS } from "../utils/constants";
 import { t } from "../utils/translate";
+import { getRelativeTime } from "./betterTooltips";
 import { memory, store } from "./store";
 
 const T: Translations = {
@@ -14,6 +15,7 @@ const T: Translations = {
     "item.category.5": "Pharmacy",
     "item.category.0": "Food",
     "item.category.other": "Miscellaneous",
+    lastUpdate: "Last update",
   },
   fr: {
     "item.category.1": "Ressources",
@@ -24,6 +26,7 @@ const T: Translations = {
     "item.category.5": "Pharmacie",
     "item.category.0": "Provisions",
     "item.category.other": "Divers",
+    lastUpdate: "Dernière mise à jour",
   },
   de: {
     "item.category.1": "Baustoffe",
@@ -34,6 +37,7 @@ const T: Translations = {
     "item.category.5": "Apotheke und Labor",
     "item.category.0": "Grundnahrungsmittel",
     "item.category.other": "Sonstiges",
+    lastUpdate: "Letzte Aktualisierung",
   },
   es: {
     "item.category.1": "Recursos",
@@ -44,6 +48,7 @@ const T: Translations = {
     "item.category.5": "Farmacia",
     "item.category.0": "Provisiones",
     "item.category.other": "Varios",
+    lastUpdate: "Última actualización",
   },
 };
 
@@ -66,6 +71,17 @@ export const updateBankInWiki = () => {
 
   // Clear the bank content
   bank.innerHTML = "";
+
+  // Display last update time
+  if (memory.town.bank.length) {
+    const lastUpdate = document.createElement("li");
+    lastUpdate.classList.add("zen-bank-last-update");
+    const lastUpdateDate = new Date(memory.town.lastUpdate);
+    lastUpdate.textContent = `${t(T, "lastUpdate")}: ${getRelativeTime(
+      lastUpdateDate.getTime()
+    )}`;
+    bank.append(lastUpdate);
+  }
 
   type BankItem = Item & {
     count: number;
