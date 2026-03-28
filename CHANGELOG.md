@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.17.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.0...zen-hordes-v1.17.1) (2026-03-28)
+
+
+### Bug Fixes
+
+* DIsplay bank last update ([a59ef6d](https://github.com/Zenoo/zen-hordes/commit/a59ef6de432a6e950da4974f4ff912ec957d29a6))
+* MH v5.0.7 data ([0f3e6a8](https://github.com/Zenoo/zen-hordes/commit/0f3e6a8eedaceedceb5c962e2ca9efc7cdd09ece))
+* Missing shoe drop ([8026a18](https://github.com/Zenoo/zen-hordes/commit/8026a18b117b0195ee2d4b1e6f4d45b423094fb8))
+
 ## [1.17.0](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.16.0...zen-hordes-v1.17.0) (2026-03-18)
 
 
