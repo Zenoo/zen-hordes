@@ -533,7 +533,7 @@ export const displayUpdateButton = (node: HTMLElement) => {
   if (existing) return;
 
   // Don't display it in explorable ruins
-  if (document.querySelector(".ruin_map_area")) return;
+  if (document.querySelector(".zone-beyond[class*='explorable-']")) return;
 
   // Create update button
   const button = document.createElement("button");
