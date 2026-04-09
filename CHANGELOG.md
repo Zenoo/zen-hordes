@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.1...zen-hordes-v1.17.2) (2026-04-09)
+
+
+### Bug Fixes
+
+* update display logic for the update button in explorable ruins ([3334d24](https://github.com/Zenoo/zen-hordes/commit/3334d24fde782e3e536826552102dd1f68506257))
+
 ## [1.17.1](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.0...zen-hordes-v1.17.1) (2026-03-28)
 
 
