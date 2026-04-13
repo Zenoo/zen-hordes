@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.3](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.2...zen-hordes-v1.17.3) (2026-04-13)
+
+
+### Bug Fixes
+
+* MH v5.0.8 data ([f859d53](https://github.com/Zenoo/zen-hordes/commit/f859d539c6317710947a998b1ec6547934cf4360))
+
 ## [1.17.2](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.1...zen-hordes-v1.17.2) (2026-04-09)
 
 
