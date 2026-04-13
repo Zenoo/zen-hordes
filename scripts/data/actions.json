@@ -2311,6 +2311,20 @@
                 }
             }
         },
+        "repair_soccer": {
+            "label": "Reparieren (1AP)",
+            "at00": true,
+            "meta": [
+                "min_1_ap",
+                "not_tired",
+                "is_not_wounded_hands_repair"
+            ],
+            "result": [
+                "morph_soccer",
+                "minus_1ap"
+            ],
+            "message": "Du hast die\/den {item} repariert."
+        },
         "open_doggybag": {
             "label": "Öffnen",
             "at00": true,
@@ -8603,6 +8617,9 @@
         "soccer_#00": [
             "play_soccer_1",
             "play_soccer_2"
+        ],
+        "soccer_part_#00": [
+            "repair_soccer"
         ],
         "quantum_#00": [
             "drink_quantum_1",

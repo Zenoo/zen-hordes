@@ -984,16 +984,6 @@
             "chain_#00"
         ]
     },
-    "com053": {
-        "type": 13,
-        "out": "soccer_#00",
-        "provoking": "soccer_part_#00",
-        "in": [
-            "soccer_part_#00"
-        ],
-        "ap": 1,
-        "tooltip": "Du hast die\/den {item} repariert."
-    },
     "com054": {
         "type": 13,
         "out": "moldy_food_part_#00",

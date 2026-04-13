@@ -2107,7 +2107,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "It's a plank of wood which is soaking wet but still more or less solid... Note: The wood is used for the construction of buildings in the town (deposit it in the Bank).",
-      [Lang.FR]: "Une planche de bois complètement moisie mais encore à peu près solide… Note : le bois est utilisé pour la construction de bâtiments en ville (ramenez-le dans la Section Banque).",
+      [Lang.FR]: "Une planche de bois complètement moisie mais encore à peu près solide…",
       [Lang.DE]: "Ein total verschimmeltes Holzbrett, das noch einigermaßen stabil ist...",
       [Lang.ES]: "Un poco enmohecida pero sólida... Nota: La madera se emplea en la construcción (llévala al Almacén)."
     },
@@ -2135,7 +2135,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "Wrought Iron... It's bloody heavy, but it's always useful ! Note: Wrought Iron is used for the construction of buildings in the town (deposit it in the Bank).",
-      [Lang.FR]: "Du métal… Un peu lourd, mais ça sert toujours ! Note : le métal est utilisé pour la construction de bâtiments en ville (ramenez-le à la Section Banque).",
+      [Lang.FR]: "Du métal… Un peu lourd, mais ça sert toujours !",
       [Lang.DE]: "Stinknormales Metall, das zwar schwer ist, aber immer verwendet werden kann!",
       [Lang.ES]: "Un montón de metales pesados, ¡pero útiles! Nota: El metal se emplea en la construcción (llévalo al Almacén)."
     },
@@ -12081,7 +12081,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     numericalId: 292,
     name: {
       [Lang.EN]: "Telescope",
-      [Lang.FR]: "Téléscope",
+      [Lang.FR]: "Télescope",
       [Lang.DE]: "Teleskop",
       [Lang.ES]: "Telescopio"
     },
@@ -15017,7 +15017,22 @@ export const items: Readonly<Record<ItemId, Item>> = {
     heavy: false,
     watchPoints: 0,
     actions: [
-      
+      {
+        type: ItemActionType.Use,
+        conditions: [
+          
+        ],
+        effects: [
+          {
+            type: ItemActionEffectType.CreateItem,
+            value: "soccer_#00"
+          },
+          {
+            type: ItemActionEffectType.AP,
+            value: -1
+          }
+        ]
+      }
     ],
   },
   [ItemId.QUANTUM]: {

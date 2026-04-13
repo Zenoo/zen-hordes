@@ -635,6 +635,10 @@
     "type": "morphSource",
     "data": "'xmas_gift_#00'"
   },
+  "morph_soccer": {
+    "type": "morphSource",
+    "data": "'soccer_#00'"
+  },
   "morph_soccer_part": {
     "type": "morphSource",
     "data": "'soccer_part_#00'"

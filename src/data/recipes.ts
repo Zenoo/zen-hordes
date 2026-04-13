@@ -875,15 +875,6 @@ export const recipes: Readonly<Recipe>[] = [
   {
     type: RecipeType.ManualAnywhere,
     in: [
-      { item: ItemId.SOCCER_PART }
-    ],
-    out: [
-      { item: ItemId.SOCCER}
-    ],
-  },
-  {
-    type: RecipeType.ManualAnywhere,
-    in: [
       { item: ItemId.MOLDY_FOOD_SUBPART },
       { item: ItemId.MOLDY_FOOD_SUBPART }
     ],

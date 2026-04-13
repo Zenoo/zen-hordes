@@ -3550,7 +3550,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "Adding some metal at ground level won't stop the zombies, but it might slow them down.",
-      [Lang.FR]: "En ajoutant un peu de métal au niveau du sol, ça n'arrêtera pas les zombies, mais ça les ralentirat peut-être.",
+      [Lang.FR]: "En ajoutant un peu de métal au niveau du sol, ça n'arrêtera pas les zombies, mais ça les ralentira peut-être.",
       [Lang.DE]: "Das Hinzufügen von Metall auf Bodenhöhe wird die Zombies nicht aufhalten, aber es könnte sie verlangsamen.",
       [Lang.ES]: "Añadir algo de metal a ras del suelo no detendrá a los zombies, pero podría ralentizarlos."
     },
@@ -5647,7 +5647,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "A large, round balloon floating in the sky, but just for as long as it takes for a \"volunteer\" citizen to take a note of everything he sees around the town. This building allows you to reveal everything hidden in the World Beyond..",
-      [Lang.FR]: "Un gros ballon tout rond qui vole dans le ciel, mais juste assez longtemps pour qu’un citoyen « volontaire » répertorie tout ce qu’il voit autour de notre ville. Ce chantier permet de révéler l’intégralité de l’Outre-Monde.",
+      [Lang.FR]: "Un gros ballon tout rond qui vole dans le ciel, mais juste assez longtemps pour qu’un citoyen « volontaire » répertorie tout ce qu’il voit autour de notre ville. Ce chantier permet de révéler l’intégralité de l’Outre-Monde et ce qu'il cachait jusqu'alors...",
       [Lang.DE]: "Ein großer, runder Ballon steigt hinauf in den Himmel. Aber nur solange, wie der \"Freiwillige\" in der Gondel braucht, um alles rund um die Stadt zu erfassen. Das Bauwerk ermöglicht es Dir, die gesamte Außenwelt zu entdecken.",
       [Lang.ES]: "Un inmenso globo que se eleva hasta el cielo, el tiempo suficiente para que un \"voluntario\" pueda observar y anotar todo lo que hay alrededor del pueblo. Esta construcción permite revelar la totalidad del Ultramundo."
     },

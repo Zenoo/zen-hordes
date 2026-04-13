@@ -63,6 +63,7 @@ import { insertWiki, openItemInWiki } from "./wiki";
 // TODO: Add more detailed instructions to the guide
 // ex: drag & drop, images, etc
 // TODO: Add distinctions linked to some action tooltips (throw out someone, etc)
+// TODO: Add a ghoul suspect system
 
 (async () => {
   // Do nothing on asset URLs

@@ -1261,7 +1261,7 @@
       "es": "Tabla torcida"
     },
     "desc": {
-      "fr": "Une planche de bois complètement moisie mais encore à peu près solide… Note : le bois est utilisé pour la construction de bâtiments en ville (ramenez-le dans la Section Banque).",
+      "fr": "Une planche de bois complètement moisie mais encore à peu près solide…",
       "en": "It's a plank of wood which is soaking wet but still more or less solid... Note: The wood is used for the construction of buildings in the town (deposit it in the Bank).",
       "de": "Ein total verschimmeltes Holzbrett, das noch einigermaßen stabil ist...",
       "es": "Un poco enmohecida pero sólida... Nota: La madera se emplea en la construcción (llévala al Almacén)."
@@ -1287,7 +1287,7 @@
       "es": "Chatarra"
     },
     "desc": {
-      "fr": "Du métal… Un peu lourd, mais ça sert toujours ! Note : le métal est utilisé pour la construction de bâtiments en ville (ramenez-le à la Section Banque).",
+      "fr": "Du métal… Un peu lourd, mais ça sert toujours !",
       "en": "Wrought Iron... It's bloody heavy, but it's always useful ! Note: Wrought Iron is used for the construction of buildings in the town (deposit it in the Bank).",
       "de": "Stinknormales Metall, das zwar schwer ist, aber immer verwendet werden kann!",
       "es": "Un montón de metales pesados, ¡pero útiles! Nota: El metal se emplea en la construcción (llévalo al Almacén)."
@@ -7573,7 +7573,7 @@
     "deco": 0,
     "guard": 0,
     "name": {
-      "fr": "Téléscope",
+      "fr": "Télescope",
       "en": "Telescope",
       "de": "Teleskop",
       "es": "Telescopio"
