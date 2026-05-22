@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.17.4](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.3...zen-hordes-v1.17.4) (2026-05-22)
+
+
+### Bug Fixes
+
+* Increase player tags max length to 16 ([96c5c10](https://github.com/Zenoo/zen-hordes/commit/96c5c1058e2b5f1a2aff49a65b73538f5d85649c))
+* MH v5.0.10 data ([5392e9d](https://github.com/Zenoo/zen-hordes/commit/5392e9dfc1cf42d8bc374b424e5a0876328e3d12))
+* MH v5.0.11 data ([67f2579](https://github.com/Zenoo/zen-hordes/commit/67f2579d6d19022114348cd07871023842c423b4))
+
 ## [1.17.3](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.2...zen-hordes-v1.17.3) (2026-04-13)
 
 
