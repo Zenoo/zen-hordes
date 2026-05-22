@@ -65,7 +65,7 @@ export const insertPlayerInfo = (node: HTMLElement) => {
   tagInput.setAttribute("id", "zen-player-tag-input");
   tagInput.setAttribute("type", "text");
   tagInput.setAttribute("placeholder", t(T, "customTag"));
-  tagInput.setAttribute("maxlength", "10");
+  tagInput.setAttribute("maxlength", "16");
   tagInput.setAttribute("autocomplete", "off");
   tagInput.setAttribute("autocorrect", "off");
 
