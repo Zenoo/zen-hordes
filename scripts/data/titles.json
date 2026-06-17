@@ -337,7 +337,7 @@
       "name": {
         "de": "Yo, wir schaffen das!",
         "en": "I'll let myself in...",
-        "fr": "Bricol' girl travesti",
+        "fr": "Réparateur",
         "es": "Bricoloco"
       },
       "quantity": 10,
@@ -347,7 +347,7 @@
       "name": {
         "de": "Kleiner Schraubendreher",
         "en": "The BRD Screwdriver Combo",
-        "fr": "Amateur du PMV tournevis",
+        "fr": "Maître-Bricoleur",
         "es": "Destornillador Humano"
       },
       "quantity": 25,
@@ -357,7 +357,7 @@
       "name": {
         "de": "Schweizer Taschenmesser",
         "en": "Spanners and Bump keys",
-        "fr": "Nuchuk à molette",
+        "fr": "Gogogadget-O-Clés",
         "es": "Mascafierros"
       },
       "quantity": 75
@@ -1159,6 +1159,60 @@
         "es": "Especialidad: Puré de gato"
       },
       "quantity": 300
+    },
+    {
+      "name": {
+        "de": "PETA HASST ES!",
+        "en": "PETA HATES IT!",
+        "fr": "PETA me déteste",
+        "es": "¡PETA ME ODIA!"
+      },
+      "quantity": 500
+    },
+    {
+      "name": {
+        "de": "Aktivist für die Vernichtung des Lebens",
+        "en": "Activist for the destruction of life",
+        "fr": "Militant pour la destruction du vivant",
+        "es": "Activista por la destrucción de la vida"
+      },
+      "quantity": 750
+    },
+    {
+      "name": {
+        "de": "Messer geht rein, Eingeweide kommen raus!",
+        "en": "Knife goes in, Guts come out!",
+        "fr": "Le couteau entre, les tripes sortent !",
+        "es": "¡Entra cuchillo, salen las tripas!"
+      },
+      "quantity": 1023
+    },
+    {
+      "name": {
+        "de": "Rattenfänger der Apokalypse",
+        "en": "Pied Piper of the Apocalypse",
+        "fr": "Joueur de flûte de l'apocalypse",
+        "es": "Flautista de Hamelín del Apocalipsis"
+      },
+      "quantity": 2000
+    },
+    {
+      "name": {
+        "de": "Apex-Raubtier",
+        "en": "Apex predator",
+        "fr": "Prédateur apex",
+        "es": "Superdepredador"
+      },
+      "quantity": 4000
+    },
+    {
+      "name": {
+        "de": "Dinosaurier? Das war ich",
+        "en": "Dinosaurs? It was me",
+        "fr": "Les dinosaures ? C'était moi",
+        "es": "¿Los dinosaurios? Fui yo"
+      },
+      "quantity": 6000
     }
   ],
   "r_guard_#00": [
@@ -2339,6 +2393,16 @@
   "r_explot_#00": [
     {
       "name": {
+        "de": "Vollständige Erkundung",
+        "en": "Total Exploration",
+        "fr": "Explorations totales",
+        "es": "Exploración Total"
+      },
+      "quantity": 1,
+      "points": 3.5
+    },
+    {
+      "name": {
         "de": "Leidenschaftlicher Entdecker",
         "en": "Totally impetuous explorer",
         "fr": "Explorateur totalement impétueux",
@@ -2358,31 +2422,75 @@
     },
     {
       "name": {
-        "de": "100%",
-        "en": "100%",
-        "fr": "100%",
-        "es": "100%"
+        "de": "Tourist",
+        "en": "Tourist",
+        "fr": "Touriste",
+        "es": "Turista"
       },
       "quantity": 15
     },
     {
       "name": {
-        "de": "TBD",
-        "en": "TBD",
-        "fr": "TBD",
-        "es": "TBD"
+        "de": "Sie ist flach!",
+        "en": "It’s flat!",
+        "fr": "Elle est plate!",
+        "es": "¡Es plano!"
       },
       "quantity": 20
     },
     {
       "name": {
-        "de": "Total Exploration",
-        "en": "Total Exploration",
-        "fr": "Total Exploration",
-        "es": "Total Exploration"
+        "de": "Um die Welt in... ein paar Tagen",
+        "en": "Around the World in... a few days",
+        "fr": "Le Tour du Monde en... quelques jours",
+        "es": "La vuelta al mundo en...unos días"
       },
-      "quantity": 1,
-      "points": 3.5
+      "quantity": 25
+    },
+    {
+      "name": {
+        "de": "Nachfahre der Fremen",
+        "en": "Descendant of the Fremen",
+        "fr": "Descendant des Fremens.",
+        "es": "Descendiente de los Fremen"
+      },
+      "quantity": 30
+    },
+    {
+      "name": {
+        "de": "Magellan der Außenwelt",
+        "en": "Magellan of the Otherworld",
+        "fr": "Magellan de l'Outre-Monde",
+        "es": "Magallanes del inframundo"
+      },
+      "quantity": 40
+    },
+    {
+      "name": {
+        "de": "Reise, reise!",
+        "en": "Travel, travel",
+        "fr": "Voyage voyage",
+        "es": "Viaja, viaja"
+      },
+      "quantity": 50
+    },
+    {
+      "name": {
+        "de": "Marco? Polooo!",
+        "en": "Marco? Polooo!",
+        "fr": "Marco ? Polooo !",
+        "es": "¿Marco? ¡Polooo!"
+      },
+      "quantity": 75
+    },
+    {
+      "name": {
+        "de": "Saurons Auge",
+        "en": "Eye of Sauron",
+        "fr": "Œil de Sauron",
+        "es": "Ojo de Sauron"
+      },
+      "quantity": 100
     }
   ],
   "r_ruine_#00": [
@@ -3086,6 +3194,69 @@
         "es": "¡¡¡El cielo se está cayendo!!!"
       },
       "quantity": 250
+    },
+    {
+      "name": {
+        "de": "Alice im Wunderland",
+        "en": "Alice in Wonderland",
+        "fr": "Alice au pays des Merveilles ",
+        "es": "Alicia en el país de las maravillas"
+      },
+      "quantity": 350
+    },
+    {
+      "name": {
+        "de": "Was kann schon schiefgehen?",
+        "en": "What’s the worst that could happen?",
+        "fr": "Au pire, ça risque quoi ?",
+        "es": "¿Qué es lo peor que podría pasar?"
+      },
+      "quantity": 500
+    },
+    {
+      "name": {
+        "de": "Um glücklich zu leben, lasst uns Pillen nehmen!",
+        "en": "To live happily, let’s live on pills!",
+        "fr": "Pour vivre heureux, vivons cachet !",
+        "es": "Para vivir felices, ¡vivamos empastillados!"
+      },
+      "quantity": 750
+    },
+    {
+      "name": {
+        "de": "Unbekannter Spieler",
+        "en": "Unlabeled Gambler",
+        "fr": "Joueur sans étiquette",
+        "es": "Jugador sin etiqueta"
+      },
+      "quantity": 1000
+    },
+    {
+      "name": {
+        "de": "Mikrodosierung ist für Nerds",
+        "en": "Microdosing is for nerds",
+        "fr": "Le microdosage est pour les nerds",
+        "es": "La microdosificación es para nerds"
+      },
+      "quantity": 1500
+    },
+    {
+      "name": {
+        "de": "Las Vegas Paranoiker",
+        "en": "Las Vegas Parano",
+        "fr": "Las Vegas Parano",
+        "es": "Las Vegas Parano"
+      },
+      "quantity": 2000
+    },
+    {
+      "name": {
+        "de": "Morgen höre ich auf…",
+        "en": "Tomorrow, I’m quitting…",
+        "fr": "Demain, j’arrête…",
+        "es": "Mañana lo dejo..."
+      },
+      "quantity": 3000
     }
   ],
   "r_cannib_#00": [
@@ -4654,6 +4825,98 @@
         "es": "Jefe de Manitas"
       },
       "quantity": 1
+    }
+  ],
+  "r_cooked_#00": [
+    {
+      "name": {
+        "de": "Mann am Kamin",
+        "en": "Man at the fireplace",
+        "fr": "Homme au foyer",
+        "es": "Hombre junto a la chimenea"
+      },
+      "quantity": 5
+    },
+    {
+      "name": {
+        "de": "Alter Freund, neue Speisekarte",
+        "en": "Old friend, new menu",
+        "fr": "Ancien ami, nouveau menu",
+        "es": "Viejo amigo, nuevo menú"
+      },
+      "quantity": 10
+    },
+    {
+      "name": {
+        "de": "Leichenkoch",
+        "en": "Corpse cook",
+        "fr": "Cuiseur de cadavres",
+        "es": "Cocinero de cadáveres"
+      },
+      "quantity": 25
+    },
+    {
+      "name": {
+        "de": "50 Shades of Grease",
+        "en": "50 Shades of Grease",
+        "fr": "50 nuances de graillon",
+        "es": "50 sombras de Grasa"
+      },
+      "quantity": 50
+    },
+    {
+      "name": {
+        "de": "Der große Eintopf",
+        "en": "The Great Pot-au-feu",
+        "fr": "Le Grand Pot-au-feu",
+        "es": "El Gran Pot-au-feu"
+      },
+      "quantity": 75
+    },
+    {
+      "name": {
+        "de": "Grillexperte unter Freunden",
+        "en": "Barbecue expert among friends",
+        "fr": "Expert du barbecue entre amis ",
+        "es": "Experto en barbacoa de amigos"
+      },
+      "quantity": 100
+    },
+    {
+      "name": {
+        "de": "Küchenalbtraum",
+        "en": "Kitchen Nightmare",
+        "fr": "Cauchemar en Cuisine",
+        "es": "Pesadilla en la cocina"
+      },
+      "quantity": 150
+    },
+    {
+      "name": {
+        "de": "Cordon-Bleu-Koch",
+        "en": "Kurudon Bleu Chef",
+        "fr": "Chef Kurudon Bleu",
+        "es": "Kurudon Bleu Chef"
+      },
+      "quantity": 200
+    },
+    {
+      "name": {
+        "de": "Ich habe Soylent Green erfunden",
+        "en": "I invented Soylent Green",
+        "fr": "J'ai inventé le Soleil Vert",
+        "es": "Yo inventé el Soylent Green"
+      },
+      "quantity": 350
+    },
+    {
+      "name": {
+        "de": "Gott schickt Fleisch, und der Teufel schickt Köche",
+        "en": "God sends meat, and the devil sends cooks.",
+        "fr": "Dieu envoie la viande et le diable, les cuisiniers.",
+        "es": "Dios envía la carne, el diablo los cocineros"
+      },
+      "quantity": 500
     }
   ]
 }

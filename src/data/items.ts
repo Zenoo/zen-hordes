@@ -13542,7 +13542,7 @@ export const items: Readonly<Record<ItemId, Item>> = {
     },
     description: {
       [Lang.EN]: "This special batch of water, \"holy water\" if you will, should allow you to interact with tortured souls without fear... Hopefully...",
-      [Lang.FR]: "Cette ration d'eau préparée par votre chaman préféré devrait vous permettre d'être immunisé contre toute manipulation d'âme torturée... normalement.",
+      [Lang.FR]: "Cette ration d’eau préparée par votre chaman préféré devrait vous permettre d’être immunisé(e) contre toute manipulation d’âme torturée… normalement.",
       [Lang.DE]: "Diese besondere Ration Wasser, oder genauer gesagt \"Weihwasser\", sollte es dir ermöglichen, unbeschadet mit gequälten Seelen in Kontakt zu treten... Hoffentlich...",
       [Lang.ES]: "Este frasco especial de agua, \"agua bendita\" si lo prefieres, debería permitirte interactuar con las torturadas almas sin miedo... Con suerte..."
     },

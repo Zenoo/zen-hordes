@@ -29,7 +29,7 @@ export const exportTitles = async () => {
   // Get titles
   // https://regex101.com/r/v07Wo8/1
   const titlesRegex =
-    /(?<!# )\$container->add\(\)->title\('(.+)'\)->unlockquantity\((\d+)\)->associatedtag\('[^)]+'\)->associatedpicto\('(.+)'\)/gm;
+    /(?<!# |\/\/ )\$container->add\(\)->title\('(.+)'\)->unlockquantity\((\d+)\)->associatedtag\('[^)]+'\)->associatedpicto\('(.+)'\)/gm;
   const titlesList = [...text.matchAll(titlesRegex)].reduce<
     Record<
       string,
@@ -39,13 +39,10 @@ export const exportTitles = async () => {
         points?: number;
       }[]
     >
-  >((acc, [, germanTitle, quantity, _picto]) => {
-    if (!germanTitle || !quantity || !_picto) {
+  >((acc, [, germanTitle, quantity, picto]) => {
+    if (!germanTitle || !quantity || !picto) {
       throw new Error("Title, quantity or picto not found");
     }
-
-    // There is an error in the source for this picto
-    const picto = _picto === "r_explot_#01" ? "r_explot_#00" : _picto;
 
     if (!acc[picto]) {
       acc[picto] = [];
@@ -61,6 +58,22 @@ export const exportTitles = async () => {
     });
     return acc;
   }, {});
+
+  // The title for "r_explot_#00" at quantity 1 is missing in the main repo, so we add it manually at the beginning of the list
+  if (!titlesList["r_explot_#00"]?.some((t) => t.quantity === 1)) {
+    if (!titlesList["r_explot_#00"]) {
+      titlesList["r_explot_#00"] = [];
+    }
+    titlesList["r_explot_#00"].unshift({
+      name: {
+        [Lang.DE]: "Vollständige Erkundung",
+        [Lang.EN]: "",
+        [Lang.FR]: "",
+        [Lang.ES]: "",
+      },
+      quantity: 1,
+    });
+  }
 
   // Get title translations from the main repo
   for (const lang of [Lang.EN, Lang.FR, Lang.ES]) {
@@ -177,7 +190,7 @@ export const exportTitles = async () => {
 
           if (!title) {
             throw new Error(
-              `Title not found for picto ${picto} at index ${index}`
+              `Title not found for picto ${picto} at index ${index} for quantity ${quantity}`
             );
           }
 

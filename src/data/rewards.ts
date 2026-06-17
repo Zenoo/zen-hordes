@@ -587,6 +587,60 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
       },
       {
         name: {
+          [Lang.DE]: "PETA HASST ES!",
+          [Lang.EN]: "PETA HATES IT!",
+          [Lang.FR]: "PETA me déteste",
+          [Lang.ES]: "¡PETA ME ODIA!"
+        },
+        quantity: 500
+      },
+      {
+        name: {
+          [Lang.DE]: "Aktivist für die Vernichtung des Lebens",
+          [Lang.EN]: "Activist for the destruction of life",
+          [Lang.FR]: "Militant pour la destruction du vivant",
+          [Lang.ES]: "Activista por la destrucción de la vida"
+        },
+        quantity: 750
+      },
+      {
+        name: {
+          [Lang.DE]: "Messer geht rein, Eingeweide kommen raus!",
+          [Lang.EN]: "Knife goes in, Guts come out!",
+          [Lang.FR]: "Le couteau entre, les tripes sortent !",
+          [Lang.ES]: "¡Entra cuchillo, salen las tripas!"
+        },
+        quantity: 1023
+      },
+      {
+        name: {
+          [Lang.DE]: "Rattenfänger der Apokalypse",
+          [Lang.EN]: "Pied Piper of the Apocalypse",
+          [Lang.FR]: "Joueur de flûte de l'apocalypse",
+          [Lang.ES]: "Flautista de Hamelín del Apocalipsis"
+        },
+        quantity: 2000
+      },
+      {
+        name: {
+          [Lang.DE]: "Apex-Raubtier",
+          [Lang.EN]: "Apex predator",
+          [Lang.FR]: "Prédateur apex",
+          [Lang.ES]: "Superdepredador"
+        },
+        quantity: 4000
+      },
+      {
+        name: {
+          [Lang.DE]: "Dinosaurier? Das war ich",
+          [Lang.EN]: "Dinosaurs? It was me",
+          [Lang.FR]: "Les dinosaures ? C'était moi",
+          [Lang.ES]: "¿Los dinosaurios? Fui yo"
+        },
+        quantity: 6000
+      },
+      {
+        name: {
           [Lang.EN]: "30 millions d'ennemis",
           [Lang.FR]: "30 millions d'ennemis",
           [Lang.DE]: "30 millions d'ennemis",
@@ -1692,7 +1746,99 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
     },
     icon: "r_cooked",
     community: false,
-    rare: false
+    rare: false,
+    titles: [
+      {
+        name: {
+          [Lang.DE]: "Mann am Kamin",
+          [Lang.EN]: "Man at the fireplace",
+          [Lang.FR]: "Homme au foyer",
+          [Lang.ES]: "Hombre junto a la chimenea"
+        },
+        quantity: 5
+      },
+      {
+        name: {
+          [Lang.DE]: "Alter Freund, neue Speisekarte",
+          [Lang.EN]: "Old friend, new menu",
+          [Lang.FR]: "Ancien ami, nouveau menu",
+          [Lang.ES]: "Viejo amigo, nuevo menú"
+        },
+        quantity: 10
+      },
+      {
+        name: {
+          [Lang.DE]: "Leichenkoch",
+          [Lang.EN]: "Corpse cook",
+          [Lang.FR]: "Cuiseur de cadavres",
+          [Lang.ES]: "Cocinero de cadáveres"
+        },
+        quantity: 25
+      },
+      {
+        name: {
+          [Lang.DE]: "50 Shades of Grease",
+          [Lang.EN]: "50 Shades of Grease",
+          [Lang.FR]: "50 nuances de graillon",
+          [Lang.ES]: "50 sombras de Grasa"
+        },
+        quantity: 50
+      },
+      {
+        name: {
+          [Lang.DE]: "Der große Eintopf",
+          [Lang.EN]: "The Great Pot-au-feu",
+          [Lang.FR]: "Le Grand Pot-au-feu",
+          [Lang.ES]: "El Gran Pot-au-feu"
+        },
+        quantity: 75
+      },
+      {
+        name: {
+          [Lang.DE]: "Grillexperte unter Freunden",
+          [Lang.EN]: "Barbecue expert among friends",
+          [Lang.FR]: "Expert du barbecue entre amis ",
+          [Lang.ES]: "Experto en barbacoa de amigos"
+        },
+        quantity: 100
+      },
+      {
+        name: {
+          [Lang.DE]: "Küchenalbtraum",
+          [Lang.EN]: "Kitchen Nightmare",
+          [Lang.FR]: "Cauchemar en Cuisine",
+          [Lang.ES]: "Pesadilla en la cocina"
+        },
+        quantity: 150
+      },
+      {
+        name: {
+          [Lang.DE]: "Cordon-Bleu-Koch",
+          [Lang.EN]: "Kurudon Bleu Chef",
+          [Lang.FR]: "Chef Kurudon Bleu",
+          [Lang.ES]: "Kurudon Bleu Chef"
+        },
+        quantity: 200
+      },
+      {
+        name: {
+          [Lang.DE]: "Ich habe Soylent Green erfunden",
+          [Lang.EN]: "I invented Soylent Green",
+          [Lang.FR]: "J'ai inventé le Soleil Vert",
+          [Lang.ES]: "Yo inventé el Soylent Green"
+        },
+        quantity: 350
+      },
+      {
+        name: {
+          [Lang.DE]: "Gott schickt Fleisch, und der Teufel schickt Köche",
+          [Lang.EN]: "God sends meat, and the devil sends cooks.",
+          [Lang.FR]: "Dieu envoie la viande et le diable, les cuisiniers.",
+          [Lang.ES]: "Dios envía la carne, el diablo los cocineros"
+        },
+        quantity: 500
+      }
+    ]
   },
   [RewardId.DIGGER]: {
     id: RewardId.DIGGER,
@@ -2023,6 +2169,69 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
           [Lang.ES]: "¡¡¡El cielo se está cayendo!!!"
         },
         quantity: 250
+      },
+      {
+        name: {
+          [Lang.DE]: "Alice im Wunderland",
+          [Lang.EN]: "Alice in Wonderland",
+          [Lang.FR]: "Alice au pays des Merveilles ",
+          [Lang.ES]: "Alicia en el país de las maravillas"
+        },
+        quantity: 350
+      },
+      {
+        name: {
+          [Lang.DE]: "Was kann schon schiefgehen?",
+          [Lang.EN]: "What’s the worst that could happen?",
+          [Lang.FR]: "Au pire, ça risque quoi ?",
+          [Lang.ES]: "¿Qué es lo peor que podría pasar?"
+        },
+        quantity: 500
+      },
+      {
+        name: {
+          [Lang.DE]: "Um glücklich zu leben, lasst uns Pillen nehmen!",
+          [Lang.EN]: "To live happily, let’s live on pills!",
+          [Lang.FR]: "Pour vivre heureux, vivons cachet !",
+          [Lang.ES]: "Para vivir felices, ¡vivamos empastillados!"
+        },
+        quantity: 750
+      },
+      {
+        name: {
+          [Lang.DE]: "Unbekannter Spieler",
+          [Lang.EN]: "Unlabeled Gambler",
+          [Lang.FR]: "Joueur sans étiquette",
+          [Lang.ES]: "Jugador sin etiqueta"
+        },
+        quantity: 1000
+      },
+      {
+        name: {
+          [Lang.DE]: "Mikrodosierung ist für Nerds",
+          [Lang.EN]: "Microdosing is for nerds",
+          [Lang.FR]: "Le microdosage est pour les nerds",
+          [Lang.ES]: "La microdosificación es para nerds"
+        },
+        quantity: 1500
+      },
+      {
+        name: {
+          [Lang.DE]: "Las Vegas Paranoiker",
+          [Lang.EN]: "Las Vegas Parano",
+          [Lang.FR]: "Las Vegas Parano",
+          [Lang.ES]: "Las Vegas Parano"
+        },
+        quantity: 2000
+      },
+      {
+        name: {
+          [Lang.DE]: "Morgen höre ich auf…",
+          [Lang.EN]: "Tomorrow, I’m quitting…",
+          [Lang.FR]: "Demain, j’arrête…",
+          [Lang.ES]: "Mañana lo dejo..."
+        },
+        quantity: 3000
       }
     ]
   },
@@ -3767,7 +3976,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Yo, wir schaffen das!",
           [Lang.EN]: "I'll let myself in...",
-          [Lang.FR]: "Bricol' girl travesti",
+          [Lang.FR]: "Réparateur",
           [Lang.ES]: "Bricoloco"
         },
         quantity: 10,
@@ -3777,7 +3986,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Kleiner Schraubendreher",
           [Lang.EN]: "The BRD Screwdriver Combo",
-          [Lang.FR]: "Amateur du PMV tournevis",
+          [Lang.FR]: "Maître-Bricoleur",
           [Lang.ES]: "Destornillador Humano"
         },
         quantity: 25,
@@ -3787,7 +3996,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Schweizer Taschenmesser",
           [Lang.EN]: "Spanners and Bump keys",
-          [Lang.FR]: "Nuchuk à molette",
+          [Lang.FR]: "Gogogadget-O-Clés",
           [Lang.ES]: "Mascafierros"
         },
         quantity: 75
@@ -7070,6 +7279,16 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
     titles: [
       {
         name: {
+          [Lang.DE]: "Vollständige Erkundung",
+          [Lang.EN]: "Total Exploration",
+          [Lang.FR]: "Explorations totales",
+          [Lang.ES]: "Exploración Total"
+        },
+        quantity: 1,
+        points: 3.5
+      },
+      {
+        name: {
           [Lang.DE]: "Leidenschaftlicher Entdecker",
           [Lang.EN]: "Totally impetuous explorer",
           [Lang.FR]: "Explorateur totalement impétueux",
@@ -7089,31 +7308,75 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
       },
       {
         name: {
-          [Lang.DE]: "100%",
-          [Lang.EN]: "100%",
-          [Lang.FR]: "100%",
-          [Lang.ES]: "100%"
+          [Lang.DE]: "Tourist",
+          [Lang.EN]: "Tourist",
+          [Lang.FR]: "Touriste",
+          [Lang.ES]: "Turista"
         },
         quantity: 15
       },
       {
         name: {
-          [Lang.DE]: "TBD",
-          [Lang.EN]: "TBD",
-          [Lang.FR]: "TBD",
-          [Lang.ES]: "TBD"
+          [Lang.DE]: "Sie ist flach!",
+          [Lang.EN]: "It’s flat!",
+          [Lang.FR]: "Elle est plate!",
+          [Lang.ES]: "¡Es plano!"
         },
         quantity: 20
       },
       {
         name: {
-          [Lang.DE]: "Total Exploration",
-          [Lang.EN]: "Total Exploration",
-          [Lang.FR]: "Total Exploration",
-          [Lang.ES]: "Total Exploration"
+          [Lang.DE]: "Um die Welt in... ein paar Tagen",
+          [Lang.EN]: "Around the World in... a few days",
+          [Lang.FR]: "Le Tour du Monde en... quelques jours",
+          [Lang.ES]: "La vuelta al mundo en...unos días"
         },
-        quantity: 1,
-        points: 3.5
+        quantity: 25
+      },
+      {
+        name: {
+          [Lang.DE]: "Nachfahre der Fremen",
+          [Lang.EN]: "Descendant of the Fremen",
+          [Lang.FR]: "Descendant des Fremens.",
+          [Lang.ES]: "Descendiente de los Fremen"
+        },
+        quantity: 30
+      },
+      {
+        name: {
+          [Lang.DE]: "Magellan der Außenwelt",
+          [Lang.EN]: "Magellan of the Otherworld",
+          [Lang.FR]: "Magellan de l'Outre-Monde",
+          [Lang.ES]: "Magallanes del inframundo"
+        },
+        quantity: 40
+      },
+      {
+        name: {
+          [Lang.DE]: "Reise, reise!",
+          [Lang.EN]: "Travel, travel",
+          [Lang.FR]: "Voyage voyage",
+          [Lang.ES]: "Viaja, viaja"
+        },
+        quantity: 50
+      },
+      {
+        name: {
+          [Lang.DE]: "Marco? Polooo!",
+          [Lang.EN]: "Marco? Polooo!",
+          [Lang.FR]: "Marco ? Polooo !",
+          [Lang.ES]: "¿Marco? ¡Polooo!"
+        },
+        quantity: 75
+      },
+      {
+        name: {
+          [Lang.DE]: "Saurons Auge",
+          [Lang.EN]: "Eye of Sauron",
+          [Lang.FR]: "Œil de Sauron",
+          [Lang.ES]: "Ojo de Sauron"
+        },
+        quantity: 100
       }
     ]
   }

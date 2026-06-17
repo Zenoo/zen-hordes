@@ -429,6 +429,7 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Mho-Origin": "zen-hordes",
         },
         body: JSON.stringify({
           map: {
