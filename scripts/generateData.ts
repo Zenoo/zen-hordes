@@ -2429,6 +2429,7 @@ export type Reward = {
   icon: string;
   community: boolean;
   rare: boolean;
+  pointsOnFirstUnlock?: number;
   titles: {
     name: Record<Lang, string | string[]>;
     quantity: number;
@@ -2473,7 +2474,8 @@ const generateRewards = async () => {
       },
       community: rewardData.community,
       rare: rewardData.rare,
-      titles: titles[id] ?? [],
+      pointsOnFirstUnlock: titles[id]?.pointsOnFirstUnlock,
+      titles: titles[id]?.titles ?? [],
     };
   });
 
@@ -2493,6 +2495,7 @@ export type Reward = {
   icon: string;
   community: boolean;
   rare: boolean;
+  pointsOnFirstUnlock?: number;
   titles?: {
     name: Record<Lang, string | string[]>;
     quantity: number;
@@ -2528,7 +2531,11 @@ export type Reward = {
     community: ${reward.community},
     rare: ${reward.rare}${
         reward.titles.length > 0
-          ? `,
+          ? `,${
+              reward.pointsOnFirstUnlock !== undefined
+                ? `\n    pointsOnFirstUnlock: ${reward.pointsOnFirstUnlock},`
+                : ""
+            }
     titles: [
       ${reward.titles
         .map(

@@ -100,7 +100,7 @@ export const displayPossibleBuriedRuin = (node: HTMLElement) => {
     .querySelector<HTMLElement>(".zone-dist b")
     ?.textContent?.replace(/[^\d]/g, "");
   if (!distanceText) {
-    console.warn("Could not find distance for possible buried ruin");
+    console.log("Could not find distance for possible buried ruin");
     return;
   }
 
@@ -111,7 +111,7 @@ export const displayPossibleBuriedRuin = (node: HTMLElement) => {
   });
 
   if (possibleRuins.length === 0) {
-    console.warn("Could not find possible buried ruins");
+    console.log("Could not find possible buried ruins");
     return;
   }
 

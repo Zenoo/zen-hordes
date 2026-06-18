@@ -1797,7 +1797,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Grillexperte unter Freunden",
           [Lang.EN]: "Barbecue expert among friends",
-          [Lang.FR]: "Expert du barbecue entre amis ",
+          [Lang.FR]: "Expert du barbecue entre amis",
           [Lang.ES]: "Experto en barbacoa de amigos"
         },
         quantity: 100
@@ -1988,7 +1988,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
           [Lang.DE]: "Großer E-KEA Katalog",
           [Lang.EN]: "Welcome to the palace.",
           [Lang.FR]: "Grand Catalogue Kiela",
-          [Lang.ES]: "Bienvenidos al palacio. "
+          [Lang.ES]: "Bienvenidos al palacio."
         },
         quantity: 2500
       }
@@ -2174,7 +2174,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Alice im Wunderland",
           [Lang.EN]: "Alice in Wonderland",
-          [Lang.FR]: "Alice au pays des Merveilles ",
+          [Lang.FR]: "Alice au pays des Merveilles",
           [Lang.ES]: "Alicia en el país de las maravillas"
         },
         quantity: 350
@@ -7276,17 +7276,8 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
     icon: "r_explot",
     community: false,
     rare: true,
+    pointsOnFirstUnlock: 3.5,
     titles: [
-      {
-        name: {
-          [Lang.DE]: "Vollständige Erkundung",
-          [Lang.EN]: "Total Exploration",
-          [Lang.FR]: "Explorations totales",
-          [Lang.ES]: "Exploración Total"
-        },
-        quantity: 1,
-        points: 3.5
-      },
       {
         name: {
           [Lang.DE]: "Leidenschaftlicher Entdecker",

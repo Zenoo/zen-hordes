@@ -838,6 +838,7 @@ export type Reward = {
   icon: string;
   community: boolean;
   rare: boolean;
+  pointsOnFirstUnlock?: number;
   titles?: {
     name: Record<Lang, string | string[]>;
     quantity: number;

@@ -32,6 +32,17 @@ const findRewardByTitle = (
   if ("id" in data && data.id === RewardId.CHAMAN) return false;
 
   if (typeof data.name[store["hordes-lang"]] === "string") {
+    // Ignore (e) in RewardId.NODRUG for FR language
+    if (
+      "id" in data &&
+      data.id === RewardId.NODRUG &&
+      store["hordes-lang"] === "fr"
+    ) {
+      return (
+        data.name[store["hordes-lang"]].replace("(e)", "").trim() === title
+      );
+    }
+
     return data.name[store["hordes-lang"]] === title;
   }
 
@@ -47,7 +58,7 @@ const getTitleName = (title: NonNullable<Reward["titles"]>[number]) => {
   const lastName = titleName[titleName.length - 1];
 
   if (!lastName) {
-    console.warn(
+    console.log(
       `No name found for title: ${titleName.map((t) => t).join(", ")}`
     );
     return "";
@@ -73,11 +84,21 @@ export const displayRewardTitlePoints = (node: HTMLElement) => {
       );
 
       if (!reward) {
-        console.warn(`No reward found for title: ${displayedTitle}`);
+        console.log(`No reward found for title: ${displayedTitle}`);
         continue;
       }
 
       currentReward = reward.id;
+
+      // Display first unlock points
+      if (reward.pointsOnFirstUnlock) {
+        const pointSpan = document.createElement("span");
+        pointSpan.classList.add("zen-title-points", "zen-added");
+        pointSpan.textContent = `+${reward.pointsOnFirstUnlock}`;
+        li.appendChild(pointSpan);
+        li.setAttribute("data-points", String(reward.pointsOnFirstUnlock));
+      }
+
       continue;
     }
 
@@ -89,7 +110,7 @@ export const displayRewardTitlePoints = (node: HTMLElement) => {
     );
 
     if (!rewardTitle) {
-      console.warn(
+      console.log(
         `${rewards[currentReward].name.en}: Unknown title: ${displayedTitle}`
       );
       console.log(currentReward, rewards[currentReward].titles, displayedTitle);

@@ -30,14 +30,17 @@ export const exportTitles = async () => {
   // https://regex101.com/r/v07Wo8/1
   const titlesRegex =
     /(?<!# |\/\/ )\$container->add\(\)->title\('(.+)'\)->unlockquantity\((\d+)\)->associatedtag\('[^)]+'\)->associatedpicto\('(.+)'\)/gm;
-  const titlesList = [...text.matchAll(titlesRegex)].reduce<
+  const rewards = [...text.matchAll(titlesRegex)].reduce<
     Record<
       string,
       {
-        name: Record<Lang, string | string[]>;
-        quantity: number;
-        points?: number;
-      }[]
+        pointsOnFirstUnlock?: number;
+        titles: {
+          name: Record<Lang, string | string[]>;
+          quantity: number;
+          points?: number;
+        }[];
+      }
     >
   >((acc, [, germanTitle, quantity, picto]) => {
     if (!germanTitle || !quantity || !picto) {
@@ -45,9 +48,11 @@ export const exportTitles = async () => {
     }
 
     if (!acc[picto]) {
-      acc[picto] = [];
+      acc[picto] = {
+        titles: [],
+      };
     }
-    acc[picto].push({
+    acc[picto].titles.push({
       name: {
         [Lang.DE]: germanTitle.replace(/\\'/g, "'"), // Replace escaped quotes
         [Lang.EN]: "",
@@ -59,22 +64,6 @@ export const exportTitles = async () => {
     return acc;
   }, {});
 
-  // The title for "r_explot_#00" at quantity 1 is missing in the main repo, so we add it manually at the beginning of the list
-  if (!titlesList["r_explot_#00"]?.some((t) => t.quantity === 1)) {
-    if (!titlesList["r_explot_#00"]) {
-      titlesList["r_explot_#00"] = [];
-    }
-    titlesList["r_explot_#00"].unshift({
-      name: {
-        [Lang.DE]: "Vollständige Erkundung",
-        [Lang.EN]: "",
-        [Lang.FR]: "",
-        [Lang.ES]: "",
-      },
-      quantity: 1,
-    });
-  }
-
   // Get title translations from the main repo
   for (const lang of [Lang.EN, Lang.FR, Lang.ES]) {
     const titlesResponse = await fetch(
@@ -83,8 +72,8 @@ export const exportTitles = async () => {
     const titlesText = await titlesResponse.text();
     const titlesData = YAML.parse(titlesText);
 
-    Object.values(titlesList).forEach((titles) => {
-      titles.forEach((title) => {
+    Object.values(rewards).forEach((reward) => {
+      reward.titles.forEach((title) => {
         const translatedTitle = titlesData[getTitleName(title.name, Lang.DE)];
 
         if (typeof translatedTitle === "string") {
@@ -94,7 +83,7 @@ export const exportTitles = async () => {
               translatedTitle.matchAll(/\{([^{}]+)\}/g)
             ).map((m) => m[1] ?? "");
           } else {
-            title.name[lang] = translatedTitle;
+            title.name[lang] = translatedTitle.trim();
           }
         } else {
           console.warn(
@@ -172,7 +161,7 @@ export const exportTitles = async () => {
         ].forEach((quantity, index) => {
           if (typeof quantity === "undefined") return;
 
-          if (!titlesList[picto]) {
+          if (!rewards[picto]) {
             throw new Error(`Picto ${picto} not found in titles list`);
           }
 
@@ -186,9 +175,18 @@ export const exportTitles = async () => {
             );
           }
 
-          const title = titlesList[picto].find((t) => t.quantity === +quantity);
+          const title = rewards[picto].titles.find(
+            (t) => t.quantity === +quantity
+          );
 
           if (!title) {
+            // If we didn't find a title for quantity 1,
+            // it means it's the amount of points for the first unlock, so we can set it to the reward object
+            if (+quantity === 1) {
+              rewards[picto].pointsOnFirstUnlock = +points;
+              return;
+            }
+
             throw new Error(
               `Title not found for picto ${picto} at index ${index} for quantity ${quantity}`
             );
@@ -203,13 +201,13 @@ export const exportTitles = async () => {
   // Save titles to a file
   fs.writeFileSync(
     path.join(__dirname, "data", "titles.json"),
-    JSON.stringify(titlesList, null, 2),
+    JSON.stringify(rewards, null, 2),
     "utf-8"
   );
 
   console.log("titles.json file has been generated.");
 
-  return titlesList;
+  return rewards;
 };
 
 const newReward = (reward: Reward, title: string, quantity: number) => {

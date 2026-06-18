@@ -17,7 +17,7 @@ export const tooltip = ({
   classes = [],
 }: TooltipOptions) => {
   if (!(target instanceof HTMLElement)) {
-    console.warn(`Tooltip target is not an HTMLElement: ${target.outerHTML}`);
+    console.log(`Tooltip target is not an HTMLElement: ${target.outerHTML}`);
     return;
   }
 
