@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.17.6](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.5...zen-hordes-v1.17.6) (2026-06-18)
+
+
+### Bug Fixes
+
+* Display picto points on first unlock ([b33f9ae](https://github.com/Zenoo/zen-hordes/commit/b33f9ae7581d01a0a85fd02e08e82be5621ade62))
+* New broken items tooltips + wiki opener ([7ed4f57](https://github.com/Zenoo/zen-hordes/commit/7ed4f5743572b08c3201f2c93dd1ddd3be5aefbf))
+
 ## [1.17.5](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.4...zen-hordes-v1.17.5) (2026-06-17)
 
 
