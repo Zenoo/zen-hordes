@@ -489,7 +489,11 @@ const findItem = (node: HTMLElement) => {
       ? /item\/(.+)\..+\.gif/.exec(imgSrc)?.[1] ?? ""
       : "";
 
-    if (iconMatch !== item.icon) {
+    const matches = broken
+      ? item.icon + ".b" === iconMatch
+      : item.icon === iconMatch;
+
+    if (!matches) {
       // Restore the .broken span
       if (broken) {
         node.querySelector("h1 img")?.before(broken);

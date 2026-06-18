@@ -53,6 +53,7 @@ const T: Translations = {
     wiki: "Wiki",
     close: "Close",
     wikiMissing: "Couldn't reach the wiki",
+    cannotFindItem: "Couldn't find the item in the wiki",
     menu: "Menu",
     guide: "Guide",
     bank: "Bank",
@@ -112,6 +113,7 @@ const T: Translations = {
     wiki: "Wiki",
     close: "Fermer",
     wikiMissing: "Impossible d'atteindre le wiki",
+    cannotFindItem: "Impossible de trouver l'objet dans le wiki",
     menu: "Menu",
     guide: "Guide",
     bank: "Banque",
@@ -172,6 +174,7 @@ const T: Translations = {
     wiki: "Wiki",
     close: "Schließen",
     wikiMissing: "Wiki nicht erreichbar",
+    cannotFindItem: "Konnte den Gegenstand im Wiki nicht finden",
     menu: "Menü",
     guide: "Leitfaden",
     bank: "Bank",
@@ -233,6 +236,7 @@ const T: Translations = {
     wiki: "Wiki",
     close: "Cerrar",
     wikiMissing: "No se pudo acceder a la wiki",
+    cannotFindItem: "No se pudo encontrar el objeto en la wiki",
     menu: "Menú",
     guide: "Guía",
     bank: "Banco",
@@ -1393,15 +1397,25 @@ export const openItemInWiki = (node: HTMLElement) => {
     const item = Object.values(items).find((item) => {
       if (item.id === itemId) return true;
 
-      return (
-        item.name[store["hordes-lang"]] === node.getAttribute("alt")?.trim() &&
-        (/item\/(.+)\..+\.gif/.exec(node.getAttribute("src") ?? "")?.[1] ??
-          "") === item.icon
-      );
+      if (
+        item.name[store["hordes-lang"]] !== node.getAttribute("alt")?.trim()
+      ) {
+        return false;
+      }
+
+      const icon =
+        /item\/(.+)\..+\.gif/.exec(node.getAttribute("src") ?? "")?.[1] ?? "";
+
+      // Handle broken icons
+      if (icon !== item.icon && icon !== item.icon + ".b") {
+        return false;
+      }
+
+      return true;
     });
 
     if (!item) {
-      notify(t(T, "wikiMissing"), Severity.ERROR);
+      notify(t(T, "cannotFindItem"), Severity.ERROR);
       return;
     }
 
