@@ -257,6 +257,19 @@ const getCampingObjectImprovements = () => {
   return countLogs(LogEntryType.CAMPING_UPGRADE_OBJECT);
 };
 
+const getZoneDepletionStatus = () => {
+  const icon = document.querySelector(
+    ".zone-scavenger img[src*='/collec_lv']"
+  ) as HTMLImageElement | null;
+  if (!icon) return;
+
+  const match = icon.src.match(/collec_lv(\d+)/);
+
+  if (!match) return;
+
+  return +(match[1] ?? "0");
+};
+
 /**
  * Update the status of an external app in the update button
  */
@@ -358,6 +371,7 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
       const scoutRadar = getScoutRadar();
       const scavRadar = getScavRadar();
       const playerList = getPresentPlayers();
+      const depletion = getZoneDepletionStatus();
 
       // Final request params
       updateParams = {
@@ -373,6 +387,7 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
           scoutRadar,
           scavRadar,
           playerList: playerList.length ? playerList : undefined,
+          scavZoneStatus: depletion,
         }),
       };
       break;
