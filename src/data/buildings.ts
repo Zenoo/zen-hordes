@@ -580,7 +580,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
       [Lang.ES]: "Trampas clásicas"
     },
     description: {
-      [Lang.EN]: "With deeper holes and tarps laid out over them, just wait and watch something (or someone?) fall in!",
+      [Lang.EN]: "With deeper holes and traps laid out over them, just wait and watch something (or someone?) fall in!",
       [Lang.FR]: "Avec des trous plus profonds et des bâches disposées dessus, il suffit d'attendre et de voir quelque chose (ou quelqu'un ?) tomber dedans !",
       [Lang.DE]: "Mit tieferen Löchern und darüber ausgelegten Planen, einfach abwarten und zusehen, wie etwas (oder jemand?) hineinfällt!",
       [Lang.ES]: "Con agujeros más profundos y lonas colocadas sobre ellos, solo hay que esperar y ver cómo cae algo (¿o alguien?) dentro."
@@ -617,7 +617,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "Wooden fences built upstream of the wall to slow down (at least try) the zombies marching towards the town.",
-      [Lang.FR]: "Des clotures en bois construites en amont de la muraille pour ralentir (du moins essayer) les zombies en marche vers la ville.",
+      [Lang.FR]: "Des clôtures en bois construites en amont de la muraille pour ralentir (du moins essayer) les zombies en marche vers la ville.",
       [Lang.DE]: "Holzzäune, die vor der Mauer errichtet wurden, um die auf die Stadt zustürmenden Zombies zu verlangsamen (oder es zumindest zu versuchen).",
       [Lang.ES]: "Vallas de madera construidas río arriba de la muralla para frenar (o al menos intentarlo) a los zombies que marchan hacia el pueblo."
     },
@@ -2463,7 +2463,7 @@ export const buildings: Readonly<Record<BuildingId, Building>> = {
     },
     description: {
       [Lang.EN]: "Circular saws tinkered with at the foot of the wall activated by a skilful elastic system. The sound of the rotation of the saws is strangely reminiscent of that of a human cry...",
-      [Lang.FR]: "Des scies circulaires bricolées au pied de la muraille activées par un savant système d'élastique. Le bruit de la rotation des scies fait étrangement pensé à celui d'un cri humain...",
+      [Lang.FR]: "Des scies circulaires bricolées, installées au pied de la muraille et activées par un savant système d’élastiques. Le bruit strident produit par la rotation des scies fait étrangement penser à des cris humains…",
       [Lang.DE]: "Kreissägen, die am Fuße der Mauer durch ein geschicktes elastisches System aktiviert werden. Das Geräusch, das beim Drehen der Sägen entsteht, erinnert seltsamerweise an einen menschlichen Schrei...",
       [Lang.ES]: "Sierras circulares situadas al pie del muro accionadas por un hábil sistema elástico. El sonido de la rotación de las sierras recuerda extrañamente al de un grito humano..."
     },
