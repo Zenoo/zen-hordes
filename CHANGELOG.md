@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.17.7](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.6...zen-hordes-v1.17.7) (2026-07-18)
+
+
+### Bug Fixes
+
+* Broken icon sometimes doesn't have a .b variant ([adba43b](https://github.com/Zenoo/zen-hordes/commit/adba43b9809acd1ebc4a1f68937390df6e3196c6))
+* MH v5.1.1 ([3def16d](https://github.com/Zenoo/zen-hordes/commit/3def16d1d8344e76995e75ff15cb8d5ade86b74d))
+* Send zone depletion status to FM ([10cec46](https://github.com/Zenoo/zen-hordes/commit/10cec46da4a5d87bb8d10d43875c049d9619b980))
+
 ## [1.17.6](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.5...zen-hordes-v1.17.6) (2026-06-18)
 
 
