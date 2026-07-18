@@ -490,7 +490,7 @@ const findItem = (node: HTMLElement) => {
       : "";
 
     const matches = broken
-      ? item.icon + ".b" === iconMatch
+      ? item.icon + ".b" === iconMatch || item.icon === iconMatch
       : item.icon === iconMatch;
 
     if (!matches) {
@@ -1476,7 +1476,12 @@ export const insertBetterItemTooltips = (
   const isBroken = !!node.querySelector("h1 span.broken");
   const itemRecipes = findRecipes(item, isBroken);
   const relatedItems = findItemsWithRelatedActions(item, isBroken);
-  if (!itemRecipes.length && !item.actions.length && !relatedItems.length) {
+  if (
+    !itemRecipes.length &&
+    !item.actions.length &&
+    !relatedItems.length &&
+    !isBroken
+  ) {
     return;
   }
 

@@ -2635,6 +2635,7 @@ const generateTypes = () => {
     const itemsResponse = await api.json.itemsList({
       fields: "id,uid,img,heavy,deco,guard,name,desc,cat",
     });
+    // TODO: Fetch broken icon when it's available in the API
 
     const items = itemsResponse.data;
 
