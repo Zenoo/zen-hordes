@@ -104,6 +104,7 @@ export type Item = {
   info?: Record<Lang, string>;
   categories: string[];
   icon: string;
+  brokenIcon?: string;
   decoration: number;
   heavy: boolean;
   watchPoints: number;
@@ -416,6 +417,9 @@ const generateItems = async (
         ? [sanitizeItemCategory(itemData.cat.en)]
         : [],
       icon: /item\/(.+)\..+\.gif/.exec(itemData.img)?.[1] ?? "",
+      brokenIcon: itemData.img_b
+        ? /item\/(.+)\..+\.gif/.exec(itemData.img_b)?.[1] ?? undefined
+        : undefined,
       decoration: itemData.deco,
       heavy: itemData.heavy,
       watchPoints: itemData.guard,
@@ -1604,6 +1608,7 @@ export type Item = {
   info?: Record<Lang, string>;
   categories: ItemCategory[];
   icon: string;
+  brokenIcon?: string;
   decoration: number;
   heavy: boolean;
   watchPoints: number;
@@ -1655,7 +1660,9 @@ export type Item = {
     categories: [${item.categories
       .map((category) => `ItemCategory.${category}`)
       .join(", ")}],
-    icon: "${item.icon}",
+    icon: "${item.icon}",${
+        item.brokenIcon ? `\n    brokenIcon: "${item.brokenIcon}",` : ""
+      }
     decoration: ${item.decoration},
     heavy: ${item.heavy},
     watchPoints: ${item.watchPoints},${

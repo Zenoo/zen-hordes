@@ -404,6 +404,7 @@ export type Item = {
   info?: Record<Lang, string>;
   categories: ItemCategory[];
   icon: string;
+  brokenIcon?: string;
   decoration: number;
   heavy: boolean;
   watchPoints: number;

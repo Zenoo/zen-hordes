@@ -400,6 +400,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -497,6 +498,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -676,6 +678,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -759,6 +762,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -3826,6 +3830,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -4144,6 +4149,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -4559,6 +4565,7 @@
           "id": 108,
           "uid": "chair_basic",
           "img": "item/item_chair_basic.0d694621.gif",
+          "img_b": "item/item_chair_basic.b.7b160db9.gif",
           "name": {
             "fr": "Chaise Ektörp-Gluten",
             "en": "Ektorp-Gluten Chair",
@@ -4614,6 +4621,7 @@
           "id": 170,
           "uid": "chain",
           "img": "item/item_chain.7525a25b.gif",
+          "img_b": "item/item_chain.b.fe420b22.gif",
           "name": {
             "fr": "Grosse chaîne rouillée",
             "en": "Rusty Chain",
@@ -4724,6 +4732,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -5209,6 +5218,7 @@
           "id": 162,
           "uid": "machine_2",
           "img": "item/item_machine_2.ced0ce87.gif",
+          "img_b": "item/item_machine_2.b.f74a12d7.gif",
           "name": {
             "fr": "Four cancérigène",
             "en": "Carcinogenic Oven",
@@ -5445,6 +5455,7 @@
           "id": 108,
           "uid": "chair_basic",
           "img": "item/item_chair_basic.0d694621.gif",
+          "img_b": "item/item_chair_basic.b.7b160db9.gif",
           "name": {
             "fr": "Chaise Ektörp-Gluten",
             "en": "Ektorp-Gluten Chair",
@@ -5653,6 +5664,7 @@
           "id": 161,
           "uid": "machine_1",
           "img": "item/item_machine_1.77adfa65.gif",
+          "img_b": "item/item_machine_1.b.8c10b7ff.gif",
           "name": {
             "fr": "Vieille machine à laver",
             "en": "Old Washing Machine",
@@ -6605,6 +6617,7 @@
           "id": 285,
           "uid": "guitar",
           "img": "item/item_guitar.02b6ac8d.gif",
+          "img_b": "item/item_guitar.b.a76180c7.gif",
           "name": {
             "fr": "Guitare artisanale",
             "en": "Makeshift Guitar",
@@ -7394,6 +7407,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -8281,6 +8295,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -8447,6 +8462,7 @@
           "id": 108,
           "uid": "chair_basic",
           "img": "item/item_chair_basic.0d694621.gif",
+          "img_b": "item/item_chair_basic.b.7b160db9.gif",
           "name": {
             "fr": "Chaise Ektörp-Gluten",
             "en": "Ektorp-Gluten Chair",
@@ -8585,6 +8601,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -8760,6 +8777,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -9088,6 +9106,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -9447,6 +9466,7 @@
           "id": 170,
           "uid": "chain",
           "img": "item/item_chain.7525a25b.gif",
+          "img_b": "item/item_chain.b.fe420b22.gif",
           "name": {
             "fr": "Grosse chaîne rouillée",
             "en": "Rusty Chain",
@@ -9544,6 +9564,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -9641,6 +9662,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -9834,6 +9856,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -10443,6 +10466,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -10925,6 +10949,7 @@
           "id": 170,
           "uid": "chain",
           "img": "item/item_chain.7525a25b.gif",
+          "img_b": "item/item_chain.b.fe420b22.gif",
           "name": {
             "fr": "Grosse chaîne rouillée",
             "en": "Rusty Chain",
@@ -12297,6 +12322,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -12589,6 +12615,7 @@
           "id": 108,
           "uid": "chair_basic",
           "img": "item/item_chair_basic.0d694621.gif",
+          "img_b": "item/item_chair_basic.b.7b160db9.gif",
           "name": {
             "fr": "Chaise Ektörp-Gluten",
             "en": "Ektorp-Gluten Chair",
@@ -12700,6 +12727,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",
@@ -12894,6 +12922,7 @@
           "id": 113,
           "uid": "concrete_wall",
           "img": "item/item_concrete_wall.9cae6481.gif",
+          "img_b": "item/item_concrete_wall.b.181b4b60.gif",
           "name": {
             "fr": "Pavés de béton informes",
             "en": "Unshaped Concrete Blocks",

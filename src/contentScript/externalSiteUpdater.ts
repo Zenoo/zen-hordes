@@ -366,6 +366,7 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
       break;
     }
     case ExternalSiteName.FM: {
+      const townId = getTownId();
       const position = getPosition();
       const deadZombies = getDeadZombies();
       const scoutRadar = getScoutRadar();
@@ -381,6 +382,7 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
         },
         body: JSON.stringify({
           userKey: store["user-key"],
+          mapId: townId,
           nbrKill: deadZombies,
           x: position.x,
           y: position.y,

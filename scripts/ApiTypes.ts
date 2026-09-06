@@ -331,6 +331,11 @@ export interface XMLItemObject {
    */
   img?: string;
   /**
+   * Broken item icon. Only exists if the item has a dedicated broken icon.
+   * @example "item/item_pile.gif"
+   */
+  img_b?: string;
+  /**
    * Is this item broken (1) or not (0)
    * @min 0
    * @max 1
@@ -474,10 +479,37 @@ export interface XMLRewardObject {
   desc?: string;
   title?: {
     /**
+     * Unique identifier for the given title.
+     * @example 286
+     */
+    id?: number;
+    /**
+     * Unlock quantity for the given title
+     * @example 100
+     */
+    at?: number;
+    /**
      * Title name (depends on language)
      * @example "Hölle, das esse ich jeden Morgen."
      */
     name?: string;
+  }[];
+  icon?: {
+    /**
+     * Unique identifier for the given icon.
+     * @example 659
+     */
+    id?: number;
+    /**
+     * Unlock quantity for the given icon
+     * @example 100
+     */
+    at?: number;
+    /**
+     * Icon path
+     * @example "icons/title/r_ptame.d34db37f.gif"
+     */
+    path?: string;
   }[];
   comment?: string[];
 }
@@ -572,6 +604,11 @@ export interface XMLItemPrototypeObject {
    * @example "item/item_pile.gif"
    */
   img?: string;
+  /**
+   * Broken item icon. Only exists if the item has a dedicated broken icon.
+   * @example "item/item_pile.gif"
+   */
+  img_b?: string;
   /**
    * Item name (depends on language)
    * @example "Batterie"
@@ -739,6 +776,21 @@ export interface XMLCityObject {
    */
   y?: number;
   /**
+   * User ID for the current guide
+   * @example 1
+   */
+  guide?: number;
+  /**
+   * User ID for the current shaman
+   * @example 1
+   */
+  shaman?: number;
+  /**
+   * User ID for the current catapult master
+   * @example 1
+   */
+  cata?: number;
+  /**
    * City language
    * @example "de"
    */
@@ -901,6 +953,11 @@ export interface XMLChartObject {
      * @example 0
      */
     nvt?: number;
+    /**
+     * "Excavated", 1 if the zone has been excavated by a scavenger.
+     * @example 0
+     */
+    exc?: number;
   }[];
 }
 
@@ -972,6 +1029,11 @@ export interface JSONItemPrototypeObject {
    * @example "item/item_water.85230dbb.gif"
    */
   img?: string;
+  /**
+   * Path to item icon for broken item. Only exists if the item has a dedicated broken icon.
+   * @example "item/item_lawn.b.b5d3807d.gif"
+   */
+  img_b?: string;
   /**
    * Is the item heavy?
    * @example false
@@ -1263,6 +1325,26 @@ export interface JSONPictoObject {
   desc?: JSONLanguageDependantField;
   /** List of unlocked titles. */
   titles?: JSONLanguageDependantField[];
+  /** List of unlocked titles and icons */
+  unlocks?: {
+    /**
+     * Numeric unlockable ID
+     * @example 1
+     */
+    id?: number;
+    /**
+     * Number of distinctions needed for the unlock
+     * @example 1
+     */
+    at?: number;
+    /**
+     * Title or icon unlock? If icon, the icon path is contained in value.
+     * @example "title"
+     */
+    type?: "title" | "icon";
+    /** Localizable string */
+    value?: JSONLanguageDependantField;
+  }[];
   /** Comments attached to this distinction. Usually used to note events where instances of this distinction were earned. */
   comments?: string[];
 }
@@ -1644,6 +1726,11 @@ export interface JSONGameObject {
    */
   shaman?: number;
   /**
+   * User ID of the current catapult master
+   * @example 1
+   */
+  cata?: number;
+  /**
    * Town is a private town
    * @example false
    */
@@ -1878,6 +1965,16 @@ export interface JSONGameObject {
      */
     y?: number;
     /**
+     * "Not visited today", 1 if the zone has been uncovered, but nobody has visited it on the current day
+     * @example 0
+     */
+    nvt?: number;
+    /**
+     * "Excavated", 1 if the zone has been excavated by a scavenger.
+     * @example 0
+     */
+    exc?: number;
+    /**
      * Distance to town (in KM)
      * @example 10
      */
@@ -1970,6 +2067,7 @@ type CancelToken = Symbol | string | number;
 
 export enum ContentType {
   Json = "application/json",
+  JsonApi = "application/vnd.api+json",
   FormData = "multipart/form-data",
   UrlEncoded = "application/x-www-form-urlencoded",
   Text = "text/plain",
@@ -2036,12 +2134,20 @@ export class HttpClient<SecurityDataType = unknown> {
       input !== null && (typeof input === "object" || typeof input === "string")
         ? JSON.stringify(input)
         : input,
+    [ContentType.JsonApi]: (input: any) =>
+      input !== null && (typeof input === "object" || typeof input === "string")
+        ? JSON.stringify(input)
+        : input,
     [ContentType.Text]: (input: any) =>
       input !== null && typeof input !== "string"
         ? JSON.stringify(input)
         : input,
-    [ContentType.FormData]: (input: any) =>
-      Object.keys(input || {}).reduce((formData, key) => {
+    [ContentType.FormData]: (input: any) => {
+      if (input instanceof FormData) {
+        return input;
+      }
+
+      return Object.keys(input || {}).reduce((formData, key) => {
         const property = input[key];
         formData.append(
           key,
@@ -2052,7 +2158,8 @@ export class HttpClient<SecurityDataType = unknown> {
               : `${property}`,
         );
         return formData;
-      }, new FormData()),
+      }, new FormData());
+    },
     [ContentType.UrlEncoded]: (input: any) => this.toQueryString(input),
   };
 
@@ -2144,13 +2251,14 @@ export class HttpClient<SecurityDataType = unknown> {
             : payloadFormatter(body),
       },
     ).then(async (response) => {
-      const r = response.clone() as HttpResponse<T, E>;
+      const r = response as HttpResponse<T, E>;
       r.data = null as unknown as T;
       r.error = null as unknown as E;
 
+      const responseToParse = responseFormat ? response.clone() : response;
       const data = !responseFormat
         ? r
-        : await response[responseFormat]()
+        : await responseToParse[responseFormat]()
             .then((data) => {
               if (r.ok) {
                 r.data = data;

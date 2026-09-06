@@ -489,9 +489,7 @@ const findItem = (node: HTMLElement) => {
       ? /item\/(.+)\..+\.gif/.exec(imgSrc)?.[1] ?? ""
       : "";
 
-    const matches = broken
-      ? item.icon + ".b" === iconMatch || item.icon === iconMatch
-      : item.icon === iconMatch;
+    const matches = item.icon === iconMatch || item.brokenIcon === iconMatch;
 
     if (!matches) {
       // Restore the .broken span
@@ -840,7 +838,9 @@ const createLine = (
     inputIcons = data.in.map((inItem) => ({
       id: items[inItem.item].id,
       type: "item",
-      icon: `icons/item/${items[inItem.item].icon}.gif`,
+      icon: `icons/item/${
+        inItem.broken ? items[inItem.item].brokenIcon : items[inItem.item].icon
+      }.gif`,
       text: inItem.odds?.toString(),
       infected: inItem.infected,
       poisoned: inItem.poisoned,
@@ -1030,7 +1030,11 @@ const createLine = (
     outputIcons = data.out.map((outItem) => ({
       id: items[outItem.item].id,
       type: "item",
-      icon: `icons/item/${items[outItem.item].icon}.gif`,
+      icon: `icons/item/${
+        outItem.broken
+          ? items[outItem.item].brokenIcon
+          : items[outItem.item].icon
+      }.gif`,
       text: outItem.odds
         ? `${Math.round((outItem.odds / total) * 100)}%`
         : undefined,

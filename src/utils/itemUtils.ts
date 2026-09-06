@@ -20,7 +20,7 @@ export const findItemFromInventory = (node: HTMLElement) => {
       ? /item\/(.+)\..+\.gif/.exec(imgSrc)?.[1] ?? ""
       : "";
 
-    if (iconMatch !== item.icon) {
+    if (iconMatch !== item.icon && iconMatch !== item.brokenIcon) {
       return false;
     }
 

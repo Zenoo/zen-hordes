@@ -161,7 +161,9 @@ export const updateBankInWiki = () => {
       const iconWrapper = document.createElement("span");
       iconWrapper.classList.add("item-icon");
       const icon = document.createElement("img");
-      icon.src = `${ASSETS}/icons/item/${item.icon}.gif`;
+      icon.src = `${ASSETS}/icons/item/${
+        item.broken ? item.brokenIcon : item.icon
+      }.gif`;
       icon.alt = item.name[store["hordes-lang"]];
       iconWrapper.append(icon);
       itemElement.append(iconWrapper);
