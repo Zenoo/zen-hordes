@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.8](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.7...zen-hordes-v1.17.8) (2026-09-06)
+
+
+### Bug Fixes
+
+* Use broken icons from API + send map ID to FM ([e0d4160](https://github.com/Zenoo/zen-hordes/commit/e0d4160b4a6694e7fd0d5b5b046fc770d210050c))
+
 ## [1.17.7](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.6...zen-hordes-v1.17.7) (2026-07-18)
 
 
