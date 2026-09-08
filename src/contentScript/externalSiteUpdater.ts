@@ -5,7 +5,7 @@ import { tooltip } from "../utils/tooltip";
 import { ExternalSite, ExternalSiteName } from "./externalSites";
 import { fetchTownData } from "./internalMap";
 import { LogEntryType } from "./logEntries";
-import { store } from "./store";
+import { setStore, store } from "./store";
 import { replaceString, t } from "../utils/translate";
 
 type ScoutRadar = {
@@ -447,6 +447,7 @@ const getExternalAppQuery = (site: ExternalSiteName): [string, RequestInit] => {
         headers: {
           "Content-Type": "application/json",
           "Mho-Origin": "zen-hordes",
+          Authorization: `Bearer ${store["mho-token"]}`,
         },
         body: JSON.stringify({
           map: {
@@ -618,7 +619,7 @@ export const displayUpdateButton = (node: HTMLElement) => {
       existing.remove();
     }
 
-    store["external-sites-to-update"].forEach((site) => {
+    store["external-sites-to-update"].forEach(async (site) => {
       const updateUrl = ExternalSite[site].updateUrl;
       if (!updateUrl) {
         console.error(`No update URL for ${site}`);
@@ -632,6 +633,11 @@ export const displayUpdateButton = (node: HTMLElement) => {
 
       // Update status
       updateAppStatus(wrapper, "loading");
+
+      // MHO requires "auth", so we have to fetch it before, sigh...
+      if (site === ExternalSiteName.MHO) {
+        await fetchAuthForMHO();
+      }
 
       // Get query to update external site
       fetch(...getExternalAppQuery(site))
@@ -662,4 +668,42 @@ export const displayUpdateButton = (node: HTMLElement) => {
   });
 
   node.after(button);
+};
+
+const fetchAuthForMHO = async () => {
+  if (!store["user-key"]) {
+    console.log("No user key found, cannot fetch auth for MHO.");
+    return;
+  }
+
+  const token = store["mho-token"];
+  const expiry = store["mho-token-expiry"];
+  const expired = !expiry || Date.now() > expiry;
+
+  if (token && !expired) {
+    return;
+  }
+
+  const response = await fetch(
+    `https://api.myhordesoptimizer.fr/Authentication/Token?userKey=${store["user-key"]}`,
+    {
+      method: "GET",
+      headers: {
+        "Mho-Origin": "zen-hordes",
+      },
+    }
+  );
+
+  const data = (await response.json()) as
+    | { token?: { accessToken?: string; validTo?: string } }
+    | undefined;
+
+  if (!data?.token?.validTo || !data?.token?.accessToken) {
+    console.log("No valid token received for MHO.");
+    return;
+  }
+
+  console.log("Fetched MHO token:", data);
+  setStore("mho-token", data.token.accessToken);
+  setStore("mho-token-expiry", new Date(data.token.validTo).getTime());
 };

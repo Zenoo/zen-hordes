@@ -41,6 +41,8 @@ export const store = {
   "hordes-lang": (document.documentElement.lang ?? Lang.EN) as Lang,
   // Updater settings
   "user-key": "",
+  "mho-token": null as string | null,
+  "mho-token-expiry": null as number | null,
   // Extension meta
   "zh-update-added": false,
 };

@@ -1,3 +1,5 @@
+/// <reference types="chrome" />
+
 import { BuildingId } from "./data/types";
 import { ItemId } from "./data/types";
 
