@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.9](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.8...zen-hordes-v1.17.9) (2026-09-08)
+
+
+### Bug Fixes
+
+* Add auth to MHO updater ([605741b](https://github.com/Zenoo/zen-hordes/commit/605741bbff73261a2876773ac78bef1ee1ddc22b))
+
 ## [1.17.8](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.7...zen-hordes-v1.17.8) (2026-09-06)
 
 
