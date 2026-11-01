@@ -642,16 +642,17 @@ export const displayUpdateButton = (node: HTMLElement) => {
       // Get query to update external site
       fetch(...getExternalAppQuery(site))
         .then(async (response) => {
-          const ok = await readExternalAppResponse(wrapper, site, response);
-
           // Not a success response code
+          if (!response.ok) {
+            displayError(
+              wrapper,
+              `${site}: ${response.statusText} (${response.status})`
+            );
+            return;
+          }
+
+          const ok = await readExternalAppResponse(wrapper, site, response);
           if (!ok) {
-            if (response.status !== 200) {
-              displayError(
-                wrapper,
-                `${site}: ${response.statusText} (${response.status})`
-              );
-            }
             return;
           }
 
