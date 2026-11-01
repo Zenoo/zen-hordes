@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.17.10](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.9...zen-hordes-v1.17.10) (2026-11-01)
+
+
+### Bug Fixes
+
+* MH v5.1.4 ([db94990](https://github.com/Zenoo/zen-hordes/commit/db94990219b2179258c6ad0b791d7ea748cf64e5))
+* Stop ignoring non ok responses for external sites ([65d74e7](https://github.com/Zenoo/zen-hordes/commit/65d74e7b15687012334b23d219c2089cd930923b))
+
 ## [1.17.9](https://github.com/Zenoo/zen-hordes/compare/zen-hordes-v1.17.8...zen-hordes-v1.17.9) (2026-09-08)
 
 
