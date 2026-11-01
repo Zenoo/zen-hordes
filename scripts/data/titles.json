@@ -620,7 +620,7 @@
         "name": {
           "de": "Rauchts? Dann ist es meins.",
           "en": "Does it smoke? It is from me.",
-          "fr": "Ça se fume ? c'est de moi.",
+          "fr": "Ça se fume ? C’est de moi.",
           "es": "¿Fumas? Este va por mi cuenta"
         },
         "quantity": 1000
@@ -725,7 +725,7 @@
         "name": {
           "de": "Mein Name ist Nobody",
           "en": "My name is nobody",
-          "fr": "Mon nom est personne",
+          "fr": "Mon nom est Personne",
           "es": "Mi nombre es ninguno"
         },
         "quantity": 850
@@ -734,7 +734,7 @@
         "name": {
           "de": "Ein Sternbild trägt meinen Namen",
           "en": "They named a constellation after me",
-          "fr": "J'ai donné mon nom à une constellation",
+          "fr": "J’ai donné mon nom à une constellation",
           "es": "Una constelación lleva mi nombre"
         },
         "quantity": 1000
@@ -774,7 +774,7 @@
         "name": {
           "de": "Freier Bürger",
           "en": "Free citizen!",
-          "fr": "Citoyen libre !",
+          "fr": "Citoyen libre !",
           "es": "¡Habitante libre!"
         },
         "quantity": 300
@@ -792,7 +792,7 @@
         "name": {
           "de": "Ich brauche niemanden",
           "en": "I do not need anyone",
-          "fr": "Je n'ai besoin de personne",
+          "fr": "Je n’ai besoin de personne",
           "es": "No necesito a nadie"
         },
         "quantity": 550
@@ -957,7 +957,7 @@
         "name": {
           "de": "Ein schöneres Leben",
           "en": "Style is eternal...",
-          "fr": "Plus belle la vie !",
+          "fr": "Plus belle la vie !",
           "es": "El estilo es eterno..."
         },
         "quantity": 2000
@@ -966,7 +966,7 @@
         "name": {
           "de": "Großer E-KEA Katalog",
           "en": "Welcome to the palace.",
-          "fr": "Grand Catalogue Kiela",
+          "fr": "Grand catalogue Kiela",
           "es": "Bienvenidos al palacio."
         },
         "quantity": 2500
@@ -1171,7 +1171,7 @@
         "name": {
           "de": "Spezialität: Hundesteaks",
           "en": "Anyone for a fat-cat-kebab?",
-          "fr": "Responsable d'extinctions",
+          "fr": "Responsable d’extinctions",
           "es": "Encargado de extinciones"
         },
         "quantity": 60,
@@ -1190,7 +1190,7 @@
         "name": {
           "de": "Fleisch ist mein Gemüse",
           "en": "If we're meant to eat vegetables, why are animals so tasty?",
-          "fr": "Spécialité : steak de chaton",
+          "fr": "Spécialité : steak de chaton",
           "es": "Especialidad: Puré de gato"
         },
         "quantity": 300
@@ -1257,7 +1257,7 @@
         "name": {
           "de": "Immer ein Auge offen",
           "en": "One Eye Open",
-          "fr": "Un Oeil ouvert",
+          "fr": "Un œil ouvert",
           "es": "Un ojo abierto"
         },
         "quantity": 20,
@@ -1277,7 +1277,7 @@
         "name": {
           "de": "Immer alles im Blick",
           "en": "Long-sighted",
-          "fr": "Longue Vue",
+          "fr": "Longue vue",
           "es": "Largavista"
         },
         "quantity": 80
@@ -1304,7 +1304,7 @@
         "name": {
           "de": "Fels in der Brandung",
           "en": "The Rock!",
-          "fr": "Le Roc !",
+          "fr": "Le Roc !",
           "es": "La roca!"
         },
         "quantity": 400
@@ -1382,7 +1382,7 @@
         "name": {
           "de": "Muad'Dib",
           "en": "Three rivers dam... That's adorable.",
-          "fr": "Muad'Dib",
+          "fr": "Muad’Dib",
           "es": "Muad'Dib"
         },
         "quantity": 300
@@ -1433,7 +1433,7 @@
         "name": {
           "de": "Maurer aus Leidenschaft",
           "en": "Soul Mason",
-          "fr": "Maçon du coeur",
+          "fr": "Maçon du cœur",
           "es": "Top Chef"
         },
         "quantity": 10
@@ -1442,7 +1442,7 @@
         "name": {
           "de": "Das Unnütze mit dem Angenehmen verbinden",
           "en": "Chief DIY",
-          "fr": "Joindre l'inutile à l'agréable",
+          "fr": "Joindre l’inutile à l’agréable",
           "es": "Jefe de Manualidades"
         },
         "quantity": 15
@@ -1460,7 +1460,7 @@
         "name": {
           "de": "Ich habe einen Plan",
           "en": "I have a plan",
-          "fr": "J'ai un plan",
+          "fr": "J’ai un plan",
           "es": "Tengo un plan"
         },
         "quantity": 30
@@ -1469,7 +1469,7 @@
         "name": {
           "de": "Hirnverbrannter Baumeister",
           "en": "Demented Master Builder",
-          "fr": "Maître d'oeuvre dément",
+          "fr": "Maître d’œuvre dément",
           "es": "Maestro constructor demente"
         },
         "quantity": 40
@@ -1478,7 +1478,7 @@
         "name": {
           "de": "Meister der Nutzlosigkeit",
           "en": "Master of futility",
-          "fr": "Maître de l'inutilité",
+          "fr": "Maître de l’inutilité",
           "es": "Maestro de la Inutilidad"
         },
         "quantity": 50
@@ -1523,7 +1523,7 @@
         "name": {
           "de": "Hast du nichts besseres zu tun?",
           "en": "Don't you have better things to do?",
-          "fr": "Z'avez pas mieux à faire ?",
+          "fr": "Z’avez pas mieux à faire ?",
           "es": "¿No tienes algo mejor que hacer?"
         },
         "quantity": 150
@@ -1545,7 +1545,7 @@
         "name": {
           "de": "Huldigt den riesigen KVF!",
           "en": "BRDs for everyone! The people demand BRDs!",
-          "fr": "Gloire au PMV !",
+          "fr": "Gloire au PMV !",
           "es": "¡Gloria a la COSA!"
         },
         "quantity": 5
@@ -1554,7 +1554,7 @@
         "name": {
           "de": "Obelisk der heutigen Zeit!",
           "en": "Modern obelisk!",
-          "fr": "Obélisque des temps modernes !",
+          "fr": "Obélisque des temps modernes !",
           "es": "¡Obelisco moderno!"
         },
         "quantity": 10
@@ -1581,7 +1581,7 @@
         "name": {
           "de": "Extra viel Liebe",
           "en": "Extra large love",
-          "fr": "L'amour extra large",
+          "fr": "L’amour extra large",
           "es": "Amor extra grande"
         },
         "quantity": 25
@@ -1675,7 +1675,7 @@
         "name": {
           "de": "Ein Spiel für echte Kinder",
           "en": "A real children's game!",
-          "fr": "Un vrai jeu d'enfants !",
+          "fr": "Un vrai jeu d’enfants !",
           "es": "¡Un verdadero juego de niños!"
         },
         "quantity": 25
@@ -1702,7 +1702,7 @@
         "name": {
           "de": "Ein Korn fehlt noch",
           "en": "I know I have a grain",
-          "fr": "Je sais, j'ai un grain",
+          "fr": "Je sais, j’ai un grain",
           "es": "Todavia falta un grano"
         },
         "quantity": 50
@@ -1733,7 +1733,7 @@
         "name": {
           "de": "Huldigt den Raben!",
           "en": "Glory to the Crow!",
-          "fr": "Gloire au Corbeau !",
+          "fr": "Gloire au Corbeau !",
           "es": "¡Gloria al cuervo!"
         },
         "quantity": 5
@@ -1742,7 +1742,7 @@
         "name": {
           "de": "Taube aus der Unterwelt",
           "en": "Pigeon from the outer world.",
-          "fr": "Pigeon de l'Outre-Monde",
+          "fr": "Pigeon de l’Outre-Monde",
           "es": "Paloma del Ultramundo"
         },
         "quantity": 10
@@ -1760,7 +1760,7 @@
         "name": {
           "de": "Phoenix des Unterholzes",
           "en": "Phoenix of the desert",
-          "fr": "Phoenix des hôtes de ces bois",
+          "fr": "Phénix des hôtes de ces bois",
           "es": "Fénix del Ultramundo"
         },
         "quantity": 20
@@ -1787,7 +1787,7 @@
         "name": {
           "de": "Kraaaah!",
           "en": "CroooAAwW!",
-          "fr": "Crôôôaa !",
+          "fr": "Crôôôaa !",
           "es": "¡Wraaaaahh!"
         },
         "quantity": 40
@@ -1796,7 +1796,7 @@
         "name": {
           "de": "Er war Leber ...",
           "en": "He was a liver...",
-          "fr": "Il était un foie...",
+          "fr": "Il était un foie…",
           "es": "Era una calavera..."
         },
         "quantity": 50
@@ -1827,7 +1827,7 @@
         "name": {
           "de": "Hey wir können die Zombies von hier oben sehen",
           "en": "I can see the zeds from here!",
-          "fr": "Oh on voit les zombies d'ici",
+          "fr": "Oh, on voit les zombies d’ici !",
           "es": "¡Puedo ver a los zombies desde aquí arriba!"
         },
         "quantity": 5
@@ -1845,7 +1845,7 @@
         "name": {
           "de": "Showman aus der Anderen Welt!",
           "en": "Desert showman!",
-          "fr": "Forain de l'Outre Monde !",
+          "fr": "Forain de l’Outre-Monde !",
           "es": "Empresario del Ultramundo!"
         },
         "quantity": 15
@@ -1854,7 +1854,7 @@
         "name": {
           "de": "5. Rad am Wagen",
           "en": "5th wheel of the caravan",
-          "fr": "5e roue du carrosse",
+          "fr": "5ème roue du carrosse",
           "es": "Quinta rueda de la caravana"
         },
         "quantity": 20
@@ -1863,7 +1863,7 @@
         "name": {
           "de": "Mir ist schwindelig",
           "en": "I'm dizzy",
-          "fr": "J'ai le vertige",
+          "fr": "J’ai le vertige",
           "es": "Estoy mareado"
         },
         "quantity": 25
@@ -1881,7 +1881,7 @@
         "name": {
           "de": "Auge der Wüste",
           "en": "Eye of the desert",
-          "fr": "L'œil du désert",
+          "fr": "L’œil du désert",
           "es": "Ojo del Ultramundo"
         },
         "quantity": 40
@@ -2062,7 +2062,7 @@
         "name": {
           "de": "Arbeit ist Gesundheit",
           "en": "Pyramid shmyramid",
-          "fr": "Le travail, c'est la santé",
+          "fr": "Le travail, c’est la santé",
           "es": "El trabajo es salud"
         },
         "quantity": 8000
@@ -2102,7 +2102,7 @@
         "name": {
           "de": "Meisterwerke in Gefahr",
           "en": "Masterpieces in Peril",
-          "fr": "Chef d'oeuvre en péril",
+          "fr": "Chef-d’œuvre en péril",
           "es": "Reparador arriesgado"
         },
         "quantity": 500
@@ -2147,7 +2147,7 @@
         "name": {
           "de": "Ein Riss? Welcher Riss?",
           "en": "A crack? What crack?",
-          "fr": "Une fissure ? Quelle fissure ?",
+          "fr": "Une fissure ? Quelle fissure ?",
           "es": "¿Una grieta? ¿Qué grieta?"
         },
         "quantity": 3000
@@ -2156,7 +2156,7 @@
         "name": {
           "de": "Das braucht noch 10 Jahre!",
           "en": "That'll last another 10 years!",
-          "fr": "Ça tiendra encore 10 ans !",
+          "fr": "Ça tiendra encore 10 ans !",
           "es": "¡Eso llevara otros 10 años!"
         },
         "quantity": 3500
@@ -2240,7 +2240,7 @@
         "name": {
           "de": "Mac Gyver der Außenwelt",
           "en": "MacGyver of the World beyond",
-          "fr": "Mac Gyver de l'Outre-Monde",
+          "fr": "MacGyver de l’Outre-Monde",
           "es": "Reparador Supremo"
         },
         "quantity": 400
@@ -2391,7 +2391,7 @@
         "name": {
           "de": "Neil Armstrong der Außenwelt",
           "en": "Neil Armstrong of the World Beyond",
-          "fr": "Neil Armstrong de l'Outre Monde",
+          "fr": "Neil Armstrong de l’Outre-Monde",
           "es": "Neil Armstrong del Ultramundo"
         },
         "quantity": 200
@@ -2442,7 +2442,7 @@
         "name": {
           "de": "Bis zur Unendlichkeit... und noch viel weiter!",
           "en": "To infinity and beyond!",
-          "fr": "Vers l'infini et au-delà !",
+          "fr": "Vers l’infini et au-delà !",
           "es": "¡Hasta el infinito y más allá!"
         },
         "quantity": 150
@@ -2451,7 +2451,7 @@
         "name": {
           "de": "Indiana Jones und die Ruinen der Aussenwelt",
           "en": "Indiana Jones and the ruins of the World Beyond",
-          "fr": "Indiana jones et les ruines de l'outre-monde",
+          "fr": "Indiana Jones et les ruines de l’Outre-Monde",
           "es": "Indiana Jones y las ruinas del Ultramundo"
         },
         "quantity": 300
@@ -2560,7 +2560,7 @@
         "name": {
           "de": "Wenn ich das nur vorher gewusst hätte...",
           "en": "Sneaky Voyager",
-          "fr": "Si j'aurais su, j'aurais po v'nu",
+          "fr": "Si j'aurais su, j'aurais po v’nu",
           "es": "¡Mamá, no me dejes aquí!"
         },
         "quantity": 5,
@@ -2589,7 +2589,7 @@
         "name": {
           "de": "Im Irrgarten",
           "en": "Compass Included",
-          "fr": "J'ai la dé-dale !",
+          "fr": "J'ai la dé-dalle !",
           "es": "Ruina Man"
         },
         "quantity": 50
@@ -2598,7 +2598,7 @@
         "name": {
           "de": "Inklusive Kompass",
           "en": "Buried Voluntarily",
-          "fr": "Boussole sur patte",
+          "fr": "Boussole sur pattes",
           "es": "Brújula andante"
         },
         "quantity": 100
@@ -2616,7 +2616,7 @@
         "name": {
           "de": "Tomb Raider",
           "en": "Gollum of the Labyrinths",
-          "fr": "Pilleur de tombeau",
+          "fr": "Pilleur de tombeaux",
           "es": "Tomb Raider"
         },
         "quantity": 200
@@ -2647,7 +2647,7 @@
         "name": {
           "de": "Wo klemmt's?",
           "en": "Key hee hee!",
-          "fr": "Un p'tit Bricard ?",
+          "fr": "Un p’tit Bricard ?",
           "es": "Ganzúa"
         },
         "quantity": 1,
@@ -2657,7 +2657,7 @@
         "name": {
           "de": "Dietrich",
           "en": "How about some Chubb-ly?",
-          "fr": "Une petite tranche de Vachette ?",
+          "fr": "Une petite tranche de Vachette ?",
           "es": "Hijo de cerrajero"
         },
         "quantity": 5,
@@ -2667,7 +2667,7 @@
         "name": {
           "de": "Sesam, öffne dich...",
           "en": "Sesame, shift your A...",
-          "fr": "Sésame, bouge ton c...",
+          "fr": "Sésame, bouge ton c…",
           "es": "Con o sin llaves, yo entro"
         },
         "quantity": 10
@@ -2685,7 +2685,7 @@
         "name": {
           "de": "Gentleman-Einbrecher",
           "en": "Gentleman Robber",
-          "fr": "Gentleman Cambrioleur",
+          "fr": "Gentleman cambrioleur",
           "es": "Abridor de puertas"
         },
         "quantity": 20
@@ -2792,7 +2792,7 @@
         "name": {
           "de": "Alptraum der Traumlosen",
           "en": "Go ahead, make my day!",
-          "fr": "J'aime les bandes décimées",
+          "fr": "J’aime les bandes décimées",
           "es": "Mordedor de muertos"
         },
         "quantity": 10000
@@ -2901,7 +2901,7 @@
         "name": {
           "de": "Absolut keine Angst!",
           "en": "Not even afraid!",
-          "fr": "Même pas peur !",
+          "fr": "Même pas peur !",
           "es": "¡No tengas miedo en absoluto!"
         },
         "quantity": 400
@@ -2943,7 +2943,7 @@
         "name": {
           "de": "Wagemutiger Trapper",
           "en": "Guide to the World Beyond",
-          "fr": "Guide de l'Outre-Monde",
+          "fr": "Guide de l’Outre-Monde",
           "es": "Guía del Ultramundo"
         },
         "quantity": 70
@@ -2970,7 +2970,7 @@
         "name": {
           "de": "Ich habe die Erde umrundet... zweimal!",
           "en": "I've been round the world... Twice!",
-          "fr": "J'ai fait le tour du monde... 2 fois !",
+          "fr": "J’ai fait le tour du monde… 2 fois !",
           "es": "He dado la vuelta al mundo ... ¡dos veces!"
         },
         "quantity": 250
@@ -2988,7 +2988,7 @@
         "name": {
           "de": "Ich hab sogar das Klo abgesucht!",
           "en": "I've even dug through a public toilet!",
-          "fr": "J'ai même fouillé les WC !",
+          "fr": "J’ai même fouillé les WC !",
           "es": "¡Incluso busqué en el baño!"
         },
         "quantity": 350
@@ -3079,7 +3079,7 @@
         "name": {
           "de": "Wo ich hinguck, seh ich Gegend.",
           "en": "So I guess we're not waiting for Bob?",
-          "fr": "Bah alors on n'attend pas Patrick ?",
+          "fr": "Bah alors, on n’attend pas Patrick ?",
           "es": "¿Entonces supongo que no estamos esperando a Bob?"
         },
         "quantity": 250
@@ -3270,7 +3270,7 @@
         "name": {
           "de": "Ich sehe ein Blauuuuuuues Tal",
           "en": "The sky is falling!!!",
-          "fr": "Je vois une Vallée Bleuûuue !",
+          "fr": "Je vois une Vallée Bleuûuue !",
           "es": "¡¡¡El cielo se está cayendo!!!"
         },
         "quantity": 250
@@ -3345,7 +3345,7 @@
       {
         "name": {
           "de": "Menschenfleischliebhaber",
-          "en": "Meat Muncher",
+          "en": "Meat muncher",
           "fr": "Amateur de viande humaine",
           "es": "Devorador de hombres"
         },
@@ -3567,7 +3567,7 @@
         "name": {
           "de": "Ich habe Magenschmerzen...",
           "en": "I've got a sore tummy...",
-          "fr": "J'ai mal au ventre...",
+          "fr": "J’ai mal au ventre…",
           "es": "Tengo dolor de estómago..."
         },
         "quantity": 150
@@ -3599,7 +3599,7 @@
         "name": {
           "de": "Mir ist kalt hier draußen...",
           "en": "Baby it's cold outside...",
-          "fr": "J'ai froid, dehors...",
+          "fr": "J’ai froid, dehors…",
           "es": "Tengo frio aquí..."
         },
         "quantity": 250
@@ -3916,7 +3916,7 @@
         "name": {
           "de": "Seelenhändler",
           "en": "Soul salesman",
-          "fr": "Marchand d'âmes",
+          "fr": "Marchand d’âmes",
           "es": "Vendedor de almas"
         },
         "quantity": 10
@@ -3996,7 +3996,7 @@
         "name": {
           "de": "Bringt Sachen ins Rollen!",
           "en": "Making things happen!",
-          "fr": "Fais bouger les choses!",
+          "fr": "Fais bouger les choses !",
           "es": "¡Hacer que las cosas sucedan!"
         },
         "quantity": 1
@@ -4188,7 +4188,7 @@
         "name": {
           "de": "Lebenssammler",
           "en": "Don't cross the streams",
-          "fr": "Collectionneur de vie",
+          "fr": "Collectionneur de vies",
           "es": "No cruces los arroyos"
         },
         "quantity": 180
@@ -4197,7 +4197,7 @@
         "name": {
           "de": "Schnitter der Aussenwelt",
           "en": "I ain't afraid of no ghost",
-          "fr": "Faucheur de l'outre-monde",
+          "fr": "Faucheur de l’Outre-Monde",
           "es": "No le tengo miedo a ningún fantasma"
         },
         "quantity": 300
@@ -4326,7 +4326,7 @@
         "name": {
           "de": "Verrückter Skeptiker",
           "en": "Keen Sceptic",
-          "fr": "Septicis-mite aïgu",
+          "fr": "Septicis-mite aiguë",
           "es": "Capataz"
         },
         "quantity": 10
@@ -4585,7 +4585,7 @@
         "name": {
           "de": "Mitglied des Roten Kreuzes",
           "en": "Member of the Red Cross",
-          "fr": "Membre de la Croix Rouge",
+          "fr": "Membre de la Croix-Rouge",
           "es": "Miembro de la Cruz Roja"
         },
         "quantity": 1
@@ -4624,7 +4624,7 @@
         "name": {
           "de": "Patient Null",
           "en": "Patient Zero",
-          "fr": "Patient Zéro",
+          "fr": "Patient zéro",
           "es": "Paciente cero"
         },
         "quantity": 1
@@ -4759,7 +4759,7 @@
         "name": {
           "de": "Zeuge des Armageddon",
           "en": "Armageddon Witness",
-          "fr": "Témoin de l'Armageddon",
+          "fr": "Témoin de l’Armageddon",
           "es": "Testigo de Armagedón"
         },
         "quantity": 1
@@ -4781,7 +4781,7 @@
         "name": {
           "de": "Ein Wächter stirbt, aber gibt niemals auf",
           "en": "The guard may perish, but he never gives up!",
-          "fr": "La garde meurt, mais ne se rend pas !",
+          "fr": "La garde meurt, mais ne se rend pas !",
           "es": "La guardia puede morir, ¡pero nunca se rinde!"
         },
         "quantity": 10
@@ -4790,7 +4790,7 @@
         "name": {
           "de": "Der Zweitletzte Mohikaner",
           "en": "The second last of the Mohicans",
-          "fr": "L'avant-dernier des Mohicans",
+          "fr": "L’avant-dernier des Mohicans",
           "es": "El segundo último de los mohicanos"
         },
         "quantity": 20
@@ -4808,7 +4808,7 @@
         "name": {
           "de": "Bis zum Ende und einen Schritt weiter",
           "en": "All the way to the end and a bit further",
-          "fr": "Jusqu'au bout, et même un peu moins loin",
+          "fr": "Jusqu’au bout, et même un peu moins loin",
           "es": "Todo el camino hasta el final y un poco más lejos"
         },
         "quantity": 40
@@ -4817,7 +4817,7 @@
         "name": {
           "de": "Schließt die Ränke und haltet durch",
           "en": "Close ranks and hold on!",
-          "fr": "Serrez les rangs... et les fesses...",
+          "fr": "Serrez les rangs… et les fesses…",
           "es": "¡Cierra filas y aguanta!"
         },
         "quantity": 60
@@ -4826,7 +4826,7 @@
         "name": {
           "de": "Hallo... ist da draußen jemand?",
           "en": "Hello... Is there anybody out there?",
-          "fr": "Vous êtes là les copains ?",
+          "fr": "Vous êtes là les copains?",
           "es": "¿Hola, hay alguien ahí afuera?"
         },
         "quantity": 100
@@ -4835,7 +4835,7 @@
         "name": {
           "de": "Haltet eure Position!",
           "en": "Hold your positions!",
-          "fr": "Tenez vos positions !",
+          "fr": "Tenez vos positions !",
           "es": "¡Mantenga sus posiciones!"
         },
         "quantity": 150
@@ -4848,7 +4848,7 @@
         "name": {
           "de": "Nur ein Finger",
           "en": "Just one finger!",
-          "fr": "Juste un doigt !",
+          "fr": "Juste un doigt !",
           "es": "¡Solo un dedo!"
         },
         "quantity": 30
@@ -4875,7 +4875,7 @@
         "name": {
           "de": "Barney Gumble der Außenwelt",
           "en": "Barney Gumble of the world beyond",
-          "fr": "Barney Gumble de l'Outre-Monde",
+          "fr": "Barney Gumble de l’Outre-Monde",
           "es": "Barney Gumble del Ultramundo"
         },
         "quantity": 300
@@ -4884,7 +4884,7 @@
         "name": {
           "de": "Fass das Saufen lieber sein",
           "en": "Absinthe from drinking next time eh?!",
-          "fr": "Absinthe toi la prochaine fois",
+          "fr": "Absinthe-toi la prochaine fois",
           "es": "Absenta de beber la próxima vez, ¿eh?"
         },
         "quantity": 400
@@ -4893,7 +4893,7 @@
         "name": {
           "de": "Gib mir was zu saufen oder es knallt!",
           "en": "Gimme a drink or the dog gets it!",
-          "fr": "A boire ou j'tue le chien !",
+          "fr": "À boire ou j’tue le chien !",
           "es": "¡Dame un trago o el perro sufrira las consecuencias!"
         },
         "quantity": 500
@@ -4902,7 +4902,7 @@
         "name": {
           "de": "Alles unter 55% ist Wasser",
           "en": "If it's under 55 proof it's water!",
-          "fr": "Avant 55°, c'est de l'eau",
+          "fr": "Avant 55°, c'est de l’eau",
           "es": "Si son menos de 55 tragos, ¡es agua!"
         },
         "quantity": 600
@@ -4911,7 +4911,7 @@
         "name": {
           "de": "Dialyse",
           "en": "Dialysis",
-          "fr": "Sans Foie ni Loi",
+          "fr": "Sans foie ni loi",
           "es": "Diálisis"
         },
         "quantity": 800

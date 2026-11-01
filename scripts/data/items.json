@@ -2,6 +2,7 @@
   "water_#00": {
     "id": 1,
     "uid": "water",
+    "uuid": "water_#00",
     "img": "item/item_water.85230dbb.gif",
     "heavy": false,
     "deco": 0,
@@ -28,6 +29,7 @@
   "pile_#00": {
     "id": 2,
     "uid": "pile",
+    "uuid": "pile_#00",
     "img": "item/item_pile.b1b940d5.gif",
     "heavy": false,
     "deco": 0,
@@ -54,6 +56,7 @@
   "can_#00": {
     "id": 3,
     "uid": "can",
+    "uuid": "can_#00",
     "img": "item/item_can.0480c181.gif",
     "heavy": false,
     "deco": 0,
@@ -80,6 +83,7 @@
   "can_open_#00": {
     "id": 4,
     "uid": "can_open",
+    "uuid": "can_open_#00",
     "img": "item/item_can_open.8db2e1ad.gif",
     "heavy": false,
     "deco": 0,
@@ -106,6 +110,7 @@
   "pilegun_#00": {
     "id": 5,
     "uid": "pilegun",
+    "uuid": "pilegun_#00",
     "img": "item/item_pilegun.df881a72.gif",
     "heavy": false,
     "deco": 0,
@@ -132,6 +137,7 @@
   "taser_#00": {
     "id": 6,
     "uid": "taser",
+    "uuid": "taser_#00",
     "img": "item/item_taser.6db4a15d.gif",
     "heavy": false,
     "deco": 0,
@@ -158,6 +164,7 @@
   "watergun_opt_empty_#00": {
     "id": 7,
     "uid": "watergun_opt_empty",
+    "uuid": "watergun_opt_empty_#00",
     "img": "item/item_watergun_opt_empty.9bb841e8.gif",
     "heavy": false,
     "deco": 0,
@@ -184,6 +191,7 @@
   "mixergun_#00": {
     "id": 8,
     "uid": "mixergun",
+    "uuid": "mixergun_#00",
     "img": "item/item_mixergun.5080c9f0.gif",
     "heavy": false,
     "deco": 0,
@@ -210,6 +218,7 @@
   "chainsaw_#00": {
     "id": 9,
     "uid": "chainsaw",
+    "uuid": "chainsaw_#00",
     "img": "item/item_chainsaw.516f22b3.gif",
     "heavy": true,
     "deco": 0,
@@ -236,6 +245,7 @@
   "lawn_#00": {
     "id": 10,
     "uid": "lawn",
+    "uuid": "lawn_#00",
     "img": "item/item_lawn.0171fc12.gif",
     "img_b": "item/item_lawn.b.b5d3807d.gif",
     "heavy": true,
@@ -263,6 +273,7 @@
   "wrench_#00": {
     "id": 11,
     "uid": "wrench",
+    "uuid": "wrench_#00",
     "img": "item/item_wrench.aed8a2e7.gif",
     "img_b": "item/item_wrench.b.351cb834.gif",
     "heavy": false,
@@ -290,6 +301,7 @@
   "screw_#00": {
     "id": 12,
     "uid": "screw",
+    "uuid": "screw_#00",
     "img": "item/item_screw.57ddd73a.gif",
     "img_b": "item/item_screw.b.82e4d8e2.gif",
     "heavy": false,
@@ -317,6 +329,7 @@
   "staff_#00": {
     "id": 13,
     "uid": "staff",
+    "uuid": "staff_#00",
     "img": "item/item_staff.fd5f6105.gif",
     "heavy": false,
     "deco": 0,
@@ -343,6 +356,7 @@
   "knife_#00": {
     "id": 14,
     "uid": "knife",
+    "uuid": "knife_#00",
     "img": "item/item_knife.2e2279a3.gif",
     "img_b": "item/item_knife.b.071b783c.gif",
     "heavy": false,
@@ -370,6 +384,7 @@
   "cutcut_#00": {
     "id": 15,
     "uid": "cutcut",
+    "uuid": "cutcut_#00",
     "img": "item/item_cutcut.a8a574f2.gif",
     "img_b": "item/item_cutcut.b.d6457957.gif",
     "heavy": false,
@@ -397,6 +412,7 @@
   "small_knife_#00": {
     "id": 16,
     "uid": "small_knife",
+    "uuid": "small_knife_#00",
     "img": "item/item_small_knife.4fd3934c.gif",
     "img_b": "item/item_small_knife.b.65f64f11.gif",
     "heavy": false,
@@ -424,6 +440,7 @@
   "swiss_knife_#00": {
     "id": 17,
     "uid": "swiss_knife",
+    "uuid": "swiss_knife_#00",
     "img": "item/item_swiss_knife.10e59d15.gif",
     "img_b": "item/item_swiss_knife.b.9042d631.gif",
     "heavy": false,
@@ -451,6 +468,7 @@
   "cutter_#00": {
     "id": 18,
     "uid": "cutter",
+    "uuid": "cutter_#00",
     "img": "item/item_cutter.fb76891b.gif",
     "heavy": false,
     "deco": 0,
@@ -477,6 +495,7 @@
   "cart_#00": {
     "id": 19,
     "uid": "cart",
+    "uuid": "cart_#00",
     "img": "item/item_cart.d3c2982e.gif",
     "heavy": true,
     "deco": 0,
@@ -503,6 +522,7 @@
   "can_opener_#00": {
     "id": 20,
     "uid": "can_opener",
+    "uuid": "can_opener_#00",
     "img": "item/item_can_opener.34a41deb.gif",
     "img_b": "item/item_can_opener.b.ea9c78aa.gif",
     "heavy": false,
@@ -530,6 +550,7 @@
   "bag_#00": {
     "id": 21,
     "uid": "bag",
+    "uuid": "bag_#00",
     "img": "item/item_bag.2b707aec.gif",
     "heavy": false,
     "deco": 0,
@@ -556,6 +577,7 @@
   "lights_#00": {
     "id": 22,
     "uid": "lights",
+    "uuid": "lights_#00",
     "img": "item/item_lights.25700cad.gif",
     "heavy": false,
     "deco": 0,
@@ -582,6 +604,7 @@
   "xanax_#00": {
     "id": 23,
     "uid": "xanax",
+    "uuid": "xanax_#00",
     "img": "item/item_xanax.793ddb7e.gif",
     "heavy": false,
     "deco": 0,
@@ -608,6 +631,7 @@
   "chair_#00": {
     "id": 24,
     "uid": "chair",
+    "uuid": "chair_#00",
     "img": "item/item_chair.ea235164.gif",
     "heavy": true,
     "deco": 5,
@@ -634,6 +658,7 @@
   "rp_book_#00": {
     "id": 25,
     "uid": "rp_book",
+    "uuid": "rp_book_#00",
     "img": "item/item_rp_book.144fe962.gif",
     "heavy": false,
     "deco": 0,
@@ -660,6 +685,7 @@
   "bed_#00": {
     "id": 26,
     "uid": "bed",
+    "uuid": "bed_#00",
     "img": "item/item_bed.cb467d8c.gif",
     "heavy": true,
     "deco": 3,
@@ -686,6 +712,7 @@
   "lamp_#00": {
     "id": 27,
     "uid": "lamp",
+    "uuid": "lamp_#00",
     "img": "item/item_lamp.3a3fdd78.gif",
     "heavy": false,
     "deco": 1,
@@ -712,6 +739,7 @@
   "carpet_#00": {
     "id": 28,
     "uid": "carpet",
+    "uuid": "carpet_#00",
     "img": "item/item_carpet.71393163.gif",
     "heavy": true,
     "deco": 10,
@@ -738,6 +766,7 @@
   "music_part_#00": {
     "id": 29,
     "uid": "music_part",
+    "uuid": "music_part_#00",
     "img": "item/item_music_part.8770a3b4.gif",
     "heavy": true,
     "deco": 1,
@@ -764,6 +793,7 @@
   "lock_#00": {
     "id": 30,
     "uid": "lock",
+    "uuid": "lock_#00",
     "img": "item/item_lock.fa0453c1.gif",
     "heavy": false,
     "deco": 0,
@@ -790,6 +820,7 @@
   "door_carpet_#00": {
     "id": 31,
     "uid": "door_carpet",
+    "uuid": "door_carpet_#00",
     "img": "item/item_door_carpet.c21ae9c2.gif",
     "heavy": false,
     "deco": 5,
@@ -816,6 +847,7 @@
   "dice_#00": {
     "id": 32,
     "uid": "dice",
+    "uuid": "dice_#00",
     "img": "item/item_dice.6920e6da.gif",
     "heavy": false,
     "deco": 0,
@@ -842,6 +874,7 @@
   "engine_#00": {
     "id": 33,
     "uid": "engine",
+    "uuid": "engine_#00",
     "img": "item/item_engine.983840e0.gif",
     "heavy": true,
     "deco": 0,
@@ -868,6 +901,7 @@
   "courroie_#00": {
     "id": 34,
     "uid": "courroie",
+    "uuid": "courroie_#00",
     "img": "item/item_courroie.dbcc30bf.gif",
     "heavy": false,
     "deco": 0,
@@ -894,6 +928,7 @@
   "meca_parts_#00": {
     "id": 35,
     "uid": "meca_parts",
+    "uuid": "meca_parts_#00",
     "img": "item/item_meca_parts.db36bd1c.gif",
     "heavy": false,
     "deco": 0,
@@ -920,6 +955,7 @@
   "pet_chick_#00": {
     "id": 36,
     "uid": "pet_chick",
+    "uuid": "pet_chick_#00",
     "img": "item/item_pet_chick.84c9ad80.gif",
     "heavy": false,
     "deco": 0,
@@ -946,6 +982,7 @@
   "pet_pig_#00": {
     "id": 37,
     "uid": "pet_pig",
+    "uuid": "pet_pig_#00",
     "img": "item/item_pet_pig.40439fba.gif",
     "heavy": true,
     "deco": 0,
@@ -972,6 +1009,7 @@
   "pet_rat_#00": {
     "id": 38,
     "uid": "pet_rat",
+    "uuid": "pet_rat_#00",
     "img": "item/item_pet_rat.e96e65ad.gif",
     "heavy": false,
     "deco": 0,
@@ -998,6 +1036,7 @@
   "pet_dog_#00": {
     "id": 39,
     "uid": "pet_dog",
+    "uuid": "pet_dog_#00",
     "img": "item/item_pet_dog.065d0ec2.gif",
     "heavy": false,
     "deco": 0,
@@ -1024,6 +1063,7 @@
   "pet_cat_#00": {
     "id": 40,
     "uid": "pet_cat",
+    "uuid": "pet_cat_#00",
     "img": "item/item_pet_cat.5bc234ec.gif",
     "heavy": false,
     "deco": 5,
@@ -1050,6 +1090,7 @@
   "pet_snake_#00": {
     "id": 41,
     "uid": "pet_snake",
+    "uuid": "pet_snake_#00",
     "img": "item/item_pet_snake.d0bbd1e5.gif",
     "heavy": true,
     "deco": 0,
@@ -1076,6 +1117,7 @@
   "vibr_#00": {
     "id": 42,
     "uid": "vibr",
+    "uuid": "vibr_#00",
     "img": "item/item_vibr.d18480f4.gif",
     "heavy": false,
     "deco": 0,
@@ -1102,6 +1144,7 @@
   "drug_#00": {
     "id": 43,
     "uid": "drug",
+    "uuid": "drug_#00",
     "img": "item/item_drug.8c43bb8a.gif",
     "heavy": false,
     "deco": 0,
@@ -1128,6 +1171,7 @@
   "meat_#00": {
     "id": 44,
     "uid": "meat",
+    "uuid": "meat_#00",
     "img": "item/item_meat.1b3bb4c3.gif",
     "heavy": false,
     "deco": 0,
@@ -1154,6 +1198,7 @@
   "undef_#00": {
     "id": 45,
     "uid": "undef",
+    "uuid": "undef_#00",
     "img": "item/item_undef.c967498d.gif",
     "heavy": false,
     "deco": 0,
@@ -1180,6 +1225,7 @@
   "sheet_#00": {
     "id": 46,
     "uid": "sheet",
+    "uuid": "sheet_#00",
     "img": "item/item_sheet.61bd83b9.gif",
     "heavy": false,
     "deco": 0,
@@ -1206,6 +1252,7 @@
   "bagxl_#00": {
     "id": 47,
     "uid": "bagxl",
+    "uuid": "bagxl_#00",
     "img": "item/item_bagxl.fbd2e7bc.gif",
     "heavy": false,
     "deco": 0,
@@ -1232,6 +1279,7 @@
   "jerrycan_#00": {
     "id": 48,
     "uid": "jerrycan",
+    "uuid": "jerrycan_#00",
     "img": "item/item_jerrycan.32385386.gif",
     "heavy": false,
     "deco": 0,
@@ -1258,6 +1306,7 @@
   "wood2_#00": {
     "id": 49,
     "uid": "wood2",
+    "uuid": "wood2_#00",
     "img": "item/item_wood2.6518ead2.gif",
     "heavy": false,
     "deco": 0,
@@ -1284,6 +1333,7 @@
   "metal_#00": {
     "id": 50,
     "uid": "metal",
+    "uuid": "metal_#00",
     "img": "item/item_metal.003369df.gif",
     "heavy": false,
     "deco": 0,
@@ -1310,6 +1360,7 @@
   "grenade_#00": {
     "id": 51,
     "uid": "grenade",
+    "uuid": "grenade_#00",
     "img": "item/item_grenade.27d7b06a.gif",
     "heavy": false,
     "deco": 0,
@@ -1336,6 +1387,7 @@
   "plate_#00": {
     "id": 52,
     "uid": "plate",
+    "uuid": "plate_#00",
     "img": "item/item_plate.5741cc50.gif",
     "heavy": true,
     "deco": 0,
@@ -1362,6 +1414,7 @@
   "jerrygun_part_#00": {
     "id": 53,
     "uid": "jerrygun_part",
+    "uuid": "jerrygun_part_#00",
     "img": "item/item_jerrygun_part.3b516b0c.gif",
     "heavy": false,
     "deco": 0,
@@ -1388,6 +1441,7 @@
   "bandage_#00": {
     "id": 54,
     "uid": "bandage",
+    "uuid": "bandage_#00",
     "img": "item/item_bandage.a377d48c.gif",
     "heavy": false,
     "deco": 0,
@@ -1414,6 +1468,7 @@
   "vodka_de_#00": {
     "id": 55,
     "uid": "vodka_de",
+    "uuid": "vodka_de_#00",
     "img": "item/item_vodka_de.e50f5c0c.gif",
     "heavy": false,
     "deco": 0,
@@ -1440,6 +1495,7 @@
   "jerrygun_off_#00": {
     "id": 56,
     "uid": "jerrygun_off",
+    "uuid": "jerrygun_off_#00",
     "img": "item/item_jerrygun_off.a244fd00.gif",
     "heavy": false,
     "deco": 0,
@@ -1466,6 +1522,7 @@
   "cinema_#00": {
     "id": 57,
     "uid": "cinema",
+    "uuid": "cinema_#00",
     "img": "item/item_cinema.ceb3b5b5.gif",
     "heavy": true,
     "deco": 0,
@@ -1492,6 +1549,7 @@
   "explo_#00": {
     "id": 58,
     "uid": "explo",
+    "uuid": "explo_#00",
     "img": "item/item_explo.7c9eff98.gif",
     "heavy": false,
     "deco": 0,
@@ -1518,6 +1576,7 @@
   "hmeat_#00": {
     "id": 59,
     "uid": "hmeat",
+    "uuid": "hmeat_#00",
     "img": "item/item_hmeat.88fc87a7.gif",
     "heavy": false,
     "deco": 0,
@@ -1544,6 +1603,7 @@
   "grenade_empty_#00": {
     "id": 60,
     "uid": "grenade_empty",
+    "uuid": "grenade_empty_#00",
     "img": "item/item_grenade_empty.3c654edb.gif",
     "heavy": false,
     "deco": 0,
@@ -1570,6 +1630,7 @@
   "bgrenade_#00": {
     "id": 61,
     "uid": "bgrenade",
+    "uuid": "bgrenade_#00",
     "img": "item/item_bgrenade.2ec060c1.gif",
     "heavy": false,
     "deco": 0,
@@ -1596,6 +1657,7 @@
   "bgrenade_empty_#00": {
     "id": 62,
     "uid": "bgrenade_empty",
+    "uuid": "bgrenade_empty_#00",
     "img": "item/item_bgrenade_empty.7cdc2247.gif",
     "heavy": false,
     "deco": 0,
@@ -1622,6 +1684,7 @@
   "chainsaw_part_#00": {
     "id": 63,
     "uid": "chainsaw_part",
+    "uuid": "chainsaw_part_#00",
     "img": "item/item_chainsaw_part.a16f2752.gif",
     "heavy": true,
     "deco": 0,
@@ -1648,6 +1711,7 @@
   "mixergun_part_#00": {
     "id": 64,
     "uid": "mixergun_part",
+    "uuid": "mixergun_part_#00",
     "img": "item/item_mixergun_part.ef2cc682.gif",
     "heavy": false,
     "deco": 0,
@@ -1674,6 +1738,7 @@
   "rustine_#00": {
     "id": 65,
     "uid": "rustine",
+    "uuid": "rustine_#00",
     "img": "item/item_rustine.8bd02f19.gif",
     "heavy": false,
     "deco": 0,
@@ -1700,6 +1765,7 @@
   "lawn_part_#00": {
     "id": 66,
     "uid": "lawn_part",
+    "uuid": "lawn_part_#00",
     "img": "item/item_lawn_part.002c8802.gif",
     "heavy": true,
     "deco": 0,
@@ -1726,6 +1792,7 @@
   "tube_#00": {
     "id": 67,
     "uid": "tube",
+    "uuid": "tube_#00",
     "img": "item/item_tube.14b69a02.gif",
     "heavy": false,
     "deco": 0,
@@ -1752,6 +1819,7 @@
   "cart_part_#00": {
     "id": 68,
     "uid": "cart_part",
+    "uuid": "cart_part_#00",
     "img": "item/item_cart_part.0c16d53d.gif",
     "heavy": true,
     "deco": 0,
@@ -1778,6 +1846,7 @@
   "pocket_belt_#00": {
     "id": 69,
     "uid": "pocket_belt",
+    "uuid": "pocket_belt_#00",
     "img": "item/item_pocket_belt.953b0cd9.gif",
     "heavy": false,
     "deco": 0,
@@ -1804,6 +1873,7 @@
   "drug_hero_#00": {
     "id": 70,
     "uid": "drug_hero",
+    "uuid": "drug_hero_#00",
     "img": "item/item_drug_hero.32d52a1b.gif",
     "heavy": false,
     "deco": 0,
@@ -1830,6 +1900,7 @@
   "chest_#00": {
     "id": 71,
     "uid": "chest",
+    "uuid": "chest_#00",
     "img": "item/item_chest.9481e81f.gif",
     "heavy": true,
     "deco": 0,
@@ -1856,6 +1927,7 @@
   "chest_xl_#00": {
     "id": 72,
     "uid": "chest_xl",
+    "uuid": "chest_xl_#00",
     "img": "item/item_chest_xl.ffea90fc.gif",
     "heavy": true,
     "deco": 0,
@@ -1882,6 +1954,7 @@
   "chest_tools_#00": {
     "id": 73,
     "uid": "chest_tools",
+    "uuid": "chest_tools_#00",
     "img": "item/item_chest_tools.455b9a77.gif",
     "heavy": true,
     "deco": 0,
@@ -1908,6 +1981,7 @@
   "lamp_on_#00": {
     "id": 74,
     "uid": "lamp_on",
+    "uuid": "lamp_on_#00",
     "img": "item/item_lamp_on.a8e9bb5f.gif",
     "heavy": false,
     "deco": 3,
@@ -1934,6 +2008,7 @@
   "music_#00": {
     "id": 75,
     "uid": "music",
+    "uuid": "music_#00",
     "img": "item/item_music.33cbb07e.gif",
     "heavy": true,
     "deco": 10,
@@ -1960,6 +2035,7 @@
   "pharma_#00": {
     "id": 76,
     "uid": "pharma",
+    "uuid": "pharma_#00",
     "img": "item/item_pharma.4db65cc6.gif",
     "heavy": false,
     "deco": 0,
@@ -1986,6 +2062,7 @@
   "plate_raw_#00": {
     "id": 77,
     "uid": "plate_raw",
+    "uuid": "plate_raw_#00",
     "img": "item/item_plate_raw.e8f17cde.gif",
     "heavy": true,
     "deco": 0,
@@ -2012,6 +2089,7 @@
   "rhum_#00": {
     "id": 78,
     "uid": "rhum",
+    "uuid": "rhum_#00",
     "img": "item/item_rhum.4e2adcd4.gif",
     "heavy": false,
     "deco": 0,
@@ -2038,6 +2116,7 @@
   "coffee_#00": {
     "id": 79,
     "uid": "coffee",
+    "uuid": "coffee_#00",
     "img": "item/item_coffee.80536b21.gif",
     "heavy": false,
     "deco": 0,
@@ -2064,6 +2143,7 @@
   "coffee_machine_#00": {
     "id": 80,
     "uid": "coffee_machine",
+    "uuid": "coffee_machine_#00",
     "img": "item/item_coffee_machine.c3006fe7.gif",
     "heavy": true,
     "deco": 5,
@@ -2090,6 +2170,7 @@
   "coffee_machine_part_#00": {
     "id": 81,
     "uid": "coffee_machine_part",
+    "uuid": "coffee_machine_part_#00",
     "img": "item/item_coffee_machine_part.62552958.gif",
     "heavy": true,
     "deco": 0,
@@ -2116,6 +2197,7 @@
   "electro_#00": {
     "id": 82,
     "uid": "electro",
+    "uuid": "electro_#00",
     "img": "item/item_electro.5beb3239.gif",
     "heavy": false,
     "deco": 0,
@@ -2142,6 +2224,7 @@
   "chest_citizen_#00": {
     "id": 83,
     "uid": "chest_citizen",
+    "uuid": "chest_citizen_#00",
     "img": "item/item_chest_citizen.369e2df2.gif",
     "heavy": true,
     "deco": 0,
@@ -2168,6 +2251,7 @@
   "drug_water_#00": {
     "id": 84,
     "uid": "drug_water",
+    "uuid": "drug_water_#00",
     "img": "item/item_drug_water.3c97c367.gif",
     "heavy": false,
     "deco": 0,
@@ -2194,6 +2278,7 @@
   "radio_off_#00": {
     "id": 85,
     "uid": "radio_off",
+    "uuid": "radio_off_#00",
     "img": "item/item_radio_off.f0042060.gif",
     "heavy": false,
     "deco": 0,
@@ -2220,6 +2305,7 @@
   "radio_on_#00": {
     "id": 86,
     "uid": "radio_on",
+    "uuid": "radio_on_#00",
     "img": "item/item_radio_on.2cad41c1.gif",
     "heavy": false,
     "deco": 2,
@@ -2246,6 +2332,7 @@
   "cyanure_#00": {
     "id": 87,
     "uid": "cyanure",
+    "uuid": "cyanure_#00",
     "img": "item/item_cyanure.346f799a.gif",
     "heavy": false,
     "deco": 0,
@@ -2272,6 +2359,7 @@
   "door_#00": {
     "id": 88,
     "uid": "door",
+    "uuid": "door_#00",
     "img": "item/item_door.76f83f1e.gif",
     "heavy": true,
     "deco": 0,
@@ -2298,6 +2386,7 @@
   "vegetable_#00": {
     "id": 89,
     "uid": "vegetable",
+    "uuid": "vegetable_#00",
     "img": "item/item_vegetable.b69a9864.gif",
     "heavy": false,
     "deco": 0,
@@ -2324,6 +2413,7 @@
   "repair_kit_part_#00": {
     "id": 90,
     "uid": "repair_kit_part",
+    "uuid": "repair_kit_part_#00",
     "img": "item/item_repair_kit_part.d1ff2b74.gif",
     "heavy": false,
     "deco": 0,
@@ -2350,6 +2440,7 @@
   "repair_kit_#00": {
     "id": 91,
     "uid": "repair_kit",
+    "uuid": "repair_kit_#00",
     "img": "item/item_repair_kit.62490998.gif",
     "heavy": false,
     "deco": 0,
@@ -2376,6 +2467,7 @@
   "watergun_empty_#00": {
     "id": 92,
     "uid": "watergun_empty",
+    "uuid": "watergun_empty_#00",
     "img": "item/item_watergun_empty.50871f2f.gif",
     "heavy": false,
     "deco": 0,
@@ -2402,6 +2494,7 @@
   "watergun_opt_3_#00": {
     "id": 93,
     "uid": "watergun_opt_3",
+    "uuid": "watergun_opt_3_#00",
     "img": "item/item_watergun_opt_3.58515888.gif",
     "heavy": false,
     "deco": 0,
@@ -2428,6 +2521,7 @@
   "watergun_opt_2_#00": {
     "id": 94,
     "uid": "watergun_opt_2",
+    "uuid": "watergun_opt_2_#00",
     "img": "item/item_watergun_opt_2.82de683c.gif",
     "heavy": false,
     "deco": 0,
@@ -2454,6 +2548,7 @@
   "watergun_opt_1_#00": {
     "id": 95,
     "uid": "watergun_opt_1",
+    "uuid": "watergun_opt_1_#00",
     "img": "item/item_watergun_opt_1.13e26b3a.gif",
     "heavy": false,
     "deco": 0,
@@ -2480,6 +2575,7 @@
   "mixergun_empty_#00": {
     "id": 96,
     "uid": "mixergun_empty",
+    "uuid": "mixergun_empty_#00",
     "img": "item/item_mixergun_empty.2ebbd269.gif",
     "heavy": false,
     "deco": 0,
@@ -2506,6 +2602,7 @@
   "chainsaw_empty_#00": {
     "id": 97,
     "uid": "chainsaw_empty",
+    "uuid": "chainsaw_empty_#00",
     "img": "item/item_chainsaw_empty.776c7264.gif",
     "heavy": true,
     "deco": 0,
@@ -2532,6 +2629,7 @@
   "pilegun_empty_#00": {
     "id": 98,
     "uid": "pilegun_empty",
+    "uuid": "pilegun_empty_#00",
     "img": "item/item_pilegun_empty.6f0f31b9.gif",
     "heavy": false,
     "deco": 0,
@@ -2558,6 +2656,7 @@
   "taser_empty_#00": {
     "id": 99,
     "uid": "taser_empty",
+    "uuid": "taser_empty_#00",
     "img": "item/item_taser_empty.6707b5c9.gif",
     "heavy": false,
     "deco": 0,
@@ -2584,6 +2683,7 @@
   "sport_elec_empty_#00": {
     "id": 100,
     "uid": "sport_elec_empty",
+    "uuid": "sport_elec_empty_#00",
     "img": "item/item_sport_elec_empty.d87be000.gif",
     "heavy": false,
     "deco": 0,
@@ -2610,6 +2710,7 @@
   "sport_elec_#00": {
     "id": 101,
     "uid": "sport_elec",
+    "uuid": "sport_elec_#00",
     "img": "item/item_sport_elec.35e2a05c.gif",
     "heavy": false,
     "deco": 0,
@@ -2636,6 +2737,7 @@
   "big_pgun_empty_#00": {
     "id": 102,
     "uid": "big_pgun_empty",
+    "uuid": "big_pgun_empty_#00",
     "img": "item/item_big_pgun_empty.4bf2dd6c.gif",
     "heavy": false,
     "deco": 0,
@@ -2662,6 +2764,7 @@
   "big_pgun_#00": {
     "id": 103,
     "uid": "big_pgun",
+    "uuid": "big_pgun_#00",
     "img": "item/item_big_pgun.c77bf714.gif",
     "heavy": false,
     "deco": 0,
@@ -2688,6 +2791,7 @@
   "big_pgun_part_#00": {
     "id": 104,
     "uid": "big_pgun_part",
+    "uuid": "big_pgun_part_#00",
     "img": "item/item_big_pgun_part.0551dce4.gif",
     "heavy": false,
     "deco": 0,
@@ -2714,6 +2818,7 @@
   "tagger_#00": {
     "id": 105,
     "uid": "tagger",
+    "uuid": "tagger_#00",
     "img": "item/item_tagger.26a7cd0b.gif",
     "heavy": false,
     "deco": 0,
@@ -2740,6 +2845,7 @@
   "flare_#00": {
     "id": 106,
     "uid": "flare",
+    "uuid": "flare_#00",
     "img": "item/item_flare.0f37993f.gif",
     "heavy": false,
     "deco": 0,
@@ -2766,6 +2872,7 @@
   "jerrygun_#00": {
     "id": 107,
     "uid": "jerrygun",
+    "uuid": "jerrygun_#00",
     "img": "item/item_jerrygun.2babb7a0.gif",
     "heavy": false,
     "deco": 0,
@@ -2792,6 +2899,7 @@
   "chair_basic_#00": {
     "id": 108,
     "uid": "chair_basic",
+    "uuid": "chair_basic_#00",
     "img": "item/item_chair_basic.0d694621.gif",
     "img_b": "item/item_chair_basic.b.7b160db9.gif",
     "heavy": true,
@@ -2819,6 +2927,7 @@
   "gun_#00": {
     "id": 109,
     "uid": "gun",
+    "uuid": "gun_#00",
     "img": "item/item_gun.4188aa7c.gif",
     "heavy": false,
     "deco": 5,
@@ -2845,6 +2954,7 @@
   "machine_gun_#00": {
     "id": 110,
     "uid": "machine_gun",
+    "uuid": "machine_gun_#00",
     "img": "item/item_machine_gun.940f0c51.gif",
     "heavy": false,
     "deco": 15,
@@ -2871,6 +2981,7 @@
   "deto_#00": {
     "id": 111,
     "uid": "deto",
+    "uuid": "deto_#00",
     "img": "item/item_deto.08317fbf.gif",
     "heavy": false,
     "deco": 0,
@@ -2897,6 +3008,7 @@
   "concrete_#00": {
     "id": 112,
     "uid": "concrete",
+    "uuid": "concrete_#00",
     "img": "item/item_concrete.b8bad16b.gif",
     "heavy": true,
     "deco": 0,
@@ -2923,6 +3035,7 @@
   "concrete_wall_#00": {
     "id": 113,
     "uid": "concrete_wall",
+    "uuid": "concrete_wall_#00",
     "img": "item/item_concrete_wall.9cae6481.gif",
     "img_b": "item/item_concrete_wall.b.181b4b60.gif",
     "heavy": true,
@@ -2950,6 +3063,7 @@
   "drug_random_#00": {
     "id": 114,
     "uid": "drug_random",
+    "uuid": "drug_random_#00",
     "img": "item/item_drug_random.5dec6771.gif",
     "heavy": false,
     "deco": 0,
@@ -2976,6 +3090,7 @@
   "disinfect_#00": {
     "id": 115,
     "uid": "disinfect",
+    "uuid": "disinfect_#00",
     "img": "item/item_disinfect.2f5af146.gif",
     "heavy": false,
     "deco": 0,
@@ -3002,6 +3117,7 @@
   "digger_#00": {
     "id": 116,
     "uid": "digger",
+    "uuid": "digger_#00",
     "img": "item/item_digger.504d6777.gif",
     "heavy": false,
     "deco": 0,
@@ -3028,6 +3144,7 @@
   "chest_food_#00": {
     "id": 117,
     "uid": "chest_food",
+    "uuid": "chest_food_#00",
     "img": "item/item_chest_food.54a3c8e2.gif",
     "heavy": true,
     "deco": 0,
@@ -3054,6 +3171,7 @@
   "food_bag_#00": {
     "id": 118,
     "uid": "food_bag",
+    "uuid": "food_bag_#00",
     "img": "item/item_food_bag.9cf6d333.gif",
     "heavy": false,
     "deco": 0,
@@ -3080,6 +3198,7 @@
   "food_bar1_#00": {
     "id": 119,
     "uid": "food_bar1",
+    "uuid": "food_bar1_#00",
     "img": "item/item_food_bar1.0d0b8ce2.gif",
     "heavy": false,
     "deco": 0,
@@ -3106,6 +3225,7 @@
   "food_bar2_#00": {
     "id": 120,
     "uid": "food_bar2",
+    "uuid": "food_bar2_#00",
     "img": "item/item_food_bar2.e5582d01.gif",
     "heavy": false,
     "deco": 0,
@@ -3132,6 +3252,7 @@
   "food_bar3_#00": {
     "id": 121,
     "uid": "food_bar3",
+    "uuid": "food_bar3_#00",
     "img": "item/item_food_bar3.892f7546.gif",
     "heavy": false,
     "deco": 0,
@@ -3158,6 +3279,7 @@
   "food_biscuit_#00": {
     "id": 122,
     "uid": "food_biscuit",
+    "uuid": "food_biscuit_#00",
     "img": "item/item_food_biscuit.521b2e9c.gif",
     "heavy": false,
     "deco": 0,
@@ -3184,6 +3306,7 @@
   "food_chick_#00": {
     "id": 123,
     "uid": "food_chick",
+    "uuid": "food_chick_#00",
     "img": "item/item_food_chick.c0371c49.gif",
     "heavy": false,
     "deco": 0,
@@ -3210,6 +3333,7 @@
   "food_pims_#00": {
     "id": 124,
     "uid": "food_pims",
+    "uuid": "food_pims_#00",
     "img": "item/item_food_pims.3537d8e7.gif",
     "heavy": false,
     "deco": 0,
@@ -3236,6 +3360,7 @@
   "food_tarte_#00": {
     "id": 125,
     "uid": "food_tarte",
+    "uuid": "food_tarte_#00",
     "img": "item/item_food_tarte.bd34d983.gif",
     "heavy": false,
     "deco": 0,
@@ -3262,6 +3387,7 @@
   "food_sandw_#00": {
     "id": 126,
     "uid": "food_sandw",
+    "uuid": "food_sandw_#00",
     "img": "item/item_food_sandw.873019da.gif",
     "heavy": false,
     "deco": 0,
@@ -3288,6 +3414,7 @@
   "food_noodles_#00": {
     "id": 127,
     "uid": "food_noodles",
+    "uuid": "food_noodles_#00",
     "img": "item/item_food_noodles.ad3d2481.gif",
     "heavy": false,
     "deco": 0,
@@ -3314,6 +3441,7 @@
   "spices_#00": {
     "id": 128,
     "uid": "spices",
+    "uuid": "spices_#00",
     "img": "item/item_spices.f1f54443.gif",
     "heavy": false,
     "deco": 0,
@@ -3340,6 +3468,7 @@
   "food_noodles_hot_#00": {
     "id": 129,
     "uid": "food_noodles_hot",
+    "uuid": "food_noodles_hot_#00",
     "img": "item/item_food_noodles_hot.a09d22e4.gif",
     "heavy": false,
     "deco": 0,
@@ -3366,6 +3495,7 @@
   "cards_#00": {
     "id": 130,
     "uid": "cards",
+    "uuid": "cards_#00",
     "img": "item/item_cards.9c94b5b4.gif",
     "heavy": false,
     "deco": 0,
@@ -3392,6 +3522,7 @@
   "game_box_#00": {
     "id": 131,
     "uid": "game_box",
+    "uuid": "game_box_#00",
     "img": "item/item_game_box.94b0b476.gif",
     "heavy": false,
     "deco": 0,
@@ -3418,6 +3549,7 @@
   "watergun_opt_part_#00": {
     "id": 132,
     "uid": "watergun_opt_part",
+    "uuid": "watergun_opt_part_#00",
     "img": "item/item_watergun_opt_part.0afe7037.gif",
     "heavy": false,
     "deco": 0,
@@ -3444,6 +3576,7 @@
   "vibr_empty_#00": {
     "id": 133,
     "uid": "vibr_empty",
+    "uuid": "vibr_empty_#00",
     "img": "item/item_vibr_empty.8ba72cfb.gif",
     "heavy": false,
     "deco": 0,
@@ -3470,6 +3603,7 @@
   "bone_meat_#00": {
     "id": 134,
     "uid": "bone_meat",
+    "uuid": "bone_meat_#00",
     "img": "item/item_bone_meat.1ec9473e.gif",
     "heavy": false,
     "deco": 0,
@@ -3496,6 +3630,7 @@
   "bone_#00": {
     "id": 135,
     "uid": "bone",
+    "uuid": "bone_#00",
     "img": "item/item_bone.cfc3359d.gif",
     "img_b": "item/item_bone.b.e05318cb.gif",
     "heavy": false,
@@ -3523,6 +3658,7 @@
   "wood_beam_#00": {
     "id": 136,
     "uid": "wood_beam",
+    "uuid": "wood_beam_#00",
     "img": "item/item_wood_beam.11f0d448.gif",
     "heavy": true,
     "deco": 0,
@@ -3549,6 +3685,7 @@
   "metal_beam_#00": {
     "id": 137,
     "uid": "metal_beam",
+    "uuid": "metal_beam_#00",
     "img": "item/item_metal_beam.e79854b7.gif",
     "heavy": true,
     "deco": 0,
@@ -3575,6 +3712,7 @@
   "metal_bad_#00": {
     "id": 138,
     "uid": "metal_bad",
+    "uuid": "metal_bad_#00",
     "img": "item/item_metal_bad.e6dd95e8.gif",
     "heavy": false,
     "deco": 0,
@@ -3601,6 +3739,7 @@
   "wood_bad_#00": {
     "id": 139,
     "uid": "wood_bad",
+    "uuid": "wood_bad_#00",
     "img": "item/item_wood_bad.f24bc8a3.gif",
     "heavy": false,
     "deco": 0,
@@ -3627,6 +3766,7 @@
   "saw_tool_#00": {
     "id": 140,
     "uid": "saw_tool",
+    "uuid": "saw_tool_#00",
     "img": "item/item_saw_tool.329e78db.gif",
     "heavy": false,
     "deco": 0,
@@ -3653,6 +3793,7 @@
   "wood_log_#00": {
     "id": 141,
     "uid": "wood_log",
+    "uuid": "wood_log_#00",
     "img": "item/item_wood_log.ec743ee7.gif",
     "heavy": true,
     "deco": 2,
@@ -3679,6 +3820,7 @@
   "electro_box_#00": {
     "id": 142,
     "uid": "electro_box",
+    "uuid": "electro_box_#00",
     "img": "item/item_electro_box.b624417f.gif",
     "heavy": false,
     "deco": 0,
@@ -3705,6 +3847,7 @@
   "deco_box_#00": {
     "id": 143,
     "uid": "deco_box",
+    "uuid": "deco_box_#00",
     "img": "item/item_deco_box.f304308b.gif",
     "heavy": true,
     "deco": 0,
@@ -3731,6 +3874,7 @@
   "saw_tool_part_#00": {
     "id": 144,
     "uid": "saw_tool_part",
+    "uuid": "saw_tool_part_#00",
     "img": "item/item_saw_tool_part.b7347c43.gif",
     "heavy": false,
     "deco": 0,
@@ -3757,6 +3901,7 @@
   "mecanism_#00": {
     "id": 145,
     "uid": "mecanism",
+    "uuid": "mecanism_#00",
     "img": "item/item_mecanism.bfb2a8ec.gif",
     "heavy": false,
     "deco": 0,
@@ -3783,6 +3928,7 @@
   "trestle_#00": {
     "id": 146,
     "uid": "trestle",
+    "uuid": "trestle_#00",
     "img": "item/item_trestle.f4dcf9c2.gif",
     "heavy": true,
     "deco": 1,
@@ -3809,6 +3955,7 @@
   "table_#00": {
     "id": 147,
     "uid": "table",
+    "uuid": "table_#00",
     "img": "item/item_table.88bcfc3a.gif",
     "heavy": true,
     "deco": 3,
@@ -3835,6 +3982,7 @@
   "water_cleaner_#00": {
     "id": 148,
     "uid": "water_cleaner",
+    "uuid": "water_cleaner_#00",
     "img": "item/item_water_cleaner.86dab455.gif",
     "heavy": false,
     "deco": 0,
@@ -3861,6 +4009,7 @@
   "vegetable_tasty_#00": {
     "id": 149,
     "uid": "vegetable_tasty",
+    "uuid": "vegetable_tasty_#00",
     "img": "item/item_vegetable_tasty.29974992.gif",
     "heavy": false,
     "deco": 0,
@@ -3887,6 +4036,7 @@
   "powder_#00": {
     "id": 150,
     "uid": "powder",
+    "uuid": "powder_#00",
     "img": "item/item_powder.ecf11590.gif",
     "heavy": false,
     "deco": 0,
@@ -3913,6 +4063,7 @@
   "flash_#00": {
     "id": 151,
     "uid": "flash",
+    "uuid": "flash_#00",
     "img": "item/item_flash.a05cd634.gif",
     "heavy": false,
     "deco": 0,
@@ -3939,6 +4090,7 @@
   "teddy_#00": {
     "id": 152,
     "uid": "teddy",
+    "uuid": "teddy_#00",
     "img": "item/item_teddy.bd388d99.gif",
     "heavy": false,
     "deco": 8,
@@ -3965,6 +4117,7 @@
   "wood_plate_part_#00": {
     "id": 153,
     "uid": "wood_plate_part",
+    "uuid": "wood_plate_part_#00",
     "img": "item/item_wood_plate_part.c8a989f8.gif",
     "heavy": true,
     "deco": 0,
@@ -3991,6 +4144,7 @@
   "wood_plate_#00": {
     "id": 154,
     "uid": "wood_plate",
+    "uuid": "wood_plate_#00",
     "img": "item/item_wood_plate.2e9336b8.gif",
     "heavy": true,
     "deco": 0,
@@ -4017,6 +4171,7 @@
   "money_#00": {
     "id": 155,
     "uid": "money",
+    "uuid": "money_#00",
     "img": "item/item_money.cb863a74.gif",
     "heavy": false,
     "deco": 7,
@@ -4043,6 +4198,7 @@
   "repair_kit_part_raw_#00": {
     "id": 156,
     "uid": "repair_kit_part_raw",
+    "uuid": "repair_kit_part_raw_#00",
     "img": "item/item_repair_kit_part_raw.8521ad16.gif",
     "heavy": false,
     "deco": 0,
@@ -4069,6 +4225,7 @@
   "radius_mk2_part_#00": {
     "id": 157,
     "uid": "radius_mk2_part",
+    "uuid": "radius_mk2_part_#00",
     "img": "item/item_radius_mk2_part.b7e4532f.gif",
     "heavy": false,
     "deco": 0,
@@ -4095,6 +4252,7 @@
   "radius_mk2_#00": {
     "id": 158,
     "uid": "radius_mk2",
+    "uuid": "radius_mk2_#00",
     "img": "item/item_radius_mk2.c62b7411.gif",
     "heavy": false,
     "deco": 0,
@@ -4121,6 +4279,7 @@
   "repair_one_#00": {
     "id": 159,
     "uid": "repair_one",
+    "uuid": "repair_one_#00",
     "img": "item/item_repair_one.9198fa0c.gif",
     "heavy": false,
     "deco": 0,
@@ -4147,6 +4306,7 @@
   "engine_part_#00": {
     "id": 160,
     "uid": "engine_part",
+    "uuid": "engine_part_#00",
     "img": "item/item_engine_part.a4941182.gif",
     "heavy": true,
     "deco": 0,
@@ -4173,6 +4333,7 @@
   "machine_1_#00": {
     "id": 161,
     "uid": "machine_1",
+    "uuid": "machine_1_#00",
     "img": "item/item_machine_1.77adfa65.gif",
     "img_b": "item/item_machine_1.b.8c10b7ff.gif",
     "heavy": true,
@@ -4200,6 +4361,7 @@
   "machine_2_#00": {
     "id": 162,
     "uid": "machine_2",
+    "uuid": "machine_2_#00",
     "img": "item/item_machine_2.ced0ce87.gif",
     "img_b": "item/item_machine_2.b.f74a12d7.gif",
     "heavy": true,
@@ -4227,6 +4389,7 @@
   "machine_3_#00": {
     "id": 163,
     "uid": "machine_3",
+    "uuid": "machine_3_#00",
     "img": "item/item_machine_3.15a5499e.gif",
     "img_b": "item/item_machine_3.b.00774d5d.gif",
     "heavy": true,
@@ -4254,6 +4417,7 @@
   "rp_letter_#00": {
     "id": 164,
     "uid": "rp_letter",
+    "uuid": "rp_letter_#00",
     "img": "item/item_rp_letter.c1265310.gif",
     "heavy": false,
     "deco": 0,
@@ -4280,6 +4444,7 @@
   "rp_scroll_#00": {
     "id": 165,
     "uid": "rp_scroll",
+    "uuid": "rp_scroll_#00",
     "img": "item/item_rp_scroll.9083d5d3.gif",
     "heavy": false,
     "deco": 0,
@@ -4306,6 +4471,7 @@
   "rp_manual_#00": {
     "id": 166,
     "uid": "rp_manual",
+    "uuid": "rp_manual_#00",
     "img": "item/item_rp_manual.3d2feca1.gif",
     "heavy": false,
     "deco": 0,
@@ -4332,6 +4498,7 @@
   "rp_book2_#00": {
     "id": 167,
     "uid": "rp_book2",
+    "uuid": "rp_book2_#00",
     "img": "item/item_rp_book2.1af983f1.gif",
     "heavy": false,
     "deco": 0,
@@ -4358,6 +4525,7 @@
   "rp_book_#01": {
     "id": 168,
     "uid": "rp_book",
+    "uuid": "rp_book_#01",
     "img": "item/item_rp_book.144fe962.gif",
     "heavy": false,
     "deco": 0,
@@ -4384,6 +4552,7 @@
   "rp_sheets_#00": {
     "id": 169,
     "uid": "rp_sheets",
+    "uuid": "rp_sheets_#00",
     "img": "item/item_rp_sheets.123bf3e0.gif",
     "heavy": false,
     "deco": 0,
@@ -4410,6 +4579,7 @@
   "chain_#00": {
     "id": 170,
     "uid": "chain",
+    "uuid": "chain_#00",
     "img": "item/item_chain.7525a25b.gif",
     "img_b": "item/item_chain.b.fe420b22.gif",
     "heavy": false,
@@ -4437,6 +4607,7 @@
   "dish_#00": {
     "id": 171,
     "uid": "dish",
+    "uuid": "dish_#00",
     "img": "item/item_dish.b53dff41.gif",
     "heavy": false,
     "deco": 0,
@@ -4463,6 +4634,7 @@
   "dish_tasty_#00": {
     "id": 172,
     "uid": "dish_tasty",
+    "uuid": "dish_tasty_#00",
     "img": "item/item_dish_tasty.6d652de3.gif",
     "heavy": false,
     "deco": 0,
@@ -4489,6 +4661,7 @@
   "home_box_xl_#00": {
     "id": 173,
     "uid": "home_box_xl",
+    "uuid": "home_box_xl_#00",
     "img": "item/item_home_box_xl.5cfa40c0.gif",
     "heavy": true,
     "deco": 0,
@@ -4515,6 +4688,7 @@
   "home_box_#00": {
     "id": 174,
     "uid": "home_box",
+    "uuid": "home_box_#00",
     "img": "item/item_home_box.e4a3491d.gif",
     "heavy": false,
     "deco": 0,
@@ -4541,6 +4715,7 @@
   "home_def_#00": {
     "id": 175,
     "uid": "home_def",
+    "uuid": "home_def_#00",
     "img": "item/item_home_def.b6b653f9.gif",
     "heavy": true,
     "deco": 0,
@@ -4567,6 +4742,7 @@
   "book_gen_letter_#00": {
     "id": 176,
     "uid": "book_gen_letter",
+    "uuid": "book_gen_letter_#00",
     "img": "item/item_book_gen_letter.646026c0.gif",
     "heavy": false,
     "deco": 0,
@@ -4593,6 +4769,7 @@
   "book_gen_box_#00": {
     "id": 177,
     "uid": "book_gen_box",
+    "uuid": "book_gen_box_#00",
     "img": "item/item_book_gen_box.302c2e84.gif",
     "heavy": false,
     "deco": 0,
@@ -4619,6 +4796,7 @@
   "fence_#00": {
     "id": 178,
     "uid": "fence",
+    "uuid": "fence_#00",
     "img": "item/item_fence.5c99e23b.gif",
     "heavy": false,
     "deco": 0,
@@ -4645,6 +4823,7 @@
   "watergun_3_#00": {
     "id": 179,
     "uid": "watergun_3",
+    "uuid": "watergun_3_#00",
     "img": "item/item_watergun_3.17574c82.gif",
     "heavy": false,
     "deco": 0,
@@ -4671,6 +4850,7 @@
   "watergun_2_#00": {
     "id": 180,
     "uid": "watergun_2",
+    "uuid": "watergun_2_#00",
     "img": "item/item_watergun_2.d5b60923.gif",
     "heavy": false,
     "deco": 0,
@@ -4697,6 +4877,7 @@
   "watergun_1_#00": {
     "id": 181,
     "uid": "watergun_1",
+    "uuid": "watergun_1_#00",
     "img": "item/item_watergun_1.6b7222c9.gif",
     "heavy": false,
     "deco": 0,
@@ -4723,6 +4904,7 @@
   "watergun_opt_5_#00": {
     "id": 182,
     "uid": "watergun_opt_5",
+    "uuid": "watergun_opt_5_#00",
     "img": "item/item_watergun_opt_5.08ff7c05.gif",
     "heavy": false,
     "deco": 0,
@@ -4749,6 +4931,7 @@
   "watergun_opt_4_#00": {
     "id": 183,
     "uid": "watergun_opt_4",
+    "uuid": "watergun_opt_4_#00",
     "img": "item/item_watergun_opt_4.76b31806.gif",
     "heavy": false,
     "deco": 0,
@@ -4775,6 +4958,7 @@
   "cigs_#00": {
     "id": 184,
     "uid": "cigs",
+    "uuid": "cigs_#00",
     "img": "item/item_cigs.01fcba64.gif",
     "heavy": false,
     "deco": 0,
@@ -4801,6 +4985,7 @@
   "pilegun_upkit_#00": {
     "id": 185,
     "uid": "pilegun_upkit",
+    "uuid": "pilegun_upkit_#00",
     "img": "item/item_pilegun_upkit.5ae015eb.gif",
     "heavy": false,
     "deco": 0,
@@ -4827,6 +5012,7 @@
   "pilegun_up_empty_#00": {
     "id": 186,
     "uid": "pilegun_up_empty",
+    "uuid": "pilegun_up_empty_#00",
     "img": "item/item_pilegun_up_empty.3f4478df.gif",
     "heavy": false,
     "deco": 0,
@@ -4853,6 +5039,7 @@
   "pilegun_up_#00": {
     "id": 187,
     "uid": "pilegun_up",
+    "uuid": "pilegun_up_#00",
     "img": "item/item_pilegun_up.c114153e.gif",
     "heavy": false,
     "deco": 0,
@@ -4879,6 +5066,7 @@
   "pile_broken_#00": {
     "id": 188,
     "uid": "pile_broken",
+    "uuid": "pile_broken_#00",
     "img": "item/item_pile_broken.f4c9f1b9.gif",
     "heavy": false,
     "deco": 0,
@@ -4905,6 +5093,7 @@
   "rsc_pack_3_#00": {
     "id": 189,
     "uid": "rsc_pack_3",
+    "uuid": "rsc_pack_3_#00",
     "img": "item/item_rsc_pack_3.febd17ce.gif",
     "heavy": true,
     "deco": 0,
@@ -4931,6 +5120,7 @@
   "rsc_pack_2_#00": {
     "id": 190,
     "uid": "rsc_pack_2",
+    "uuid": "rsc_pack_2_#00",
     "img": "item/item_rsc_pack_2.774f15d2.gif",
     "heavy": true,
     "deco": 0,
@@ -4957,6 +5147,7 @@
   "rsc_pack_1_#00": {
     "id": 191,
     "uid": "rsc_pack_1",
+    "uuid": "rsc_pack_1_#00",
     "img": "item/item_rsc_pack_1.3aa86927.gif",
     "heavy": true,
     "deco": 0,
@@ -4983,6 +5174,7 @@
   "car_door_#00": {
     "id": 192,
     "uid": "car_door",
+    "uuid": "car_door_#00",
     "img": "item/item_car_door.2452d2d3.gif",
     "heavy": true,
     "deco": 0,
@@ -5009,6 +5201,7 @@
   "car_door_part_#00": {
     "id": 193,
     "uid": "car_door_part",
+    "uuid": "car_door_part_#00",
     "img": "item/item_car_door_part.a16a3a01.gif",
     "heavy": true,
     "deco": 0,
@@ -5035,6 +5228,7 @@
   "poison_#00": {
     "id": 194,
     "uid": "poison",
+    "uuid": "poison_#00",
     "img": "item/item_poison.b72e6b60.gif",
     "heavy": false,
     "deco": 0,
@@ -5061,6 +5255,7 @@
   "poison_part_#00": {
     "id": 195,
     "uid": "poison_part",
+    "uuid": "poison_part_#00",
     "img": "item/item_poison_part.274775a1.gif",
     "heavy": false,
     "deco": 0,
@@ -5087,6 +5282,7 @@
   "chest_hero_#00": {
     "id": 196,
     "uid": "chest_hero",
+    "uuid": "chest_hero_#00",
     "img": "item/item_chest_hero.1d6b3008.gif",
     "heavy": true,
     "deco": 0,
@@ -5113,6 +5309,7 @@
   "postal_box_#00": {
     "id": 197,
     "uid": "postal_box",
+    "uuid": "postal_box_#00",
     "img": "item/item_postal_box.696d6da6.gif",
     "heavy": false,
     "deco": 0,
@@ -5139,6 +5336,7 @@
   "food_armag_#00": {
     "id": 198,
     "uid": "food_armag",
+    "uuid": "food_armag_#00",
     "img": "item/item_food_armag.9a89aa29.gif",
     "heavy": false,
     "deco": 0,
@@ -5165,6 +5363,7 @@
   "food_candies_#00": {
     "id": 199,
     "uid": "food_candies",
+    "uuid": "food_candies_#00",
     "img": "item/item_food_candies.f8da31f7.gif",
     "heavy": false,
     "deco": 0,
@@ -5191,6 +5390,7 @@
   "out_def_#00": {
     "id": 200,
     "uid": "out_def",
+    "uuid": "out_def_#00",
     "img": "item/item_out_def.35628d93.gif",
     "heavy": false,
     "deco": 0,
@@ -5217,6 +5417,7 @@
   "torch_#00": {
     "id": 201,
     "uid": "torch",
+    "uuid": "torch_#00",
     "img": "item/item_torch.265b53bb.gif",
     "heavy": false,
     "deco": 0,
@@ -5243,6 +5444,7 @@
   "torch_off_#00": {
     "id": 202,
     "uid": "torch_off",
+    "uuid": "torch_off_#00",
     "img": "item/item_torch_off.74d1b8e6.gif",
     "img_b": "item/item_torch_off.b.dd22aaa5.gif",
     "heavy": false,
@@ -5270,6 +5472,7 @@
   "chama_#00": {
     "id": 203,
     "uid": "chama",
+    "uuid": "chama_#00",
     "img": "item/item_chama.b67e3bac.gif",
     "heavy": false,
     "deco": 0,
@@ -5296,6 +5499,7 @@
   "chama_tasty_#00": {
     "id": 204,
     "uid": "chama_tasty",
+    "uuid": "chama_tasty_#00",
     "img": "item/item_chama_tasty.a4a0cd64.gif",
     "heavy": false,
     "deco": 0,
@@ -5322,6 +5526,7 @@
   "pc_#00": {
     "id": 205,
     "uid": "pc",
+    "uuid": "pc_#00",
     "img": "item/item_pc.096e3605.gif",
     "img_b": "item/item_pc.b.289b6b58.gif",
     "heavy": true,
@@ -5349,6 +5554,7 @@
   "safe_#00": {
     "id": 206,
     "uid": "safe",
+    "uuid": "safe_#00",
     "img": "item/item_safe.c08d7e3c.gif",
     "heavy": true,
     "deco": 0,
@@ -5375,6 +5581,7 @@
   "rp_twin_#00": {
     "id": 207,
     "uid": "rp_twin",
+    "uuid": "rp_twin_#00",
     "img": "item/item_rp_twin.b2d74a5b.gif",
     "heavy": false,
     "deco": 0,
@@ -5401,6 +5608,7 @@
   "water_can_empty_#00": {
     "id": 208,
     "uid": "water_can_empty",
+    "uuid": "water_can_empty_#00",
     "img": "item/item_water_can_empty.1dc8111a.gif",
     "heavy": true,
     "deco": 0,
@@ -5427,6 +5635,7 @@
   "water_can_1_#00": {
     "id": 209,
     "uid": "water_can_1",
+    "uuid": "water_can_1_#00",
     "img": "item/item_water_can_1.34f4c537.gif",
     "heavy": true,
     "deco": 0,
@@ -5453,6 +5662,7 @@
   "water_can_2_#00": {
     "id": 210,
     "uid": "water_can_2",
+    "uuid": "water_can_2_#00",
     "img": "item/item_water_can_2.11481e1d.gif",
     "heavy": true,
     "deco": 0,
@@ -5479,6 +5689,7 @@
   "water_can_3_#00": {
     "id": 211,
     "uid": "water_can_3",
+    "uuid": "water_can_3_#00",
     "img": "item/item_water_can_3.00378a4a.gif",
     "heavy": true,
     "deco": 0,
@@ -5505,6 +5716,7 @@
   "beta_drug_bad_#00": {
     "id": 212,
     "uid": "beta_drug_bad",
+    "uuid": "beta_drug_bad_#00",
     "img": "item/item_beta_drug_bad.731e28a2.gif",
     "heavy": false,
     "deco": 0,
@@ -5531,6 +5743,7 @@
   "beta_drug_#00": {
     "id": 213,
     "uid": "beta_drug",
+    "uuid": "beta_drug_#00",
     "img": "item/item_beta_drug.cfb2c579.gif",
     "heavy": false,
     "deco": 0,
@@ -5557,6 +5770,7 @@
   "fruit_sub_part_#00": {
     "id": 214,
     "uid": "fruit_sub_part",
+    "uuid": "fruit_sub_part_#00",
     "img": "item/item_fruit_sub_part.a1180caa.gif",
     "heavy": false,
     "deco": 0,
@@ -5583,6 +5797,7 @@
   "fruit_part_#00": {
     "id": 215,
     "uid": "fruit_part",
+    "uuid": "fruit_part_#00",
     "img": "item/item_fruit_part.36da687c.gif",
     "heavy": false,
     "deco": 0,
@@ -5609,6 +5824,7 @@
   "flesh_part_#00": {
     "id": 216,
     "uid": "flesh_part",
+    "uuid": "flesh_part_#00",
     "img": "item/item_flesh_part.dbdc789b.gif",
     "heavy": false,
     "deco": 0,
@@ -5635,6 +5851,7 @@
   "flesh_#00": {
     "id": 217,
     "uid": "flesh",
+    "uuid": "flesh_#00",
     "img": "item/item_flesh.ebe0edbf.gif",
     "heavy": false,
     "deco": 0,
@@ -5661,6 +5878,7 @@
   "pharma_part_#00": {
     "id": 218,
     "uid": "pharma_part",
+    "uuid": "pharma_part_#00",
     "img": "item/item_pharma_part.58114efb.gif",
     "heavy": false,
     "deco": 0,
@@ -5687,6 +5905,7 @@
   "fruit_#00": {
     "id": 219,
     "uid": "fruit",
+    "uuid": "fruit_#00",
     "img": "item/item_fruit.a978c999.gif",
     "heavy": false,
     "deco": 0,
@@ -5713,6 +5932,7 @@
   "water_cup_part_#00": {
     "id": 220,
     "uid": "water_cup_part",
+    "uuid": "water_cup_part_#00",
     "img": "item/item_water_cup_part.8919bb80.gif",
     "heavy": false,
     "deco": 0,
@@ -5739,6 +5959,7 @@
   "water_cup_#00": {
     "id": 221,
     "uid": "water_cup",
+    "uuid": "water_cup_#00",
     "img": "item/item_water_cup.b33fdcf7.gif",
     "heavy": false,
     "deco": 0,
@@ -5765,6 +5986,7 @@
   "banned_note_#00": {
     "id": 222,
     "uid": "banned_note",
+    "uuid": "banned_note_#00",
     "img": "item/item_banned_note.4468c54d.gif",
     "heavy": false,
     "deco": 0,
@@ -5791,6 +6013,7 @@
   "infect_poison_part_#00": {
     "id": 223,
     "uid": "infect_poison_part",
+    "uuid": "infect_poison_part_#00",
     "img": "item/item_infect_poison_part.503c84d1.gif",
     "heavy": false,
     "deco": 0,
@@ -5817,6 +6040,7 @@
   "teddy_#01": {
     "id": 224,
     "uid": "teddy",
+    "uuid": "teddy_#01",
     "img": "item/item_teddy.bd388d99.gif",
     "heavy": false,
     "deco": 1,
@@ -5843,6 +6067,7 @@
   "woodsteak_#00": {
     "id": 225,
     "uid": "woodsteak",
+    "uuid": "woodsteak_#00",
     "img": "item/item_woodsteak.c2933479.gif",
     "heavy": false,
     "deco": 0,
@@ -5869,6 +6094,7 @@
   "christmas_suit_1_#00": {
     "id": 226,
     "uid": "christmas_suit_1",
+    "uuid": "christmas_suit_1_#00",
     "img": "item/item_christmas_suit_1.23612031.gif",
     "heavy": false,
     "deco": 0,
@@ -5895,6 +6121,7 @@
   "christmas_suit_2_#00": {
     "id": 227,
     "uid": "christmas_suit_2",
+    "uuid": "christmas_suit_2_#00",
     "img": "item/item_christmas_suit_2.01cabce0.gif",
     "heavy": false,
     "deco": 0,
@@ -5921,6 +6148,7 @@
   "christmas_suit_3_#00": {
     "id": 228,
     "uid": "christmas_suit_3",
+    "uuid": "christmas_suit_3_#00",
     "img": "item/item_christmas_suit_3.be889098.gif",
     "heavy": false,
     "deco": 0,
@@ -5947,6 +6175,7 @@
   "christmas_suit_full_#00": {
     "id": 229,
     "uid": "christmas_suit_full",
+    "uuid": "christmas_suit_full_#00",
     "img": "item/item_christmas_suit_full.89203b50.gif",
     "heavy": false,
     "deco": 0,
@@ -5973,6 +6202,7 @@
   "iphone_#00": {
     "id": 230,
     "uid": "iphone",
+    "uuid": "iphone_#00",
     "img": "item/item_iphone.b2bf7062.gif",
     "heavy": false,
     "deco": 0,
@@ -5999,6 +6229,7 @@
   "smelly_meat_#00": {
     "id": 231,
     "uid": "smelly_meat",
+    "uuid": "smelly_meat_#00",
     "img": "item/item_smelly_meat.e044c0ab.gif",
     "heavy": false,
     "deco": 0,
@@ -6025,6 +6256,7 @@
   "maglite_off_#00": {
     "id": 232,
     "uid": "maglite_off",
+    "uuid": "maglite_off_#00",
     "img": "item/item_maglite_off.6a8d27d3.gif",
     "heavy": false,
     "deco": 5,
@@ -6051,6 +6283,7 @@
   "maglite_1_#00": {
     "id": 233,
     "uid": "maglite_1",
+    "uuid": "maglite_1_#00",
     "img": "item/item_maglite_1.97be5838.gif",
     "heavy": false,
     "deco": 5,
@@ -6077,6 +6310,7 @@
   "maglite_2_#00": {
     "id": 234,
     "uid": "maglite_2",
+    "uuid": "maglite_2_#00",
     "img": "item/item_maglite_2.834e769e.gif",
     "heavy": false,
     "deco": 5,
@@ -6103,6 +6337,7 @@
   "cadaver_#00": {
     "id": 235,
     "uid": "cadaver",
+    "uuid": "cadaver_#00",
     "img": "item/item_cadaver.3bf155e3.gif",
     "heavy": true,
     "deco": 0,
@@ -6129,6 +6364,7 @@
   "cadaver_remains_#00": {
     "id": 236,
     "uid": "cadaver_remains",
+    "uuid": "cadaver_remains_#00",
     "img": "item/item_cadaver_remains.1e8fa4bf.gif",
     "heavy": true,
     "deco": 0,
@@ -6155,6 +6391,7 @@
   "smoke_bomb_#00": {
     "id": 237,
     "uid": "smoke_bomb",
+    "uuid": "smoke_bomb_#00",
     "img": "item/item_smoke_bomb.b6383f05.gif",
     "heavy": false,
     "deco": 0,
@@ -6181,6 +6418,7 @@
   "sand_ball_#00": {
     "id": 238,
     "uid": "sand_ball",
+    "uuid": "sand_ball_#00",
     "img": "item/item_sand_ball.e3b0270f.gif",
     "heavy": false,
     "deco": 0,
@@ -6207,6 +6445,7 @@
   "bplan_c_#00": {
     "id": 239,
     "uid": "bplan_c",
+    "uuid": "bplan_c_#00",
     "img": "item/item_bplan_c.a6835e8e.gif",
     "heavy": false,
     "deco": 0,
@@ -6233,6 +6472,7 @@
   "bplan_u_#00": {
     "id": 240,
     "uid": "bplan_u",
+    "uuid": "bplan_u_#00",
     "img": "item/item_bplan_u.ee5b595c.gif",
     "heavy": false,
     "deco": 0,
@@ -6259,6 +6499,7 @@
   "bplan_r_#00": {
     "id": 241,
     "uid": "bplan_r",
+    "uuid": "bplan_r_#00",
     "img": "item/item_bplan_r.31851f2d.gif",
     "heavy": false,
     "deco": 0,
@@ -6285,6 +6526,7 @@
   "bplan_e_#00": {
     "id": 242,
     "uid": "bplan_e",
+    "uuid": "bplan_e_#00",
     "img": "item/item_bplan_e.67a9bf19.gif",
     "heavy": false,
     "deco": 0,
@@ -6311,6 +6553,7 @@
   "bplan_box_#00": {
     "id": 243,
     "uid": "bplan_box",
+    "uuid": "bplan_box_#00",
     "img": "item/item_bplan_box.7c135ec7.gif",
     "heavy": true,
     "deco": 0,
@@ -6337,6 +6580,7 @@
   "bplan_box_e_#00": {
     "id": 244,
     "uid": "bplan_box_e",
+    "uuid": "bplan_box_e_#00",
     "img": "item/item_bplan_box_e.215e5e16.gif",
     "heavy": true,
     "deco": 0,
@@ -6363,6 +6607,7 @@
   "egg_#00": {
     "id": 245,
     "uid": "egg",
+    "uuid": "egg_#00",
     "img": "item/item_egg.10e5e7f6.gif",
     "heavy": false,
     "deco": 0,
@@ -6389,6 +6634,7 @@
   "apple_#00": {
     "id": 246,
     "uid": "apple",
+    "uuid": "apple_#00",
     "img": "item/item_apple.b666e23b.gif",
     "heavy": false,
     "deco": 0,
@@ -6415,6 +6661,7 @@
   "boomfruit_#00": {
     "id": 247,
     "uid": "boomfruit",
+    "uuid": "boomfruit_#00",
     "img": "item/item_boomfruit.a9ba2ba9.gif",
     "heavy": false,
     "deco": 0,
@@ -6441,6 +6688,7 @@
   "bplan_drop_#00": {
     "id": 248,
     "uid": "bplan_drop",
+    "uuid": "bplan_drop_#00",
     "img": "item/item_bplan_drop.6005d01e.gif",
     "heavy": false,
     "deco": 0,
@@ -6467,6 +6715,7 @@
   "magneticKey_#00": {
     "id": 249,
     "uid": "magneticKey",
+    "uuid": "magneticKey_#00",
     "img": "item/item_magneticKey.dfa65dd2.gif",
     "heavy": false,
     "deco": 0,
@@ -6493,6 +6742,7 @@
   "bumpKey_#00": {
     "id": 250,
     "uid": "bumpKey",
+    "uuid": "bumpKey_#00",
     "img": "item/item_bumpKey.fefb44ee.gif",
     "heavy": false,
     "deco": 0,
@@ -6519,6 +6769,7 @@
   "classicKey_#00": {
     "id": 251,
     "uid": "classicKey",
+    "uuid": "classicKey_#00",
     "img": "item/item_classicKey.545272cb.gif",
     "heavy": false,
     "deco": 0,
@@ -6545,6 +6796,7 @@
   "prints_#00": {
     "id": 252,
     "uid": "magnetic_print",
+    "uuid": "prints_#00",
     "img": "item/item_magnetic_print.338bb4b2.gif",
     "heavy": false,
     "deco": 0,
@@ -6571,6 +6823,7 @@
   "prints_#01": {
     "id": 253,
     "uid": "prints",
+    "uuid": "prints_#01",
     "img": "item/item_prints.6a8532ec.gif",
     "heavy": false,
     "deco": 0,
@@ -6597,6 +6850,7 @@
   "prints_#02": {
     "id": 254,
     "uid": "bottle_print",
+    "uuid": "prints_#02",
     "img": "item/item_bottle_print.120c9076.gif",
     "heavy": false,
     "deco": 0,
@@ -6623,6 +6877,7 @@
   "vagoul_#00": {
     "id": 255,
     "uid": "vagoul",
+    "uuid": "vagoul_#00",
     "img": "item/item_vagoul.80f2ed80.gif",
     "heavy": false,
     "deco": 0,
@@ -6649,6 +6904,7 @@
   "hbplan_u_#00": {
     "id": 256,
     "uid": "hbplan_u",
+    "uuid": "hbplan_u_#00",
     "img": "item/item_hbplan_u.3e099462.gif",
     "heavy": false,
     "deco": 0,
@@ -6675,6 +6931,7 @@
   "hbplan_r_#00": {
     "id": 257,
     "uid": "hbplan_r",
+    "uuid": "hbplan_r_#00",
     "img": "item/item_hbplan_r.1f74ac19.gif",
     "heavy": false,
     "deco": 0,
@@ -6701,6 +6958,7 @@
   "hbplan_e_#00": {
     "id": 258,
     "uid": "hbplan_e",
+    "uuid": "hbplan_e_#00",
     "img": "item/item_hbplan_e.85057a0b.gif",
     "heavy": false,
     "deco": 0,
@@ -6727,6 +6985,7 @@
   "bbplan_u_#00": {
     "id": 259,
     "uid": "bbplan_u",
+    "uuid": "bbplan_u_#00",
     "img": "item/item_bbplan_u.10def334.gif",
     "heavy": false,
     "deco": 0,
@@ -6753,6 +7012,7 @@
   "bbplan_r_#00": {
     "id": 260,
     "uid": "bbplan_r",
+    "uuid": "bbplan_r_#00",
     "img": "item/item_bbplan_r.c8485f2a.gif",
     "heavy": false,
     "deco": 0,
@@ -6779,6 +7039,7 @@
   "bbplan_e_#00": {
     "id": 261,
     "uid": "bbplan_e",
+    "uuid": "bbplan_e_#00",
     "img": "item/item_bbplan_e.2d1b20e5.gif",
     "heavy": false,
     "deco": 0,
@@ -6805,6 +7066,7 @@
   "mbplan_u_#00": {
     "id": 262,
     "uid": "mbplan_u",
+    "uuid": "mbplan_u_#00",
     "img": "item/item_mbplan_u.9984b13f.gif",
     "heavy": false,
     "deco": 0,
@@ -6831,6 +7093,7 @@
   "mbplan_r_#00": {
     "id": 263,
     "uid": "mbplan_r",
+    "uuid": "mbplan_r_#00",
     "img": "item/item_mbplan_r.2723de7f.gif",
     "heavy": false,
     "deco": 0,
@@ -6857,6 +7120,7 @@
   "mbplan_e_#00": {
     "id": 264,
     "uid": "mbplan_e",
+    "uuid": "mbplan_e_#00",
     "img": "item/item_mbplan_e.902e5b1c.gif",
     "heavy": false,
     "deco": 0,
@@ -6883,6 +7147,7 @@
   "soul_blue_#00": {
     "id": 265,
     "uid": "soul_blue",
+    "uuid": "soul_blue_#00",
     "img": "item/item_soul_blue.ff9cb338.gif",
     "heavy": false,
     "deco": 0,
@@ -6909,6 +7174,7 @@
   "soul_red_#00": {
     "id": 266,
     "uid": "soul_red",
+    "uuid": "soul_red_#00",
     "img": "item/item_soul_red.6f63c0fd.gif",
     "heavy": false,
     "deco": 0,
@@ -6935,6 +7201,7 @@
   "soul_blue_#01": {
     "id": 267,
     "uid": "soul_blue",
+    "uuid": "soul_blue_#01",
     "img": "item/item_soul_blue.ff9cb338.gif",
     "heavy": false,
     "deco": 0,
@@ -6961,6 +7228,7 @@
   "fest_#00": {
     "id": 268,
     "uid": "fest",
+    "uuid": "fest_#00",
     "img": "item/item_fest.07297b6a.gif",
     "heavy": false,
     "deco": 0,
@@ -6987,6 +7255,7 @@
   "bretz_#00": {
     "id": 269,
     "uid": "bretz",
+    "uuid": "bretz_#00",
     "img": "item/item_bretz.e7010562.gif",
     "heavy": false,
     "deco": 0,
@@ -7013,6 +7282,7 @@
   "tekel_#00": {
     "id": 270,
     "uid": "tekel",
+    "uuid": "tekel_#00",
     "img": "item/item_tekel.47ab1acc.gif",
     "heavy": false,
     "deco": 0,
@@ -7039,6 +7309,7 @@
   "rlaunc_#00": {
     "id": 271,
     "uid": "rlaunc",
+    "uuid": "rlaunc_#00",
     "img": "item/item_rlaunc.3d7b2dc9.gif",
     "heavy": true,
     "deco": 0,
@@ -7065,6 +7336,7 @@
   "kalach_#00": {
     "id": 272,
     "uid": "kalach",
+    "uuid": "kalach_#00",
     "img": "item/item_kalach.b3c80cbc.gif",
     "heavy": true,
     "deco": 0,
@@ -7091,6 +7363,7 @@
   "bureau_#00": {
     "id": 273,
     "uid": "bureau",
+    "uuid": "bureau_#00",
     "img": "item/item_bureau.c5a9d979.gif",
     "heavy": true,
     "deco": 2,
@@ -7117,6 +7390,7 @@
   "distri_#00": {
     "id": 274,
     "uid": "distri",
+    "uuid": "distri_#00",
     "img": "item/item_distri.0642c0c9.gif",
     "heavy": true,
     "deco": 4,
@@ -7143,6 +7417,7 @@
   "renne_#00": {
     "id": 275,
     "uid": "renne",
+    "uuid": "renne_#00",
     "img": "item/item_renne.9b3500f4.gif",
     "heavy": true,
     "deco": 0,
@@ -7169,6 +7444,7 @@
   "paques_#00": {
     "id": 276,
     "uid": "paques",
+    "uuid": "paques_#00",
     "img": "item/item_paques.7a1a78b8.gif",
     "heavy": false,
     "deco": 0,
@@ -7195,6 +7471,7 @@
   "badge_#00": {
     "id": 277,
     "uid": "badge",
+    "uuid": "badge_#00",
     "img": "item/item_badge.68f4f75b.gif",
     "heavy": false,
     "deco": 0,
@@ -7221,6 +7498,7 @@
   "kalach_#01": {
     "id": 278,
     "uid": "kalach_0",
+    "uuid": "kalach_#01",
     "img": "item/item_kalach_0.021cb55c.gif",
     "heavy": false,
     "deco": 0,
@@ -7247,6 +7525,7 @@
   "wire_#00": {
     "id": 279,
     "uid": "wire",
+    "uuid": "wire_#00",
     "img": "item/item_wire.f104f926.gif",
     "heavy": false,
     "deco": 0,
@@ -7273,6 +7552,7 @@
   "oilcan_#00": {
     "id": 280,
     "uid": "oilcan",
+    "uuid": "oilcan_#00",
     "img": "item/item_oilcan.ff96b0bd.gif",
     "heavy": false,
     "deco": 0,
@@ -7299,6 +7579,7 @@
   "lens_#00": {
     "id": 281,
     "uid": "lens",
+    "uuid": "lens_#00",
     "img": "item/item_lens.093c99c5.gif",
     "heavy": false,
     "deco": 0,
@@ -7325,6 +7606,7 @@
   "angryc_#00": {
     "id": 282,
     "uid": "angryc",
+    "uuid": "angryc_#00",
     "img": "item/item_angryc.58a81dc7.gif",
     "heavy": false,
     "deco": 1,
@@ -7351,6 +7633,7 @@
   "claymo_#00": {
     "id": 283,
     "uid": "claymo",
+    "uuid": "claymo_#00",
     "img": "item/item_claymo.7656d474.gif",
     "heavy": false,
     "deco": 0,
@@ -7377,6 +7660,7 @@
   "diode_#00": {
     "id": 284,
     "uid": "diode",
+    "uuid": "diode_#00",
     "img": "item/item_diode.5824b20d.gif",
     "heavy": false,
     "deco": 0,
@@ -7403,6 +7687,7 @@
   "guitar_#00": {
     "id": 285,
     "uid": "guitar",
+    "uuid": "guitar_#00",
     "img": "item/item_guitar.02b6ac8d.gif",
     "img_b": "item/item_guitar.b.a76180c7.gif",
     "heavy": false,
@@ -7430,6 +7715,7 @@
   "lsd_#00": {
     "id": 286,
     "uid": "lsd",
+    "uuid": "lsd_#00",
     "img": "item/item_lsd.5dc0a846.gif",
     "heavy": false,
     "deco": 0,
@@ -7456,6 +7742,7 @@
   "lpoint4_#00": {
     "id": 287,
     "uid": "lpoint4",
+    "uuid": "lpoint4_#00",
     "img": "item/item_lpoint4.a8114ef0.gif",
     "heavy": false,
     "deco": 0,
@@ -7482,6 +7769,7 @@
   "lpoint3_#00": {
     "id": 288,
     "uid": "lpoint3",
+    "uuid": "lpoint3_#00",
     "img": "item/item_lpoint3.5369f912.gif",
     "heavy": false,
     "deco": 0,
@@ -7508,6 +7796,7 @@
   "lpoint2_#00": {
     "id": 289,
     "uid": "lpoint2",
+    "uuid": "lpoint2_#00",
     "img": "item/item_lpoint2.23de34b5.gif",
     "heavy": false,
     "deco": 0,
@@ -7534,6 +7823,7 @@
   "lpoint1_#00": {
     "id": 290,
     "uid": "lpoint1",
+    "uuid": "lpoint1_#00",
     "img": "item/item_lpoint1.dadd55ff.gif",
     "heavy": false,
     "deco": 0,
@@ -7560,6 +7850,7 @@
   "lpoint_#00": {
     "id": 291,
     "uid": "lpoint",
+    "uuid": "lpoint_#00",
     "img": "item/item_lpoint.c293f1e7.gif",
     "heavy": false,
     "deco": 0,
@@ -7586,6 +7877,7 @@
   "scope_#00": {
     "id": 292,
     "uid": "scope",
+    "uuid": "scope_#00",
     "img": "item/item_scope.e3674107.gif",
     "heavy": false,
     "deco": 0,
@@ -7612,6 +7904,7 @@
   "trapma_#00": {
     "id": 293,
     "uid": "trapma",
+    "uuid": "trapma_#00",
     "img": "item/item_trapma.06c95b26.gif",
     "heavy": false,
     "deco": 5,
@@ -7638,6 +7931,7 @@
   "chudol_#00": {
     "id": 294,
     "uid": "chudol",
+    "uuid": "chudol_#00",
     "img": "item/item_chudol.ebad0769.gif",
     "heavy": false,
     "deco": 15,
@@ -7664,6 +7958,7 @@
   "lilboo_#00": {
     "id": 295,
     "uid": "lilboo",
+    "uuid": "lilboo_#00",
     "img": "item/item_lilboo.f4b6097b.gif",
     "heavy": false,
     "deco": 0,
@@ -7690,6 +7985,7 @@
   "ryebag_#00": {
     "id": 296,
     "uid": "ryebag",
+    "uuid": "ryebag_#00",
     "img": "item/item_ryebag.3887e9d5.gif",
     "heavy": false,
     "deco": 0,
@@ -7716,6 +8012,7 @@
   "fungus_#00": {
     "id": 297,
     "uid": "fungus",
+    "uuid": "fungus_#00",
     "img": "item/item_fungus.34607fe8.gif",
     "heavy": false,
     "deco": 0,
@@ -7742,6 +8039,7 @@
   "hmbrew_#00": {
     "id": 298,
     "uid": "hmbrew",
+    "uuid": "hmbrew_#00",
     "img": "item/item_hmbrew.494a3720.gif",
     "heavy": false,
     "deco": 0,
@@ -7768,6 +8066,7 @@
   "hifiev_#00": {
     "id": 299,
     "uid": "hifiev",
+    "uuid": "hifiev_#00",
     "img": "item/item_hifiev.9d9129e0.gif",
     "heavy": true,
     "deco": 0,
@@ -7794,6 +8093,7 @@
   "cdphil_#00": {
     "id": 300,
     "uid": "cdphil",
+    "uuid": "cdphil_#00",
     "img": "item/item_cdphil.a377fff8.gif",
     "heavy": false,
     "deco": 1,
@@ -7820,6 +8120,7 @@
   "bquies_#00": {
     "id": 301,
     "uid": "bquies",
+    "uuid": "bquies_#00",
     "img": "item/item_bquies.95bde9e8.gif",
     "heavy": false,
     "deco": 0,
@@ -7846,6 +8147,7 @@
   "staff_#01": {
     "id": 302,
     "uid": "staff",
+    "uuid": "staff_#01",
     "img": "item/item_staff.fd5f6105.gif",
     "heavy": false,
     "deco": 0,
@@ -7872,6 +8174,7 @@
   "cdbrit_#00": {
     "id": 303,
     "uid": "cdbrit",
+    "uuid": "cdbrit_#00",
     "img": "item/item_cdbrit.f900efba.gif",
     "heavy": false,
     "deco": 3,
@@ -7898,6 +8201,7 @@
   "cdelvi_#00": {
     "id": 304,
     "uid": "cdelvi",
+    "uuid": "cdelvi_#00",
     "img": "item/item_cdelvi.6dd3c70d.gif",
     "heavy": false,
     "deco": 7,
@@ -7924,6 +8228,7 @@
   "dfhifi_#00": {
     "id": 305,
     "uid": "dfhifi",
+    "uuid": "dfhifi_#00",
     "img": "item/item_dfhifi.4ae0ded7.gif",
     "heavy": true,
     "deco": 10,
@@ -7950,6 +8255,7 @@
   "dfhifi_#01": {
     "id": 306,
     "uid": "dfhifi",
+    "uuid": "dfhifi_#01",
     "img": "item/item_dfhifi.4ae0ded7.gif",
     "heavy": true,
     "deco": 10,
@@ -7976,6 +8282,7 @@
   "catbox_#00": {
     "id": 307,
     "uid": "catbox",
+    "uuid": "catbox_#00",
     "img": "item/item_catbox.f1e120b2.gif",
     "heavy": true,
     "deco": 0,
@@ -8002,6 +8309,7 @@
   "chkspk_#00": {
     "id": 308,
     "uid": "chkspk",
+    "uuid": "chkspk_#00",
     "img": "item/item_chkspk.86f57e4e.gif",
     "heavy": false,
     "deco": 0,
@@ -8028,6 +8336,7 @@
   "pet_snake2_#00": {
     "id": 309,
     "uid": "pet_snake2",
+    "uuid": "pet_snake2_#00",
     "img": "item/item_pet_snake2.ebd7552d.gif",
     "heavy": true,
     "deco": 0,
@@ -8054,6 +8363,7 @@
   "chest_christmas_3_#00": {
     "id": 310,
     "uid": "chest_christmas_3",
+    "uuid": "chest_christmas_3_#00",
     "img": "item/item_chest_christmas_3.7c3dc36b.gif",
     "heavy": true,
     "deco": 0,
@@ -8080,6 +8390,7 @@
   "chest_christmas_2_#00": {
     "id": 311,
     "uid": "chest_christmas_2",
+    "uuid": "chest_christmas_2_#00",
     "img": "item/item_chest_christmas_2.6be87da5.gif",
     "heavy": true,
     "deco": 0,
@@ -8106,6 +8417,7 @@
   "chest_christmas_1_#00": {
     "id": 312,
     "uid": "chest_christmas_1",
+    "uuid": "chest_christmas_1_#00",
     "img": "item/item_chest_christmas_1.ef09a9b9.gif",
     "heavy": true,
     "deco": 0,
@@ -8132,6 +8444,7 @@
   "omg_this_will_kill_you_#00": {
     "id": 313,
     "uid": "omg_this_will_kill_you",
+    "uuid": "omg_this_will_kill_you_#00",
     "img": "item/item_omg_this_will_kill_you.d91ec30a.gif",
     "heavy": false,
     "deco": 0,
@@ -8158,6 +8471,7 @@
   "rp_scroll_#01": {
     "id": 314,
     "uid": "rp_scroll",
+    "uuid": "rp_scroll_#01",
     "img": "item/item_rp_scroll.9083d5d3.gif",
     "heavy": false,
     "deco": 0,
@@ -8184,6 +8498,7 @@
   "basic_suit_#00": {
     "id": 315,
     "uid": "basic_suit",
+    "uuid": "basic_suit_#00",
     "img": "item/item_basic_suit.df78a12d.gif",
     "heavy": false,
     "deco": 0,
@@ -8210,6 +8525,7 @@
   "basic_suit_dirt_#00": {
     "id": 316,
     "uid": "basic_suit_dirt",
+    "uuid": "basic_suit_dirt_#00",
     "img": "item/item_basic_suit_dirt.ab7fa274.gif",
     "heavy": false,
     "deco": 0,
@@ -8236,6 +8552,7 @@
   "vest_on_#00": {
     "id": 317,
     "uid": "vest_on",
+    "uuid": "vest_on_#00",
     "img": "item/item_vest_on.dab68fee.gif",
     "heavy": false,
     "deco": 0,
@@ -8262,6 +8579,7 @@
   "vest_off_#00": {
     "id": 318,
     "uid": "vest_off",
+    "uuid": "vest_off_#00",
     "img": "item/item_vest_off.0c3c5f63.gif",
     "heavy": false,
     "deco": 0,
@@ -8288,6 +8606,7 @@
   "pelle_#00": {
     "id": 319,
     "uid": "pelle",
+    "uuid": "pelle_#00",
     "img": "item/item_pelle.abdddc5f.gif",
     "heavy": false,
     "deco": 0,
@@ -8314,6 +8633,7 @@
   "tamed_pet_#00": {
     "id": 320,
     "uid": "tamed_pet",
+    "uuid": "tamed_pet_#00",
     "img": "item/item_tamed_pet.198b64bc.gif",
     "heavy": false,
     "deco": 0,
@@ -8340,6 +8660,7 @@
   "tamed_pet_drug_#00": {
     "id": 321,
     "uid": "tamed_pet_food",
+    "uuid": "tamed_pet_drug_#00",
     "img": "item/item_tamed_pet_food.259676ab.gif",
     "heavy": false,
     "deco": 0,
@@ -8366,6 +8687,7 @@
   "tamed_pet_off_#00": {
     "id": 322,
     "uid": "tamed_pet_off",
+    "uuid": "tamed_pet_off_#00",
     "img": "item/item_tamed_pet_off.591c54e6.gif",
     "heavy": false,
     "deco": 0,
@@ -8392,6 +8714,7 @@
   "surv_book_#00": {
     "id": 323,
     "uid": "surv_book",
+    "uuid": "surv_book_#00",
     "img": "item/item_surv_book.93f02a21.gif",
     "heavy": false,
     "deco": 0,
@@ -8418,6 +8741,7 @@
   "keymol_#00": {
     "id": 324,
     "uid": "keymol",
+    "uuid": "keymol_#00",
     "img": "item/item_keymol.28907ccf.gif",
     "heavy": false,
     "deco": 0,
@@ -8444,6 +8768,7 @@
   "shield_#00": {
     "id": 325,
     "uid": "shield",
+    "uuid": "shield_#00",
     "img": "item/item_shield.aa5b94e7.gif",
     "heavy": false,
     "deco": 0,
@@ -8470,6 +8795,7 @@
   "shaman_#00": {
     "id": 326,
     "uid": "shaman",
+    "uuid": "shaman_#00",
     "img": "item/item_shaman.df6922db.gif",
     "heavy": false,
     "deco": 0,
@@ -8496,6 +8822,7 @@
   "firework_powder_#00": {
     "id": 327,
     "uid": "firework_powder",
+    "uuid": "firework_powder_#00",
     "img": "item/item_firework_powder.ac4af50e.gif",
     "heavy": false,
     "deco": 5,
@@ -8522,6 +8849,7 @@
   "firework_tube_#00": {
     "id": 328,
     "uid": "firework_tube",
+    "uuid": "firework_tube_#00",
     "img": "item/item_firework_tube.7cddbc36.gif",
     "heavy": true,
     "deco": 2,
@@ -8548,6 +8876,7 @@
   "firework_box_#00": {
     "id": 329,
     "uid": "firework_box",
+    "uuid": "firework_box_#00",
     "img": "item/item_firework_box.33adb5e5.gif",
     "heavy": true,
     "deco": 3,
@@ -8574,6 +8903,7 @@
   "pumpkin_off_#00": {
     "id": 330,
     "uid": "pumpkin_off",
+    "uuid": "pumpkin_off_#00",
     "img": "item/item_pumpkin_off.2834370c.gif",
     "heavy": true,
     "deco": 5,
@@ -8600,6 +8930,7 @@
   "pumpkin_on_#00": {
     "id": 331,
     "uid": "pumpkin_on",
+    "uuid": "pumpkin_on_#00",
     "img": "item/item_pumpkin_on.e40d741a.gif",
     "heavy": false,
     "deco": 15,
@@ -8626,6 +8957,7 @@
   "xmas_gift_#00": {
     "id": 332,
     "uid": "xmas_gift",
+    "uuid": "xmas_gift_#00",
     "img": "item/item_xmas_gift.b3904697.gif",
     "heavy": false,
     "deco": 2,
@@ -8652,6 +8984,7 @@
   "staff2_#00": {
     "id": 333,
     "uid": "staff2",
+    "uuid": "staff2_#00",
     "img": "item/item_staff2.7494981c.gif",
     "heavy": false,
     "deco": 0,
@@ -8678,6 +9011,7 @@
   "vodka_#00": {
     "id": 336,
     "uid": "vodka",
+    "uuid": "vodka_#00",
     "img": "item/item_vodka.c5dec753.gif",
     "heavy": false,
     "deco": 0,
@@ -8704,6 +9038,7 @@
   "potion_#00": {
     "id": 337,
     "uid": "potion",
+    "uuid": "potion_#00",
     "img": "item/item_potion.890b52f3.gif",
     "heavy": false,
     "deco": 0,
@@ -8730,6 +9065,7 @@
   "photo_3_#00": {
     "id": 338,
     "uid": "photo_3",
+    "uuid": "photo_3_#00",
     "img": "item/item_photo_3.5843104b.gif",
     "heavy": false,
     "deco": 0,
@@ -8756,6 +9092,7 @@
   "photo_2_#00": {
     "id": 339,
     "uid": "photo_2",
+    "uuid": "photo_2_#00",
     "img": "item/item_photo_2.edeaf55b.gif",
     "heavy": false,
     "deco": 0,
@@ -8782,6 +9119,7 @@
   "photo_1_#00": {
     "id": 340,
     "uid": "photo_1",
+    "uuid": "photo_1_#00",
     "img": "item/item_photo_1.aee9900b.gif",
     "heavy": false,
     "deco": 0,
@@ -8808,6 +9146,7 @@
   "photo_off_#00": {
     "id": 341,
     "uid": "photo_off",
+    "uuid": "photo_off_#00",
     "img": "item/item_photo_off.79866bea.gif",
     "heavy": false,
     "deco": 0,
@@ -8834,6 +9173,7 @@
   "soul_yellow_#00": {
     "id": 342,
     "uid": "soul_yellow",
+    "uuid": "soul_yellow_#00",
     "img": "item/item_soul_yellow.9d481323.gif",
     "heavy": false,
     "deco": 0,
@@ -8860,6 +9200,7 @@
   "food_xmas_#00": {
     "id": 343,
     "uid": "food_xmas",
+    "uuid": "food_xmas_#00",
     "img": "item/item_food_xmas.e2f6adb1.gif",
     "heavy": false,
     "deco": 0,
@@ -8886,6 +9227,7 @@
   "wood_xmas_#00": {
     "id": 344,
     "uid": "wood_xmas",
+    "uuid": "wood_xmas_#00",
     "img": "item/item_wood_xmas.2b62e6ce.gif",
     "heavy": true,
     "deco": 8,
@@ -8912,6 +9254,7 @@
   "leprechaun_suit_#00": {
     "id": 345,
     "uid": "leprechaun_suit",
+    "uuid": "leprechaun_suit_#00",
     "img": "item/item_leprechaun_suit.c4f59434.gif",
     "heavy": false,
     "deco": 0,
@@ -8938,6 +9281,7 @@
   "broken_#00": {
     "id": 346,
     "uid": "broken",
+    "uuid": "broken_#00",
     "img": "item/item_broken.21de891f.gif",
     "heavy": false,
     "deco": 0,
@@ -8964,6 +9308,7 @@
   "bullets_#00": {
     "id": 347,
     "uid": "bullets",
+    "uuid": "bullets_#00",
     "img": "item/item_bullets.ea00bb8b.gif",
     "heavy": false,
     "deco": 0,
@@ -8990,6 +9335,7 @@
   "postal_box_#01": {
     "id": 348,
     "uid": "postal_box",
+    "uuid": "postal_box_#01",
     "img": "item/item_postal_box.696d6da6.gif",
     "heavy": false,
     "deco": 0,
@@ -9016,6 +9362,7 @@
   "postal_box_xl_#00": {
     "id": 349,
     "uid": "postal_box_xl",
+    "uuid": "postal_box_xl_#00",
     "img": "item/item_postal_box_xl.4b640629.gif",
     "heavy": true,
     "deco": 0,
@@ -9042,6 +9389,7 @@
   "christmas_candy_#00": {
     "id": 350,
     "uid": "christmas_candy",
+    "uuid": "christmas_candy_#00",
     "img": "item/item_christmas_candy.267bebda.gif",
     "heavy": false,
     "deco": 0,
@@ -9068,6 +9416,7 @@
   "alarm_off_#00": {
     "id": 351,
     "uid": "alarm_off",
+    "uuid": "alarm_off_#00",
     "img": "item/item_alarm_off.6a7064da.gif",
     "heavy": false,
     "deco": 0,
@@ -9094,6 +9443,7 @@
   "alarm_on_#00": {
     "id": 352,
     "uid": "alarm_on",
+    "uuid": "alarm_on_#00",
     "img": "item/item_alarm_on.bb081dca.gif",
     "heavy": false,
     "deco": 0,
@@ -9120,6 +9470,7 @@
   "pumpkin_raw_#00": {
     "id": 353,
     "uid": "pumpkin_raw",
+    "uuid": "pumpkin_raw_#00",
     "img": "item/item_pumpkin_raw.95fd921b.gif",
     "heavy": true,
     "deco": 0,
@@ -9146,6 +9497,7 @@
   "hurling_stick_#00": {
     "id": 354,
     "uid": "hurling_stick",
+    "uuid": "hurling_stick_#00",
     "img": "item/item_hurling_stick.894e3a64.gif",
     "img_b": "item/item_hurling_stick.b.0145844d.gif",
     "heavy": false,
@@ -9173,6 +9525,7 @@
   "guiness_#00": {
     "id": 355,
     "uid": "guiness",
+    "uuid": "guiness_#00",
     "img": "item/item_guiness.f0a52831.gif",
     "heavy": false,
     "deco": 0,
@@ -9199,6 +9552,7 @@
   "april_drug_#00": {
     "id": 356,
     "uid": "april_drug",
+    "uuid": "april_drug_#00",
     "img": "item/item_april_drug.e01e9a2d.gif",
     "heavy": false,
     "deco": 0,
@@ -9225,6 +9579,7 @@
   "infect_poison_#00": {
     "id": 357,
     "uid": "infect_poison",
+    "uuid": "infect_poison_#00",
     "img": "item/item_infect_poison.452b0b75.gif",
     "heavy": false,
     "deco": 0,
@@ -9251,6 +9606,7 @@
   "pumpkin_tasty_#00": {
     "id": 358,
     "uid": "pumpkin_tasty",
+    "uuid": "pumpkin_tasty_#00",
     "img": "item/item_pumpkin_tasty.bdf7bf47.gif",
     "heavy": true,
     "deco": 0,
@@ -9277,6 +9633,7 @@
   "medic_#00": {
     "id": 359,
     "uid": "medic",
+    "uuid": "medic_#00",
     "img": "item/item_medic.a04f7556.gif",
     "heavy": false,
     "deco": 0,
@@ -9303,6 +9660,7 @@
   "xmas_gift_#01": {
     "id": 360,
     "uid": "xmas_gift",
+    "uuid": "xmas_gift_#01",
     "img": "item/item_xmas_gift.b3904697.gif",
     "heavy": false,
     "deco": 5,
@@ -9329,6 +9687,7 @@
   "tamed_pet_gone_#00": {
     "id": 361,
     "uid": "tamed_pet_gone",
+    "uuid": "tamed_pet_gone_#00",
     "img": "item/item_tamed_pet_gone.6bbfa206.gif",
     "heavy": false,
     "deco": 0,
@@ -9355,6 +9714,7 @@
   "alarm_1_#00": {
     "id": 362,
     "uid": "alarm_1",
+    "uuid": "alarm_1_#00",
     "img": "item/item_alarm_1.4edb29ad.gif",
     "heavy": false,
     "deco": 0,
@@ -9381,6 +9741,7 @@
   "alarm_2_#00": {
     "id": 363,
     "uid": "alarm_2",
+    "uuid": "alarm_2_#00",
     "img": "item/item_alarm_2.b414b7cb.gif",
     "heavy": false,
     "deco": 0,
@@ -9407,6 +9768,7 @@
   "alarm_3_#00": {
     "id": 364,
     "uid": "alarm_3",
+    "uuid": "alarm_3_#00",
     "img": "item/item_alarm_3.16f74423.gif",
     "heavy": false,
     "deco": 0,
@@ -9433,6 +9795,7 @@
   "noodle_prints_#00": {
     "id": 365,
     "uid": "noodle_magnetic_print",
+    "uuid": "noodle_prints_#00",
     "img": "item/item_noodle_magnetic_print.aac64733.gif",
     "heavy": false,
     "deco": 0,
@@ -9459,6 +9822,7 @@
   "noodle_prints_#01": {
     "id": 366,
     "uid": "noodle_prints",
+    "uuid": "noodle_prints_#01",
     "img": "item/item_noodle_prints.1201465c.gif",
     "heavy": false,
     "deco": 0,
@@ -9485,6 +9849,7 @@
   "noodle_prints_#02": {
     "id": 367,
     "uid": "noodle_bottle_print",
+    "uuid": "noodle_prints_#02",
     "img": "item/item_noodle_bottle_print.dd070d24.gif",
     "heavy": false,
     "deco": 0,
@@ -9511,6 +9876,7 @@
   "shoe_#00": {
     "id": 368,
     "uid": "shoe",
+    "uuid": "shoe_#00",
     "img": "item/item_shoe.36470ca5.gif",
     "heavy": false,
     "deco": 0,
@@ -9537,6 +9903,7 @@
   "bike_part_#00": {
     "id": 369,
     "uid": "bike_part",
+    "uuid": "bike_part_#00",
     "img": "item/item_bike_part.54ce7c7c.gif",
     "heavy": true,
     "deco": 0,
@@ -9563,6 +9930,7 @@
   "bike_#00": {
     "id": 370,
     "uid": "bike",
+    "uuid": "bike_#00",
     "img": "item/item_bike.2417ac67.gif",
     "heavy": true,
     "deco": 0,
@@ -9589,6 +9957,7 @@
   "flag_#00": {
     "id": 371,
     "uid": "flag",
+    "uuid": "flag_#00",
     "img": "item/item_flag.16474649.gif",
     "heavy": false,
     "deco": 5,
@@ -9615,6 +9984,7 @@
   "soccer_#00": {
     "id": 372,
     "uid": "soccer",
+    "uuid": "soccer_#00",
     "img": "item/item_soccer.473f3aa2.gif",
     "heavy": false,
     "deco": 0,
@@ -9641,6 +10011,7 @@
   "soccer_part_#00": {
     "id": 373,
     "uid": "soccer_part",
+    "uuid": "soccer_part_#00",
     "img": "item/item_soccer_part.d106a115.gif",
     "heavy": false,
     "deco": 0,
@@ -9667,6 +10038,7 @@
   "quantum_#00": {
     "id": 374,
     "uid": "quantum",
+    "uuid": "quantum_#00",
     "img": "item/item_quantum.a2671e94.gif",
     "heavy": false,
     "deco": 0,
@@ -9693,6 +10065,7 @@
   "photo_4_#00": {
     "id": 375,
     "uid": "photo_4",
+    "uuid": "photo_4_#00",
     "img": "item/item_photo_4.f68a3581.gif",
     "heavy": false,
     "deco": 0,
@@ -9719,6 +10092,7 @@
   "cello_box_#00": {
     "id": 376,
     "uid": "cello_box",
+    "uuid": "cello_box_#00",
     "img": "item/item_cello_box.1585a097.gif",
     "heavy": true,
     "deco": 0,
@@ -9745,6 +10119,7 @@
   "apple_blue_#00": {
     "id": 377,
     "uid": "apple_blue",
+    "uuid": "apple_blue_#00",
     "img": "item/item_apple_blue.e8cd5d35.gif",
     "heavy": false,
     "deco": 0,
@@ -9771,6 +10146,7 @@
   "saw_tool_temp_#00": {
     "id": 378,
     "uid": "saw_tool_temp",
+    "uuid": "saw_tool_temp_#00",
     "img": "item/item_saw_tool_temp.9c68cf76.gif",
     "img_b": "item/item_saw_tool_temp.b.11b906df.gif",
     "heavy": false,
@@ -9798,6 +10174,7 @@
   "moldy_food_subpart_#00": {
     "id": 379,
     "uid": "moldy_food_subpart",
+    "uuid": "moldy_food_subpart_#00",
     "img": "item/item_moldy_food_subpart.989e905a.gif",
     "heavy": false,
     "deco": 0,
@@ -9824,6 +10201,7 @@
   "moldy_food_spicy_#00": {
     "id": 380,
     "uid": "moldy_food_spicy",
+    "uuid": "moldy_food_spicy_#00",
     "img": "item/item_moldy_food_spicy.c3bf9a3f.gif",
     "heavy": false,
     "deco": 0,
@@ -9850,6 +10228,7 @@
   "moldy_food_part_#00": {
     "id": 381,
     "uid": "moldy_food_part",
+    "uuid": "moldy_food_part_#00",
     "img": "item/item_moldy_food_part.924e5671.gif",
     "heavy": false,
     "deco": 0,
@@ -9876,6 +10255,7 @@
   "moldy_food_#00": {
     "id": 382,
     "uid": "moldy_food",
+    "uuid": "moldy_food_#00",
     "img": "item/item_moldy_food.11cf447b.gif",
     "heavy": false,
     "deco": 0,
@@ -9902,6 +10282,7 @@
   "scary_mask_#00": {
     "id": 383,
     "uid": "scary_mask",
+    "uuid": "scary_mask_#00",
     "img": "item/item_scary_mask.48bcd2ad.gif",
     "heavy": false,
     "deco": 5,
@@ -9928,6 +10309,7 @@
   "shield_off_#00": {
     "id": 386,
     "uid": "shield_off",
+    "uuid": "shield_off_#00",
     "img": "item/item_shield_off.81289b30.gif",
     "heavy": false,
     "deco": 0,
@@ -9954,6 +10336,7 @@
   "broken_ball_#00": {
     "id": 387,
     "uid": "broken_ball",
+    "uuid": "broken_ball_#00",
     "img": "item/item_broken_ball.94ea6ddd.gif",
     "heavy": false,
     "deco": 0,

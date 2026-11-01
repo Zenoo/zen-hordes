@@ -107,7 +107,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Mein Name ist Nobody",
           [Lang.EN]: "My name is nobody",
-          [Lang.FR]: "Mon nom est personne",
+          [Lang.FR]: "Mon nom est Personne",
           [Lang.ES]: "Mi nombre es ninguno"
         },
         quantity: 850
@@ -116,7 +116,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Ein Sternbild trägt meinen Namen",
           [Lang.EN]: "They named a constellation after me",
-          [Lang.FR]: "J'ai donné mon nom à une constellation",
+          [Lang.FR]: "J’ai donné mon nom à une constellation",
           [Lang.ES]: "Una constelación lleva mi nombre"
         },
         quantity: 1000
@@ -146,7 +146,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Nur ein Finger",
           [Lang.EN]: "Just one finger!",
-          [Lang.FR]: "Juste un doigt !",
+          [Lang.FR]: "Juste un doigt !",
           [Lang.ES]: "¡Solo un dedo!"
         },
         quantity: 30
@@ -173,7 +173,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Barney Gumble der Außenwelt",
           [Lang.EN]: "Barney Gumble of the world beyond",
-          [Lang.FR]: "Barney Gumble de l'Outre-Monde",
+          [Lang.FR]: "Barney Gumble de l’Outre-Monde",
           [Lang.ES]: "Barney Gumble del Ultramundo"
         },
         quantity: 300
@@ -182,7 +182,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Fass das Saufen lieber sein",
           [Lang.EN]: "Absinthe from drinking next time eh?!",
-          [Lang.FR]: "Absinthe toi la prochaine fois",
+          [Lang.FR]: "Absinthe-toi la prochaine fois",
           [Lang.ES]: "Absenta de beber la próxima vez, ¿eh?"
         },
         quantity: 400
@@ -191,7 +191,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Gib mir was zu saufen oder es knallt!",
           [Lang.EN]: "Gimme a drink or the dog gets it!",
-          [Lang.FR]: "A boire ou j'tue le chien !",
+          [Lang.FR]: "À boire ou j’tue le chien !",
           [Lang.ES]: "¡Dame un trago o el perro sufrira las consecuencias!"
         },
         quantity: 500
@@ -200,7 +200,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Alles unter 55% ist Wasser",
           [Lang.EN]: "If it's under 55 proof it's water!",
-          [Lang.FR]: "Avant 55°, c'est de l'eau",
+          [Lang.FR]: "Avant 55°, c'est de l’eau",
           [Lang.ES]: "Si son menos de 55 tragos, ¡es agua!"
         },
         quantity: 600
@@ -209,7 +209,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Dialyse",
           [Lang.EN]: "Dialysis",
-          [Lang.FR]: "Sans Foie ni Loi",
+          [Lang.FR]: "Sans foie ni loi",
           [Lang.ES]: "Diálisis"
         },
         quantity: 800
@@ -352,7 +352,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Freier Bürger",
           [Lang.EN]: "Free citizen!",
-          [Lang.FR]: "Citoyen libre !",
+          [Lang.FR]: "Citoyen libre !",
           [Lang.ES]: "¡Habitante libre!"
         },
         quantity: 300
@@ -370,7 +370,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Ich brauche niemanden",
           [Lang.EN]: "I do not need anyone",
-          [Lang.FR]: "Je n'ai besoin de personne",
+          [Lang.FR]: "Je n’ai besoin de personne",
           [Lang.ES]: "No necesito a nadie"
         },
         quantity: 550
@@ -561,7 +561,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Spezialität: Hundesteaks",
           [Lang.EN]: "Anyone for a fat-cat-kebab?",
-          [Lang.FR]: "Responsable d'extinctions",
+          [Lang.FR]: "Responsable d’extinctions",
           [Lang.ES]: "Encargado de extinciones"
         },
         quantity: 60,
@@ -580,7 +580,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Fleisch ist mein Gemüse",
           [Lang.EN]: "If we're meant to eat vegetables, why are animals so tasty?",
-          [Lang.FR]: "Spécialité : steak de chaton",
+          [Lang.FR]: "Spécialité : steak de chaton",
           [Lang.ES]: "Especialidad: Puré de gato"
         },
         quantity: 300
@@ -720,7 +720,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Neil Armstrong der Außenwelt",
           [Lang.EN]: "Neil Armstrong of the World Beyond",
-          [Lang.FR]: "Neil Armstrong de l'Outre Monde",
+          [Lang.FR]: "Neil Armstrong de l’Outre-Monde",
           [Lang.ES]: "Neil Armstrong del Ultramundo"
         },
         quantity: 200
@@ -815,7 +815,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Wo ich hinguck, seh ich Gegend.",
           [Lang.EN]: "So I guess we're not waiting for Bob?",
-          [Lang.FR]: "Bah alors on n'attend pas Patrick ?",
+          [Lang.FR]: "Bah alors, on n’attend pas Patrick ?",
           [Lang.ES]: "¿Entonces supongo que no estamos esperando a Bob?"
         },
         quantity: 250
@@ -934,7 +934,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
       {
         name: {
           [Lang.DE]: "Menschenfleischliebhaber",
-          [Lang.EN]: "Meat Muncher",
+          [Lang.EN]: "Meat muncher",
           [Lang.FR]: "Amateur de viande humaine",
           [Lang.ES]: "Devorador de hombres"
         },
@@ -1256,7 +1256,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Arbeit ist Gesundheit",
           [Lang.EN]: "Pyramid shmyramid",
-          [Lang.FR]: "Le travail, c'est la santé",
+          [Lang.FR]: "Le travail, c’est la santé",
           [Lang.ES]: "El trabajo es salud"
         },
         quantity: 8000
@@ -1489,7 +1489,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Lebenssammler",
           [Lang.EN]: "Don't cross the streams",
-          [Lang.FR]: "Collectionneur de vie",
+          [Lang.FR]: "Collectionneur de vies",
           [Lang.ES]: "No cruces los arroyos"
         },
         quantity: 180
@@ -1498,7 +1498,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Schnitter der Aussenwelt",
           [Lang.EN]: "I ain't afraid of no ghost",
-          [Lang.FR]: "Faucheur de l'outre-monde",
+          [Lang.FR]: "Faucheur de l’Outre-Monde",
           [Lang.ES]: "No le tengo miedo a ningún fantasma"
         },
         quantity: 300
@@ -1555,7 +1555,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Absolut keine Angst!",
           [Lang.EN]: "Not even afraid!",
-          [Lang.FR]: "Même pas peur !",
+          [Lang.FR]: "Même pas peur !",
           [Lang.ES]: "¡No tengas miedo en absoluto!"
         },
         quantity: 400
@@ -1623,7 +1623,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Maurer aus Leidenschaft",
           [Lang.EN]: "Soul Mason",
-          [Lang.FR]: "Maçon du coeur",
+          [Lang.FR]: "Maçon du cœur",
           [Lang.ES]: "Top Chef"
         },
         quantity: 10
@@ -1632,7 +1632,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Das Unnütze mit dem Angenehmen verbinden",
           [Lang.EN]: "Chief DIY",
-          [Lang.FR]: "Joindre l'inutile à l'agréable",
+          [Lang.FR]: "Joindre l’inutile à l’agréable",
           [Lang.ES]: "Jefe de Manualidades"
         },
         quantity: 15
@@ -1650,7 +1650,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Ich habe einen Plan",
           [Lang.EN]: "I have a plan",
-          [Lang.FR]: "J'ai un plan",
+          [Lang.FR]: "J’ai un plan",
           [Lang.ES]: "Tengo un plan"
         },
         quantity: 30
@@ -1659,7 +1659,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Hirnverbrannter Baumeister",
           [Lang.EN]: "Demented Master Builder",
-          [Lang.FR]: "Maître d'oeuvre dément",
+          [Lang.FR]: "Maître d’œuvre dément",
           [Lang.ES]: "Maestro constructor demente"
         },
         quantity: 40
@@ -1668,7 +1668,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Meister der Nutzlosigkeit",
           [Lang.EN]: "Master of futility",
-          [Lang.FR]: "Maître de l'inutilité",
+          [Lang.FR]: "Maître de l’inutilité",
           [Lang.ES]: "Maestro de la Inutilidad"
         },
         quantity: 50
@@ -1713,7 +1713,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Hast du nichts besseres zu tun?",
           [Lang.EN]: "Don't you have better things to do?",
-          [Lang.FR]: "Z'avez pas mieux à faire ?",
+          [Lang.FR]: "Z’avez pas mieux à faire ?",
           [Lang.ES]: "¿No tienes algo mejor que hacer?"
         },
         quantity: 150
@@ -1978,7 +1978,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Ein schöneres Leben",
           [Lang.EN]: "Style is eternal...",
-          [Lang.FR]: "Plus belle la vie !",
+          [Lang.FR]: "Plus belle la vie !",
           [Lang.ES]: "El estilo es eterno..."
         },
         quantity: 2000
@@ -1987,7 +1987,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Großer E-KEA Katalog",
           [Lang.EN]: "Welcome to the palace.",
-          [Lang.FR]: "Grand Catalogue Kiela",
+          [Lang.FR]: "Grand catalogue Kiela",
           [Lang.ES]: "Bienvenidos al palacio."
         },
         quantity: 2500
@@ -2026,7 +2026,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Ein Wächter stirbt, aber gibt niemals auf",
           [Lang.EN]: "The guard may perish, but he never gives up!",
-          [Lang.FR]: "La garde meurt, mais ne se rend pas !",
+          [Lang.FR]: "La garde meurt, mais ne se rend pas !",
           [Lang.ES]: "La guardia puede morir, ¡pero nunca se rinde!"
         },
         quantity: 10
@@ -2035,7 +2035,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Der Zweitletzte Mohikaner",
           [Lang.EN]: "The second last of the Mohicans",
-          [Lang.FR]: "L'avant-dernier des Mohicans",
+          [Lang.FR]: "L’avant-dernier des Mohicans",
           [Lang.ES]: "El segundo último de los mohicanos"
         },
         quantity: 20
@@ -2053,7 +2053,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Bis zum Ende und einen Schritt weiter",
           [Lang.EN]: "All the way to the end and a bit further",
-          [Lang.FR]: "Jusqu'au bout, et même un peu moins loin",
+          [Lang.FR]: "Jusqu’au bout, et même un peu moins loin",
           [Lang.ES]: "Todo el camino hasta el final y un poco más lejos"
         },
         quantity: 40
@@ -2062,7 +2062,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Schließt die Ränke und haltet durch",
           [Lang.EN]: "Close ranks and hold on!",
-          [Lang.FR]: "Serrez les rangs... et les fesses...",
+          [Lang.FR]: "Serrez les rangs… et les fesses…",
           [Lang.ES]: "¡Cierra filas y aguanta!"
         },
         quantity: 60
@@ -2071,7 +2071,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Hallo... ist da draußen jemand?",
           [Lang.EN]: "Hello... Is there anybody out there?",
-          [Lang.FR]: "Vous êtes là les copains ?",
+          [Lang.FR]: "Vous êtes là les copains?",
           [Lang.ES]: "¿Hola, hay alguien ahí afuera?"
         },
         quantity: 100
@@ -2080,7 +2080,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Haltet eure Position!",
           [Lang.EN]: "Hold your positions!",
-          [Lang.FR]: "Tenez vos positions !",
+          [Lang.FR]: "Tenez vos positions !",
           [Lang.ES]: "¡Mantenga sus posiciones!"
         },
         quantity: 150
@@ -2165,7 +2165,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Ich sehe ein Blauuuuuuues Tal",
           [Lang.EN]: "The sky is falling!!!",
-          [Lang.FR]: "Je vois une Vallée Bleuûuue !",
+          [Lang.FR]: "Je vois une Vallée Bleuûuue !",
           [Lang.ES]: "¡¡¡El cielo se está cayendo!!!"
         },
         quantity: 250
@@ -2258,7 +2258,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Wenn ich das nur vorher gewusst hätte...",
           [Lang.EN]: "Sneaky Voyager",
-          [Lang.FR]: "Si j'aurais su, j'aurais po v'nu",
+          [Lang.FR]: "Si j'aurais su, j'aurais po v’nu",
           [Lang.ES]: "¡Mamá, no me dejes aquí!"
         },
         quantity: 5,
@@ -2287,7 +2287,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Im Irrgarten",
           [Lang.EN]: "Compass Included",
-          [Lang.FR]: "J'ai la dé-dale !",
+          [Lang.FR]: "J'ai la dé-dalle !",
           [Lang.ES]: "Ruina Man"
         },
         quantity: 50
@@ -2296,7 +2296,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Inklusive Kompass",
           [Lang.EN]: "Buried Voluntarily",
-          [Lang.FR]: "Boussole sur patte",
+          [Lang.FR]: "Boussole sur pattes",
           [Lang.ES]: "Brújula andante"
         },
         quantity: 100
@@ -2314,7 +2314,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Tomb Raider",
           [Lang.EN]: "Gollum of the Labyrinths",
-          [Lang.FR]: "Pilleur de tombeau",
+          [Lang.FR]: "Pilleur de tombeaux",
           [Lang.ES]: "Tomb Raider"
         },
         quantity: 200
@@ -2382,7 +2382,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Wagemutiger Trapper",
           [Lang.EN]: "Guide to the World Beyond",
-          [Lang.FR]: "Guide de l'Outre-Monde",
+          [Lang.FR]: "Guide de l’Outre-Monde",
           [Lang.ES]: "Guía del Ultramundo"
         },
         quantity: 70
@@ -2409,7 +2409,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Ich habe die Erde umrundet... zweimal!",
           [Lang.EN]: "I've been round the world... Twice!",
-          [Lang.FR]: "J'ai fait le tour du monde... 2 fois !",
+          [Lang.FR]: "J’ai fait le tour du monde… 2 fois !",
           [Lang.ES]: "He dado la vuelta al mundo ... ¡dos veces!"
         },
         quantity: 250
@@ -2427,7 +2427,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Ich hab sogar das Klo abgesucht!",
           [Lang.EN]: "I've even dug through a public toilet!",
-          [Lang.FR]: "J'ai même fouillé les WC !",
+          [Lang.FR]: "J’ai même fouillé les WC !",
           [Lang.ES]: "¡Incluso busqué en el baño!"
         },
         quantity: 350
@@ -2504,7 +2504,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Bis zur Unendlichkeit... und noch viel weiter!",
           [Lang.EN]: "To infinity and beyond!",
-          [Lang.FR]: "Vers l'infini et au-delà !",
+          [Lang.FR]: "Vers l’infini et au-delà !",
           [Lang.ES]: "¡Hasta el infinito y más allá!"
         },
         quantity: 150
@@ -2513,7 +2513,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Indiana Jones und die Ruinen der Aussenwelt",
           [Lang.EN]: "Indiana Jones and the ruins of the World Beyond",
-          [Lang.FR]: "Indiana jones et les ruines de l'outre-monde",
+          [Lang.FR]: "Indiana Jones et les ruines de l’Outre-Monde",
           [Lang.ES]: "Indiana Jones y las ruinas del Ultramundo"
         },
         quantity: 300
@@ -2769,7 +2769,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Rauchts? Dann ist es meins.",
           [Lang.EN]: "Does it smoke? It is from me.",
-          [Lang.FR]: "Ça se fume ? c'est de moi.",
+          [Lang.FR]: "Ça se fume ? C’est de moi.",
           [Lang.ES]: "¿Fumas? Este va por mi cuenta"
         },
         quantity: 1000
@@ -3128,7 +3128,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Ein Spiel für echte Kinder",
           [Lang.EN]: "A real children's game!",
-          [Lang.FR]: "Un vrai jeu d'enfants !",
+          [Lang.FR]: "Un vrai jeu d’enfants !",
           [Lang.ES]: "¡Un verdadero juego de niños!"
         },
         quantity: 25
@@ -3155,7 +3155,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Ein Korn fehlt noch",
           [Lang.EN]: "I know I have a grain",
-          [Lang.FR]: "Je sais, j'ai un grain",
+          [Lang.FR]: "Je sais, j’ai un grain",
           [Lang.ES]: "Todavia falta un grano"
         },
         quantity: 50
@@ -3203,7 +3203,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Huldigt den riesigen KVF!",
           [Lang.EN]: "BRDs for everyone! The people demand BRDs!",
-          [Lang.FR]: "Gloire au PMV !",
+          [Lang.FR]: "Gloire au PMV !",
           [Lang.ES]: "¡Gloria a la COSA!"
         },
         quantity: 5
@@ -3212,7 +3212,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Obelisk der heutigen Zeit!",
           [Lang.EN]: "Modern obelisk!",
-          [Lang.FR]: "Obélisque des temps modernes !",
+          [Lang.FR]: "Obélisque des temps modernes !",
           [Lang.ES]: "¡Obelisco moderno!"
         },
         quantity: 10
@@ -3239,7 +3239,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Extra viel Liebe",
           [Lang.EN]: "Extra large love",
-          [Lang.FR]: "L'amour extra large",
+          [Lang.FR]: "L’amour extra large",
           [Lang.ES]: "Amor extra grande"
         },
         quantity: 25
@@ -3314,7 +3314,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Hey wir können die Zombies von hier oben sehen",
           [Lang.EN]: "I can see the zeds from here!",
-          [Lang.FR]: "Oh on voit les zombies d'ici",
+          [Lang.FR]: "Oh, on voit les zombies d’ici !",
           [Lang.ES]: "¡Puedo ver a los zombies desde aquí arriba!"
         },
         quantity: 5
@@ -3332,7 +3332,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Showman aus der Anderen Welt!",
           [Lang.EN]: "Desert showman!",
-          [Lang.FR]: "Forain de l'Outre Monde !",
+          [Lang.FR]: "Forain de l’Outre-Monde !",
           [Lang.ES]: "Empresario del Ultramundo!"
         },
         quantity: 15
@@ -3341,7 +3341,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "5. Rad am Wagen",
           [Lang.EN]: "5th wheel of the caravan",
-          [Lang.FR]: "5e roue du carrosse",
+          [Lang.FR]: "5ème roue du carrosse",
           [Lang.ES]: "Quinta rueda de la caravana"
         },
         quantity: 20
@@ -3350,7 +3350,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Mir ist schwindelig",
           [Lang.EN]: "I'm dizzy",
-          [Lang.FR]: "J'ai le vertige",
+          [Lang.FR]: "J’ai le vertige",
           [Lang.ES]: "Estoy mareado"
         },
         quantity: 25
@@ -3368,7 +3368,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Auge der Wüste",
           [Lang.EN]: "Eye of the desert",
-          [Lang.FR]: "L'œil du désert",
+          [Lang.FR]: "L’œil du désert",
           [Lang.ES]: "Ojo del Ultramundo"
         },
         quantity: 40
@@ -3416,7 +3416,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Huldigt den Raben!",
           [Lang.EN]: "Glory to the Crow!",
-          [Lang.FR]: "Gloire au Corbeau !",
+          [Lang.FR]: "Gloire au Corbeau !",
           [Lang.ES]: "¡Gloria al cuervo!"
         },
         quantity: 5
@@ -3425,7 +3425,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Taube aus der Unterwelt",
           [Lang.EN]: "Pigeon from the outer world.",
-          [Lang.FR]: "Pigeon de l'Outre-Monde",
+          [Lang.FR]: "Pigeon de l’Outre-Monde",
           [Lang.ES]: "Paloma del Ultramundo"
         },
         quantity: 10
@@ -3443,7 +3443,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Phoenix des Unterholzes",
           [Lang.EN]: "Phoenix of the desert",
-          [Lang.FR]: "Phoenix des hôtes de ces bois",
+          [Lang.FR]: "Phénix des hôtes de ces bois",
           [Lang.ES]: "Fénix del Ultramundo"
         },
         quantity: 20
@@ -3470,7 +3470,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Kraaaah!",
           [Lang.EN]: "CroooAAwW!",
-          [Lang.FR]: "Crôôôaa !",
+          [Lang.FR]: "Crôôôaa !",
           [Lang.ES]: "¡Wraaaaahh!"
         },
         quantity: 40
@@ -3479,7 +3479,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Er war Leber ...",
           [Lang.EN]: "He was a liver...",
-          [Lang.FR]: "Il était un foie...",
+          [Lang.FR]: "Il était un foie…",
           [Lang.ES]: "Era una calavera..."
         },
         quantity: 50
@@ -4136,7 +4136,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Ich habe Magenschmerzen...",
           [Lang.EN]: "I've got a sore tummy...",
-          [Lang.FR]: "J'ai mal au ventre...",
+          [Lang.FR]: "J’ai mal au ventre…",
           [Lang.ES]: "Tengo dolor de estómago..."
         },
         quantity: 150
@@ -4437,7 +4437,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Verrückter Skeptiker",
           [Lang.EN]: "Keen Sceptic",
-          [Lang.FR]: "Septicis-mite aïgu",
+          [Lang.FR]: "Septicis-mite aiguë",
           [Lang.ES]: "Capataz"
         },
         quantity: 10
@@ -4540,7 +4540,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Mir ist kalt hier draußen...",
           [Lang.EN]: "Baby it's cold outside...",
-          [Lang.FR]: "J'ai froid, dehors...",
+          [Lang.FR]: "J’ai froid, dehors…",
           [Lang.ES]: "Tengo frio aquí..."
         },
         quantity: 250
@@ -4570,7 +4570,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Wo klemmt's?",
           [Lang.EN]: "Key hee hee!",
-          [Lang.FR]: "Un p'tit Bricard ?",
+          [Lang.FR]: "Un p’tit Bricard ?",
           [Lang.ES]: "Ganzúa"
         },
         quantity: 1,
@@ -4580,7 +4580,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Dietrich",
           [Lang.EN]: "How about some Chubb-ly?",
-          [Lang.FR]: "Une petite tranche de Vachette ?",
+          [Lang.FR]: "Une petite tranche de Vachette ?",
           [Lang.ES]: "Hijo de cerrajero"
         },
         quantity: 5,
@@ -4590,7 +4590,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Sesam, öffne dich...",
           [Lang.EN]: "Sesame, shift your A...",
-          [Lang.FR]: "Sésame, bouge ton c...",
+          [Lang.FR]: "Sésame, bouge ton c…",
           [Lang.ES]: "Con o sin llaves, yo entro"
         },
         quantity: 10
@@ -4608,7 +4608,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Gentleman-Einbrecher",
           [Lang.EN]: "Gentleman Robber",
-          [Lang.FR]: "Gentleman Cambrioleur",
+          [Lang.FR]: "Gentleman cambrioleur",
           [Lang.ES]: "Abridor de puertas"
         },
         quantity: 20
@@ -4826,7 +4826,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Muad'Dib",
           [Lang.EN]: "Three rivers dam... That's adorable.",
-          [Lang.FR]: "Muad'Dib",
+          [Lang.FR]: "Muad’Dib",
           [Lang.ES]: "Muad'Dib"
         },
         quantity: 300
@@ -4901,7 +4901,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Mac Gyver der Außenwelt",
           [Lang.EN]: "MacGyver of the World beyond",
-          [Lang.FR]: "Mac Gyver de l'Outre-Monde",
+          [Lang.FR]: "MacGyver de l’Outre-Monde",
           [Lang.ES]: "Reparador Supremo"
         },
         quantity: 400
@@ -4949,7 +4949,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Meisterwerke in Gefahr",
           [Lang.EN]: "Masterpieces in Peril",
-          [Lang.FR]: "Chef d'oeuvre en péril",
+          [Lang.FR]: "Chef-d’œuvre en péril",
           [Lang.ES]: "Reparador arriesgado"
         },
         quantity: 500
@@ -4994,7 +4994,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Ein Riss? Welcher Riss?",
           [Lang.EN]: "A crack? What crack?",
-          [Lang.FR]: "Une fissure ? Quelle fissure ?",
+          [Lang.FR]: "Une fissure ? Quelle fissure ?",
           [Lang.ES]: "¿Una grieta? ¿Qué grieta?"
         },
         quantity: 3000
@@ -5003,7 +5003,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Das braucht noch 10 Jahre!",
           [Lang.EN]: "That'll last another 10 years!",
-          [Lang.FR]: "Ça tiendra encore 10 ans !",
+          [Lang.FR]: "Ça tiendra encore 10 ans !",
           [Lang.ES]: "¡Eso llevara otros 10 años!"
         },
         quantity: 3500
@@ -5388,7 +5388,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Immer ein Auge offen",
           [Lang.EN]: "One Eye Open",
-          [Lang.FR]: "Un Oeil ouvert",
+          [Lang.FR]: "Un œil ouvert",
           [Lang.ES]: "Un ojo abierto"
         },
         quantity: 20,
@@ -5408,7 +5408,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Immer alles im Blick",
           [Lang.EN]: "Long-sighted",
-          [Lang.FR]: "Longue Vue",
+          [Lang.FR]: "Longue vue",
           [Lang.ES]: "Largavista"
         },
         quantity: 80
@@ -5435,7 +5435,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Fels in der Brandung",
           [Lang.EN]: "The Rock!",
-          [Lang.FR]: "Le Roc !",
+          [Lang.FR]: "Le Roc !",
           [Lang.ES]: "La roca!"
         },
         quantity: 400
@@ -5706,7 +5706,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Alptraum der Traumlosen",
           [Lang.EN]: "Go ahead, make my day!",
-          [Lang.FR]: "J'aime les bandes décimées",
+          [Lang.FR]: "J’aime les bandes décimées",
           [Lang.ES]: "Mordedor de muertos"
         },
         quantity: 10000
@@ -5832,7 +5832,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Mitglied des Roten Kreuzes",
           [Lang.EN]: "Member of the Red Cross",
-          [Lang.FR]: "Membre de la Croix Rouge",
+          [Lang.FR]: "Membre de la Croix-Rouge",
           [Lang.ES]: "Miembro de la Cruz Roja"
         },
         quantity: 1
@@ -5947,7 +5947,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Zeuge des Armageddon",
           [Lang.EN]: "Armageddon Witness",
-          [Lang.FR]: "Témoin de l'Armageddon",
+          [Lang.FR]: "Témoin de l’Armageddon",
           [Lang.ES]: "Testigo de Armagedón"
         },
         quantity: 1
@@ -6225,7 +6225,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Seelenhändler",
           [Lang.EN]: "Soul salesman",
-          [Lang.FR]: "Marchand d'âmes",
+          [Lang.FR]: "Marchand d’âmes",
           [Lang.ES]: "Vendedor de almas"
         },
         quantity: 10
@@ -6429,7 +6429,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Bringt Sachen ins Rollen!",
           [Lang.EN]: "Making things happen!",
-          [Lang.FR]: "Fais bouger les choses!",
+          [Lang.FR]: "Fais bouger les choses !",
           [Lang.ES]: "¡Hacer que las cosas sucedan!"
         },
         quantity: 1
@@ -6754,7 +6754,7 @@ export const rewards: Readonly<Record<RewardId, Reward>> = {
         name: {
           [Lang.DE]: "Patient Null",
           [Lang.EN]: "Patient Zero",
-          [Lang.FR]: "Patient Zéro",
+          [Lang.FR]: "Patient zéro",
           [Lang.ES]: "Paciente cero"
         },
         quantity: 1
